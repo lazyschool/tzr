@@ -40,18 +40,19 @@ Any change to the files shows up on a browser refresh — there is nothing to bu
 
 ---
 
-## 2. Before you publish — 3 things to edit
+## 2. Before you publish — what to edit
 
 ### a) Your contact details → `script.js`
 
-Open `script.js`. The first block is the only place contact info lives:
+Open `script.js`. The first block is the only place contact info lives. Instagram and email are
+already filled in — the WhatsApp number is the one thing still to add:
 
 ```js
 const CONFIG = {
   instagram: "humansofcoding",
   whatsapp:  "910000000000",             // ← your number: country code + number, digits only
   whatsappMessage: "Hi Adil! I have an idea I'd like to build. Can we talk?",
-  email:     "your-email@example.com",    // ← your real email
+  email:     "adil@humansofcoding.com",   // already set
   emailSubject: "Project enquiry from humansofcoding.com",
   bookingUrl: ""                          // ← optional Calendly / Topmate link
 };
@@ -65,7 +66,7 @@ Instagram so no button is ever broken.
 
 ### b) Portfolio projects → `index.html`
 
-Search the file for `PORTFOLIO DATA`. Six placeholder projects sit between that marker and
+Search the file for `PORTFOLIO DATA`. Six example projects sit between that marker and
 `END PORTFOLIO DATA`. Each one is a self-contained block — edit the category, name and description,
 duplicate or delete blocks freely:
 
@@ -77,55 +78,61 @@ duplicate or delete blocks freely:
 
 To use a real screenshot instead of the drawn thumbnail, see `assets/README.md`.
 
-### c) Testimonials → `index.html`
+### c) Reviews → `index.html`
 
-Search for `TESTIMONIAL PLACEHOLDERS`. The three quotes are clearly-marked placeholders with
-generic names — **not** invented customers. When you have real reviews (with the client's
-permission), replace the quote, `.t__name` and `.t__role`, then delete:
+Search for `FAMILY REVIEWS`. While the studio is new, the reviews section carries three real
+(and funny) quotes from Adil's mother, father and brother, under a heading that says plainly there
+are no clients yet. Nothing on the page claims a customer you don't have.
 
-- the `<span class="t__flag">Placeholder</span>` chip in each card, and
-- the "Sample layout — real client reviews will be added here." line in the section heading.
+When you land real client reviews, replace each `<blockquote>`, `.t__name` and `.t__role`, swap the
+`Family` chip for something else (or delete it), and update the section heading from
+"No clients yet. So I asked my family."
+
+### d) Portfolio wording → `index.html`
+
+The six project cards each carry an **Example build** chip, and the section says outright that these
+are example builds rather than client work. As soon as you ship something real, replace that card's
+content and delete its `<span class="proj__flag">Example build</span>` chip. Once every card is real,
+drop the "Straight up: HumansOfCoding is new…" line from the section heading too.
 
 ---
 
 ## 3. Deploy to GitHub Pages
 
-### Option A — Publish from a branch (simplest)
+### Option A — Push from the command line
 
-1. Create a repository on GitHub, e.g. `humansofcoding.github.io` (a repo named exactly
-   `<username>.github.io` is served at the root domain) or any name like `website`.
+This repo is already wired up: remote `origin` points at
+`git@github.com:lazyschool/humansofcoding.git` and the code lives on the `master` branch.
 
-2. Push these files from this folder:
+1. Push:
 
 ```bash
-git init
 git add .
-git commit -m "HumansOfCoding website"
-git branch -M main
-git remote add origin https://github.com/<your-username>/<your-repo>.git
-git push -u origin main
+git commit -m "Your message"
+git push
 ```
 
-3. On GitHub: **Settings → Pages → Build and deployment**
+2. On GitHub: **Settings → Pages → Build and deployment**
    - Source: **Deploy from a branch**
-   - Branch: **main**, folder: **/ (root)** → **Save**
+   - Branch: **master**, folder: **/ (root)** → **Save**
 
-4. Wait ~1 minute. Your site is live at:
-   - `https://<your-username>.github.io/` if the repo is named `<username>.github.io`
-   - `https://<your-username>.github.io/<your-repo>/` for any other repo name
+3. Wait ~1 minute. The site goes live at:
+   **https://lazyschool.github.io/humansofcoding/**
 
 `index.html` must stay in the repository root — Pages serves it as the home page.
 `.nojekyll` is already included so GitHub serves every file untouched.
 
 ### Option B — Drag and drop (no command line)
 
-Create the repo on github.com → **Add file → Upload files** → drag `index.html`, `style.css`,
-`script.js`, `robots.txt`, `sitemap.xml`, `.nojekyll` and the `assets` folder in → **Commit** →
-then follow step 3 above.
+On github.com → **Add file → Upload files** → drag `index.html`, `style.css`, `script.js`,
+`robots.txt`, `sitemap.xml`, `.nojekyll` and the `assets` folder in → **Commit** → then follow
+step 2 above.
 
-### After the first deploy: fix the URLs
+### Site URL
 
-Four places still say `https://humansofcoding.github.io/`. Replace them with your real URL:
+The meta tags, `robots.txt` and `sitemap.xml` already point at
+`https://lazyschool.github.io/humansofcoding/`. If you move the site to a different repo or a custom
+domain, update it in these places:
 
 | File | What to change |
 |------|----------------|
@@ -152,6 +159,8 @@ Point your domain's DNS at GitHub Pages, then **Settings → Pages → Custom do
 - **Works without JavaScript** — all content renders, all links still work
 - **SEO** — title, meta description, Open Graph, Twitter card, canonical, JSON-LD business schema,
   semantic HTML, one `<h1>`, ordered heading levels
+- **Honest by default** — no invented clients, no fake testimonials, no claimed case studies. The
+  Human + AI section, the "Example build" chips and the family reviews all say what's true today.
 - **Performance** — no libraries, no framework, one small CSS file, one small JS file, all
   illustrations are inline SVG (no image downloads). Only external request: Google Fonts.
 
@@ -166,10 +175,11 @@ Fonts are the only third-party request. To drop it, delete the three `fonts.g...
 
 | I want to… | Where |
 |-----------|-------|
-| Change the accent colour | `style.css` → `:root { --accent: #ff5a2c; }` (and `--accent-hover`, `--accent-soft`) |
+| Change the accent colour | `style.css` → `:root { --accent: #0f6ccc; }` plus `--accent-hover`, `--accent-soft`, `--accent-light`, `--accent-glow`. `--accent` carries button and link text so keep it dark enough to read on white; `--accent-light` is decoration only (sketch strokes, doodles, sparks). |
 | Change the MVP price | `index.html` → search `50,000` (appears in the hero badge, MVP section, mobile menu, footer, meta description) |
 | Add / remove a service or industry card | `index.html` → `#services` / `#industries` — copy an `<article class="card ...">` block |
-| Edit the About text | `index.html` → `#about` |
+| Edit the About text | `index.html` → `#about` (the credibility strip is `.about__stats`) |
+| Edit the Human + AI section | `index.html` → `#human` |
 | Change section order | `index.html` → move whole `<section>` blocks; nav links use the section `id`s |
 | Rename a nav item | `index.html` → `.nav__links` **and** `.menu__inner` (desktop and mobile menus) |
 

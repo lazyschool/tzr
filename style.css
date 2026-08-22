@@ -9,20 +9,25 @@
 
 /* ------------------------------ 1. TOKENS ------------------------------ */
 :root {
-  --bg: #faf7f2;
-  --bg-2: #f2ece2;
+  --bg: #f6f9fd;
+  --bg-2: #e9f1fa;
   --card: #ffffff;
-  --fg: #17140f;
-  --fg-2: #5f594f;
-  --line: #e3dccf;
-  --line-strong: #cfc5b3;
-  --accent: #ff5a2c;
-  --accent-hover: #f04413;
+  --fg: #0e1a26;
+  --fg-2: #55667c;
+  --line: #d9e5f1;
+  --line-strong: #b7cade;
+  /* --accent carries text and button fills, so it is the contrast-safe blue
+     (5.2:1 on white, 4.9:1 on the page background).
+     --accent-light is decoration only: doodles, sketch strokes, sparks. */
+  --accent: #0f6ccc;
+  --accent-hover: #0b57a8;
+  --accent-light: #4da3f5;
   --accent-fg: #ffffff;
-  --accent-soft: #ffece4;
+  --accent-soft: #e3f0fd;
+  --accent-glow: 15, 108, 204;
   --shadow-sm: 0 2px 0 var(--line-strong);
-  --shadow-md: 0 10px 30px rgba(23, 20, 15, .08);
-  --shadow-lg: 0 24px 60px rgba(23, 20, 15, .12);
+  --shadow-md: 0 10px 30px rgba(14, 26, 38, .08);
+  --shadow-lg: 0 24px 60px rgba(14, 26, 38, .13);
 
   --font-display: "Bricolage Grotesque", "Inter", system-ui, sans-serif;
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -36,17 +41,19 @@
 }
 
 :root[data-theme="dark"] {
-  --bg: #121110;
-  --bg-2: #191715;
-  --card: #1c1a18;
-  --fg: #f6f1e9;
-  --fg-2: #a8a094;
-  --line: #322d28;
-  --line-strong: #453e37;
-  --accent: #ff6a3d;
-  --accent-hover: #ff8055;
-  --accent-fg: #14110f;
-  --accent-soft: rgba(255, 106, 61, .14);
+  --bg: #0b1219;
+  --bg-2: #101a25;
+  --card: #14202c;
+  --fg: #eaf2fa;
+  --fg-2: #93a6bb;
+  --line: #22303f;
+  --line-strong: #34485d;
+  --accent: #56aaff;
+  --accent-hover: #83c2ff;
+  --accent-light: #7dc0ff;
+  --accent-fg: #06121e;
+  --accent-soft: rgba(86, 170, 255, .15);
+  --accent-glow: 86, 170, 255;
   --shadow-sm: 0 2px 0 var(--line-strong);
   --shadow-md: 0 10px 30px rgba(0, 0, 0, .4);
   --shadow-lg: 0 24px 60px rgba(0, 0, 0, .5);
@@ -206,9 +213,9 @@ h1, h2, h3 {
 .btn--primary {
   --btn-bg: var(--accent);
   --btn-fg: var(--accent-fg);
-  box-shadow: 0 6px 20px rgba(255, 90, 44, .28);
+  box-shadow: 0 6px 20px rgba(var(--accent-glow), .3);
 }
-.btn--primary:hover { --btn-bg: var(--accent-hover); box-shadow: 0 12px 28px rgba(255, 90, 44, .36); }
+.btn--primary:hover { --btn-bg: var(--accent-hover); box-shadow: 0 12px 28px rgba(var(--accent-glow), .4); }
 
 .btn--ghost { border-color: var(--line-strong); }
 .btn--ghost:hover { border-color: var(--fg); background: var(--card); }
@@ -308,7 +315,7 @@ h1, h2, h3 {
   white-space: nowrap;
 }
 
-.nav__links { display: none; gap: 26px; }
+.nav__links { display: none; gap: 20px; }
 .nav__links a {
   position: relative;
   font-size: .93rem;
@@ -456,7 +463,7 @@ h1, h2, h3 {
   bottom: -.08em;
   width: 104%;
   height: .32em;
-  color: var(--accent);
+  color: var(--accent-light);
   overflow: visible;
 }
 .hl__stroke path {
@@ -616,7 +623,7 @@ h1, h2, h3 {
   top: 6%;
   right: 46%;
   width: 34px;
-  color: var(--accent);
+  color: var(--accent-light);
   opacity: .8;
   animation: spin 14s linear infinite;
 }
@@ -1002,13 +1009,14 @@ h1, h2, h3 {
   position: absolute;
   top: 12px; right: 12px;
   padding: 3px 9px;
-  border: 1.5px dashed var(--line-strong);
+  border: 1.5px dashed var(--accent);
   border-radius: 999px;
+  background: var(--accent-soft);
   font-size: .64rem;
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: var(--fg-2);
+  color: var(--accent);
 }
 .t__quote {
   font-family: var(--font-display);
@@ -1058,7 +1066,7 @@ h1, h2, h3 {
   opacity: .22;
   filter: blur(90px);
 }
-.cta__doodle { position: absolute; width: clamp(56px, 13vw, 96px); color: var(--accent); opacity: .55; }
+.cta__doodle { position: absolute; width: clamp(56px, 13vw, 96px); color: var(--accent-light); opacity: .6; }
 .cta__doodle--1 { top: 12%; left: 6%; animation: floaty 8s ease-in-out infinite; }
 .cta__doodle--2 { bottom: 12%; right: 6%; animation: floaty 9s ease-in-out 1.4s infinite; }
 .cta__inner { position: relative; }
@@ -1111,6 +1119,91 @@ h1, h2, h3 {
   transition: gap .25s var(--ease);
 }
 .contact-card:hover .contact__go { gap: 11px; }
+
+/* human + AI */
+.human-card { padding-top: 30px; }
+.human__step {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  font-family: var(--font-display);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--fg-2);
+  opacity: .55;
+}
+.human-card:hover .card__icon { transform: rotate(-8deg) scale(1.06); border-radius: 50%; }
+
+.human__foot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: clamp(28px, 5vw, 46px);
+  text-align: center;
+}
+.human__stamp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(8px, 2.4vw, 14px);
+  font-size: clamp(1.7rem, 7vw, 2.4rem);
+  line-height: 1;
+}
+.human__stamp span { animation: floaty 6s ease-in-out infinite; }
+.human__stamp span:nth-of-type(2) { animation-delay: .9s; }
+.human__stamp span:nth-of-type(3) { animation-delay: 1.8s; }
+.human__stamp i {
+  font-family: var(--font-hand);
+  font-style: normal;
+  font-size: .82em;
+  color: var(--accent);
+}
+.human__note {
+  margin-top: 6px;
+  font-family: var(--font-hand);
+  font-size: clamp(1.35rem, 5.4vw, 1.9rem);
+  color: var(--accent);
+  transform: rotate(-1.5deg);
+}
+.human__note .hl__stroke { color: var(--accent); opacity: .5; }
+.human__note .hl__stroke path { animation: none; stroke-dashoffset: 0; }
+
+/* about: credibility strip */
+.about__stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1.5px solid var(--line);
+}
+.about__stats li { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.about__stats strong {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
+.about__stats span { font-size: .82rem; color: var(--fg-2); }
+
+/* portfolio: honest "this is an example, not client work" chip */
+.proj__flag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 1;
+  padding: 4px 10px;
+  border: 1.5px dashed var(--line-strong);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--card) 84%, transparent);
+  font-size: .64rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--fg-2);
+}
 
 /* --------------------- 8. FOOTER + STICKY MOBILE BAR -------------------- */
 .footer {
@@ -1242,9 +1335,6 @@ h1, h2, h3 {
 
 @media (min-width: 900px) {
   :root { --nav-h: 72px; }
-  .nav__links { display: flex; }
-  .nav__cta { display: inline-flex; }
-  .burger { display: none; }
   .cards--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .cards--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .hero__inner { grid-template-columns: 1.05fr .95fr; align-items: center; }
@@ -1253,6 +1343,13 @@ h1, h2, h3 {
   .about__inner { grid-template-columns: .85fr 1.15fr; }
   .about__frame { width: min(100%, 380px); }
   .sec-head { margin-bottom: 56px; }
+}
+
+@media (min-width: 980px) {
+  .about__stats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .nav__links { display: flex; }
+  .nav__cta { display: inline-flex; }
+  .burger { display: none; }
 }
 
 @media (min-width: 1120px) {

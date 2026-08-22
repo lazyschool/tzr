@@ -21,8 +21,8 @@ const CONFIG = {
   // Message pre-filled in WhatsApp when someone taps a WhatsApp button
   whatsappMessage: "Hi Adil! I have an idea I'd like to build. Can we talk?",
 
-  // Your email address (replace the placeholder below)
-  email: "your-email@example.com",
+  // Your email address
+  email: "adil@humansofcoding.com",
   emailSubject: "Project enquiry from humansofcoding.com",
 
   // Optional: a booking link (Calendly, Google Calendar appointment page, Topmate...).
@@ -130,7 +130,7 @@ const CONFIG = {
       if (e.key === "Escape" && !menu.hidden) { setMenu(false); burger.focus(); }
     });
     window.addEventListener("resize", function () {
-      if (window.innerWidth >= 900 && !menu.hidden) setMenu(false);
+      if (window.innerWidth >= 980 && !menu.hidden) setMenu(false);
     });
   }
 
