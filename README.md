@@ -54,15 +54,25 @@ const CONFIG = {
   whatsappMessage: "Hi Adil! I have an idea I'd like to build. Can we talk?",
   email:     "adil@humansofcoding.com",   // already set
   emailSubject: "Project enquiry from humansofcoding.com",
-  bookingUrl: ""                          // ← optional Calendly / Topmate link
+  callSubject: "Free call request - HumansOfCoding",
+  callBody: [ ...the pre-written email, one line per array entry... ],
+  bookingUrl: ""                          // ← optional Cal.com / Calendly link
 };
 ```
 
 Every **Book a Free Call**, **WhatsApp**, **DM** and **Email** button on the page reads from this.
 
-How "Book a Free Call" resolves: `bookingUrl` if set → otherwise WhatsApp → otherwise Instagram DM.
-While `whatsapp` is still the `910000000000` placeholder, WhatsApp buttons quietly fall back to
-Instagram so no button is ever broken.
+### How "Book a Free Call" works
+
+All ten of those buttons open the visitor's email app with a message already written to
+`adil@humansofcoding.com`, asking for their name, what they want to build, rough budget and a good
+time to call. Edit `callBody` to change the wording — each array entry is one line.
+
+If you later sign up for a scheduler (Cal.com, Calendly), put its link in `bookingUrl` and every one
+of those buttons switches to the booking page instead. Nothing else needs touching.
+
+WhatsApp buttons fall back to Instagram while `whatsapp` is still the `910000000000` placeholder, so
+no button is ever dead.
 
 ### b) Portfolio projects → `index.html`
 

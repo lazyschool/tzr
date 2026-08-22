@@ -25,9 +25,28 @@ const CONFIG = {
   email: "adil@humansofcoding.com",
   emailSubject: "Project enquiry from humansofcoding.com",
 
-  // Optional: a booking link (Calendly, Google Calendar appointment page, Topmate...).
-  // Leave "" and "Book a Free Call" buttons use WhatsApp, or Instagram if
-  // no WhatsApp number is set.
+  // "Book a Free Call" opens the visitor's email app with this message already
+  // written, addressed to the `email` above. Edit the wording freely - every
+  // line break is kept. Keep it short: long forms scare people off.
+  callSubject: "Free call request - HumansOfCoding",
+  callBody: [
+    "Hi Adil,",
+    "",
+    "I'd like to book a free call about something I want to build.",
+    "",
+    "Name:",
+    "Business / idea:",
+    "What I want to build:",
+    "Rough budget:",
+    "Best day and time to call:",
+    "Phone / WhatsApp:",
+    "",
+    "Thanks!"
+  ].join("\r\n"),
+
+  // Optional: a scheduling link (Cal.com, Calendly, Topmate...).
+  // Leave "" to use the pre-written email above. If you ever set this, every
+  // "Book a Free Call" button switches to the scheduler instead.
   bookingUrl: ""
 };
 /* =====================================================================
@@ -58,8 +77,14 @@ const CONFIG = {
       : "https://instagram.com/" + CONFIG.instagram,
     email: "mailto:" + CONFIG.email + "?subject=" + encodeURIComponent(CONFIG.emailSubject || "")
   };
-  // "Book a Free Call": booking link → WhatsApp → Instagram DM
-  links.call = CONFIG.bookingUrl || links.whatsapp;
+
+  // "Book a Free Call" opens a ready-to-send email, unless a scheduling link
+  // is configured, in which case that wins.
+  links.call = CONFIG.bookingUrl || (
+    "mailto:" + CONFIG.email +
+    "?subject=" + encodeURIComponent(CONFIG.callSubject || "") +
+    "&body=" + encodeURIComponent(CONFIG.callBody || "")
+  );
 
   $$("[data-link]").forEach(function (el) {
     const key = el.getAttribute("data-link");
