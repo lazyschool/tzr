@@ -65,8 +65,9 @@ Every **Book a Free Call**, **WhatsApp**, **DM** and **Email** button on the pag
 ### How "Book a Free Call" works
 
 All ten of those buttons open the visitor's email app with a message already written to
-`adil@humansofcoding.com`, asking for their name, what they want to build, rough budget and a good
-time to call. Edit `callBody` to change the wording — each array entry is one line.
+`adil@humansofcoding.com`, asking for their name, what they want to build, rough budget, a good time
+to call, and whether they want it on phone, WhatsApp, Zoom or Google Meet. Edit `callBody` to change
+the wording — each array entry is one line.
 
 If you later sign up for a scheduler (Cal.com, Calendly), put its link in `bookingUrl` and every one
 of those buttons switches to the booking page instead. Nothing else needs touching.

@@ -39,7 +39,8 @@ const CONFIG = {
     "What I want to build:",
     "Rough budget:",
     "Best day and time to call:",
-    "Phone / WhatsApp:",
+    "Call me on (keep one): Phone / WhatsApp / Zoom / Google Meet",
+    "Number or email for the invite:",
     "",
     "Thanks!"
   ].join("\r\n"),
