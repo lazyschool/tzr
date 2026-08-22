@@ -117,7 +117,7 @@ git push
    - Branch: **master**, folder: **/ (root)** → **Save**
 
 3. Wait ~1 minute. The site goes live at:
-   **https://lazyschool.github.io/humansofcoding/**
+   **https://humansofcoding.com/**
 
 `index.html` must stay in the repository root — Pages serves it as the home page.
 `.nojekyll` is already included so GitHub serves every file untouched.
@@ -131,7 +131,7 @@ step 2 above.
 ### Site URL
 
 The meta tags, `robots.txt` and `sitemap.xml` already point at
-`https://lazyschool.github.io/humansofcoding/`. If you move the site to a different repo or a custom
+`https://humansofcoding.com/`. If you move the site to a different repo or a custom
 domain, update it in these places:
 
 | File | What to change |

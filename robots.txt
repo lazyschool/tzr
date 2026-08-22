@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lazyschool.github.io/humansofcoding/sitemap.xml
+Sitemap: https://humansofcoding.com/sitemap.xml
