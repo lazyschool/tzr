@@ -1,5 +1,5 @@
-# Personal documents — not part of the published site
-adil_cv.pdf
+# Personal documents - never publish these
+*.pdf
 
 # OS / editor noise
 .DS_Store
