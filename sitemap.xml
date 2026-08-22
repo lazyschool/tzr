@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://humansofcoding.com/</loc>
     <lastmod>2026-08-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://humansofcoding.com/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://humansofcoding.com/?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://humansofcoding.com/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://humansofcoding.com/?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://humansofcoding.com/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://humansofcoding.com/"/>
   </url>
 </urlset>

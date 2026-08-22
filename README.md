@@ -8,9 +8,11 @@ humansofcoding/
 ├── index.html        all page content
 ├── style.css         all styling (mobile-first)
 ├── script.js         all behaviour + YOUR BUSINESS INFO at the top
+├── i18n.js           language list + translation disclaimer (small, always loaded)
 ├── assets/
 │   ├── favicon.svg   browser tab icon
 │   ├── og-image.svg  social share preview
+│   ├── i18n/         hi.js de.js fr.js es.js — loaded only when chosen
 │   └── README.md     how to add project images
 ├── .nojekyll         tells GitHub Pages to serve files as-is
 ├── robots.txt
@@ -107,6 +109,49 @@ drop the "Straight up: HumansOfCoding is new…" line from the section heading t
 
 ---
 
+## 2b. Languages
+
+The site ships in **English, Hindi, German, French and Spanish**. English is the source and the
+authentic version; the others are machine-assisted translations, and a notice saying exactly that
+appears under the header whenever a translation is active, with a one-click "view in English".
+
+**How it works.** There is only one `index.html`. On load, `script.js` snapshots every text node and
+translatable attribute on the page, then swaps them against the chosen language's dictionary.
+Switching back to English restores the original text, so English can never drift.
+
+Dictionaries live in `assets/i18n/<code>.js` and are **downloaded only when that language is
+selected** — an English visitor fetches none of them. Only the 2.5 KB `i18n.js` (language list plus
+the disclaimer wording) loads up front.
+
+**Choosing a language:** the globe control in the header (a full dropdown on desktop, a compact globe
+button on phones). The choice is remembered per visitor and reflected in the URL as `?lang=de`, so a
+translated page can be shared or linked directly. English stays the default — the browser's language
+is deliberately *not* auto-detected, because the English version is the authoritative one.
+
+### Editing or adding a translation
+
+Open `assets/i18n/<code>.js` (e.g. `assets/i18n/de.js`). Each is a plain map of
+`"English text": "translation"`:
+
+```js
+de: {
+  "Have an idea?": "Sie haben eine Idee?",
+  ...
+}
+```
+
+The key must match the English on the page **exactly** — same punctuation, same dashes. Anything
+without an entry simply stays in English, which is why brand names, `MVP`, `SaaS`, `AWS`, the
+Instagram handle and the email address are deliberately absent.
+
+**If you change English wording on the page, update the matching key in all four files**, or that
+line quietly falls back to English. To add a language, add it to `languages` in `i18n.js`, add a
+`disclaimer` entry there, and drop a new `assets/i18n/<code>.js` beside the others.
+
+Each language also gets an `hreflang` tag in `index.html` and an entry in `sitemap.xml`.
+
+---
+
 ## 3. Deploy to GitHub Pages
 
 ### Option A — Push from the command line
@@ -135,8 +180,9 @@ git push
 ### Option B — Drag and drop (no command line)
 
 On github.com → **Add file → Upload files** → drag `index.html`, `style.css`, `script.js`,
-`robots.txt`, `sitemap.xml`, `.nojekyll` and the `assets` folder in → **Commit** → then follow
-step 2 above.
+`i18n.js`, `robots.txt`, `sitemap.xml`, `.nojekyll`, `CNAME` and the `assets` folder (with its
+`i18n` subfolder) in →
+**Commit** → then follow step 2 above.
 
 ### Site URL
 
@@ -171,6 +217,8 @@ Point your domain's DNS at GitHub Pages, then **Settings → Pages → Custom do
   semantic HTML, one `<h1>`, ordered heading levels
 - **Honest by default** — no invented clients, no fake testimonials, no claimed case studies. The
   Human + AI section, the "Example build" chips and the family reviews all say what's true today.
+- **Five languages** — English (authentic), Hindi, German, French, Spanish, with a visible
+  machine-translation notice and `hreflang` tags
 - **Performance** — no libraries, no framework, one small CSS file, one small JS file, all
   illustrations are inline SVG (no image downloads). Only external request: Google Fonts.
 

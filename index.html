@@ -22,6 +22,12 @@
 <meta name="description" content="Have an idea? HumansOfCoding builds apps, websites, MVPs and custom software for startups and businesses — designed, reviewed and shipped by a human engineer, with AI as a power tool. MVP development starting at ₹50,000." />
 <meta name="author" content="Adil — HumansOfCoding" />
 <link rel="canonical" href="https://humansofcoding.com/" />
+<link rel="alternate" hreflang="en" href="https://humansofcoding.com/" />
+<link rel="alternate" hreflang="hi" href="https://humansofcoding.com/?lang=hi" />
+<link rel="alternate" hreflang="de" href="https://humansofcoding.com/?lang=de" />
+<link rel="alternate" hreflang="fr" href="https://humansofcoding.com/?lang=fr" />
+<link rel="alternate" hreflang="es" href="https://humansofcoding.com/?lang=es" />
+<link rel="alternate" hreflang="x-default" href="https://humansofcoding.com/" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
@@ -124,6 +130,11 @@
     </nav>
 
     <div class="nav__actions">
+      <div class="lang">
+        <svg class="lang__globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.7 4 5.8 4 9s-1.4 6.3-4 9c-2.6-2.7-4-5.8-4-9s1.4-6.3 4-9Z"/></svg>
+        <select class="lang__select" id="langSelect" aria-label="Language"></select>
+        <svg class="lang__caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </div>
       <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch colour theme" aria-pressed="false">
         <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/></svg>
         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.2A8.4 8.4 0 0 1 9.8 4a8.6 8.6 0 1 0 10.2 10.2Z"/></svg>
@@ -135,6 +146,15 @@
     </div>
   </div>
 </header>
+
+<!-- Machine-translation notice (only shown when a translation is active) -->
+<div class="tnote" id="transNote" hidden>
+  <div class="container tnote__inner">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 21 20H3l9-16.5Z"/><path d="M12 10v4M12 17h.01"/></svg>
+    <p id="transNoteText"></p>
+    <button type="button" id="transNoteLink" class="tnote__link"></button>
+  </div>
+</div>
 
 <!-- Mobile menu -->
 <div class="menu" id="mobileMenu" hidden>
@@ -916,6 +936,7 @@
   </a>
 </div>
 
+<script src="i18n.js" defer></script>
 <script src="script.js" defer></script>
 </body>
 </html>
