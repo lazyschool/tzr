@@ -44,15 +44,13 @@ Any change to the files shows up on a browser refresh — there is nothing to bu
 
 ### a) Your contact details → `script.js`
 
-Open `script.js`. The first block is the only place contact info lives. Instagram and email are
-already filled in — the WhatsApp number is the one thing still to add:
+Open `script.js`. The first block is the only place contact info lives — Instagram and email are
+already filled in, so there is nothing you must change before publishing:
 
 ```js
 const CONFIG = {
   instagram: "humansofcoding",
-  whatsapp:  "910000000000",             // ← your number: country code + number, digits only
-  whatsappMessage: "Hi Adil! I have an idea I'd like to build. Can we talk?",
-  email:     "adil@humansofcoding.com",   // already set
+  email:     "adil@humansofcoding.com",
   emailSubject: "Project enquiry from humansofcoding.com",
   callSubject: "Free call request - HumansOfCoding",
   callBody: [ ...the pre-written email, one line per array entry... ],
@@ -60,7 +58,8 @@ const CONFIG = {
 };
 ```
 
-Every **Book a Free Call**, **WhatsApp**, **DM** and **Email** button on the page reads from this.
+Every **Book a Free Call**, **DM** and **Email** button on the page reads from this.
+There are two contact channels: Instagram and email. WhatsApp was removed.
 
 ### How "Book a Free Call" works
 
@@ -72,8 +71,8 @@ the wording — each array entry is one line.
 If you later sign up for a scheduler (Cal.com, Calendly), put its link in `bookingUrl` and every one
 of those buttons switches to the booking page instead. Nothing else needs touching.
 
-WhatsApp buttons fall back to Instagram while `whatsapp` is still the `910000000000` placeholder, so
-no button is ever dead.
+The email template asks how they'd like the call to happen — phone, WhatsApp, Zoom or Google Meet —
+so you can still take calls on WhatsApp without publishing your number on the site.
 
 ### b) Portfolio projects → `index.html`
 

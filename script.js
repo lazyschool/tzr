@@ -12,15 +12,6 @@ const CONFIG = {
   // Instagram handle (without the @)
   instagram: "humansofcoding",
 
-  // WhatsApp number in international format: country code + number,
-  // digits only, no +, spaces or dashes.
-  // Example for India: "919876543210"
-  // Leave the placeholder below and WhatsApp buttons will fall back to Instagram.
-  whatsapp: "910000000000",
-
-  // Message pre-filled in WhatsApp when someone taps a WhatsApp button
-  whatsappMessage: "Hi Adil! I have an idea I'd like to build. Can we talk?",
-
   // Your email address
   email: "adil@humansofcoding.com",
   emailSubject: "Project enquiry from humansofcoding.com",
@@ -64,18 +55,11 @@ const CONFIG = {
   /* ---------------------------------------------------------------
      1. Contact links — fill every [data-link] and [data-text]
   --------------------------------------------------------------- */
-  const PLACEHOLDER_WA = "910000000000";
   const PLACEHOLDER_MAIL = "your-email@example.com";
-
-  const waNumber = (CONFIG.whatsapp || "").replace(/\D/g, "");
-  const hasWhatsApp = waNumber && waNumber !== PLACEHOLDER_WA;
   const hasEmail = CONFIG.email && CONFIG.email !== PLACEHOLDER_MAIL;
 
   const links = {
     instagram: "https://instagram.com/" + CONFIG.instagram,
-    whatsapp: hasWhatsApp
-      ? "https://wa.me/" + waNumber + "?text=" + encodeURIComponent(CONFIG.whatsappMessage || "")
-      : "https://instagram.com/" + CONFIG.instagram,
     email: "mailto:" + CONFIG.email + "?subject=" + encodeURIComponent(CONFIG.emailSubject || "")
   };
 
@@ -98,13 +82,7 @@ const CONFIG = {
   });
 
   $$("[data-text]").forEach(function (el) {
-    const key = el.getAttribute("data-text");
-    if (key === "whatsapp") {
-      el.textContent = hasWhatsApp
-        ? "+" + waNumber.replace(/^(\d{1,3})(\d{5})(\d+)$/, "$1 $2 $3")
-        : "DM @" + CONFIG.instagram;
-    }
-    if (key === "email") {
+    if (el.getAttribute("data-text") === "email") {
       el.textContent = hasEmail ? CONFIG.email : PLACEHOLDER_MAIL;
     }
   });
