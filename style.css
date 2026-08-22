@@ -295,7 +295,7 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
 }
 
 .brand { display: inline-flex; align-items: center; gap: 10px; padding-block: 5px; font-weight: 600; }
@@ -320,6 +320,7 @@ h1, h2, h3 {
   position: relative;
   font-size: .93rem;
   color: var(--fg-2);
+  white-space: nowrap;
   transition: color .25s var(--ease);
 }
 .nav__links a::after {
@@ -336,7 +337,7 @@ h1, h2, h3 {
 .nav__links a:hover::after, .nav__links a.is-active::after { transform: scaleX(1); }
 
 .nav__actions { display: flex; align-items: center; gap: 8px; }
-.nav__cta { display: none; }
+.nav__cta { display: none; white-space: nowrap; }
 
 .icon-btn {
   width: 42px; height: 42px;
@@ -1205,6 +1206,111 @@ h1, h2, h3 {
   color: var(--fg-2);
 }
 
+/* language switcher */
+.lang {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 42px;
+  padding: 0 8px 0 10px;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  color: var(--fg);
+  transition: border-color .25s var(--ease);
+}
+.lang:hover, .lang:focus-within { border-color: var(--fg); }
+.lang__globe { width: 17px; height: 17px; flex: none; opacity: .8; }
+.lang__caret { width: 13px; height: 13px; flex: none; opacity: .7; pointer-events: none; }
+.lang__select {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-family: var(--font-body);
+  font-size: .88rem;
+  font-weight: 600;
+  padding: 0 2px;
+  cursor: pointer;
+  max-width: 6.6rem;
+}
+.lang__select:focus { outline: none; }
+.lang:focus-within { outline: 3px solid var(--accent); outline-offset: 3px; }
+.lang__select option { color: #111; background: #fff; }
+
+/* machine-translation notice */
+.tnote {
+  position: sticky;
+  top: var(--nav-h);
+  z-index: 90;
+  background: var(--accent-soft);
+  border-bottom: 1.5px solid var(--accent);
+  color: var(--fg);
+}
+.tnote[hidden] { display: none; }
+.tnote__inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding-block: 10px;
+  font-size: .86rem;
+  line-height: 1.45;
+}
+.tnote__inner svg { width: 17px; height: 17px; flex: none; margin-top: 2px; color: var(--accent); }
+.tnote__inner p { margin: 0; text-wrap: pretty; }
+.tnote__link {
+  flex: none;
+  padding: 4px 10px;
+  border: 1.5px solid var(--accent);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--accent);
+  font-family: var(--font-body);
+  font-size: .8rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color .2s var(--ease), color .2s var(--ease);
+}
+.tnote__link:hover { background: var(--accent); color: var(--accent-fg); }
+
+@media (max-width: 560px) {
+  .tnote__inner { flex-wrap: wrap; }
+  .tnote__link { margin-left: 27px; }
+}
+
+/* Below the desktop nav breakpoint the header also carries the burger, so the
+   language control collapses to a globe button the same size as the theme
+   toggle. The native select still opens the full list of languages. */
+@media (max-width: 979px) {
+  .lang {
+    width: 42px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  .lang__globe { width: 19px; height: 19px; opacity: 1; }
+  .lang__caret { display: none; }
+  .lang__select {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    max-width: none;
+    opacity: 0;
+    cursor: pointer;
+  }
+}
+
+/* Devanagari sits taller than Latin: give headings room for matras and drop
+   the sketch underline clear of the descenders. */
+:root[lang="hi"] h1,
+:root[lang="hi"] h2,
+:root[lang="hi"] h3 { line-height: 1.25; }
+:root[lang="hi"] .hero__title { letter-spacing: -.01em; }
+:root[lang="hi"] .hl__stroke { bottom: -.2em; }
+:root[lang="hi"] .price__value { line-height: 1.1; }
+
 /* --------------------- 8. FOOTER + STICKY MOBILE BAR -------------------- */
 .footer {
   border-top: 1.5px solid var(--line);
@@ -1347,9 +1453,21 @@ h1, h2, h3 {
 
 @media (min-width: 980px) {
   .about__stats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .nav__links { display: flex; }
-  .nav__cta { display: inline-flex; }
+  .nav__links { display: flex; gap: 16px; }
   .burger { display: none; }
+}
+
+/* The header CTA only appears once the nav links definitely fit beside it —
+   translated labels (French, German) are far longer than the English ones, so
+   the mid-desktop range runs tighter to keep the CTA on screen. */
+@media (min-width: 1220px) {
+  .nav__links { gap: 14px; }
+  .nav__cta { display: inline-flex; font-size: .84rem; padding: 9px 14px; }
+}
+
+@media (min-width: 1360px) {
+  .nav__links { gap: 20px; }
+  .nav__cta { font-size: .92rem; padding: 10px 18px; }
 }
 
 @media (min-width: 1120px) {
@@ -1360,6 +1478,8 @@ h1, h2, h3 {
 /* very small phones (<=360px): keep everything inside the viewport */
 @media (max-width: 374px) {
   .hero__actions .btn, .mvp__actions .btn, .cta__actions .btn { min-width: 100%; }
+  .lang__select { max-width: 4.4rem; font-size: .8rem; }
+  .lang { padding-inline: 8px 6px; }
   .brand__text { font-size: .95rem; }
   .flow__step { font-size: .72rem; padding: 8px 12px; }
 }
