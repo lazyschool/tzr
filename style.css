@@ -842,6 +842,16 @@ h1, h2, h3 {
   letter-spacing: -.04em;
 }
 .price__cur { font-size: .52em; margin-top: .18em; color: var(--accent); }
+.price__star {
+  font-size: .34em;
+  line-height: 1;
+  color: var(--accent);
+  text-decoration: none;
+  vertical-align: super;
+  margin-left: .04em;
+}
+.price__star:hover { text-decoration: underline; }
+
 .price__hand {
   display: inline-block;
   margin-top: 10px;
@@ -858,7 +868,15 @@ h1, h2, h3 {
   gap: 12px;
 }
 .mvp__actions .btn { flex: 1 1 auto; min-width: 200px; max-width: 320px; }
-.disclaimer { margin-top: 18px; font-size: .85rem; color: var(--fg-2); }
+.disclaimer {
+  max-width: 46rem;
+  margin: 18px auto 0;
+  font-size: .82rem;
+  line-height: 1.55;
+  color: var(--fg-2);
+  text-wrap: pretty;
+}
+.disclaimer span { color: var(--accent); font-weight: 700; }
 
 /* process timeline */
 .timeline { position: relative; display: grid; gap: 26px; padding-left: 42px; }

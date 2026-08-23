@@ -19,7 +19,6 @@ window.HOC_I18N["hi"] = {
   "build it.": "बना देंगे।",
   "Apps, websites & software built for your business — from idea to launch.": "आपके बिज़नेस के लिए ऐप, वेबसाइट और सॉफ़्टवेयर — आइडिया से लॉन्च तक।",
   "See What We Build": "देखें हम क्या बनाते हैं",
-  "MVPs starting at ₹50,000": "MVP ₹50,000 से शुरू",
   "Free 20-min idea call · No obligation": "फ्री 20-मिनट की आइडिया कॉल · कोई बाध्यता नहीं",
   "Hand-drawn illustration of Adil, founder of HumansOfCoding": "HumansOfCoding के संस्थापक आदिल का हाथ से बना चित्र",
   "Minimal line-art character looking at a floating app screen surrounded by idea, code, app and launch doodles.": "मिनिमल लाइन-आर्ट किरदार एक फ्लोटिंग ऐप स्क्रीन को देखते हुए, चारों ओर आइडिया, कोड, ऐप और लॉन्च के डूडल।",
@@ -92,7 +91,6 @@ window.HOC_I18N["hi"] = {
   "no lakhs upfront": "कोई लाखों का एडवांस नहीं",
   "Discuss Your MVP": "अपने MVP पर बात करें",
   "DM us on Instagram": "Instagram पर DM करें",
-  "Final pricing depends on features and project scope.": "अंतिम कीमत फ़ीचर और प्रोजेक्ट स्कोप पर निर्भर करती है।",
   "HOW IT WORKS": "यह कैसे काम करता है",
   "From idea to launch.": "आइडिया से लॉन्च तक।",
   "Tell us your idea": "अपना आइडिया बताइए",
@@ -177,5 +175,8 @@ window.HOC_I18N["hi"] = {
   "Based in India · In person around Lucknow, Kanpur & Delhi NCR · Working with clients everywhere.": "भारत में स्थित · लखनऊ, कानपुर और दिल्ली NCR में आमने-सामने · दुनिया भर के क्लाइंट के साथ काम।",
   "The studio is new. The engineering isn't. I've spent 11+ years as a software engineer, engineering lead and technical architect — designing, building and shipping web, desktop and mobile applications, cloud platforms, real-time data pipelines and AI systems, and leading distributed teams delivering production software in regulated spaces like healthcare, e-commerce and multi-tenant SaaS.": "स्टूडियो नया है, इंजीनियरिंग नहीं। मैंने 11+ साल सॉफ़्टवेयर इंजीनियर, इंजीनियरिंग लीड और टेक्निकल आर्किटेक्ट के तौर पर काम किया है — वेब, डेस्कटॉप और मोबाइल एप्लिकेशन, क्लाउड प्लेटफ़ॉर्म, रियल-टाइम डेटा पाइपलाइन और AI सिस्टम डिज़ाइन, डेवलप और डिलीवर करते हुए, और हेल्थकेयर, ई-कॉमर्स तथा मल्टी-टेनेंट SaaS जैसे नियामक क्षेत्रों में प्रोडक्शन सॉफ़्टवेयर देने वाली डिस्ट्रीब्यूटेड टीमों को लीड करते हुए।",
   "If you've been sitting on an idea for months, send me a message — or if you're near Lucknow, Kanpur or Delhi NCR, let's meet in person and talk it through. Worst case, you walk away with free advice on what to build first.": "अगर आप महीनों से किसी आइडिया पर बैठे हैं, मुझे मैसेज कीजिए — या अगर आप लखनऊ, कानपुर या दिल्ली NCR के आसपास हैं, तो मिलकर बात करते हैं। सबसे बुरा यही होगा कि आपको मुफ़्त सलाह मिल जाएगी कि पहले क्या बनाना चाहिए।",
-  "In person around Lucknow, Kanpur and Delhi NCR — or a call from anywhere else.": "लखनऊ, कानपुर और दिल्ली NCR में आमने-सामने — बाकी कहीं से भी कॉल पर।"
+  "In person around Lucknow, Kanpur and Delhi NCR — or a call from anywhere else.": "लखनऊ, कानपुर और दिल्ली NCR में आमने-सामने — बाकी कहीं से भी कॉल पर।",
+  "MVPs starting at ₹20,000*": "MVP ₹20,000* से शुरू",
+  "Final pricing depends on features and project scope. Third-party costs — cloud hosting, domains, external libraries, APIs, app-store fees and any other paid service — are billed separately and are not included.": "अंतिम कीमत फ़ीचर और प्रोजेक्ट स्कोप पर निर्भर करती है। थर्ड-पार्टी खर्च — क्लाउड होस्टिंग, डोमेन, बाहरी लाइब्रेरी, API, ऐप-स्टोर फ़ीस और कोई भी अन्य भुगतान वाली सेवा — अलग से लगते हैं और इसमें शामिल नहीं हैं।",
+  "See what the price excludes": "देखें कीमत में क्या शामिल नहीं है"
 };

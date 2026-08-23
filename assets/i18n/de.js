@@ -19,7 +19,6 @@ window.HOC_I18N["de"] = {
   "build it.": "bauen sie.",
   "Apps, websites & software built for your business — from idea to launch.": "Apps, Websites und Software für Ihr Unternehmen — von der Idee bis zum Launch.",
   "See What We Build": "Sehen, was wir bauen",
-  "MVPs starting at ₹50,000": "MVPs ab ₹50.000",
   "Free 20-min idea call · No obligation": "Kostenloses 20-Minuten-Gespräch · Unverbindlich",
   "Hand-drawn illustration of Adil, founder of HumansOfCoding": "Handgezeichnete Illustration von Adil, Gründer von HumansOfCoding",
   "Minimal line-art character looking at a floating app screen surrounded by idea, code, app and launch doodles.": "Minimalistische Strichfigur betrachtet einen schwebenden App-Bildschirm, umgeben von Kritzeleien zu Idee, Code, App und Launch.",
@@ -92,7 +91,6 @@ window.HOC_I18N["de"] = {
   "no lakhs upfront": "keine Riesensumme im Voraus",
   "Discuss Your MVP": "Über Ihr MVP sprechen",
   "DM us on Instagram": "Schreiben Sie uns auf Instagram",
-  "Final pricing depends on features and project scope.": "Der Endpreis hängt von Funktionsumfang und Projektumfang ab.",
   "HOW IT WORKS": "SO LÄUFT ES AB",
   "From idea to launch.": "Von der Idee zum Launch.",
   "Tell us your idea": "Erzählen Sie uns Ihre Idee",
@@ -177,5 +175,8 @@ window.HOC_I18N["de"] = {
   "Based in India · In person around Lucknow, Kanpur & Delhi NCR · Working with clients everywhere.": "Ansässig in Indien · Persönlich rund um Lucknow, Kanpur und Delhi NCR · Kunden weltweit.",
   "The studio is new. The engineering isn't. I've spent 11+ years as a software engineer, engineering lead and technical architect — designing, building and shipping web, desktop and mobile applications, cloud platforms, real-time data pipelines and AI systems, and leading distributed teams delivering production software in regulated spaces like healthcare, e-commerce and multi-tenant SaaS.": "Das Studio ist neu. Die Technik nicht. Ich war über 11 Jahre als Softwareentwickler, Engineering Lead und technischer Architekt tätig — habe Web-, Desktop- und Mobilanwendungen, Cloud-Plattformen, Echtzeit-Datenpipelines und KI-Systeme entworfen, gebaut und ausgeliefert und verteilte Teams geführt, die Produktivsoftware in regulierten Bereichen wie Gesundheitswesen, E-Commerce und mandantenfähigem SaaS bereitstellen.",
   "If you've been sitting on an idea for months, send me a message — or if you're near Lucknow, Kanpur or Delhi NCR, let's meet in person and talk it through. Worst case, you walk away with free advice on what to build first.": "Wenn Sie seit Monaten auf einer Idee sitzen, schreiben Sie mir — oder treffen wir uns persönlich, wenn Sie in der Nähe von Lucknow, Kanpur oder Delhi NCR sind. Schlimmstenfalls gehen Sie mit einem kostenlosen Rat, was zuerst zu bauen ist.",
-  "In person around Lucknow, Kanpur and Delhi NCR — or a call from anywhere else.": "Persönlich rund um Lucknow, Kanpur und Delhi NCR — von überall sonst per Gespräch."
+  "In person around Lucknow, Kanpur and Delhi NCR — or a call from anywhere else.": "Persönlich rund um Lucknow, Kanpur und Delhi NCR — von überall sonst per Gespräch.",
+  "MVPs starting at ₹20,000*": "MVPs ab ₹20.000*",
+  "Final pricing depends on features and project scope. Third-party costs — cloud hosting, domains, external libraries, APIs, app-store fees and any other paid service — are billed separately and are not included.": "Der Endpreis hängt von Funktionsumfang und Projektumfang ab. Kosten Dritter — Cloud-Hosting, Domains, externe Bibliotheken, APIs, App-Store-Gebühren und sonstige kostenpflichtige Dienste — werden separat berechnet und sind nicht enthalten.",
+  "See what the price excludes": "Sehen, was im Preis nicht enthalten ist"
 };
