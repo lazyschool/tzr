@@ -9,7 +9,10 @@ humansofcoding/
 ├── style.css         all styling (mobile-first)
 ├── script.js         all behaviour + YOUR BUSINESS INFO at the top
 ├── i18n.js           language list + translation disclaimer (small, always loaded)
+├── .well-known/
+│   └── security.txt  how to report a problem with the site
 ├── assets/
+│   ├── fonts/        self-hosted webfonts (no third-party requests)
 │   ├── favicon.svg   browser tab icon
 │   ├── og-image.svg  social share preview
 │   ├── i18n/         hi.js de.js fr.js es.js — loaded only when chosen
@@ -222,10 +225,46 @@ Point your domain's DNS at GitHub Pages, then **Settings → Pages → Custom do
 - **Performance** — no libraries, no framework, one small CSS file, one small JS file, all
   illustrations are inline SVG (no image downloads). Only external request: Google Fonts.
 
-### Want an even faster site?
+### Security
 
-Fonts are the only third-party request. To drop it, delete the three `fonts.g...` lines in
-`index.html`; the CSS already falls back to system fonts.
+The site is static — no server code, no database, no forms, no user accounts — so most web
+vulnerabilities simply do not apply. What is in place:
+
+- **No third-party requests at all.** Fonts are self-hosted in `assets/fonts/`, so nothing about
+  your visitors is sent to any other company, and there is no external script that could ever be
+  compromised. This also keeps you clear of the EU complaints about Google Fonts logging visitor IPs.
+- **Content Security Policy** (`<meta http-equiv="Content-Security-Policy">` near the top of
+  `index.html`). Everything must come from this origin: no external scripts, no plugins, no forms
+  posting anywhere. If someone ever managed to inject a `<script>` tag, the browser would refuse
+  to run it.
+- **Referrer policy** — `strict-origin-when-cross-origin`, so outbound clicks don't leak full URLs.
+- **Values read from `localStorage` are validated**, never applied to the DOM verbatim.
+- **No dependencies** — no npm packages, so no supply-chain risk and nothing to keep patched.
+
+⚠️ **If you edit either inline `<script>` in `index.html`, the CSP hashes must be regenerated**, or
+the browser will refuse to run that script. The page still works without them (it just loses the
+pre-paint theme), but regenerate them properly:
+
+```bash
+# prints the sha256-... value for a given inline script body
+python -c "import hashlib,base64,re,sys; h=open('index.html',encoding='utf-8').read(); print([('sha256-'+base64.b64encode(hashlib.sha256(b.encode()).digest()).decode()) for b in re.findall(r'<script(?![^>]*src=)[^>]*>(.*?)</script>', h, re.S)])"
+```
+
+Then paste the three values into the `script-src` list in the CSP meta tag.
+
+What CSP **cannot** do here: GitHub Pages can't send real HTTP headers, so `frame-ancestors`
+(clickjacking protection) and HSTS are unavailable. Neither matters much for a brochure site.
+
+The real risks are your **accounts**, not this code: GitHub, GoDaddy and the email behind them.
+Keep 2FA on all three and the domain auto-renewing.
+
+### Fonts and local preview
+
+Fonts live in `assets/fonts/` and are loaded by `@font-face` rules at the top of `style.css`.
+
+When you open `index.html` **directly from disk**, the browser blocks the two `<link rel="preload">`
+font hints as cross-origin (a `file://` rule, not a bug) and logs two console errors. The fonts
+still load and the page looks correct. For an exact preview, run the local server from section 1.
 
 ---
 

@@ -226,7 +226,10 @@ const CONFIG = {
   const themeBtn = $("#themeToggle");
 
   function readStoredTheme() {
-    try { return localStorage.getItem("hoc-theme"); } catch (e) { return null; }
+    try {
+      const t = localStorage.getItem("hoc-theme");
+      return t === "dark" || t === "light" ? t : null;   // validate, never trust
+    } catch (e) { return null; }
   }
   function applyTheme(theme) {
     root.setAttribute("data-theme", theme);

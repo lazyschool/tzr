@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
+
+<!--
+  Content Security Policy. GitHub Pages cannot send real headers, so this is
+  the meta form. Everything loads from this origin only; the two hashes cover
+  the inline bootstrap and the JSON-LD block below.
+  If you edit either inline <script>, regenerate the hashes or the browser will
+  refuse to run them (the page still works, it just loses the early theme).
+-->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'none'; script-src 'self' 'sha256-az/8UVNos7tJUucaOxTXca0WCDgFyLx8W+kPgi01n1E=' 'sha256-epxBclI/mTDE00hbr+D2pgpE+4oNxMTLOhOw9CCVAto=' 'sha256-oRjMmndc6UFUexqn6uqHdBsueyDVcpntaNhds+g5ho8='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; upgrade-insecure-requests" />
 <script>
 /* Send visitors to HTTPS. GitHub Pages' own "Enforce HTTPS" does this at the
    server level; this is the belt-and-braces version and is harmless once that
@@ -15,6 +24,7 @@
 })();
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
 <meta name="theme-color" content="#f6f9fd" media="(prefers-color-scheme: light)" />
 <meta name="theme-color" content="#0b1219" media="(prefers-color-scheme: dark)" />
 
@@ -48,9 +58,8 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="assets/favicon.svg" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Caveat:wght@600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="style.css" />
 
 <!-- Tiny bootstrap: marks that JS is on (so scroll animations are only hidden
@@ -60,6 +69,7 @@
 (function () {
   var d = document.documentElement, t = null;
   try { t = localStorage.getItem("hoc-theme"); } catch (e) {}
+  if (t !== "dark" && t !== "light") t = null;   // never trust stored values verbatim
   d.classList.add("js");
   d.setAttribute("data-theme", t || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
 })();
