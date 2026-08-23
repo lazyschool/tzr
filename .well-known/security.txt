@@ -1,0 +1,8 @@
+Contact: mailto:adil@humansofcoding.com
+Expires: 2027-08-23T00:00:00.000Z
+Preferred-Languages: en, hi
+Canonical: https://humansofcoding.com/.well-known/security.txt
+
+# Found something wrong with this site? Email the address above.
+# This is a static site served by GitHub Pages: no backend, no database,
+# no user accounts and no data collected from visitors.
