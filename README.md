@@ -234,7 +234,7 @@ Fonts are the only third-party request. To drop it, delete the three `fonts.g...
 | I want to… | Where |
 |-----------|-------|
 | Change the accent colour | `style.css` → `:root { --accent: #0f6ccc; }` plus `--accent-hover`, `--accent-soft`, `--accent-light`, `--accent-glow`. `--accent` carries button and link text so keep it dark enough to read on white; `--accent-light` is decoration only (sketch strokes, doodles, sparks). |
-| Change the MVP price | `index.html` → search `50,000` (appears in the hero badge, MVP section, mobile menu, footer, meta description) |
+| Change the MVP price | `index.html` → search `20,000` (appears in the hero badge, MVP section, mobile menu, footer, meta description) |
 | Add / remove a service or industry card | `index.html` → `#services` / `#industries` — copy an `<article class="card ...">` block |
 | Edit the About text | `index.html` → `#about` (the credibility strip is `.about__stats`) |
 | Edit the Human + AI section | `index.html` → `#human` |
