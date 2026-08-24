@@ -15,7 +15,7 @@ humansofcoding/
 │   ├── fonts/        self-hosted webfonts (no third-party requests)
 │   ├── favicon.svg   browser tab icon
 │   ├── og-image.svg  social share preview
-│   ├── i18n/         hi.js de.js fr.js es.js — loaded only when chosen
+│   ├── i18n/         20 dictionaries — loaded only when chosen
 │   └── README.md     how to add project images
 ├── .nojekyll         tells GitHub Pages to serve files as-is
 ├── robots.txt
@@ -114,22 +114,38 @@ drop the "Straight up: HumansOfCoding is new…" line from the section heading t
 
 ## 2b. Languages
 
-The site ships in **English, Hindi, German, French and Spanish**. English is the source and the
-authentic version; the others are machine-assisted translations, and a notice saying exactly that
-appears under the header whenever a translation is active, with a one-click "view in English".
+The site ships in **21 languages**. English is the source and the authentic version; every other
+language is translated by AI.
+
+| | | | |
+|---|---|---|---|
+| English (source) | العربية | Български | Deutsch |
+| Ελληνικά | Español | Français | हिन्दी |
+| Bahasa Indonesia | Italiano | 日本語 | Қазақша |
+| 한국어 | Bahasa Melayu | Norsk | Português |
+| Русский | Svenska | தமிழ் | ไทย |
+| Tiếng Việt | | | |
+
+Whenever a translation is active, a notice under the header says — in that language — that the page
+was translated by AI, apologises for any mistakes, and points to English as the authentic version,
+with one click back to it.
 
 **How it works.** There is only one `index.html`. On load, `script.js` snapshots every text node and
 translatable attribute on the page, then swaps them against the chosen language's dictionary.
 Switching back to English restores the original text, so English can never drift.
 
 Dictionaries live in `assets/i18n/<code>.js` and are **downloaded only when that language is
-selected** — an English visitor fetches none of them. Only the 2.5 KB `i18n.js` (language list plus
+selected** — an English visitor fetches none of them. Only the small `i18n.js` (language list plus
 the disclaimer wording) loads up front.
 
-**Choosing a language:** the globe control in the header (a full dropdown on desktop, a compact globe
+**Choosing a language:** the globe control in the header (a dropdown on desktop, a compact globe
 button on phones). The choice is remembered per visitor and reflected in the URL as `?lang=de`, so a
 translated page can be shared or linked directly. English stays the default — the browser's language
 is deliberately *not* auto-detected, because the English version is the authoritative one.
+
+**Arabic runs right-to-left.** Setting `rtl: true` on a language in `i18n.js` flips
+`document.dir`; the `9b. RIGHT-TO-LEFT` block in `style.css` mirrors the pieces that are pinned with
+physical left/right values and flips the arrows.
 
 ### Editing or adding a translation
 
@@ -137,21 +153,29 @@ Open `assets/i18n/<code>.js` (e.g. `assets/i18n/de.js`). Each is a plain map of
 `"English text": "translation"`:
 
 ```js
-de: {
+window.HOC_I18N["de"] = {
   "Have an idea?": "Sie haben eine Idee?",
   ...
-}
+};
 ```
 
 The key must match the English on the page **exactly** — same punctuation, same dashes. Anything
 without an entry simply stays in English, which is why brand names, `MVP`, `SaaS`, `AWS`, the
 Instagram handle and the email address are deliberately absent.
 
-**If you change English wording on the page, update the matching key in all four files**, or that
-line quietly falls back to English. To add a language, add it to `languages` in `i18n.js`, add a
-`disclaimer` entry there, and drop a new `assets/i18n/<code>.js` beside the others.
+**If you change English wording on the page, update the matching key in all 20 files**, or that line
+quietly falls back to English. To add a language: add it to `languages` in `i18n.js`, add a
+`disclaimer` and a `selectorLabel` entry there, drop a new `assets/i18n/<code>.js` beside the others,
+and add an `hreflang` tag in `index.html` plus an entry in `sitemap.xml`.
 
-Each language also gets an `hreflang` tag in `index.html` and an entry in `sitemap.xml`.
+**Always re-check the layout after adding a language.** Translated strings run much longer than the
+English they replace, and that is where the breakage happens — German broke the header nav, Tamil's
+headline word is wider than a phone screen (it gets a smaller heading size), and Tamil's CTA label is
+long enough that the duplicate header button is hidden for that language. Run:
+
+```bash
+node ~/.claude/skills/static-site-ship/scripts/page-audit.js "http://localhost:8000/index.html" 375,390,1280 ./shots "?lang=xx"
+```
 
 ---
 
@@ -220,8 +244,8 @@ Point your domain's DNS at GitHub Pages, then **Settings → Pages → Custom do
   semantic HTML, one `<h1>`, ordered heading levels
 - **Honest by default** — no invented clients, no fake testimonials, no claimed case studies. The
   Human + AI section, the "Example build" chips and the family reviews all say what's true today.
-- **Five languages** — English (authentic), Hindi, German, French, Spanish, with a visible
-  machine-translation notice and `hreflang` tags
+- **21 languages** — English is authentic, the other 20 are AI-translated, each with a visible
+  notice in that language, `hreflang` tags, and right-to-left support for Arabic
 - **Performance** — no libraries, no framework, one small CSS file, one small JS file, all
   illustrations are inline SVG (no image downloads). Only external request: Google Fonts.
 

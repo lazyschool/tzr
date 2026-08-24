@@ -159,6 +159,10 @@ const CONFIG = {
 
     document.documentElement.lang = code;
 
+    // Arabic reads right-to-left; everything else is left-to-right.
+    const meta = I18N.languages.filter(function (l) { return l.code === code; })[0];
+    document.documentElement.dir = meta && meta.rtl ? "rtl" : "ltr";
+
     // machine-translation notice
     const note = $("#transNote");
     if (note) {
