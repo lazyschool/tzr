@@ -127,8 +127,13 @@ language is translated by AI.
 | Tiếng Việt | | | |
 
 Whenever a translation is active, a notice under the header says — in that language — that the page
-was translated by AI, apologises for any mistakes, and points to English as the authentic version,
-with one click back to it.
+was translated by AI, apologises for any mistakes, and points to English as the authentic version.
+It carries two buttons: **view in English**, and an **Okay** button that dismisses it.
+
+Dismissal is remembered *per language* (`hoc-note-ok` in `localStorage`), so a reader who accepts the
+Japanese notice never sees it again in Japanese, but still gets the disclosure once if they switch to
+another translation. Each language's wording lives in the `disclaimer` map in `i18n.js` as
+`text` / `link` / `ok`.
 
 **How it works.** There is only one `index.html`. On load, `script.js` snapshots every text node and
 translatable attribute on the page, then swaps them against the chosen language's dictionary.

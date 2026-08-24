@@ -1434,9 +1434,26 @@ h1, h2, h3 {
 }
 .tnote__link:hover { background: var(--accent); color: var(--accent-fg); }
 
+.tnote__ok {
+  flex: none;
+  padding: 9px 16px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-fg);
+  font-family: var(--font-body);
+  font-size: .8rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color .2s var(--ease);
+}
+.tnote__ok:hover { background: var(--accent-hover); }
+
 @media (max-width: 560px) {
   .tnote__inner { flex-wrap: wrap; }
   .tnote__link { margin-left: 27px; }
+  .tnote__ok { margin-left: auto; }
 }
 
 /* Below the desktop nav breakpoint the header also carries the burger, so the

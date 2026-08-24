@@ -139,6 +139,20 @@ const CONFIG = {
     document.head.appendChild(el);
   }
 
+  function dismissedNotes() {
+    try {
+      return (localStorage.getItem("hoc-note-ok") || "").split(",").filter(Boolean);
+    } catch (e) { return []; }
+  }
+  function isNoteDismissed(code) {
+    return dismissedNotes().indexOf(code) !== -1;
+  }
+  function dismissNote(code) {
+    const list = dismissedNotes();
+    if (list.indexOf(code) === -1) list.push(code);
+    try { localStorage.setItem("hoc-note-ok", list.join(",")); } catch (e) { /* private mode */ }
+  }
+
   function applyLang(code) {
     if (!I18N || SUPPORTED.indexOf(code) === -1) code = "en";
     if (code !== "en" && !I18N[code]) {
@@ -163,13 +177,15 @@ const CONFIG = {
     const meta = I18N.languages.filter(function (l) { return l.code === code; })[0];
     document.documentElement.dir = meta && meta.rtl ? "rtl" : "ltr";
 
-    // machine-translation notice
+    // AI-translation notice. Dismissing it is remembered per language, so each
+    // translation still discloses itself once rather than nagging every visit.
     const note = $("#transNote");
     if (note) {
       const d = I18N.disclaimer[code];
-      if (d) {
+      if (d && !isNoteDismissed(code)) {
         $("#transNoteText").textContent = d.text;
         $("#transNoteLink").textContent = d.link;
+        $("#transNoteOk").textContent = d.ok || "OK";
         note.hidden = false;
       } else {
         note.hidden = true;
@@ -209,6 +225,14 @@ const CONFIG = {
 
     const noteLink = $("#transNoteLink");
     if (noteLink) noteLink.addEventListener("click", function () { applyLang("en"); });
+
+    const noteOk = $("#transNoteOk");
+    if (noteOk) {
+      noteOk.addEventListener("click", function () {
+        dismissNote(document.documentElement.lang);
+        $("#transNote").hidden = true;
+      });
+    }
 
     // ?lang= wins, then a saved choice. English stays the default: it is the
     // authentic version, so we never guess from browser language.
