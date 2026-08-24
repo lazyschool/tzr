@@ -7,10 +7,11 @@
   Content Security Policy. GitHub Pages cannot send real headers, so this is
   the meta form. Everything loads from this origin only; the two hashes cover
   the inline bootstrap and the JSON-LD block below.
-  If you edit either inline <script>, regenerate the hashes or the browser will
-  refuse to run them (the page still works, it just loses the early theme).
+  If you edit any inline script below, regenerate the hashes or the browser
+  will refuse to run them (the page still works, it just loses the early theme).
+  See README section "Security" for the one-liner that prints them.
 -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'none'; script-src 'self' 'sha256-az/8UVNos7tJUucaOxTXca0WCDgFyLx8W+kPgi01n1E=' 'sha256-epxBclI/mTDE00hbr+D2pgpE+4oNxMTLOhOw9CCVAto=' 'sha256-oRjMmndc6UFUexqn6uqHdBsueyDVcpntaNhds+g5ho8='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'none'; script-src 'self' 'sha256-az/8UVNos7tJUucaOxTXca0WCDgFyLx8W+kPgi01n1E=' 'sha256-h0k7zVCDUObBTft+pdZZ20mzZppPFKyDL6aPE4uvjUo=' 'sha256-oRjMmndc6UFUexqn6uqHdBsueyDVcpntaNhds+g5ho8='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; upgrade-insecure-requests" />
 <script>
 /* Send visitors to HTTPS. GitHub Pages' own "Enforce HTTPS" does this at the
    server level; this is the belt-and-braces version and is harmless once that
@@ -83,11 +84,17 @@
      first paint, so dark-mode users never see a flash of light. -->
 <script>
 (function () {
-  var d = document.documentElement, t = null;
-  try { t = localStorage.getItem("hoc-theme"); } catch (e) {}
-  if (t !== "dark" && t !== "light") t = null;   // never trust stored values verbatim
+  var d = document.documentElement, t = null, p = null;
+  try {
+    t = localStorage.getItem("hoc-theme");
+    p = localStorage.getItem("hoc-palette");
+  } catch (e) {}
+  // never trust stored values verbatim
+  if (t !== "dark" && t !== "light") t = null;
+  if (["blue", "green", "slate", "ocean", "rainbow"].indexOf(p) === -1) p = "blue";
   d.classList.add("js");
   d.setAttribute("data-theme", t || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
+  d.setAttribute("data-palette", p);
 })();
 </script>
 
@@ -161,10 +168,39 @@
         <select class="lang__select" id="langSelect" aria-label="Language"></select>
         <svg class="lang__caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
       </div>
-      <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch colour theme" aria-pressed="false">
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/></svg>
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.2A8.4 8.4 0 0 1 9.8 4a8.6 8.6 0 1 0 10.2 10.2Z"/></svg>
-      </button>
+      <div class="appear">
+        <button class="icon-btn" id="appearBtn" type="button" aria-label="Switch colour theme"
+                aria-expanded="false" aria-haspopup="true" aria-controls="appearPanel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3a9 9 0 1 0 0 18c1 0 1.7-.8 1.7-1.7 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.1 0-.9.8-1.7 1.7-1.7H16a5 5 0 0 0 5-5c0-4-4-7.3-9-7.3Z"/>
+            <circle cx="7.6" cy="11.6" r="1.1" fill="currentColor" stroke="none"/>
+            <circle cx="11" cy="7.4" r="1.1" fill="currentColor" stroke="none"/>
+            <circle cx="16" cy="9" r="1.1" fill="currentColor" stroke="none"/>
+          </svg>
+        </button>
+
+        <div class="appear__panel" id="appearPanel" hidden>
+          <div class="appear__row" role="group" aria-label="Switch colour theme">
+            <button type="button" class="appear__mode" data-mode="light" aria-label="Light">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/></svg>
+            </button>
+            <button type="button" class="appear__mode" data-mode="dark" aria-label="Dark">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.2A8.4 8.4 0 0 1 9.8 4a8.6 8.6 0 1 0 10.2 10.2Z"/></svg>
+            </button>
+            <button type="button" class="appear__mode" data-mode="system" aria-label="System">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="13" rx="2.5"/><path d="M9 21h6M12 17.5V21"/></svg>
+            </button>
+          </div>
+
+          <div class="appear__row appear__row--swatches" role="group" aria-label="Colour">
+            <button type="button" class="appear__sw" data-palette="blue" aria-label="Blue"><i style="background:#0f6ccc"></i></button>
+            <button type="button" class="appear__sw" data-palette="green" aria-label="Green"><i style="background:#12784a"></i></button>
+            <button type="button" class="appear__sw" data-palette="slate" aria-label="Slate"><i style="background:#445468"></i></button>
+            <button type="button" class="appear__sw" data-palette="ocean" aria-label="Ocean"><i style="background:linear-gradient(135deg,#0b6a92,#38bdf8)"></i></button>
+            <button type="button" class="appear__sw" data-palette="rainbow" aria-label="Rainbow"><i style="background:linear-gradient(100deg,#2563eb,#7028c8 34%,#c026d3 66%,#db2777)"></i></button>
+          </div>
+        </div>
+      </div>
       <a class="btn btn--primary btn--sm nav__cta" data-link="call" href="mailto:adil@humansofcoding.com?subject=Free%20call%20request%20-%20HumansOfCoding">Book a Free Call</a>
       <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>

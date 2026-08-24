@@ -178,5 +178,14 @@ window.HOC_I18N["el"] = {
   "In person around Lucknow, Kanpur and Delhi NCR — or a call from anywhere else.": "Δια ζώσης γύρω από Λακνάου, Κανπούρ και Δελχί NCR — από οπουδήποτε αλλού με κλήση.",
   "MVPs starting at ₹20,000*": "MVP από ₹20.000*",
   "Final pricing depends on features and project scope. Third-party costs — cloud hosting, domains, external libraries, APIs, app-store fees and any other paid service — are billed separately and are not included.": "Η τελική τιμή εξαρτάται από τις λειτουργίες και το εύρος του έργου. Τα κόστη τρίτων — φιλοξενία cloud, domain, εξωτερικές βιβλιοθήκες, API, χρεώσεις καταστημάτων εφαρμογών και κάθε άλλη πληρωμένη υπηρεσία — χρεώνονται ξεχωριστά και δεν περιλαμβάνονται.",
-  "See what the price excludes": "Δείτε τι δεν περιλαμβάνει η τιμή"
+  "See what the price excludes": "Δείτε τι δεν περιλαμβάνει η τιμή",
+  "Light": "Φωτεινό",
+  "Dark": "Σκούρο",
+  "System": "Σύστημα",
+  "Blue": "Μπλε",
+  "Green": "Πράσινο",
+  "Slate": "Γκρι",
+  "Ocean": "Ωκεανός",
+  "Rainbow": "Ουράνιο τόξο",
+  "Colour": "Χρώμα"
 };

@@ -178,5 +178,14 @@ window.HOC_I18N["it"] = {
   "In person around Lucknow, Kanpur and Delhi NCR — or a call from anywhere else.": "Di persona tra Lucknow, Kanpur e Delhi NCR — da ogni altro posto, con una chiamata.",
   "MVPs starting at ₹20,000*": "MVP a partire da ₹20.000*",
   "Final pricing depends on features and project scope. Third-party costs — cloud hosting, domains, external libraries, APIs, app-store fees and any other paid service — are billed separately and are not included.": "Il prezzo finale dipende dalle funzionalità e dall'ampiezza del progetto. I costi di terze parti — hosting cloud, domini, librerie esterne, API, commissioni degli store e qualsiasi altro servizio a pagamento — sono fatturati a parte e non sono inclusi.",
-  "See what the price excludes": "Vedi cosa non include il prezzo"
+  "See what the price excludes": "Vedi cosa non include il prezzo",
+  "Light": "Chiaro",
+  "Dark": "Scuro",
+  "System": "Sistema",
+  "Blue": "Blu",
+  "Green": "Verde",
+  "Slate": "Grigio",
+  "Ocean": "Oceano",
+  "Rainbow": "Arcobaleno",
+  "Colour": "Colore"
 };

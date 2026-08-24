@@ -178,5 +178,14 @@ window.HOC_I18N["vi"] = {
   "In person around Lucknow, Kanpur and Delhi NCR — or a call from anywhere else.": "Gặp trực tiếp quanh Lucknow, Kanpur và Delhi NCR — hoặc gọi điện từ bất cứ đâu.",
   "MVPs starting at ₹20,000*": "MVP từ ₹20.000*",
   "Final pricing depends on features and project scope. Third-party costs — cloud hosting, domains, external libraries, APIs, app-store fees and any other paid service — are billed separately and are not included.": "Giá cuối cùng phụ thuộc vào tính năng và phạm vi dự án. Các chi phí bên thứ ba — lưu trữ cloud, tên miền, thư viện bên ngoài, API, phí cửa hàng ứng dụng và mọi dịch vụ trả phí khác — được tính riêng và không bao gồm.",
-  "See what the price excludes": "Xem những gì không nằm trong giá"
+  "See what the price excludes": "Xem những gì không nằm trong giá",
+  "Light": "Sáng",
+  "Dark": "Tối",
+  "System": "Hệ thống",
+  "Blue": "Xanh dương",
+  "Green": "Xanh lá",
+  "Slate": "Xám",
+  "Ocean": "Đại dương",
+  "Rainbow": "Cầu vồng",
+  "Colour": "Màu sắc"
 };
