@@ -251,27 +251,88 @@ const CONFIG = {
      3. Theme (light / dark) with memory
   --------------------------------------------------------------- */
   const root = document.documentElement;
-  const themeBtn = $("#themeToggle");
+  const PALETTES = ["blue", "green", "slate", "ocean", "rainbow"];
+  const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
-  function readStoredTheme() {
+  function store(key, value) {
     try {
-      const t = localStorage.getItem("hoc-theme");
-      return t === "dark" || t === "light" ? t : null;   // validate, never trust
-    } catch (e) { return null; }
+      if (value === null) localStorage.removeItem(key);
+      else localStorage.setItem(key, value);
+    } catch (e) { /* private mode */ }
   }
-  function applyTheme(theme) {
-    root.setAttribute("data-theme", theme);
-    if (themeBtn) themeBtn.setAttribute("aria-pressed", String(theme === "dark"));
+  function read(key) {
+    try { return localStorage.getItem(key); } catch (e) { return null; }
   }
 
-  const stored = readStoredTheme();
-  applyTheme(stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
+  // "system" is simply the absence of a stored choice, so it keeps following
+  // the OS setting rather than freezing whatever it was on the day they picked.
+  function storedMode() {
+    const t = read("hoc-theme");
+    return t === "dark" || t === "light" ? t : "system";
+  }
+  function storedPalette() {
+    const p = read("hoc-palette");
+    return PALETTES.indexOf(p) === -1 ? "blue" : p;
+  }
 
-  if (themeBtn) {
-    themeBtn.addEventListener("click", function () {
-      const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-      applyTheme(next);
-      try { localStorage.setItem("hoc-theme", next); } catch (e) { /* private mode */ }
+  function applyMode(mode) {
+    const resolved = mode === "system"
+      ? (darkQuery.matches ? "dark" : "light")
+      : mode;
+    root.setAttribute("data-theme", resolved);
+    $$(".appear__mode").forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b.getAttribute("data-mode") === mode));
+    });
+  }
+  function applyPalette(name) {
+    root.setAttribute("data-palette", name);
+    $$(".appear__sw").forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b.getAttribute("data-palette") === name));
+    });
+  }
+
+  applyMode(storedMode());
+  applyPalette(storedPalette());
+
+  // keep following the OS while the visitor is on "system"
+  darkQuery.addEventListener("change", function () {
+    if (storedMode() === "system") applyMode("system");
+  });
+
+  const appearBtn = $("#appearBtn");
+  const appearPanel = $("#appearPanel");
+
+  function setAppear(open) {
+    if (!appearBtn || !appearPanel) return;
+    appearPanel.hidden = !open;
+    appearBtn.setAttribute("aria-expanded", String(open));
+  }
+
+  if (appearBtn && appearPanel) {
+    appearBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      setAppear(appearPanel.hidden);
+    });
+    appearPanel.addEventListener("click", function (e) { e.stopPropagation(); });
+
+    $$(".appear__mode", appearPanel).forEach(function (b) {
+      b.addEventListener("click", function () {
+        const mode = b.getAttribute("data-mode");
+        store("hoc-theme", mode === "system" ? null : mode);
+        applyMode(mode);
+      });
+    });
+    $$(".appear__sw", appearPanel).forEach(function (b) {
+      b.addEventListener("click", function () {
+        const name = b.getAttribute("data-palette");
+        store("hoc-palette", name);
+        applyPalette(name);
+      });
+    });
+
+    document.addEventListener("click", function () { setAppear(false); });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !appearPanel.hidden) { setAppear(false); appearBtn.focus(); }
     });
   }
 

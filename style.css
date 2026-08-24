@@ -156,6 +156,164 @@
   --shadow-lg: 0 24px 60px rgba(0, 0, 0, .5);
 }
 
+/* ------------------------- 1b. COLOUR PALETTES -------------------------- */
+/* Two independent axes:
+     data-theme   = light | dark      (brightness)
+     data-palette = blue | green | slate | ocean | rainbow   (hue family)
+   Blue is the default and lives in :root above. Every palette keeps --accent
+   dark enough for white text (>= 4.5:1) and --accent-light for decoration only. */
+
+/* ---- GREEN ---- */
+:root[data-palette="green"] {
+  --accent: #12784a;
+  --accent-hover: #0d6039;
+  --accent-light: #34d399;
+  --accent-soft: #e2f6ec;
+  --accent-glow: 18, 120, 74;
+  --bg: #f6fbf8;
+  --bg-2: #e6f4ec;
+  --line: #d5e9dd;
+  --line-strong: #b0d4c1;
+  --fg: #0d1f17;
+  --fg-2: #4d6459;
+}
+:root[data-theme="dark"][data-palette="green"] {
+  --accent: #4ade80;
+  --accent-hover: #7ceaa5;
+  --accent-light: #6ee7a8;
+  --accent-fg: #04140c;
+  --accent-soft: rgba(74, 222, 128, .15);
+  --accent-glow: 74, 222, 128;
+  --bg: #08130d;
+  --bg-2: #0d1c14;
+  --card: #11241a;
+  --fg: #e8f6ee;
+  --fg-2: #8fae9d;
+  --line: #1e3327;
+  --line-strong: #2f4b3a;
+}
+
+/* ---- SLATE (grey) ---- */
+:root[data-palette="slate"] {
+  --accent: #445468;
+  --accent-hover: #2f3d4e;
+  --accent-light: #94a3b8;
+  --accent-soft: #eceff3;
+  --accent-glow: 68, 84, 104;
+  --bg: #f7f8fa;
+  --bg-2: #eceef2;
+  --line: #dcdfe5;
+  --line-strong: #bcc2cc;
+  --fg: #16191f;
+  --fg-2: #5b6472;
+}
+:root[data-theme="dark"][data-palette="slate"] {
+  --accent: #c3ccd9;
+  --accent-hover: #e2e8f0;
+  --accent-light: #9aa7b8;
+  --accent-fg: #14171c;
+  --accent-soft: rgba(195, 204, 217, .14);
+  --accent-glow: 195, 204, 217;
+  --bg: #0e1013;
+  --bg-2: #15181d;
+  --card: #191d23;
+  --fg: #eceef2;
+  --fg-2: #9aa3b0;
+  --line: #262b33;
+  --line-strong: #3a414c;
+}
+
+/* ---- OCEAN (shades of blue in one) ---- */
+:root[data-palette="ocean"] {
+  --accent: #0b6a92;
+  --accent-hover: #08536f;
+  --accent-light: #38bdf8;
+  --accent-soft: #dcf0fa;
+  --accent-glow: 11, 106, 146;
+  --bg: #eef6fb;
+  --bg-2: #d9ebf7;
+  --card: #f9fdff;
+  --line: #c6dfef;
+  --line-strong: #9cc5df;
+  --fg: #082336;
+  --fg-2: #446076;
+}
+:root[data-theme="dark"][data-palette="ocean"] {
+  --accent: #4cc3f0;
+  --accent-hover: #82d7f6;
+  --accent-light: #7dd3fc;
+  --accent-fg: #04161f;
+  --accent-soft: rgba(76, 195, 240, .15);
+  --accent-glow: 76, 195, 240;
+  --bg: #041520;
+  --bg-2: #07202f;
+  --card: #0a2839;
+  --fg: #e2f4fd;
+  --fg-2: #86adc4;
+  --line: #123a52;
+  --line-strong: #1d4d68;
+}
+
+/* ---- RAINBOW ---- */
+/* One readable violet carries text and buttons; the gradient and the hue cycle
+   below supply the colour. Every gradient stop stays dark enough for white. */
+:root[data-palette="rainbow"] {
+  --accent: #7028c8;
+  --accent-hover: #5a1fa4;
+  --accent-light: #d946ef;
+  --accent-soft: #f5e9fd;
+  --accent-glow: 112, 40, 200;
+  --bg: #fbf8fe;
+  --bg-2: #f3ecfb;
+  --line: #e6dcf3;
+  --line-strong: #cbb8e4;
+  --fg: #1a1024;
+  --fg-2: #5e5270;
+  --rainbow: linear-gradient(100deg, #2563eb, #7028c8 34%, #c026d3 66%, #db2777);
+}
+:root[data-theme="dark"][data-palette="rainbow"] {
+  --accent: #c084fc;
+  --accent-hover: #d8b4fe;
+  --accent-light: #f0abfc;
+  --accent-fg: #16081f;
+  --accent-soft: rgba(192, 132, 252, .16);
+  --accent-glow: 192, 132, 252;
+  --bg: #0d0714;
+  --bg-2: #150c20;
+  --card: #1a1028;
+  --fg: #f3ecfb;
+  --fg-2: #a897bd;
+  --line: #2a1d3d;
+  --line-strong: #3f2d59;
+  --rainbow: linear-gradient(100deg, #60a5fa, #c084fc 34%, #f0abfc 66%, #fb7185);
+}
+
+/* Rainbow only: paint the things that are pure colour, never text-on-colour. */
+:root[data-palette="rainbow"] .btn--primary {
+  background-image: var(--rainbow);
+  border-color: transparent;
+}
+:root[data-palette="rainbow"] .btn--primary:hover { filter: brightness(1.08); }
+:root[data-palette="rainbow"] .progress span,
+:root[data-palette="rainbow"] .tl__line i,
+:root[data-palette="rainbow"] .mvp__tape { background-image: var(--rainbow); }
+:root[data-palette="rainbow"] .mvp__panel { box-shadow: 10px 10px 0 var(--accent-light); }
+
+/* each section gets its own hue for the small decorative marks */
+:root[data-palette="rainbow"] .section:nth-of-type(6n+1) .eyebrow__dot { background: #2563eb; }
+:root[data-palette="rainbow"] .section:nth-of-type(6n+2) .eyebrow__dot { background: #0d9488; }
+:root[data-palette="rainbow"] .section:nth-of-type(6n+3) .eyebrow__dot { background: #ca8a04; }
+:root[data-palette="rainbow"] .section:nth-of-type(6n+4) .eyebrow__dot { background: #dc2626; }
+:root[data-palette="rainbow"] .section:nth-of-type(6n+5) .eyebrow__dot { background: #c026d3; }
+:root[data-palette="rainbow"] .section:nth-of-type(6n+6) .eyebrow__dot { background: #7028c8; }
+:root[data-palette="rainbow"] .cards--3 > :nth-child(3n+1) .card__icon,
+:root[data-palette="rainbow"] .cards--4 > :nth-child(4n+1) .card__icon { color: #2563eb; }
+:root[data-palette="rainbow"] .cards--3 > :nth-child(3n+2) .card__icon,
+:root[data-palette="rainbow"] .cards--4 > :nth-child(4n+2) .card__icon { color: #0d9488; }
+:root[data-palette="rainbow"] .cards--3 > :nth-child(3n+3) .card__icon,
+:root[data-palette="rainbow"] .cards--4 > :nth-child(4n+3) .card__icon { color: #c026d3; }
+:root[data-palette="rainbow"] .cards--4 > :nth-child(4n+4) .card__icon { color: #db2777; }
+
 /* ---------------------------- 2. RESET/BASE ---------------------------- */
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -454,9 +612,57 @@ h1, h2, h3 {
 }
 .icon-btn:hover { border-color: var(--fg); transform: rotate(18deg); }
 .icon-btn svg { width: 19px; height: 19px; }
-.icon-moon { display: none; }
-:root[data-theme="dark"] .icon-sun { display: none; }
-:root[data-theme="dark"] .icon-moon { display: block; }
+
+/* appearance: one button, a popover with mode + palette */
+.appear { position: relative; display: inline-flex; }
+.appear__panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  inset-inline-end: 0;
+  z-index: 130;
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  background: var(--card);
+  border: 1.5px solid var(--line-strong);
+  border-radius: 16px;
+  box-shadow: var(--shadow-lg);
+}
+.appear__panel[hidden] { display: none; }
+.appear__row { display: flex; gap: 6px; }
+.appear__mode {
+  display: grid;
+  place-items: center;
+  width: 40px; height: 40px;
+  border: 1.5px solid var(--line);
+  border-radius: 11px;
+  background: transparent;
+  color: var(--fg);
+  cursor: pointer;
+  transition: border-color .2s var(--ease), background-color .2s var(--ease);
+}
+.appear__mode svg { width: 18px; height: 18px; }
+.appear__mode:hover { border-color: var(--fg-2); }
+.appear__mode[aria-pressed="true"] {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.appear__sw {
+  width: 40px; height: 40px;
+  padding: 4px;
+  border: 1.5px solid var(--line);
+  border-radius: 11px;
+  background: transparent;
+  cursor: pointer;
+  transition: border-color .2s var(--ease), transform .2s var(--ease);
+}
+.appear__sw i { display: block; width: 100%; height: 100%; border-radius: 7px; }
+.appear__sw:hover { transform: translateY(-2px); border-color: var(--fg-2); }
+.appear__sw[aria-pressed="true"] { border-color: var(--accent); border-width: 2.5px; }
+
+/* the panel sizes to its controls, never squeezing them below a tap target */
+.appear__panel { min-width: max-content; }
 
 .burger {
   width: 44px; height: 44px;

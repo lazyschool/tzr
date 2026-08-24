@@ -241,7 +241,8 @@ Point your domain's DNS at GitHub Pages, then **Settings → Pages → Custom do
 
 - **Mobile-first** and checked with no horizontal scroll at 375 / 390 / 430 px, tablet and desktop
 - **Sticky bottom CTA bar** on phones (Instagram traffic lands on a visible "Book a Free Call")
-- **Light + dark theme** with a toggle, remembered per visitor, no flash on load
+- **Five colour palettes × light/dark/system** — blue (default), green, slate, ocean and rainbow,
+  chosen from the palette button in the header, remembered per visitor, no flash on load
 - **Animations** — scroll reveals, floating doodles, drawn hand-made line art, animated timeline,
   price count-up; every one of them is switched off under `prefers-reduced-motion: reduce`
 - **Works without JavaScript** — all content renders, all links still work
@@ -253,6 +254,29 @@ Point your domain's DNS at GitHub Pages, then **Settings → Pages → Custom do
   notice in that language, `hreflang` tags, and right-to-left support for Arabic
 - **Performance** — no libraries, no framework, one small CSS file, one small JS file, all
   illustrations are inline SVG (no image downloads). Only external request: Google Fonts.
+
+### Colour themes
+
+Two independent axes on `<html>`:
+
+| Attribute | Values |
+|---|---|
+| `data-theme` | `light` \| `dark` |
+| `data-palette` | `blue` \| `green` \| `slate` \| `ocean` \| `rainbow` |
+
+Both are set before first paint by the inline bootstrap in `index.html`, so there is no flash. The
+palette button in the header opens a small panel: three mode buttons (light / dark / **system**) and
+five swatches. `system` is stored as *no* saved value, so it keeps following the OS setting instead
+of freezing whatever it was the day it was picked.
+
+**To add a palette:** add a `:root[data-palette="name"]` block plus a
+`:root[data-theme="dark"][data-palette="name"]` block in section `1b` of `style.css`, add the code to
+`PALETTES` in `script.js`, and add a swatch button in `index.html`.
+
+⚠️ **`--accent` carries button fills and link text, so it must stay dark enough for white text**
+(≥ 4.5:1). Use `--accent-light` for anything decorative. All five palettes are verified at AA in both
+modes; rainbow keeps a single readable violet for text and puts the colour in `--rainbow`, a gradient
+whose every stop also clears 4.5:1 with white.
 
 ### Security
 
