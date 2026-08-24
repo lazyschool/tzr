@@ -198,18 +198,23 @@ h1, h2, h3 {
   border-radius: 6px;
 }
 
+/* Hidden by moving it ABOVE the viewport, not to the far left: a large
+   negative left offset extends the scrollable area under dir="rtl" and drags
+   the whole document sideways. */
 .skip-link {
   position: absolute;
-  left: -9999px;
   top: 8px;
+  inset-inline-start: 12px;
   z-index: 200;
   background: var(--fg);
   color: var(--bg);
   padding: 10px 16px;
   border-radius: 10px;
   font-weight: 600;
+  transform: translateY(-250%);
+  transition: transform .2s var(--ease);
 }
-.skip-link:focus { left: 12px; }
+.skip-link:focus { transform: none; }
 
 /* scroll progress */
 .progress {
@@ -555,6 +560,18 @@ h1, h2, h3 {
 }
 .hero__title .line { display: block; }
 .hl { position: relative; display: inline-block; white-space: nowrap; }
+/* Translated strings are far longer than the English they replace; nowrap on a
+   full sentence pushes the whole page wider than the viewport. */
+:root:not([lang="en"]) .hl { white-space: normal; overflow-wrap: break-word; }
+
+/* Tamil words are long and unbreakable at the hero's display size — one word
+   alone exceeds a 390px screen. Give that script a smaller headline. */
+:root[lang="ta"] .hero__title { font-size: clamp(1.55rem, 7vw, 3.3rem); }
+:root[lang="ta"] .sec-title { font-size: clamp(1.5rem, 5.6vw, 2.8rem); }
+/* The Tamil "Book a Free Call" label is about twice the English length and
+   pushes the header CTA off screen. The hero CTA sits right below it, so drop
+   the duplicate from the nav. Add other languages here if they overflow too. */
+:root[lang="ta"] .nav__cta { display: none; }
 .hl__stroke {
   position: absolute;
   left: -2%;
@@ -940,6 +957,8 @@ h1, h2, h3 {
 }
 .price__cur { font-size: .52em; margin-top: .18em; color: var(--accent); }
 .price__star {
+  display: inline-block;
+  padding: 0 .1em;
   font-size: .34em;
   line-height: 1;
   color: var(--accent);
@@ -1401,7 +1420,7 @@ h1, h2, h3 {
 .tnote__inner p { margin: 0; text-wrap: pretty; }
 .tnote__link {
   flex: none;
-  padding: 4px 10px;
+  padding: 9px 14px;
   border: 1.5px solid var(--accent);
   border-radius: 999px;
   background: transparent;
@@ -1577,6 +1596,8 @@ h1, h2, h3 {
   }
   .tl__line i { transform: scaleX(var(--p, 0)); transform-origin: 0 50%; }
   .tl__num { left: 0; top: -62px; width: 38px; height: 38px; }
+  [dir="rtl"] .timeline { padding-right: 0; }
+  [dir="rtl"] .tl__num { right: 0; left: auto; }
 }
 
 @media (min-width: 900px) {
@@ -1623,6 +1644,47 @@ h1, h2, h3 {
   .brand__text { font-size: .95rem; }
   .flow__step { font-size: .72rem; padding: 8px 12px; }
 }
+
+/* --------------------------- 9b. RIGHT-TO-LEFT --------------------------- */
+/* Arabic. Flex and grid mirror themselves; these are the pieces pinned with
+   physical left/right values, plus the arrows that must point the other way. */
+[dir="rtl"] .timeline { padding-left: 0; padding-right: 42px; }
+[dir="rtl"] .tl__num { left: auto; right: -42px; }
+[dir="rtl"] .tl__line { left: auto; right: 17px; }
+[dir="rtl"] .tl__line i { transform-origin: 50% 0; }
+
+[dir="rtl"] .mvp__tape {
+  left: auto;
+  right: -46px;
+  transform: rotate(38deg);
+}
+[dir="rtl"] .about__sticker { right: auto; left: -10px; transform: rotate(6deg); }
+[dir="rtl"] .proj__flag { left: auto; right: 12px; }
+[dir="rtl"] .t__flag { right: auto; left: 12px; }
+[dir="rtl"] .human__step { right: auto; left: 18px; }
+[dir="rtl"] .price__star { margin-left: 0; margin-right: .04em; }
+[dir="rtl"] .card__corner {
+  right: auto;
+  left: 14px;
+  border-right: 0;
+  border-left: 2px solid var(--accent);
+  border-radius: 0 0 0 6px;
+}
+[dir="rtl"] .prob:hover { transform: translateX(-5px); }
+
+/* arrows: → becomes ← without touching the markup */
+[dir="rtl"] .link-arrow span[aria-hidden],
+[dir="rtl"] .contact__go span[aria-hidden],
+[dir="rtl"] .flow__arrow,
+[dir="rtl"] .btn svg { transform: scaleX(-1); }
+[dir="rtl"] .btn:hover svg { transform: scaleX(-1) translateX(3px); }
+
+[dir="rtl"] .handoff__arrow { transform: rotate(-6deg) scaleX(-1); }
+[dir="rtl"] .about__meta svg { transform: none; }
+
+/* the hand-drawn characters and doodles are decorative — leave them be */
+/* Keep the ticker running in its natural reading order for the language. */
+[dir="rtl"] .marquee__track { animation-direction: reverse; }
 
 /* ------------------------- 10. REDUCED MOTION -------------------------- */
 @media (prefers-reduced-motion: reduce) {
