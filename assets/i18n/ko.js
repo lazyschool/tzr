@@ -187,5 +187,6 @@ window.HOC_I18N["ko"] = {
   "Slate": "그레이",
   "Ocean": "오션",
   "Rainbow": "레인보우",
-  "Colour": "색상"
+  "Colour": "색상",
+  "Free Call": "무료 상담"
 };

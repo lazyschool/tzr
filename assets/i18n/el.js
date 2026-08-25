@@ -187,5 +187,6 @@ window.HOC_I18N["el"] = {
   "Slate": "Γκρι",
   "Ocean": "Ωκεανός",
   "Rainbow": "Ουράνιο τόξο",
-  "Colour": "Χρώμα"
+  "Colour": "Χρώμα",
+  "Free Call": "Δωρεάν κλήση"
 };

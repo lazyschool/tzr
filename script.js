@@ -125,13 +125,17 @@ const CONFIG = {
   // them. Injecting a <script> works from file:// too, where fetch() would be
   // blocked by the browser's local-file rules.
   const loading = {};
+  const unavailable = {};
   function loadDict(code, done) {
-    if (code === "en" || I18N[code]) return done();
+    if (code === "en" || I18N[code] || unavailable[code]) return done();
     if (loading[code]) return loading[code].push(done);
     loading[code] = [done];
     const el = document.createElement("script");
     el.src = (I18N.path || "assets/i18n/") + code + ".js";
     el.onload = el.onerror = function () {
+      // A dictionary that did not arrive is remembered as unavailable, so a
+      // failed fetch falls back to English once instead of retrying forever.
+      if (!I18N[code]) unavailable[code] = true;
       const queue = loading[code] || [];
       loading[code] = null;
       queue.forEach(function (fn) { fn(); });
@@ -156,9 +160,12 @@ const CONFIG = {
   function applyLang(code) {
     if (!I18N || SUPPORTED.indexOf(code) === -1) code = "en";
     if (code !== "en" && !I18N[code]) {
-      // fetch the dictionary, then come back
-      loadDict(code, function () { applyLang(code); });
-      return;
+      if (unavailable[code]) {
+        code = "en";                       // dictionary missing: show the source
+      } else {
+        loadDict(code, function () { applyLang(code); });
+        return;
+      }
     }
     const dict = code === "en" ? null : I18N[code];
 
@@ -214,11 +221,23 @@ const CONFIG = {
 
     const sel = $("#langSelect");
     if (sel) {
+      // grouped by region, alphabetical inside each; the option shows the
+      // native name first, then the English name so the ordering is legible
+      // to someone who cannot read the script.
+      const groups = {};
       I18N.languages.forEach(function (l) {
-        const o = document.createElement("option");
-        o.value = l.code;
-        o.textContent = l.native;
-        sel.appendChild(o);
+        (groups[l.region || "Other"] = groups[l.region || "Other"] || []).push(l);
+      });
+      Object.keys(groups).sort().forEach(function (region) {
+        const g = document.createElement("optgroup");
+        g.label = region;
+        groups[region].forEach(function (l) {
+          const o = document.createElement("option");
+          o.value = l.code;
+          o.textContent = l.native === l.label ? l.label : l.native + " · " + l.label;
+          g.appendChild(o);
+        });
+        sel.appendChild(g);
       });
       sel.addEventListener("change", function () { applyLang(sel.value); });
     }

@@ -187,5 +187,6 @@ window.HOC_I18N["ru"] = {
   "Slate": "Серый",
   "Ocean": "Океан",
   "Rainbow": "Радуга",
-  "Colour": "Цвет"
+  "Colour": "Цвет",
+  "Free Call": "Бесплатный звонок"
 };

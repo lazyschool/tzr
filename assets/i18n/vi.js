@@ -187,5 +187,6 @@ window.HOC_I18N["vi"] = {
   "Slate": "Xám",
   "Ocean": "Đại dương",
   "Rainbow": "Cầu vồng",
-  "Colour": "Màu sắc"
+  "Colour": "Màu sắc",
+  "Free Call": "Gọi miễn phí"
 };

@@ -187,5 +187,6 @@ window.HOC_I18N["ta"] = {
   "Slate": "சாம்பல்",
   "Ocean": "கடல்",
   "Rainbow": "வானவில்",
-  "Colour": "நிறம்"
+  "Colour": "நிறம்",
+  "Free Call": "இலவசம்"
 };

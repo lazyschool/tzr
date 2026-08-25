@@ -187,5 +187,6 @@ window.HOC_I18N["fr"] = {
   "Slate": "Gris",
   "Ocean": "Océan",
   "Rainbow": "Arc-en-ciel",
-  "Colour": "Couleur"
+  "Colour": "Couleur",
+  "Free Call": "Appel gratuit"
 };

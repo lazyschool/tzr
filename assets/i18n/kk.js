@@ -187,5 +187,6 @@ window.HOC_I18N["kk"] = {
   "Slate": "Сұр",
   "Ocean": "Мұхит",
   "Rainbow": "Кемпірқосақ",
-  "Colour": "Түс"
+  "Colour": "Түс",
+  "Free Call": "Тегін қоңырау"
 };

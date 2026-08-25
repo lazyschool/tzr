@@ -187,5 +187,6 @@ window.HOC_I18N["ms"] = {
   "Slate": "Kelabu",
   "Ocean": "Lautan",
   "Rainbow": "Pelangi",
-  "Colour": "Warna"
+  "Colour": "Warna",
+  "Free Call": "Panggilan percuma"
 };

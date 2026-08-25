@@ -187,5 +187,6 @@ window.HOC_I18N["nb"] = {
   "Slate": "Grå",
   "Ocean": "Hav",
   "Rainbow": "Regnbue",
-  "Colour": "Farge"
+  "Colour": "Farge",
+  "Free Call": "Gratis samtale"
 };

@@ -13,30 +13,42 @@
    ===================================================================== */
 window.HOC_I18N = window.HOC_I18N || {};
 
-/* Languages offered in the switcher. `en` first — it is the source.
-   `rtl: true` flips the page direction (Arabic). */
+/* Languages offered in the switcher, grouped by region and alphabetical inside
+   each group. English is the source; `rtl: true` flips page direction. */
 window.HOC_I18N.languages = [
-  { code: "en", label: "English",    native: "English" },
-  { code: "ar", label: "Arabic",     native: "العربية", rtl: true },
-  { code: "bg", label: "Bulgarian",  native: "Български" },
-  { code: "de", label: "German",     native: "Deutsch" },
-  { code: "el", label: "Greek",      native: "Ελληνικά" },
-  { code: "es", label: "Spanish",    native: "Español" },
-  { code: "fr", label: "French",     native: "Français" },
-  { code: "hi", label: "Hindi",      native: "हिन्दी" },
-  { code: "id", label: "Indonesian", native: "Bahasa Indonesia" },
-  { code: "it", label: "Italian",    native: "Italiano" },
-  { code: "ja", label: "Japanese",   native: "日本語" },
-  { code: "kk", label: "Kazakh",     native: "Қазақша" },
-  { code: "ko", label: "Korean",     native: "한국어" },
-  { code: "ms", label: "Malay",      native: "Bahasa Melayu" },
-  { code: "nb", label: "Norwegian",  native: "Norsk" },
-  { code: "pt", label: "Portuguese", native: "Português" },
-  { code: "ru", label: "Russian",    native: "Русский" },
-  { code: "sv", label: "Swedish",    native: "Svenska" },
-  { code: "ta", label: "Tamil",      native: "தமிழ்" },
-  { code: "th", label: "Thai",       native: "ไทย" },
-  { code: "vi", label: "Vietnamese", native: "Tiếng Việt" }
+  { code: "zh",   label: "Chinese",             native: "简体中文",              region: "East Asia" },
+  { code: "ja",   label: "Japanese",            native: "日本語",               region: "East Asia" },
+  { code: "ko",   label: "Korean",              native: "한국어",               region: "East Asia" },
+  { code: "bg",   label: "Bulgarian",           native: "Български",         region: "Europe" },
+  { code: "en",   label: "English",             native: "English",           region: "Europe" },
+  { code: "fr",   label: "French",              native: "Français",          region: "Europe" },
+  { code: "de",   label: "German",              native: "Deutsch",           region: "Europe" },
+  { code: "el",   label: "Greek",               native: "Ελληνικά",          region: "Europe" },
+  { code: "it",   label: "Italian",             native: "Italiano",          region: "Europe" },
+  { code: "nb",   label: "Norwegian",           native: "Norsk",             region: "Europe" },
+  { code: "pl",   label: "Polish",              native: "Polski",            region: "Europe" },
+  { code: "pt",   label: "Portuguese",          native: "Português",         region: "Europe" },
+  { code: "ru",   label: "Russian",             native: "Русский",           region: "Europe" },
+  { code: "es",   label: "Spanish",             native: "Español",           region: "Europe" },
+  { code: "sv",   label: "Swedish",             native: "Svenska",           region: "Europe" },
+  { code: "uk",   label: "Ukrainian",           native: "Українська",        region: "Europe" },
+  { code: "ar",   label: "Arabic",              native: "العربية",           region: "Middle East & Central Asia", rtl: true },
+  { code: "kk",   label: "Kazakh",              native: "Қазақша",           region: "Middle East & Central Asia" },
+  { code: "fa",   label: "Persian",             native: "فارسی",             region: "Middle East & Central Asia", rtl: true },
+  { code: "tr",   label: "Turkish",             native: "Türkçe",            region: "Middle East & Central Asia" },
+  { code: "bn",   label: "Bengali",             native: "বাংলা",             region: "South Asia" },
+  { code: "gu",   label: "Gujarati",            native: "ગુજરાતી",           region: "South Asia" },
+  { code: "hi",   label: "Hindi",               native: "हिन्दी",            region: "South Asia" },
+  { code: "mr",   label: "Marathi",             native: "मराठी",             region: "South Asia" },
+  { code: "pa",   label: "Punjabi",             native: "ਪੰਜਾਬੀ",            region: "South Asia" },
+  { code: "ta",   label: "Tamil",               native: "தமிழ்",             region: "South Asia" },
+  { code: "te",   label: "Telugu",              native: "తెలుగు",            region: "South Asia" },
+  { code: "ur",   label: "Urdu",                native: "اردو",              region: "South Asia", rtl: true },
+  { code: "tl",   label: "Filipino",            native: "Filipino",          region: "Southeast Asia" },
+  { code: "id",   label: "Indonesian",          native: "Bahasa Indonesia",  region: "Southeast Asia" },
+  { code: "ms",   label: "Malay",               native: "Bahasa Melayu",     region: "Southeast Asia" },
+  { code: "th",   label: "Thai",                native: "ไทย",               region: "Southeast Asia" },
+  { code: "vi",   label: "Vietnamese",          native: "Tiếng Việt",        region: "Southeast Asia" }
 ];
 
 /* Shown as a bar under the header while a translation is active. */
@@ -60,14 +72,38 @@ window.HOC_I18N.disclaimer = {
   sv: { text: "Den här sidan är översatt av AI och kan innehålla fel — vi ber om ursäkt för eventuella misstag. Se den engelska versionen som den autentiska.", link: "Visa på engelska", ok: "Okej" },
   ta: { text: "இந்தப் பக்கம் AI மூலம் மொழிபெயர்க்கப்பட்டது, பிழைகள் இருக்கக்கூடும் — தவறுகளுக்கு மன்னிக்கவும். ஆங்கிலப் பதிப்பையே சரியான பதிப்பாகக் கருதவும்.", link: "ஆங்கிலத்தில் பார்க்க", ok: "சரி" },
   th: { text: "หน้านี้แปลโดย AI และอาจมีข้อผิดพลาด ขออภัยในความคลาดเคลื่อน โปรดยึดฉบับภาษาอังกฤษเป็นฉบับที่ถูกต้อง", link: "ดูฉบับภาษาอังกฤษ", ok: "รับทราบ" },
-  vi: { text: "Trang này được dịch bằng AI và có thể có sai sót — chúng tôi xin lỗi vì bất kỳ lỗi nào. Vui lòng xem bản tiếng Anh là bản chuẩn xác nhất.", link: "Xem bản tiếng Anh", ok: "Đã hiểu" }
+  vi: { text: "Trang này được dịch bằng AI và có thể có sai sót — chúng tôi xin lỗi vì bất kỳ lỗi nào. Vui lòng xem bản tiếng Anh là bản chuẩn xác nhất.", link: "Xem bản tiếng Anh", ok: "Đã hiểu" },
+  bn: { text: "এই পৃষ্ঠাটি AI দিয়ে অনুবাদ করা হয়েছে এবং এতে ভুল থাকতে পারে — এর জন্য আমরা দুঃখিত। অনুগ্রহ করে ইংরেজি সংস্করণটিকেই প্রামাণিক ধরুন।", link: "ইংরেজিতে দেখুন", ok: "ঠিক আছে" },
+  fa: { text: "این صفحه توسط هوش مصنوعی ترجمه شده است و ممکن است خطا داشته باشد — بابت هر اشتباهی پوزش می‌خواهیم. لطفاً نسخهٔ انگلیسی را معتبر بدانید.", link: "مشاهده به انگلیسی", ok: "باشه" },
+  gu: { text: "આ પાનું AI દ્વારા અનુવાદિત છે અને તેમાં ભૂલો હોઈ શકે છે — તે માટે અમે માફી માગીએ છીએ. કૃપા કરીને અંગ્રેજી સંસ્કરણને જ પ્રામાણિક ગણો.", link: "અંગ્રેજીમાં જુઓ", ok: "બરાબર" },
+  mr: { text: "हे पान AI ने भाषांतरित केले आहे आणि त्यात चुका असू शकतात — त्याबद्दल क्षमस्व. कृपया इंग्रजी आवृत्तीच प्रमाण माना.", link: "इंग्रजीत पाहा", ok: "ठीक आहे" },
+  pa: { text: "ਇਹ ਪੰਨਾ AI ਨੇ ਅਨੁਵਾਦ ਕੀਤਾ ਹੈ ਅਤੇ ਇਸ ਵਿੱਚ ਗਲਤੀਆਂ ਹੋ ਸਕਦੀਆਂ ਹਨ — ਇਸ ਲਈ ਮੁਆਫ਼ੀ। ਕਿਰਪਾ ਕਰਕੇ ਅੰਗਰੇਜ਼ੀ ਸੰਸਕਰਣ ਨੂੰ ਹੀ ਪ੍ਰਮਾਣਿਕ ਮੰਨੋ।", link: "ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਵੇਖੋ", ok: "ਠੀਕ ਹੈ" },
+  pl: { text: "Ta strona została przetłumaczona przez AI i może zawierać błędy — przepraszamy za nie. Wersją wiążącą jest wersja angielska.", link: "Zobacz po angielsku", ok: "Rozumiem" },
+  te: { text: "ఈ పేజీని AI అనువదించింది, ఇందులో పొరపాట్లు ఉండవచ్చు — అందుకు క్షమించండి. దయచేసి ఇంగ్లీష్ వెర్షన్‌ను మాత్రమే ప్రామాణికంగా భావించండి.", link: "ఇంగ్లీష్‌లో చూడండి", ok: "సరే" },
+  tl: { text: "Isinalin ang pahinang ito ng AI at maaaring may mga mali — paumanhin po. Pakitingnan ang bersyong Ingles bilang siyang tunay.", link: "Tingnan sa Ingles", ok: "Sige" },
+  tr: { text: "Bu sayfa yapay zekâ tarafından çevrildi ve hatalar içerebilir — bunun için özür dileriz. Lütfen İngilizce sürümü esas alın.", link: "İngilizce görüntüle", ok: "Tamam" },
+  uk: { text: "Цю сторінку переклав штучний інтелект, тож у ній можуть бути помилки — перепрошуємо за них. Автентичною вважайте англійську версію.", link: "Переглянути англійською", ok: "Зрозуміло" },
+  ur: { text: "اس صفحے کا ترجمہ AI نے کیا ہے اور اس میں غلطیاں ہو سکتی ہیں — اس کے لیے معذرت۔ براہِ کرم انگریزی نسخے کو ہی مستند سمجھیں۔", link: "انگریزی میں دیکھیں", ok: "ٹھیک ہے" },
+  zh: { text: "本页面由 AI 翻译，可能存在错误——对此我们深表歉意。请以英文版本为准。", link: "查看英文版", ok: "知道了" },
 };
 
 window.HOC_I18N.selectorLabel = {
   en: "Language", ar: "اللغة", bg: "Език", de: "Sprache", el: "Γλώσσα",
   es: "Idioma", fr: "Langue", hi: "भाषा", id: "Bahasa", it: "Lingua",
   ja: "言語", kk: "Тіл", ko: "언어", ms: "Bahasa", nb: "Språk",
-  pt: "Idioma", ru: "Язык", sv: "Språk", ta: "மொழி", th: "ภาษา", vi: "Ngôn ngữ"
+  pt: "Idioma", ru: "Язык", sv: "Språk", ta: "மொழி", th: "ภาษา", vi: "Ngôn ngữ",
+  bn: "ভাষা",
+  fa: "زبان",
+  gu: "ભાષા",
+  mr: "भाषा",
+  pa: "ਭਾਸ਼ਾ",
+  pl: "Język",
+  te: "భాష",
+  tl: "Wika",
+  tr: "Dil",
+  uk: "Мова",
+  ur: "زبان",
+  zh: "语言",
 };
 
 /* Where the on-demand dictionaries live, relative to index.html. */

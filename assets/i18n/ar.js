@@ -187,5 +187,6 @@ window.HOC_I18N["ar"] = {
   "Slate": "رمادي",
   "Ocean": "محيطي",
   "Rainbow": "قوس قزح",
-  "Colour": "اللون"
+  "Colour": "اللون",
+  "Free Call": "مكالمة مجانية"
 };

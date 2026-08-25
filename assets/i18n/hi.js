@@ -187,5 +187,6 @@ window.HOC_I18N["hi"] = {
   "Slate": "स्लेटी",
   "Ocean": "महासागर",
   "Rainbow": "इंद्रधनुष",
-  "Colour": "रंग"
+  "Colour": "रंग",
+  "Free Call": "फ्री कॉल"
 };

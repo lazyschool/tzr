@@ -187,5 +187,6 @@ window.HOC_I18N["th"] = {
   "Slate": "เทา",
   "Ocean": "มหาสมุทร",
   "Rainbow": "สายรุ้ง",
-  "Colour": "สี"
+  "Colour": "สี",
+  "Free Call": "คุยฟรี"
 };
