@@ -5,3 +5,6 @@
 .DS_Store
 Thumbs.db
 .vscode/
+
+# build helper: the English key list used when adding translations
+_keys.json
