@@ -11,7 +11,7 @@
   will refuse to run them (the page still works, it just loses the early theme).
   See README section "Security" for the one-liner that prints them.
 -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'none'; script-src 'self' 'sha256-az/8UVNos7tJUucaOxTXca0WCDgFyLx8W+kPgi01n1E=' 'sha256-h0k7zVCDUObBTft+pdZZ20mzZppPFKyDL6aPE4uvjUo=' 'sha256-oRjMmndc6UFUexqn6uqHdBsueyDVcpntaNhds+g5ho8='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'none'; script-src 'self' https://static.cloudflareinsights.com 'sha256-az/8UVNos7tJUucaOxTXca0WCDgFyLx8W+kPgi01n1E=' 'sha256-h0k7zVCDUObBTft+pdZZ20mzZppPFKyDL6aPE4uvjUo=' 'sha256-oRjMmndc6UFUexqn6uqHdBsueyDVcpntaNhds+g5ho8='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; upgrade-insecure-requests" />
 <script>
 /* Send visitors to HTTPS. GitHub Pages' own "Enforce HTTPS" does this at the
    server level; this is the belt-and-braces version and is harmless once that
@@ -1025,5 +1025,9 @@
 
 <script src="i18n.js" defer></script>
 <script src="script.js" defer></script>
+
+<!-- Cloudflare Web Analytics. Privacy-friendly and cookie-free: the numbers go
+     to the Cloudflare dashboard, not onto this page. The token is public. -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "16ba7bce6bf54d6fa4327ecd5912dfb1"}'></script>
 </body>
 </html>
