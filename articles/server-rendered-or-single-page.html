@@ -318,7 +318,7 @@
       <span aria-hidden="true">·</span>
       <time datetime="2026-07-08">8 July 2026</time>
       <span aria-hidden="true">·</span>
-      <span>6 min read</span>
+      <span>4 min read</span>
     </p>
 
 
@@ -349,6 +349,33 @@
       <li>Choose based on what a conference talk said. The talk does not know who your visitors are or what network they are on.</li>
     </ul>
     <p>Ask instead: who arrives here, on what connection, and how long do they stay? The answer picks the approach without any ideology being involved.</p>
+    <h2>What “fast” actually means to the person waiting</h2>
+    <p>Both camps claim speed, and both are telling the truth about different moments. It helps to name them.</p>
+    <ul>
+      <li><strong>Time until something appears.</strong> Server rendering wins, usually decisively. The browser gets HTML and paints it.</li>
+      <li><strong>Time until it responds to a tap.</strong> This is where server-rendered pages can disappoint — the pixels arrived, the JavaScript that makes the menu work has not.</li>
+      <li><strong>Time for the next screen.</strong> A single-page app wins here, because it already has the code and often the data.</li>
+    </ul>
+    <p>The gap that annoys users most is the second one: a page that looks ready and ignores you. It reads as broken in a way a visible spinner does not, and it is the specific failure of shipping a large JavaScript bundle to a mid-range phone.</p>
+    <h2>The costs a single-page app adds</h2>
+    <p>Beyond the initial download, choosing to render in the browser means taking on work the server used to do for free.</p>
+    <ol>
+      <li><strong>Routing.</strong> The back button, deep links and refresh all have to be made to work. They were free before.</li>
+      <li><strong>Data fetching and caching.</strong> When to refetch, what to show while waiting, what to do when it fails. Every screen, forever.</li>
+      <li><strong>Two places to keep in step.</strong> Validation rules, permissions and formatting now exist on both sides and can disagree.</li>
+      <li><strong>Error handling in the browser.</strong> A server error page is automatic; a client-side crash shows a blank white screen unless you build for it.</li>
+    </ol>
+    <p>None of these are reasons not to do it. They are reasons it costs more, and that cost should be paid for a screen that earns it rather than out of habit.</p>
+    <h2>A decision table you can actually use</h2>
+    <ul>
+      <li><strong>Marketing pages, articles, listings, catalogues</strong> — server-rendered. Strangers arrive here from search and social.</li>
+      <li><strong>Dashboards, consoles, editors, anything behind a login</strong> — single-page. People stay, and interaction speed is the product.</li>
+      <li><strong>Checkout and forms</strong> — server-rendered with light interactivity. Reliability beats slickness where money is involved.</li>
+      <li><strong>Booking flows</strong> — either, but keep the first page fast; that is where people leave.</li>
+    </ul>
+    <h2>What I would ask before choosing</h2>
+    <p>What device and connection does a typical user have? Do strangers arrive on this screen, or only people who logged in? How long is a session? Does search need to read it?</p>
+    <p>Four questions, and between them they decide it. Notice that none of them is about which framework is currently fashionable, which is what the argument is usually actually about.</p>
   </div>
 </section>
 
@@ -364,21 +391,21 @@
         <span class="proj__cat">Security</span>
         <h3>Passkeys, and when to bother</h3>
         <p>They are genuinely better than passwords and genuinely not a drop-in replacement. Where they fit, and the recovery problem nobody mentions.</p>
-        <p class="post-card__meta"><time datetime="2026-06-24">24 June 2026</time> · 5 min read</p>
+        <p class="post-card__meta"><time datetime="2026-06-24">24 June 2026</time> · 4 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
       <a class="card post-card reveal" data-reveal style="--d:.10s" href="build-for-the-metro.html">
         <span class="proj__cat">Mobile</span>
         <h3>Build for the metro: offline is a product decision</h3>
         <p>Most apps are built on office wifi and used on a train. Treating the network as optional is a decision about who gets to use your product.</p>
-        <p class="post-card__meta"><time datetime="2026-06-10">10 June 2026</time> · 6 min read</p>
+        <p class="post-card__meta"><time datetime="2026-06-10">10 June 2026</time> · 4 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
       <a class="card post-card reveal" data-reveal style="--d:.16s" href="do-you-need-a-vector-database.html">
         <span class="proj__cat">AI</span>
         <h3>Do you actually need a vector database?</h3>
         <p>Almost every AI feature proposal now includes one. For most of them, Postgres with a search extension is enough, and the difference is a month of work.</p>
-        <p class="post-card__meta"><time datetime="2026-09-07">7 September 2026</time> · 6 min read</p>
+        <p class="post-card__meta"><time datetime="2026-09-07">7 September 2026</time> · 5 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
     </div>

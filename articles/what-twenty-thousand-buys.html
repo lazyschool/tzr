@@ -354,6 +354,36 @@
     <h2>The question worth asking</h2>
     <p>Not "how much is an app?" — nobody can answer that honestly. Ask instead: what is the smallest version of this that would be worth paying for, and what would that cost? That question has a real answer, and getting to it is what the free call is for.</p>
     <blockquote><p>If a quote arrives without questions attached to it, it is a guess wearing a suit.</p></blockquote>
+    <h2>A worked example</h2>
+    <p>Take the booking MVP from the case studies — a real shape rather than an abstraction. Roughly where the effort goes:</p>
+    <ul>
+      <li><strong>Week one: the rules.</strong> Services, durations, staff, opening hours, and what counts as an available slot. No code. This is the week that prevents the expensive mistakes.</li>
+      <li><strong>Weeks two and three: the build.</strong> Public booking page, the calendar, the front-desk view, and the database constraint that makes a double booking impossible.</li>
+      <li><strong>Week four: live.</strong> Reminders, deposits if wanted, real customers, and the fixes that only real customers surface.</li>
+    </ul>
+    <p>That is the shape that starts at ₹20,000. Add three more staff with different service lists, an existing customer database to import, and deposits on some services but not others, and it is a different number — not because anyone is being greedy, but because each of those adds rules that have to be modelled and tested.</p>
+    <h2>Fixed price or by the hour?</h2>
+    <p>I quote fixed prices for well-defined work, and I am straightforward about why that is not generosity. A fixed price transfers risk to me, so it includes a margin for the risk. If the work is genuinely well-understood, that margin is small and you get certainty cheaply.</p>
+    <p>Where a fixed price goes wrong is when the scope is not actually known. Then one of two things happens: the price carries a large buffer you pay for whether or not it is needed, or it does not, and the project quietly turns into a negotiation about what was implied. Neither is good for either side.</p>
+    <p>So for exploratory work — integrating with a system nobody has documented, or a first version where the requirements are genuinely still forming — I would rather work in short, priced blocks with a decision point at the end of each. You can stop after any of them.</p>
+    <h2>What a change costs mid-project</h2>
+    <p>Changes are normal and I am not going to pretend otherwise. What varies enormously is when they arrive.</p>
+    <ul>
+      <li><strong>During the first week</strong> — usually free. Nothing is built yet; we are still deciding what to build.</li>
+      <li><strong>During the build, in an area not yet started</strong> — small. Reordering work is cheap.</li>
+      <li><strong>During the build, in something already finished</strong> — the real cost of the change, plus retesting what it touches.</li>
+      <li><strong>A change to the data model, after there is live data</strong> — the most expensive kind by a distance, because existing records have to be migrated and the migration has to be right the first time.</li>
+    </ul>
+    <p>That last line is why I push so hard on getting the data model right in week one, and why I will spend an unglamorous afternoon on it while you are keen to see screens.</p>
+    <h2>How to compare two quotes honestly</h2>
+    <p>A cheaper number is not a cheaper project. Before comparing, make both sides answer the same four questions.</p>
+    <ol>
+      <li>What exactly is included, written as a list you could tick off?</li>
+      <li>What third-party costs will I be billed for, by whom, and roughly how much per month?</li>
+      <li>What happens after launch — is any fixing included, and for how long?</li>
+      <li>Who owns the code and the accounts, in writing?</li>
+    </ol>
+    <p>Two quotes that look ₹15,000 apart routinely turn out to be for different projects entirely. Ask these and the gap usually explains itself, in one direction or the other.</p>
   </div>
 </section>
 
@@ -369,21 +399,21 @@
         <span class="proj__cat">Building</span>
         <h3>What an MVP actually is, and what it isn't</h3>
         <p>Most people asking for an MVP describe a full product with a smaller budget. That is not the same thing, and the difference decides whether the money teaches you anything.</p>
-        <p class="post-card__meta"><time datetime="2026-08-12">12 August 2026</time> · 6 min read</p>
+        <p class="post-card__meta"><time datetime="2026-08-12">12 August 2026</time> · 5 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
       <a class="card post-card reveal" data-reveal style="--d:.10s" href="what-ai-coding-agents-are-good-at.html">
         <span class="proj__cat">AI</span>
         <h3>What AI coding agents are good at, and what they're not</h3>
         <p>A working note from someone who uses them daily and still reads every line. Where they save real time, and the three places they quietly cost you money.</p>
-        <p class="post-card__meta"><time datetime="2026-08-05">5 August 2026</time> · 7 min read</p>
+        <p class="post-card__meta"><time datetime="2026-08-05">5 August 2026</time> · 5 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
       <a class="card post-card reveal" data-reveal style="--d:.16s" href="start-with-postgres.html">
         <span class="proj__cat">Engineering</span>
         <h3>Start with Postgres. Almost always.</h3>
         <p>Database choice is the decision most likely to be made for the wrong reasons, and the most expensive to revisit. Here is the short version.</p>
-        <p class="post-card__meta"><time datetime="2026-07-22">22 July 2026</time> · 6 min read</p>
+        <p class="post-card__meta"><time datetime="2026-07-22">22 July 2026</time> · 4 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
     </div>

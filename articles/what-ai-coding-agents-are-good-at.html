@@ -318,7 +318,7 @@
       <span aria-hidden="true">·</span>
       <time datetime="2026-08-05">5 August 2026</time>
       <span aria-hidden="true">·</span>
-      <span>7 min read</span>
+      <span>5 min read</span>
     </p>
 
 
@@ -353,6 +353,26 @@
     <p>The practical test I apply: if this is wrong, how will I find out? If the answer is "it fails immediately and loudly", let the machine write it. If the answer is "a customer tells me in three months", I write it.</p>
     <h2>What it means if you are paying for software</h2>
     <p>Ask whoever is building for you how they use these tools. "We don't" is a slightly worrying answer in 2026. So is "the AI writes it and we ship it". The answer you want describes a line: what the machine does, what a person does, and who reads the result before it reaches you.</p>
+    <h2>A worked example of confidently wrong</h2>
+    <p>The abstract warning is easy to nod along to, so here is the shape of a real one. Ask for an endpoint that lets a user fetch their own orders. You will reliably get something that reads the user id from the request, queries orders for that id, and returns them. It looks correct. It has tests. The tests pass.</p>
+    <p>The problem is where the user id came from. If it was taken from a parameter the client sends rather than from the verified session, then any logged-in customer can read any other customer's orders by changing a number in the URL. The code is not broken — it does exactly what it says. It is just answering the wrong question about who is asking.</p>
+    <p>This class of bug does not announce itself. Nothing crashes, no test fails, and the feature works perfectly in every manual check you would think to do. It is found by someone reading the code and asking where each value came from — or by a customer, later, which is considerably worse.</p>
+    <h2>How to review AI-written code quickly</h2>
+    <p>Reading every line sounds slow. In practice it is fast if you know what you are looking for, because the failure modes cluster.</p>
+    <ol>
+      <li><strong>Follow the untrusted input.</strong> Anything from the browser is a claim, not a fact. Where does it get checked?</li>
+      <li><strong>Check the authorisation, not the authentication.</strong> “Is this a real user” is usually right. “Is this user allowed this particular record” is where it goes wrong.</li>
+      <li><strong>Look at the error paths.</strong> Happy paths are nearly always fine. What happens when the payment provider times out halfway?</li>
+      <li><strong>Question anything clever.</strong> Unusual constructs are where a model has pattern-matched onto something from a different context.</li>
+      <li><strong>Read the tests as claims.</strong> A test asserting the wrong behaviour is worse than no test, because it makes the wrong behaviour official.</li>
+    </ol>
+    <h2>What it means for how long things take</h2>
+    <p>The honest accounting is less dramatic than the marketing. Writing code is perhaps thirty per cent of building software. The rest is deciding what to build, understanding the existing system, testing, fixing, deploying and explaining.</p>
+    <p>So even a tool that made typing instantaneous would not make projects three times faster. What it does is shift where the time goes: less on mechanical production, more on judgement and review. My estimates have not halved. They have become more reliable, because the boring parts no longer vary much.</p>
+    <p>There is a second-order effect that matters more. Because scaffolding is nearly free, it is now cheap to build a rough version of something and find out it was the wrong idea. Being wrong sooner is worth more than typing faster.</p>
+    <h2>Where this is heading, carefully</h2>
+    <p>These tools improve quickly and any specific claim I make about their limits will age. What seems durable is the shape of the problem: systems that generate plausible output need someone accountable for whether it is correct, and that accountability is not a technical problem that a better model dissolves.</p>
+    <p>So the question to ask a studio is not whether they use AI. It is who answers the phone when the thing it wrote breaks at 11pm, and whether that person understands why the code is shaped the way it is.</p>
   </div>
 </section>
 
@@ -368,21 +388,21 @@
         <span class="proj__cat">Engineering</span>
         <h3>Start with Postgres. Almost always.</h3>
         <p>Database choice is the decision most likely to be made for the wrong reasons, and the most expensive to revisit. Here is the short version.</p>
-        <p class="post-card__meta"><time datetime="2026-07-22">22 July 2026</time> · 6 min read</p>
+        <p class="post-card__meta"><time datetime="2026-07-22">22 July 2026</time> · 4 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
       <a class="card post-card reveal" data-reveal style="--d:.10s" href="server-rendered-or-single-page.html">
         <span class="proj__cat">Engineering</span>
         <h3>Server-rendered or single-page? A plain answer</h3>
         <p>The argument that has run for a decade, reduced to the two questions that actually decide it for your project.</p>
-        <p class="post-card__meta"><time datetime="2026-07-08">8 July 2026</time> · 6 min read</p>
+        <p class="post-card__meta"><time datetime="2026-07-08">8 July 2026</time> · 4 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
       <a class="card post-card reveal" data-reveal style="--d:.16s" href="passkeys-and-when-to-bother.html">
         <span class="proj__cat">Security</span>
         <h3>Passkeys, and when to bother</h3>
         <p>They are genuinely better than passwords and genuinely not a drop-in replacement. Where they fit, and the recovery problem nobody mentions.</p>
-        <p class="post-card__meta"><time datetime="2026-06-24">24 June 2026</time> · 5 min read</p>
+        <p class="post-card__meta"><time datetime="2026-06-24">24 June 2026</time> · 4 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
     </div>

@@ -318,7 +318,7 @@
       <span aria-hidden="true">·</span>
       <time datetime="2026-08-26">26 August 2026</time>
       <span aria-hidden="true">·</span>
-      <span>7 min read</span>
+      <span>5 min read</span>
     </p>
 
 
@@ -353,6 +353,25 @@
     <p>Concretely: more of your budget goes into the parts users feel. If AI absorbs the mechanical third of a build, that third of the money goes into the flow that actually decides whether someone comes back — instead of into me typing out a login form for the hundredth time.</p>
     <h2>The part that matters when something breaks</h2>
     <p>At 11pm on a Saturday, when payments are failing, you do not want a tool. You want a person who understands why the code is shaped the way it is, because they shaped it. That is the difference the name is pointing at, and it is why I read everything before it ships.</p>
+    <h2>A day, in practice</h2>
+    <p>Abstract policy is easy to state and hard to check, so here is what it actually looks like on a normal working day.</p>
+    <p>Morning is usually the part with no AI in it: reading what a client sent, deciding what the next piece of work is, and — if it touches the shape of the data — drawing it out and thinking about what happens in a year. That work is slow on purpose and it is the highest-value hour of the day.</p>
+    <p>The middle of the day is where the tools earn their place. Scaffolding the screens, the endpoints, the forms, the test fixtures. I read every diff as it lands rather than at the end, because reviewing four hundred lines at five o'clock is how things get waved through.</p>
+    <p>The end of the day is review and deletion. A surprising amount of what gets generated is technically fine and unnecessary — an abstraction for one use, a config option nobody asked for, error handling for a case that cannot occur. Removing it costs nothing today and saves whoever reads this in two years.</p>
+    <h2>The things I do not let it touch</h2>
+    <ul>
+      <li><strong>The data model.</strong> Get it wrong and every week afterwards is more expensive. It is worth a human afternoon and a whiteboard.</li>
+      <li><strong>Authorisation.</strong> Not “is this a real user” but “is this user allowed this record”. The single most common place I see plausible, wrong code.</li>
+      <li><strong>Money.</strong> Payments, refunds, invoice numbering, anything with a currency in it. Slowly, by hand, then read again the next morning.</li>
+      <li><strong>Anything with personal data.</strong> What is stored, for how long, who can see it, and what the access log records.</li>
+      <li><strong>Deletion.</strong> Any code that removes something permanently gets written by a person and tested against a copy first.</li>
+    </ul>
+    <h2>Why the review is not optional</h2>
+    <p>The uncomfortable truth about reviewing generated code is that it is harder than reviewing a colleague's. A colleague's mistakes have a grain to them — you learn where a particular person tends to slip. Generated code is uniformly confident, and the errors are distributed differently: rare, but with no tell.</p>
+    <p>So the review has to be systematic rather than instinctive. Where did this value come from. What happens if this fails halfway. Who is allowed to call this. That is a checklist rather than a feeling, and running it is the actual job now.</p>
+    <h2>What you are paying for</h2>
+    <p>It is worth being direct about this, since it bears on the price. You are not paying me to type. You are paying for the decisions about what should exist, the judgement about which parts are dangerous, and the fact that someone read all of it and will answer for it.</p>
+    <p>The typing being cheap is why an MVP can start at ₹20,000 rather than at several lakh. The reading being expensive is why it is not free, and why I would be suspicious of anyone quoting as though it were.</p>
   </div>
 </section>
 
@@ -375,14 +394,14 @@
         <span class="proj__cat">Building</span>
         <h3>What an MVP actually is, and what it isn't</h3>
         <p>Most people asking for an MVP describe a full product with a smaller budget. That is not the same thing, and the difference decides whether the money teaches you anything.</p>
-        <p class="post-card__meta"><time datetime="2026-08-12">12 August 2026</time> · 6 min read</p>
+        <p class="post-card__meta"><time datetime="2026-08-12">12 August 2026</time> · 5 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
       <a class="card post-card reveal" data-reveal style="--d:.16s" href="what-ai-coding-agents-are-good-at.html">
         <span class="proj__cat">AI</span>
         <h3>What AI coding agents are good at, and what they're not</h3>
         <p>A working note from someone who uses them daily and still reads every line. Where they save real time, and the three places they quietly cost you money.</p>
-        <p class="post-card__meta"><time datetime="2026-08-05">5 August 2026</time> · 7 min read</p>
+        <p class="post-card__meta"><time datetime="2026-08-05">5 August 2026</time> · 5 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
     </div>

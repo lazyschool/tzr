@@ -318,7 +318,7 @@
       <span aria-hidden="true">·</span>
       <time datetime="2026-09-07">7 September 2026</time>
       <span aria-hidden="true">·</span>
-      <span>6 min read</span>
+      <span>5 min read</span>
     </p>
 
 
@@ -355,6 +355,28 @@
       <li>Read that log. Fix the retrieval failures it shows you.</li>
     </ol>
     <p>If, after all that, the index genuinely cannot keep up, moving to a dedicated vector store is a contained piece of work — and by then you will know exactly what you need from it.</p>
+    <h2>What the numbers actually look like</h2>
+    <p>Abstract advice is easy to ignore, so here is the arithmetic. A typical embedding is a list of somewhere between 384 and 1,536 numbers. At four bytes each, one embedding is roughly 1.5KB to 6KB. Ten thousand chunks of text is therefore something in the region of 15MB to 60MB of vectors.</p>
+    <p>That is a rounding error for any database. It fits in memory on the smallest instance you can rent. The mental image people have — of vectors as some enormous specialised payload — comes from companies operating at a scale most businesses never approach.</p>
+    <p>Where it does get heavy is the index. Approximate-nearest-neighbour indexes trade memory for speed, and a badly-tuned one on a small instance will either eat the RAM or fall back to scanning everything. That is a configuration problem, not a reason to buy another database.</p>
+    <h2>Cost, honestly</h2>
+    <p>A managed vector database typically starts somewhere around $70 a month for a production-grade tier, before usage. Adding pgvector to a Postgres instance you are already paying for costs nothing extra.</p>
+    <p>That difference is small if you are funded and enormous if you are a business testing whether an AI feature is worth having at all. It is also recurring, which is the kind of cost that quietly outlives the feature that justified it.</p>
+    <p>The other cost is operational and rarely counted. A second datastore means a second thing to back up, monitor, secure, upgrade and keep in sync with the first. When a document is deleted from Postgres, something has to remember to delete its vectors too. That “something” is code you now maintain.</p>
+    <h2>The bit that gets skipped: evaluation</h2>
+    <p>Almost nobody building a retrieval feature sets up a way to tell whether it is getting better. Then a change gets made — a different embedding model, a new chunk size — and the judgement of whether it helped is somebody trying three questions they happen to remember.</p>
+    <p>You do not need anything elaborate. Twenty to fifty real questions with the passage that should be retrieved for each, and a script that reports how often the right passage appears in the top five results. An afternoon of work, and it converts every future change from an argument into a measurement.</p>
+    <blockquote><p>Without an evaluation set you are not tuning a system. You are rearranging it and hoping.</p></blockquote>
+    <h2>A short glossary, for the meeting</h2>
+    <ul>
+      <li><strong>Embedding</strong> — the list of numbers representing a piece of text. Produced by a model; the same model must be used for storing and for searching, or the numbers are not comparable.</li>
+      <li><strong>Chunk</strong> — the unit of text you store. Choosing these well is the single biggest lever on quality.</li>
+      <li><strong>RAG</strong> — retrieval-augmented generation. Find relevant passages, put them in the prompt, ask the model to answer using them. Most “AI on your documents” products are this.</li>
+      <li><strong>Hybrid search</strong> — combining vector and keyword results. Almost always better than either alone, and frequently omitted.</li>
+      <li><strong>Re-ranking</strong> — a second, slower model reorders the top twenty results. Often a bigger quality win than changing databases.</li>
+    </ul>
+    <h2>If someone tells you that you need one</h2>
+    <p>Ask two questions. How many chunks will we have in a year? And what does this give us that pgvector does not, at that number? Both have concrete answers. If neither comes back with one, the recommendation is habit rather than analysis.</p>
   </div>
 </section>
 
@@ -370,7 +392,7 @@
         <span class="proj__cat">Hiring</span>
         <h3>Seven questions to ask before hiring any developer</h3>
         <p>Including me. If someone cannot answer these clearly, that is the answer.</p>
-        <p class="post-card__meta"><time datetime="2026-09-05">5 September 2026</time> · 6 min read</p>
+        <p class="post-card__meta"><time datetime="2026-09-05">5 September 2026</time> · 4 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
       <a class="card post-card reveal" data-reveal style="--d:.10s" href="app-or-website-first.html">
@@ -384,7 +406,7 @@
         <span class="proj__cat">AI</span>
         <h3>How I use AI to build faster without shipping garbage</h3>
         <p>AI writes a lot of the typing in this studio and none of the decisions. Here is exactly where the line sits, and why it sits there.</p>
-        <p class="post-card__meta"><time datetime="2026-08-26">26 August 2026</time> · 7 min read</p>
+        <p class="post-card__meta"><time datetime="2026-08-26">26 August 2026</time> · 5 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
     </div>
