@@ -489,6 +489,42 @@ def case_study_page(cs, others):
     inner.append('    </ol>\n')
     out.append(band("".join(inner)))
 
+    # ---- the hardest part -------------------------------------------------
+    hard_title, hard_paras = cs["hard"]
+    inner = [band_head("THE HARD PART", hard_title,
+                       "Every build has one problem that decides whether the rest "
+                       "of it matters. This is that problem, written out.")]
+    inner.append('    <div class="deep">\n')
+    for i, para in enumerate(hard_paras):
+        inner.append('      <p class="reveal" data-reveal style="--d:.%ds">%s</p>\n'
+                     % ((i * 6) + 4, para))
+    inner.append('    </div>\n')
+    out.append(band("".join(inner)))
+
+    # ---- what we'd ask before quoting -------------------------------------
+    inner = [band_head("BEFORE A PRICE EXISTS", "What we'd ask you first.",
+                       "A quote given without these answers is a guess. These are "
+                       "the questions that actually move the number.")]
+    inner.append('    <ol class="qlist">\n')
+    for i, q in enumerate(cs["questions"]):
+        inner.append('      <li class="reveal" data-reveal style="--d:.%ds">'
+                     '<span class="qlist__n">%02d</span><span>%s</span></li>\n'
+                     % ((i * 5) + 4, i + 1, q))
+    inner.append('    </ol>\n')
+    out.append(band("".join(inner), alt=True))
+
+    # ---- how we'd know it worked ------------------------------------------
+    inner = [band_head("AFTERWARDS", "How we'd know it worked.",
+                       "Agreed before the build starts, so there is something to "
+                       "judge it against other than whether it looks nice.")]
+    inner.append('    <ul class="winlist">\n')
+    for i, w in enumerate(cs["success"]):
+        inner.append('      <li class="reveal" data-reveal style="--d:.%ds">'
+                     '<span class="winlist__tick" aria-hidden="true">&#10003;</span>'
+                     '<span>%s</span></li>\n' % ((i * 6) + 4, w))
+    inner.append('    </ul>\n')
+    out.append(band("".join(inner)))
+
     # ---- worth knowing + price -------------------------------------------
     inner = [band_head("BEFORE YOU START", "Worth knowing.")]
     inner.append(u'''    <div class="knowgrid">

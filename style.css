@@ -2955,3 +2955,86 @@ h1, h2, h3 {
   .chips-bar { gap: 7px; }
   .chip { padding: 8px 13px; font-size: .83rem; }
 }
+
+/* ---------------- 18. DEEP-DIVE SECTIONS ---------------- */
+
+/* the hardest-part essay: a reading column inside a full-width band */
+.deep { max-width: 760px; }
+.deep p {
+  margin: 0 0 18px;
+  font-size: 1.04rem;
+  line-height: 1.78;
+  color: var(--fg-2);
+}
+.deep p:last-child { margin-bottom: 0; }
+.deep p:first-child { font-size: 1.12rem; color: var(--fg); }
+
+/* the questions asked before quoting */
+.qlist {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: q;
+}
+.qlist li {
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+  padding: 17px 20px;
+  border: 1.5px solid var(--line);
+  border-radius: 14px;
+  background: var(--card);
+  font-size: 1.01rem;
+  line-height: 1.6;
+  color: var(--fg);
+}
+.qlist__n {
+  flex: none;
+  font-family: var(--font-display);
+  font-weight: 750;
+  font-size: .92rem;
+  color: var(--accent);
+}
+
+/* how we would know it worked */
+.winlist {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+}
+.winlist li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 17px 20px;
+  border: 1.5px solid var(--line);
+  border-radius: 14px;
+  background: var(--bg-2);
+  font-size: .99rem;
+  line-height: 1.6;
+  color: var(--fg-2);
+}
+.section--alt .winlist li { background: var(--card); }
+.winlist__tick {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--accent-fg);
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+@media (max-width: 560px) {
+  .qlist li,
+  .winlist li { padding: 15px 16px; }
+}
