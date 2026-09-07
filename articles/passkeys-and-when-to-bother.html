@@ -318,7 +318,7 @@
       <span aria-hidden="true">·</span>
       <time datetime="2026-06-24">24 June 2026</time>
       <span aria-hidden="true">·</span>
-      <span>5 min read</span>
+      <span>4 min read</span>
     </p>
 
 
@@ -353,6 +353,26 @@
     </ol>
     <h2>Is it worth it for a small product?</h2>
     <p>If you hold anything users would be upset to lose — money, business data, personal records — yes, as an option. If you are building a booking page for a salon, an email link is simpler and perfectly adequate. Match the effort to what is behind the door.</p>
+    <h2>What it costs to build</h2>
+    <p>Adding passkeys as an option to an existing login is not a large project — the browser APIs do the cryptography and libraries exist for every common backend. Reckon on a week or so for the happy path.</p>
+    <p>The estimate goes wrong when the recovery flow, the multi-device story and the admin tooling are treated as details. Realistically, budget two to three times the happy path for everything around it: enrolling a second device, replacing a lost one, letting support see which credentials an account has, and revoking one.</p>
+    <p>That ratio is not unusual for authentication work. It is just unusually often left out of the estimate, because the demo is the happy path and the demo is what gets costed.</p>
+    <h2>The things worth doing before this</h2>
+    <p>If account security is the goal and the budget is finite, passkeys are not the first thing I would spend it on. In rough order of value per rupee:</p>
+    <ol>
+      <li><strong>Rate-limit the login endpoint.</strong> Credential-stuffing is the most common attack on small products and it is largely stopped by sensible limits and lockouts.</li>
+      <li><strong>Store passwords correctly.</strong> A modern hashing algorithm with a proper work factor. If this is wrong, nothing else matters.</li>
+      <li><strong>Offer two-factor at all.</strong> Even SMS, imperfect as it is, beats a single factor for most accounts.</li>
+      <li><strong>Check new passwords against known-breached lists.</strong> Cheap to add, and it stops the reuse that causes most compromises.</li>
+      <li><strong>Then passkeys</strong>, as an additional option.</li>
+    </ol>
+    <h2>What it looks like to a user who has never seen one</h2>
+    <p>Worth being blunt about: many people will not know what a passkey is, and a sign-in screen offering an unfamiliar thing loses users. The wording matters more than the cryptography.</p>
+    <p>What works is describing the outcome rather than the mechanism — “use your fingerprint or face to sign in next time” rather than “register a passkey”. Offer it after a successful login, not instead of one, so nobody is blocked by a concept they did not ask about.</p>
+    <blockquote><p>Every authentication improvement is also a chance to lock out the people you were protecting. That is the tradeoff to design around.</p></blockquote>
+    <h2>Where they are genuinely worth the trouble</h2>
+    <p>If your users are businesses, if the account holds money or client data, or if you have already seen credential-stuffing attempts in your logs, passkeys move the needle and are worth the recovery work.</p>
+    <p>If you are building a booking page where the worst outcome of a compromised account is a cancelled haircut, an email link is simpler, cheaper and honestly proportionate. Security effort should match what is behind the door, not what is fashionable to have implemented.</p>
   </div>
 </section>
 
@@ -368,21 +388,21 @@
         <span class="proj__cat">Mobile</span>
         <h3>Build for the metro: offline is a product decision</h3>
         <p>Most apps are built on office wifi and used on a train. Treating the network as optional is a decision about who gets to use your product.</p>
-        <p class="post-card__meta"><time datetime="2026-06-10">10 June 2026</time> · 6 min read</p>
+        <p class="post-card__meta"><time datetime="2026-06-10">10 June 2026</time> · 4 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
       <a class="card post-card reveal" data-reveal style="--d:.10s" href="do-you-need-a-vector-database.html">
         <span class="proj__cat">AI</span>
         <h3>Do you actually need a vector database?</h3>
         <p>Almost every AI feature proposal now includes one. For most of them, Postgres with a search extension is enough, and the difference is a month of work.</p>
-        <p class="post-card__meta"><time datetime="2026-09-07">7 September 2026</time> · 6 min read</p>
+        <p class="post-card__meta"><time datetime="2026-09-07">7 September 2026</time> · 5 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
       <a class="card post-card reveal" data-reveal style="--d:.16s" href="questions-to-ask-before-hiring-a-developer.html">
         <span class="proj__cat">Hiring</span>
         <h3>Seven questions to ask before hiring any developer</h3>
         <p>Including me. If someone cannot answer these clearly, that is the answer.</p>
-        <p class="post-card__meta"><time datetime="2026-09-05">5 September 2026</time> · 6 min read</p>
+        <p class="post-card__meta"><time datetime="2026-09-05">5 September 2026</time> · 4 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
     </div>

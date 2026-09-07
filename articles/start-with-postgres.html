@@ -318,7 +318,7 @@
       <span aria-hidden="true">·</span>
       <time datetime="2026-07-22">22 July 2026</time>
       <span aria-hidden="true">·</span>
-      <span>6 min read</span>
+      <span>4 min read</span>
     </p>
 
 
@@ -349,6 +349,28 @@
     </ul>
     <h2>The honest summary</h2>
     <p>Almost no small or medium business application outgrows Postgres. Plenty outgrow the team's ability to operate five different datastores. Start boring; the exciting choice is still available later, and you will make it with real information.</p>
+    <h2>The migration nobody budgets for</h2>
+    <p>The argument for picking a specialised database early is usually that migrating later will be painful. That is true. It is also true that the migration you are trying to avoid is far less likely than the one you will cause.</p>
+    <p>In practice, moving from Postgres to something else because you genuinely outgrew it is rare, well-understood and happens when you have revenue and engineers. Moving from a document store to Postgres because you need transactions and joins is common, is done under pressure, and happens exactly when you can least afford it.</p>
+    <p>Optimising for the second scenario is the better bet, and it is the one people talk about less because it is embarrassing.</p>
+    <h2>Things people believe Postgres cannot do</h2>
+    <ul>
+      <li><strong>“It can't handle unstructured data.”</strong> JSONB columns store arbitrary documents, can be indexed and queried, and sit beside your relational columns in the same row.</li>
+      <li><strong>“It can't scale.”</strong> Read replicas, connection pooling and a correctly indexed schema carry applications far beyond where most businesses ever reach. Most “Postgres doesn't scale” stories are a missing index.</li>
+      <li><strong>“You need a separate search engine.”</strong> Full-text search with ranking and stemming is built in and adequate up to a surprisingly large corpus.</li>
+      <li><strong>“You need a message queue.”</strong> SELECT ... FOR UPDATE SKIP LOCKED gives a safe work queue. Not the right answer at enormous throughput; entirely right for sending emails and generating reports.</li>
+    </ul>
+    <h2>How not to paint yourself into a corner</h2>
+    <p>Choosing well matters less than a handful of habits that keep the choice reversible.</p>
+    <ol>
+      <li><strong>Keep schema changes in version control</strong> as migration files, applied by a script. Never by hand on a live database.</li>
+      <li><strong>Do not scatter database queries through the application.</strong> Keep them behind a layer, so replacing the store later touches a boundary rather than everything.</li>
+      <li><strong>Use real types.</strong> Dates as dates, money as a decimal type — never a float, which will eventually lose you a paisa in a way that is maddening to trace.</li>
+      <li><strong>Let the database enforce what must be true.</strong> Foreign keys, unique constraints, not-null. Application code has bugs; constraints do not stop being enforced because a code path was missed.</li>
+      <li><strong>Test your restore, not your backup.</strong> A backup nobody has restored is a belief, not a backup.</li>
+    </ol>
+    <h2>The one-line version</h2>
+    <p>Start with the boring, well-understood thing that does eighty per cent of everything adequately. Add a specialist when you have a specific measured problem it solves. That order costs less, breaks less, and leaves you with fewer things to be woken up by.</p>
   </div>
 </section>
 
@@ -364,21 +386,21 @@
         <span class="proj__cat">Engineering</span>
         <h3>Server-rendered or single-page? A plain answer</h3>
         <p>The argument that has run for a decade, reduced to the two questions that actually decide it for your project.</p>
-        <p class="post-card__meta"><time datetime="2026-07-08">8 July 2026</time> · 6 min read</p>
+        <p class="post-card__meta"><time datetime="2026-07-08">8 July 2026</time> · 4 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
       <a class="card post-card reveal" data-reveal style="--d:.10s" href="passkeys-and-when-to-bother.html">
         <span class="proj__cat">Security</span>
         <h3>Passkeys, and when to bother</h3>
         <p>They are genuinely better than passwords and genuinely not a drop-in replacement. Where they fit, and the recovery problem nobody mentions.</p>
-        <p class="post-card__meta"><time datetime="2026-06-24">24 June 2026</time> · 5 min read</p>
+        <p class="post-card__meta"><time datetime="2026-06-24">24 June 2026</time> · 4 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
       <a class="card post-card reveal" data-reveal style="--d:.16s" href="build-for-the-metro.html">
         <span class="proj__cat">Mobile</span>
         <h3>Build for the metro: offline is a product decision</h3>
         <p>Most apps are built on office wifi and used on a train. Treating the network as optional is a decision about who gets to use your product.</p>
-        <p class="post-card__meta"><time datetime="2026-06-10">10 June 2026</time> · 6 min read</p>
+        <p class="post-card__meta"><time datetime="2026-06-10">10 June 2026</time> · 4 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
     </div>

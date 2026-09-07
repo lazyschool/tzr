@@ -1327,6 +1327,28 @@ ARTICLES = [
             ("p", "If, after all that, the index genuinely cannot keep up, moving "
                   "to a dedicated vector store is a contained piece of work — and "
                   "by then you will know exactly what you need from it."),
+            ("h2", 'What the numbers actually look like'),
+            ("p", 'Abstract advice is easy to ignore, so here is the arithmetic. A typical embedding is a list of somewhere between 384 and 1,536 numbers. At four bytes each, one embedding is roughly 1.5KB to 6KB. Ten thousand chunks of text is therefore something in the region of 15MB to 60MB of vectors.'),
+            ("p", 'That is a rounding error for any database. It fits in memory on the smallest instance you can rent. The mental image people have — of vectors as some enormous specialised payload — comes from companies operating at a scale most businesses never approach.'),
+            ("p", 'Where it does get heavy is the index. Approximate-nearest-neighbour indexes trade memory for speed, and a badly-tuned one on a small instance will either eat the RAM or fall back to scanning everything. That is a configuration problem, not a reason to buy another database.'),
+            ("h2", 'Cost, honestly'),
+            ("p", 'A managed vector database typically starts somewhere around $70 a month for a production-grade tier, before usage. Adding pgvector to a Postgres instance you are already paying for costs nothing extra.'),
+            ("p", 'That difference is small if you are funded and enormous if you are a business testing whether an AI feature is worth having at all. It is also recurring, which is the kind of cost that quietly outlives the feature that justified it.'),
+            ("p", 'The other cost is operational and rarely counted. A second datastore means a second thing to back up, monitor, secure, upgrade and keep in sync with the first. When a document is deleted from Postgres, something has to remember to delete its vectors too. That “something” is code you now maintain.'),
+            ("h2", 'The bit that gets skipped: evaluation'),
+            ("p", 'Almost nobody building a retrieval feature sets up a way to tell whether it is getting better. Then a change gets made — a different embedding model, a new chunk size — and the judgement of whether it helped is somebody trying three questions they happen to remember.'),
+            ("p", 'You do not need anything elaborate. Twenty to fifty real questions with the passage that should be retrieved for each, and a script that reports how often the right passage appears in the top five results. An afternoon of work, and it converts every future change from an argument into a measurement.'),
+            ("quote", 'Without an evaluation set you are not tuning a system. You are rearranging it and hoping.'),
+            ("h2", 'A short glossary, for the meeting'),
+            ("ul", [
+                '<strong>Embedding</strong> — the list of numbers representing a piece of text. Produced by a model; the same model must be used for storing and for searching, or the numbers are not comparable.',
+                '<strong>Chunk</strong> — the unit of text you store. Choosing these well is the single biggest lever on quality.',
+                '<strong>RAG</strong> — retrieval-augmented generation. Find relevant passages, put them in the prompt, ask the model to answer using them. Most “AI on your documents” products are this.',
+                '<strong>Hybrid search</strong> — combining vector and keyword results. Almost always better than either alone, and frequently omitted.',
+                '<strong>Re-ranking</strong> — a second, slower model reorders the top twenty results. Often a bigger quality win than changing databases.',
+            ]),
+            ("h2", 'If someone tells you that you need one'),
+            ("p", 'Ask two questions. How many chunks will we have in a year? And what does this give us that pgvector does not, at that number? Both have concrete answers. If neither comes back with one, the recommendation is habit rather than analysis.'),
         ],
     },
     {
@@ -1398,6 +1420,26 @@ ARTICLES = [
                   "\"the AI writes it and we ship it\". The answer you want "
                   "describes a line: what the machine does, what a person does, "
                   "and who reads the result before it reaches you."),
+            ("h2", 'A worked example of confidently wrong'),
+            ("p", 'The abstract warning is easy to nod along to, so here is the shape of a real one. Ask for an endpoint that lets a user fetch their own orders. You will reliably get something that reads the user id from the request, queries orders for that id, and returns them. It looks correct. It has tests. The tests pass.'),
+            ("p", "The problem is where the user id came from. If it was taken from a parameter the client sends rather than from the verified session, then any logged-in customer can read any other customer's orders by changing a number in the URL. The code is not broken — it does exactly what it says. It is just answering the wrong question about who is asking."),
+            ("p", 'This class of bug does not announce itself. Nothing crashes, no test fails, and the feature works perfectly in every manual check you would think to do. It is found by someone reading the code and asking where each value came from — or by a customer, later, which is considerably worse.'),
+            ("h2", 'How to review AI-written code quickly'),
+            ("p", 'Reading every line sounds slow. In practice it is fast if you know what you are looking for, because the failure modes cluster.'),
+            ("ol", [
+                '<strong>Follow the untrusted input.</strong> Anything from the browser is a claim, not a fact. Where does it get checked?',
+                '<strong>Check the authorisation, not the authentication.</strong> “Is this a real user” is usually right. “Is this user allowed this particular record” is where it goes wrong.',
+                '<strong>Look at the error paths.</strong> Happy paths are nearly always fine. What happens when the payment provider times out halfway?',
+                '<strong>Question anything clever.</strong> Unusual constructs are where a model has pattern-matched onto something from a different context.',
+                '<strong>Read the tests as claims.</strong> A test asserting the wrong behaviour is worse than no test, because it makes the wrong behaviour official.',
+            ]),
+            ("h2", 'What it means for how long things take'),
+            ("p", 'The honest accounting is less dramatic than the marketing. Writing code is perhaps thirty per cent of building software. The rest is deciding what to build, understanding the existing system, testing, fixing, deploying and explaining.'),
+            ("p", 'So even a tool that made typing instantaneous would not make projects three times faster. What it does is shift where the time goes: less on mechanical production, more on judgement and review. My estimates have not halved. They have become more reliable, because the boring parts no longer vary much.'),
+            ("p", 'There is a second-order effect that matters more. Because scaffolding is nearly free, it is now cheap to build a rough version of something and find out it was the wrong idea. Being wrong sooner is worth more than typing faster.'),
+            ("h2", 'Where this is heading, carefully'),
+            ("p", 'These tools improve quickly and any specific claim I make about their limits will age. What seems durable is the shape of the problem: systems that generate plausible output need someone accountable for whether it is correct, and that accountability is not a technical problem that a better model dissolves.'),
+            ("p", 'So the question to ask a studio is not whether they use AI. It is who answers the phone when the thing it wrote breaks at 11pm, and whether that person understands why the code is shaped the way it is.'),
         ],
     },
     {
@@ -1464,6 +1506,28 @@ ARTICLES = [
                   "different datastores. Start boring; the exciting choice is "
                   "still available later, and you will make it with real "
                   "information."),
+            ("h2", 'The migration nobody budgets for'),
+            ("p", 'The argument for picking a specialised database early is usually that migrating later will be painful. That is true. It is also true that the migration you are trying to avoid is far less likely than the one you will cause.'),
+            ("p", 'In practice, moving from Postgres to something else because you genuinely outgrew it is rare, well-understood and happens when you have revenue and engineers. Moving from a document store to Postgres because you need transactions and joins is common, is done under pressure, and happens exactly when you can least afford it.'),
+            ("p", 'Optimising for the second scenario is the better bet, and it is the one people talk about less because it is embarrassing.'),
+            ("h2", 'Things people believe Postgres cannot do'),
+            ("ul", [
+                "<strong>“It can't handle unstructured data.”</strong> JSONB columns store arbitrary documents, can be indexed and queried, and sit beside your relational columns in the same row.",
+                "<strong>“It can't scale.”</strong> Read replicas, connection pooling and a correctly indexed schema carry applications far beyond where most businesses ever reach. Most “Postgres doesn't scale” stories are a missing index.",
+                '<strong>“You need a separate search engine.”</strong> Full-text search with ranking and stemming is built in and adequate up to a surprisingly large corpus.',
+                '<strong>“You need a message queue.”</strong> SELECT ... FOR UPDATE SKIP LOCKED gives a safe work queue. Not the right answer at enormous throughput; entirely right for sending emails and generating reports.',
+            ]),
+            ("h2", 'How not to paint yourself into a corner'),
+            ("p", 'Choosing well matters less than a handful of habits that keep the choice reversible.'),
+            ("ol", [
+                '<strong>Keep schema changes in version control</strong> as migration files, applied by a script. Never by hand on a live database.',
+                '<strong>Do not scatter database queries through the application.</strong> Keep them behind a layer, so replacing the store later touches a boundary rather than everything.',
+                '<strong>Use real types.</strong> Dates as dates, money as a decimal type — never a float, which will eventually lose you a paisa in a way that is maddening to trace.',
+                '<strong>Let the database enforce what must be true.</strong> Foreign keys, unique constraints, not-null. Application code has bugs; constraints do not stop being enforced because a code path was missed.',
+                '<strong>Test your restore, not your backup.</strong> A backup nobody has restored is a belief, not a backup.',
+            ]),
+            ("h2", 'The one-line version'),
+            ("p", 'Start with the boring, well-understood thing that does eighty per cent of everything adequately. Add a specialist when you have a specific measured problem it solves. That order costs less, breaks less, and leaves you with fewer things to be woken up by.'),
         ],
     },
     {
@@ -1525,6 +1589,33 @@ ARTICLES = [
             ("p", "Ask instead: who arrives here, on what connection, and how long "
                   "do they stay? The answer picks the approach without any "
                   "ideology being involved."),
+            ("h2", 'What “fast” actually means to the person waiting'),
+            ("p", 'Both camps claim speed, and both are telling the truth about different moments. It helps to name them.'),
+            ("ul", [
+                '<strong>Time until something appears.</strong> Server rendering wins, usually decisively. The browser gets HTML and paints it.',
+                '<strong>Time until it responds to a tap.</strong> This is where server-rendered pages can disappoint — the pixels arrived, the JavaScript that makes the menu work has not.',
+                '<strong>Time for the next screen.</strong> A single-page app wins here, because it already has the code and often the data.',
+            ]),
+            ("p", 'The gap that annoys users most is the second one: a page that looks ready and ignores you. It reads as broken in a way a visible spinner does not, and it is the specific failure of shipping a large JavaScript bundle to a mid-range phone.'),
+            ("h2", 'The costs a single-page app adds'),
+            ("p", 'Beyond the initial download, choosing to render in the browser means taking on work the server used to do for free.'),
+            ("ol", [
+                '<strong>Routing.</strong> The back button, deep links and refresh all have to be made to work. They were free before.',
+                '<strong>Data fetching and caching.</strong> When to refetch, what to show while waiting, what to do when it fails. Every screen, forever.',
+                '<strong>Two places to keep in step.</strong> Validation rules, permissions and formatting now exist on both sides and can disagree.',
+                '<strong>Error handling in the browser.</strong> A server error page is automatic; a client-side crash shows a blank white screen unless you build for it.',
+            ]),
+            ("p", 'None of these are reasons not to do it. They are reasons it costs more, and that cost should be paid for a screen that earns it rather than out of habit.'),
+            ("h2", 'A decision table you can actually use'),
+            ("ul", [
+                '<strong>Marketing pages, articles, listings, catalogues</strong> — server-rendered. Strangers arrive here from search and social.',
+                '<strong>Dashboards, consoles, editors, anything behind a login</strong> — single-page. People stay, and interaction speed is the product.',
+                '<strong>Checkout and forms</strong> — server-rendered with light interactivity. Reliability beats slickness where money is involved.',
+                '<strong>Booking flows</strong> — either, but keep the first page fast; that is where people leave.',
+            ]),
+            ("h2", 'What I would ask before choosing'),
+            ("p", 'What device and connection does a typical user have? Do strangers arrive on this screen, or only people who logged in? How long is a session? Does search need to read it?'),
+            ("p", 'Four questions, and between them they decide it. Notice that none of them is about which framework is currently fashionable, which is what the argument is usually actually about.'),
         ],
     },
     {
@@ -1587,6 +1678,26 @@ ARTICLES = [
                   "building a booking page for a salon, an email link is simpler "
                   "and perfectly adequate. Match the effort to what is behind the "
                   "door."),
+            ("h2", 'What it costs to build'),
+            ("p", 'Adding passkeys as an option to an existing login is not a large project — the browser APIs do the cryptography and libraries exist for every common backend. Reckon on a week or so for the happy path.'),
+            ("p", 'The estimate goes wrong when the recovery flow, the multi-device story and the admin tooling are treated as details. Realistically, budget two to three times the happy path for everything around it: enrolling a second device, replacing a lost one, letting support see which credentials an account has, and revoking one.'),
+            ("p", 'That ratio is not unusual for authentication work. It is just unusually often left out of the estimate, because the demo is the happy path and the demo is what gets costed.'),
+            ("h2", 'The things worth doing before this'),
+            ("p", 'If account security is the goal and the budget is finite, passkeys are not the first thing I would spend it on. In rough order of value per rupee:'),
+            ("ol", [
+                '<strong>Rate-limit the login endpoint.</strong> Credential-stuffing is the most common attack on small products and it is largely stopped by sensible limits and lockouts.',
+                '<strong>Store passwords correctly.</strong> A modern hashing algorithm with a proper work factor. If this is wrong, nothing else matters.',
+                '<strong>Offer two-factor at all.</strong> Even SMS, imperfect as it is, beats a single factor for most accounts.',
+                '<strong>Check new passwords against known-breached lists.</strong> Cheap to add, and it stops the reuse that causes most compromises.',
+                '<strong>Then passkeys</strong>, as an additional option.',
+            ]),
+            ("h2", 'What it looks like to a user who has never seen one'),
+            ("p", 'Worth being blunt about: many people will not know what a passkey is, and a sign-in screen offering an unfamiliar thing loses users. The wording matters more than the cryptography.'),
+            ("p", 'What works is describing the outcome rather than the mechanism — “use your fingerprint or face to sign in next time” rather than “register a passkey”. Offer it after a successful login, not instead of one, so nobody is blocked by a concept they did not ask about.'),
+            ("quote", 'Every authentication improvement is also a chance to lock out the people you were protecting. That is the tradeoff to design around.'),
+            ("h2", 'Where they are genuinely worth the trouble'),
+            ("p", 'If your users are businesses, if the account holds money or client data, or if you have already seen credential-stuffing attempts in your logs, passkeys move the needle and are worth the recovery work.'),
+            ("p", 'If you are building a booking page where the worst outcome of a compromised account is a cancelled haircut, an email link is simpler, cheaper and honestly proportionate. Security effort should match what is behind the door, not what is fashionable to have implemented.'),
         ],
     },
     {
@@ -1648,6 +1759,29 @@ ARTICLES = [
             ("p", "The delivery and field service builds in our case studies both "
                   "assume offline from the first week, and both say plainly that "
                   "if the budget forces a choice, cut features instead."),
+            ("h2", 'What syncing actually involves'),
+            ("p", '“It works offline” sounds like one feature. It is four, and each has to be decided rather than discovered.'),
+            ("ol", [
+                '<strong>A queue of intents.</strong> Not “the new state” but “what the user did” — mark job complete, add photo, change quantity. Actions replay cleanly; states overwrite each other.',
+                '<strong>An identifier per action, made on the device.</strong> So the server can recognise the same action arriving twice and ignore the second. Without this, every flaky connection creates duplicates.',
+                '<strong>A conflict rule per data type.</strong> Last write wins is fine for a note and wrong for a stock count. Decide per type, in advance.',
+                '<strong>Visible sync state.</strong> Saved on device, sending, sent, failed. A technician needs to know whether the office has seen their work; a silent spinner is not an answer.',
+            ]),
+            ("h2", 'The conflict question, concretely'),
+            ("p", 'Two people edit the same record while disconnected. Both come back online. Something has to give, and pretending otherwise just means the outcome is decided by whichever request happened to arrive second.'),
+            ("p", "For most business data, server-wins with the loser's version kept and flagged is the humane answer — nothing is destroyed and a person can look. For counts and totals, neither side should win: the correct answer is usually to apply both changes as deltas, or to refuse and ask. For anything with money attached, refuse and ask. Always."),
+            ("h2", 'How to test it, since it will not test itself'),
+            ("p", 'This is the part that gets skipped, and it is why offline features ship broken. Testing on office wifi proves nothing at all.'),
+            ("ul", [
+                'Use the network throttling in developer tools, and the offline mode.',
+                'Test the half-connection deliberately: request sent, response lost. This is the case that creates duplicates and it will not occur by accident on your desk.',
+                'Kill the app mid-sync. The queue has to survive being force-closed.',
+                'Let the device sit offline for a full day of work, then reconnect. Twenty queued actions behave differently from two.',
+                'Test two devices making conflicting changes to the same record.',
+            ]),
+            ("h2", 'What it costs, so you can decide'),
+            ("p", 'As a rough rule, a mobile app that must work offline is around twice the effort of the same app online-only. Not because storage is hard, but because every feature now has a disconnected path, a sync path and a conflict path, and all three need building and testing.'),
+            ("p", 'That is a real number and it deserves an honest decision rather than being discovered in month three. If the app is used at a desk, spend the money on features. If it is used in a van, spend it here — because the alternative is an app your team quietly stops opening.'),
         ],
     },
     {
@@ -1720,6 +1854,30 @@ ARTICLES = [
             ("p", "If it works, you build the next thing knowing something. If it "
                   "does not, you found out for the price of a month rather than the "
                   "price of a year."),
+            ("h2", 'How long an MVP should take'),
+            ("p", 'If the answer is more than about eight weeks, it is not an MVP any more, whatever anyone is calling it. That is not a rule about budgets; it is about what the timescale does to the exercise.'),
+            ("p", 'Past a couple of months, three things go wrong. The market you were testing has moved. The team has become attached to the thing and will interpret ambiguous results generously. And the cost has grown large enough that admitting it did not work has become expensive in a way that has nothing to do with money.'),
+            ("p", 'Four to eight weeks keeps all three honest. It is short enough that you can afford to be wrong and long enough to build something a real person will actually use.'),
+            ("h2", 'What happens after — the part nobody plans'),
+            ("p", 'Most MVP conversations stop at launch, which is roughly like planning a wedding and not a marriage. Three things follow and all three should be agreed before the build starts.'),
+            ("ol", [
+                '<strong>Who watches it?</strong> Someone has to look at what users actually do, daily, for the first fortnight. If nobody owns that, you have bought a product and not an experiment.',
+                '<strong>What is the decision date?</strong> A day, in the calendar, when you look at the numbers and decide continue, change or stop. Without one, MVPs drift into being the product by default.',
+                '<strong>Who fixes it?</strong> Real users find real bugs in week one. If there is no arrangement for that, the experiment dies of neglect and you will wrongly conclude the idea failed.',
+            ]),
+            ("h2", 'The MVP that should not be built'),
+            ("p", 'Sometimes the honest advice is not to build software at all, and a developer who never says this is a supplier rather than an adviser.'),
+            ("p", 'If the question is whether people want the service, you can often answer it with a landing page and a phone number for a fraction of the cost. If the process is not yet settled, software will freeze a bad version of it in place. If nobody has ever done the job manually, you do not yet know what to automate — do it by hand for a month, badly, and build the thing you learn you needed.'),
+            ("p", 'I have talked people out of builds on this basis. It costs me the project and it saves them a year, which is a trade I am comfortable with, because the ones who come back are the ones worth working for.'),
+            ("h2", 'A short checklist before you commit'),
+            ("ul", [
+                'Can you write down, in one sentence, what this will tell you?',
+                'Do you know what result would make you stop?',
+                'Is there a real person who will use it in week one, by name?',
+                'Is it under eight weeks?',
+                'Have you removed everything that would not change the answer?',
+            ]),
+            ("p", 'Five yeses and it is worth building. A no on the first two means the conversation is not finished, and building anyway is how budgets disappear into things nobody can evaluate.'),
         ],
     },
     {
@@ -1783,6 +1941,36 @@ ARTICLES = [
                   "real answer, and getting to it is what the free call is for."),
             ("quote", "If a quote arrives without questions attached to it, it is "
                       "a guess wearing a suit."),
+            ("h2", 'A worked example'),
+            ("p", 'Take the booking MVP from the case studies — a real shape rather than an abstraction. Roughly where the effort goes:'),
+            ("ul", [
+                '<strong>Week one: the rules.</strong> Services, durations, staff, opening hours, and what counts as an available slot. No code. This is the week that prevents the expensive mistakes.',
+                '<strong>Weeks two and three: the build.</strong> Public booking page, the calendar, the front-desk view, and the database constraint that makes a double booking impossible.',
+                '<strong>Week four: live.</strong> Reminders, deposits if wanted, real customers, and the fixes that only real customers surface.',
+            ]),
+            ("p", 'That is the shape that starts at ₹20,000. Add three more staff with different service lists, an existing customer database to import, and deposits on some services but not others, and it is a different number — not because anyone is being greedy, but because each of those adds rules that have to be modelled and tested.'),
+            ("h2", 'Fixed price or by the hour?'),
+            ("p", 'I quote fixed prices for well-defined work, and I am straightforward about why that is not generosity. A fixed price transfers risk to me, so it includes a margin for the risk. If the work is genuinely well-understood, that margin is small and you get certainty cheaply.'),
+            ("p", 'Where a fixed price goes wrong is when the scope is not actually known. Then one of two things happens: the price carries a large buffer you pay for whether or not it is needed, or it does not, and the project quietly turns into a negotiation about what was implied. Neither is good for either side.'),
+            ("p", 'So for exploratory work — integrating with a system nobody has documented, or a first version where the requirements are genuinely still forming — I would rather work in short, priced blocks with a decision point at the end of each. You can stop after any of them.'),
+            ("h2", 'What a change costs mid-project'),
+            ("p", 'Changes are normal and I am not going to pretend otherwise. What varies enormously is when they arrive.'),
+            ("ul", [
+                '<strong>During the first week</strong> — usually free. Nothing is built yet; we are still deciding what to build.',
+                '<strong>During the build, in an area not yet started</strong> — small. Reordering work is cheap.',
+                '<strong>During the build, in something already finished</strong> — the real cost of the change, plus retesting what it touches.',
+                '<strong>A change to the data model, after there is live data</strong> — the most expensive kind by a distance, because existing records have to be migrated and the migration has to be right the first time.',
+            ]),
+            ("p", 'That last line is why I push so hard on getting the data model right in week one, and why I will spend an unglamorous afternoon on it while you are keen to see screens.'),
+            ("h2", 'How to compare two quotes honestly'),
+            ("p", 'A cheaper number is not a cheaper project. Before comparing, make both sides answer the same four questions.'),
+            ("ol", [
+                'What exactly is included, written as a list you could tick off?',
+                'What third-party costs will I be billed for, by whom, and roughly how much per month?',
+                'What happens after launch — is any fixing included, and for how long?',
+                'Who owns the code and the accounts, in writing?',
+            ]),
+            ("p", 'Two quotes that look ₹15,000 apart routinely turn out to be for different projects entirely. Ask these and the gap usually explains itself, in one direction or the other.'),
         ],
     },
     {
@@ -1848,6 +2036,25 @@ ARTICLES = [
                   "shaped the way it is, because they shaped it. That is the "
                   "difference the name is pointing at, and it is why I read "
                   "everything before it ships."),
+            ("h2", 'A day, in practice'),
+            ("p", 'Abstract policy is easy to state and hard to check, so here is what it actually looks like on a normal working day.'),
+            ("p", 'Morning is usually the part with no AI in it: reading what a client sent, deciding what the next piece of work is, and — if it touches the shape of the data — drawing it out and thinking about what happens in a year. That work is slow on purpose and it is the highest-value hour of the day.'),
+            ("p", "The middle of the day is where the tools earn their place. Scaffolding the screens, the endpoints, the forms, the test fixtures. I read every diff as it lands rather than at the end, because reviewing four hundred lines at five o'clock is how things get waved through."),
+            ("p", 'The end of the day is review and deletion. A surprising amount of what gets generated is technically fine and unnecessary — an abstraction for one use, a config option nobody asked for, error handling for a case that cannot occur. Removing it costs nothing today and saves whoever reads this in two years.'),
+            ("h2", 'The things I do not let it touch'),
+            ("ul", [
+                '<strong>The data model.</strong> Get it wrong and every week afterwards is more expensive. It is worth a human afternoon and a whiteboard.',
+                '<strong>Authorisation.</strong> Not “is this a real user” but “is this user allowed this record”. The single most common place I see plausible, wrong code.',
+                '<strong>Money.</strong> Payments, refunds, invoice numbering, anything with a currency in it. Slowly, by hand, then read again the next morning.',
+                '<strong>Anything with personal data.</strong> What is stored, for how long, who can see it, and what the access log records.',
+                '<strong>Deletion.</strong> Any code that removes something permanently gets written by a person and tested against a copy first.',
+            ]),
+            ("h2", 'Why the review is not optional'),
+            ("p", "The uncomfortable truth about reviewing generated code is that it is harder than reviewing a colleague's. A colleague's mistakes have a grain to them — you learn where a particular person tends to slip. Generated code is uniformly confident, and the errors are distributed differently: rare, but with no tell."),
+            ("p", 'So the review has to be systematic rather than instinctive. Where did this value come from. What happens if this fails halfway. Who is allowed to call this. That is a checklist rather than a feeling, and running it is the actual job now.'),
+            ("h2", 'What you are paying for'),
+            ("p", 'It is worth being direct about this, since it bears on the price. You are not paying me to type. You are paying for the decisions about what should exist, the judgement about which parts are dangerous, and the fact that someone read all of it and will answer for it.'),
+            ("p", 'The typing being cheap is why an MVP can start at ₹20,000 rather than at several lakh. The reading being expensive is why it is not free, and why I would be suspicious of anyone quoting as though it were.'),
         ],
     },
     {
@@ -1909,6 +2116,26 @@ ARTICLES = [
             ]),
             ("p", "That order is cheaper, faster, and produces a better app at the "
                   "end of it than starting with the app would have."),
+            ("h2", 'What an app costs that a website does not'),
+            ("p", 'The build itself is only part of it. An app brings a set of ongoing obligations that a website simply does not have, and they are rarely in the first conversation.'),
+            ("ul", [
+                '<strong>Two platforms.</strong> Even sharing a codebase, iOS and Android differ in permissions, notifications, background behaviour and review rules. Testing is doubled.',
+                "<strong>Store accounts and fees.</strong> Apple charges yearly, Google once. Both must be in your name, not your developer's — this matters enormously if you ever change developer.",
+                '<strong>Review queues.</strong> A fix is not live when you press publish. It is live when a reviewer approves it, which can be hours or days, and can be rejected for reasons that surprise you.',
+                '<strong>Users on old versions.</strong> People do not update. Your server has to keep speaking to a version of the app from eight months ago, or you have to force upgrades, which loses users.',
+                '<strong>OS updates.</strong> Both platforms change things yearly. An app left alone for two years often will not build, let alone run.',
+            ]),
+            ("p", 'None of this is a reason to avoid apps. It is a reason to be sure you need one, because these costs continue long after the build is paid for.'),
+            ("h2", 'The store part nobody warns you about'),
+            ("p", "First submissions get rejected routinely, and usually for something unrelated to the app's quality: a missing privacy policy, a login screen with no way to try the app, a permission whose justification was not written clearly enough, or an account-deletion route that must exist inside the app."),
+            ("p", 'Budget a week for the first submission and do not schedule a launch event on the assumption it appears on a particular day. This is the single most common cause of a missed launch date on mobile projects, and it is entirely predictable, which makes missing it avoidable.'),
+            ("h2", 'What “install to home screen” actually gets you'),
+            ("p", "A well-built website can be added to a phone's home screen, open full-screen without browser chrome, cache content so it opens offline, and — on Android reliably, on iOS with caveats — send push notifications."),
+            ("p", 'What it still cannot do well: run in the background, use Bluetooth or the sensors freely, or appear in an app store where people look for things. If none of those matter to you, this route gives most of what people mean by “an app” at the cost of a website, with no review queue between you and a fix.'),
+            ("quote", 'Ask what specifically you need that only an app can do. If the answer is “it feels more serious”, that is a design problem, not a platform one.'),
+            ("h2", 'The order I would actually recommend'),
+            ("p", 'Website first, in almost every case. Get real people using it and watch where they struggle on a phone. Then, if what stands between you and growth is genuinely a native capability, build the app — with a year of usage data telling you exactly which three screens matter.'),
+            ("p", 'The apps built that way are smaller, better and cheaper than the ones built first, because they are built from evidence instead of from guesses about what people would want.'),
         ],
     },
     {
@@ -1968,6 +2195,34 @@ ARTICLES = [
                   "developer whose advice is always \"yes, and it'll cost this "
                   "much\" is a supplier. One who occasionally says \"you don't need "
                   "that yet\" is worth considerably more than they charge."),
+            ("h2", 'Three answers that should worry you'),
+            ("p", 'Beyond the questions themselves, some replies are informative in ways the speaker does not intend.'),
+            ("ul", [
+                "<strong>“That won't be a problem.”</strong> To any question about risk. Every project has problems; someone who has shipped things knows which ones are likely and will name them.",
+                '<strong>A quote with no questions attached.</strong> If a price arrives before anyone has asked how many users, what it integrates with, or what happens to your existing data, the number is decoration.',
+                "<strong>“You wouldn't understand the technical details.”</strong> Anything in this field can be explained to an intelligent person who does not do it for a living. Refusing to is either an inability to explain or an unwillingness to be checked.",
+            ]),
+            ("h2", 'What to agree in writing before money moves'),
+            ("p", 'Not a forty-page contract. A single page covering six things prevents almost every dispute I have seen or heard about.'),
+            ("ol", [
+                '<strong>What is being built</strong>, as a list specific enough to tick off. “A booking system” is not a scope.',
+                '<strong>What is not included</strong>, explicitly. This line saves more arguments than any other.',
+                '<strong>Who owns the code and the accounts.</strong> You, in a repository you have access to from day one.',
+                '<strong>Payment schedule tied to visible progress</strong>, not to dates. You should be able to see something running before each payment.',
+                '<strong>What happens to bugs after launch</strong>, and for how long.',
+                '<strong>How either side ends it</strong>, and what you keep if they do.',
+            ]),
+            ("h2", 'How to tell it is going well, three weeks in'),
+            ("p", 'You will not be able to judge the code. You can judge these, and they correlate better than most people expect.'),
+            ("ul", [
+                'You have seen something running — not a screenshot, not a percentage — in at least two of the three weeks.',
+                'They have said no to something, or proposed a cheaper way to do it.',
+                'Questions come back to you as questions, rather than assumptions being made silently and revealed later.',
+                'Bad news arrives early and unprompted. A developer who only reports good news is not having a smooth project; they are managing you.',
+            ]),
+            ("h2", 'And if it is going badly'),
+            ("p", 'Stop early. The instinct is to keep paying because of what has already been spent, and that instinct is expensive — the money is gone either way, and the only question is whether more follows it.'),
+            ("p", 'This is exactly why the payment schedule should be tied to visible progress and why the code should be in your repository from the first week. Both make leaving cheap, which is precisely when you find out whether the arrangement was fair.'),
         ],
     },
 ]
@@ -1981,3 +2236,15 @@ ARTICLE_TAGS = []
 for _a in ARTICLES:
     if _a["tag"] not in ARTICLE_TAGS:
         ARTICLE_TAGS.append(_a["tag"])
+
+# Read times are derived rather than typed, so they cannot drift away from the
+# text after an edit. 200 words a minute is the usual reading estimate.
+def _words(article):
+    n = 0
+    for kind, value in article["body"]:
+        n += len(" ".join(value).split()) if kind in ("ul", "ol") else len(str(value).split())
+    return n
+
+
+for _a in ARTICLES:
+    _a["read"] = "%d min read" % max(3, round(_words(_a) / 200.0))

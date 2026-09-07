@@ -318,7 +318,7 @@
       <span aria-hidden="true">·</span>
       <time datetime="2026-06-10">10 June 2026</time>
       <span aria-hidden="true">·</span>
-      <span>6 min read</span>
+      <span>4 min read</span>
     </p>
 
 
@@ -346,6 +346,29 @@
     <h2>Deciding, in one question</h2>
     <p>Where is this used? If the honest answer includes a basement, a van, a lift, a factory floor or a train, offline is not a nice-to-have and cutting it will produce an app your users abandon. If it is used at a desk, fail honestly and spend the money elsewhere.</p>
     <p>The delivery and field service builds in our case studies both assume offline from the first week, and both say plainly that if the budget forces a choice, cut features instead.</p>
+    <h2>What syncing actually involves</h2>
+    <p>“It works offline” sounds like one feature. It is four, and each has to be decided rather than discovered.</p>
+    <ol>
+      <li><strong>A queue of intents.</strong> Not “the new state” but “what the user did” — mark job complete, add photo, change quantity. Actions replay cleanly; states overwrite each other.</li>
+      <li><strong>An identifier per action, made on the device.</strong> So the server can recognise the same action arriving twice and ignore the second. Without this, every flaky connection creates duplicates.</li>
+      <li><strong>A conflict rule per data type.</strong> Last write wins is fine for a note and wrong for a stock count. Decide per type, in advance.</li>
+      <li><strong>Visible sync state.</strong> Saved on device, sending, sent, failed. A technician needs to know whether the office has seen their work; a silent spinner is not an answer.</li>
+    </ol>
+    <h2>The conflict question, concretely</h2>
+    <p>Two people edit the same record while disconnected. Both come back online. Something has to give, and pretending otherwise just means the outcome is decided by whichever request happened to arrive second.</p>
+    <p>For most business data, server-wins with the loser's version kept and flagged is the humane answer — nothing is destroyed and a person can look. For counts and totals, neither side should win: the correct answer is usually to apply both changes as deltas, or to refuse and ask. For anything with money attached, refuse and ask. Always.</p>
+    <h2>How to test it, since it will not test itself</h2>
+    <p>This is the part that gets skipped, and it is why offline features ship broken. Testing on office wifi proves nothing at all.</p>
+    <ul>
+      <li>Use the network throttling in developer tools, and the offline mode.</li>
+      <li>Test the half-connection deliberately: request sent, response lost. This is the case that creates duplicates and it will not occur by accident on your desk.</li>
+      <li>Kill the app mid-sync. The queue has to survive being force-closed.</li>
+      <li>Let the device sit offline for a full day of work, then reconnect. Twenty queued actions behave differently from two.</li>
+      <li>Test two devices making conflicting changes to the same record.</li>
+    </ul>
+    <h2>What it costs, so you can decide</h2>
+    <p>As a rough rule, a mobile app that must work offline is around twice the effort of the same app online-only. Not because storage is hard, but because every feature now has a disconnected path, a sync path and a conflict path, and all three need building and testing.</p>
+    <p>That is a real number and it deserves an honest decision rather than being discovered in month three. If the app is used at a desk, spend the money on features. If it is used in a van, spend it here — because the alternative is an app your team quietly stops opening.</p>
   </div>
 </section>
 
@@ -361,14 +384,14 @@
         <span class="proj__cat">AI</span>
         <h3>Do you actually need a vector database?</h3>
         <p>Almost every AI feature proposal now includes one. For most of them, Postgres with a search extension is enough, and the difference is a month of work.</p>
-        <p class="post-card__meta"><time datetime="2026-09-07">7 September 2026</time> · 6 min read</p>
+        <p class="post-card__meta"><time datetime="2026-09-07">7 September 2026</time> · 5 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
       <a class="card post-card reveal" data-reveal style="--d:.10s" href="questions-to-ask-before-hiring-a-developer.html">
         <span class="proj__cat">Hiring</span>
         <h3>Seven questions to ask before hiring any developer</h3>
         <p>Including me. If someone cannot answer these clearly, that is the answer.</p>
-        <p class="post-card__meta"><time datetime="2026-09-05">5 September 2026</time> · 6 min read</p>
+        <p class="post-card__meta"><time datetime="2026-09-05">5 September 2026</time> · 4 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
       <a class="card post-card reveal" data-reveal style="--d:.16s" href="app-or-website-first.html">

@@ -356,6 +356,26 @@
       <li>If the thing standing between you and growth is genuinely a native capability, build the app then — with a year of real usage data telling you exactly which screens matter.</li>
     </ol>
     <p>That order is cheaper, faster, and produces a better app at the end of it than starting with the app would have.</p>
+    <h2>What an app costs that a website does not</h2>
+    <p>The build itself is only part of it. An app brings a set of ongoing obligations that a website simply does not have, and they are rarely in the first conversation.</p>
+    <ul>
+      <li><strong>Two platforms.</strong> Even sharing a codebase, iOS and Android differ in permissions, notifications, background behaviour and review rules. Testing is doubled.</li>
+      <li><strong>Store accounts and fees.</strong> Apple charges yearly, Google once. Both must be in your name, not your developer's — this matters enormously if you ever change developer.</li>
+      <li><strong>Review queues.</strong> A fix is not live when you press publish. It is live when a reviewer approves it, which can be hours or days, and can be rejected for reasons that surprise you.</li>
+      <li><strong>Users on old versions.</strong> People do not update. Your server has to keep speaking to a version of the app from eight months ago, or you have to force upgrades, which loses users.</li>
+      <li><strong>OS updates.</strong> Both platforms change things yearly. An app left alone for two years often will not build, let alone run.</li>
+    </ul>
+    <p>None of this is a reason to avoid apps. It is a reason to be sure you need one, because these costs continue long after the build is paid for.</p>
+    <h2>The store part nobody warns you about</h2>
+    <p>First submissions get rejected routinely, and usually for something unrelated to the app's quality: a missing privacy policy, a login screen with no way to try the app, a permission whose justification was not written clearly enough, or an account-deletion route that must exist inside the app.</p>
+    <p>Budget a week for the first submission and do not schedule a launch event on the assumption it appears on a particular day. This is the single most common cause of a missed launch date on mobile projects, and it is entirely predictable, which makes missing it avoidable.</p>
+    <h2>What “install to home screen” actually gets you</h2>
+    <p>A well-built website can be added to a phone's home screen, open full-screen without browser chrome, cache content so it opens offline, and — on Android reliably, on iOS with caveats — send push notifications.</p>
+    <p>What it still cannot do well: run in the background, use Bluetooth or the sensors freely, or appear in an app store where people look for things. If none of those matter to you, this route gives most of what people mean by “an app” at the cost of a website, with no review queue between you and a fix.</p>
+    <blockquote><p>Ask what specifically you need that only an app can do. If the answer is “it feels more serious”, that is a design problem, not a platform one.</p></blockquote>
+    <h2>The order I would actually recommend</h2>
+    <p>Website first, in almost every case. Get real people using it and watch where they struggle on a phone. Then, if what stands between you and growth is genuinely a native capability, build the app — with a year of usage data telling you exactly which three screens matter.</p>
+    <p>The apps built that way are smaller, better and cheaper than the ones built first, because they are built from evidence instead of from guesses about what people would want.</p>
   </div>
 </section>
 
@@ -371,7 +391,7 @@
         <span class="proj__cat">AI</span>
         <h3>How I use AI to build faster without shipping garbage</h3>
         <p>AI writes a lot of the typing in this studio and none of the decisions. Here is exactly where the line sits, and why it sits there.</p>
-        <p class="post-card__meta"><time datetime="2026-08-26">26 August 2026</time> · 7 min read</p>
+        <p class="post-card__meta"><time datetime="2026-08-26">26 August 2026</time> · 5 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
       <a class="card post-card reveal" data-reveal style="--d:.10s" href="what-twenty-thousand-buys.html">
@@ -385,7 +405,7 @@
         <span class="proj__cat">Building</span>
         <h3>What an MVP actually is, and what it isn't</h3>
         <p>Most people asking for an MVP describe a full product with a smaller budget. That is not the same thing, and the difference decides whether the money teaches you anything.</p>
-        <p class="post-card__meta"><time datetime="2026-08-12">12 August 2026</time> · 6 min read</p>
+        <p class="post-card__meta"><time datetime="2026-08-12">12 August 2026</time> · 5 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
     </div>
