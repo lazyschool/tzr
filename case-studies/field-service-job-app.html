@@ -523,6 +523,57 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>THE HARD PART</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">Offline sync with money attached</h2>
+      <p class="sec-sub reveal" data-reveal style="--d:.1s">Every build has one problem that decides whether the rest of it matters. This is that problem, written out.</p>
+    </div>
+
+    <div class="deep">
+      <p class="reveal" data-reveal style="--d:.4s">This build has the delivery app's offline problem plus a complication that makes it materially harder: the outcome of the job produces an invoice. A duplicate delivery record is embarrassing. A duplicate invoice is a phone call from a customer who has been billed twice.</p>
+      <p class="reveal" data-reveal style="--d:.10s">So the sync design has to be stricter. Every job completion carries an identifier created on the device, and the server treats a repeat as the same event rather than a new one. Invoice numbers are issued server-side, never on the device, because two technicians coming back online in the same minute must not be able to produce the same number.</p>
+      <p class="reveal" data-reveal style="--d:.16s">There is a human constraint too. A technician finishing a job wants to leave, so anything between them and the van has to be worth its seconds. The checklist is the invoice — parts used and work done become line items automatically — because asking someone to enter the same information twice guarantees the second entry never happens.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>BEFORE A PRICE EXISTS</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd ask you first.</h2>
+      <p class="sec-sub reveal" data-reveal style="--d:.1s">A quote given without these answers is a guess. These are the questions that actually move the number.</p>
+    </div>
+
+    <ol class="qlist">
+      <li class="reveal" data-reveal style="--d:.4s"><span class="qlist__n">01</span><span>How many technicians, and how many jobs does each do in a day?</span></li>
+      <li class="reveal" data-reveal style="--d:.9s"><span class="qlist__n">02</span><span>What job types are there, and does each have a standard procedure?</span></li>
+      <li class="reveal" data-reveal style="--d:.14s"><span class="qlist__n">03</span><span>Do technicians carry parts on the van, and who tracks them?</span></li>
+      <li class="reveal" data-reveal style="--d:.19s"><span class="qlist__n">04</span><span>How is an invoice raised today, and how long after the job?</span></li>
+      <li class="reveal" data-reveal style="--d:.24s"><span class="qlist__n">05</span><span>Where does coverage fail — basements, lifts, industrial sites?</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>AFTERWARDS</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">How we'd know it worked.</h2>
+      <p class="sec-sub reveal" data-reveal style="--d:.1s">Agreed before the build starts, so there is something to judge it against other than whether it looks nice.</p>
+    </div>
+
+    <ul class="winlist">
+      <li class="reveal" data-reveal style="--d:.4s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>Jobs are recorded on the day they are done, not reconstructed later.</span></li>
+      <li class="reveal" data-reveal style="--d:.10s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>The invoice leaves before the technician does.</span></li>
+      <li class="reveal" data-reveal style="--d:.16s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>The gap between work done and payment received shrinks.</span></li>
+      <li class="reveal" data-reveal style="--d:.22s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>A disputed job is settled with photos and a timestamp.</span></li>
+    </ul>
+  </div>
+</section>
+
 <section class="section section--alt">
   <div class="container">
     <div class="sec-head">

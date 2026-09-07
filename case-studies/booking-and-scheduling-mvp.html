@@ -513,6 +513,57 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>THE HARD PART</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">Two people, one slot</h2>
+      <p class="sec-sub reveal" data-reveal style="--d:.1s">Every build has one problem that decides whether the rest of it matters. This is that problem, written out.</p>
+    </div>
+
+    <div class="deep">
+      <p class="reveal" data-reveal style="--d:.4s">This is the smallest build on the list and it still has one genuinely hard problem: two customers opening the booking page at the same moment and choosing the same eleven o'clock with the same stylist.</p>
+      <p class="reveal" data-reveal style="--d:.10s">The naive version checks whether the slot is free and then writes the booking. Between those two steps the other customer does the same thing, both checks pass, and you have a double booking that the software created — worse than the paper diary it replaced.</p>
+      <p class="reveal" data-reveal style="--d:.16s">The fix is to make the database refuse it, with a constraint that cannot allow two bookings to overlap for the same staff member, rather than relying on application code to check first. That is a small amount of work done early and an unpleasant amount of work done late, which is why it belongs in week one.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>BEFORE A PRICE EXISTS</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd ask you first.</h2>
+      <p class="sec-sub reveal" data-reveal style="--d:.1s">A quote given without these answers is a guess. These are the questions that actually move the number.</p>
+    </div>
+
+    <ol class="qlist">
+      <li class="reveal" data-reveal style="--d:.4s"><span class="qlist__n">01</span><span>What services do you offer, and how long does each actually take?</span></li>
+      <li class="reveal" data-reveal style="--d:.9s"><span class="qlist__n">02</span><span>How many staff, and can any of them do any service?</span></li>
+      <li class="reveal" data-reveal style="--d:.14s"><span class="qlist__n">03</span><span>What share of customers are walk-ins versus booked?</span></li>
+      <li class="reveal" data-reveal style="--d:.19s"><span class="qlist__n">04</span><span>Do you want deposits, and on which services?</span></li>
+      <li class="reveal" data-reveal style="--d:.24s"><span class="qlist__n">05</span><span>Is there an existing customer list, and in what shape?</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>AFTERWARDS</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">How we'd know it worked.</h2>
+      <p class="sec-sub reveal" data-reveal style="--d:.1s">Agreed before the build starts, so there is something to judge it against other than whether it looks nice.</p>
+    </div>
+
+    <ul class="winlist">
+      <li class="reveal" data-reveal style="--d:.4s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>Around a third of bookings arrive through the link within a month.</span></li>
+      <li class="reveal" data-reveal style="--d:.10s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>Zero double bookings, because the database will not permit one.</span></li>
+      <li class="reveal" data-reveal style="--d:.16s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>No-shows fall measurably once reminders are running.</span></li>
+      <li class="reveal" data-reveal style="--d:.22s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>The front desk can serve a walk-in without losing a phone booking.</span></li>
+    </ul>
+  </div>
+</section>
+
 <section class="section section--alt">
   <div class="container">
     <div class="sec-head">

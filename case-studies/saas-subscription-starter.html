@@ -520,6 +520,57 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>THE HARD PART</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">Billing state and access state must never disagree</h2>
+      <p class="sec-sub reveal" data-reveal style="--d:.1s">Every build has one problem that decides whether the rest of it matters. This is that problem, written out.</p>
+    </div>
+
+    <div class="deep">
+      <p class="reveal" data-reveal style="--d:.4s">The product features are yours. The part that goes wrong is the relationship between what the payment provider believes and what your application allows, because those are two systems and they will drift.</p>
+      <p class="reveal" data-reveal style="--d:.10s">The rule that prevents most of the pain: access is decided by what the provider's webhooks have told you, never by what the browser reported after a checkout. A user who closes the tab mid-redirect has still paid. A card that fails on renewal at 3am has still failed, whether or not anyone was looking.</p>
+      <p class="reveal" data-reveal style="--d:.16s">Then there are the states nobody designs for until a customer hits one: cancelled but paid until the end of the month, downgraded with more data than the smaller plan allows, a failed payment inside its retry window, a refund after the period started. Each needs a decided answer. Most of the support burden in a young SaaS comes from these, not from the actual product.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>BEFORE A PRICE EXISTS</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd ask you first.</h2>
+      <p class="sec-sub reveal" data-reveal style="--d:.1s">A quote given without these answers is a guess. These are the questions that actually move the number.</p>
+    </div>
+
+    <ol class="qlist">
+      <li class="reveal" data-reveal style="--d:.4s"><span class="qlist__n">01</span><span>Who is the first paying customer, and what do they need on day one?</span></li>
+      <li class="reveal" data-reveal style="--d:.9s"><span class="qlist__n">02</span><span>Per-seat or flat pricing — and what happens when a team shrinks?</span></li>
+      <li class="reveal" data-reveal style="--d:.14s"><span class="qlist__n">03</span><span>How long is the trial, and what does an expired trial still allow?</span></li>
+      <li class="reveal" data-reveal style="--d:.19s"><span class="qlist__n">04</span><span>What must a downgraded customer lose, and what must they keep?</span></li>
+      <li class="reveal" data-reveal style="--d:.24s"><span class="qlist__n">05</span><span>Are there data-residency requirements from your target customers?</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>AFTERWARDS</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">How we'd know it worked.</h2>
+      <p class="sec-sub reveal" data-reveal style="--d:.1s">Agreed before the build starts, so there is something to judge it against other than whether it looks nice.</p>
+    </div>
+
+    <ul class="winlist">
+      <li class="reveal" data-reveal style="--d:.4s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>Access always follows the webhook, and no one has ever edited the database by hand to fix a subscription.</span></li>
+      <li class="reveal" data-reveal style="--d:.10s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>Trial-to-paid conversion is a number you can see, not a guess.</span></li>
+      <li class="reveal" data-reveal style="--d:.16s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>A failed renewal warns the customer before it cuts them off.</span></li>
+      <li class="reveal" data-reveal style="--d:.22s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>Every workspace's data is provably isolated, tested rather than assumed.</span></li>
+    </ul>
+  </div>
+</section>
+
 <section class="section section--alt">
   <div class="container">
     <div class="sec-head">

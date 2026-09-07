@@ -18,6 +18,37 @@ logo or a results metric here until there is a real project behind it.
 CASE_STUDIES = [
     {
         "slug": "restaurant-ordering-app",
+        "questions": [
+            "How many outlets, and do prices or menus differ between them?",
+            "Who answers the phone at 8pm on a Friday, and what breaks first?",
+            "Do you deliver with your own riders or a third-party fleet?",
+            "Roughly what share of orders are repeat customers today?",
+            "Is there a POS the kitchen already uses that this has to sit beside?",
+        ],
+        "hard": ("Keeping three kitchens and one customer in agreement", [
+            "The screens are the easy half. The difficulty is that an order is a "
+            "shared piece of state being changed by four parties — the customer, "
+            "the kitchen, the rider and the payment gateway — none of whom are "
+            "looking at the same screen and any of whom can act at a moment the "
+            "others do not expect.",
+            "The specific failure to design against: a customer pays, and the "
+            "kitchen then discovers the item is finished. Money has moved and the "
+            "product cannot be delivered. That path needs a decided answer — "
+            "automatic refund, substitution offer, or a call — before a line of "
+            "code exists, because retrofitting it means touching payments, "
+            "notifications and the kitchen screen at once.",
+            "The other one is stock. Marking an item sold out has to reach every "
+            "device holding a menu within seconds, or two more customers order it "
+            "while the kitchen is still typing. That is why order state runs over "
+            "a live connection rather than being polled every thirty seconds.",
+        ]),
+        "success": [
+            "A third of repeat orders move off the aggregator within three months "
+            "— that is the commission this is meant to save.",
+            "Kitchens accept new orders within ninety seconds during peak hours.",
+            "Under two per cent of paid orders are cancelled after payment.",
+            "The owner opens the daily summary without being reminded to.",
+        ],
         "glance": [
             ("Type", "Mobile app + web dashboards"),
             ("Build time", "About 7 weeks"),
@@ -93,6 +124,37 @@ CASE_STUDIES = [
     },
     {
         "slug": "coaching-management-platform",
+        "questions": [
+            "How many batches and centres, and how often do students move between them?",
+            "Who owns the fee spreadsheet today, and what happens when they are on leave?",
+            "Do the parents you need to reach have smartphones, or is SMS the realistic channel?",
+            "What happens to fees when a student joins mid-term or drops out?",
+            "Are tests objective, subjective, or both?",
+        ],
+        "hard": ("Attendance a teacher will actually mark", [
+            "Every feature here is straightforward except this one, and this one "
+            "decides whether the whole system is worth anything. If attendance is "
+            "not marked reliably, the parent messages are wrong, the reports are "
+            "wrong, and staff go back to the register within a fortnight.",
+            "The constraint is that a teacher will give this about forty seconds, "
+            "standing up, at the start of a class, on their own phone, sometimes "
+            "with no signal in a basement classroom. That rules out a form with a "
+            "dropdown per student. It means the batch opens pre-marked present, "
+            "the teacher taps only the absentees, and the whole thing saves "
+            "locally and syncs later.",
+            "It also means being careful about what happens when a class is "
+            "cancelled, a substitute teaches, or a student attends a different "
+            "batch that day. Those are the cases that make the data untrustworthy, "
+            "and the moment the data is untrustworthy nobody uses the system.",
+        ]),
+        "success": [
+            "Attendance is marked for over ninety per cent of classes in the first "
+            "month, without anyone chasing teachers.",
+            "The gap between a fee falling due and being collected drops.",
+            "Front-desk calls asking about attendance or marks fall noticeably.",
+            "Parents log in more than once — a single visit means the screen did "
+            "not answer their question.",
+        ],
         "glance": [
             ("Type", "Web app, staff and parents"),
             ("Build time", "About 8 weeks"),
@@ -167,6 +229,39 @@ CASE_STUDIES = [
     },
     {
         "slug": "business-automation-dashboard",
+        "questions": [
+            "Which systems does the data come from, and can we get API or database access?",
+            "How many manual corrections happen in a normal week, and what are they?",
+            "Who signs off that the numbers are right today?",
+            "What should happen when a source file simply does not arrive?",
+            "Who is allowed to see margins, and who is not?",
+        ],
+        "hard": ("The rules nobody wrote down", [
+            "The technical work here is ordinary. The hard part is that the "
+            "spreadsheet contains years of accumulated judgement that exists only "
+            "in one person's head: this branch codes its returns differently, that "
+            "supplier's file has a blank first row, these two product names are "
+            "the same thing, this number is always wrong on the first of the month "
+            "and gets fixed by hand.",
+            "None of that is documented, and the person doing it often cannot list "
+            "it on request — they only recognise it when they see it. So the "
+            "discovery week is not a meeting. It is sitting beside them while they "
+            "do the job and writing down every decision, including the ones they "
+            "make without noticing.",
+            "What comes out of that gets split in two. Rules that can be stated "
+            "precisely become code with tests. Rules that cannot get a flag: the "
+            "system stops and asks a human rather than guessing. Guessing silently "
+            "is how automated reporting loses people's trust, and trust here is "
+            "the entire product.",
+        ]),
+        "success": [
+            "The two hours a day come back, and the person who owned the "
+            "spreadsheet is doing something else.",
+            "New numbers and old numbers agree for thirty consecutive days before "
+            "the spreadsheet is retired.",
+            "An alert fires before a human notices the problem, at least once.",
+            "More than one person can run and explain the report.",
+        ],
         "glance": [
             ("Type", "Scheduled jobs + dashboard"),
             ("Build time", "About 6 weeks"),
@@ -242,6 +337,35 @@ CASE_STUDIES = [
     },
     {
         "slug": "real-estate-listing-portal",
+        "questions": [
+            "How many listings, and who keeps them current?",
+            "Where do leads arrive from today, and what does each one cost you?",
+            "How many agents, and how are leads shared between them now?",
+            "What is your follow-up rule — and is it actually followed?",
+            "Do you want prices public, on request, or a mix?",
+        ],
+        "hard": ("A CRM salespeople will actually use", [
+            "The website is the straightforward half. CRMs fail for a reason that "
+            "has nothing to do with engineering: they ask a salesperson to do "
+            "admin, and a salesperson under target will not do admin.",
+            "So the design question is not what data would be useful to capture. "
+            "It is what is the least a person can enter after a call, and how do "
+            "we make entering it faster than not entering it. In practice that "
+            "means two taps for the common outcomes — no answer, call back, visit "
+            "booked — a free-text note that is optional, and never a required "
+            "field the agent has to think about.",
+            "The other half is making the tool give something back immediately. An "
+            "agent who logs a call should see their follow-up list reorder itself "
+            "in front of them. If the CRM only takes and never gives, it becomes "
+            "the thing that gets updated on Friday afternoon from memory, and at "
+            "that point the pipeline is fiction.",
+        ]),
+        "success": [
+            "Every incoming lead is assigned to a named agent within five minutes.",
+            "No lead sits with no activity for more than forty-eight hours.",
+            "Agents log outcomes on the day, not at the end of the week.",
+            "Listing pages appear in Google results for the localities you care about.",
+        ],
         "glance": [
             ("Type", "Public website + CRM"),
             ("Build time", "About 7 weeks"),
@@ -315,6 +439,38 @@ CASE_STUDIES = [
     },
     {
         "slug": "delivery-tracking-app",
+        "questions": [
+            "How many drivers, and are the phones theirs or yours?",
+            "Where does coverage actually fail on a normal route?",
+            "What counts as proof of delivery today, and who asks for it?",
+            "Do you own the vehicles, or is it a contracted fleet?",
+            "How are disputes about non-delivery settled at the moment?",
+        ],
+        "hard": ("Sync that survives a basement", [
+            "An app that needs a connection is not an app for drivers. The whole "
+            "build is shaped by that, and the cost sits almost entirely in one "
+            "place: reconciling what happened on the device with what the server "
+            "believes, after a gap of minutes or hours.",
+            "The failure that matters is not the obvious one. A phone with no bars "
+            "is easy — you queue and retry. The expensive case is a connection "
+            "that half works: the request reaches the server, the server records "
+            "it, and the response never gets back. The driver sees a failure, taps "
+            "again, and now the delivery is recorded twice. Every action therefore "
+            "carries an identifier generated on the device, so a replay is "
+            "recognised and discarded rather than duplicated.",
+            "Battery is the other constraint that shapes the code. Streaming "
+            "location continuously kills a phone by mid-afternoon, and a dead "
+            "phone records nothing at all — so positions are batched and sent "
+            "periodically, which is less precise on the map and far more useful in "
+            "practice.",
+        ]),
+        "success": [
+            "Over ninety-five per cent of stops are recorded on the device the day "
+            "they happen.",
+            "Every completed delivery has a photo and a name attached to it.",
+            "A delivery dispute is settled from the record rather than from memory.",
+            "A driver's phone still has charge at the end of a shift.",
+        ],
         "glance": [
             ("Type", "Driver app + owner board"),
             ("Build time", "About 8 weeks"),
@@ -388,6 +544,33 @@ CASE_STUDIES = [
     },
     {
         "slug": "booking-and-scheduling-mvp",
+        "questions": [
+            "What services do you offer, and how long does each actually take?",
+            "How many staff, and can any of them do any service?",
+            "What share of customers are walk-ins versus booked?",
+            "Do you want deposits, and on which services?",
+            "Is there an existing customer list, and in what shape?",
+        ],
+        "hard": ("Two people, one slot", [
+            "This is the smallest build on the list and it still has one genuinely "
+            "hard problem: two customers opening the booking page at the same "
+            "moment and choosing the same eleven o'clock with the same stylist.",
+            "The naive version checks whether the slot is free and then writes the "
+            "booking. Between those two steps the other customer does the same "
+            "thing, both checks pass, and you have a double booking that the "
+            "software created — worse than the paper diary it replaced.",
+            "The fix is to make the database refuse it, with a constraint that "
+            "cannot allow two bookings to overlap for the same staff member, "
+            "rather than relying on application code to check first. That is a "
+            "small amount of work done early and an unpleasant amount of work done "
+            "late, which is why it belongs in week one.",
+        ]),
+        "success": [
+            "Around a third of bookings arrive through the link within a month.",
+            "Zero double bookings, because the database will not permit one.",
+            "No-shows fall measurably once reminders are running.",
+            "The front desk can serve a walk-in without losing a phone booking.",
+        ],
         "glance": [
             ("Type", "Booking MVP"),
             ("Build time", "About 4 weeks"),
@@ -458,6 +641,36 @@ CASE_STUDIES = [
     },
     {
         "slug": "saas-subscription-starter",
+        "questions": [
+            "Who is the first paying customer, and what do they need on day one?",
+            "Per-seat or flat pricing — and what happens when a team shrinks?",
+            "How long is the trial, and what does an expired trial still allow?",
+            "What must a downgraded customer lose, and what must they keep?",
+            "Are there data-residency requirements from your target customers?",
+        ],
+        "hard": ("Billing state and access state must never disagree", [
+            "The product features are yours. The part that goes wrong is the "
+            "relationship between what the payment provider believes and what your "
+            "application allows, because those are two systems and they will drift.",
+            "The rule that prevents most of the pain: access is decided by what "
+            "the provider's webhooks have told you, never by what the browser "
+            "reported after a checkout. A user who closes the tab mid-redirect has "
+            "still paid. A card that fails on renewal at 3am has still failed, "
+            "whether or not anyone was looking.",
+            "Then there are the states nobody designs for until a customer hits "
+            "one: cancelled but paid until the end of the month, downgraded with "
+            "more data than the smaller plan allows, a failed payment inside its "
+            "retry window, a refund after the period started. Each needs a decided "
+            "answer. Most of the support burden in a young SaaS comes from these, "
+            "not from the actual product.",
+        ]),
+        "success": [
+            "Access always follows the webhook, and no one has ever edited the "
+            "database by hand to fix a subscription.",
+            "Trial-to-paid conversion is a number you can see, not a guess.",
+            "A failed renewal warns the customer before it cuts them off.",
+            "Every workspace's data is provably isolated, tested rather than assumed.",
+        ],
         "glance": [
             ("Type", "Multi-tenant SaaS"),
             ("Build time", "About 9 weeks"),
@@ -536,6 +749,34 @@ CASE_STUDIES = [
     },
     {
         "slug": "business-website-that-converts",
+        "questions": [
+            "Where does your traffic come from — Instagram, Google, word of mouth?",
+            "What is the single action you want a visitor to take?",
+            "Who answers enquiries, and how quickly can they realistically reply?",
+            "What changes often enough that you need to edit it yourself?",
+            "Do you already own the domain, and is there analytics on the current site?",
+        ],
+        "hard": ("Saying one thing", [
+            "The engineering here is genuinely easy. The hard part is the part "
+            "most people want to skip: deciding what the page says.",
+            "Almost every small-business site fails the same way. It tries to say "
+            "everything — every service, every audience, every reassurance — and a "
+            "visitor who arrives from Instagram with fifteen seconds of patience "
+            "reads none of it. A page that says one thing clearly outperforms a "
+            "page that says nine things completely, and the gap is not small.",
+            "Which is why week one is copy, not design, and why it is a "
+            "conversation rather than a form. What you actually do, who you do it "
+            "for, why someone would pick you, and what you want them to do next. "
+            "Design after that is comparatively mechanical. Doing it in the other "
+            "order produces something attractive that does not work.",
+        ]),
+        "success": [
+            "The page is usable in under two seconds on a mid-range phone on "
+            "mobile data.",
+            "Enquiries increase from the same traffic — the traffic already exists.",
+            "Every enquiry is answered within one working day.",
+            "You changed the hours or a price yourself, without calling anyone.",
+        ],
         "glance": [
             ("Type", "Marketing website"),
             ("Build time", "About 3 weeks"),
@@ -605,6 +846,36 @@ CASE_STUDIES = [
     },
     {
         "slug": "inventory-and-billing-for-retail",
+        "questions": [
+            "Roughly how many distinct products, and how often do they change?",
+            "Which GST slabs apply, and do you issue credit notes?",
+            "Are products barcoded, or is it search by name at the counter?",
+            "Do regular customers buy on credit, and how is that tracked now?",
+            "When was stock last counted properly?",
+        ],
+        "hard": ("Billing fast enough for a queue", [
+            "Every design decision at the counter is governed by one number: how "
+            "long the customer in front is willing to stand there. If billing is "
+            "slower than the handwritten book, staff will keep the book, and every "
+            "other feature — stock, alerts, margins — is built on data that never "
+            "arrives.",
+            "That pushes hard on the interface. Search that matches on partial "
+            "names and local spellings, because nobody types a full product name "
+            "with a queue forming. Keyboard-first operation, since a mouse is "
+            "slower than a barcode scanner and a numeric keypad. Quantity and "
+            "discount reachable without leaving the keyboard.",
+            "And it has to keep working when the internet does not. A shop cannot "
+            "stop selling because a router rebooted, so billing runs against local "
+            "storage and syncs after — which then brings back the reconciliation "
+            "problem, and is why invoice numbers are issued in a way that cannot "
+            "collide when two terminals come back online together.",
+        ]),
+        "success": [
+            "A typical five-item bill takes under thirty seconds end to end.",
+            "Counted stock and recorded stock are within a couple of per cent.",
+            "Low-stock alerts are acted on rather than dismissed.",
+            "The day-end total matches the till without anyone reconciling by hand.",
+        ],
         "glance": [
             ("Type", "Custom software"),
             ("Build time", "About 7 weeks"),
@@ -677,6 +948,37 @@ CASE_STUDIES = [
     },
     {
         "slug": "clinic-appointments-and-records",
+        "questions": [
+            "How many doctors, and how long is a real consultation versus a booked one?",
+            "Who takes bookings today — front desk, phone, WhatsApp, all three?",
+            "What records exist now, and do old paper files need to come across?",
+            "Where is patient data allowed to be stored, and who has decided that?",
+            "Who besides the doctor needs to see clinical notes?",
+        ],
+        "hard": ("Records that are private and findable", [
+            "These two requirements pull against each other, and most clinic "
+            "software picks a side. Locked down so tightly that the doctor cannot "
+            "find last year's visit during a consultation, or so open that "
+            "reception can read everyone's history.",
+            "The resolution is that access is by role and by relationship, not by "
+            "a single switch. Reception sees the schedule, contact details and fee "
+            "status. The doctor sees clinical history for the patient in front of "
+            "them. Every record opened is logged with who and when — not because "
+            "anyone expects misuse, but because an access log is the only way to "
+            "answer the question honestly if it is ever asked.",
+            "Finding a record is its own problem. Patients return after a year, "
+            "having forgotten any identifier except their phone number, and "
+            "sometimes give a relative's. So search works on phone number, name "
+            "and approximate date together, and the system tolerates a patient "
+            "existing twice by making merging easy rather than by pretending "
+            "duplicates cannot happen.",
+        ]),
+        "success": [
+            "Patients are given a time and waiting room time falls.",
+            "No-shows drop once reminders are running.",
+            "A returning patient's history is on screen in under ten seconds.",
+            "The access log has been reviewed at least once, by you.",
+        ],
         "glance": [
             ("Type", "Web app"),
             ("Build time", "About 7 weeks"),
@@ -749,6 +1051,36 @@ CASE_STUDIES = [
     },
     {
         "slug": "gym-membership-app",
+        "questions": [
+            "How many active members, and how many lapsed in the last six months?",
+            "What plans exist, and can members freeze or transfer them?",
+            "Do you run classes with limited capacity?",
+            "Who chases renewals today, and how do they know who to chase?",
+            "Is there a desk computer, and does it have a scanner?",
+        ],
+        "hard": ("Renewals are the product", [
+            "It is tempting to treat this as a check-in app with membership "
+            "attached. That has it backwards. A gym's revenue is renewals, and "
+            "renewals are lost to silence — an expiry nobody noticed, a member who "
+            "drifted for three weeks and was never asked why.",
+            "So the system is built around expiry rather than around entry. Who "
+            "expires in the next fortnight, who has not attended in twenty days, "
+            "who cancelled a class twice and did not rebook. Those lists are the "
+            "product; check-in is the mechanism that keeps them accurate.",
+            "The awkward part is everything that makes a membership not a clean "
+            "date range: freezes for travel or injury, transfers between members, "
+            "upgrades mid-term, the regular whom the owner informally lets slide "
+            "for a fortnight. The spreadsheet handles these by a human ignoring "
+            "the rules. Software cannot ignore rules, so the rules have to be "
+            "agreed in week one — which is usually the first time anyone has "
+            "written them down.",
+        ]),
+        "success": [
+            "The renewal rate improves against the same period last year.",
+            "Check-in takes under two seconds at the 7am queue.",
+            "The expiring-soon list is worked through every week.",
+            "Classes fill closer to capacity, with the waitlist doing the work.",
+        ],
         "glance": [
             ("Type", "Mobile app + desk web"),
             ("Build time", "About 6 weeks"),
@@ -819,6 +1151,35 @@ CASE_STUDIES = [
     },
     {
         "slug": "field-service-job-app",
+        "questions": [
+            "How many technicians, and how many jobs does each do in a day?",
+            "What job types are there, and does each have a standard procedure?",
+            "Do technicians carry parts on the van, and who tracks them?",
+            "How is an invoice raised today, and how long after the job?",
+            "Where does coverage fail — basements, lifts, industrial sites?",
+        ],
+        "hard": ("Offline sync with money attached", [
+            "This build has the delivery app's offline problem plus a complication "
+            "that makes it materially harder: the outcome of the job produces an "
+            "invoice. A duplicate delivery record is embarrassing. A duplicate "
+            "invoice is a phone call from a customer who has been billed twice.",
+            "So the sync design has to be stricter. Every job completion carries "
+            "an identifier created on the device, and the server treats a repeat "
+            "as the same event rather than a new one. Invoice numbers are issued "
+            "server-side, never on the device, because two technicians coming back "
+            "online in the same minute must not be able to produce the same number.",
+            "There is a human constraint too. A technician finishing a job wants "
+            "to leave, so anything between them and the van has to be worth its "
+            "seconds. The checklist is the invoice — parts used and work done "
+            "become line items automatically — because asking someone to enter the "
+            "same information twice guarantees the second entry never happens.",
+        ]),
+        "success": [
+            "Jobs are recorded on the day they are done, not reconstructed later.",
+            "The invoice leaves before the technician does.",
+            "The gap between work done and payment received shrinks.",
+            "A disputed job is settled with photos and a timestamp.",
+        ],
         "glance": [
             ("Type", "Mobile app + dispatch web"),
             ("Build time", "About 8 weeks"),
