@@ -1250,6 +1250,142 @@ CASE_STUDIES = [
                 "cutting offline — an app that needs signal will be abandoned in "
                 "the first basement.",
     },
+    {
+        "slug": "first-website-for-a-social-first-business",
+        "glance": [
+            ("Type", "Static site + your own email"),
+            ("Build time", "About 2 weeks"),
+            ("Platforms", "Browser, mobile-first"),
+            ("Starts at", "₹20,000*"),
+        ],
+        "pains": [
+            "Everything you have built sits inside someone else's app",
+            "One locked account and the whole shopfront disappears",
+            "Customers can follow a handle but cannot be sent an address",
+            "Orders and enquiries are buried in the same inbox as spam",
+        ],
+        "category": "New Business",
+        "thumb": "c",
+        "title": "First Website for a Social-First Business",
+        "summary": "You built an audience on Instagram and TikTok. This is the "
+                   "address, the inbox and the page that are actually yours.",
+        "situation": [
+            "A new business is doing well on social. The reels land, the DMs come "
+            "in, orders get taken in chat. It works, and for the first year or so "
+            "there is no obvious reason to do anything else.",
+            "The problem is not that social media is bad at this. It is that "
+            "everything you have built is held by companies that owe you nothing. "
+            "Reach is adjusted without warning. Accounts get locked by an "
+            "automated system with no one to appeal to. A platform can change its "
+            "terms, its algorithm or its mind, and the audience you spent two "
+            "years earning is not portable — you cannot export a follower list and "
+            "take it somewhere else.",
+            "There is a second, quieter cost. A handle and a Gmail address read as "
+            "a hobby. The moment you approach a supplier, quote for a corporate "
+            "order, apply to a marketplace or open a payment gateway, someone asks "
+            "for a website and a business email, and “DM us on Instagram” "
+            "stops being an answer. That question arrives at exactly the point the "
+            "business is trying to grow.",
+            "The fix is small, cheap and permanent: an address you own, an inbox "
+            "at that address, and one page that says what you do. Social keeps "
+            "doing what it is good at — reach — and stops being the only thing "
+            "holding the business up.",
+        ],
+        "scope": [
+            ("A domain that is yours",
+             "Registered in your name, in an account you control, with the login "
+             "in your hands from day one. Not mine, not an agency's. This is the "
+             "part people most often get wrong and it is the hardest to undo."),
+            ("One page that loads instantly",
+             "What you make, who it is for, what it costs, and how to reach you. "
+             "Static HTML — no page builder, no database, nothing to be slow. It "
+             "opens before a visitor on mobile data has decided to leave."),
+            ("Email at your own domain",
+             "hello@yourbusiness.com rather than a Gmail address with numbers in "
+             "it, set up so your messages actually arrive rather than landing in "
+             "spam. This is the change customers notice first."),
+            ("Your links, on your own address",
+             "Everything a link-in-bio service does — Instagram, TikTok, "
+             "WhatsApp, catalogue, menu, order form — on a page you own, so the "
+             "URL in your bio never has to change again."),
+            ("Enquiries that reach a person",
+             "A short form, a WhatsApp button and a phone number, with messages "
+             "arriving in the business inbox instead of being lost among DMs."),
+        ],
+        "excluded": [
+            "An online store. If you are taking orders over chat and it is "
+            "working, a checkout is a later project — build it when the volume "
+            "makes chat painful, not before.",
+            "A blog or a news section. An empty page dated eighteen months ago "
+            "does more harm than no page at all.",
+            "A content management system. For one page, editing the page directly "
+            "is faster than learning an admin panel you will open twice a year.",
+            "A logo and full brand identity. Worth paying a designer for "
+            "separately — I will build around whatever you have.",
+        ],
+        "stack": [
+            ("The site", "Plain HTML and CSS. Nothing to update, nothing to be "
+             "hacked, and it will still work in five years without being touched"),
+            ("Hosting", "A CDN on a free tier. At this size the hosting genuinely "
+             "costs nothing, and it is fast everywhere without you configuring "
+             "anything"),
+            ("Domain", "Registered in your name at a mainstream registrar, "
+             "renewed yearly"),
+            ("Email", "A proper mailbox at your domain, with SPF, DKIM and DMARC "
+             "configured so mail from you is trusted rather than filtered"),
+            ("Enquiry form", "A form endpoint that emails you — a static site "
+             "needs no database for this"),
+        ],
+        "timeline": [
+            ("Days 1–3", "What the page says, and to whom. Domain chosen and "
+                         "registered in your name. Email set up and tested."),
+            ("Days 4–9", "Build, content, photos sized properly, and the links "
+                         "page."),
+            ("Days 10–14", "Live, bio links switched over, and a walk-through so "
+                           "you can edit it and read your own email."),
+        ],
+        "questions": [
+            "What do you actually sell, and who buys it most often?",
+            "Which platform brings you the most enquiries today?",
+            "Has anyone ever asked you for a website or a business email, and in what context?",
+            "Do you already own a domain, and is the account in your name?",
+            "Who will read the business inbox, and how often?",
+        ],
+        "hard": ("Owning the address without owning a server", [
+            "The build here is a couple of days of work. What actually takes the "
+            "care is making sure that in three years, with or without me, the "
+            "business still controls its own name.",
+            "That comes down to two things being in your name and not somebody "
+            "else's: the registrar account where the domain lives, and the DNS "
+            "records that point that domain at the site and the mail. I have seen "
+            "businesses locked out of their own address because a developer "
+            "registered it on their own account and then became unreachable — and "
+            "the recovery process for that is slow, sometimes impossible, and "
+            "always at the worst moment. So you create the registrar account, you "
+            "hold the login, and I am given access rather than ownership.",
+            "The other half is email deliverability, which is where most cheap "
+            "setups quietly fail. Sending from your own domain without SPF, DKIM "
+            "and DMARC configured correctly means a meaningful share of your mail "
+            "goes to spam — and you will not know, because nobody replies to tell "
+            "you they never got it. Those three records take an hour to set up "
+            "properly and are the difference between an email address that looks "
+            "professional and one that works.",
+        ]),
+        "success": [
+            "The domain and the email account are in your name, and you have "
+            "logged into both yourself.",
+            "A test email from your address reaches a Gmail inbox rather than its "
+            "spam folder.",
+            "Your bio link points at your own domain, and never needs changing again.",
+            "At least one enquiry arrives through the site rather than through a DM.",
+        ],
+        "note": "The site hosting is free at this size, but the domain and the "
+                "mailbox are small recurring costs paid by you, to those "
+                "providers — reckon on a few hundred rupees a month between them. "
+                "That is the whole running cost of no longer renting your "
+                "shopfront. This site is one of these, which is the most honest "
+                "recommendation I can give it.",
+    },
 ]
 
 
