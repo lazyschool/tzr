@@ -464,6 +464,52 @@ const CONFIG = {
     });
   }
 
+
+  /* ---------------------------------------------------------------
+     4c. Article topic filter
+     Chips are generated in the page, so with scripting off they are
+     simply absent and every article stays listed.
+  --------------------------------------------------------------- */
+  const artFilter = $("#artFilter");
+  const artGrid = $("#artGrid");
+
+  if (artFilter && artGrid) {
+    const cards = $$(".post-card", artGrid);
+
+    artFilter.addEventListener("click", function (e) {
+      const chip = e.target.closest(".chip");
+      if (!chip) return;
+
+      const want = chip.getAttribute("data-filter");
+      $$(".chip", artFilter).forEach(function (c) {
+        const on = c === chip;
+        c.classList.toggle("is-on", on);
+        c.setAttribute("aria-pressed", String(on));
+      });
+
+      cards.forEach(function (card) {
+        card.hidden = want !== "all" && card.getAttribute("data-tag") !== want;
+      });
+
+      // the URL should survive a reload and a share
+      try {
+        const url = new URL(window.location.href);
+        if (want === "all") url.searchParams.delete("topic");
+        else url.searchParams.set("topic", want);
+        history.replaceState(null, "", url);
+      } catch (err) { /* noop */ }
+    });
+
+    // honour ?topic= on arrival
+    try {
+      const topic = new URLSearchParams(window.location.search).get("topic");
+      if (topic) {
+        const chip = $('.chip[data-filter="' + CSS.escape(topic) + '"]', artFilter);
+        if (chip) chip.click();
+      }
+    } catch (err) { /* noop */ }
+  }
+
   /* ---------------------------------------------------------------
      5. Reveal on scroll
   --------------------------------------------------------------- */

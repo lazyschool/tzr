@@ -70,18 +70,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://humansofcoding.com/articles/what-an-mvp-actually-is.html</loc>
-    <lastmod>2026-08-12</lastmod>
+    <loc>https://humansofcoding.com/articles/do-you-need-a-vector-database.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://humansofcoding.com/articles/what-twenty-thousand-buys.html</loc>
-    <lastmod>2026-08-19</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://humansofcoding.com/articles/how-i-use-ai-without-shipping-garbage.html</loc>
-    <lastmod>2026-08-26</lastmod>
+    <loc>https://humansofcoding.com/articles/questions-to-ask-before-hiring-a-developer.html</loc>
+    <lastmod>2026-09-05</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -90,8 +85,43 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://humansofcoding.com/articles/questions-to-ask-before-hiring-a-developer.html</loc>
-    <lastmod>2026-09-05</lastmod>
+    <loc>https://humansofcoding.com/articles/how-i-use-ai-without-shipping-garbage.html</loc>
+    <lastmod>2026-08-26</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://humansofcoding.com/articles/what-twenty-thousand-buys.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://humansofcoding.com/articles/what-an-mvp-actually-is.html</loc>
+    <lastmod>2026-08-12</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://humansofcoding.com/articles/what-ai-coding-agents-are-good-at.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://humansofcoding.com/articles/start-with-postgres.html</loc>
+    <lastmod>2026-07-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://humansofcoding.com/articles/server-rendered-or-single-page.html</loc>
+    <lastmod>2026-07-08</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://humansofcoding.com/articles/passkeys-and-when-to-bother.html</loc>
+    <lastmod>2026-06-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://humansofcoding.com/articles/build-for-the-metro.html</loc>
+    <lastmod>2026-06-10</lastmod>
     <priority>0.7</priority>
   </url>
 </urlset>

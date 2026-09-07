@@ -900,6 +900,396 @@ CASE_STUDIES = [
 
 ARTICLES = [
     {
+        "slug": "do-you-need-a-vector-database",
+        "title": "Do you actually need a vector database?",
+        "date": "2026-09-07",
+        "date_label": "7 September 2026",
+        "read": "6 min read",
+        "tag": "AI",
+        "caveat": True,
+        "summary": "Almost every AI feature proposal now includes one. For most "
+                   "of them, Postgres with a search extension is enough, and the "
+                   "difference is a month of work.",
+        "body": [
+            ("p", "If your project involves AI, someone will suggest a vector "
+                  "database. Sometimes that is right. Often it adds a second "
+                  "datastore, a sync problem and a monthly bill to a feature that "
+                  "would have worked without it."),
+            ("h2", "What the thing actually does"),
+            ("p", "Text gets converted into a long list of numbers — an embedding "
+                  "— chosen so that passages about similar things end up close "
+                  "together. Search then means \"find the stored vectors nearest "
+                  "to this one\". A vector database is storage plus a fast index "
+                  "for that nearest-neighbour lookup."),
+            ("p", "That is genuinely useful. It finds a document about \"cancelling "
+                  "my subscription\" when the user typed \"how do I stop being "
+                  "charged\", which keyword search misses entirely."),
+            ("h2", "The question that decides it"),
+            ("p", "How many documents are you searching?"),
+            ("ul", [
+                "<strong>Under about fifty thousand chunks.</strong> Postgres with "
+                "the pgvector extension is fine. It is one database, one backup, "
+                "one thing to operate, and queries land in tens of milliseconds.",
+                "<strong>Hundreds of thousands to a few million.</strong> Still "
+                "usually Postgres, with attention paid to the index type and to "
+                "how much memory it gets.",
+                "<strong>Tens of millions, or heavy write traffic.</strong> Now a "
+                "dedicated vector store earns its keep.",
+            ]),
+            ("p", "Most business AI features — a support bot over your help pages, "
+                  "search across a few thousand documents, a policy assistant — "
+                  "live comfortably in the first bucket. A company handbook is a "
+                  "few hundred chunks, not a few million."),
+            ("h2", "The part that actually decides quality"),
+            ("p", "Here is what a year of building these teaches you: the "
+                  "retrieval quality is dominated by how you split the documents, "
+                  "not by which database holds the vectors. Chunks that break "
+                  "mid-table or mid-sentence produce bad answers on any engine."),
+            ("p", "Two things move the needle far more than the storage choice. "
+                  "First, chunking that respects the document's structure — "
+                  "headings, sections, table boundaries. Second, combining vector "
+                  "search with plain keyword search and merging the results, "
+                  "because exact terms like an order number or an error code are "
+                  "precisely what embeddings are worst at."),
+            ("quote", "Teams routinely migrate to a specialist vector database, "
+                      "get the same mediocre answers, and only then fix their "
+                      "chunking."),
+            ("h2", "What I would build first"),
+            ("ol", [
+                "Postgres with pgvector, alongside the data you already have.",
+                "Chunk on structure, not on a fixed character count.",
+                "Add keyword search next to vector search and merge the rankings.",
+                "Log every question and the passages retrieved for it. This log "
+                "is the most valuable thing you will build.",
+                "Read that log. Fix the retrieval failures it shows you.",
+            ]),
+            ("p", "If, after all that, the index genuinely cannot keep up, moving "
+                  "to a dedicated vector store is a contained piece of work — and "
+                  "by then you will know exactly what you need from it."),
+        ],
+    },
+    {
+        "slug": "what-ai-coding-agents-are-good-at",
+        "title": "What AI coding agents are good at, and what they're not",
+        "date": "2026-08-05",
+        "date_label": "5 August 2026",
+        "read": "7 min read",
+        "tag": "AI",
+        "caveat": True,
+        "summary": "A working note from someone who uses them daily and still "
+                   "reads every line. Where they save real time, and the three "
+                   "places they quietly cost you money.",
+        "body": [
+            ("p", "I use coding agents every working day. They have genuinely "
+                  "changed how much one person can ship. They have also produced "
+                  "the two most expensive mistakes I have had to unpick this year. "
+                  "Both things are true."),
+            ("h2", "Where they earn their keep"),
+            ("ul", [
+                "<strong>Work with an obvious right answer.</strong> A CRUD "
+                "endpoint, a form with validation, a migration, a config file. "
+                "Shapes that exist a million times over.",
+                "<strong>Mechanical change across many files.</strong> Renaming a "
+                "concept in sixty places. Tedious and error-prone by hand; a "
+                "machine does it exactly.",
+                "<strong>Getting oriented in unfamiliar code.</strong> \"Where "
+                "does this request get authorised?\" answered in seconds rather "
+                "than an afternoon of grepping.",
+                "<strong>Test data and fixtures.</strong> Realistic, varied, in "
+                "bulk, instantly.",
+                "<strong>The first draft of anything.</strong> Editing something "
+                "mediocre is faster than starting at a blank file.",
+            ]),
+            ("h2", "The three places they cost you"),
+            ("h2", "1. Confidently wrong code that reads fine"),
+            ("p", "This is the big one. Broken code announces itself. Subtly wrong "
+                  "code does not. An authorisation check that is slightly too "
+                  "permissive, an edge case in a refund path, an off-by-one in a "
+                  "date range — all of these read perfectly well at a glance, and "
+                  "a glance is exactly what they tend to get."),
+            ("p", "Which is why the rule here is that no line goes live unread. "
+                  "Not skimmed. Read."),
+            ("h2", "2. Plausible-looking architecture"),
+            ("p", "Ask for a feature and you will get one, built the most common "
+                  "way that feature is built on the internet. That is often right. "
+                  "It is wrong precisely when your business has the quirk that "
+                  "made a custom build necessary in the first place — and it will "
+                  "flatten that quirk without mentioning it."),
+            ("h2", "3. Volume that hides the absence of thinking"),
+            ("p", "A four-hundred-line pull request feels like progress. Sometimes "
+                  "it is eighty lines of thinking and three hundred of scaffolding "
+                  "nobody needed. The cost is not writing it; it is that someone "
+                  "maintains it for years."),
+            ("quote", "The scarce resource stopped being typing. It is judgement "
+                      "about what should exist at all."),
+            ("h2", "How I actually work with them"),
+            ("p", "The data model, anything touching money, authentication or "
+                  "personal data, and any decision about what to build — those I "
+                  "do myself, slowly. Everything downstream of those decisions is "
+                  "fair game, reviewed line by line."),
+            ("p", "The practical test I apply: if this is wrong, how will I find "
+                  "out? If the answer is \"it fails immediately and loudly\", let "
+                  "the machine write it. If the answer is \"a customer tells me in "
+                  "three months\", I write it."),
+            ("h2", "What it means if you are paying for software"),
+            ("p", "Ask whoever is building for you how they use these tools. "
+                  "\"We don't\" is a slightly worrying answer in 2026. So is "
+                  "\"the AI writes it and we ship it\". The answer you want "
+                  "describes a line: what the machine does, what a person does, "
+                  "and who reads the result before it reaches you."),
+        ],
+    },
+    {
+        "slug": "start-with-postgres",
+        "title": "Start with Postgres. Almost always.",
+        "date": "2026-07-22",
+        "date_label": "22 July 2026",
+        "read": "6 min read",
+        "tag": "Engineering",
+        "summary": "Database choice is the decision most likely to be made for "
+                   "the wrong reasons, and the most expensive to revisit. Here is "
+                   "the short version.",
+        "body": [
+            ("p", "Choosing the database is one of the earliest decisions in a "
+                  "project and among the hardest to reverse. It also attracts more "
+                  "fashion-driven argument than almost anything else in the field."),
+            ("p", "My default is Postgres, and the bar for departing from it is "
+                  "high. Here is the reasoning, in a form you can push back on."),
+            ("h2", "Your data is relational. It just is."),
+            ("p", "Customers have orders. Orders have items. Items reference "
+                  "products. Students belong to batches, batches have sessions, "
+                  "sessions have attendance. Nearly every business application is "
+                  "a graph of related things, and a relational database is what "
+                  "that shape was designed for."),
+            ("p", "The classic failure is picking a document store because early "
+                  "development feels faster, then spending the next year "
+                  "reimplementing joins in application code — slower, buggier, and "
+                  "without transactions."),
+            ("h2", "Constraints are a feature, not friction"),
+            ("p", "A foreign key that refuses to let an order exist without a "
+                  "customer prevents a class of bug permanently. A unique "
+                  "constraint on an invoice number means duplicate numbers cannot "
+                  "happen, no matter what the application code does under load. "
+                  "Rules enforced by the database hold even when your code is "
+                  "wrong — and your code will sometimes be wrong."),
+            ("h2", "One database instead of four"),
+            ("p", "Modern Postgres covers a startling amount of ground: JSON "
+                  "columns when data genuinely is unstructured, full-text search, "
+                  "vector similarity through pgvector, geographic queries through "
+                  "PostGIS, and a queue via SKIP LOCKED that is enough for most "
+                  "workloads."),
+            ("p", "Each of those has a specialist that beats it. The specialist "
+                  "also brings another thing to deploy, monitor, back up, secure "
+                  "and keep in sync. For a small team, one very good database "
+                  "usually beats four excellent ones."),
+            ("quote", "Every additional datastore is a sync problem you have "
+                      "agreed to own forever."),
+            ("h2", "When I would not use it"),
+            ("ul", [
+                "<strong>Genuinely enormous append-only volumes</strong> — "
+                "telemetry, sensor readings, clickstreams at real scale. A "
+                "time-series or columnar store is the right tool.",
+                "<strong>A cache.</strong> Redis exists and is excellent. Use it as "
+                "a cache, not as your source of truth.",
+                "<strong>Files.</strong> Images, videos and PDFs belong in object "
+                "storage with the path in the database, never the file itself.",
+                "<strong>Your platform has already decided.</strong> If you are "
+                "deep in a stack with its own managed database, fighting it is "
+                "rarely worth the win.",
+            ]),
+            ("h2", "The honest summary"),
+            ("p", "Almost no small or medium business application outgrows "
+                  "Postgres. Plenty outgrow the team's ability to operate five "
+                  "different datastores. Start boring; the exciting choice is "
+                  "still available later, and you will make it with real "
+                  "information."),
+        ],
+    },
+    {
+        "slug": "server-rendered-or-single-page",
+        "title": "Server-rendered or single-page? A plain answer",
+        "date": "2026-07-08",
+        "date_label": "8 July 2026",
+        "read": "6 min read",
+        "tag": "Engineering",
+        "caveat": True,
+        "summary": "The argument that has run for a decade, reduced to the two "
+                   "questions that actually decide it for your project.",
+        "body": [
+            ("p", "Every few months the industry re-litigates this. The framework "
+                  "names change; the underlying tradeoff has not moved in ten "
+                  "years."),
+            ("h2", "The two approaches, briefly"),
+            ("p", "<strong>Server-rendered:</strong> the server sends finished "
+                  "HTML. The page appears fast and search engines can read it. "
+                  "Interactions typically involve a round trip."),
+            ("p", "<strong>Single-page:</strong> the browser downloads an "
+                  "application which then draws the pages. Slower to first appear, "
+                  "then very responsive, and it can hold complex state without "
+                  "asking the server again."),
+            ("p", "Everything else — the frameworks, the hybrid rendering modes, "
+                  "the streaming and the islands — is machinery for getting more "
+                  "of both, and it works. But the two questions below still decide "
+                  "which side you should start from."),
+            ("h2", "Question one: does a stranger need to see it?"),
+            ("p", "Anything a search engine or a first-time visitor must reach — "
+                  "marketing pages, property listings, articles, a product catalogue "
+                  "— should be server-rendered. Not because search engines cannot "
+                  "run JavaScript, but because speed on a phone on mobile data "
+                  "decides whether the visitor is still there, and shipping an "
+                  "application to someone who wanted to read a paragraph is a poor "
+                  "trade."),
+            ("h2", "Question two: how long does someone stay?"),
+            ("p", "A dispatch board someone watches for six hours has entirely "
+                  "different economics. One heavier initial load buys a day of "
+                  "instant interaction. That is a good deal, and a bad one for a "
+                  "visitor who arrived from Instagram and will leave in forty "
+                  "seconds."),
+            ("h2", "In practice, most projects are both"),
+            ("p", "The listings portal in our case studies is server-rendered on "
+                  "the public side and a single-page app behind the login. That is "
+                  "not a compromise, it is the correct answer: the two halves have "
+                  "different users with different needs."),
+            ("quote", "Pick per surface, not per project. A marketing page and an "
+                      "operations console have nothing in common but a domain name."),
+            ("h2", "What I would not do"),
+            ("ul", [
+                "Ship a single-page app for a five-page brochure site. It happens "
+                "constantly and it is always slower than the thing it replaced.",
+                "Server-render a heavily interactive dashboard out of principle, "
+                "then fight the framework for months.",
+                "Choose based on what a conference talk said. The talk does not "
+                "know who your visitors are or what network they are on.",
+            ]),
+            ("p", "Ask instead: who arrives here, on what connection, and how long "
+                  "do they stay? The answer picks the approach without any "
+                  "ideology being involved."),
+        ],
+    },
+    {
+        "slug": "passkeys-and-when-to-bother",
+        "title": "Passkeys, and when to bother",
+        "date": "2026-06-24",
+        "date_label": "24 June 2026",
+        "read": "5 min read",
+        "tag": "Security",
+        "caveat": True,
+        "summary": "They are genuinely better than passwords and genuinely not a "
+                   "drop-in replacement. Where they fit, and the recovery problem "
+                   "nobody mentions.",
+        "body": [
+            ("p", "Passkeys replace the password with a key pair held by the "
+                  "device. The private half never leaves it, so there is nothing "
+                  "to phish, nothing to reuse across sites, and nothing useful for "
+                  "an attacker to steal from your database."),
+            ("p", "That is a real improvement over passwords, which are the cause "
+                  "of most account compromises. It still does not make them "
+                  "automatically right for your product."),
+            ("h2", "What actually improves"),
+            ("ul", [
+                "Phishing largely stops working, because the credential is bound "
+                "to your domain and simply will not offer itself to a lookalike.",
+                "A database breach no longer leaks anything an attacker can log "
+                "in with.",
+                "Sign-in is a fingerprint or a face rather than a password plus an "
+                "SMS code — faster, and people stop reusing passwords they were "
+                "reusing anyway.",
+            ]),
+            ("h2", "The problem nobody puts on the slide"),
+            ("p", "Account recovery. A password can be reset by email. A passkey "
+                  "lives on a device, and devices get lost, broken, sold and "
+                  "replaced."),
+            ("p", "The major platforms sync passkeys through their own accounts, "
+                  "which covers most people most of the time. It does not cover "
+                  "the user who moves between ecosystems, the one who lost the "
+                  "only phone they own, or the shared machine at a shop counter."),
+            ("p", "So you build a recovery path — and a recovery path is, by "
+                  "definition, another way in. Build it carelessly and you have "
+                  "reintroduced the weakness you removed. This is the actual work "
+                  "in a passkey project, and it is where the time goes."),
+            ("quote", "Any authentication system is exactly as strong as its "
+                      "account-recovery flow. Passkeys do not change that."),
+            ("h2", "What I would do today"),
+            ("ol", [
+                "Offer passkeys as an additional way to sign in, not the only one.",
+                "Keep one conventional fallback — email link or password — until "
+                "your own numbers show most users have enrolled.",
+                "Encourage enrolling more than one device.",
+                "Design the recovery flow deliberately, and make it as hard to "
+                "abuse as the front door.",
+                "Watch how many people actually use it. That number decides "
+                "whether step two ever ends.",
+            ]),
+            ("h2", "Is it worth it for a small product?"),
+            ("p", "If you hold anything users would be upset to lose — money, "
+                  "business data, personal records — yes, as an option. If you are "
+                  "building a booking page for a salon, an email link is simpler "
+                  "and perfectly adequate. Match the effort to what is behind the "
+                  "door."),
+        ],
+    },
+    {
+        "slug": "build-for-the-metro",
+        "title": "Build for the metro: offline is a product decision",
+        "date": "2026-06-10",
+        "date_label": "10 June 2026",
+        "read": "6 min read",
+        "tag": "Mobile",
+        "summary": "Most apps are built on office wifi and used on a train. "
+                   "Treating the network as optional is a decision about who gets "
+                   "to use your product.",
+        "body": [
+            ("p", "Software is written in places with excellent internet and used "
+                  "in basements, lifts, warehouses, moving trains and buildings "
+                  "with thick walls. An app that assumes a connection is an app "
+                  "that stops working exactly when someone needed it."),
+            ("h2", "The failure mode is worse than it looks"),
+            ("p", "A dead connection is not the hard case. The hard case is a "
+                  "connection that technically exists and delivers nothing: the "
+                  "request neither succeeds nor fails, the spinner turns, and the "
+                  "person watches it. Then they tap the button again."),
+            ("p", "Any app that will be used away from a desk needs an answer for "
+                  "this, and the answer has to be designed rather than discovered "
+                  "in production."),
+            ("h2", "Three levels, increasing in cost"),
+            ("ul", [
+                "<strong>Fail honestly.</strong> Detect it, say so, keep what the "
+                "user typed, offer a retry. Cheap, and enormously better than a "
+                "spinner. Every app should do at least this.",
+                "<strong>Read offline.</strong> Cache what was already fetched so "
+                "the app opens and shows something. Moderate effort, and covers "
+                "most consumer cases.",
+                "<strong>Work offline.</strong> Actions are recorded locally and "
+                "sync later. This is a real engineering project, and it is what "
+                "field work actually requires.",
+            ]),
+            ("h2", "The expensive part is not storage"),
+            ("p", "Keeping data on the device is straightforward. The cost is in "
+                  "reconciliation: two people edited the same record while "
+                  "disconnected, and one of them has to lose. Or a job was marked "
+                  "complete twice because the first attempt did sync, silently, "
+                  "before the phone gave up."),
+            ("p", "Which is why the design work comes first. Give every action an "
+                  "identifier generated on the device so a replay cannot duplicate "
+                  "it. Decide per data type who wins a conflict — last write, "
+                  "server always, or ask the user. Show sync state honestly, "
+                  "because a technician needs to know whether the office has seen "
+                  "their work."),
+            ("quote", "Offline support is not a feature you add. It is an "
+                      "assumption you either make on day one or retrofit at three "
+                      "times the price."),
+            ("h2", "Deciding, in one question"),
+            ("p", "Where is this used? If the honest answer includes a basement, a "
+                  "van, a lift, a factory floor or a train, offline is not a "
+                  "nice-to-have and cutting it will produce an app your users "
+                  "abandon. If it is used at a desk, fail honestly and spend the "
+                  "money elsewhere."),
+            ("p", "The delivery and field service builds in our case studies both "
+                  "assume offline from the first week, and both say plainly that "
+                  "if the budget forces a choice, cut features instead."),
+        ],
+    },
+    {
         "slug": "what-an-mvp-actually-is",
         "title": "What an MVP actually is, and what it isn't",
         "date": "2026-08-12",
@@ -1040,7 +1430,7 @@ ARTICLES = [
         "date": "2026-08-26",
         "date_label": "26 August 2026",
         "read": "7 min read",
-        "tag": "Human + AI",
+        "tag": "AI",
         "summary": "AI writes a lot of the typing in this studio and none of the "
                    "decisions. Here is exactly where the line sits, and why it "
                    "sits there.",
@@ -1220,3 +1610,13 @@ ARTICLES = [
         ],
     },
 ]
+
+# Newest first, everywhere they are listed. Sorting here rather than at each
+# call site means the index, the nav panel and the home page cannot disagree
+# about the order.
+ARTICLES.sort(key=lambda a: a["date"], reverse=True)
+
+ARTICLE_TAGS = []
+for _a in ARTICLES:
+    if _a["tag"] not in ARTICLE_TAGS:
+        ARTICLE_TAGS.append(_a["tag"])
