@@ -171,21 +171,30 @@
 </div>
 
 <main id="main">
-<section class="section page-hero">
-  <div class="container">
+<section class="phero">
+  <div class="phero__bg" aria-hidden="true">
+    <span class="grid-fade"></span>
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+  </div>
+  <div class="container phero__inner">
     <nav class="crumb" aria-label="Breadcrumb">
       <a href="../index.html">Home</a>
       <span aria-hidden="true">/</span>
       <span aria-current="page">Case Studies</span>
     </nav>
-    <div class="sec-head">
-      <span class="eyebrow"><i class="eyebrow__dot"></i>WHAT WE BUILD</span>
-      <h1 class="sec-title">Case studies</h1>
-      <p class="sec-sub">Six builds, taken apart. What the business problem is, what
-      version one contains, what gets cut, how it's put together and how long it runs.</p>
-    </div>
 
-    <p class="note note--flag"><strong>Straight up: these are example builds.</strong>
+    <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>WHAT WE BUILD</p>
+
+    <h1 class="phero__title reveal" data-reveal style="--d:.05s">Case studies</h1>
+    <p class="phero__lead reveal" data-reveal style="--d:.1s">Six builds, taken apart. What the business problem is, what version one contains, what gets cut, how it's put together and how long it runs.</p>
+
+
+  </div>
+</section>
+<section class="section section--alt">
+  <div class="container">
+    <p class="note note--flag reveal" data-reveal><strong>Straight up: these are example builds.</strong>
     HumansOfCoding is new, so none of these are past clients and nothing here is a
     results claim. They're the products the studio is set up to ship, written out in
     the same detail you'd get on a real project. Yours would be the first on this wall.</p>
@@ -246,6 +255,31 @@
         <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
     </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>HOW IT WORKS</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">Every one of these starts the same way.</h2>
+    </div>
+
+    <ol class="timeline">
+      <span class="tl__line" aria-hidden="true"><i></i></span>
+      <li class="tl reveal" data-reveal><span class="tl__num">01</span>
+        <div class="tl__body"><h3>Tell us your idea</h3>
+        <p>Book a free call and tell us what you want to build.</p></div></li>
+      <li class="tl reveal" data-reveal style="--d:.08s"><span class="tl__num">02</span>
+        <div class="tl__body"><h3>Plan</h3>
+        <p>We define the features, scope and best technical approach.</p></div></li>
+      <li class="tl reveal" data-reveal style="--d:.16s"><span class="tl__num">03</span>
+        <div class="tl__body"><h3>Build</h3>
+        <p>We design and develop your product.</p></div></li>
+      <li class="tl reveal" data-reveal style="--d:.24s"><span class="tl__num">04</span>
+        <div class="tl__body"><h3>Launch</h3>
+        <p>Get it in front of real users and start growing.</p></div></li>
+    </ol>
   </div>
 </section>
 

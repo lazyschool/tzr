@@ -175,8 +175,13 @@
 </div>
 
 <main id="main">
-<article class="doc">
-  <div class="container doc__head">
+<section class="phero">
+  <div class="phero__bg" aria-hidden="true">
+    <span class="grid-fade"></span>
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+  </div>
+  <div class="container phero__inner">
   <nav class="crumb" aria-label="Breadcrumb">
     <a href="../index.html">Home</a>
     <span aria-hidden="true">/</span>
@@ -184,18 +189,24 @@
     <span aria-hidden="true">/</span>
     <span aria-current="page">What an MVP actually is, and what it isn't</span>
   </nav>
-    <span class="proj__cat">Building</span>
-    <h1 class="doc__title">What an MVP actually is, and what it isn't</h1>
-    <p class="doc__lead">Most people asking for an MVP describe a full product with a smaller budget. That is not the same thing, and the difference decides whether the money teaches you anything.</p>
-    <p class="doc__meta">
+
+    <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>ARTICLE</p>
+    <span class="chips reveal" data-reveal><span class="proj__cat">Building</span></span>
+
+    <h1 class="phero__title reveal" data-reveal style="--d:.05s">What an MVP actually is, and what it isn't</h1>
+    <p class="phero__lead reveal" data-reveal style="--d:.1s">Most people asking for an MVP describe a full product with a smaller budget. That is not the same thing, and the difference decides whether the money teaches you anything.</p>
+    <p class="phero__meta reveal" data-reveal style="--d:.14s">
       <span>By Adil</span>
       <span aria-hidden="true">·</span>
       <time datetime="2026-08-12">12 August 2026</time>
       <span aria-hidden="true">·</span>
       <span>6 min read</span>
     </p>
-  </div>
 
+
+  </div>
+</section>
+<section class="section section--read">
   <div class="container prose">
     <p>Almost every first conversation I have includes the words "let's start with an MVP". Then the feature list arrives and it is a complete product with the polish removed. Those are different things, and confusing them is the single most expensive mistake I see.</p>
     <h2>An MVP is an experiment, not a discount</h2>
@@ -219,31 +230,40 @@
     <p>The booking system in our examples runs about four weeks. It has a calendar, a public booking link, reminders and optional deposits. It does not have inventory, payroll, a loyalty scheme or a customer app. Not because those are bad ideas — because after four weeks the owner knows whether customers will book online at all, and every one of those features would be designed better with that answer in hand.</p>
     <p>If it works, you build the next thing knowing something. If it does not, you found out for the price of a month rather than the price of a year.</p>
   </div>
+</section>
 
-  <div class="container related">
-    <h2 class="related__title">More articles</h2>
-    <div class="related__grid">
-      <a class="card post-card" href="what-twenty-thousand-buys.html">
+<section class="section section--alt">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>KEEP READING</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">More articles.</h2>
+    </div>
+
+    <div class="cards post-grid">
+      <a class="card post-card reveal" data-reveal style="--d:.4s" href="what-twenty-thousand-buys.html">
         <span class="proj__cat">Pricing</span>
         <h3>What ₹20,000 buys you — and what it doesn't</h3>
         <p>A starting price is only useful if you know what moves it. Here is what sits inside that number, what sits outside it, and the running costs nobody mentions until the invoice lands.</p>
+        <p class="post-card__meta"><time datetime="2026-08-19">19 August 2026</time> · 5 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card" href="how-i-use-ai-without-shipping-garbage.html">
+      <a class="card post-card reveal" data-reveal style="--d:.10s" href="how-i-use-ai-without-shipping-garbage.html">
         <span class="proj__cat">Human + AI</span>
         <h3>How I use AI to build faster without shipping garbage</h3>
         <p>AI writes a lot of the typing in this studio and none of the decisions. Here is exactly where the line sits, and why it sits there.</p>
+        <p class="post-card__meta"><time datetime="2026-08-26">26 August 2026</time> · 7 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card" href="app-or-website-first.html">
+      <a class="card post-card reveal" data-reveal style="--d:.16s" href="app-or-website-first.html">
         <span class="proj__cat">Building</span>
         <h3>Should you build an app or a website first?</h3>
         <p>Almost everyone asks for an app. For most businesses, for the first version, a website is the better answer — and here is the specific test for when it isn't.</p>
+        <p class="post-card__meta"><time datetime="2026-09-02">2 September 2026</time> · 5 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
     </div>
   </div>
-</article>
+</section>
 
 <section class="cta">
   <div class="container cta__inner">

@@ -174,8 +174,13 @@
 </div>
 
 <main id="main">
-<article class="doc">
-  <div class="container doc__head">
+<section class="phero">
+  <div class="phero__bg" aria-hidden="true">
+    <span class="grid-fade"></span>
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+  </div>
+  <div class="container phero__inner">
   <nav class="crumb" aria-label="Breadcrumb">
     <a href="../index.html">Home</a>
     <span aria-hidden="true">/</span>
@@ -183,100 +188,249 @@
     <span aria-hidden="true">/</span>
     <span aria-current="page">Real Estate Listing Portal</span>
   </nav>
-    <span class="chips"><span class="proj__flag">Example build</span><span class="proj__cat">Website + CRM</span></span>
-    <h1 class="doc__title">Real Estate Listing Portal</h1>
-    <p class="doc__lead">Property search, enquiry capture and a lead pipeline a sales team will actually use.</p>
-    <div class="doc__thumb" aria-hidden="true">
-      <svg viewBox="0 0 200 150" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="34" y="30" width="132" height="90" rx="8"/><path d="M34 52h132"/><circle cx="70" cy="86" r="18"/><path d="M70 68v18l12 8"/><path d="M104 74h50M104 88h50M104 102h30"/></svg>
+
+    <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>CASE STUDY</p>
+    <span class="chips reveal" data-reveal><span class="proj__flag">Example build</span><span class="proj__cat">Website + CRM</span></span>
+
+    <h1 class="phero__title reveal" data-reveal style="--d:.05s">Real Estate Listing Portal</h1>
+    <p class="phero__lead reveal" data-reveal style="--d:.1s">Property search, enquiry capture and a lead pipeline a sales team will actually use.</p>
+
+    <div class="phero__actions reveal" data-reveal style="--d:.16s">
+      <a class="btn btn--primary btn--lg" data-link="call" href="mailto:adil@humansofcoding.com?subject=Free%20call%20request%20-%20HumansOfCoding">Build something like this</a>
+      <a class="btn btn--outline btn--lg" href="../case-studies/">All case studies</a>
+    </div>
+
+  </div>
+</section>
+<section class="section section--alt section--glance">
+  <div class="container">
+    <dl class="glance">
+      <div class="glance__item reveal" data-reveal style="--d:.4s">
+        <dt>Type</dt>
+        <dd>Public website + CRM</dd>
+      </div>
+      <div class="glance__item reveal" data-reveal style="--d:.10s">
+        <dt>Build time</dt>
+        <dd>About 7 weeks</dd>
+      </div>
+      <div class="glance__item reveal" data-reveal style="--d:.16s">
+        <dt>Platforms</dt>
+        <dd>Browser, agents on mobile</dd>
+      </div>
+      <div class="glance__item reveal" data-reveal style="--d:.22s">
+        <dt>Starts at</dt>
+        <dd>₹20,000*</dd>
+      </div>
+    </dl>
+
+    <p class="note note--flag reveal" data-reveal><strong>This is an example build.</strong>
+    HumansOfCoding is a new studio with no client work to show yet. This page describes
+    how the project would be scoped and built — the same thinking you would get on a real
+    one. Nothing here is a past client, and no number on this page is a result.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>THE SITUATION</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">What's actually broken.</h2>
+    </div>
+
+    <div class="split">
+      <div class="split__text">
+        <p class="reveal" data-reveal style="--d:.4s">A property business advertises on the big portals, pays for every lead, and loses some of them because enquiries arrive as emails that someone has to notice. There is no record of which agent called whom, or when.</p>
+        <p class="reveal" data-reveal style="--d:.10s">Two things are being built here, and only one of them is the website. The site brings enquiries in; the CRM decides whether they turn into anything. Most projects like this over-invest in the first and under-invest in the second.</p>
+      </div>
+
+      <ul class="split__list">
+        <li class="prob reveal" data-reveal style="--d:.6s"><span class="prob__x" aria-hidden="true">✕</span><h3>Paid leads sit unread in a shared mailbox</h3></li>
+        <li class="prob reveal" data-reveal style="--d:.12s"><span class="prob__x" aria-hidden="true">✕</span><h3>No record of who called whom, or when</h3></li>
+        <li class="prob reveal" data-reveal style="--d:.18s"><span class="prob__x" aria-hidden="true">✕</span><h3>Listings live on portals you do not control</h3></li>
+        <li class="prob reveal" data-reveal style="--d:.24s"><span class="prob__x" aria-hidden="true">✕</span><h3>Follow-ups depend on an agent remembering</h3></li>
+      </ul>
     </div>
   </div>
+</section>
 
-  <div class="container prose">
-    <p class="note note--flag"><strong>This is an example build.</strong> HumansOfCoding
-    is a new studio and has no client work to show yet. This page describes how this
-    project would be scoped and built — the thinking you would get on a real one.
-    Nothing here is a past client, and no numbers on this page are results.</p>
+<section class="section section--alt">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>VERSION ONE</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd build first.</h2>
+      <p class="sec-sub reveal" data-reveal style="--d:.1s">Every item here earns its place by being something a real user would miss on day one.</p>
+    </div>
 
-    <h2>The situation</h2>
-    <p>A property business advertises on the big portals, pays for every lead, and loses some of them because enquiries arrive as emails that someone has to notice. There is no record of which agent called whom, or when.</p>
-    <p>Two things are being built here, and only one of them is the website. The site brings enquiries in; the CRM decides whether they turn into anything. Most projects like this over-invest in the first and under-invest in the second.</p>
-
-    <h2>What we'd build first</h2>
-    <dl class="speclist">
-      <dt>Public listings</dt>
-      <dd>Search and filter by locality, budget, configuration and status. Fast, and indexable by Google — the listings are the marketing.</dd>
-      <dt>Property pages</dt>
-      <dd>Photos, floor plans, location, and an enquiry form that is short enough that people finish it.</dd>
-      <dt>Lead capture</dt>
-      <dd>Every enquiry, from the site or a portal-forwarded email, lands in one inbox and is assigned to an agent within a minute.</dd>
-      <dt>Pipeline</dt>
-      <dd>New → contacted → visit booked → negotiating → closed or lost. Each move requires a note. This is the discipline the tool is buying.</dd>
-      <dt>Follow-up reminders</dt>
-      <dd>A lead with no activity for three days surfaces at the top of the agent's list. Most lost leads are lost to silence, not to price.</dd>
-    </dl>
-
-    <h2>What we'd leave out of version one</h2>
-    <p>Not because these are bad ideas — because each one is better designed once the first version has told you something.</p>
-    <ul>
-      <li>Virtual tours and 3D walkthroughs — better bought from a specialist vendor and embedded.</li>
-      <li>Document management and agreement generation.</li>
-      <li>A public agent-facing mobile app. The CRM is responsive; agents work from their phone browsers in v1.</li>
-    </ul>
-
-    <h2>How it's put together</h2>
-    <dl class="speclist speclist--tight">
-      <dt>Public site</dt>
-      <dd>Server-rendered with Next.js, because search engines have to be able to read the listings</dd>
-      <dt>CRM</dt>
-      <dd>React, behind a login</dd>
-      <dt>Backend</dt>
-      <dd>Node with Postgres</dd>
-      <dt>Images</dt>
-      <dd>Resized on upload and served from object storage — property photos are the heaviest thing on the page</dd>
-      <dt>Email intake</dt>
-      <dd>A parser that turns portal enquiry emails into leads</dd>
-    </dl>
-
-    <h2>Roughly how it runs</h2>
-    <ol class="steps">
-      <li><strong>Week 1</strong> Listing structure and the pipeline stages, agreed with whoever runs sales rather than whoever runs marketing.</li>
-      <li><strong>Weeks 2–4</strong> Public site, search and property pages.</li>
-      <li><strong>Weeks 5–6</strong> Lead capture, assignment and the pipeline.</li>
-      <li><strong>Week 7</strong> Reminders, reporting and the sales team's first week on it.</li>
-    </ol>
-
-    <p class="note"><strong>Worth knowing.</strong> A CRM only works if the team enters things into it. Half of this project's success is deciding how few fields an agent has to fill in after a call. Fewer is almost always better.</p>
-
-    <p class="note note--price">MVPs start at <strong>₹20,000*</strong>. Final pricing
-    depends on features and project scope. Third-party costs — cloud hosting, domains,
-    external libraries, APIs, app-store fees and any other paid service — are billed
-    separately and are not included.</p>
+    <div class="cards cards--3">
+      <article class="card card--service reveal" data-reveal style="--d:.4s">
+        <span class="card__num" aria-hidden="true">01</span>
+        <h3>Public listings</h3>
+        <p>Search and filter by locality, budget, configuration and status. Fast, and indexable by Google — the listings are the marketing.</p>
+        <span class="card__corner" aria-hidden="true"></span>
+      </article>
+      <article class="card card--service reveal" data-reveal style="--d:.10s">
+        <span class="card__num" aria-hidden="true">02</span>
+        <h3>Property pages</h3>
+        <p>Photos, floor plans, location, and an enquiry form that is short enough that people finish it.</p>
+        <span class="card__corner" aria-hidden="true"></span>
+      </article>
+      <article class="card card--service reveal" data-reveal style="--d:.16s">
+        <span class="card__num" aria-hidden="true">03</span>
+        <h3>Lead capture</h3>
+        <p>Every enquiry, from the site or a portal-forwarded email, lands in one inbox and is assigned to an agent within a minute.</p>
+        <span class="card__corner" aria-hidden="true"></span>
+      </article>
+      <article class="card card--service reveal" data-reveal style="--d:.22s">
+        <span class="card__num" aria-hidden="true">04</span>
+        <h3>Pipeline</h3>
+        <p>New → contacted → visit booked → negotiating → closed or lost. Each move requires a note. This is the discipline the tool is buying.</p>
+        <span class="card__corner" aria-hidden="true"></span>
+      </article>
+      <article class="card card--service reveal" data-reveal style="--d:.28s">
+        <span class="card__num" aria-hidden="true">05</span>
+        <h3>Follow-up reminders</h3>
+        <p>A lead with no activity for three days surfaces at the top of the agent's list. Most lost leads are lost to silence, not to price.</p>
+        <span class="card__corner" aria-hidden="true"></span>
+      </article>
+    </div>
   </div>
+</section>
 
-  <div class="container related">
-    <h2 class="related__title">Other example builds</h2>
-    <div class="related__grid">
-      <a class="card post-card" href="delivery-tracking-app.html">
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>DELIBERATELY NOT IN V1</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd leave out.</h2>
+      <p class="sec-sub reveal" data-reveal style="--d:.1s">Not because these are bad ideas. Because each one is designed better once the first version has told you something.</p>
+    </div>
+
+    <ul class="cutlist">
+      <li class="reveal" data-reveal style="--d:.4s"><span class="cutlist__x" aria-hidden="true">✕</span><span>Virtual tours and 3D walkthroughs — better bought from a specialist vendor and embedded.</span></li>
+      <li class="reveal" data-reveal style="--d:.10s"><span class="cutlist__x" aria-hidden="true">✕</span><span>Document management and agreement generation.</span></li>
+      <li class="reveal" data-reveal style="--d:.16s"><span class="cutlist__x" aria-hidden="true">✕</span><span>A public agent-facing mobile app. The CRM is responsive; agents work from their phone browsers in v1.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>UNDER THE HOOD</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">How it's put together.</h2>
+    </div>
+
+    <dl class="stack">
+      <div class="stack__row reveal" data-reveal style="--d:.4s">
+        <dt>Public site</dt>
+        <dd>Server-rendered with Next.js, because search engines have to be able to read the listings</dd>
+      </div>
+      <div class="stack__row reveal" data-reveal style="--d:.9s">
+        <dt>CRM</dt>
+        <dd>React, behind a login</dd>
+      </div>
+      <div class="stack__row reveal" data-reveal style="--d:.14s">
+        <dt>Backend</dt>
+        <dd>Node with Postgres</dd>
+      </div>
+      <div class="stack__row reveal" data-reveal style="--d:.19s">
+        <dt>Images</dt>
+        <dd>Resized on upload and served from object storage — property photos are the heaviest thing on the page</dd>
+      </div>
+      <div class="stack__row reveal" data-reveal style="--d:.24s">
+        <dt>Email intake</dt>
+        <dd>A parser that turns portal enquiry emails into leads</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>HOW IT RUNS</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">Week by week.</h2>
+    </div>
+
+    <ol class="timeline">
+      <span class="tl__line" aria-hidden="true"><i></i></span>
+      <li class="tl reveal" data-reveal style="--d:.4s">
+        <span class="tl__num">01</span>
+        <div class="tl__body">
+          <h3>Week 1</h3>
+          <p>Listing structure and the pipeline stages, agreed with whoever runs sales rather than whoever runs marketing.</p>
+        </div>
+      </li>
+      <li class="tl reveal" data-reveal style="--d:.10s">
+        <span class="tl__num">02</span>
+        <div class="tl__body">
+          <h3>Weeks 2–4</h3>
+          <p>Public site, search and property pages.</p>
+        </div>
+      </li>
+      <li class="tl reveal" data-reveal style="--d:.16s">
+        <span class="tl__num">03</span>
+        <div class="tl__body">
+          <h3>Weeks 5–6</h3>
+          <p>Lead capture, assignment and the pipeline.</p>
+        </div>
+      </li>
+      <li class="tl reveal" data-reveal style="--d:.22s">
+        <span class="tl__num">04</span>
+        <div class="tl__body">
+          <h3>Week 7</h3>
+          <p>Reminders, reporting and the sales team's first week on it.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>BEFORE YOU START</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">Worth knowing.</h2>
+    </div>
+
+    <div class="knowgrid">
+      <p class="note reveal" data-reveal>A CRM only works if the team enters things into it. Half of this project's success is deciding how few fields an agent has to fill in after a call. Fewer is almost always better.</p>
+      <p class="note note--price reveal" data-reveal style="--d:.08s">MVPs start at
+      <strong>₹20,000*</strong>. Final pricing depends on features and project scope.
+      Third-party costs — cloud hosting, domains, external libraries, APIs, app-store
+      fees and any other paid service — are billed separately and are not included.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>KEEP LOOKING</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">Other example builds.</h2>
+    </div>
+
+    <div class="cards post-grid">
+      <a class="card post-card reveal" data-reveal style="--d:.4s" href="delivery-tracking-app.html">
         <span class="proj__cat">Mobile App</span>
         <h3>Delivery Tracking App</h3>
         <p>Driver app with live location, proof-of-delivery photos and an owner-side status board.</p>
-        <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
+        <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card" href="booking-and-scheduling-mvp.html">
+      <a class="card post-card reveal" data-reveal style="--d:.10s" href="booking-and-scheduling-mvp.html">
         <span class="proj__cat">MVP</span>
         <h3>Booking &amp; Scheduling MVP</h3>
         <p>Ships in weeks, not months: online booking, reminders and payments for a local service business.</p>
-        <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
+        <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card" href="restaurant-ordering-app.html">
+      <a class="card post-card reveal" data-reveal style="--d:.16s" href="restaurant-ordering-app.html">
         <span class="proj__cat">Mobile App</span>
         <h3>Restaurant Ordering App</h3>
         <p>Menu, cart, live order tracking and a simple kitchen dashboard for a multi-outlet restaurant.</p>
-        <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
+        <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
     </div>
   </div>
-</article>
+</section>
 
 <section class="cta">
   <div class="container cta__inner">

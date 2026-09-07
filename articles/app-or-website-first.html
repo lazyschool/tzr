@@ -175,8 +175,13 @@
 </div>
 
 <main id="main">
-<article class="doc">
-  <div class="container doc__head">
+<section class="phero">
+  <div class="phero__bg" aria-hidden="true">
+    <span class="grid-fade"></span>
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+  </div>
+  <div class="container phero__inner">
   <nav class="crumb" aria-label="Breadcrumb">
     <a href="../index.html">Home</a>
     <span aria-hidden="true">/</span>
@@ -184,18 +189,24 @@
     <span aria-hidden="true">/</span>
     <span aria-current="page">Should you build an app or a website first?</span>
   </nav>
-    <span class="proj__cat">Building</span>
-    <h1 class="doc__title">Should you build an app or a website first?</h1>
-    <p class="doc__lead">Almost everyone asks for an app. For most businesses, for the first version, a website is the better answer — and here is the specific test for when it isn't.</p>
-    <p class="doc__meta">
+
+    <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>ARTICLE</p>
+    <span class="chips reveal" data-reveal><span class="proj__cat">Building</span></span>
+
+    <h1 class="phero__title reveal" data-reveal style="--d:.05s">Should you build an app or a website first?</h1>
+    <p class="phero__lead reveal" data-reveal style="--d:.1s">Almost everyone asks for an app. For most businesses, for the first version, a website is the better answer — and here is the specific test for when it isn't.</p>
+    <p class="phero__meta reveal" data-reveal style="--d:.14s">
       <span>By Adil</span>
       <span aria-hidden="true">·</span>
       <time datetime="2026-09-02">2 September 2026</time>
       <span aria-hidden="true">·</span>
       <span>5 min read</span>
     </p>
-  </div>
 
+
+  </div>
+</section>
+<section class="section section--read">
   <div class="container prose">
     <p>"I want an app" is how roughly four out of five first conversations begin. Sometimes that is right. More often, for a first version, a website gets there faster and finds out more.</p>
     <h2>The case for a website first</h2>
@@ -225,31 +236,40 @@
     </ol>
     <p>That order is cheaper, faster, and produces a better app at the end of it than starting with the app would have.</p>
   </div>
+</section>
 
-  <div class="container related">
-    <h2 class="related__title">More articles</h2>
-    <div class="related__grid">
-      <a class="card post-card" href="questions-to-ask-before-hiring-a-developer.html">
+<section class="section section--alt">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>KEEP READING</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">More articles.</h2>
+    </div>
+
+    <div class="cards post-grid">
+      <a class="card post-card reveal" data-reveal style="--d:.4s" href="questions-to-ask-before-hiring-a-developer.html">
         <span class="proj__cat">Hiring</span>
         <h3>Seven questions to ask before hiring any developer</h3>
         <p>Including me. If someone cannot answer these clearly, that is the answer.</p>
+        <p class="post-card__meta"><time datetime="2026-09-05">5 September 2026</time> · 6 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card" href="what-an-mvp-actually-is.html">
+      <a class="card post-card reveal" data-reveal style="--d:.10s" href="what-an-mvp-actually-is.html">
         <span class="proj__cat">Building</span>
         <h3>What an MVP actually is, and what it isn't</h3>
         <p>Most people asking for an MVP describe a full product with a smaller budget. That is not the same thing, and the difference decides whether the money teaches you anything.</p>
+        <p class="post-card__meta"><time datetime="2026-08-12">12 August 2026</time> · 6 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card" href="what-twenty-thousand-buys.html">
+      <a class="card post-card reveal" data-reveal style="--d:.16s" href="what-twenty-thousand-buys.html">
         <span class="proj__cat">Pricing</span>
         <h3>What ₹20,000 buys you — and what it doesn't</h3>
         <p>A starting price is only useful if you know what moves it. Here is what sits inside that number, what sits outside it, and the running costs nobody mentions until the invoice lands.</p>
+        <p class="post-card__meta"><time datetime="2026-08-19">19 August 2026</time> · 5 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
     </div>
   </div>
-</article>
+</section>
 
 <section class="cta">
   <div class="container cta__inner">

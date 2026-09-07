@@ -174,8 +174,13 @@
 </div>
 
 <main id="main">
-<article class="doc">
-  <div class="container doc__head">
+<section class="phero">
+  <div class="phero__bg" aria-hidden="true">
+    <span class="grid-fade"></span>
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+  </div>
+  <div class="container phero__inner">
   <nav class="crumb" aria-label="Breadcrumb">
     <a href="../index.html">Home</a>
     <span aria-hidden="true">/</span>
@@ -183,100 +188,249 @@
     <span aria-hidden="true">/</span>
     <span aria-current="page">Business Automation Dashboard</span>
   </nav>
-    <span class="chips"><span class="proj__flag">Example build</span><span class="proj__cat">Web App</span></span>
-    <h1 class="doc__title">Business Automation Dashboard</h1>
-    <p class="doc__lead">Replaces daily spreadsheet work with automated reports, alerts and role-based access.</p>
-    <div class="doc__thumb" aria-hidden="true">
-      <svg viewBox="0 0 200 150" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="26" y="24" width="148" height="102" rx="8"/><path d="M26 44h148"/><path d="M40 60h40M40 72h56M40 84h32"/><rect x="112" y="60" width="48" height="34" rx="6"/><rect x="40" y="98" width="40" height="12" rx="6"/></svg>
+
+    <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>CASE STUDY</p>
+    <span class="chips reveal" data-reveal><span class="proj__flag">Example build</span><span class="proj__cat">Web App</span></span>
+
+    <h1 class="phero__title reveal" data-reveal style="--d:.05s">Business Automation Dashboard</h1>
+    <p class="phero__lead reveal" data-reveal style="--d:.1s">Replaces daily spreadsheet work with automated reports, alerts and role-based access.</p>
+
+    <div class="phero__actions reveal" data-reveal style="--d:.16s">
+      <a class="btn btn--primary btn--lg" data-link="call" href="mailto:adil@humansofcoding.com?subject=Free%20call%20request%20-%20HumansOfCoding">Build something like this</a>
+      <a class="btn btn--outline btn--lg" href="../case-studies/">All case studies</a>
+    </div>
+
+  </div>
+</section>
+<section class="section section--alt section--glance">
+  <div class="container">
+    <dl class="glance">
+      <div class="glance__item reveal" data-reveal style="--d:.4s">
+        <dt>Type</dt>
+        <dd>Scheduled jobs + dashboard</dd>
+      </div>
+      <div class="glance__item reveal" data-reveal style="--d:.10s">
+        <dt>Build time</dt>
+        <dd>About 6 weeks</dd>
+      </div>
+      <div class="glance__item reveal" data-reveal style="--d:.16s">
+        <dt>Platforms</dt>
+        <dd>Browser, alerts to email or chat</dd>
+      </div>
+      <div class="glance__item reveal" data-reveal style="--d:.22s">
+        <dt>Starts at</dt>
+        <dd>₹20,000*</dd>
+      </div>
+    </dl>
+
+    <p class="note note--flag reveal" data-reveal><strong>This is an example build.</strong>
+    HumansOfCoding is a new studio with no client work to show yet. This page describes
+    how the project would be scoped and built — the same thinking you would get on a real
+    one. Nothing here is a past client, and no number on this page is a result.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>THE SITUATION</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">What's actually broken.</h2>
+    </div>
+
+    <div class="split">
+      <div class="split__text">
+        <p class="reveal" data-reveal style="--d:.4s">Someone spends the first two hours of every working day exporting files, pasting them into a master spreadsheet, fixing what did not line up, and emailing the result to six people. That file has become load-bearing, and exactly one person understands it.</p>
+        <p class="reveal" data-reveal style="--d:.10s">This is the most common software problem in a growing business, and the most under-rated one to fix. It is not glamorous. It buys back roughly five hundred hours a year and removes a single point of failure.</p>
+      </div>
+
+      <ul class="split__list">
+        <li class="prob reveal" data-reveal style="--d:.6s"><span class="prob__x" aria-hidden="true">✕</span><h3>Two hours a day spent exporting and pasting</h3></li>
+        <li class="prob reveal" data-reveal style="--d:.12s"><span class="prob__x" aria-hidden="true">✕</span><h3>One person understands the master file</h3></li>
+        <li class="prob reveal" data-reveal style="--d:.18s"><span class="prob__x" aria-hidden="true">✕</span><h3>Six people read yesterday's numbers, not today's</h3></li>
+        <li class="prob reveal" data-reveal style="--d:.24s"><span class="prob__x" aria-hidden="true">✕</span><h3>Everyone sees everything, including margins</h3></li>
+      </ul>
     </div>
   </div>
+</section>
 
-  <div class="container prose">
-    <p class="note note--flag"><strong>This is an example build.</strong> HumansOfCoding
-    is a new studio and has no client work to show yet. This page describes how this
-    project would be scoped and built — the thinking you would get on a real one.
-    Nothing here is a past client, and no numbers on this page are results.</p>
+<section class="section section--alt">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>VERSION ONE</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd build first.</h2>
+      <p class="sec-sub reveal" data-reveal style="--d:.1s">Every item here earns its place by being something a real user would miss on day one.</p>
+    </div>
 
-    <h2>The situation</h2>
-    <p>Someone spends the first two hours of every working day exporting files, pasting them into a master spreadsheet, fixing what did not line up, and emailing the result to six people. That file has become load-bearing, and exactly one person understands it.</p>
-    <p>This is the most common software problem in a growing business, and the most under-rated one to fix. It is not glamorous. It buys back roughly five hundred hours a year and removes a single point of failure.</p>
-
-    <h2>What we'd build first</h2>
-    <dl class="speclist">
-      <dt>Pull instead of paste</dt>
-      <dd>Scheduled jobs that fetch from the source systems directly — an API, a database, an SFTP drop, or a mailbox that receives a daily CSV.</dd>
-      <dt>The rules, written down</dt>
-      <dd>Every fix that currently happens by hand becomes an explicit, tested transformation. The ones that cannot be pinned down get flagged for a human rather than silently guessed.</dd>
-      <dt>The dashboard</dt>
-      <dd>The numbers those six people actually read, live, instead of as yesterday's attachment.</dd>
-      <dt>Alerts</dt>
-      <dd>A message when a number crosses a threshold or when a source fails to arrive. Silence should mean everything is fine.</dd>
-      <dt>Role-based access</dt>
-      <dd>Finance sees margins, the floor sees volumes. Right now the spreadsheet shows everyone everything.</dd>
-    </dl>
-
-    <h2>What we'd leave out of version one</h2>
-    <p>Not because these are bad ideas — because each one is better designed once the first version has told you something.</p>
-    <ul>
-      <li>Predictive analytics and forecasting. Get the reporting trustworthy first; a forecast on top of shaky data is worse than no forecast.</li>
-      <li>Replacing the source systems themselves.</li>
-      <li>A mobile app. Alerts go to email or WhatsApp; the dashboard is responsive and that covers the phone case.</li>
-    </ul>
-
-    <h2>How it's put together</h2>
-    <dl class="speclist speclist--tight">
-      <dt>Scheduled jobs</dt>
-      <dd>Python, which is the right tool for pulling and reshaping messy data</dd>
-      <dt>Storage</dt>
-      <dd>Postgres, with the raw pulls kept alongside the cleaned output so any number can be traced back</dd>
-      <dt>Dashboard</dt>
-      <dd>React with a charting library</dd>
-      <dt>Alerts</dt>
-      <dd>Email plus a WhatsApp or Slack webhook</dd>
-      <dt>Hosting</dt>
-      <dd>One small cloud instance and a scheduler</dd>
-    </dl>
-
-    <h2>Roughly how it runs</h2>
-    <ol class="steps">
-      <li><strong>Week 1</strong> Sit with whoever owns the spreadsheet and write down every manual step. This week matters more than the rest.</li>
-      <li><strong>Weeks 2–3</strong> Data pulls and the transformation rules, checked against the last three months of the existing file.</li>
-      <li><strong>Weeks 4–5</strong> Dashboard, roles and alerts.</li>
-      <li><strong>Week 6</strong> Both systems run in parallel and the numbers are compared daily until they match.</li>
-    </ol>
-
-    <p class="note"><strong>Worth knowing.</strong> Running both the old spreadsheet and the new system side by side for a couple of weeks is not wasted time. It is the only way to prove the new numbers are right before anyone trusts them.</p>
-
-    <p class="note note--price">MVPs start at <strong>₹20,000*</strong>. Final pricing
-    depends on features and project scope. Third-party costs — cloud hosting, domains,
-    external libraries, APIs, app-store fees and any other paid service — are billed
-    separately and are not included.</p>
+    <div class="cards cards--3">
+      <article class="card card--service reveal" data-reveal style="--d:.4s">
+        <span class="card__num" aria-hidden="true">01</span>
+        <h3>Pull instead of paste</h3>
+        <p>Scheduled jobs that fetch from the source systems directly — an API, a database, an SFTP drop, or a mailbox that receives a daily CSV.</p>
+        <span class="card__corner" aria-hidden="true"></span>
+      </article>
+      <article class="card card--service reveal" data-reveal style="--d:.10s">
+        <span class="card__num" aria-hidden="true">02</span>
+        <h3>The rules, written down</h3>
+        <p>Every fix that currently happens by hand becomes an explicit, tested transformation. The ones that cannot be pinned down get flagged for a human rather than silently guessed.</p>
+        <span class="card__corner" aria-hidden="true"></span>
+      </article>
+      <article class="card card--service reveal" data-reveal style="--d:.16s">
+        <span class="card__num" aria-hidden="true">03</span>
+        <h3>The dashboard</h3>
+        <p>The numbers those six people actually read, live, instead of as yesterday's attachment.</p>
+        <span class="card__corner" aria-hidden="true"></span>
+      </article>
+      <article class="card card--service reveal" data-reveal style="--d:.22s">
+        <span class="card__num" aria-hidden="true">04</span>
+        <h3>Alerts</h3>
+        <p>A message when a number crosses a threshold or when a source fails to arrive. Silence should mean everything is fine.</p>
+        <span class="card__corner" aria-hidden="true"></span>
+      </article>
+      <article class="card card--service reveal" data-reveal style="--d:.28s">
+        <span class="card__num" aria-hidden="true">05</span>
+        <h3>Role-based access</h3>
+        <p>Finance sees margins, the floor sees volumes. Right now the spreadsheet shows everyone everything.</p>
+        <span class="card__corner" aria-hidden="true"></span>
+      </article>
+    </div>
   </div>
+</section>
 
-  <div class="container related">
-    <h2 class="related__title">Other example builds</h2>
-    <div class="related__grid">
-      <a class="card post-card" href="real-estate-listing-portal.html">
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>DELIBERATELY NOT IN V1</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd leave out.</h2>
+      <p class="sec-sub reveal" data-reveal style="--d:.1s">Not because these are bad ideas. Because each one is designed better once the first version has told you something.</p>
+    </div>
+
+    <ul class="cutlist">
+      <li class="reveal" data-reveal style="--d:.4s"><span class="cutlist__x" aria-hidden="true">✕</span><span>Predictive analytics and forecasting. Get the reporting trustworthy first; a forecast on top of shaky data is worse than no forecast.</span></li>
+      <li class="reveal" data-reveal style="--d:.10s"><span class="cutlist__x" aria-hidden="true">✕</span><span>Replacing the source systems themselves.</span></li>
+      <li class="reveal" data-reveal style="--d:.16s"><span class="cutlist__x" aria-hidden="true">✕</span><span>A mobile app. Alerts go to email or WhatsApp; the dashboard is responsive and that covers the phone case.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>UNDER THE HOOD</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">How it's put together.</h2>
+    </div>
+
+    <dl class="stack">
+      <div class="stack__row reveal" data-reveal style="--d:.4s">
+        <dt>Scheduled jobs</dt>
+        <dd>Python, which is the right tool for pulling and reshaping messy data</dd>
+      </div>
+      <div class="stack__row reveal" data-reveal style="--d:.9s">
+        <dt>Storage</dt>
+        <dd>Postgres, with the raw pulls kept alongside the cleaned output so any number can be traced back</dd>
+      </div>
+      <div class="stack__row reveal" data-reveal style="--d:.14s">
+        <dt>Dashboard</dt>
+        <dd>React with a charting library</dd>
+      </div>
+      <div class="stack__row reveal" data-reveal style="--d:.19s">
+        <dt>Alerts</dt>
+        <dd>Email plus a WhatsApp or Slack webhook</dd>
+      </div>
+      <div class="stack__row reveal" data-reveal style="--d:.24s">
+        <dt>Hosting</dt>
+        <dd>One small cloud instance and a scheduler</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>HOW IT RUNS</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">Week by week.</h2>
+    </div>
+
+    <ol class="timeline">
+      <span class="tl__line" aria-hidden="true"><i></i></span>
+      <li class="tl reveal" data-reveal style="--d:.4s">
+        <span class="tl__num">01</span>
+        <div class="tl__body">
+          <h3>Week 1</h3>
+          <p>Sit with whoever owns the spreadsheet and write down every manual step. This week matters more than the rest.</p>
+        </div>
+      </li>
+      <li class="tl reveal" data-reveal style="--d:.10s">
+        <span class="tl__num">02</span>
+        <div class="tl__body">
+          <h3>Weeks 2–3</h3>
+          <p>Data pulls and the transformation rules, checked against the last three months of the existing file.</p>
+        </div>
+      </li>
+      <li class="tl reveal" data-reveal style="--d:.16s">
+        <span class="tl__num">03</span>
+        <div class="tl__body">
+          <h3>Weeks 4–5</h3>
+          <p>Dashboard, roles and alerts.</p>
+        </div>
+      </li>
+      <li class="tl reveal" data-reveal style="--d:.22s">
+        <span class="tl__num">04</span>
+        <div class="tl__body">
+          <h3>Week 6</h3>
+          <p>Both systems run in parallel and the numbers are compared daily until they match.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>BEFORE YOU START</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">Worth knowing.</h2>
+    </div>
+
+    <div class="knowgrid">
+      <p class="note reveal" data-reveal>Running both the old spreadsheet and the new system side by side for a couple of weeks is not wasted time. It is the only way to prove the new numbers are right before anyone trusts them.</p>
+      <p class="note note--price reveal" data-reveal style="--d:.08s">MVPs start at
+      <strong>₹20,000*</strong>. Final pricing depends on features and project scope.
+      Third-party costs — cloud hosting, domains, external libraries, APIs, app-store
+      fees and any other paid service — are billed separately and are not included.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>KEEP LOOKING</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">Other example builds.</h2>
+    </div>
+
+    <div class="cards post-grid">
+      <a class="card post-card reveal" data-reveal style="--d:.4s" href="real-estate-listing-portal.html">
         <span class="proj__cat">Website + CRM</span>
         <h3>Real Estate Listing Portal</h3>
         <p>Property search, enquiry capture and a lead pipeline a sales team will actually use.</p>
-        <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
+        <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card" href="delivery-tracking-app.html">
+      <a class="card post-card reveal" data-reveal style="--d:.10s" href="delivery-tracking-app.html">
         <span class="proj__cat">Mobile App</span>
         <h3>Delivery Tracking App</h3>
         <p>Driver app with live location, proof-of-delivery photos and an owner-side status board.</p>
-        <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
+        <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card" href="booking-and-scheduling-mvp.html">
+      <a class="card post-card reveal" data-reveal style="--d:.16s" href="booking-and-scheduling-mvp.html">
         <span class="proj__cat">MVP</span>
         <h3>Booking &amp; Scheduling MVP</h3>
         <p>Ships in weeks, not months: online booking, reminders and payments for a local service business.</p>
-        <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
+        <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
     </div>
   </div>
-</article>
+</section>
 
 <section class="cta">
   <div class="container cta__inner">
