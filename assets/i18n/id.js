@@ -188,5 +188,12 @@ window.HOC_I18N["id"] = {
   "Ocean": "Samudra",
   "Rainbow": "Pelangi",
   "Colour": "Warna",
-  "Free Call": "Panggilan gratis"
+  "Free Call": "Panggilan gratis",
+  "Case Studies": "Studi Kasus",
+  "Articles": "Artikel",
+  "WRITING": "TULISAN",
+  "Straight answers, no jargon.": "Jawaban lugas, tanpa istilah rumit.",
+  "What software actually costs, what an MVP really is, and how AI fits into the work — written for the person paying for it.": "Berapa biaya perangkat lunak sebenarnya, apa itu MVP yang sesungguhnya, dan di mana AI berperan — ditulis untuk orang yang membayarnya.",
+  "Read all articles": "Baca semua artikel",
+  "See how we'd build these": "Lihat bagaimana kami membangunnya"
 };

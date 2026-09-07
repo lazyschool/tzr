@@ -221,24 +221,36 @@ const CONFIG = {
 
     const sel = $("#langSelect");
     if (sel) {
-      // grouped by region, alphabetical inside each; the option shows the
-      // native name first, then the English name so the ordering is legible
-      // to someone who cannot read the script.
+      // The option shows the native name first, then the English name, so the
+      // ordering stays legible to someone who cannot read the script.
+      function option(l) {
+        const o = document.createElement("option");
+        o.value = l.code;
+        o.textContent = l.native === l.label ? l.label : l.native + " · " + l.label;
+        return o;
+      }
+
+      // Region headings only earn their place once there are regions to head.
+      // With a short list (or every entry left unregioned) a single "Other"
+      // group is worse than a plain list, so fall back to one.
       const groups = {};
       I18N.languages.forEach(function (l) {
-        (groups[l.region || "Other"] = groups[l.region || "Other"] || []).push(l);
+        if (!l.region) return;
+        (groups[l.region] = groups[l.region] || []).push(l);
       });
-      Object.keys(groups).sort().forEach(function (region) {
-        const g = document.createElement("optgroup");
-        g.label = region;
-        groups[region].forEach(function (l) {
-          const o = document.createElement("option");
-          o.value = l.code;
-          o.textContent = l.native === l.label ? l.label : l.native + " · " + l.label;
-          g.appendChild(o);
+      const regions = Object.keys(groups).sort();
+
+      if (regions.length < 2) {
+        I18N.languages.forEach(function (l) { sel.appendChild(option(l)); });
+      } else {
+        regions.forEach(function (region) {
+          const g = document.createElement("optgroup");
+          g.label = region;
+          groups[region].forEach(function (l) { g.appendChild(option(l)); });
+          sel.appendChild(g);
         });
-        sel.appendChild(g);
-      });
+      }
+
       sel.addEventListener("change", function () { applyLang(sel.value); });
     }
 
@@ -422,7 +434,10 @@ const CONFIG = {
   const mobileBar = $("#mobileBar");
   // pair each nav link with its section, ordered the way they appear in the
   // document (the nav order and the document order are not the same)
+  // only same-page anchors can be scroll-spied; links to other pages (Case
+  // Studies, Articles) are not selectors and must not be handed to querySelector
   const navTargets = $$(".nav__links a")
+    .filter(function (a) { return (a.getAttribute("href") || "").charAt(0) === "#"; })
     .map(function (a) { return { link: a, el: document.querySelector(a.getAttribute("href")) }; })
     .filter(function (p) { return p.el; })
     .sort(function (a, b) { return a.el.offsetTop - b.el.offsetTop; });

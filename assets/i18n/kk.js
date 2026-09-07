@@ -188,5 +188,12 @@ window.HOC_I18N["kk"] = {
   "Ocean": "Мұхит",
   "Rainbow": "Кемпірқосақ",
   "Colour": "Түс",
-  "Free Call": "Тегін қоңырау"
+  "Free Call": "Тегін қоңырау",
+  "Case Studies": "Кейстер",
+  "Articles": "Мақалалар",
+  "WRITING": "ЖАЗБАЛАР",
+  "Straight answers, no jargon.": "Тікелей жауаптар, күрделі сөзсіз.",
+  "What software actually costs, what an MVP really is, and how AI fits into the work — written for the person paying for it.": "Бағдарламалық қамтам шын мәнінде қанша тұрады, MVP деген не және ЖИ жұмыста қай жерде керек — төлейтін адам үшін жазылған.",
+  "Read all articles": "Барлық мақаланы оқу",
+  "See how we'd build these": "Қалай құратынымызды көріңіз"
 };

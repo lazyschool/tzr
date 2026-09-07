@@ -8,3 +8,11 @@ Thumbs.db
 
 # build helper: the English key list used when adding translations
 _keys.json
+ex
+
+# reference material: a saved copy of another company site, not ours to publish
+ex/
+
+# python bytecode from tools/
+__pycache__/
+*.pyc

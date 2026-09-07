@@ -1925,3 +1925,213 @@ h1, h2, h3 {
   .marquee__track { animation: none !important; }
   .mobile-bar { transition: none !important; }
 }
+
+/* ---------------- 14. CASE STUDIES & ARTICLES ----------------
+   Used by the pages under /case-studies/ and /articles/. The home page never
+   loads these rules, but they share every token above so the two halves of the
+   site cannot drift apart. */
+
+.page-hero { padding-top: calc(var(--nav-h) + clamp(20px, 4vw, 40px)); }
+
+.crumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: clamp(18px, 3vw, 26px);
+  font-size: .84rem;
+  color: var(--fg-2);
+}
+.crumb a { color: var(--fg-2); text-decoration: none; }
+.crumb a:hover { color: var(--accent); text-decoration: underline; }
+.crumb span[aria-hidden] { opacity: .5; }
+.crumb [aria-current] { color: var(--fg); font-weight: 600; }
+
+/* --- the article / case-study document itself --- */
+.doc {
+  padding-block: calc(var(--nav-h) + clamp(20px, 4vw, 40px)) clamp(40px, 7vw, 76px);
+}
+
+.doc__head { max-width: 720px; }   /* must match .prose, or the title and the body text misalign */
+.doc__head .proj__cat,
+.doc__head .proj__flag { position: static; }
+
+.doc__title {
+  margin: 4px 0 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.85rem, 5.4vw, 3.1rem);
+  line-height: 1.08;
+  letter-spacing: -.02em;
+}
+
+.doc__lead {
+  margin-top: 16px;
+  font-size: clamp(1.02rem, 2.2vw, 1.2rem);
+  line-height: 1.6;
+  color: var(--fg-2);
+}
+
+.doc__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+  font-size: .88rem;
+  color: var(--fg-2);
+}
+.doc__meta span[aria-hidden] { opacity: .5; }
+
+.doc__thumb {
+  margin-top: clamp(22px, 4vw, 34px);
+  padding: clamp(14px, 3vw, 26px);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-2);
+  color: var(--accent-light);
+}
+.doc__thumb svg { display: block; width: 100%; max-width: 260px; margin-inline: auto; height: auto; }
+
+/* --- long-form body copy --- */
+.prose {
+  max-width: 720px;
+  margin-top: clamp(28px, 5vw, 44px);
+  font-size: 1.03rem;
+  line-height: 1.75;
+}
+.prose h2 {
+  margin: clamp(30px, 5vw, 46px) 0 12px;
+  font-family: var(--font-display);
+  font-weight: 750;
+  font-size: clamp(1.25rem, 3vw, 1.6rem);
+  line-height: 1.2;
+  letter-spacing: -.015em;
+}
+.prose p { margin: 0 0 16px; color: var(--fg-2); }
+.prose strong { color: var(--fg); font-weight: 650; }
+
+.prose ul,
+.prose ol { margin: 0 0 18px; padding-inline-start: 1.15em; color: var(--fg-2); }
+.prose li { margin-bottom: 9px; }
+.prose li::marker { color: var(--accent); font-weight: 700; }
+
+.prose blockquote {
+  margin: clamp(24px, 4vw, 34px) 0;
+  padding: 4px 0 4px 20px;
+  border-inline-start: 3px solid var(--accent);
+}
+.prose blockquote p {
+  margin: 0;
+  font-family: var(--font-hand);
+  font-size: clamp(1.25rem, 3.4vw, 1.7rem);
+  line-height: 1.35;
+  color: var(--fg);
+}
+
+/* term + explanation pairs: scope items, stack choices */
+.speclist { margin: 0 0 18px; }
+.speclist dt {
+  margin-top: 18px;
+  font-weight: 650;
+  color: var(--fg);
+}
+.speclist dd {
+  margin: 4px 0 0;
+  padding-inline-start: 14px;
+  border-inline-start: 2px solid var(--line);
+  color: var(--fg-2);
+}
+.speclist--tight dt { margin-top: 12px; }
+
+.steps { margin: 0 0 18px; padding-inline-start: 1.15em; }
+.steps li { margin-bottom: 11px; color: var(--fg-2); }
+.steps strong { display: inline-block; min-width: 5.4em; color: var(--fg); }
+
+/* callouts */
+.note {
+  margin: clamp(22px, 4vw, 30px) 0;
+  padding: 16px 18px;
+  border: 1.5px solid var(--line);
+  border-radius: 14px;
+  background: var(--bg-2);
+  font-size: .95rem;
+  line-height: 1.62;
+  color: var(--fg-2);
+}
+.note strong { color: var(--fg); }
+.note--flag { border-inline-start: 4px solid var(--accent); }
+.note--price { background: var(--accent-soft); border-color: transparent; }
+
+/* --- index grids and the "more like this" strip --- */
+.post-grid {
+  margin-top: clamp(24px, 4vw, 36px);
+  grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+}
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  text-decoration: none;
+  color: inherit;
+}
+.post-card h2,
+.post-card h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 750;
+  font-size: 1.16rem;
+  line-height: 1.25;
+  letter-spacing: -.01em;
+}
+.post-card p { margin: 0; font-size: .93rem; line-height: 1.6; color: var(--fg-2); }
+.post-card__meta { font-size: .84rem !important; opacity: .85; }
+.post-card .link-arrow { margin-top: auto; padding-top: 6px; }
+.post-card .proj__cat,
+.post-card .proj__flag { position: static; }
+
+/* the "example build" flag and the category sit on one row, not stacked */
+.chips { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.chips > * { margin: 0; }
+.doc__head .chips { margin-bottom: 14px; }
+
+.post-card__thumb {
+  margin-bottom: 4px;
+  padding: 10px;
+  border-radius: 14px;
+  background: var(--bg-2);
+  color: var(--accent-light);
+}
+.post-card__thumb svg { display: block; width: 100%; max-width: 118px; margin-inline: auto; height: auto; }
+
+.related {
+  margin-top: clamp(44px, 7vw, 72px);
+  padding-top: clamp(28px, 5vw, 40px);
+  border-top: 1.5px solid var(--line);
+}
+.related__title {
+  margin: 0 0 clamp(18px, 3vw, 26px);
+  font-family: var(--font-display);
+  font-weight: 750;
+  font-size: clamp(1.15rem, 2.6vw, 1.45rem);
+}
+.related__grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+/* --- the home page's article teaser strip --- */
+.latest__foot {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(22px, 4vw, 32px);
+}
+
+@media (max-width: 560px) {
+  .speclist dd { padding-inline-start: 12px; }
+  .steps strong { display: block; min-width: 0; }
+  /* breadcrumb links are small text; give them a thumb-sized hit area */
+  .crumb { gap: 6px 8px; }
+  .crumb a { display: inline-flex; align-items: center; min-height: 44px; }
+}

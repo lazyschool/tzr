@@ -188,5 +188,12 @@ window.HOC_I18N["te"] = {
   "Ocean": "సముద్రం",
   "Rainbow": "ఇంద్రధనుస్సు",
   "Colour": "రంగు",
-  "Free Call": "ఉచిత కాల్"
+  "Free Call": "ఉచిత కాల్",
+  "Case Studies": "కేస్ స్టడీలు",
+  "Articles": "వ్యాసాలు",
+  "WRITING": "రచనలు",
+  "Straight answers, no jargon.": "సూటి సమాధానాలు, కఠిన పదాలు లేవు.",
+  "What software actually costs, what an MVP really is, and how AI fits into the work — written for the person paying for it.": "సాఫ్ట్‌వేర్ నిజమైన ఖర్చు ఎంత, MVP అంటే నిజంగా ఏమిటి, AI పనిలో ఎక్కడ సరిపోతుంది — డబ్బు చెల్లించే వ్యక్తి కోసం రాసినది.",
+  "Read all articles": "అన్ని వ్యాసాలు చదవండి",
+  "See how we'd build these": "వీటిని ఎలా నిర్మిస్తామో చూడండి"
 };

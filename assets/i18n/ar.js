@@ -188,5 +188,12 @@ window.HOC_I18N["ar"] = {
   "Ocean": "محيطي",
   "Rainbow": "قوس قزح",
   "Colour": "اللون",
-  "Free Call": "مكالمة مجانية"
+  "Free Call": "مكالمة مجانية",
+  "Case Studies": "دراسات الحالة",
+  "Articles": "مقالات",
+  "WRITING": "كتابات",
+  "Straight answers, no jargon.": "إجابات صريحة، بلا مصطلحات.",
+  "What software actually costs, what an MVP really is, and how AI fits into the work — written for the person paying for it.": "كم تكلّف البرمجيات فعلاً، وما هو المنتج الأولي حقاً، وكيف يندرج الذكاء الاصطناعي في العمل — مكتوب لمن يدفع ثمنه.",
+  "Read all articles": "اقرأ كل المقالات",
+  "See how we'd build these": "شاهد كيف سنبنيها"
 };

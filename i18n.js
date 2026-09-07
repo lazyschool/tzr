@@ -256,5 +256,11 @@ window.HOC_I18N.selectorLabel = {
   zh: "语言",
 };
 
-/* Where the on-demand dictionaries live, relative to index.html. */
-window.HOC_I18N.path = "assets/i18n/";
+/* Where the on-demand dictionaries live. Resolved against this file's own URL
+   rather than the page's, so pages in subfolders (case studies, articles) load
+   the same dictionaries without needing their own configuration. */
+window.HOC_I18N.path = (function () {
+  var self = document.currentScript;
+  var base = self && self.src ? self.src.replace(/[^/]*$/, "") : "";
+  return base + "assets/i18n/";
+})();

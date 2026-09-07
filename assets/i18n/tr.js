@@ -188,5 +188,12 @@ window.HOC_I18N["tr"] = {
   "Ocean": "Okyanus",
   "Rainbow": "Gökkuşağı",
   "Colour": "Renk",
-  "Free Call": "Ücretsiz arama"
+  "Free Call": "Ücretsiz arama",
+  "Case Studies": "Vaka çalışmaları",
+  "Articles": "Yazılar",
+  "WRITING": "YAZILAR",
+  "Straight answers, no jargon.": "Jargonsuz, net cevaplar.",
+  "What software actually costs, what an MVP really is, and how AI fits into the work — written for the person paying for it.": "Yazılım gerçekte ne kadara mal olur, MVP aslında nedir ve yapay zekâ işin neresinde — parayı ödeyen kişi için yazıldı.",
+  "Read all articles": "Tüm yazıları oku",
+  "See how we'd build these": "Nasıl yapacağımızı görün"
 };

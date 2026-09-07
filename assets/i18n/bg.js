@@ -188,5 +188,12 @@ window.HOC_I18N["bg"] = {
   "Ocean": "Океан",
   "Rainbow": "Дъга",
   "Colour": "Цвят",
-  "Free Call": "Безплатен разговор"
+  "Free Call": "Безплатен разговор",
+  "Case Studies": "Казуси",
+  "Articles": "Статии",
+  "WRITING": "ПИСАНЕ",
+  "Straight answers, no jargon.": "Прями отговори, без жаргон.",
+  "What software actually costs, what an MVP really is, and how AI fits into the work — written for the person paying for it.": "Колко наистина струва софтуерът, какво всъщност е MVP и как ИИ се вписва в работата — написано за човека, който плаща за нея.",
+  "Read all articles": "Прочетете всички статии",
+  "See how we'd build these": "Вижте как бихме ги изградили"
 };

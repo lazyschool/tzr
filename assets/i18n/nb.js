@@ -188,5 +188,12 @@ window.HOC_I18N["nb"] = {
   "Ocean": "Hav",
   "Rainbow": "Regnbue",
   "Colour": "Farge",
-  "Free Call": "Gratis samtale"
+  "Free Call": "Gratis samtale",
+  "Case Studies": "Casestudier",
+  "Articles": "Artikler",
+  "WRITING": "TEKSTER",
+  "Straight answers, no jargon.": "Rett fram svar, uten stammespråk.",
+  "What software actually costs, what an MVP really is, and how AI fits into the work — written for the person paying for it.": "Hva programvare faktisk koster, hva et MVP egentlig er, og hvor KI hører hjemme i arbeidet — skrevet for den som betaler.",
+  "Read all articles": "Les alle artiklene",
+  "See how we'd build these": "Se hvordan vi ville bygd dem"
 };

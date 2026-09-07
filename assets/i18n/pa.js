@@ -188,5 +188,12 @@ window.HOC_I18N["pa"] = {
   "Ocean": "ਸਮੁੰਦਰ",
   "Rainbow": "ਸਤਰੰਗੀ",
   "Colour": "ਰੰਗ",
-  "Free Call": "ਮੁਫ਼ਤ ਕਾਲ"
+  "Free Call": "ਮੁਫ਼ਤ ਕਾਲ",
+  "Case Studies": "ਕੇਸ ਸਟੱਡੀ",
+  "Articles": "ਲੇਖ",
+  "WRITING": "ਲਿਖਤਾਂ",
+  "Straight answers, no jargon.": "ਸਿੱਧੇ ਜਵਾਬ, ਕੋਈ ਔਖੇ ਸ਼ਬਦ ਨਹੀਂ।",
+  "What software actually costs, what an MVP really is, and how AI fits into the work — written for the person paying for it.": "ਸਾਫਟਵੇਅਰ ਦੀ ਅਸਲੀ ਲਾਗਤ ਕਿੰਨੀ ਹੈ, MVP ਅਸਲ ਵਿੱਚ ਕੀ ਹੈ, ਅਤੇ AI ਕੰਮ ਵਿੱਚ ਕਿੱਥੇ ਫਿੱਟ ਬੈਠਦਾ ਹੈ — ਉਸ ਲਈ ਲਿਖਿਆ ਜੋ ਇਸਦਾ ਭੁਗਤਾਨ ਕਰਦਾ ਹੈ।",
+  "Read all articles": "ਸਾਰੇ ਲੇਖ ਪੜ੍ਹੋ",
+  "See how we'd build these": "ਵੇਖੋ ਅਸੀਂ ਇਹ ਕਿਵੇਂ ਬਣਾਵਾਂਗੇ"
 };

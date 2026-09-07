@@ -188,5 +188,12 @@ window.HOC_I18N["fr"] = {
   "Ocean": "Océan",
   "Rainbow": "Arc-en-ciel",
   "Colour": "Couleur",
-  "Free Call": "Appel gratuit"
+  "Free Call": "Appel gratuit",
+  "Case Studies": "Études de cas",
+  "Articles": "Articles",
+  "WRITING": "ÉCRITS",
+  "Straight answers, no jargon.": "Des réponses claires, sans jargon.",
+  "What software actually costs, what an MVP really is, and how AI fits into the work — written for the person paying for it.": "Ce que coûte vraiment un logiciel, ce qu'est réellement un MVP et la place de l'IA dans le travail — écrit pour celui qui paie.",
+  "Read all articles": "Lire tous les articles",
+  "See how we'd build these": "Voir comment nous les construirions"
 };

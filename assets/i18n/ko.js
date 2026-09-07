@@ -188,5 +188,12 @@ window.HOC_I18N["ko"] = {
   "Ocean": "오션",
   "Rainbow": "레인보우",
   "Colour": "색상",
-  "Free Call": "무료 상담"
+  "Free Call": "무료 상담",
+  "Case Studies": "사례 연구",
+  "Articles": "아티클",
+  "WRITING": "글",
+  "Straight answers, no jargon.": "전문 용어 없는 솔직한 답변.",
+  "What software actually costs, what an MVP really is, and how AI fits into the work — written for the person paying for it.": "소프트웨어의 실제 비용, MVP의 진짜 의미, 그리고 AI가 일에서 차지하는 자리 — 비용을 지불하는 사람을 위해 썼습니다.",
+  "Read all articles": "모든 글 읽기",
+  "See how we'd build these": "어떻게 만들지 보기"
 };
