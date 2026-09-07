@@ -2,30 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://humansofcoding.com/</loc>
-    <lastmod>2026-08-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://humansofcoding.com/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://humansofcoding.com/?lang=ar"/>
-    <xhtml:link rel="alternate" hreflang="bg" href="https://humansofcoding.com/?lang=bg"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://humansofcoding.com/?lang=de"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://humansofcoding.com/?lang=el"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://humansofcoding.com/?lang=es"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://humansofcoding.com/?lang=fr"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://humansofcoding.com/?lang=hi"/>
-    <xhtml:link rel="alternate" hreflang="id" href="https://humansofcoding.com/?lang=id"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://humansofcoding.com/?lang=it"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://humansofcoding.com/?lang=ja"/>
-    <xhtml:link rel="alternate" hreflang="kk" href="https://humansofcoding.com/?lang=kk"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://humansofcoding.com/?lang=ko"/>
-    <xhtml:link rel="alternate" hreflang="ms" href="https://humansofcoding.com/?lang=ms"/>
-    <xhtml:link rel="alternate" hreflang="nb" href="https://humansofcoding.com/?lang=nb"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://humansofcoding.com/?lang=pt"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://humansofcoding.com/?lang=ru"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://humansofcoding.com/?lang=sv"/>
-    <xhtml:link rel="alternate" hreflang="ta" href="https://humansofcoding.com/?lang=ta"/>
-    <xhtml:link rel="alternate" hreflang="th" href="https://humansofcoding.com/?lang=th"/>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://humansofcoding.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://humansofcoding.com/"/>
+  </url>
+  <url>
+    <loc>https://humansofcoding.com/case-studies/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://humansofcoding.com/articles/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://humansofcoding.com/case-studies/restaurant-ordering-app.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://humansofcoding.com/case-studies/coaching-management-platform.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://humansofcoding.com/case-studies/business-automation-dashboard.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://humansofcoding.com/case-studies/real-estate-listing-portal.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://humansofcoding.com/case-studies/delivery-tracking-app.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://humansofcoding.com/case-studies/booking-and-scheduling-mvp.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://humansofcoding.com/articles/what-an-mvp-actually-is.html</loc>
+    <lastmod>2026-08-12</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://humansofcoding.com/articles/what-twenty-thousand-buys.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://humansofcoding.com/articles/how-i-use-ai-without-shipping-garbage.html</loc>
+    <lastmod>2026-08-26</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://humansofcoding.com/articles/app-or-website-first.html</loc>
+    <lastmod>2026-09-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://humansofcoding.com/articles/questions-to-ask-before-hiring-a-developer.html</loc>
+    <lastmod>2026-09-05</lastmod>
+    <priority>0.7</priority>
   </url>
 </urlset>
