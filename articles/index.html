@@ -131,13 +131,28 @@
       </div>
       <div class="nd">
         <button class="nd__btn is-active" type="button" aria-expanded="false" aria-controls="ndReads">Articles<svg class="nd__caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
-        <div class="nd__panel" id="ndReads" hidden>
+        <div class="nd__panel nd__panel--wide" id="ndReads" hidden>
           <div class="nd__col">
-          <a href="../articles/what-an-mvp-actually-is.html">What an MVP actually is, and what it isn't</a>
-          <a href="../articles/what-twenty-thousand-buys.html">What ₹20,000 buys you — and what it doesn't</a>
-          <a href="../articles/how-i-use-ai-without-shipping-garbage.html">How I use AI to build faster without shipping garbage</a>
-          <a href="../articles/app-or-website-first.html">Should you build an app or a website first?</a>
-          <a href="../articles/questions-to-ask-before-hiring-a-developer.html">Seven questions to ask before hiring any developer</a>
+            <p class="nd__head">AI</p>
+            <a href="../articles/do-you-need-a-vector-database.html">Do you actually need a vector database?</a>
+            <a href="../articles/how-i-use-ai-without-shipping-garbage.html">How I use AI to build faster without shipping garbage</a>
+            <a href="../articles/what-ai-coding-agents-are-good-at.html">What AI coding agents are good at, and what they're not</a>
+            <p class="nd__head">Hiring</p>
+            <a href="../articles/questions-to-ask-before-hiring-a-developer.html">Seven questions to ask before hiring any developer</a>
+            <p class="nd__head">Building</p>
+            <a href="../articles/app-or-website-first.html">Should you build an app or a website first?</a>
+            <a href="../articles/what-an-mvp-actually-is.html">What an MVP actually is, and what it isn't</a>
+          </div>
+          <div class="nd__col">
+            <p class="nd__head">Pricing</p>
+            <a href="../articles/what-twenty-thousand-buys.html">What ₹20,000 buys you — and what it doesn't</a>
+            <p class="nd__head">Engineering</p>
+            <a href="../articles/start-with-postgres.html">Start with Postgres. Almost always.</a>
+            <a href="../articles/server-rendered-or-single-page.html">Server-rendered or single-page? A plain answer</a>
+            <p class="nd__head">Security</p>
+            <a href="../articles/passkeys-and-when-to-bother.html">Passkeys, and when to bother</a>
+            <p class="nd__head">Mobile</p>
+            <a href="../articles/build-for-the-metro.html">Build for the metro: offline is a product decision</a>
           </div>
           <a class="nd__all" href="../articles/index.html">Read all articles <span aria-hidden="true">&#8594;</span></a>
         </div>
@@ -241,11 +256,24 @@
     <details class="mgroup">
       <summary><span>03</span> Articles</summary>
       <div class="mgroup__body">
-      <a href="../articles/what-an-mvp-actually-is.html">What an MVP actually is, and what it isn't</a>
-      <a href="../articles/what-twenty-thousand-buys.html">What ₹20,000 buys you — and what it doesn't</a>
+      <p class="nd__head">AI</p>
+      <a href="../articles/do-you-need-a-vector-database.html">Do you actually need a vector database?</a>
       <a href="../articles/how-i-use-ai-without-shipping-garbage.html">How I use AI to build faster without shipping garbage</a>
-      <a href="../articles/app-or-website-first.html">Should you build an app or a website first?</a>
+      <a href="../articles/what-ai-coding-agents-are-good-at.html">What AI coding agents are good at, and what they're not</a>
+      <p class="nd__head">Hiring</p>
       <a href="../articles/questions-to-ask-before-hiring-a-developer.html">Seven questions to ask before hiring any developer</a>
+      <p class="nd__head">Building</p>
+      <a href="../articles/app-or-website-first.html">Should you build an app or a website first?</a>
+      <a href="../articles/what-an-mvp-actually-is.html">What an MVP actually is, and what it isn't</a>
+      <p class="nd__head">Pricing</p>
+      <a href="../articles/what-twenty-thousand-buys.html">What ₹20,000 buys you — and what it doesn't</a>
+      <p class="nd__head">Engineering</p>
+      <a href="../articles/start-with-postgres.html">Start with Postgres. Almost always.</a>
+      <a href="../articles/server-rendered-or-single-page.html">Server-rendered or single-page? A plain answer</a>
+      <p class="nd__head">Security</p>
+      <a href="../articles/passkeys-and-when-to-bother.html">Passkeys, and when to bother</a>
+      <p class="nd__head">Mobile</p>
+      <a href="../articles/build-for-the-metro.html">Build for the metro: offline is a product decision</a>
         <a class="nd__all" href="../articles/index.html">Read all articles <span aria-hidden="true">&#8594;</span></a>
       </div>
     </details>
@@ -287,40 +315,93 @@
 </section>
 <section class="section section--alt">
   <div class="container">
-    <div class="cards post-grid">
-      <a class="card post-card reveal" data-reveal style="--d:.4s" href="what-an-mvp-actually-is.html">
-        <span class="proj__cat">Building</span>
-        <h2>What an MVP actually is, and what it isn't</h2>
-        <p>Most people asking for an MVP describe a full product with a smaller budget. That is not the same thing, and the difference decides whether the money teaches you anything.</p>
-        <p class="post-card__meta"><time datetime="2026-08-12">12 August 2026</time> · 6 min read</p>
+    <div class="chips-bar" role="group" aria-label="Filter articles by topic" id="artFilter">
+      <button type="button" class="chip is-on" data-filter="all" aria-pressed="true">All <span class="chip__n">11</span></button>
+      <button type="button" class="chip" data-filter="AI" aria-pressed="false">AI <span class="chip__n">3</span></button>
+      <button type="button" class="chip" data-filter="Hiring" aria-pressed="false">Hiring <span class="chip__n">1</span></button>
+      <button type="button" class="chip" data-filter="Building" aria-pressed="false">Building <span class="chip__n">2</span></button>
+      <button type="button" class="chip" data-filter="Pricing" aria-pressed="false">Pricing <span class="chip__n">1</span></button>
+      <button type="button" class="chip" data-filter="Engineering" aria-pressed="false">Engineering <span class="chip__n">2</span></button>
+      <button type="button" class="chip" data-filter="Security" aria-pressed="false">Security <span class="chip__n">1</span></button>
+      <button type="button" class="chip" data-filter="Mobile" aria-pressed="false">Mobile <span class="chip__n">1</span></button>
+    </div>
+
+    <div class="cards post-grid" id="artGrid">
+      <a class="card post-card reveal" data-reveal style="--d:.4s" href="do-you-need-a-vector-database.html" data-tag="AI">
+        <span class="proj__cat">AI</span>
+        <h2>Do you actually need a vector database?</h2>
+        <p>Almost every AI feature proposal now includes one. For most of them, Postgres with a search extension is enough, and the difference is a month of work.</p>
+        <p class="post-card__meta"><time datetime="2026-09-07">7 September 2026</time> · 6 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card reveal" data-reveal style="--d:.10s" href="what-twenty-thousand-buys.html">
-        <span class="proj__cat">Pricing</span>
-        <h2>What ₹20,000 buys you — and what it doesn't</h2>
-        <p>A starting price is only useful if you know what moves it. Here is what sits inside that number, what sits outside it, and the running costs nobody mentions until the invoice lands.</p>
-        <p class="post-card__meta"><time datetime="2026-08-19">19 August 2026</time> · 5 min read</p>
+      <a class="card post-card reveal" data-reveal style="--d:.10s" href="questions-to-ask-before-hiring-a-developer.html" data-tag="Hiring">
+        <span class="proj__cat">Hiring</span>
+        <h2>Seven questions to ask before hiring any developer</h2>
+        <p>Including me. If someone cannot answer these clearly, that is the answer.</p>
+        <p class="post-card__meta"><time datetime="2026-09-05">5 September 2026</time> · 6 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card reveal" data-reveal style="--d:.16s" href="how-i-use-ai-without-shipping-garbage.html">
-        <span class="proj__cat">Human + AI</span>
-        <h2>How I use AI to build faster without shipping garbage</h2>
-        <p>AI writes a lot of the typing in this studio and none of the decisions. Here is exactly where the line sits, and why it sits there.</p>
-        <p class="post-card__meta"><time datetime="2026-08-26">26 August 2026</time> · 7 min read</p>
-        <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
-      </a>
-      <a class="card post-card reveal" data-reveal style="--d:.22s" href="app-or-website-first.html">
+      <a class="card post-card reveal" data-reveal style="--d:.16s" href="app-or-website-first.html" data-tag="Building">
         <span class="proj__cat">Building</span>
         <h2>Should you build an app or a website first?</h2>
         <p>Almost everyone asks for an app. For most businesses, for the first version, a website is the better answer — and here is the specific test for when it isn't.</p>
         <p class="post-card__meta"><time datetime="2026-09-02">2 September 2026</time> · 5 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card reveal" data-reveal style="--d:.28s" href="questions-to-ask-before-hiring-a-developer.html">
-        <span class="proj__cat">Hiring</span>
-        <h2>Seven questions to ask before hiring any developer</h2>
-        <p>Including me. If someone cannot answer these clearly, that is the answer.</p>
-        <p class="post-card__meta"><time datetime="2026-09-05">5 September 2026</time> · 6 min read</p>
+      <a class="card post-card reveal" data-reveal style="--d:.22s" href="how-i-use-ai-without-shipping-garbage.html" data-tag="AI">
+        <span class="proj__cat">AI</span>
+        <h2>How I use AI to build faster without shipping garbage</h2>
+        <p>AI writes a lot of the typing in this studio and none of the decisions. Here is exactly where the line sits, and why it sits there.</p>
+        <p class="post-card__meta"><time datetime="2026-08-26">26 August 2026</time> · 7 min read</p>
+        <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="card post-card reveal" data-reveal style="--d:.28s" href="what-twenty-thousand-buys.html" data-tag="Pricing">
+        <span class="proj__cat">Pricing</span>
+        <h2>What ₹20,000 buys you — and what it doesn't</h2>
+        <p>A starting price is only useful if you know what moves it. Here is what sits inside that number, what sits outside it, and the running costs nobody mentions until the invoice lands.</p>
+        <p class="post-card__meta"><time datetime="2026-08-19">19 August 2026</time> · 5 min read</p>
+        <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="card post-card reveal" data-reveal style="--d:.34s" href="what-an-mvp-actually-is.html" data-tag="Building">
+        <span class="proj__cat">Building</span>
+        <h2>What an MVP actually is, and what it isn't</h2>
+        <p>Most people asking for an MVP describe a full product with a smaller budget. That is not the same thing, and the difference decides whether the money teaches you anything.</p>
+        <p class="post-card__meta"><time datetime="2026-08-12">12 August 2026</time> · 6 min read</p>
+        <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="card post-card reveal" data-reveal style="--d:.40s" href="what-ai-coding-agents-are-good-at.html" data-tag="AI">
+        <span class="proj__cat">AI</span>
+        <h2>What AI coding agents are good at, and what they're not</h2>
+        <p>A working note from someone who uses them daily and still reads every line. Where they save real time, and the three places they quietly cost you money.</p>
+        <p class="post-card__meta"><time datetime="2026-08-05">5 August 2026</time> · 7 min read</p>
+        <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="card post-card reveal" data-reveal style="--d:.46s" href="start-with-postgres.html" data-tag="Engineering">
+        <span class="proj__cat">Engineering</span>
+        <h2>Start with Postgres. Almost always.</h2>
+        <p>Database choice is the decision most likely to be made for the wrong reasons, and the most expensive to revisit. Here is the short version.</p>
+        <p class="post-card__meta"><time datetime="2026-07-22">22 July 2026</time> · 6 min read</p>
+        <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="card post-card reveal" data-reveal style="--d:.52s" href="server-rendered-or-single-page.html" data-tag="Engineering">
+        <span class="proj__cat">Engineering</span>
+        <h2>Server-rendered or single-page? A plain answer</h2>
+        <p>The argument that has run for a decade, reduced to the two questions that actually decide it for your project.</p>
+        <p class="post-card__meta"><time datetime="2026-07-08">8 July 2026</time> · 6 min read</p>
+        <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="card post-card reveal" data-reveal style="--d:.58s" href="passkeys-and-when-to-bother.html" data-tag="Security">
+        <span class="proj__cat">Security</span>
+        <h2>Passkeys, and when to bother</h2>
+        <p>They are genuinely better than passwords and genuinely not a drop-in replacement. Where they fit, and the recovery problem nobody mentions.</p>
+        <p class="post-card__meta"><time datetime="2026-06-24">24 June 2026</time> · 5 min read</p>
+        <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="card post-card reveal" data-reveal style="--d:.64s" href="build-for-the-metro.html" data-tag="Mobile">
+        <span class="proj__cat">Mobile</span>
+        <h2>Build for the metro: offline is a product decision</h2>
+        <p>Most apps are built on office wifi and used on a train. Treating the network as optional is a decision about who gets to use your product.</p>
+        <p class="post-card__meta"><time datetime="2026-06-10">10 June 2026</time> · 6 min read</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
     </div>

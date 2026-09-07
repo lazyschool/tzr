@@ -2896,3 +2896,62 @@ h1, h2, h3 {
   padding-inline-start: 34px;
   border-top: 1.5px solid var(--line);
 }
+
+/* ---------------- 17. ARTICLE TOPIC FILTER ----------------
+   Eleven articles is past the point where a flat list works. Without
+   JavaScript the chips are simply absent and every article stays listed. */
+
+.chips-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: clamp(22px, 4vw, 32px);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 40px;
+  padding: 8px 15px;
+  border: 1.5px solid var(--line-strong);
+  border-radius: 999px;
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: .87rem;
+  font-weight: 600;
+  color: var(--fg-2);
+  cursor: pointer;
+  transition: background-color .2s var(--ease), color .2s var(--ease),
+              border-color .2s var(--ease);
+}
+.chip:hover { border-color: var(--accent); color: var(--fg); }
+.chip.is-on {
+  border-color: transparent;
+  background: var(--accent);
+  color: var(--accent-fg);
+}
+
+.chip__n {
+  font-size: .74rem;
+  font-weight: 700;
+  opacity: .7;
+}
+.chip.is-on .chip__n { opacity: .85; }
+
+.post-card[hidden] { display: none; }
+
+.chips-none {
+  margin: 0 0 20px;
+  font-size: .96rem;
+  color: var(--fg-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chip { transition: none; }
+}
+
+@media (max-width: 560px) {
+  .chips-bar { gap: 7px; }
+  .chip { padding: 8px 13px; font-size: .83rem; }
+}

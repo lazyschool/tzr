@@ -9,7 +9,7 @@ built: "" for index.html, "../" for anything in a subfolder. Links always name
 index.html explicitly — a bare folder works on a web server but renders as a
 directory listing when the site is opened from disk.
 """
-from content import ARTICLES, CASE_STUDIES
+from content import ARTICLES, ARTICLE_TAGS, CASE_STUDIES
 
 CARET = ('<svg class="nd__caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
          'stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" '
@@ -85,18 +85,35 @@ def primary(prefix, active=""):
                        caret=CARET, cols="\n".join(cols), p=p))
 
     # --- Articles -----------------------------------------------------------
-    links = "".join(
-        '\n          <a href="%sarticles/%s.html">%s</a>' % (p, a["slug"], a["title"])
-        for a in ARTICLES)
+    by_tag = [(tag, [a for a in ARTICLES if a["tag"] == tag]) for tag in ARTICLE_TAGS]
+    total = sum(len(items) + 1 for _, items in by_tag)
+    left, right, run = [], [], 0
+    for tag, items in by_tag:
+        if run < (total + 1) // 2:
+            left.append((tag, items))
+            run += len(items) + 1
+        else:
+            right.append((tag, items))
+
+    cols = []
+    for chunk in (left, right):
+        col = ['          <div class="nd__col">']
+        for tag, items in chunk:
+            col.append('            <p class="nd__head">%s</p>' % tag)
+            for a in items:
+                col.append('            <a href="%sarticles/%s.html">%s</a>'
+                           % (p, a["slug"], a["title"]))
+        col.append('          </div>')
+        cols.append("\n".join(col))
+
     out.append('''      <div class="nd">
         <button class="nd__btn{on}" type="button" aria-expanded="false" aria-controls="ndReads">Articles{caret}</button>
-        <div class="nd__panel" id="ndReads" hidden>
-          <div class="nd__col">{links}
-          </div>
+        <div class="nd__panel nd__panel--wide" id="ndReads" hidden>
+{cols}
           <a class="nd__all" href="{p}articles/index.html">Read all articles <span aria-hidden="true">&#8594;</span></a>
         </div>
       </div>'''.format(on=" is-active" if active == "articles" else "",
-                       caret=CARET, links=links, p=p))
+                       caret=CARET, cols="\n".join(cols), p=p))
 
     out.append('      <a href="%sindex.html#about">About</a>' % p)
     out.append('    </nav>')
@@ -131,9 +148,13 @@ def mobile(prefix):
       </div>
     </details>'''.format(studies="".join(studies), p=p))
 
-    reads = "".join(
-        '\n      <a href="%sarticles/%s.html">%s</a>' % (p, a["slug"], a["title"])
-        for a in ARTICLES)
+    reads = []
+    for tag in ARTICLE_TAGS:
+        reads.append('\n      <p class="nd__head">%s</p>' % tag)
+        for a in [x for x in ARTICLES if x["tag"] == tag]:
+            reads.append('\n      <a href="%sarticles/%s.html">%s</a>'
+                         % (p, a["slug"], a["title"]))
+    reads = "".join(reads)
     out.append('''    <details class="mgroup">
       <summary><span>03</span> Articles</summary>
       <div class="mgroup__body">{reads}

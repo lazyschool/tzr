@@ -14,7 +14,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from content import CASE_STUDIES, ARTICLES  # noqa: E402
+from content import CASE_STUDIES, ARTICLES, ARTICLE_TAGS  # noqa: E402
 from mocks import mock_for  # noqa: E402
 import nav  # noqa: E402
 
@@ -646,6 +646,14 @@ def article_page(art, others):
     # The body is the one place a narrow reading column is right, so it keeps
     # its own band rather than being broken into more of them.
     out.append(u'<section class="section section--read">\n  <div class="container prose">\n')
+    if art.get("caveat"):
+        # version-specific detail dates fast, so say so rather than let a reader
+        # act on something that moved after this was written
+        out.append(
+            u'    <p class="note note--flag"><strong>Written {when}.</strong> This one '
+            u'touches fast-moving tooling. The tradeoffs should hold; check anything '
+            u'version-specific against current documentation before relying on '
+            u'it.</p>\n'.format(when=art["date_label"]))
     out.append(render_blocks(art["body"]))
     out.append(u'''  </div>
 </section>
@@ -700,9 +708,23 @@ def articles_index():
                          "written for the person paying for it rather than the person "
                          "writing it.", crumbs))
 
-    inner = ['    <div class="cards post-grid">\n']
+    # Topic filter. Eleven articles is past the point where a flat list works,
+    # and the counts tell a reader what is actually here before they click.
+    chips = ['      <button type="button" class="chip is-on" data-filter="all"'
+             ' aria-pressed="true">All <span class="chip__n">%d</span></button>'
+             % len(ARTICLES)]
+    for tag in ARTICLE_TAGS:
+        n = len([a for a in ARTICLES if a["tag"] == tag])
+        chips.append('      <button type="button" class="chip" data-filter="%s"'
+                     ' aria-pressed="false">%s <span class="chip__n">%d</span></button>'
+                     % (tag, tag, n))
+
+    inner = ['    <div class="chips-bar" role="group" aria-label="Filter articles by topic" id="artFilter">\n',
+             "\n".join(chips),
+             '\n    </div>\n\n',
+             '    <div class="cards post-grid" id="artGrid">\n']
     for i, art in enumerate(ARTICLES):
-        inner.append(u'''      <a class="card post-card reveal" data-reveal style="--d:.{d}s" href="{slug}.html">
+        inner.append(u'''      <a class="card post-card reveal" data-reveal style="--d:.{d}s" href="{slug}.html" data-tag="{tag}">
         <span class="proj__cat">{tag}</span>
         <h2>{title}</h2>
         <p>{summary}</p>
