@@ -2516,6 +2516,156 @@ h1, h2, h3 {
 }
 .mk-slots span.is-taken { border-color: transparent; background: var(--accent); }
 
+/* --- primitives the newer screens add --- */
+.mk-ws {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid var(--line);
+}
+.mk-ws .mk-line { flex: 1; }
+.mk-avatar--sm { width: 18px; height: 18px; }
+.mk-chip {
+  flex: none;
+  width: 30px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+}
+
+.mk-plans .mk-tile { display: grid; gap: 5px; }
+.mk-plans .mk-tile b { width: 46%; height: 13px; margin: 2px 0 4px; }
+.mk-tile.is-picked {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(var(--accent-glow), .22);
+}
+
+.mk-navrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.mk-navrow i {
+  height: 6px;
+  width: 26px;
+  border-radius: 4px;
+  background: var(--line-strong);
+}
+.mk-dotmark {
+  width: 14px !important;
+  height: 14px !important;
+  border-radius: 50% !important;
+  background: var(--accent) !important;
+}
+.mk-navrow .mk-chip { margin-inline-start: auto; }
+
+.mk-heroblock {
+  display: grid;
+  gap: 7px;
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--bg-2);
+}
+.mk-ctarow { display: flex; gap: 7px; margin-top: 4px; }
+.mk-btn--ghost {
+  flex: none;
+  width: 38px;
+  height: 18px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1.5px solid var(--accent);
+}
+
+.mk-agenda { display: grid; gap: 6px; }
+.mk-appt {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 8px;
+  border: 1.5px solid var(--line);
+  border-radius: 8px;
+}
+.mk-appt.is-now { border-color: var(--accent); background: var(--accent-soft); }
+.mk-appt .mk-line { flex: 1; }
+.mk-time {
+  flex: none;
+  width: 22px;
+  height: 6px;
+  border-radius: 4px;
+  background: var(--fg-2);
+  opacity: .55;
+}
+
+.mk-pass {
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  background: var(--accent);
+}
+.mk-line--onaccent { background: var(--accent-fg); margin-bottom: 6px; }
+.mk-qr {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  width: 74px;
+  margin: 10px auto 2px;
+}
+.mk-qr span {
+  aspect-ratio: 1;
+  border-radius: 3px;
+  background: var(--accent-fg);
+  opacity: .35;
+}
+.mk-qr span:nth-child(1),
+.mk-qr span:nth-child(4),
+.mk-qr span:nth-child(6),
+.mk-qr span:nth-child(11),
+.mk-qr span:nth-child(13),
+.mk-qr span:nth-child(16) { opacity: 1; }
+
+.mk-check { display: grid; gap: 7px; margin-bottom: 12px; }
+.mk-crow { display: flex; align-items: center; gap: 9px; }
+.mk-crow .mk-line { flex: 1; }
+.mk-box {
+  flex: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 5px;
+  border: 1.5px solid var(--line-strong);
+}
+.mk-crow.is-done .mk-box { border-color: var(--accent); background: var(--accent); }
+
+.mk-photos { display: flex; gap: 7px; }
+.mk-photos span {
+  flex: 1;
+  height: 34px;
+  border-radius: 7px;
+  background: var(--accent-soft);
+}
+.mk-photo-add { background: transparent !important; border: 1.5px dashed var(--line-strong); }
+
+/* the automation screen's alert row */
+.mk-alert {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 10px;
+  border-radius: 8px;
+  background: var(--accent-soft);
+}
+.mk-alert .mk-line { flex: 1; }
+.mk-dot {
+  flex: none;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
 /* --- the banner's two-column layout on a case study --- */
 .phero--split .phero__inner { max-width: none; }
 

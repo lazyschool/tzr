@@ -456,6 +456,439 @@ CASE_STUDIES = [
                 "are involved, and how much of the existing customer list has to be "
                 "imported.",
     },
+    {
+        "slug": "saas-subscription-starter",
+        "glance": [
+            ("Type", "Multi-tenant SaaS"),
+            ("Build time", "About 9 weeks"),
+            ("Platforms", "Browser, any device"),
+            ("Starts at", "₹20,000*"),
+        ],
+        "pains": [
+            "Every customer needs their own separated data",
+            "Billing, trials and downgrades all have to agree",
+            "One customer's heavy usage slows everyone down",
+            "Adding a teammate should not need a developer",
+        ],
+        "category": "SaaS Product",
+        "thumb": "b",
+        "title": "SaaS Subscription Starter",
+        "summary": "Sign-up, workspaces, plans and recurring billing — the "
+                   "unglamorous half of a SaaS product, built once and properly.",
+        "situation": [
+            "A founder has a genuinely good idea for a tool and a clear first "
+            "customer. What stands between them is the part that is identical in "
+            "every SaaS product ever built: accounts, workspaces, invitations, "
+            "roles, plans, trials, card failures and invoices.",
+            "None of that is the product. All of it has to be right, because "
+            "getting billing or data isolation wrong is the kind of mistake that "
+            "is discovered by a customer rather than by you.",
+        ],
+        "scope": [
+            ("Accounts and workspaces",
+             "Sign up, verify, create a workspace, invite teammates. One person "
+             "can belong to several workspaces without a second account."),
+            ("Roles that actually restrict",
+             "Owner, admin and member, enforced on the server. A permission check "
+             "that only hides a button is not a permission check."),
+            ("Plans and trials",
+             "A free trial with a real end date, paid plans, upgrades, downgrades "
+             "and the awkward states in between — expired card, failed renewal, "
+             "cancelled but still inside the paid period."),
+            ("Recurring billing",
+             "A payment provider handles the card. We handle what happens to the "
+             "customer's access when a charge succeeds, fails or is refunded."),
+            ("Tenant isolation",
+             "Every query is scoped to a workspace at the data layer, not by "
+             "remembering to add a filter. This is the part that must not be a "
+             "convention."),
+        ],
+        "excluded": [
+            "Usage-based and metered pricing. Start with flat plans; metering is "
+            "a project on its own and is easier once you know how people use it.",
+            "SSO and SAML. Enterprise customers ask for it. You do not have "
+            "enterprise customers on day one.",
+            "An admin back-office with everything in it. Start with the three "
+            "screens support actually needs.",
+        ],
+        "stack": [
+            ("App", "Next.js, so the marketing pages and the product share one "
+             "codebase and one deployment"),
+            ("Backend", "Node with Postgres, workspace isolation enforced with "
+             "row-level security"),
+            ("Billing", "Stripe or Razorpay subscriptions, driven entirely by "
+             "webhooks rather than by what the browser reports"),
+            ("Auth", "Email and password plus Google, with sessions that survive "
+             "a server restart"),
+            ("Email", "A transactional provider for invites, receipts and "
+             "failed-payment warnings"),
+        ],
+        "timeline": [
+            ("Week 1", "The tenancy model: what a workspace owns, what happens "
+                       "when someone is removed, what a downgrade takes away."),
+            ("Weeks 2–4", "Accounts, workspaces, invitations and roles."),
+            ("Weeks 5–7", "Plans, trials and billing, including every failure path."),
+            ("Weeks 8–9", "Your actual product feature, on top of the foundation."),
+        ],
+        "note": "Payment providers charge per transaction and most take a cut of "
+                "each subscription. That is billed to you by them, not by us, and "
+                "it scales with your revenue rather than with the build.",
+    },
+    {
+        "slug": "business-website-that-converts",
+        "glance": [
+            ("Type", "Marketing website"),
+            ("Build time", "About 3 weeks"),
+            ("Platforms", "Browser, mobile-first"),
+            ("Starts at", "₹20,000*"),
+        ],
+        "pains": [
+            "The current site takes eight seconds to load on mobile data",
+            "Enquiries arrive as email nobody checks on weekends",
+            "Nothing on the page says what to do next",
+            "Editing an address means calling whoever built it",
+        ],
+        "category": "Website",
+        "thumb": "c",
+        "title": "Business Website That Converts",
+        "summary": "A fast, mobile-first site that turns visitors into enquiries "
+                   "— and that you can edit yourself.",
+        "situation": [
+            "A local business has a website built years ago on a page builder. It "
+            "is slow, it looks wrong on a phone, and it produces almost no "
+            "enquiries. Most of its visitors arrive from Instagram, look at it on "
+            "mobile data, and leave before it finishes loading.",
+            "This is the cheapest project on this list and often the highest "
+            "return, because the traffic already exists. The work is in speed, in "
+            "saying one clear thing, and in making the next step obvious.",
+        ],
+        "scope": [
+            ("Fast on a phone, on mobile data",
+             "The whole page under a few hundred kilobytes, images sized properly, "
+             "no framework shipped to a visitor who only needs to read."),
+            ("One clear message and one next step",
+             "What you do, who for, and what to click. Most small-business sites "
+             "fail at this before they fail at anything technical."),
+            ("Enquiry capture that reaches a human",
+             "A short form plus a WhatsApp and call button, with each enquiry "
+             "landing somewhere someone actually looks."),
+            ("Findable on Google",
+             "Real HTML, correct headings, a sitemap, and a Google Business "
+             "Profile that matches the site."),
+            ("Editable by you",
+             "The handful of things that change — hours, prices, photos, offers "
+             "— editable without a developer."),
+        ],
+        "excluded": [
+            "A blog, unless someone has genuinely committed to writing it. An "
+            "empty blog dated two years ago is worse than none.",
+            "Online payments, until there is something to sell online.",
+            "A carousel on the homepage. Nobody sees slide two.",
+        ],
+        "stack": [
+            ("Site", "Static HTML and CSS, or Astro if there are more than a dozen "
+             "pages — no server to be slow"),
+            ("Hosting", "A CDN, which is free or nearly free at this size"),
+            ("Forms", "A form service or a small serverless endpoint; a static "
+             "site needs no database for this"),
+            ("Images", "Compressed and served in modern formats, sized per device"),
+        ],
+        "timeline": [
+            ("Week 1", "What the site has to say, and to whom. Copy first, "
+                       "design after — the other order produces pretty nonsense."),
+            ("Week 2", "Design and build."),
+            ("Week 3", "Content, Google setup, and live."),
+        ],
+        "note": "A website only earns its keep if the enquiries reach someone. "
+                "Decide before launch who answers them and how fast — that "
+                "decision affects the results more than any design choice here.",
+    },
+    {
+        "slug": "inventory-and-billing-for-retail",
+        "glance": [
+            ("Type", "Custom software"),
+            ("Build time", "About 7 weeks"),
+            ("Platforms", "Counter desktop, phone for stock"),
+            ("Starts at", "₹20,000*"),
+        ],
+        "pains": [
+            "Stock on paper never matches stock on the shelf",
+            "Fast-selling items run out before anyone notices",
+            "Bills are handwritten and GST is reconciled monthly by hand",
+            "No idea which products actually make money",
+        ],
+        "category": "Custom Software",
+        "thumb": "b",
+        "title": "Inventory & Billing for Retail",
+        "summary": "Stock that matches the shelf, GST-ready bills in seconds, and "
+                   "an alert before a fast seller runs out.",
+        "situation": [
+            "A retailer with two shops tracks stock in a register and bills by "
+            "hand. Nobody knows what is genuinely in stock until someone counts "
+            "it, and the count is wrong by the time it is finished.",
+            "The temptation is to buy an off-the-shelf POS. Sometimes that is the "
+            "right answer and I will say so. It stops being the right answer when "
+            "the business has a real quirk — loose quantities, custom bundles, "
+            "credit for regulars — that the packaged product refuses to model.",
+        ],
+        "scope": [
+            ("Products and stock",
+             "Per-shop stock levels, purchase entry, and a stock adjustment that "
+             "records who changed what and why."),
+            ("Billing at the counter",
+             "Fast enough to use with a customer waiting: barcode or search, "
+             "quantity, discount, GST-compliant invoice, print or WhatsApp."),
+            ("Low-stock alerts",
+             "Per product, based on how fast it actually sells rather than a "
+             "number someone guessed once."),
+            ("Day-end summary",
+             "Sales, payment modes, and what left the shelf. One screen the owner "
+             "reads on the way home."),
+            ("Simple margins",
+             "Purchase price against selling price, so the products that look "
+             "busy but earn nothing become visible."),
+        ],
+        "excluded": [
+            "Full accounting. Export to whatever the accountant already uses "
+            "instead of rebuilding Tally badly.",
+            "E-commerce and online ordering — a separate project once the stock "
+            "data is trustworthy.",
+            "Loyalty schemes, until there is purchase history to base one on.",
+        ],
+        "stack": [
+            ("Counter app", "A web app that works offline for billing, because a "
+             "shop cannot stop selling when the internet drops"),
+            ("Stock app", "The same app on a phone, for counting on the shelf"),
+            ("Backend", "Node with Postgres"),
+            ("Printing", "Standard thermal printers over the browser"),
+            ("Invoices", "GST-compliant numbering and formats from day one — "
+             "retrofitting this later is genuinely painful"),
+        ],
+        "timeline": [
+            ("Week 1", "Watch a real day at the counter. What gets typed, what "
+                       "gets skipped, where the queue builds."),
+            ("Weeks 2–4", "Products, stock and purchase entry."),
+            ("Weeks 5–6", "Billing, printing and GST formats."),
+            ("Week 7", "One shop runs it alongside the register for a week."),
+        ],
+        "note": "Getting the opening stock right is the hardest day of this "
+                "project and it is your team's day, not mine. Budget a full "
+                "count before go-live; every wrong number carries forward.",
+    },
+    {
+        "slug": "clinic-appointments-and-records",
+        "glance": [
+            ("Type", "Web app"),
+            ("Build time", "About 7 weeks"),
+            ("Platforms", "Desktop at the desk, phone for patients"),
+            ("Starts at", "₹20,000*"),
+        ],
+        "pains": [
+            "Appointments in a diary that only the front desk can see",
+            "Patient history in paper files that go missing",
+            "Waiting rooms full because everyone was told “morning”",
+            "No reminder, so a fifth of slots are no-shows",
+        ],
+        "category": "Web App",
+        "thumb": "b",
+        "title": "Clinic Appointments & Records",
+        "summary": "Appointments, patient history and prescriptions in one place, "
+                   "with reminders that cut the empty slots.",
+        "situation": [
+            "A two-doctor clinic books appointments in a paper diary and keeps "
+            "patient history in files. Patients are given a vague time and wait. "
+            "Records are hard to find when someone returns after a year.",
+            "Patient data raises the stakes here. This is health information: it "
+            "needs proper access control, an audit trail, and an honest "
+            "conversation about where it is stored before a line is written.",
+        ],
+        "scope": [
+            ("Real appointment slots",
+             "Per doctor, with actual durations, so a patient is given a time "
+             "rather than a session."),
+            ("Patient records",
+             "History, visits, prescriptions, and uploaded reports, searchable by "
+             "phone number — the only identifier patients reliably remember."),
+            ("Prescriptions",
+             "Written on screen, printed on the clinic's letterhead, and kept "
+             "against the visit."),
+            ("Reminders",
+             "A message the day before and an hour before. This alone typically "
+             "pays for the system."),
+            ("Access control and audit",
+             "Reception sees the schedule, not clinical notes. Every record "
+             "opened is logged, with who and when."),
+        ],
+        "excluded": [
+            "Insurance claim processing — a specialist domain with its own "
+            "integrations and its own experts.",
+            "Lab and pharmacy modules, unless the clinic runs them in-house.",
+            "Video consultations. Link an existing tool from the appointment.",
+        ],
+        "stack": [
+            ("Web app", "React, used at the desk and in the consulting room"),
+            ("Backend", "Node with Postgres, with access logging built in rather "
+             "than bolted on"),
+            ("Storage", "Reports encrypted at rest, in an Indian cloud region"),
+            ("Reminders", "SMS or WhatsApp, with the clinic name in the message"),
+            ("Backups", "Automated daily, and restored once in front of you so "
+             "you know the restore works"),
+        ],
+        "timeline": [
+            ("Week 1", "The visit flow, and a decision about where patient data "
+                       "lives and who may see it."),
+            ("Weeks 2–4", "Appointments, the schedule and the front-desk view."),
+            ("Weeks 5–6", "Records, prescriptions and uploads."),
+            ("Week 7", "Reminders, access logs, backup restore test, live."),
+        ],
+        "note": "Patient records carry legal obligations in most places, "
+                "including India. I build the access control, encryption and "
+                "audit trail; you should still have someone confirm your specific "
+                "compliance duties. I will tell you what the system does and does "
+                "not cover, in writing.",
+    },
+    {
+        "slug": "gym-membership-app",
+        "glance": [
+            ("Type", "Mobile app + desk web"),
+            ("Build time", "About 6 weeks"),
+            ("Platforms", "iOS, Android, desk browser"),
+            ("Starts at", "₹20,000*"),
+        ],
+        "pains": [
+            "Memberships expire quietly and nobody follows up",
+            "Check-in is a register nobody fills in properly",
+            "Class capacity is managed by shouting",
+            "Renewal reminders depend on someone remembering",
+        ],
+        "category": "Mobile App",
+        "thumb": "a",
+        "title": "Gym Membership App",
+        "summary": "Digital membership, quick check-in, class booking and renewal "
+                   "reminders that actually go out.",
+        "situation": [
+            "A gym with about four hundred members tracks memberships in a "
+            "spreadsheet and check-ins in a register. Expiries are noticed late, "
+            "which means renewals are lost, which is the entire business.",
+            "Retention is the whole game here. The features that matter are the "
+            "ones that put the member back in the building: a renewal nudge "
+            "before expiry, and a class they have already booked.",
+        ],
+        "scope": [
+            ("Digital membership",
+             "Plan, start and end dates, and a member's own screen showing exactly "
+             "when it runs out."),
+            ("Fast check-in",
+             "A QR scan at the desk. Under two seconds, because there is a queue "
+             "at 7am."),
+            ("Class booking",
+             "Schedule, capacity, and a waitlist that promotes automatically when "
+             "someone cancels."),
+            ("Renewal reminders",
+             "Seven days out, on the day, and after expiry, with a payment link "
+             "in the message."),
+            ("Owner numbers",
+             "Active members, expiring this week, and attendance by hour. Enough "
+             "to staff the floor properly."),
+        ],
+        "excluded": [
+            "Workout plans and exercise libraries. Members already use apps for "
+            "that and yours will not beat them.",
+            "Wearable and fitness-tracker integrations.",
+            "Diet plans, which are a licensing question before they are a "
+            "software one.",
+        ],
+        "stack": [
+            ("Member app", "React Native, one codebase for both stores"),
+            ("Desk app", "A web app, since the desk has a browser and a scanner"),
+            ("Backend", "Node with Postgres"),
+            ("Check-in", "QR codes that rotate, so a screenshot cannot be passed "
+             "around the car park"),
+            ("Payments", "A gateway for renewals, with the link inside the reminder"),
+        ],
+        "timeline": [
+            ("Week 1", "Plans, freezes, transfers and the awkward cases the "
+                       "spreadsheet handles informally today."),
+            ("Weeks 2–4", "Member app, membership and check-in."),
+            ("Week 5", "Classes, capacity and waitlist."),
+            ("Week 6", "Reminders, payments, owner view, live."),
+        ],
+        "note": "App-store publishing adds about a week the first time and needs "
+                "developer accounts in your name, not mine — Apple charges "
+                "yearly, Google once. You keep ownership of both.",
+    },
+    {
+        "slug": "field-service-job-app",
+        "glance": [
+            ("Type", "Mobile app + dispatch web"),
+            ("Build time", "About 8 weeks"),
+            ("Platforms", "Android and iOS, offline-capable"),
+            ("Starts at", "₹20,000*"),
+        ],
+        "pains": [
+            "Jobs are assigned by phone call and forgotten",
+            "Proof of work is a photo in someone's personal WhatsApp",
+            "Invoices go out days after the job is done",
+            "Nobody knows which technician is free right now",
+        ],
+        "category": "Mobile App",
+        "thumb": "a",
+        "title": "Field Service Job App",
+        "summary": "Dispatch, on-site checklists, photo proof and an invoice "
+                   "raised before the technician leaves.",
+        "situation": [
+            "A service business — appliance repair, AC servicing, pest control "
+            "— runs a team of technicians. Jobs are assigned over the phone, "
+            "completion is reported by WhatsApp, and invoicing happens later from "
+            "memory. Payment slips by days for no reason other than paperwork.",
+            "Like the delivery app, this lives or dies on working without signal. "
+            "Technicians go into basements, lift shafts and buildings with no "
+            "coverage, and the job still has to be recorded.",
+        ],
+        "scope": [
+            ("Dispatch board",
+             "Today's jobs, who is free, and assignment by drag rather than by "
+             "phone call."),
+            ("Technician app, offline-first",
+             "The day's jobs download in the morning. Everything recorded on site "
+             "syncs when signal comes back."),
+            ("On-site checklist",
+             "Per job type, so the work is consistent and the parts used are "
+             "captured while the technician is still standing there."),
+            ("Proof of work",
+             "Before and after photos, plus a customer signature, timestamped and "
+             "attached to the job permanently."),
+            ("Invoice on completion",
+             "Generated from the checklist and parts, sent by WhatsApp before the "
+             "technician leaves the site."),
+        ],
+        "excluded": [
+            "Route optimisation across the whole team — buy it from a "
+            "specialist API when the volume justifies it.",
+            "Parts inventory across a warehouse. Start with what is on the van.",
+            "Customer self-service booking, until the dispatch side is steady.",
+        ],
+        "stack": [
+            ("Technician app", "React Native with an on-device database and a "
+             "sync queue — the bulk of the engineering"),
+            ("Dispatch board", "React, used on a desktop at the office"),
+            ("Backend", "Node with Postgres"),
+            ("Photos", "Compressed on the device before upload"),
+            ("Invoices", "GST-compliant, generated server-side so numbering can "
+             "never collide"),
+        ],
+        "timeline": [
+            ("Week 1", "Ride along with a technician for a day. This changes the "
+                       "design more than any meeting will."),
+            ("Weeks 2–5", "Technician app, offline storage and sync."),
+            ("Weeks 6–7", "Dispatch board and assignment."),
+            ("Week 8", "Invoicing, then two technicians run it live for a week."),
+        ],
+        "note": "Offline sync is the expensive part and the reason the app gets "
+                "used. If the budget forces a choice, cut features rather than "
+                "cutting offline — an app that needs signal will be abandoned in "
+                "the first basement.",
+    },
 ]
 
 
