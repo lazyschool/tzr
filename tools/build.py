@@ -45,7 +45,7 @@ BRAND_SVG = (
 )
 
 MAILTO = ("mailto:adil@humansofcoding.com"
-          "?subject=Free%20call%20request%20-%20HumansOfCoding")
+          "?subject=Free%20call%20request%20-%20Humans%20Of%20Coding")
 INSTAGRAM = "https://instagram.com/humansofcoding"
 
 # Both inline scripts are byte-identical to the ones in index.html, so the
@@ -112,11 +112,11 @@ def head(title, description, canonical, jsonld):
 
 <title>{title}</title>
 <meta name="description" content="{description}" />
-<meta name="author" content="Adil — HumansOfCoding" />
+<meta name="author" content="Adil — Humans Of Coding" />
 <link rel="canonical" href="{canonical}" />
 
 <meta property="og:type" content="article" />
-<meta property="og:site_name" content="HumansOfCoding" />
+<meta property="og:site_name" content="Humans Of Coding" />
 <meta property="og:title" content="{title}" />
 <meta property="og:description" content="{description}" />
 <meta property="og:url" content="{canonical}" />
@@ -154,9 +154,9 @@ def chrome_open(active):
 
 <header class="nav" id="nav">
   <div class="container nav__inner">
-    <a class="brand" href="../index.html" aria-label="HumansOfCoding home">
+    <a class="brand" href="../index.html" aria-label="Humans Of Coding home">
       <span class="brand__mark" aria-hidden="true">{brand}</span>
-      <span class="brand__text">HumansOfCoding</span>
+      <span class="brand__text">Humans Of Coding</span>
     </a>
 
 {primary}
@@ -237,9 +237,9 @@ CHROME_CLOSE = u'''</main>
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__brand">
-      <a class="brand" href="../index.html" aria-label="HumansOfCoding home">
+      <a class="brand" href="../index.html" aria-label="Humans Of Coding home">
         <span class="brand__mark" aria-hidden="true">{brand}</span>
-        <span class="brand__text">HumansOfCoding</span>
+        <span class="brand__text">Humans Of Coding</span>
       </a>
       <p class="footer__tag">Apps • Websites • Software</p>
     </div>
@@ -261,7 +261,7 @@ CHROME_CLOSE = u'''</main>
     </div>
   </div>
   <div class="container footer__bottom">
-    <p>© 2026 HumansOfCoding. All rights reserved.</p>
+    <p>© 2026 Humans Of Coding. All rights reserved.</p>
     <p class="footer__made">Built by humans, in code. <span aria-hidden="true">✏️</span></p>
   </div>
 </footer>
@@ -374,13 +374,13 @@ def case_study_page(cs, others):
   "@type": "CreativeWork",
   "name": "{title}",
   "abstract": "{summary}",
-  "creator": {{ "@type": "Organization", "name": "HumansOfCoding" }},
+  "creator": {{ "@type": "Organization", "name": "Humans Of Coding" }},
   "url": "{site}/case-studies/{slug}.html",
   "isAccessibleForFree": true,
-  "disambiguatingDescription": "Example build. HumansOfCoding is a new studio; this describes a project the studio is set up to deliver, not completed client work."
+  "disambiguatingDescription": "Example build. Humans Of Coding is a new studio; this describes a project the studio is set up to deliver, not completed client work."
 }}'''.format(title=plain, summary=cs["summary"], site=SITE, slug=cs["slug"])
 
-    out = [head("%s — Case Study | HumansOfCoding" % cs["title"],
+    out = [head("%s — Case Study | Humans Of Coding" % cs["title"],
                 cs["summary"],
                 "%s/case-studies/%s.html" % (SITE, cs["slug"]),
                 jsonld),
@@ -411,7 +411,7 @@ def case_study_page(cs, others):
 '''.format(d=(i * 6) + 4, label=label, value=value))
     glance.append('    </dl>\n\n')
     glance.append(u'''    <p class="note note--flag reveal" data-reveal><strong>This is an example build.</strong>
-    HumansOfCoding is a new studio with no client work to show yet. This page describes
+    Humans Of Coding is a new studio with no client work to show yet. This page describes
     how the project would be scoped and built — the same thinking you would get on a real
     one. Nothing here is a past client, and no number on this page is a result.</p>
 ''')
@@ -562,12 +562,12 @@ def case_studies_index():
     jsonld = u'''{
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": "Case Studies — HumansOfCoding",
-  "description": "Example builds showing how HumansOfCoding scopes and ships apps, websites and custom software.",
+  "name": "Case Studies — Humans Of Coding",
+  "description": "Example builds showing how Humans Of Coding scopes and ships apps, websites and custom software.",
   "url": "%s/case-studies/"
 }''' % SITE
 
-    out = [head("Case Studies — Example Builds | HumansOfCoding",
+    out = [head("Case Studies — Example Builds | Humans Of Coding",
                 "How we scope and build apps, websites, dashboards and MVPs — "
                 "six example builds with the scope, the stack, the timeline and "
                 "what we would deliberately leave out of version one.",
@@ -586,7 +586,7 @@ def case_studies_index():
                          "and how long it runs.", crumbs))
 
     inner = [u'''    <p class="note note--flag reveal" data-reveal><strong>Straight up: these are example builds.</strong>
-    HumansOfCoding is new, so none of these are past clients and nothing here is a
+    Humans Of Coding is new, so none of these are past clients and nothing here is a
     results claim. They're the products the studio is set up to ship, written out in
     the same detail you'd get on a real project. Yours would be the first on this wall.</p>
 
@@ -655,13 +655,13 @@ def article_page(art, others):
   "description": "{summary}",
   "datePublished": "{date}",
   "author": {{ "@type": "Person", "name": "Adil" }},
-  "publisher": {{ "@type": "Organization", "name": "HumansOfCoding" }},
+  "publisher": {{ "@type": "Organization", "name": "Humans Of Coding" }},
   "mainEntityOfPage": "{site}/articles/{slug}.html",
   "inLanguage": "en"
 }}'''.format(title=art["title"], summary=art["summary"], date=art["date"],
              site=SITE, slug=art["slug"])
 
-    out = [head("%s | HumansOfCoding" % art["title"], art["summary"],
+    out = [head("%s | Humans Of Coding" % art["title"], art["summary"],
                 "%s/articles/%s.html" % (SITE, art["slug"]), jsonld),
            chrome_open("articles")]
 
@@ -722,12 +722,12 @@ def articles_index():
     jsonld = u'''{
   "@context": "https://schema.org",
   "@type": "Blog",
-  "name": "Articles — HumansOfCoding",
+  "name": "Articles — Humans Of Coding",
   "description": "Plain-English writing about building software: MVPs, pricing, apps versus websites, and how AI actually fits into the work.",
   "url": "%s/articles/"
 }''' % SITE
 
-    out = [head("Articles — Plain-English Writing on Building Software | HumansOfCoding",
+    out = [head("Articles — Plain-English Writing on Building Software | Humans Of Coding",
                 "MVPs, what software actually costs, apps versus websites, and how "
                 "AI fits into real engineering. Written by Adil, no jargon.",
                 "%s/articles/" % SITE, jsonld),

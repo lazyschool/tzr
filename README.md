@@ -1,6 +1,6 @@
-# HumansOfCoding — Website
+# Humans Of Coding — Website
 
-Static marketing site for **HumansOfCoding** — apps, websites, MVPs and custom software.
+Static marketing site for **Humans Of Coding** — apps, websites, MVPs and custom software.
 Plain HTML, CSS and vanilla JavaScript. No build step, no framework, no server, no paid services.
 
 ```
@@ -57,7 +57,7 @@ const CONFIG = {
   instagram: "humansofcoding",
   email:     "adil@humansofcoding.com",
   emailSubject: "Project enquiry from humansofcoding.com",
-  callSubject: "Free call request - HumansOfCoding",
+  callSubject: "Free call request - Humans Of Coding",
   callBody: [ ...the pre-written email, one line per array entry... ],
   bookingUrl: ""                          // ← optional Cal.com / Calendly link
 };
@@ -108,7 +108,7 @@ When you land real client reviews, replace each `<blockquote>`, `.t__name` and `
 The six project cards each carry an **Example build** chip, and the section says outright that these
 are example builds rather than client work. As soon as you ship something real, replace that card's
 content and delete its `<span class="proj__flag">Example build</span>` chip. Once every card is real,
-drop the "Straight up: HumansOfCoding is new…" line from the section heading too.
+drop the "Straight up: Humans Of Coding is new…" line from the section heading too.
 
 ---
 
@@ -335,4 +335,4 @@ still load and the page looks correct. For an exact preview, run the local serve
 
 ---
 
-© 2026 HumansOfCoding.
+© 2026 Humans Of Coding.

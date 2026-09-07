@@ -2120,7 +2120,7 @@ ARTICLES = [
                    "decisions. Here is exactly where the line sits, and why it "
                    "sits there.",
         "body": [
-            ("p", "The studio is called HumansOfCoding, which is a claim I should "
+            ("p", "The studio is called Humans Of Coding, which is a claim I should "
                   "probably back up. AI is genuinely central to how fast I can "
                   "work. It is also nowhere near the thing making the decisions. "
                   "Here is the actual division of labour."),
