@@ -2130,10 +2130,10 @@ h1, h2, h3 {
   color: var(--fg-2);
 }
 .note strong { color: var(--fg); }
-.note--flag {
-  margin-top: clamp(22px, 4vw, 30px);
-  border-inline-start: 4px solid var(--accent);
-}
+.note--flag { border-inline-start: 4px solid var(--accent); }
+/* the band supplies the space above; only add more when copy precedes it */
+* + .note--flag { margin-top: clamp(22px, 4vw, 30px); }
+.container > .note--flag:first-child { margin-top: 0; }
 .note--price { background: var(--accent-soft); border-color: transparent; }
 
 .knowgrid {
@@ -2232,4 +2232,335 @@ h1, h2, h3 {
 
 @media (max-width: 560px) {
   .phero__actions .btn { width: 100%; }
+}
+
+/* ---------------- 15. CASE-STUDY MOCK-UPS ----------------
+   Stylised product screens, built from plain elements so they inherit every
+   theme and palette. Purely decorative: the markup is aria-hidden and the
+   surrounding copy says everything the picture does. */
+
+.mockwrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(16px, 3vw, 30px);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(120% 90% at 78% 8%, rgba(var(--accent-glow), .16), transparent 62%),
+    var(--bg-2);
+  border: 1.5px solid var(--line);
+}
+.section--alt .mockwrap { background:
+  radial-gradient(120% 90% at 78% 8%, rgba(var(--accent-glow), .16), transparent 62%),
+  var(--bg); }
+
+.mock {
+  width: 100%;
+  max-width: 420px;
+  border: 1.5px solid var(--line-strong);
+  border-radius: 14px;
+  background: var(--card);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+.mock--phone { max-width: 236px; border-radius: 26px; }
+
+/* window chrome */
+.mock__bar {
+  display: flex;
+  gap: 6px;
+  padding: 10px 12px;
+  border-bottom: 1.5px solid var(--line);
+  background: var(--bg-2);
+}
+.mock__bar i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--line-strong);
+}
+.mock__notch {
+  width: 74px;
+  height: 6px;
+  margin: 11px auto 0;
+  border-radius: 999px;
+  background: var(--line-strong);
+}
+
+.mock__body { padding: 14px; }
+.mock__split { display: grid; grid-template-columns: 42px 1fr; }
+
+/* sidebar */
+.mk-side {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  padding: 14px 8px;
+  border-inline-end: 1.5px solid var(--line);
+  background: var(--bg-2);
+}
+.mk-side__row { height: 7px; border-radius: 4px; background: var(--line-strong); }
+.mk-side__row.is-on { background: var(--accent); }
+
+/* generic text lines */
+.mk-line {
+  display: block;
+  height: 7px;
+  border-radius: 4px;
+  background: var(--line-strong);
+}
+.mk-line--title { height: 10px; background: var(--fg-2); }
+.mk-line--fade { opacity: .55; }
+
+.mk-head { margin-bottom: 12px; }
+.mk-cap {
+  margin: 8px 0 12px;
+  white-space: nowrap;
+  font-size: .54rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* order status stepper */
+.mk-steps { display: flex; align-items: center; gap: 0; }
+.mk-step {
+  flex: none;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 2px solid var(--line-strong);
+  background: var(--card);
+}
+.mk-step.is-done { border-color: var(--accent); background: var(--accent); }
+.mk-step.is-now {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(var(--accent-glow), .25);
+}
+.mk-rail { flex: 1; height: 2px; background: var(--line-strong); }
+.mk-rail.is-done { background: var(--accent); }
+
+/* list rows */
+.mk-list { display: grid; gap: 9px; }
+.mk-item { display: flex; align-items: center; gap: 8px; }
+.mk-sq {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  background: var(--accent-soft);
+}
+.mk-item .mk-line { flex: 1; }
+.mk-num {
+  flex: none;
+  width: 22px;
+  height: 7px;
+  border-radius: 4px;
+  background: var(--fg-2);
+  opacity: .6;
+}
+.mk-num--wide { width: 34px; opacity: 1; background: var(--accent); }
+
+.mk-total {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 11px;
+  border-top: 1.5px solid var(--line);
+}
+.mk-total .mk-line { flex: 1; }
+
+.mk-btn {
+  height: 26px;
+  margin-top: 12px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+.mk-btn--sm { flex: none; width: 44px; height: 18px; margin: 0; }
+
+/* stat tiles */
+.mk-tiles { display: grid; gap: 8px; margin-bottom: 12px; }
+.mk-tiles--3 { grid-template-columns: repeat(3, 1fr); }
+.mk-tile {
+  padding: 9px;
+  border: 1.5px solid var(--line);
+  border-radius: 9px;
+  background: var(--bg-2);
+}
+.mk-tile b {
+  display: block;
+  width: 60%;
+  height: 11px;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  background: var(--accent);
+}
+
+/* bar chart */
+.mk-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 68px;
+  margin-bottom: 12px;
+  padding-top: 4px;
+}
+.mk-chart span {
+  flex: 1;
+  height: var(--h);
+  border-radius: 4px 4px 0 0;
+  background: var(--accent-soft);
+  border-top: 2.5px solid var(--accent);
+}
+
+/* table */
+.mk-table { display: grid; gap: 1px; background: var(--line); border-radius: 8px; overflow: hidden; }
+.mk-tr {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 9px;
+  background: var(--card);
+}
+.mk-tr i { height: 6px; border-radius: 4px; background: var(--line-strong); }
+.mk-tr--head { background: var(--bg-2); }
+.mk-tr--head i { background: var(--fg-2); opacity: .5; }
+.mk-tag {
+  margin-inline-start: auto;
+  width: 26px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+.mk-tag--warn { background: var(--line-strong); }
+
+/* property cards */
+.mk-prop {
+  display: grid;
+  gap: 5px;
+  padding: 7px;
+  border: 1.5px solid var(--line);
+  border-radius: 9px;
+  background: var(--bg-2);
+}
+.mk-photo {
+  display: block;
+  height: 26px;
+  border-radius: 6px;
+  background: var(--accent-soft);
+  margin-bottom: 3px;
+}
+.mk-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding: 7px 9px;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+}
+.mk-search .mk-line { flex: 1; }
+
+/* map */
+.mk-map {
+  position: relative;
+  height: 132px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  background: var(--bg-2);
+  color: var(--accent);
+  overflow: hidden;
+}
+.mk-map svg { width: 100%; height: 100%; }
+.mk-route { stroke-dasharray: 5 6; }
+.mk-grid-line { stroke: var(--line-strong); }
+.mk-pin {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 2.5px solid var(--card);
+  background: var(--accent);
+}
+.mk-pin--a { left: 9%; bottom: 12%; }
+.mk-pin--b { right: 11%; top: 14%; background: var(--fg-2); }
+
+.mk-driver {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+}
+.mk-driver span { display: grid; gap: 5px; flex: 1; }
+.mk-avatar {
+  flex: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+}
+
+/* calendar */
+.mk-week { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin-bottom: 8px; }
+.mk-week i { height: 7px; border-radius: 4px; background: var(--fg-2); opacity: .45; }
+.mk-slots { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+.mk-slots span {
+  height: 17px;
+  border-radius: 5px;
+  border: 1.5px solid var(--line);
+  background: var(--bg-2);
+}
+.mk-slots span.is-taken { border-color: transparent; background: var(--accent); }
+
+/* --- the banner's two-column layout on a case study --- */
+.phero--split .phero__inner { max-width: none; }
+
+@media (min-width: 940px) {
+  .phero--split .phero__grid {
+    display: grid;
+    grid-template-columns: 1.06fr .94fr;
+    gap: clamp(28px, 4vw, 56px);
+    align-items: center;
+  }
+  .phero--split .phero__grid > * { min-width: 0; }
+}
+
+/* --- mock-up as a card thumbnail on the index --- */
+.post-card__mock {
+  /* a fixed preview height so every card's title starts on the same line,
+     whatever the natural height of the screen inside it */
+  height: 196px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 10px;
+  padding: 16px 16px 0;
+  border-radius: 14px;
+  background:
+    radial-gradient(120% 80% at 76% 6%, rgba(var(--accent-glow), .17), transparent 60%),
+    var(--bg-2);
+  overflow: hidden;
+}
+.section--alt .post-card__mock { background:
+  radial-gradient(120% 80% at 76% 6%, rgba(var(--accent-glow), .17), transparent 60%),
+  var(--bg); }
+
+/* the screen is a preview here, so it is scaled down and cropped at the fold */
+.mockbare { width: 100%; }
+.post-card__mock .mock {
+  width: 100%;
+  max-width: 100%;
+  transform: translateY(0);
+  transition: transform .45s var(--ease);
+}
+.post-card__mock .mock--phone { max-width: 190px; margin-inline: auto; }
+.post-card:hover .post-card__mock .mock { transform: translateY(-7px); }
+
+@media (prefers-reduced-motion: reduce) {
+  .post-card__mock .mock,
+  .post-card:hover .post-card__mock .mock { transition: none; transform: none; }
 }

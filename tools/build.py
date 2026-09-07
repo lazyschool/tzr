@@ -15,6 +15,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from content import CASE_STUDIES, ARTICLES  # noqa: E402
+from mocks import mock_for  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://humansofcoding.com"
@@ -162,8 +163,8 @@ def chrome_open(active):
     <nav class="nav__links" aria-label="Primary">
       <a href="../index.html#services">Services</a>
       <a href="../index.html#industries">Industries</a>
-      <a href="../case-studies/"{cs}>Case Studies</a>
-      <a href="../articles/"{ar}>Articles</a>
+      <a href="../case-studies/index.html"{cs}>Case Studies</a>
+      <a href="../articles/index.html"{ar}>Articles</a>
       <a href="../index.html#about">About</a>
     </nav>
 
@@ -230,8 +231,8 @@ def chrome_open(active):
     <a href="../index.html#human"><span>02</span> Human + AI</a>
     <a href="../index.html#industries"><span>03</span> Industries</a>
     <a href="../index.html#mvp"><span>04</span> MVP · ₹20,000</a>
-    <a href="../case-studies/"><span>05</span> Case Studies</a>
-    <a href="../articles/"><span>06</span> Articles</a>
+    <a href="../case-studies/index.html"><span>05</span> Case Studies</a>
+    <a href="../articles/index.html"><span>06</span> Articles</a>
     <a href="../index.html#about"><span>07</span> About Adil</a>
     <a href="../index.html#contact"><span>08</span> Contact</a>
     <div class="menu__cta">
@@ -261,8 +262,8 @@ CHROME_CLOSE = u'''</main>
     <nav class="footer__nav" aria-label="Footer">
       <a href="../index.html#services">Services</a>
       <a href="../index.html#mvp">MVP ₹20,000</a>
-      <a href="../case-studies/">Case Studies</a>
-      <a href="../articles/">Articles</a>
+      <a href="../case-studies/index.html">Case Studies</a>
+      <a href="../articles/index.html">Articles</a>
       <a href="../index.html#about">About</a>
       <a href="../index.html#contact">Contact</a>
     </nav>
@@ -326,13 +327,14 @@ def breadcrumb(section, section_url, current):
 # case studies
 # --------------------------------------------------------------------------
 
-def page_hero(eyebrow, title, lead, crumbs, chips="", meta="", actions=""):
+def page_hero(eyebrow, title, lead, crumbs, chips="", meta="", actions="", aside=""):
     """The banner band every sub-page opens with.
 
     It carries the same grid-and-blob backdrop as the home page hero, so a
     sub-page reads as part of the same site rather than a bolted-on blog.
     """
-    return u'''<section class="phero">
+    split = " phero--split" if aside else ""
+    return u'''<section class="phero{split}">
   <div class="phero__bg" aria-hidden="true">
     <span class="grid-fade"></span>
     <span class="blob blob--1"></span>
@@ -340,16 +342,21 @@ def page_hero(eyebrow, title, lead, crumbs, chips="", meta="", actions=""):
   </div>
   <div class="container phero__inner">
 {crumbs}
-    <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>{eyebrow}</p>
+    <div class="phero__grid">
+      <div>
+        <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>{eyebrow}</p>
 {chips}
-    <h1 class="phero__title reveal" data-reveal style="--d:.05s">{title}</h1>
-    <p class="phero__lead reveal" data-reveal style="--d:.1s">{lead}</p>
+        <h1 class="phero__title reveal" data-reveal style="--d:.05s">{title}</h1>
+        <p class="phero__lead reveal" data-reveal style="--d:.1s">{lead}</p>
 {meta}
 {actions}
+      </div>
+{aside}
+    </div>
   </div>
 </section>
-'''.format(crumbs=crumbs, eyebrow=eyebrow, chips=chips, title=title, lead=lead,
-           meta=meta, actions=actions)
+'''.format(split=split, crumbs=crumbs, eyebrow=eyebrow, chips=chips, title=title, lead=lead,
+           meta=meta, actions=actions, aside=aside)
 
 
 def band(inner, alt=False, extra="", ident=""):
@@ -395,17 +402,19 @@ def case_study_page(cs, others):
            chrome_open("case-studies")]
 
     # ---- banner -----------------------------------------------------------
-    crumbs = breadcrumb("Case Studies", "../case-studies/", cs["title"])
+    crumbs = breadcrumb("Case Studies", "../case-studies/index.html", cs["title"])
     chips = ('    <span class="chips reveal" data-reveal>'
              '<span class="proj__flag">Example build</span>'
              '<span class="proj__cat">%s</span></span>\n' % cs["category"])
     actions = u'''    <div class="phero__actions reveal" data-reveal style="--d:.16s">
       <a class="btn btn--primary btn--lg" data-link="call" href="{mailto}">Build something like this</a>
-      <a class="btn btn--outline btn--lg" href="../case-studies/">All case studies</a>
+      <a class="btn btn--outline btn--lg" href="../case-studies/index.html">All case studies</a>
     </div>
 '''.format(mailto=MAILTO)
+    aside = ('      <div class="phero__art reveal" data-reveal style="--d:.2s">'
+             '%s</div>\n' % mock_for(cs["slug"]))
     out.append(page_hero("CASE STUDY", cs["title"], cs["summary"],
-                         crumbs, chips=chips, actions=actions))
+                         crumbs, chips=chips, actions=actions, aside=aside))
 
     # ---- at a glance ------------------------------------------------------
     glance = ['    <dl class="glance">\n']
@@ -564,15 +573,13 @@ def case_studies_index():
 ''']
     for i, cs in enumerate(CASE_STUDIES):
         inner.append(u'''      <a class="card post-card reveal" data-reveal style="--d:.{d}s" href="{slug}.html">
-        <div class="post-card__thumb" aria-hidden="true">
-          <svg viewBox="0 0 200 150" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">{thumb}</svg>
-        </div>
+        <div class="post-card__mock">{mock}</div>
         <span class="chips"><span class="proj__flag">Example build</span><span class="proj__cat">{cat}</span></span>
         <h2>{title}</h2>
         <p>{summary}</p>
         <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
-'''.format(d=(i * 6) + 4, slug=cs["slug"], thumb=THUMBS[cs["thumb"]],
+'''.format(d=(i * 6) + 4, slug=cs["slug"], mock=mock_for(cs["slug"], bare=True),
            cat=cs["category"], title=cs["title"], summary=cs["summary"]))
     inner.append('    </div>\n')
     out.append(band("".join(inner), alt=True))
@@ -637,7 +644,7 @@ def article_page(art, others):
                 "%s/articles/%s.html" % (SITE, art["slug"]), jsonld),
            chrome_open("articles")]
 
-    crumbs = breadcrumb("Articles", "../articles/", art["title"])
+    crumbs = breadcrumb("Articles", "../articles/index.html", art["title"])
     chips = ('    <span class="chips reveal" data-reveal>'
              '<span class="proj__cat">%s</span></span>\n' % art["tag"])
     meta = u'''    <p class="phero__meta reveal" data-reveal style="--d:.14s">
