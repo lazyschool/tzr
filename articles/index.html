@@ -171,21 +171,29 @@
 </div>
 
 <main id="main">
-<section class="section page-hero">
-  <div class="container">
+<section class="phero">
+  <div class="phero__bg" aria-hidden="true">
+    <span class="grid-fade"></span>
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+  </div>
+  <div class="container phero__inner">
     <nav class="crumb" aria-label="Breadcrumb">
       <a href="../index.html">Home</a>
       <span aria-hidden="true">/</span>
       <span aria-current="page">Articles</span>
     </nav>
 
-    <div class="sec-head">
-      <span class="eyebrow"><i class="eyebrow__dot"></i>WRITING</span>
-      <h1 class="sec-title">Articles</h1>
-      <p class="sec-sub">What I've learned building software for eleven years, written
-      for the person paying for it rather than the person writing it.</p>
-    </div>
+    <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>WRITING</p>
 
+    <h1 class="phero__title reveal" data-reveal style="--d:.05s">Articles</h1>
+    <p class="phero__lead reveal" data-reveal style="--d:.1s">What I've learned building software for eleven years, written for the person paying for it rather than the person writing it.</p>
+
+
+  </div>
+</section>
+<section class="section section--alt">
+  <div class="container">
     <div class="cards post-grid">
       <a class="card post-card reveal" data-reveal style="--d:.4s" href="what-an-mvp-actually-is.html">
         <span class="proj__cat">Building</span>

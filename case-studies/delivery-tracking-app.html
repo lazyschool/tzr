@@ -174,8 +174,13 @@
 </div>
 
 <main id="main">
-<article class="doc">
-  <div class="container doc__head">
+<section class="phero">
+  <div class="phero__bg" aria-hidden="true">
+    <span class="grid-fade"></span>
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+  </div>
+  <div class="container phero__inner">
   <nav class="crumb" aria-label="Breadcrumb">
     <a href="../index.html">Home</a>
     <span aria-hidden="true">/</span>
@@ -183,98 +188,245 @@
     <span aria-hidden="true">/</span>
     <span aria-current="page">Delivery Tracking App</span>
   </nav>
-    <span class="chips"><span class="proj__flag">Example build</span><span class="proj__cat">Mobile App</span></span>
-    <h1 class="doc__title">Delivery Tracking App</h1>
-    <p class="doc__lead">Driver app with live location, proof-of-delivery photos and an owner-side status board.</p>
-    <div class="doc__thumb" aria-hidden="true">
-      <svg viewBox="0 0 200 150" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="72" y="16" width="56" height="118" rx="10"/><path d="M92 26h16"/><rect x="82" y="40" width="36" height="20" rx="5"/><path d="M82 70h36M82 80h24M82 90h30"/><rect x="82" y="104" width="36" height="14" rx="7"/></svg>
+
+    <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>CASE STUDY</p>
+    <span class="chips reveal" data-reveal><span class="proj__flag">Example build</span><span class="proj__cat">Mobile App</span></span>
+
+    <h1 class="phero__title reveal" data-reveal style="--d:.05s">Delivery Tracking App</h1>
+    <p class="phero__lead reveal" data-reveal style="--d:.1s">Driver app with live location, proof-of-delivery photos and an owner-side status board.</p>
+
+    <div class="phero__actions reveal" data-reveal style="--d:.16s">
+      <a class="btn btn--primary btn--lg" data-link="call" href="mailto:adil@humansofcoding.com?subject=Free%20call%20request%20-%20HumansOfCoding">Build something like this</a>
+      <a class="btn btn--outline btn--lg" href="../case-studies/">All case studies</a>
+    </div>
+
+  </div>
+</section>
+<section class="section section--alt section--glance">
+  <div class="container">
+    <dl class="glance">
+      <div class="glance__item reveal" data-reveal style="--d:.4s">
+        <dt>Type</dt>
+        <dd>Driver app + owner board</dd>
+      </div>
+      <div class="glance__item reveal" data-reveal style="--d:.10s">
+        <dt>Build time</dt>
+        <dd>About 8 weeks</dd>
+      </div>
+      <div class="glance__item reveal" data-reveal style="--d:.16s">
+        <dt>Platforms</dt>
+        <dd>Android and iOS, offline-capable</dd>
+      </div>
+      <div class="glance__item reveal" data-reveal style="--d:.22s">
+        <dt>Starts at</dt>
+        <dd>₹20,000*</dd>
+      </div>
+    </dl>
+
+    <p class="note note--flag reveal" data-reveal><strong>This is an example build.</strong>
+    HumansOfCoding is a new studio with no client work to show yet. This page describes
+    how the project would be scoped and built — the same thinking you would get on a real
+    one. Nothing here is a past client, and no number on this page is a result.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>THE SITUATION</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">What's actually broken.</h2>
+    </div>
+
+    <div class="split">
+      <div class="split__text">
+        <p class="reveal" data-reveal style="--d:.4s">A logistics operator runs a fleet of drivers and finds out where a consignment is by calling the driver. Proof of delivery is a signature on paper that reaches the office days later, and disputes about whether something arrived are settled from memory.</p>
+        <p class="reveal" data-reveal style="--d:.10s">The constraint that shapes the whole build is that drivers work in patchy network coverage. An app that only works online is not an app for drivers.</p>
+      </div>
+
+      <ul class="split__list">
+        <li class="prob reveal" data-reveal style="--d:.6s"><span class="prob__x" aria-hidden="true">✕</span><h3>Finding a consignment means phoning the driver</h3></li>
+        <li class="prob reveal" data-reveal style="--d:.12s"><span class="prob__x" aria-hidden="true">✕</span><h3>Proof of delivery is paper that arrives days later</h3></li>
+        <li class="prob reveal" data-reveal style="--d:.18s"><span class="prob__x" aria-hidden="true">✕</span><h3>Delivery disputes get settled from memory</h3></li>
+        <li class="prob reveal" data-reveal style="--d:.24s"><span class="prob__x" aria-hidden="true">✕</span><h3>Apps that need signal are useless in a dead zone</h3></li>
+      </ul>
     </div>
   </div>
+</section>
 
-  <div class="container prose">
-    <p class="note note--flag"><strong>This is an example build.</strong> HumansOfCoding
-    is a new studio and has no client work to show yet. This page describes how this
-    project would be scoped and built — the thinking you would get on a real one.
-    Nothing here is a past client, and no numbers on this page are results.</p>
+<section class="section section--alt">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>VERSION ONE</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd build first.</h2>
+      <p class="sec-sub reveal" data-reveal style="--d:.1s">Every item here earns its place by being something a real user would miss on day one.</p>
+    </div>
 
-    <h2>The situation</h2>
-    <p>A logistics operator runs a fleet of drivers and finds out where a consignment is by calling the driver. Proof of delivery is a signature on paper that reaches the office days later, and disputes about whether something arrived are settled from memory.</p>
-    <p>The constraint that shapes the whole build is that drivers work in patchy network coverage. An app that only works online is not an app for drivers.</p>
-
-    <h2>What we'd build first</h2>
-    <dl class="speclist">
-      <dt>Driver app, offline-first</dt>
-      <dd>The day's stops are downloaded in the morning. Everything a driver does is recorded on the device and syncs when signal returns. Nothing is lost in a basement or a highway dead zone.</dd>
-      <dt>Location tracking</dt>
-      <dd>Batched and sent periodically rather than streamed continuously — the difference between a phone that lasts a shift and one that dies at 2pm.</dd>
-      <dt>Proof of delivery</dt>
-      <dd>A photo and a recipient name, timestamped and location-stamped, attached to the consignment permanently.</dd>
-      <dt>Owner status board</dt>
-      <dd>Every active vehicle on one map, with delayed stops highlighted instead of buried in a list.</dd>
-      <dt>Customer tracking link</dt>
-      <dd>A link showing an ETA and no more. Customers do not need to see the driver's live position all day.</dd>
-    </dl>
-
-    <h2>What we'd leave out of version one</h2>
-    <p>Not because these are bad ideas — because each one is better designed once the first version has told you something.</p>
-    <ul>
-      <li>Route optimisation. A genuinely hard problem; buy it from a specialist API later rather than build it now.</li>
-      <li>Fuel, maintenance and driver payroll — a separate system.</li>
-      <li>Barcode scanning at each hop, unless the operation already labels consignments consistently.</li>
-    </ul>
-
-    <h2>How it's put together</h2>
-    <dl class="speclist speclist--tight">
-      <dt>Driver app</dt>
-      <dd>React Native with a local database on the device and a sync queue — this is where most of the engineering effort goes</dd>
-      <dt>Owner board</dt>
-      <dd>React with a mapping library</dd>
-      <dt>Backend</dt>
-      <dd>Node with Postgres and PostGIS for the location data</dd>
-      <dt>Photos</dt>
-      <dd>Compressed on the device before upload; drivers are often on mobile data they pay for</dd>
-    </dl>
-
-    <h2>Roughly how it runs</h2>
-    <ol class="steps">
-      <li><strong>Week 1</strong> The consignment lifecycle and what a driver does at each stop, watched in person if possible.</li>
-      <li><strong>Weeks 2–5</strong> Driver app, offline storage and sync. The long stretch.</li>
-      <li><strong>Weeks 6–7</strong> Owner board, map and delay alerts.</li>
-      <li><strong>Week 8</strong> Two drivers run it alongside paper for a week.</li>
-    </ol>
-
-    <p class="note"><strong>Worth knowing.</strong> Offline-first roughly doubles the effort of a driver app compared with an online-only one. It is also the difference between drivers using it and drivers going back to the phone call. Budget for it deliberately.</p>
-
-    <p class="note note--price">MVPs start at <strong>₹20,000*</strong>. Final pricing
-    depends on features and project scope. Third-party costs — cloud hosting, domains,
-    external libraries, APIs, app-store fees and any other paid service — are billed
-    separately and are not included.</p>
+    <div class="cards cards--3">
+      <article class="card card--service reveal" data-reveal style="--d:.4s">
+        <span class="card__num" aria-hidden="true">01</span>
+        <h3>Driver app, offline-first</h3>
+        <p>The day's stops are downloaded in the morning. Everything a driver does is recorded on the device and syncs when signal returns. Nothing is lost in a basement or a highway dead zone.</p>
+        <span class="card__corner" aria-hidden="true"></span>
+      </article>
+      <article class="card card--service reveal" data-reveal style="--d:.10s">
+        <span class="card__num" aria-hidden="true">02</span>
+        <h3>Location tracking</h3>
+        <p>Batched and sent periodically rather than streamed continuously — the difference between a phone that lasts a shift and one that dies at 2pm.</p>
+        <span class="card__corner" aria-hidden="true"></span>
+      </article>
+      <article class="card card--service reveal" data-reveal style="--d:.16s">
+        <span class="card__num" aria-hidden="true">03</span>
+        <h3>Proof of delivery</h3>
+        <p>A photo and a recipient name, timestamped and location-stamped, attached to the consignment permanently.</p>
+        <span class="card__corner" aria-hidden="true"></span>
+      </article>
+      <article class="card card--service reveal" data-reveal style="--d:.22s">
+        <span class="card__num" aria-hidden="true">04</span>
+        <h3>Owner status board</h3>
+        <p>Every active vehicle on one map, with delayed stops highlighted instead of buried in a list.</p>
+        <span class="card__corner" aria-hidden="true"></span>
+      </article>
+      <article class="card card--service reveal" data-reveal style="--d:.28s">
+        <span class="card__num" aria-hidden="true">05</span>
+        <h3>Customer tracking link</h3>
+        <p>A link showing an ETA and no more. Customers do not need to see the driver's live position all day.</p>
+        <span class="card__corner" aria-hidden="true"></span>
+      </article>
+    </div>
   </div>
+</section>
 
-  <div class="container related">
-    <h2 class="related__title">Other example builds</h2>
-    <div class="related__grid">
-      <a class="card post-card" href="booking-and-scheduling-mvp.html">
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>DELIBERATELY NOT IN V1</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd leave out.</h2>
+      <p class="sec-sub reveal" data-reveal style="--d:.1s">Not because these are bad ideas. Because each one is designed better once the first version has told you something.</p>
+    </div>
+
+    <ul class="cutlist">
+      <li class="reveal" data-reveal style="--d:.4s"><span class="cutlist__x" aria-hidden="true">✕</span><span>Route optimisation. A genuinely hard problem; buy it from a specialist API later rather than build it now.</span></li>
+      <li class="reveal" data-reveal style="--d:.10s"><span class="cutlist__x" aria-hidden="true">✕</span><span>Fuel, maintenance and driver payroll — a separate system.</span></li>
+      <li class="reveal" data-reveal style="--d:.16s"><span class="cutlist__x" aria-hidden="true">✕</span><span>Barcode scanning at each hop, unless the operation already labels consignments consistently.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>UNDER THE HOOD</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">How it's put together.</h2>
+    </div>
+
+    <dl class="stack">
+      <div class="stack__row reveal" data-reveal style="--d:.4s">
+        <dt>Driver app</dt>
+        <dd>React Native with a local database on the device and a sync queue — this is where most of the engineering effort goes</dd>
+      </div>
+      <div class="stack__row reveal" data-reveal style="--d:.9s">
+        <dt>Owner board</dt>
+        <dd>React with a mapping library</dd>
+      </div>
+      <div class="stack__row reveal" data-reveal style="--d:.14s">
+        <dt>Backend</dt>
+        <dd>Node with Postgres and PostGIS for the location data</dd>
+      </div>
+      <div class="stack__row reveal" data-reveal style="--d:.19s">
+        <dt>Photos</dt>
+        <dd>Compressed on the device before upload; drivers are often on mobile data they pay for</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>HOW IT RUNS</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">Week by week.</h2>
+    </div>
+
+    <ol class="timeline">
+      <span class="tl__line" aria-hidden="true"><i></i></span>
+      <li class="tl reveal" data-reveal style="--d:.4s">
+        <span class="tl__num">01</span>
+        <div class="tl__body">
+          <h3>Week 1</h3>
+          <p>The consignment lifecycle and what a driver does at each stop, watched in person if possible.</p>
+        </div>
+      </li>
+      <li class="tl reveal" data-reveal style="--d:.10s">
+        <span class="tl__num">02</span>
+        <div class="tl__body">
+          <h3>Weeks 2–5</h3>
+          <p>Driver app, offline storage and sync. The long stretch.</p>
+        </div>
+      </li>
+      <li class="tl reveal" data-reveal style="--d:.16s">
+        <span class="tl__num">03</span>
+        <div class="tl__body">
+          <h3>Weeks 6–7</h3>
+          <p>Owner board, map and delay alerts.</p>
+        </div>
+      </li>
+      <li class="tl reveal" data-reveal style="--d:.22s">
+        <span class="tl__num">04</span>
+        <div class="tl__body">
+          <h3>Week 8</h3>
+          <p>Two drivers run it alongside paper for a week.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>BEFORE YOU START</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">Worth knowing.</h2>
+    </div>
+
+    <div class="knowgrid">
+      <p class="note reveal" data-reveal>Offline-first roughly doubles the effort of a driver app compared with an online-only one. It is also the difference between drivers using it and drivers going back to the phone call. Budget for it deliberately.</p>
+      <p class="note note--price reveal" data-reveal style="--d:.08s">MVPs start at
+      <strong>₹20,000*</strong>. Final pricing depends on features and project scope.
+      Third-party costs — cloud hosting, domains, external libraries, APIs, app-store
+      fees and any other paid service — are billed separately and are not included.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>KEEP LOOKING</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">Other example builds.</h2>
+    </div>
+
+    <div class="cards post-grid">
+      <a class="card post-card reveal" data-reveal style="--d:.4s" href="booking-and-scheduling-mvp.html">
         <span class="proj__cat">MVP</span>
         <h3>Booking &amp; Scheduling MVP</h3>
         <p>Ships in weeks, not months: online booking, reminders and payments for a local service business.</p>
-        <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
+        <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card" href="restaurant-ordering-app.html">
+      <a class="card post-card reveal" data-reveal style="--d:.10s" href="restaurant-ordering-app.html">
         <span class="proj__cat">Mobile App</span>
         <h3>Restaurant Ordering App</h3>
         <p>Menu, cart, live order tracking and a simple kitchen dashboard for a multi-outlet restaurant.</p>
-        <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
+        <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card" href="coaching-management-platform.html">
+      <a class="card post-card reveal" data-reveal style="--d:.16s" href="coaching-management-platform.html">
         <span class="proj__cat">Web App</span>
         <h3>Coaching Management Platform</h3>
         <p>Batches, attendance, online tests and fee payments in one dashboard for students and staff.</p>
-        <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
+        <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
     </div>
   </div>
-</article>
+</section>
 
 <section class="cta">
   <div class="container cta__inner">

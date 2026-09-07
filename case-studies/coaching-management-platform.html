@@ -174,8 +174,13 @@
 </div>
 
 <main id="main">
-<article class="doc">
-  <div class="container doc__head">
+<section class="phero">
+  <div class="phero__bg" aria-hidden="true">
+    <span class="grid-fade"></span>
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+  </div>
+  <div class="container phero__inner">
   <nav class="crumb" aria-label="Breadcrumb">
     <a href="../index.html">Home</a>
     <span aria-hidden="true">/</span>
@@ -183,100 +188,249 @@
     <span aria-hidden="true">/</span>
     <span aria-current="page">Coaching Management Platform</span>
   </nav>
-    <span class="chips"><span class="proj__flag">Example build</span><span class="proj__cat">Web App</span></span>
-    <h1 class="doc__title">Coaching Management Platform</h1>
-    <p class="doc__lead">Batches, attendance, online tests and fee payments in one dashboard for students and staff.</p>
-    <div class="doc__thumb" aria-hidden="true">
-      <svg viewBox="0 0 200 150" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="26" y="24" width="148" height="102" rx="8"/><path d="M26 44h148"/><path d="M40 60h40M40 72h56M40 84h32"/><rect x="112" y="60" width="48" height="34" rx="6"/><rect x="40" y="98" width="40" height="12" rx="6"/></svg>
+
+    <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>CASE STUDY</p>
+    <span class="chips reveal" data-reveal><span class="proj__flag">Example build</span><span class="proj__cat">Web App</span></span>
+
+    <h1 class="phero__title reveal" data-reveal style="--d:.05s">Coaching Management Platform</h1>
+    <p class="phero__lead reveal" data-reveal style="--d:.1s">Batches, attendance, online tests and fee payments in one dashboard for students and staff.</p>
+
+    <div class="phero__actions reveal" data-reveal style="--d:.16s">
+      <a class="btn btn--primary btn--lg" data-link="call" href="mailto:adil@humansofcoding.com?subject=Free%20call%20request%20-%20HumansOfCoding">Build something like this</a>
+      <a class="btn btn--outline btn--lg" href="../case-studies/">All case studies</a>
+    </div>
+
+  </div>
+</section>
+<section class="section section--alt section--glance">
+  <div class="container">
+    <dl class="glance">
+      <div class="glance__item reveal" data-reveal style="--d:.4s">
+        <dt>Type</dt>
+        <dd>Web app, staff and parents</dd>
+      </div>
+      <div class="glance__item reveal" data-reveal style="--d:.10s">
+        <dt>Build time</dt>
+        <dd>About 8 weeks</dd>
+      </div>
+      <div class="glance__item reveal" data-reveal style="--d:.16s">
+        <dt>Platforms</dt>
+        <dd>Desktop and mobile browser</dd>
+      </div>
+      <div class="glance__item reveal" data-reveal style="--d:.22s">
+        <dt>Starts at</dt>
+        <dd>₹20,000*</dd>
+      </div>
+    </dl>
+
+    <p class="note note--flag reveal" data-reveal><strong>This is an example build.</strong>
+    HumansOfCoding is a new studio with no client work to show yet. This page describes
+    how the project would be scoped and built — the same thinking you would get on a real
+    one. Nothing here is a past client, and no number on this page is a result.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>THE SITUATION</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">What's actually broken.</h2>
+    </div>
+
+    <div class="split">
+      <div class="split__text">
+        <p class="reveal" data-reveal style="--d:.4s">A coaching institute runs eleven batches across two centres. Attendance is on paper, fees are tracked in a spreadsheet that one person owns, test scores are on WhatsApp, and parents phone the front desk to ask how their child is doing.</p>
+        <p class="reveal" data-reveal style="--d:.10s">Nothing here is technically difficult. The value is entirely in getting four scattered records into one place, and in the fee reminders going out on their own instead of when someone remembers.</p>
+      </div>
+
+      <ul class="split__list">
+        <li class="prob reveal" data-reveal style="--d:.6s"><span class="prob__x" aria-hidden="true">✕</span><h3>Attendance on paper, fees in one person's spreadsheet</h3></li>
+        <li class="prob reveal" data-reveal style="--d:.12s"><span class="prob__x" aria-hidden="true">✕</span><h3>Test scores scattered across WhatsApp groups</h3></li>
+        <li class="prob reveal" data-reveal style="--d:.18s"><span class="prob__x" aria-hidden="true">✕</span><h3>Parents phone the front desk for every update</h3></li>
+        <li class="prob reveal" data-reveal style="--d:.24s"><span class="prob__x" aria-hidden="true">✕</span><h3>Fee reminders go out when someone remembers</h3></li>
+      </ul>
     </div>
   </div>
+</section>
 
-  <div class="container prose">
-    <p class="note note--flag"><strong>This is an example build.</strong> HumansOfCoding
-    is a new studio and has no client work to show yet. This page describes how this
-    project would be scoped and built — the thinking you would get on a real one.
-    Nothing here is a past client, and no numbers on this page are results.</p>
+<section class="section section--alt">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>VERSION ONE</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd build first.</h2>
+      <p class="sec-sub reveal" data-reveal style="--d:.1s">Every item here earns its place by being something a real user would miss on day one.</p>
+    </div>
 
-    <h2>The situation</h2>
-    <p>A coaching institute runs eleven batches across two centres. Attendance is on paper, fees are tracked in a spreadsheet that one person owns, test scores are on WhatsApp, and parents phone the front desk to ask how their child is doing.</p>
-    <p>Nothing here is technically difficult. The value is entirely in getting four scattered records into one place, and in the fee reminders going out on their own instead of when someone remembers.</p>
-
-    <h2>What we'd build first</h2>
-    <dl class="speclist">
-      <dt>Batches and enrolment</dt>
-      <dd>Students, batches, subjects and the timetable. One student can sit in more than one batch without being entered twice.</dd>
-      <dt>Attendance</dt>
-      <dd>Marked from a teacher's phone in under a minute per class. Absentees generate a message to the parent the same evening.</dd>
-      <dt>Online tests</dt>
-      <dd>Objective tests with automatic scoring, a per-student score history and a batch-level view of which topics the class got wrong.</dd>
-      <dt>Fees</dt>
-      <dd>Instalment schedule per student, an online payment link, an automatic reminder before each due date, and a receipt the parent can keep.</dd>
-      <dt>Parent access</dt>
-      <dd>Read-only: attendance, test scores, fee status. This one screen removes most of the calls to the front desk.</dd>
-    </dl>
-
-    <h2>What we'd leave out of version one</h2>
-    <p>Not because these are bad ideas — because each one is better designed once the first version has told you something.</p>
-    <ul>
-      <li>Live video classes. Zoom or Meet already does this better than a custom build ever will — link them from the timetable instead.</li>
-      <li>A content library and recorded lectures. A big product on its own; worth doing after the operational side is running.</li>
-      <li>Subjective and handwritten answer evaluation.</li>
-    </ul>
-
-    <h2>How it's put together</h2>
-    <dl class="speclist speclist--tight">
-      <dt>Web app</dt>
-      <dd>React, used by staff on desktop and parents on phones</dd>
-      <dt>Backend</dt>
-      <dd>Node with Postgres — the data here is deeply relational and a relational database is the honest answer</dd>
-      <dt>Payments</dt>
-      <dd>A gateway with recurring-payment support for instalments</dd>
-      <dt>Messaging</dt>
-      <dd>A transactional SMS or WhatsApp Business provider for reminders</dd>
-      <dt>Hosting</dt>
-      <dd>A single cloud instance; this load does not need anything elaborate</dd>
-    </dl>
-
-    <h2>Roughly how it runs</h2>
-    <ol class="steps">
-      <li><strong>Week 1</strong> The data model: what a batch is, what happens when a student switches one, how a part payment is recorded.</li>
-      <li><strong>Weeks 2–4</strong> Batches, enrolment, attendance and the staff dashboard.</li>
-      <li><strong>Weeks 5–6</strong> Fees, payment links and automated reminders.</li>
-      <li><strong>Weeks 7–8</strong> Tests, scoring and the parent view.</li>
-    </ol>
-
-    <p class="note"><strong>Worth knowing.</strong> Every SMS and WhatsApp message costs a few paise, billed by the messaging provider directly to you. At a few thousand messages a month it is small, but it is a running cost and it is not included in the build price.</p>
-
-    <p class="note note--price">MVPs start at <strong>₹20,000*</strong>. Final pricing
-    depends on features and project scope. Third-party costs — cloud hosting, domains,
-    external libraries, APIs, app-store fees and any other paid service — are billed
-    separately and are not included.</p>
+    <div class="cards cards--3">
+      <article class="card card--service reveal" data-reveal style="--d:.4s">
+        <span class="card__num" aria-hidden="true">01</span>
+        <h3>Batches and enrolment</h3>
+        <p>Students, batches, subjects and the timetable. One student can sit in more than one batch without being entered twice.</p>
+        <span class="card__corner" aria-hidden="true"></span>
+      </article>
+      <article class="card card--service reveal" data-reveal style="--d:.10s">
+        <span class="card__num" aria-hidden="true">02</span>
+        <h3>Attendance</h3>
+        <p>Marked from a teacher's phone in under a minute per class. Absentees generate a message to the parent the same evening.</p>
+        <span class="card__corner" aria-hidden="true"></span>
+      </article>
+      <article class="card card--service reveal" data-reveal style="--d:.16s">
+        <span class="card__num" aria-hidden="true">03</span>
+        <h3>Online tests</h3>
+        <p>Objective tests with automatic scoring, a per-student score history and a batch-level view of which topics the class got wrong.</p>
+        <span class="card__corner" aria-hidden="true"></span>
+      </article>
+      <article class="card card--service reveal" data-reveal style="--d:.22s">
+        <span class="card__num" aria-hidden="true">04</span>
+        <h3>Fees</h3>
+        <p>Instalment schedule per student, an online payment link, an automatic reminder before each due date, and a receipt the parent can keep.</p>
+        <span class="card__corner" aria-hidden="true"></span>
+      </article>
+      <article class="card card--service reveal" data-reveal style="--d:.28s">
+        <span class="card__num" aria-hidden="true">05</span>
+        <h3>Parent access</h3>
+        <p>Read-only: attendance, test scores, fee status. This one screen removes most of the calls to the front desk.</p>
+        <span class="card__corner" aria-hidden="true"></span>
+      </article>
+    </div>
   </div>
+</section>
 
-  <div class="container related">
-    <h2 class="related__title">Other example builds</h2>
-    <div class="related__grid">
-      <a class="card post-card" href="business-automation-dashboard.html">
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>DELIBERATELY NOT IN V1</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd leave out.</h2>
+      <p class="sec-sub reveal" data-reveal style="--d:.1s">Not because these are bad ideas. Because each one is designed better once the first version has told you something.</p>
+    </div>
+
+    <ul class="cutlist">
+      <li class="reveal" data-reveal style="--d:.4s"><span class="cutlist__x" aria-hidden="true">✕</span><span>Live video classes. Zoom or Meet already does this better than a custom build ever will — link them from the timetable instead.</span></li>
+      <li class="reveal" data-reveal style="--d:.10s"><span class="cutlist__x" aria-hidden="true">✕</span><span>A content library and recorded lectures. A big product on its own; worth doing after the operational side is running.</span></li>
+      <li class="reveal" data-reveal style="--d:.16s"><span class="cutlist__x" aria-hidden="true">✕</span><span>Subjective and handwritten answer evaluation.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>UNDER THE HOOD</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">How it's put together.</h2>
+    </div>
+
+    <dl class="stack">
+      <div class="stack__row reveal" data-reveal style="--d:.4s">
+        <dt>Web app</dt>
+        <dd>React, used by staff on desktop and parents on phones</dd>
+      </div>
+      <div class="stack__row reveal" data-reveal style="--d:.9s">
+        <dt>Backend</dt>
+        <dd>Node with Postgres — the data here is deeply relational and a relational database is the honest answer</dd>
+      </div>
+      <div class="stack__row reveal" data-reveal style="--d:.14s">
+        <dt>Payments</dt>
+        <dd>A gateway with recurring-payment support for instalments</dd>
+      </div>
+      <div class="stack__row reveal" data-reveal style="--d:.19s">
+        <dt>Messaging</dt>
+        <dd>A transactional SMS or WhatsApp Business provider for reminders</dd>
+      </div>
+      <div class="stack__row reveal" data-reveal style="--d:.24s">
+        <dt>Hosting</dt>
+        <dd>A single cloud instance; this load does not need anything elaborate</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>HOW IT RUNS</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">Week by week.</h2>
+    </div>
+
+    <ol class="timeline">
+      <span class="tl__line" aria-hidden="true"><i></i></span>
+      <li class="tl reveal" data-reveal style="--d:.4s">
+        <span class="tl__num">01</span>
+        <div class="tl__body">
+          <h3>Week 1</h3>
+          <p>The data model: what a batch is, what happens when a student switches one, how a part payment is recorded.</p>
+        </div>
+      </li>
+      <li class="tl reveal" data-reveal style="--d:.10s">
+        <span class="tl__num">02</span>
+        <div class="tl__body">
+          <h3>Weeks 2–4</h3>
+          <p>Batches, enrolment, attendance and the staff dashboard.</p>
+        </div>
+      </li>
+      <li class="tl reveal" data-reveal style="--d:.16s">
+        <span class="tl__num">03</span>
+        <div class="tl__body">
+          <h3>Weeks 5–6</h3>
+          <p>Fees, payment links and automated reminders.</p>
+        </div>
+      </li>
+      <li class="tl reveal" data-reveal style="--d:.22s">
+        <span class="tl__num">04</span>
+        <div class="tl__body">
+          <h3>Weeks 7–8</h3>
+          <p>Tests, scoring and the parent view.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>BEFORE YOU START</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">Worth knowing.</h2>
+    </div>
+
+    <div class="knowgrid">
+      <p class="note reveal" data-reveal>Every SMS and WhatsApp message costs a few paise, billed by the messaging provider directly to you. At a few thousand messages a month it is small, but it is a running cost and it is not included in the build price.</p>
+      <p class="note note--price reveal" data-reveal style="--d:.08s">MVPs start at
+      <strong>₹20,000*</strong>. Final pricing depends on features and project scope.
+      Third-party costs — cloud hosting, domains, external libraries, APIs, app-store
+      fees and any other paid service — are billed separately and are not included.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>KEEP LOOKING</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">Other example builds.</h2>
+    </div>
+
+    <div class="cards post-grid">
+      <a class="card post-card reveal" data-reveal style="--d:.4s" href="business-automation-dashboard.html">
         <span class="proj__cat">Web App</span>
         <h3>Business Automation Dashboard</h3>
         <p>Replaces daily spreadsheet work with automated reports, alerts and role-based access.</p>
-        <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
+        <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card" href="real-estate-listing-portal.html">
+      <a class="card post-card reveal" data-reveal style="--d:.10s" href="real-estate-listing-portal.html">
         <span class="proj__cat">Website + CRM</span>
         <h3>Real Estate Listing Portal</h3>
         <p>Property search, enquiry capture and a lead pipeline a sales team will actually use.</p>
-        <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
+        <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card" href="delivery-tracking-app.html">
+      <a class="card post-card reveal" data-reveal style="--d:.16s" href="delivery-tracking-app.html">
         <span class="proj__cat">Mobile App</span>
         <h3>Delivery Tracking App</h3>
         <p>Driver app with live location, proof-of-delivery photos and an owner-side status board.</p>
-        <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
+        <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
     </div>
   </div>
-</article>
+</section>
 
 <section class="cta">
   <div class="container cta__inner">

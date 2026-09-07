@@ -18,6 +18,18 @@ logo or a results metric here until there is a real project behind it.
 CASE_STUDIES = [
     {
         "slug": "restaurant-ordering-app",
+        "glance": [
+            ("Type", "Mobile app + web dashboards"),
+            ("Build time", "About 7 weeks"),
+            ("Platforms", "iOS, Android, tablet"),
+            ("Starts at", "₹20,000*"),
+        ],
+        "pains": [
+            "Every repeat order pays 25–30% commission to an aggregator",
+            "Phone orders get written down wrong at peak time",
+            "No idea which outlet is behind until a customer complains",
+            "Sold-out items are only discovered after someone has paid",
+        ],
         "category": "Mobile App",
         "thumb": "a",
         "title": "Restaurant Ordering App",
@@ -81,6 +93,18 @@ CASE_STUDIES = [
     },
     {
         "slug": "coaching-management-platform",
+        "glance": [
+            ("Type", "Web app, staff and parents"),
+            ("Build time", "About 8 weeks"),
+            ("Platforms", "Desktop and mobile browser"),
+            ("Starts at", "₹20,000*"),
+        ],
+        "pains": [
+            "Attendance on paper, fees in one person's spreadsheet",
+            "Test scores scattered across WhatsApp groups",
+            "Parents phone the front desk for every update",
+            "Fee reminders go out when someone remembers",
+        ],
         "category": "Web App",
         "thumb": "b",
         "title": "Coaching Management Platform",
@@ -143,6 +167,18 @@ CASE_STUDIES = [
     },
     {
         "slug": "business-automation-dashboard",
+        "glance": [
+            ("Type", "Scheduled jobs + dashboard"),
+            ("Build time", "About 6 weeks"),
+            ("Platforms", "Browser, alerts to email or chat"),
+            ("Starts at", "₹20,000*"),
+        ],
+        "pains": [
+            "Two hours a day spent exporting and pasting",
+            "One person understands the master file",
+            "Six people read yesterday's numbers, not today's",
+            "Everyone sees everything, including margins",
+        ],
         "category": "Web App",
         "thumb": "b",
         "title": "Business Automation Dashboard",
@@ -206,6 +242,18 @@ CASE_STUDIES = [
     },
     {
         "slug": "real-estate-listing-portal",
+        "glance": [
+            ("Type", "Public website + CRM"),
+            ("Build time", "About 7 weeks"),
+            ("Platforms", "Browser, agents on mobile"),
+            ("Starts at", "₹20,000*"),
+        ],
+        "pains": [
+            "Paid leads sit unread in a shared mailbox",
+            "No record of who called whom, or when",
+            "Listings live on portals you do not control",
+            "Follow-ups depend on an agent remembering",
+        ],
         "category": "Website + CRM",
         "thumb": "c",
         "title": "Real Estate Listing Portal",
@@ -267,6 +315,18 @@ CASE_STUDIES = [
     },
     {
         "slug": "delivery-tracking-app",
+        "glance": [
+            ("Type", "Driver app + owner board"),
+            ("Build time", "About 8 weeks"),
+            ("Platforms", "Android and iOS, offline-capable"),
+            ("Starts at", "₹20,000*"),
+        ],
+        "pains": [
+            "Finding a consignment means phoning the driver",
+            "Proof of delivery is paper that arrives days later",
+            "Delivery disputes get settled from memory",
+            "Apps that need signal are useless in a dead zone",
+        ],
         "category": "Mobile App",
         "thumb": "a",
         "title": "Delivery Tracking App",
@@ -328,6 +388,18 @@ CASE_STUDIES = [
     },
     {
         "slug": "booking-and-scheduling-mvp",
+        "glance": [
+            ("Type", "Booking MVP"),
+            ("Build time", "About 4 weeks"),
+            ("Platforms", "One shareable link, any browser"),
+            ("Starts at", "₹20,000*"),
+        ],
+        "pains": [
+            "Bookings arrive by WhatsApp, phone and walk-in",
+            "Double bookings happen and cost goodwill",
+            "No-shows are absorbed silently",
+            "The desk cannot book and serve at the same time",
+        ],
         "category": "MVP",
         "thumb": "c",
         "title": "Booking &amp; Scheduling MVP",

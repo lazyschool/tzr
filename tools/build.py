@@ -326,7 +326,57 @@ def breadcrumb(section, section_url, current):
 # case studies
 # --------------------------------------------------------------------------
 
+def page_hero(eyebrow, title, lead, crumbs, chips="", meta="", actions=""):
+    """The banner band every sub-page opens with.
+
+    It carries the same grid-and-blob backdrop as the home page hero, so a
+    sub-page reads as part of the same site rather than a bolted-on blog.
+    """
+    return u'''<section class="phero">
+  <div class="phero__bg" aria-hidden="true">
+    <span class="grid-fade"></span>
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+  </div>
+  <div class="container phero__inner">
+{crumbs}
+    <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>{eyebrow}</p>
+{chips}
+    <h1 class="phero__title reveal" data-reveal style="--d:.05s">{title}</h1>
+    <p class="phero__lead reveal" data-reveal style="--d:.1s">{lead}</p>
+{meta}
+{actions}
+  </div>
+</section>
+'''.format(crumbs=crumbs, eyebrow=eyebrow, chips=chips, title=title, lead=lead,
+           meta=meta, actions=actions)
+
+
+def band(inner, alt=False, extra="", ident=""):
+    """One full-width section. Alternating backgrounds give the page its rhythm."""
+    classes = "section section--alt" if alt else "section"
+    if extra:
+        classes += " " + extra
+    return u'<section class="%s"%s>\n  <div class="container">\n%s  </div>\n</section>\n\n' % (
+        classes, (' id="%s"' % ident) if ident else "", inner)
+
+
+def band_head(eyebrow, title, sub=""):
+    out = u'''    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>{eyebrow}</p>
+      <h2 class="sec-title reveal" data-reveal style="--d:.05s">{title}</h2>
+'''.format(eyebrow=eyebrow, title=title)
+    if sub:
+        out += u'      <p class="sec-sub reveal" data-reveal style="--d:.1s">%s</p>\n' % sub
+    return out + u'    </div>\n\n'
+
+
+# --------------------------------------------------------------------------
+# case studies
+# --------------------------------------------------------------------------
+
 def case_study_page(cs, others):
+    plain = cs["title"].replace("&amp;", "and")
     jsonld = u'''{{
   "@context": "https://schema.org",
   "@type": "CreativeWork",
@@ -336,91 +386,142 @@ def case_study_page(cs, others):
   "url": "{site}/case-studies/{slug}.html",
   "isAccessibleForFree": true,
   "disambiguatingDescription": "Example build. HumansOfCoding is a new studio; this describes a project the studio is set up to deliver, not completed client work."
-}}'''.format(title=cs["title"].replace("&amp;", "and"), summary=cs["summary"],
-             site=SITE, slug=cs["slug"])
+}}'''.format(title=plain, summary=cs["summary"], site=SITE, slug=cs["slug"])
 
-    out = [head("%s — Case Study | HumansOfCoding" % cs["title"].replace("&amp;", "&amp;"),
+    out = [head("%s — Case Study | HumansOfCoding" % cs["title"],
                 cs["summary"],
                 "%s/case-studies/%s.html" % (SITE, cs["slug"]),
                 jsonld),
            chrome_open("case-studies")]
 
-    out.append(u'''<article class="doc">
-  <div class="container doc__head">
-''')
-    out.append(breadcrumb("Case Studies", "../case-studies/", cs["title"]))
-    out.append(u'''    <span class="chips"><span class="proj__flag">Example build</span><span class="proj__cat">{cat}</span></span>
-    <h1 class="doc__title">{title}</h1>
-    <p class="doc__lead">{summary}</p>
-    <div class="doc__thumb" aria-hidden="true">
-      <svg viewBox="0 0 200 150" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">{thumb}</svg>
+    # ---- banner -----------------------------------------------------------
+    crumbs = breadcrumb("Case Studies", "../case-studies/", cs["title"])
+    chips = ('    <span class="chips reveal" data-reveal>'
+             '<span class="proj__flag">Example build</span>'
+             '<span class="proj__cat">%s</span></span>\n' % cs["category"])
+    actions = u'''    <div class="phero__actions reveal" data-reveal style="--d:.16s">
+      <a class="btn btn--primary btn--lg" data-link="call" href="{mailto}">Build something like this</a>
+      <a class="btn btn--outline btn--lg" href="../case-studies/">All case studies</a>
     </div>
-  </div>
+'''.format(mailto=MAILTO)
+    out.append(page_hero("CASE STUDY", cs["title"], cs["summary"],
+                         crumbs, chips=chips, actions=actions))
 
-  <div class="container prose">
-    <p class="note note--flag"><strong>This is an example build.</strong> HumansOfCoding
-    is a new studio and has no client work to show yet. This page describes how this
-    project would be scoped and built — the thinking you would get on a real one.
-    Nothing here is a past client, and no numbers on this page are results.</p>
-
-    <h2>The situation</h2>
-'''.format(cat=cs["category"], title=cs["title"], summary=cs["summary"],
-           thumb=THUMBS[cs["thumb"]]))
-
-    for para in cs["situation"]:
-        out.append(u"    <p>%s</p>\n" % para)
-
-    out.append(u"\n    <h2>What we'd build first</h2>\n    <dl class=\"speclist\">\n")
-    for name, body in cs["scope"]:
-        out.append(u"      <dt>%s</dt>\n      <dd>%s</dd>\n" % (name, body))
-    out.append(u"    </dl>\n")
-
-    out.append(u"\n    <h2>What we'd leave out of version one</h2>\n"
-               u"    <p>Not because these are bad ideas — because each one is better "
-               u"designed once the first version has told you something.</p>\n    <ul>\n")
-    for item in cs["excluded"]:
-        out.append(u"      <li>%s</li>\n" % item)
-    out.append(u"    </ul>\n")
-
-    out.append(u"\n    <h2>How it's put together</h2>\n    <dl class=\"speclist speclist--tight\">\n")
-    for name, body in cs["stack"]:
-        out.append(u"      <dt>%s</dt>\n      <dd>%s</dd>\n" % (name, body))
-    out.append(u"    </dl>\n")
-
-    out.append(u"\n    <h2>Roughly how it runs</h2>\n    <ol class=\"steps\">\n")
-    for when, what in cs["timeline"]:
-        out.append(u"      <li><strong>%s</strong> %s</li>\n" % (when, what))
-    out.append(u"    </ol>\n")
-
-    out.append(u'\n    <p class="note"><strong>Worth knowing.</strong> %s</p>\n'
-               % cs["note"])
-
-    out.append(u'''
-    <p class="note note--price">MVPs start at <strong>₹20,000*</strong>. Final pricing
-    depends on features and project scope. Third-party costs — cloud hosting, domains,
-    external libraries, APIs, app-store fees and any other paid service — are billed
-    separately and are not included.</p>
-  </div>
-
-  <div class="container related">
-    <h2 class="related__title">Other example builds</h2>
-    <div class="related__grid">
+    # ---- at a glance ------------------------------------------------------
+    glance = ['    <dl class="glance">\n']
+    for i, (label, value) in enumerate(cs["glance"]):
+        glance.append(u'''      <div class="glance__item reveal" data-reveal style="--d:.{d}s">
+        <dt>{label}</dt>
+        <dd>{value}</dd>
+      </div>
+'''.format(d=(i * 6) + 4, label=label, value=value))
+    glance.append('    </dl>\n\n')
+    glance.append(u'''    <p class="note note--flag reveal" data-reveal><strong>This is an example build.</strong>
+    HumansOfCoding is a new studio with no client work to show yet. This page describes
+    how the project would be scoped and built — the same thinking you would get on a real
+    one. Nothing here is a past client, and no number on this page is a result.</p>
 ''')
-    for other in others:
-        out.append(u'''      <a class="card post-card" href="{slug}.html">
+    out.append(band("".join(glance), alt=True, extra="section--glance"))
+
+    # ---- the situation ----------------------------------------------------
+    inner = [band_head("THE SITUATION", "What's actually broken.")]
+    inner.append('    <div class="split">\n      <div class="split__text">\n')
+    for i, para in enumerate(cs["situation"]):
+        inner.append('        <p class="reveal" data-reveal style="--d:.%ds">%s</p>\n'
+                     % ((i * 6) + 4, para))
+    # not .problem__list: the home page pins that class into grid column 1,
+    # which would drop this list underneath the text instead of beside it
+    inner.append('      </div>\n\n      <ul class="split__list">\n')
+    for i, pain in enumerate(cs["pains"]):
+        inner.append('        <li class="prob reveal" data-reveal style="--d:.%ds">'
+                     '<span class="prob__x" aria-hidden="true">✕</span>'
+                     '<h3>%s</h3></li>\n' % ((i * 6) + 6, pain))
+    inner.append('      </ul>\n    </div>\n')
+    out.append(band("".join(inner)))
+
+    # ---- what we'd build --------------------------------------------------
+    inner = [band_head("VERSION ONE", "What we'd build first.",
+                       "Every item here earns its place by being something a real user "
+                       "would miss on day one.")]
+    inner.append('    <div class="cards cards--3">\n')
+    for i, (name, body) in enumerate(cs["scope"]):
+        inner.append(u'''      <article class="card card--service reveal" data-reveal style="--d:.{d}s">
+        <span class="card__num" aria-hidden="true">{n:02d}</span>
+        <h3>{name}</h3>
+        <p>{body}</p>
+        <span class="card__corner" aria-hidden="true"></span>
+      </article>
+'''.format(d=(i * 6) + 4, n=i + 1, name=name, body=body))
+    inner.append('    </div>\n')
+    out.append(band("".join(inner), alt=True))
+
+    # ---- what we'd leave out ----------------------------------------------
+    inner = [band_head("DELIBERATELY NOT IN V1", "What we'd leave out.",
+                       "Not because these are bad ideas. Because each one is designed "
+                       "better once the first version has told you something.")]
+    inner.append('    <ul class="cutlist">\n')
+    for i, item in enumerate(cs["excluded"]):
+        inner.append('      <li class="reveal" data-reveal style="--d:.%ds">'
+                     '<span class="cutlist__x" aria-hidden="true">✕</span>'
+                     '<span>%s</span></li>\n' % ((i * 6) + 4, item))
+    inner.append('    </ul>\n')
+    out.append(band("".join(inner)))
+
+    # ---- the stack --------------------------------------------------------
+    inner = [band_head("UNDER THE HOOD", "How it's put together.")]
+    inner.append('    <dl class="stack">\n')
+    for i, (name, body) in enumerate(cs["stack"]):
+        inner.append(u'''      <div class="stack__row reveal" data-reveal style="--d:.{d}s">
+        <dt>{name}</dt>
+        <dd>{body}</dd>
+      </div>
+'''.format(d=(i * 5) + 4, name=name, body=body))
+    inner.append('    </dl>\n')
+    out.append(band("".join(inner), alt=True))
+
+    # ---- timeline ---------------------------------------------------------
+    inner = [band_head("HOW IT RUNS", "Week by week.")]
+    inner.append('    <ol class="timeline">\n'
+                 '      <span class="tl__line" aria-hidden="true"><i></i></span>\n')
+    for i, (when, what) in enumerate(cs["timeline"]):
+        inner.append(u'''      <li class="tl reveal" data-reveal style="--d:.{d}s">
+        <span class="tl__num">{n:02d}</span>
+        <div class="tl__body">
+          <h3>{when}</h3>
+          <p>{what}</p>
+        </div>
+      </li>
+'''.format(d=(i * 6) + 4, n=i + 1, when=when, what=what))
+    inner.append('    </ol>\n')
+    out.append(band("".join(inner)))
+
+    # ---- worth knowing + price -------------------------------------------
+    inner = [band_head("BEFORE YOU START", "Worth knowing.")]
+    inner.append(u'''    <div class="knowgrid">
+      <p class="note reveal" data-reveal>{note}</p>
+      <p class="note note--price reveal" data-reveal style="--d:.08s">MVPs start at
+      <strong>₹20,000*</strong>. Final pricing depends on features and project scope.
+      Third-party costs — cloud hosting, domains, external libraries, APIs, app-store
+      fees and any other paid service — are billed separately and are not included.</p>
+    </div>
+'''.format(note=cs["note"]))
+    out.append(band("".join(inner), alt=True))
+
+    # ---- other builds -----------------------------------------------------
+    inner = [band_head("KEEP LOOKING", "Other example builds.")]
+    inner.append('    <div class="cards post-grid">\n')
+    for i, other in enumerate(others):
+        inner.append(u'''      <a class="card post-card reveal" data-reveal style="--d:.{d}s" href="{slug}.html">
         <span class="proj__cat">{cat}</span>
         <h3>{title}</h3>
         <p>{summary}</p>
-        <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
+        <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
-'''.format(slug=other["slug"], cat=other["category"], title=other["title"],
-           summary=other["summary"]))
+'''.format(d=(i * 6) + 4, slug=other["slug"], cat=other["category"],
+           title=other["title"], summary=other["summary"]))
+    inner.append('    </div>\n')
+    out.append(band("".join(inner)))
 
-    out.append(u'''    </div>
-  </div>
-</article>
-
-''')
     out.append(cta_block("Want this built for your business?",
                          "Tell us what you're thinking. We'll figure out the next step together."))
     out.append(CHROME_CLOSE)
@@ -443,31 +544,26 @@ def case_studies_index():
                 "%s/case-studies/" % SITE, jsonld),
            chrome_open("case-studies")]
 
-    out.append(u'''<section class="section page-hero">
-  <div class="container">
-''')
-    out.append(u'''    <nav class="crumb" aria-label="Breadcrumb">
+    crumbs = u'''    <nav class="crumb" aria-label="Breadcrumb">
       <a href="../index.html">Home</a>
       <span aria-hidden="true">/</span>
       <span aria-current="page">Case Studies</span>
     </nav>
-''')
-    out.append(u'''    <div class="sec-head">
-      <span class="eyebrow"><i class="eyebrow__dot"></i>WHAT WE BUILD</span>
-      <h1 class="sec-title">Case studies</h1>
-      <p class="sec-sub">Six builds, taken apart. What the business problem is, what
-      version one contains, what gets cut, how it's put together and how long it runs.</p>
-    </div>
+'''
+    out.append(page_hero("WHAT WE BUILD", "Case studies",
+                         "Six builds, taken apart. What the business problem is, what "
+                         "version one contains, what gets cut, how it's put together "
+                         "and how long it runs.", crumbs))
 
-    <p class="note note--flag"><strong>Straight up: these are example builds.</strong>
+    inner = [u'''    <p class="note note--flag reveal" data-reveal><strong>Straight up: these are example builds.</strong>
     HumansOfCoding is new, so none of these are past clients and nothing here is a
     results claim. They're the products the studio is set up to ship, written out in
     the same detail you'd get on a real project. Yours would be the first on this wall.</p>
 
     <div class="cards post-grid">
-''')
+''']
     for i, cs in enumerate(CASE_STUDIES):
-        out.append(u'''      <a class="card post-card reveal" data-reveal style="--d:.{d}s" href="{slug}.html">
+        inner.append(u'''      <a class="card post-card reveal" data-reveal style="--d:.{d}s" href="{slug}.html">
         <div class="post-card__thumb" aria-hidden="true">
           <svg viewBox="0 0 200 150" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">{thumb}</svg>
         </div>
@@ -478,21 +574,33 @@ def case_studies_index():
       </a>
 '''.format(d=(i * 6) + 4, slug=cs["slug"], thumb=THUMBS[cs["thumb"]],
            cat=cs["category"], title=cs["title"], summary=cs["summary"]))
+    inner.append('    </div>\n')
+    out.append(band("".join(inner), alt=True))
 
-    out.append(u'''    </div>
-  </div>
-</section>
-
+    inner = [band_head("HOW IT WORKS", "Every one of these starts the same way.")]
+    inner.append(u'''    <ol class="timeline">
+      <span class="tl__line" aria-hidden="true"><i></i></span>
+      <li class="tl reveal" data-reveal><span class="tl__num">01</span>
+        <div class="tl__body"><h3>Tell us your idea</h3>
+        <p>Book a free call and tell us what you want to build.</p></div></li>
+      <li class="tl reveal" data-reveal style="--d:.08s"><span class="tl__num">02</span>
+        <div class="tl__body"><h3>Plan</h3>
+        <p>We define the features, scope and best technical approach.</p></div></li>
+      <li class="tl reveal" data-reveal style="--d:.16s"><span class="tl__num">03</span>
+        <div class="tl__body"><h3>Build</h3>
+        <p>We design and develop your product.</p></div></li>
+      <li class="tl reveal" data-reveal style="--d:.24s"><span class="tl__num">04</span>
+        <div class="tl__body"><h3>Launch</h3>
+        <p>Get it in front of real users and start growing.</p></div></li>
+    </ol>
 ''')
+    out.append(band("".join(inner)))
+
     out.append(cta_block("Want to be project #001?",
                          "Tell us what you're thinking. We'll figure out the next step together."))
     out.append(CHROME_CLOSE)
     return "".join(out)
 
-
-# --------------------------------------------------------------------------
-# articles
-# --------------------------------------------------------------------------
 
 def render_blocks(blocks):
     out = []
@@ -529,49 +637,45 @@ def article_page(art, others):
                 "%s/articles/%s.html" % (SITE, art["slug"]), jsonld),
            chrome_open("articles")]
 
-    out.append(u'''<article class="doc">
-  <div class="container doc__head">
-''')
-    out.append(breadcrumb("Articles", "../articles/", art["title"]))
-    out.append(u'''    <span class="proj__cat">{tag}</span>
-    <h1 class="doc__title">{title}</h1>
-    <p class="doc__lead">{summary}</p>
-    <p class="doc__meta">
+    crumbs = breadcrumb("Articles", "../articles/", art["title"])
+    chips = ('    <span class="chips reveal" data-reveal>'
+             '<span class="proj__cat">%s</span></span>\n' % art["tag"])
+    meta = u'''    <p class="phero__meta reveal" data-reveal style="--d:.14s">
       <span>By Adil</span>
       <span aria-hidden="true">·</span>
       <time datetime="{date}">{date_label}</time>
       <span aria-hidden="true">·</span>
       <span>{read}</span>
     </p>
-  </div>
+'''.format(date=art["date"], date_label=art["date_label"], read=art["read"])
+    out.append(page_hero("ARTICLE", art["title"], art["summary"],
+                         crumbs, chips=chips, meta=meta))
 
-  <div class="container prose">
-'''.format(tag=art["tag"], title=art["title"], summary=art["summary"],
-           date=art["date"], date_label=art["date_label"], read=art["read"]))
-
+    # The body is the one place a narrow reading column is right, so it keeps
+    # its own band rather than being broken into more of them.
+    out.append(u'<section class="section section--read">\n  <div class="container prose">\n')
     out.append(render_blocks(art["body"]))
-
     out.append(u'''  </div>
+</section>
 
-  <div class="container related">
-    <h2 class="related__title">More articles</h2>
-    <div class="related__grid">
 ''')
-    for other in others:
-        out.append(u'''      <a class="card post-card" href="{slug}.html">
+
+    inner = [band_head("KEEP READING", "More articles.")]
+    inner.append('    <div class="cards post-grid">\n')
+    for i, other in enumerate(others):
+        inner.append(u'''      <a class="card post-card reveal" data-reveal style="--d:.{d}s" href="{slug}.html">
         <span class="proj__cat">{tag}</span>
         <h3>{title}</h3>
         <p>{summary}</p>
+        <p class="post-card__meta"><time datetime="{date}">{date_label}</time> · {read}</p>
         <span class="link-arrow">Read it <span aria-hidden="true">→</span></span>
       </a>
-'''.format(slug=other["slug"], tag=other["tag"], title=other["title"],
-           summary=other["summary"]))
+'''.format(d=(i * 6) + 4, slug=other["slug"], tag=other["tag"], title=other["title"],
+           summary=other["summary"], date=other["date"],
+           date_label=other["date_label"], read=other["read"]))
+    inner.append('    </div>\n')
+    out.append(band("".join(inner), alt=True))
 
-    out.append(u'''    </div>
-  </div>
-</article>
-
-''')
     out.append(cta_block("Got an idea you've been sitting on?",
                          "Book a free call. Worst case, you walk away with free advice on what to build first."))
     out.append(CHROME_CLOSE)
@@ -593,25 +697,20 @@ def articles_index():
                 "%s/articles/" % SITE, jsonld),
            chrome_open("articles")]
 
-    out.append(u'''<section class="section page-hero">
-  <div class="container">
-    <nav class="crumb" aria-label="Breadcrumb">
+    crumbs = u'''    <nav class="crumb" aria-label="Breadcrumb">
       <a href="../index.html">Home</a>
       <span aria-hidden="true">/</span>
       <span aria-current="page">Articles</span>
     </nav>
+'''
+    out.append(page_hero("WRITING", "Articles",
+                         "What I've learned building software for eleven years, "
+                         "written for the person paying for it rather than the person "
+                         "writing it.", crumbs))
 
-    <div class="sec-head">
-      <span class="eyebrow"><i class="eyebrow__dot"></i>WRITING</span>
-      <h1 class="sec-title">Articles</h1>
-      <p class="sec-sub">What I've learned building software for eleven years, written
-      for the person paying for it rather than the person writing it.</p>
-    </div>
-
-    <div class="cards post-grid">
-''')
+    inner = ['    <div class="cards post-grid">\n']
     for i, art in enumerate(ARTICLES):
-        out.append(u'''      <a class="card post-card reveal" data-reveal style="--d:.{d}s" href="{slug}.html">
+        inner.append(u'''      <a class="card post-card reveal" data-reveal style="--d:.{d}s" href="{slug}.html">
         <span class="proj__cat">{tag}</span>
         <h2>{title}</h2>
         <p>{summary}</p>
@@ -621,19 +720,14 @@ def articles_index():
 '''.format(d=(i * 6) + 4, slug=art["slug"], tag=art["tag"], title=art["title"],
            summary=art["summary"], date=art["date"], date_label=art["date_label"],
            read=art["read"]))
+    inner.append('    </div>\n')
+    out.append(band("".join(inner), alt=True))
 
-    out.append(u'''    </div>
-  </div>
-</section>
-
-''')
     out.append(cta_block("Rather just ask a person?",
                          "Book a free 20-minute call and ask whatever you like. No obligation."))
     out.append(CHROME_CLOSE)
     return "".join(out)
 
-
-# --------------------------------------------------------------------------
 
 def write(path, text):
     full = os.path.join(ROOT, path)
