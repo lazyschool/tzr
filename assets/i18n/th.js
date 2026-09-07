@@ -1,4 +1,4 @@
-/* HumansOfCoding — th translations. Loaded on demand.
+/* Humans Of Coding — th translations. Loaded on demand.
    Translated by AI; English is the authentic version. Each key is the
    exact English text on the page. See README section 2b. */
 window.HOC_I18N = window.HOC_I18N || {};
@@ -20,7 +20,7 @@ window.HOC_I18N["th"] = {
   "Apps, websites & software built for your business — from idea to launch.": "แอป เว็บไซต์ และซอฟต์แวร์สำหรับธุรกิจของคุณ — ตั้งแต่ไอเดียจนถึงเปิดตัว",
   "See What We Build": "ดูสิ่งที่เราสร้าง",
   "Free 20-min idea call · No obligation": "คุยฟรี 20 นาที · ไม่มีข้อผูกมัด",
-  "Hand-drawn illustration of Adil, founder of HumansOfCoding": "ภาพวาดมือของ Adil ผู้ก่อตั้ง HumansOfCoding",
+  "Hand-drawn illustration of Adil, founder of Humans Of Coding": "ภาพวาดมือของ Adil ผู้ก่อตั้ง Humans Of Coding",
   "Minimal line-art character looking at a floating app screen surrounded by idea, code, app and launch doodles.": "ตัวการ์ตูนลายเส้นเรียบง่ายกำลังมองหน้าจอแอปที่ลอยอยู่ ล้อมรอบด้วยภาพวาดไอเดีย โค้ด แอป และการเปิดตัว",
   "Launch": "เปิดตัว",
   "idea": "ไอเดีย",
@@ -40,7 +40,7 @@ window.HOC_I18N["th"] = {
   "WHAT WE DO": "สิ่งที่เราทำ",
   "You bring the idea.": "คุณนำไอเดียมา",
   "We handle the tech.": "เรื่องเทคโนโลยีให้เราจัดการ",
-  "From planning and design to development and launch, HumansOfCoding helps turn ideas into working digital products.": "ตั้งแต่วางแผนและออกแบบ ไปจนถึงพัฒนาและเปิดตัว HumansOfCoding เปลี่ยนไอเดียให้เป็นผลิตภัณฑ์ดิจิทัลที่ใช้งานได้จริง",
+  "From planning and design to development and launch, Humans Of Coding helps turn ideas into working digital products.": "ตั้งแต่วางแผนและออกแบบ ไปจนถึงพัฒนาและเปิดตัว Humans Of Coding เปลี่ยนไอเดียให้เป็นผลิตภัณฑ์ดิจิทัลที่ใช้งานได้จริง",
   "Mobile Apps": "แอปมือถือ",
   "iOS and Android applications built around your business.": "แอปพลิเคชัน iOS และ Android ที่สร้างขึ้นรอบธุรกิจของคุณ",
   "Websites": "เว็บไซต์",
@@ -102,8 +102,8 @@ window.HOC_I18N["th"] = {
   "Get it in front of real users and start growing.": "นำไปให้ผู้ใช้จริงได้ลอง แล้วเริ่มเติบโต",
   "founder": "ผู้ก่อตั้ง",
   "Hi, I'm Adil.": "สวัสดีครับ ผม Adil",
-  "I started HumansOfCoding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "ผมเริ่ม HumansOfCoding เพื่อช่วยผู้ประกอบการและธุรกิจเปลี่ยนไอเดียให้เป็นเทคโนโลยีจริง — โดยไม่ต้องซับซ้อนเกินจำเป็นและไม่ต้องลงทุนก้อนใหญ่ตั้งแต่แรก",
-  "HumansOfCoding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "HumansOfCoding คือการที่ผมนำมาตรฐานเดียวกันนั้นมาใช้กับไอเดียที่เล็กลง — สำหรับผู้ก่อตั้งและธุรกิจท้องถิ่นที่ปกติเข้าไม่ถึงงานวิศวกรรมแบบนี้ AI ช่วยให้ผมทำงานเร็วขึ้น แต่ไม่ได้ตัดสินว่าผลิตภัณฑ์ของคุณควรเป็นอะไร ส่วนนั้นยังคงเป็นการพูดคุยระหว่างคนสองคน",
+  "I started Humans Of Coding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "ผมเริ่ม Humans Of Coding เพื่อช่วยผู้ประกอบการและธุรกิจเปลี่ยนไอเดียให้เป็นเทคโนโลยีจริง — โดยไม่ต้องซับซ้อนเกินจำเป็นและไม่ต้องลงทุนก้อนใหญ่ตั้งแต่แรก",
+  "Humans Of Coding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Humans Of Coding คือการที่ผมนำมาตรฐานเดียวกันนั้นมาใช้กับไอเดียที่เล็กลง — สำหรับผู้ก่อตั้งและธุรกิจท้องถิ่นที่ปกติเข้าไม่ถึงงานวิศวกรรมแบบนี้ AI ช่วยให้ผมทำงานเร็วขึ้น แต่ไม่ได้ตัดสินว่าผลิตภัณฑ์ของคุณควรเป็นอะไร ส่วนนั้นยังคงเป็นการพูดคุยระหว่างคนสองคน",
   "building & leading": "สร้างและนำทีม",
   "cloud, data & AI": "คลาวด์ ข้อมูล และ AI",
   "human-reviewed code": "โค้ดที่มนุษย์ตรวจสอบ",
@@ -111,7 +111,7 @@ window.HOC_I18N["th"] = {
   "Book a free call": "จองคุยฟรี",
   "WHAT WE BUILD": "เราสร้างอะไร",
   "The kind of ideas we bring to life.": "ไอเดียแบบที่เราทำให้เป็นจริง",
-  "Straight up: HumansOfCoding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "พูดตรง ๆ: HumansOfCoding ยังใหม่ สิ่งเหล่านี้จึงเป็นตัวอย่างผลงาน — ผลิตภัณฑ์ที่เราพร้อมส่งมอบ — ไม่ใช่งานของลูกค้า งานของคุณจะเป็นชิ้นแรกบนกำแพงนี้",
+  "Straight up: Humans Of Coding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "พูดตรง ๆ: Humans Of Coding ยังใหม่ สิ่งเหล่านี้จึงเป็นตัวอย่างผลงาน — ผลิตภัณฑ์ที่เราพร้อมส่งมอบ — ไม่ใช่งานของลูกค้า งานของคุณจะเป็นชิ้นแรกบนกำแพงนี้",
   "Example build": "ตัวอย่างผลงาน",
   "Mobile App": "แอปมือถือ",
   "Restaurant Ordering App": "แอปสั่งอาหารสำหรับร้านอาหาร",
@@ -154,9 +154,9 @@ window.HOC_I18N["th"] = {
   "Email": "อีเมล",
   "Write to us": "เขียนหาเรา",
   "Apps • Websites • Software": "แอป • เว็บไซต์ • ซอฟต์แวร์",
-  "© 2026 HumansOfCoding. All rights reserved.": "© 2026 HumansOfCoding สงวนลิขสิทธิ์",
+  "© 2026 Humans Of Coding. All rights reserved.": "© 2026 Humans Of Coding สงวนลิขสิทธิ์",
   "Built by humans, in code.": "สร้างโดยมนุษย์ ด้วยโค้ด",
-  "HumansOfCoding home": "หน้าแรก HumansOfCoding",
+  "Humans Of Coding home": "หน้าแรก Humans Of Coding",
   "Primary": "เมนูหลัก",
   "Switch colour theme": "สลับธีมสี",
   "Open menu": "เปิดเมนู",

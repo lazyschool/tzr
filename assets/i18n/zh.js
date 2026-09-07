@@ -1,4 +1,4 @@
-/* HumansOfCoding — zh translations. Loaded on demand.
+/* Humans Of Coding — zh translations. Loaded on demand.
    Translated by AI; English is the authentic version. */
 window.HOC_I18N = window.HOC_I18N || {};
 window.HOC_I18N["zh"] = {
@@ -19,7 +19,7 @@ window.HOC_I18N["zh"] = {
   "Apps, websites & software built for your business — from idea to launch.": "为你的业务打造应用、网站与软件——从想法到上线。",
   "See What We Build": "看看我们做什么",
   "Free 20-min idea call · No obligation": "20 分钟免费沟通 · 无任何约束",
-  "Hand-drawn illustration of Adil, founder of HumansOfCoding": "HumansOfCoding 创始人 Adil 的手绘插画",
+  "Hand-drawn illustration of Adil, founder of Humans Of Coding": "Humans Of Coding 创始人 Adil 的手绘插画",
   "Minimal line-art character looking at a floating app screen surrounded by idea, code, app and launch doodles.": "极简线条人物望着悬浮的应用界面，周围是想法、代码、应用和上线的涂鸦。",
   "Launch": "上线",
   "idea": "想法",
@@ -39,7 +39,7 @@ window.HOC_I18N["zh"] = {
   "WHAT WE DO": "我们做什么",
   "You bring the idea.": "想法由你提出。",
   "We handle the tech.": "技术交给我们。",
-  "From planning and design to development and launch, HumansOfCoding helps turn ideas into working digital products.": "从规划、设计到开发与上线，HumansOfCoding 把想法变成真正能用的数字产品。",
+  "From planning and design to development and launch, Humans Of Coding helps turn ideas into working digital products.": "从规划、设计到开发与上线，Humans Of Coding 把想法变成真正能用的数字产品。",
   "Mobile Apps": "移动应用",
   "iOS and Android applications built around your business.": "围绕你的业务打造的 iOS 与 Android 应用。",
   "Websites": "网站",
@@ -101,8 +101,8 @@ window.HOC_I18N["zh"] = {
   "Get it in front of real users and start growing.": "把它交到真实用户手中，开始成长。",
   "founder": "创始人",
   "Hi, I'm Adil.": "你好，我是 Adil。",
-  "I started HumansOfCoding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "我创办 HumansOfCoding，是为了帮助创业者和企业把想法变成真正的技术——不必要的复杂和高昂的前期投入都可以省去。",
-  "HumansOfCoding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "HumansOfCoding 是我把同样的标准用在更小的想法上：那些通常接触不到这种工程能力的创业者和本地商家。AI 让我做得更快，但它不决定你的产品该是什么样子。那部分始终是两个人之间的对话。",
+  "I started Humans Of Coding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "我创办 Humans Of Coding，是为了帮助创业者和企业把想法变成真正的技术——不必要的复杂和高昂的前期投入都可以省去。",
+  "Humans Of Coding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Humans Of Coding 是我把同样的标准用在更小的想法上：那些通常接触不到这种工程能力的创业者和本地商家。AI 让我做得更快，但它不决定你的产品该是什么样子。那部分始终是两个人之间的对话。",
   "building & leading": "开发与带队",
   "cloud, data & AI": "云、数据与 AI",
   "human-reviewed code": "经人审阅的代码",
@@ -110,7 +110,7 @@ window.HOC_I18N["zh"] = {
   "Book a free call": "预约免费通话",
   "WHAT WE BUILD": "我们做些什么",
   "The kind of ideas we bring to life.": "我们会把这类想法变成现实。",
-  "Straight up: HumansOfCoding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "实话实说：HumansOfCoding 刚起步，所以这些是示例作品——我们已经准备好交付的产品，而不是客户项目。你的项目会是这面墙上的第一个。",
+  "Straight up: Humans Of Coding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "实话实说：Humans Of Coding 刚起步，所以这些是示例作品——我们已经准备好交付的产品，而不是客户项目。你的项目会是这面墙上的第一个。",
   "Example build": "示例作品",
   "Mobile App": "移动应用",
   "Restaurant Ordering App": "餐厅点餐应用",
@@ -153,9 +153,9 @@ window.HOC_I18N["zh"] = {
   "Email": "邮箱",
   "Write to us": "给我们写信",
   "Apps • Websites • Software": "应用 • 网站 • 软件",
-  "© 2026 HumansOfCoding. All rights reserved.": "© 2026 HumansOfCoding. 保留所有权利。",
+  "© 2026 Humans Of Coding. All rights reserved.": "© 2026 Humans Of Coding. 保留所有权利。",
   "Built by humans, in code.": "由人写成，以代码呈现。",
-  "HumansOfCoding home": "HumansOfCoding 首页",
+  "Humans Of Coding home": "Humans Of Coding 首页",
   "Primary": "主导航",
   "Switch colour theme": "切换配色主题",
   "Open menu": "打开菜单",

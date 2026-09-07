@@ -1,4 +1,4 @@
-/* HumansOfCoding — pa translations. Loaded on demand.
+/* Humans Of Coding — pa translations. Loaded on demand.
    Translated by AI; English is the authentic version. Keys are the exact
    English text on the page. See README section 2b. */
 window.HOC_I18N = window.HOC_I18N || {};
@@ -20,7 +20,7 @@ window.HOC_I18N["pa"] = {
   "Apps, websites & software built for your business — from idea to launch.": "ਤੁਹਾਡੇ ਕਾਰੋਬਾਰ ਲਈ ਐਪਸ, ਵੈੱਬਸਾਈਟਾਂ ਅਤੇ ਸਾਫਟਵੇਅਰ — ਵਿਚਾਰ ਤੋਂ ਲਾਂਚ ਤੱਕ।",
   "See What We Build": "ਵੇਖੋ ਅਸੀਂ ਕੀ ਬਣਾਉਂਦੇ ਹਾਂ",
   "Free 20-min idea call · No obligation": "ਮੁਫ਼ਤ 20-ਮਿੰਟ ਦੀ ਵਿਚਾਰ ਕਾਲ · ਕੋਈ ਜ਼ਿੰਮੇਵਾਰੀ ਨਹੀਂ",
-  "Hand-drawn illustration of Adil, founder of HumansOfCoding": "HumansOfCoding ਦੇ ਸੰਸਥਾਪਕ ਆਦਿਲ ਦੀ ਹੱਥ ਨਾਲ ਬਣਾਈ ਤਸਵੀਰ",
+  "Hand-drawn illustration of Adil, founder of Humans Of Coding": "Humans Of Coding ਦੇ ਸੰਸਥਾਪਕ ਆਦਿਲ ਦੀ ਹੱਥ ਨਾਲ ਬਣਾਈ ਤਸਵੀਰ",
   "Minimal line-art character looking at a floating app screen surrounded by idea, code, app and launch doodles.": "ਵਿਚਾਰ, ਕੋਡ, ਐਪ ਅਤੇ ਲਾਂਚ ਦੀਆਂ ਤਸਵੀਰਾਂ ਨਾਲ ਘਿਰੀ ਤੈਰਦੀ ਐਪ ਸਕ੍ਰੀਨ ਨੂੰ ਵੇਖਦਾ ਸਧਾਰਨ ਰੇਖਾ-ਚਿੱਤਰ ਪਾਤਰ।",
   "Launch": "ਲਾਂਚ",
   "idea": "ਵਿਚਾਰ",
@@ -40,7 +40,7 @@ window.HOC_I18N["pa"] = {
   "WHAT WE DO": "ਅਸੀਂ ਕੀ ਕਰਦੇ ਹਾਂ",
   "You bring the idea.": "ਵਿਚਾਰ ਤੁਸੀਂ ਲਿਆਓ।",
   "We handle the tech.": "ਤਕਨਾਲੋਜੀ ਅਸੀਂ ਸੰਭਾਲਦੇ ਹਾਂ।",
-  "From planning and design to development and launch, HumansOfCoding helps turn ideas into working digital products.": "ਯੋਜਨਾ ਅਤੇ ਡਿਜ਼ਾਈਨ ਤੋਂ ਲੈ ਕੇ ਵਿਕਾਸ ਅਤੇ ਲਾਂਚ ਤੱਕ, HumansOfCoding ਵਿਚਾਰਾਂ ਨੂੰ ਕੰਮ ਕਰਦੇ ਡਿਜੀਟਲ ਉਤਪਾਦਾਂ ਵਿੱਚ ਬਦਲਣ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ।",
+  "From planning and design to development and launch, Humans Of Coding helps turn ideas into working digital products.": "ਯੋਜਨਾ ਅਤੇ ਡਿਜ਼ਾਈਨ ਤੋਂ ਲੈ ਕੇ ਵਿਕਾਸ ਅਤੇ ਲਾਂਚ ਤੱਕ, Humans Of Coding ਵਿਚਾਰਾਂ ਨੂੰ ਕੰਮ ਕਰਦੇ ਡਿਜੀਟਲ ਉਤਪਾਦਾਂ ਵਿੱਚ ਬਦਲਣ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ।",
   "Mobile Apps": "ਮੋਬਾਈਲ ਐਪਸ",
   "iOS and Android applications built around your business.": "ਤੁਹਾਡੇ ਕਾਰੋਬਾਰ ਦੇ ਦੁਆਲੇ ਬਣਾਈਆਂ iOS ਅਤੇ Android ਐਪਲੀਕੇਸ਼ਨਾਂ।",
   "Websites": "ਵੈੱਬਸਾਈਟਾਂ",
@@ -102,8 +102,8 @@ window.HOC_I18N["pa"] = {
   "Get it in front of real users and start growing.": "ਇਸਨੂੰ ਅਸਲੀ ਵਰਤੋਂਕਾਰਾਂ ਸਾਹਮਣੇ ਲਿਆਓ ਅਤੇ ਵਧਣਾ ਸ਼ੁਰੂ ਕਰੋ।",
   "founder": "ਸੰਸਥਾਪਕ",
   "Hi, I'm Adil.": "ਹੈਲੋ, ਮੈਂ ਆਦਿਲ ਹਾਂ।",
-  "I started HumansOfCoding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "ਮੈਂ HumansOfCoding ਇਸ ਲਈ ਸ਼ੁਰੂ ਕੀਤਾ ਤਾਂ ਜੋ ਉੱਦਮੀਆਂ ਅਤੇ ਕਾਰੋਬਾਰਾਂ ਨੂੰ ਬੇਲੋੜੀ ਗੁੰਝਲਦਾਰੀ ਜਾਂ ਵੱਡੇ ਸ਼ੁਰੂਆਤੀ ਖਰਚਿਆਂ ਤੋਂ ਬਿਨਾਂ ਆਪਣੇ ਵਿਚਾਰਾਂ ਨੂੰ ਅਸਲੀ ਤਕਨਾਲੋਜੀ ਵਿੱਚ ਬਦਲਣ ਵਿੱਚ ਮਦਦ ਮਿਲੇ।",
-  "HumansOfCoding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "HumansOfCoding ਮੈਂ ਹਾਂ, ਉਸੇ ਮਿਆਰ ਨੂੰ ਛੋਟੇ ਵਿਚਾਰਾਂ ਵੱਲ ਮੋੜਦਾ ਹੋਇਆ — ਉਹ ਸੰਸਥਾਪਕ ਅਤੇ ਸਥਾਨਕ ਕਾਰੋਬਾਰ ਜੋ ਆਮ ਤੌਰ 'ਤੇ ਅਜਿਹੀ ਇੰਜੀਨੀਅਰਿੰਗ ਦੇ ਨੇੜੇ ਨਹੀਂ ਪਹੁੰਚ ਸਕਦੇ। AI ਮੈਨੂੰ ਤੇਜ਼ ਚੱਲਣ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ; ਇਹ ਤੈਅ ਨਹੀਂ ਕਰਦਾ ਕਿ ਤੁਹਾਡਾ ਉਤਪਾਦ ਕੀ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ। ਉਹ ਹਿੱਸਾ ਦੋ ਲੋਕਾਂ ਵਿਚਕਾਰ ਗੱਲਬਾਤ ਹੀ ਰਹਿੰਦਾ ਹੈ।",
+  "I started Humans Of Coding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "ਮੈਂ Humans Of Coding ਇਸ ਲਈ ਸ਼ੁਰੂ ਕੀਤਾ ਤਾਂ ਜੋ ਉੱਦਮੀਆਂ ਅਤੇ ਕਾਰੋਬਾਰਾਂ ਨੂੰ ਬੇਲੋੜੀ ਗੁੰਝਲਦਾਰੀ ਜਾਂ ਵੱਡੇ ਸ਼ੁਰੂਆਤੀ ਖਰਚਿਆਂ ਤੋਂ ਬਿਨਾਂ ਆਪਣੇ ਵਿਚਾਰਾਂ ਨੂੰ ਅਸਲੀ ਤਕਨਾਲੋਜੀ ਵਿੱਚ ਬਦਲਣ ਵਿੱਚ ਮਦਦ ਮਿਲੇ।",
+  "Humans Of Coding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Humans Of Coding ਮੈਂ ਹਾਂ, ਉਸੇ ਮਿਆਰ ਨੂੰ ਛੋਟੇ ਵਿਚਾਰਾਂ ਵੱਲ ਮੋੜਦਾ ਹੋਇਆ — ਉਹ ਸੰਸਥਾਪਕ ਅਤੇ ਸਥਾਨਕ ਕਾਰੋਬਾਰ ਜੋ ਆਮ ਤੌਰ 'ਤੇ ਅਜਿਹੀ ਇੰਜੀਨੀਅਰਿੰਗ ਦੇ ਨੇੜੇ ਨਹੀਂ ਪਹੁੰਚ ਸਕਦੇ। AI ਮੈਨੂੰ ਤੇਜ਼ ਚੱਲਣ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ; ਇਹ ਤੈਅ ਨਹੀਂ ਕਰਦਾ ਕਿ ਤੁਹਾਡਾ ਉਤਪਾਦ ਕੀ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ। ਉਹ ਹਿੱਸਾ ਦੋ ਲੋਕਾਂ ਵਿਚਕਾਰ ਗੱਲਬਾਤ ਹੀ ਰਹਿੰਦਾ ਹੈ।",
   "building & leading": "ਬਣਾਉਣਾ ਅਤੇ ਅਗਵਾਈ",
   "cloud, data & AI": "ਕਲਾਊਡ, ਡੇਟਾ ਅਤੇ AI",
   "human-reviewed code": "ਮਨੁੱਖ ਦੁਆਰਾ ਪਰਖਿਆ ਕੋਡ",
@@ -111,7 +111,7 @@ window.HOC_I18N["pa"] = {
   "Book a free call": "ਮੁਫ਼ਤ ਕਾਲ ਬੁੱਕ ਕਰੋ",
   "WHAT WE BUILD": "ਅਸੀਂ ਕੀ ਬਣਾਉਂਦੇ ਹਾਂ",
   "The kind of ideas we bring to life.": "ਉਹ ਵਿਚਾਰ ਜਿਨ੍ਹਾਂ ਨੂੰ ਅਸੀਂ ਜੀਵਨ ਦਿੰਦੇ ਹਾਂ।",
-  "Straight up: HumansOfCoding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "ਸਿੱਧੀ ਗੱਲ: HumansOfCoding ਨਵਾਂ ਹੈ, ਇਸ ਲਈ ਇਹ ਉਦਾਹਰਨ ਪ੍ਰੋਜੈਕਟ ਹਨ — ਉਹ ਉਤਪਾਦ ਜੋ ਅਸੀਂ ਬਣਾਉਣ ਲਈ ਤਿਆਰ ਹਾਂ — ਗਾਹਕਾਂ ਦਾ ਕੰਮ ਨਹੀਂ। ਇਸ ਕੰਧ 'ਤੇ ਤੁਹਾਡਾ ਪਹਿਲਾ ਹੋਵੇਗਾ।",
+  "Straight up: Humans Of Coding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "ਸਿੱਧੀ ਗੱਲ: Humans Of Coding ਨਵਾਂ ਹੈ, ਇਸ ਲਈ ਇਹ ਉਦਾਹਰਨ ਪ੍ਰੋਜੈਕਟ ਹਨ — ਉਹ ਉਤਪਾਦ ਜੋ ਅਸੀਂ ਬਣਾਉਣ ਲਈ ਤਿਆਰ ਹਾਂ — ਗਾਹਕਾਂ ਦਾ ਕੰਮ ਨਹੀਂ। ਇਸ ਕੰਧ 'ਤੇ ਤੁਹਾਡਾ ਪਹਿਲਾ ਹੋਵੇਗਾ।",
   "Example build": "ਉਦਾਹਰਨ ਪ੍ਰੋਜੈਕਟ",
   "Mobile App": "ਮੋਬਾਈਲ ਐਪ",
   "Restaurant Ordering App": "ਰੈਸਟੋਰੈਂਟ ਆਰਡਰਿੰਗ ਐਪ",
@@ -154,9 +154,9 @@ window.HOC_I18N["pa"] = {
   "Email": "ਈਮੇਲ",
   "Write to us": "ਸਾਨੂੰ ਲਿਖੋ",
   "Apps • Websites • Software": "ਐਪਸ • ਵੈੱਬਸਾਈਟਾਂ • ਸਾਫਟਵੇਅਰ",
-  "© 2026 HumansOfCoding. All rights reserved.": "© 2026 HumansOfCoding। ਸਾਰੇ ਹੱਕ ਰਾਖਵੇਂ ਹਨ।",
+  "© 2026 Humans Of Coding. All rights reserved.": "© 2026 Humans Of Coding। ਸਾਰੇ ਹੱਕ ਰਾਖਵੇਂ ਹਨ।",
   "Built by humans, in code.": "ਮਨੁੱਖਾਂ ਦੁਆਰਾ ਬਣਾਇਆ, ਕੋਡ ਵਿੱਚ।",
-  "HumansOfCoding home": "HumansOfCoding ਹੋਮ",
+  "Humans Of Coding home": "Humans Of Coding ਹੋਮ",
   "Primary": "ਮੁੱਖ",
   "Switch colour theme": "ਰੰਗ ਥੀਮ ਬਦਲੋ",
   "Open menu": "ਮੀਨੂ ਖੋਲ੍ਹੋ",

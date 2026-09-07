@@ -1,4 +1,4 @@
-/* HumansOfCoding — ja translations. Loaded on demand.
+/* Humans Of Coding — ja translations. Loaded on demand.
    Translated by AI; English is the authentic version. Each key is the
    exact English text on the page. See README section 2b. */
 window.HOC_I18N = window.HOC_I18N || {};
@@ -20,7 +20,7 @@ window.HOC_I18N["ja"] = {
   "Apps, websites & software built for your business — from idea to launch.": "ビジネスのためのアプリ・ウェブサイト・ソフトウェアを、アイデアからリリースまで。",
   "See What We Build": "制作事例を見る",
   "Free 20-min idea call · No obligation": "20分の無料相談 · 契約義務なし",
-  "Hand-drawn illustration of Adil, founder of HumansOfCoding": "HumansOfCoding創業者Adilの手描きイラスト",
+  "Hand-drawn illustration of Adil, founder of Humans Of Coding": "Humans Of Coding創業者Adilの手描きイラスト",
   "Minimal line-art character looking at a floating app screen surrounded by idea, code, app and launch doodles.": "アイデア、コード、アプリ、ローンチの落書きに囲まれ、浮かぶアプリ画面を見つめるミニマルな線画のキャラクター。",
   "Launch": "ローンチ",
   "idea": "アイデア",
@@ -40,7 +40,7 @@ window.HOC_I18N["ja"] = {
   "WHAT WE DO": "できること",
   "You bring the idea.": "アイデアはあなたが。",
   "We handle the tech.": "技術は私たちが。",
-  "From planning and design to development and launch, HumansOfCoding helps turn ideas into working digital products.": "企画・デザインから開発・ローンチまで、HumansOfCodingはアイデアを実際に動くデジタルプロダクトに変えます。",
+  "From planning and design to development and launch, Humans Of Coding helps turn ideas into working digital products.": "企画・デザインから開発・ローンチまで、Humans Of Codingはアイデアを実際に動くデジタルプロダクトに変えます。",
   "Mobile Apps": "モバイルアプリ",
   "iOS and Android applications built around your business.": "あなたのビジネスに合わせたiOS・Androidアプリ。",
   "Websites": "ウェブサイト",
@@ -102,8 +102,8 @@ window.HOC_I18N["ja"] = {
   "Get it in front of real users and start growing.": "実際のユーザーに届けて、成長を始めましょう。",
   "founder": "創業者",
   "Hi, I'm Adil.": "こんにちは、Adilです。",
-  "I started HumansOfCoding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "HumansOfCodingは、起業家や企業がアイデアを実際の技術に変えられるように — 不必要な複雑さも、多額の初期費用もなく — という思いで始めました。",
-  "HumansOfCoding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "HumansOfCodingは、その同じ基準をより小さなアイデアに向ける試みです — 通常こうしたエンジニアリングに手が届かない起業家や地域のお店のために。AIは速く動く助けにはなりますが、プロダクトが何であるべきかは決めません。そこは人と人との対話のままです。",
+  "I started Humans Of Coding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "Humans Of Codingは、起業家や企業がアイデアを実際の技術に変えられるように — 不必要な複雑さも、多額の初期費用もなく — という思いで始めました。",
+  "Humans Of Coding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Humans Of Codingは、その同じ基準をより小さなアイデアに向ける試みです — 通常こうしたエンジニアリングに手が届かない起業家や地域のお店のために。AIは速く動く助けにはなりますが、プロダクトが何であるべきかは決めません。そこは人と人との対話のままです。",
   "building & leading": "開発とチーム統率",
   "cloud, data & AI": "クラウド・データ・AI",
   "human-reviewed code": "人間がレビューしたコード",
@@ -111,7 +111,7 @@ window.HOC_I18N["ja"] = {
   "Book a free call": "無料相談を予約",
   "WHAT WE BUILD": "制作するもの",
   "The kind of ideas we bring to life.": "かたちにするアイデアの例。",
-  "Straight up: HumansOfCoding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "正直に言うと、HumansOfCodingは新しいスタジオです。ここに並ぶのは実際の受注案件ではなく、私たちが対応できるプロダクトの例です。あなたの案件が最初の一件になります。",
+  "Straight up: Humans Of Coding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "正直に言うと、Humans Of Codingは新しいスタジオです。ここに並ぶのは実際の受注案件ではなく、私たちが対応できるプロダクトの例です。あなたの案件が最初の一件になります。",
   "Example build": "制作例",
   "Mobile App": "モバイルアプリ",
   "Restaurant Ordering App": "飲食店向け注文アプリ",
@@ -154,9 +154,9 @@ window.HOC_I18N["ja"] = {
   "Email": "メール",
   "Write to us": "メールを送る",
   "Apps • Websites • Software": "アプリ • ウェブサイト • ソフトウェア",
-  "© 2026 HumansOfCoding. All rights reserved.": "© 2026 HumansOfCoding. All rights reserved.",
+  "© 2026 Humans Of Coding. All rights reserved.": "© 2026 Humans Of Coding. All rights reserved.",
   "Built by humans, in code.": "人間が、コードで作りました。",
-  "HumansOfCoding home": "HumansOfCoding ホーム",
+  "Humans Of Coding home": "Humans Of Coding ホーム",
   "Primary": "メインナビゲーション",
   "Switch colour theme": "配色テーマを切り替え",
   "Open menu": "メニューを開く",

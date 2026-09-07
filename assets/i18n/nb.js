@@ -1,4 +1,4 @@
-/* HumansOfCoding — nb translations. Loaded on demand.
+/* Humans Of Coding — nb translations. Loaded on demand.
    Translated by AI; English is the authentic version. Each key is the
    exact English text on the page. See README section 2b. */
 window.HOC_I18N = window.HOC_I18N || {};
@@ -20,7 +20,7 @@ window.HOC_I18N["nb"] = {
   "Apps, websites & software built for your business — from idea to launch.": "Apper, nettsider og programvare for virksomheten din — fra idé til lansering.",
   "See What We Build": "Se hva vi bygger",
   "Free 20-min idea call · No obligation": "Gratis 20-minutters samtale · Helt uforpliktende",
-  "Hand-drawn illustration of Adil, founder of HumansOfCoding": "Håndtegnet illustrasjon av Adil, grunnleggeren av HumansOfCoding",
+  "Hand-drawn illustration of Adil, founder of Humans Of Coding": "Håndtegnet illustrasjon av Adil, grunnleggeren av Humans Of Coding",
   "Minimal line-art character looking at a floating app screen surrounded by idea, code, app and launch doodles.": "Minimalistisk strekfigur som ser på en svevende appskjerm, omgitt av tegninger av idé, kode, app og lansering.",
   "Launch": "Lanser",
   "idea": "idé",
@@ -40,7 +40,7 @@ window.HOC_I18N["nb"] = {
   "WHAT WE DO": "HVA VI GJØR",
   "You bring the idea.": "Du kommer med idéen.",
   "We handle the tech.": "Vi tar oss av teknologien.",
-  "From planning and design to development and launch, HumansOfCoding helps turn ideas into working digital products.": "Fra planlegging og design til utvikling og lansering gjør HumansOfCoding idéer om til digitale produkter som faktisk fungerer.",
+  "From planning and design to development and launch, Humans Of Coding helps turn ideas into working digital products.": "Fra planlegging og design til utvikling og lansering gjør Humans Of Coding idéer om til digitale produkter som faktisk fungerer.",
   "Mobile Apps": "Mobilapper",
   "iOS and Android applications built around your business.": "iOS- og Android-apper bygget rundt virksomheten din.",
   "Websites": "Nettsider",
@@ -102,8 +102,8 @@ window.HOC_I18N["nb"] = {
   "Get it in front of real users and start growing.": "Få det ut til ekte brukere og begynn å vokse.",
   "founder": "grunnlegger",
   "Hi, I'm Adil.": "Hei, jeg heter Adil.",
-  "I started HumansOfCoding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "Jeg startet HumansOfCoding for å hjelpe gründere og bedrifter med å gjøre idéene sine til ekte teknologi — uten unødvendig kompleksitet og uten store kostnader i starten.",
-  "HumansOfCoding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "HumansOfCoding er min måte å rette den samme standarden mot mindre idéer — mot gründere og lokale bedrifter som vanligvis ikke kommer i nærheten av denne typen ingeniørarbeid. KI hjelper meg å jobbe raskt; den bestemmer ikke hva produktet ditt skal være. Den delen forblir en samtale mellom to mennesker.",
+  "I started Humans Of Coding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "Jeg startet Humans Of Coding for å hjelpe gründere og bedrifter med å gjøre idéene sine til ekte teknologi — uten unødvendig kompleksitet og uten store kostnader i starten.",
+  "Humans Of Coding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Humans Of Coding er min måte å rette den samme standarden mot mindre idéer — mot gründere og lokale bedrifter som vanligvis ikke kommer i nærheten av denne typen ingeniørarbeid. KI hjelper meg å jobbe raskt; den bestemmer ikke hva produktet ditt skal være. Den delen forblir en samtale mellom to mennesker.",
   "building & leading": "bygge og lede",
   "cloud, data & AI": "sky, data og KI",
   "human-reviewed code": "kode gjennomgått av mennesker",
@@ -111,7 +111,7 @@ window.HOC_I18N["nb"] = {
   "Book a free call": "Book en gratis samtale",
   "WHAT WE BUILD": "HVA VI BYGGER",
   "The kind of ideas we bring to life.": "Idéene vi gjør til virkelighet.",
-  "Straight up: HumansOfCoding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "Ærlig talt: HumansOfCoding er nytt, så dette er eksempelprosjekter — produktene vi er klare til å levere — ikke kundeoppdrag. Ditt ville blitt det første på denne veggen.",
+  "Straight up: Humans Of Coding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "Ærlig talt: Humans Of Coding er nytt, så dette er eksempelprosjekter — produktene vi er klare til å levere — ikke kundeoppdrag. Ditt ville blitt det første på denne veggen.",
   "Example build": "Eksempelprosjekt",
   "Mobile App": "Mobilapp",
   "Restaurant Ordering App": "Bestillingsapp for restaurant",
@@ -154,9 +154,9 @@ window.HOC_I18N["nb"] = {
   "Email": "E-post",
   "Write to us": "Skriv til oss",
   "Apps • Websites • Software": "Apper • Nettsider • Programvare",
-  "© 2026 HumansOfCoding. All rights reserved.": "© 2026 HumansOfCoding. Alle rettigheter forbeholdt.",
+  "© 2026 Humans Of Coding. All rights reserved.": "© 2026 Humans Of Coding. Alle rettigheter forbeholdt.",
   "Built by humans, in code.": "Laget av mennesker, i kode.",
-  "HumansOfCoding home": "HumansOfCoding hjem",
+  "Humans Of Coding home": "Humans Of Coding hjem",
   "Primary": "Hovednavigasjon",
   "Switch colour theme": "Bytt fargetema",
   "Open menu": "Åpne menyen",

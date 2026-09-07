@@ -1,4 +1,4 @@
-/* HumansOfCoding — kk translations. Loaded on demand.
+/* Humans Of Coding — kk translations. Loaded on demand.
    Translated by AI; English is the authentic version. Each key is the
    exact English text on the page. See README section 2b. */
 window.HOC_I18N = window.HOC_I18N || {};
@@ -20,7 +20,7 @@ window.HOC_I18N["kk"] = {
   "Apps, websites & software built for your business — from idea to launch.": "Бизнесіңізге арналған қосымшалар, сайттар және бағдарламалық қамтым — идеядан іске қосуға дейін.",
   "See What We Build": "Не жасайтынымызды көру",
   "Free 20-min idea call · No obligation": "Тегін 20 минуттық әңгіме · Міндеттемесіз",
-  "Hand-drawn illustration of Adil, founder of HumansOfCoding": "HumansOfCoding негізін қалаушы Адилдің қолмен салынған суреті",
+  "Hand-drawn illustration of Adil, founder of Humans Of Coding": "Humans Of Coding негізін қалаушы Адилдің қолмен салынған суреті",
   "Minimal line-art character looking at a floating app screen surrounded by idea, code, app and launch doodles.": "Идея, код, қосымша және іске қосу суреттерімен қоршалған, қалқып тұрған қосымша экранына қарап тұрған қарапайым сызықты кейіпкер.",
   "Launch": "Іске қосу",
   "idea": "идея",
@@ -40,7 +40,7 @@ window.HOC_I18N["kk"] = {
   "WHAT WE DO": "БІЗ НЕ ІСТЕЙМІЗ",
   "You bring the idea.": "Идеяны сіз әкелесіз.",
   "We handle the tech.": "Технологияны біз шешеміз.",
-  "From planning and design to development and launch, HumansOfCoding helps turn ideas into working digital products.": "Жоспарлау мен дизайннан бастап әзірлеу мен іске қосуға дейін HumansOfCoding идеяларды нақты жұмыс істейтін цифрлық өнімге айналдырады.",
+  "From planning and design to development and launch, Humans Of Coding helps turn ideas into working digital products.": "Жоспарлау мен дизайннан бастап әзірлеу мен іске қосуға дейін Humans Of Coding идеяларды нақты жұмыс істейтін цифрлық өнімге айналдырады.",
   "Mobile Apps": "Мобильді қосымшалар",
   "iOS and Android applications built around your business.": "Бизнесіңізге бейімделген iOS және Android қосымшалары.",
   "Websites": "Сайттар",
@@ -102,8 +102,8 @@ window.HOC_I18N["kk"] = {
   "Get it in front of real users and start growing.": "Нақты пайдаланушыларға ұсынып, өсуді бастаңыз.",
   "founder": "негізін қалаушы",
   "Hi, I'm Adil.": "Сәлеметсіз бе, мен Адилмін.",
-  "I started HumansOfCoding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "Мен HumansOfCoding-ті кәсіпкерлер мен компанияларға идеяларын нақты технологияға айналдыруға көмектесу үшін аштым — артық күрделіліксіз және үлкен бастапқы шығынсыз.",
-  "HumansOfCoding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "HumansOfCoding — сол деңгейді кішірек идеяларға бағыттауым: әдетте мұндай инженерлікке қолы жетпейтін құрылтайшылар мен жергілікті бизнес үшін. ЖИ жылдам жұмыс істеуге көмектеседі; бірақ өніміңіз қандай болу керегін ол шешпейді. Ол бөлік екі адамның әңгімесі болып қала береді.",
+  "I started Humans Of Coding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "Мен Humans Of Coding-ті кәсіпкерлер мен компанияларға идеяларын нақты технологияға айналдыруға көмектесу үшін аштым — артық күрделіліксіз және үлкен бастапқы шығынсыз.",
+  "Humans Of Coding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Humans Of Coding — сол деңгейді кішірек идеяларға бағыттауым: әдетте мұндай инженерлікке қолы жетпейтін құрылтайшылар мен жергілікті бизнес үшін. ЖИ жылдам жұмыс істеуге көмектеседі; бірақ өніміңіз қандай болу керегін ол шешпейді. Ол бөлік екі адамның әңгімесі болып қала береді.",
   "building & leading": "әзірлеу және жетекшілік",
   "cloud, data & AI": "бұлт, деректер және ЖИ",
   "human-reviewed code": "адам тексерген код",
@@ -111,7 +111,7 @@ window.HOC_I18N["kk"] = {
   "Book a free call": "Тегін қоңырауға жазылу",
   "WHAT WE BUILD": "БІЗ НЕ ЖАСАЙМЫЗ",
   "The kind of ideas we bring to life.": "Біз өмірге әкелетін идеялар.",
-  "Straight up: HumansOfCoding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "Ашығын айтқанда: HumansOfCoding — жаңа студия, сондықтан бұлар клиент жұмысы емес, біз жасай алатын өнімдердің мысалдары. Сіздің жобаңыз осы қабырғадағы бірінші болады.",
+  "Straight up: Humans Of Coding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "Ашығын айтқанда: Humans Of Coding — жаңа студия, сондықтан бұлар клиент жұмысы емес, біз жасай алатын өнімдердің мысалдары. Сіздің жобаңыз осы қабырғадағы бірінші болады.",
   "Example build": "Мысал жоба",
   "Mobile App": "Мобильді қосымша",
   "Restaurant Ordering App": "Мейрамханаға арналған тапсырыс қосымшасы",
@@ -154,9 +154,9 @@ window.HOC_I18N["kk"] = {
   "Email": "Электрондық пошта",
   "Write to us": "Бізге жазыңыз",
   "Apps • Websites • Software": "Қосымшалар • Сайттар • Бағдарламалар",
-  "© 2026 HumansOfCoding. All rights reserved.": "© 2026 HumansOfCoding. Барлық құқықтар қорғалған.",
+  "© 2026 Humans Of Coding. All rights reserved.": "© 2026 Humans Of Coding. Барлық құқықтар қорғалған.",
   "Built by humans, in code.": "Адамдар жасаған, код арқылы.",
-  "HumansOfCoding home": "HumansOfCoding басты беті",
+  "Humans Of Coding home": "Humans Of Coding басты беті",
   "Primary": "Негізгі навигация",
   "Switch colour theme": "Түс тақырыбын ауыстыру",
   "Open menu": "Мәзірді ашу",

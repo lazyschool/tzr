@@ -1,4 +1,4 @@
-/* HumansOfCoding — tl translations. Loaded on demand.
+/* Humans Of Coding — tl translations. Loaded on demand.
    Translated by AI; English is the authentic version. Keys are the exact
    English text on the page. See README section 2b. */
 window.HOC_I18N = window.HOC_I18N || {};
@@ -20,7 +20,7 @@ window.HOC_I18N["tl"] = {
   "Apps, websites & software built for your business — from idea to launch.": "Mga app, website at software para sa iyong negosyo — mula ideya hanggang paglulunsad.",
   "See What We Build": "Tingnan ang Ginagawa Namin",
   "Free 20-min idea call · No obligation": "Libreng 20-minutong tawag tungkol sa ideya · Walang obligasyon",
-  "Hand-drawn illustration of Adil, founder of HumansOfCoding": "Hand-drawn na larawan ni Adil, tagapagtatag ng HumansOfCoding",
+  "Hand-drawn illustration of Adil, founder of Humans Of Coding": "Hand-drawn na larawan ni Adil, tagapagtatag ng Humans Of Coding",
   "Minimal line-art character looking at a floating app screen surrounded by idea, code, app and launch doodles.": "Simpleng line-art na karakter na nakatingin sa lumulutang na app screen na napapaligiran ng mga guhit ng ideya, code, app at paglulunsad.",
   "Launch": "Ilunsad",
   "idea": "ideya",
@@ -40,7 +40,7 @@ window.HOC_I18N["tl"] = {
   "WHAT WE DO": "ANG GINAGAWA NAMIN",
   "You bring the idea.": "Ikaw ang may ideya.",
   "We handle the tech.": "Kami ang bahala sa teknolohiya.",
-  "From planning and design to development and launch, HumansOfCoding helps turn ideas into working digital products.": "Mula sa pagpaplano at disenyo hanggang sa development at paglulunsad, tinutulungan ng HumansOfCoding na gawing gumaganang digital na produkto ang mga ideya.",
+  "From planning and design to development and launch, Humans Of Coding helps turn ideas into working digital products.": "Mula sa pagpaplano at disenyo hanggang sa development at paglulunsad, tinutulungan ng Humans Of Coding na gawing gumaganang digital na produkto ang mga ideya.",
   "Mobile Apps": "Mga Mobile App",
   "iOS and Android applications built around your business.": "Mga iOS at Android application na binuo para sa iyong negosyo.",
   "Websites": "Mga Website",
@@ -102,8 +102,8 @@ window.HOC_I18N["tl"] = {
   "Get it in front of real users and start growing.": "Ipakita ito sa totoong user at simulan ang paglago.",
   "founder": "tagapagtatag",
   "Hi, I'm Adil.": "Kumusta, ako si Adil.",
-  "I started HumansOfCoding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "Sinimulan ko ang HumansOfCoding para tulungan ang mga entrepreneur at negosyo na gawing tunay na teknolohiya ang kanilang ideya — nang walang labis na kumplikasyon o napakalaking paunang gastos.",
-  "HumansOfCoding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Ang HumansOfCoding ay ako, na itinuturo ang parehong pamantayan sa mas maliliit na ideya — mga founder at lokal na negosyong karaniwang hindi nakakalapit sa ganitong engineering. Tinutulungan ako ng AI na kumilos nang mabilis; hindi nito pinapasya kung ano dapat ang produkto mo. Nananatiling usapan iyon ng dalawang tao.",
+  "I started Humans Of Coding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "Sinimulan ko ang Humans Of Coding para tulungan ang mga entrepreneur at negosyo na gawing tunay na teknolohiya ang kanilang ideya — nang walang labis na kumplikasyon o napakalaking paunang gastos.",
+  "Humans Of Coding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Ang Humans Of Coding ay ako, na itinuturo ang parehong pamantayan sa mas maliliit na ideya — mga founder at lokal na negosyong karaniwang hindi nakakalapit sa ganitong engineering. Tinutulungan ako ng AI na kumilos nang mabilis; hindi nito pinapasya kung ano dapat ang produkto mo. Nananatiling usapan iyon ng dalawang tao.",
   "building & leading": "pagbuo at pamumuno",
   "cloud, data & AI": "cloud, data at AI",
   "human-reviewed code": "code na sinuri ng tao",
@@ -111,7 +111,7 @@ window.HOC_I18N["tl"] = {
   "Book a free call": "Mag-book ng libreng tawag",
   "WHAT WE BUILD": "ANG GINAGAWA NAMIN",
   "The kind of ideas we bring to life.": "Ang uri ng mga ideyang binubuhay namin.",
-  "Straight up: HumansOfCoding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "Prangkahan: bago pa lang ang HumansOfCoding, kaya mga halimbawang gawa ito — mga produktong handa naming ilunsad — hindi trabaho para sa kliyente. Ikaw ang magiging una sa pader na ito.",
+  "Straight up: Humans Of Coding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "Prangkahan: bago pa lang ang Humans Of Coding, kaya mga halimbawang gawa ito — mga produktong handa naming ilunsad — hindi trabaho para sa kliyente. Ikaw ang magiging una sa pader na ito.",
   "Example build": "Halimbawang gawa",
   "Mobile App": "Mobile App",
   "Restaurant Ordering App": "App sa Pag-order sa Restaurant",
@@ -154,9 +154,9 @@ window.HOC_I18N["tl"] = {
   "Email": "Email",
   "Write to us": "Sumulat sa amin",
   "Apps • Websites • Software": "Mga App • Website • Software",
-  "© 2026 HumansOfCoding. All rights reserved.": "© 2026 HumansOfCoding. Nakalaan ang lahat ng karapatan.",
+  "© 2026 Humans Of Coding. All rights reserved.": "© 2026 Humans Of Coding. Nakalaan ang lahat ng karapatan.",
   "Built by humans, in code.": "Gawa ng mga tao, sa code.",
-  "HumansOfCoding home": "Home ng HumansOfCoding",
+  "Humans Of Coding home": "Home ng Humans Of Coding",
   "Primary": "Pangunahin",
   "Switch colour theme": "Palitan ang kulay ng tema",
   "Open menu": "Buksan ang menu",

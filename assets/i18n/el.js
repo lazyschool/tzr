@@ -1,4 +1,4 @@
-/* HumansOfCoding — el translations. Loaded on demand.
+/* Humans Of Coding — el translations. Loaded on demand.
    Translated by AI; English is the authentic version. Each key is the
    exact English text on the page. See README section 2b. */
 window.HOC_I18N = window.HOC_I18N || {};
@@ -20,7 +20,7 @@ window.HOC_I18N["el"] = {
   "Apps, websites & software built for your business — from idea to launch.": "Εφαρμογές, ιστότοποι και λογισμικό για την επιχείρησή σας — από την ιδέα ως την κυκλοφορία.",
   "See What We Build": "Δείτε τι φτιάχνουμε",
   "Free 20-min idea call · No obligation": "Δωρεάν κλήση 20 λεπτών · Χωρίς δέσμευση",
-  "Hand-drawn illustration of Adil, founder of HumansOfCoding": "Σκίτσο του Adil, ιδρυτή της HumansOfCoding",
+  "Hand-drawn illustration of Adil, founder of Humans Of Coding": "Σκίτσο του Adil, ιδρυτή της Humans Of Coding",
   "Minimal line-art character looking at a floating app screen surrounded by idea, code, app and launch doodles.": "Μινιμαλιστικός γραμμικός χαρακτήρας κοιτάζει μια αιωρούμενη οθόνη εφαρμογής, περιτριγυρισμένος από σκίτσα ιδέας, κώδικα, εφαρμογής και κυκλοφορίας.",
   "Launch": "Κυκλοφορία",
   "idea": "ιδέα",
@@ -40,7 +40,7 @@ window.HOC_I18N["el"] = {
   "WHAT WE DO": "ΤΙ ΚΑΝΟΥΜΕ",
   "You bring the idea.": "Εσείς φέρνετε την ιδέα.",
   "We handle the tech.": "Εμείς αναλαμβάνουμε την τεχνολογία.",
-  "From planning and design to development and launch, HumansOfCoding helps turn ideas into working digital products.": "Από τον σχεδιασμό ως την ανάπτυξη και την κυκλοφορία, η HumansOfCoding μετατρέπει τις ιδέες σε ψηφιακά προϊόντα που πραγματικά δουλεύουν.",
+  "From planning and design to development and launch, Humans Of Coding helps turn ideas into working digital products.": "Από τον σχεδιασμό ως την ανάπτυξη και την κυκλοφορία, η Humans Of Coding μετατρέπει τις ιδέες σε ψηφιακά προϊόντα που πραγματικά δουλεύουν.",
   "Mobile Apps": "Εφαρμογές κινητών",
   "iOS and Android applications built around your business.": "Εφαρμογές iOS και Android φτιαγμένες γύρω από την επιχείρησή σας.",
   "Websites": "Ιστότοποι",
@@ -102,8 +102,8 @@ window.HOC_I18N["el"] = {
   "Get it in front of real users and start growing.": "Δώστε το σε πραγματικούς χρήστες και ξεκινήστε να μεγαλώνετε.",
   "founder": "ιδρυτής",
   "Hi, I'm Adil.": "Γεια σας, είμαι ο Adil.",
-  "I started HumansOfCoding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "Ξεκίνησα την HumansOfCoding για να βοηθώ επιχειρηματίες και επιχειρήσεις να μετατρέπουν τις ιδέες τους σε πραγματική τεχνολογία — χωρίς περιττή πολυπλοκότητα και χωρίς τεράστιο αρχικό κόστος.",
-  "HumansOfCoding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Η HumansOfCoding είναι ο τρόπος μου να στρέψω τον ίδιο πήχη σε μικρότερες ιδέες — σε ιδρυτές και τοπικές επιχειρήσεις που συνήθως δεν έχουν πρόσβαση σε τέτοια μηχανική. Το AI με βοηθά να κινούμαι γρήγορα· δεν αποφασίζει τι πρέπει να είναι το προϊόν σας. Αυτό παραμένει συζήτηση ανάμεσα σε δύο ανθρώπους.",
+  "I started Humans Of Coding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "Ξεκίνησα την Humans Of Coding για να βοηθώ επιχειρηματίες και επιχειρήσεις να μετατρέπουν τις ιδέες τους σε πραγματική τεχνολογία — χωρίς περιττή πολυπλοκότητα και χωρίς τεράστιο αρχικό κόστος.",
+  "Humans Of Coding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Η Humans Of Coding είναι ο τρόπος μου να στρέψω τον ίδιο πήχη σε μικρότερες ιδέες — σε ιδρυτές και τοπικές επιχειρήσεις που συνήθως δεν έχουν πρόσβαση σε τέτοια μηχανική. Το AI με βοηθά να κινούμαι γρήγορα· δεν αποφασίζει τι πρέπει να είναι το προϊόν σας. Αυτό παραμένει συζήτηση ανάμεσα σε δύο ανθρώπους.",
   "building & leading": "ανάπτυξη & καθοδήγηση",
   "cloud, data & AI": "cloud, δεδομένα & AI",
   "human-reviewed code": "κώδικας ελεγμένος από άνθρωπο",
@@ -111,7 +111,7 @@ window.HOC_I18N["el"] = {
   "Book a free call": "Κλείστε δωρεάν κλήση",
   "WHAT WE BUILD": "ΤΙ ΦΤΙΑΧΝΟΥΜΕ",
   "The kind of ideas we bring to life.": "Το είδος των ιδεών που κάνουμε πράξη.",
-  "Straight up: HumansOfCoding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "Με ειλικρίνεια: η HumansOfCoding είναι καινούργια, οπότε αυτά είναι ενδεικτικά έργα — προϊόντα που είμαστε έτοιμοι να φτιάξουμε — όχι δουλειές πελατών. Το δικό σας θα είναι το πρώτο σε αυτόν τον τοίχο.",
+  "Straight up: Humans Of Coding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "Με ειλικρίνεια: η Humans Of Coding είναι καινούργια, οπότε αυτά είναι ενδεικτικά έργα — προϊόντα που είμαστε έτοιμοι να φτιάξουμε — όχι δουλειές πελατών. Το δικό σας θα είναι το πρώτο σε αυτόν τον τοίχο.",
   "Example build": "Ενδεικτικό έργο",
   "Mobile App": "Εφαρμογή κινητού",
   "Restaurant Ordering App": "Εφαρμογή παραγγελιών εστιατορίου",
@@ -154,9 +154,9 @@ window.HOC_I18N["el"] = {
   "Email": "Email",
   "Write to us": "Γράψτε μας",
   "Apps • Websites • Software": "Εφαρμογές • Ιστότοποι • Λογισμικό",
-  "© 2026 HumansOfCoding. All rights reserved.": "© 2026 HumansOfCoding. Με επιφύλαξη παντός δικαιώματος.",
+  "© 2026 Humans Of Coding. All rights reserved.": "© 2026 Humans Of Coding. Με επιφύλαξη παντός δικαιώματος.",
   "Built by humans, in code.": "Φτιαγμένο από ανθρώπους, σε κώδικα.",
-  "HumansOfCoding home": "Αρχική HumansOfCoding",
+  "Humans Of Coding home": "Αρχική Humans Of Coding",
   "Primary": "Κύρια πλοήγηση",
   "Switch colour theme": "Αλλαγή χρωματικού θέματος",
   "Open menu": "Άνοιγμα μενού",

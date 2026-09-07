@@ -1,4 +1,4 @@
-/* HumansOfCoding — fr translations. Loaded on demand.
+/* Humans Of Coding — fr translations. Loaded on demand.
    Each key is the exact English text on the page. Anything without an
    entry stays in English. See README section 2b. */
 window.HOC_I18N = window.HOC_I18N || {};
@@ -20,7 +20,7 @@ window.HOC_I18N["fr"] = {
   "Apps, websites & software built for your business — from idea to launch.": "Applications, sites web et logiciels conçus pour votre entreprise — de l'idée au lancement.",
   "See What We Build": "Voir ce que nous créons",
   "Free 20-min idea call · No obligation": "Appel découverte gratuit de 20 min · Sans engagement",
-  "Hand-drawn illustration of Adil, founder of HumansOfCoding": "Illustration dessinée à la main d'Adil, fondateur de HumansOfCoding",
+  "Hand-drawn illustration of Adil, founder of Humans Of Coding": "Illustration dessinée à la main d'Adil, fondateur de Humans Of Coding",
   "Minimal line-art character looking at a floating app screen surrounded by idea, code, app and launch doodles.": "Personnage en trait minimaliste regardant un écran d'application flottant, entouré de gribouillis sur l'idée, le code, l'app et le lancement.",
   "Launch": "Lancer",
   "idea": "idée",
@@ -40,7 +40,7 @@ window.HOC_I18N["fr"] = {
   "WHAT WE DO": "CE QUE NOUS FAISONS",
   "You bring the idea.": "Vous apportez l'idée.",
   "We handle the tech.": "Nous gérons la technique.",
-  "From planning and design to development and launch, HumansOfCoding helps turn ideas into working digital products.": "De la planification et du design au développement et au lancement, HumansOfCoding transforme les idées en produits numériques qui fonctionnent.",
+  "From planning and design to development and launch, Humans Of Coding helps turn ideas into working digital products.": "De la planification et du design au développement et au lancement, Humans Of Coding transforme les idées en produits numériques qui fonctionnent.",
   "Mobile Apps": "Applications mobiles",
   "iOS and Android applications built around your business.": "Applications iOS et Android conçues autour de votre activité.",
   "Websites": "Sites web",
@@ -102,8 +102,8 @@ window.HOC_I18N["fr"] = {
   "Get it in front of real users and start growing.": "Mettez-le entre les mains de vrais utilisateurs et commencez à grandir.",
   "founder": "fondateur",
   "Hi, I'm Adil.": "Bonjour, je suis Adil.",
-  "I started HumansOfCoding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "J'ai créé HumansOfCoding pour aider les entrepreneurs et les entreprises à transformer leurs idées en technologie réelle — sans complexité inutile ni coûts de départ énormes.",
-  "HumansOfCoding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Avec HumansOfCoding, j'applique ce même niveau d'exigence à des idées plus modestes — des fondateurs et des commerces locaux qui n'ont normalement pas accès à ce type d'ingénierie. L'IA m'aide à aller vite ; elle ne décide pas de ce que doit être votre produit. Cela reste une conversation entre deux personnes.",
+  "I started Humans Of Coding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "J'ai créé Humans Of Coding pour aider les entrepreneurs et les entreprises à transformer leurs idées en technologie réelle — sans complexité inutile ni coûts de départ énormes.",
+  "Humans Of Coding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Avec Humans Of Coding, j'applique ce même niveau d'exigence à des idées plus modestes — des fondateurs et des commerces locaux qui n'ont normalement pas accès à ce type d'ingénierie. L'IA m'aide à aller vite ; elle ne décide pas de ce que doit être votre produit. Cela reste une conversation entre deux personnes.",
   "building & leading": "construire et diriger",
   "cloud, data & AI": "cloud, données et IA",
   "human-reviewed code": "code relu par un humain",
@@ -111,7 +111,7 @@ window.HOC_I18N["fr"] = {
   "Book a free call": "Réserver un appel gratuit",
   "WHAT WE BUILD": "CE QUE NOUS CONSTRUISONS",
   "The kind of ideas we bring to life.": "Le genre d'idées que nous concrétisons.",
-  "Straight up: HumansOfCoding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "Soyons clairs : HumansOfCoding est récent, ce sont donc des projets d'exemple — les produits que nous sommes prêts à livrer — et non des travaux clients. Le vôtre serait le premier sur ce mur.",
+  "Straight up: Humans Of Coding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "Soyons clairs : Humans Of Coding est récent, ce sont donc des projets d'exemple — les produits que nous sommes prêts à livrer — et non des travaux clients. Le vôtre serait le premier sur ce mur.",
   "Example build": "Projet d'exemple",
   "Mobile App": "Application mobile",
   "Restaurant Ordering App": "Application de commande pour restaurant",
@@ -154,9 +154,9 @@ window.HOC_I18N["fr"] = {
   "Email": "E-mail",
   "Write to us": "Écrivez-nous",
   "Apps • Websites • Software": "Applications • Sites web • Logiciels",
-  "© 2026 HumansOfCoding. All rights reserved.": "© 2026 HumansOfCoding. Tous droits réservés.",
+  "© 2026 Humans Of Coding. All rights reserved.": "© 2026 Humans Of Coding. Tous droits réservés.",
   "Built by humans, in code.": "Construit par des humains, en code.",
-  "HumansOfCoding home": "Accueil HumansOfCoding",
+  "Humans Of Coding home": "Accueil Humans Of Coding",
   "Primary": "Navigation principale",
   "Switch colour theme": "Changer de thème de couleur",
   "Open menu": "Ouvrir le menu",

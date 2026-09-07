@@ -1,4 +1,4 @@
-/* HumansOfCoding — de translations. Loaded on demand.
+/* Humans Of Coding — de translations. Loaded on demand.
    Each key is the exact English text on the page. Anything without an
    entry stays in English. See README section 2b. */
 window.HOC_I18N = window.HOC_I18N || {};
@@ -20,7 +20,7 @@ window.HOC_I18N["de"] = {
   "Apps, websites & software built for your business — from idea to launch.": "Apps, Websites und Software für Ihr Unternehmen — von der Idee bis zum Launch.",
   "See What We Build": "Sehen, was wir bauen",
   "Free 20-min idea call · No obligation": "Kostenloses 20-Minuten-Gespräch · Unverbindlich",
-  "Hand-drawn illustration of Adil, founder of HumansOfCoding": "Handgezeichnete Illustration von Adil, Gründer von HumansOfCoding",
+  "Hand-drawn illustration of Adil, founder of Humans Of Coding": "Handgezeichnete Illustration von Adil, Gründer von Humans Of Coding",
   "Minimal line-art character looking at a floating app screen surrounded by idea, code, app and launch doodles.": "Minimalistische Strichfigur betrachtet einen schwebenden App-Bildschirm, umgeben von Kritzeleien zu Idee, Code, App und Launch.",
   "Launch": "Launch",
   "idea": "Idee",
@@ -40,7 +40,7 @@ window.HOC_I18N["de"] = {
   "WHAT WE DO": "WAS WIR MACHEN",
   "You bring the idea.": "Sie bringen die Idee.",
   "We handle the tech.": "Wir übernehmen die Technik.",
-  "From planning and design to development and launch, HumansOfCoding helps turn ideas into working digital products.": "Von Planung und Design bis zu Entwicklung und Launch: HumansOfCoding macht aus Ideen funktionierende digitale Produkte.",
+  "From planning and design to development and launch, Humans Of Coding helps turn ideas into working digital products.": "Von Planung und Design bis zu Entwicklung und Launch: Humans Of Coding macht aus Ideen funktionierende digitale Produkte.",
   "Mobile Apps": "Mobile Apps",
   "iOS and Android applications built around your business.": "iOS- und Android-Anwendungen, zugeschnitten auf Ihr Unternehmen.",
   "Websites": "Websites",
@@ -102,8 +102,8 @@ window.HOC_I18N["de"] = {
   "Get it in front of real users and start growing.": "Bringen Sie es vor echte Nutzer und fangen Sie an zu wachsen.",
   "founder": "Gründer",
   "Hi, I'm Adil.": "Hallo, ich bin Adil.",
-  "I started HumansOfCoding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "Ich habe HumansOfCoding gegründet, um Unternehmern und Unternehmen zu helfen, ihre Ideen in echte Technologie zu verwandeln — ohne unnötige Komplexität und ohne hohe Anfangskosten.",
-  "HumansOfCoding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Mit HumansOfCoding richte ich denselben Anspruch auf kleinere Ideen — auf Gründer und lokale Unternehmen, die sonst an solche Technik nicht herankommen. KI hilft mir, schnell zu sein; sie entscheidet nicht, was Ihr Produkt sein soll. Das bleibt ein Gespräch zwischen zwei Menschen.",
+  "I started Humans Of Coding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "Ich habe Humans Of Coding gegründet, um Unternehmern und Unternehmen zu helfen, ihre Ideen in echte Technologie zu verwandeln — ohne unnötige Komplexität und ohne hohe Anfangskosten.",
+  "Humans Of Coding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Mit Humans Of Coding richte ich denselben Anspruch auf kleinere Ideen — auf Gründer und lokale Unternehmen, die sonst an solche Technik nicht herankommen. KI hilft mir, schnell zu sein; sie entscheidet nicht, was Ihr Produkt sein soll. Das bleibt ein Gespräch zwischen zwei Menschen.",
   "building & leading": "bauen & führen",
   "cloud, data & AI": "Cloud, Daten & KI",
   "human-reviewed code": "von Menschen geprüfter Code",
@@ -111,7 +111,7 @@ window.HOC_I18N["de"] = {
   "Book a free call": "Kostenloses Gespräch buchen",
   "WHAT WE BUILD": "WAS WIR BAUEN",
   "The kind of ideas we bring to life.": "Solche Ideen erwecken wir zum Leben.",
-  "Straight up: HumansOfCoding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "Ganz ehrlich: HumansOfCoding ist neu, das hier sind also Beispielprojekte — Produkte, die wir liefern können — keine Kundenarbeiten. Ihres wäre das erste an dieser Wand.",
+  "Straight up: Humans Of Coding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "Ganz ehrlich: Humans Of Coding ist neu, das hier sind also Beispielprojekte — Produkte, die wir liefern können — keine Kundenarbeiten. Ihres wäre das erste an dieser Wand.",
   "Example build": "Beispielprojekt",
   "Mobile App": "Mobile App",
   "Restaurant Ordering App": "Bestell-App für Restaurants",
@@ -154,9 +154,9 @@ window.HOC_I18N["de"] = {
   "Email": "E-Mail",
   "Write to us": "Schreiben Sie uns",
   "Apps • Websites • Software": "Apps • Websites • Software",
-  "© 2026 HumansOfCoding. All rights reserved.": "© 2026 HumansOfCoding. Alle Rechte vorbehalten.",
+  "© 2026 Humans Of Coding. All rights reserved.": "© 2026 Humans Of Coding. Alle Rechte vorbehalten.",
   "Built by humans, in code.": "Von Menschen gebaut, in Code.",
-  "HumansOfCoding home": "HumansOfCoding Startseite",
+  "Humans Of Coding home": "Humans Of Coding Startseite",
   "Primary": "Hauptnavigation",
   "Switch colour theme": "Farbschema wechseln",
   "Open menu": "Menü öffnen",

@@ -1,4 +1,4 @@
-/* HumansOfCoding — id translations. Loaded on demand.
+/* Humans Of Coding — id translations. Loaded on demand.
    Translated by AI; English is the authentic version. Each key is the
    exact English text on the page. See README section 2b. */
 window.HOC_I18N = window.HOC_I18N || {};
@@ -20,7 +20,7 @@ window.HOC_I18N["id"] = {
   "Apps, websites & software built for your business — from idea to launch.": "Aplikasi, situs web, dan perangkat lunak untuk bisnis Anda — dari ide sampai peluncuran.",
   "See What We Build": "Lihat yang Kami Bangun",
   "Free 20-min idea call · No obligation": "Panggilan ide gratis 20 menit · Tanpa kewajiban",
-  "Hand-drawn illustration of Adil, founder of HumansOfCoding": "Ilustrasi gambar tangan Adil, pendiri HumansOfCoding",
+  "Hand-drawn illustration of Adil, founder of Humans Of Coding": "Ilustrasi gambar tangan Adil, pendiri Humans Of Coding",
   "Minimal line-art character looking at a floating app screen surrounded by idea, code, app and launch doodles.": "Karakter garis minimalis memandang layar aplikasi yang melayang, dikelilingi coretan ide, kode, aplikasi, dan peluncuran.",
   "Launch": "Luncurkan",
   "idea": "ide",
@@ -40,7 +40,7 @@ window.HOC_I18N["id"] = {
   "WHAT WE DO": "APA YANG KAMI LAKUKAN",
   "You bring the idea.": "Anda membawa idenya.",
   "We handle the tech.": "Kami yang mengurus teknologinya.",
-  "From planning and design to development and launch, HumansOfCoding helps turn ideas into working digital products.": "Dari perencanaan dan desain hingga pengembangan dan peluncuran, HumansOfCoding mengubah ide menjadi produk digital yang benar-benar berjalan.",
+  "From planning and design to development and launch, Humans Of Coding helps turn ideas into working digital products.": "Dari perencanaan dan desain hingga pengembangan dan peluncuran, Humans Of Coding mengubah ide menjadi produk digital yang benar-benar berjalan.",
   "Mobile Apps": "Aplikasi Mobile",
   "iOS and Android applications built around your business.": "Aplikasi iOS dan Android yang dibangun sesuai bisnis Anda.",
   "Websites": "Situs Web",
@@ -102,8 +102,8 @@ window.HOC_I18N["id"] = {
   "Get it in front of real users and start growing.": "Hadirkan ke pengguna nyata dan mulailah bertumbuh.",
   "founder": "pendiri",
   "Hi, I'm Adil.": "Halo, saya Adil.",
-  "I started HumansOfCoding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "Saya memulai HumansOfCoding untuk membantu wirausaha dan bisnis mengubah ide mereka menjadi teknologi nyata — tanpa kerumitan yang tidak perlu dan tanpa biaya awal yang besar.",
-  "HumansOfCoding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "HumansOfCoding adalah cara saya menerapkan standar yang sama pada ide-ide yang lebih kecil — untuk para pendiri dan usaha lokal yang biasanya tidak terjangkau oleh rekayasa semacam ini. AI membantu saya bergerak cepat; ia tidak menentukan produk Anda harus jadi apa. Bagian itu tetap percakapan antara dua manusia.",
+  "I started Humans Of Coding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "Saya memulai Humans Of Coding untuk membantu wirausaha dan bisnis mengubah ide mereka menjadi teknologi nyata — tanpa kerumitan yang tidak perlu dan tanpa biaya awal yang besar.",
+  "Humans Of Coding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Humans Of Coding adalah cara saya menerapkan standar yang sama pada ide-ide yang lebih kecil — untuk para pendiri dan usaha lokal yang biasanya tidak terjangkau oleh rekayasa semacam ini. AI membantu saya bergerak cepat; ia tidak menentukan produk Anda harus jadi apa. Bagian itu tetap percakapan antara dua manusia.",
   "building & leading": "membangun & memimpin",
   "cloud, data & AI": "cloud, data & AI",
   "human-reviewed code": "kode yang ditinjau manusia",
@@ -111,7 +111,7 @@ window.HOC_I18N["id"] = {
   "Book a free call": "Jadwalkan panggilan gratis",
   "WHAT WE BUILD": "YANG KAMI BANGUN",
   "The kind of ideas we bring to life.": "Ide-ide yang kami wujudkan.",
-  "Straight up: HumansOfCoding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "Terus terang: HumansOfCoding masih baru, jadi ini adalah contoh karya — produk yang siap kami kerjakan — bukan pekerjaan klien. Proyek Anda akan menjadi yang pertama di dinding ini.",
+  "Straight up: Humans Of Coding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "Terus terang: Humans Of Coding masih baru, jadi ini adalah contoh karya — produk yang siap kami kerjakan — bukan pekerjaan klien. Proyek Anda akan menjadi yang pertama di dinding ini.",
   "Example build": "Contoh karya",
   "Mobile App": "Aplikasi Mobile",
   "Restaurant Ordering App": "Aplikasi Pemesanan Restoran",
@@ -154,9 +154,9 @@ window.HOC_I18N["id"] = {
   "Email": "Email",
   "Write to us": "Tulis ke kami",
   "Apps • Websites • Software": "Aplikasi • Situs Web • Perangkat Lunak",
-  "© 2026 HumansOfCoding. All rights reserved.": "© 2026 HumansOfCoding. Seluruh hak cipta dilindungi.",
+  "© 2026 Humans Of Coding. All rights reserved.": "© 2026 Humans Of Coding. Seluruh hak cipta dilindungi.",
   "Built by humans, in code.": "Dibuat oleh manusia, dalam kode.",
-  "HumansOfCoding home": "Beranda HumansOfCoding",
+  "Humans Of Coding home": "Beranda Humans Of Coding",
   "Primary": "Navigasi utama",
   "Switch colour theme": "Ganti tema warna",
   "Open menu": "Buka menu",

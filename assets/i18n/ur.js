@@ -1,4 +1,4 @@
-/* HumansOfCoding — ur translations. Loaded on demand.
+/* Humans Of Coding — ur translations. Loaded on demand.
    Translated by AI; English is the authentic version. Keys are the exact
    English text on the page. See README section 2b. */
 window.HOC_I18N = window.HOC_I18N || {};
@@ -20,7 +20,7 @@ window.HOC_I18N["ur"] = {
   "Apps, websites & software built for your business — from idea to launch.": "آپ کے کاروبار کے لیے ایپس، ویب سائٹس اور سافٹ ویئر — آئیڈیا سے لانچ تک۔",
   "See What We Build": "دیکھیں ہم کیا بناتے ہیں",
   "Free 20-min idea call · No obligation": "مفت 20 منٹ کی بات چیت · کوئی پابندی نہیں",
-  "Hand-drawn illustration of Adil, founder of HumansOfCoding": "HumansOfCoding کے بانی عادل کی ہاتھ سے بنائی تصویر",
+  "Hand-drawn illustration of Adil, founder of Humans Of Coding": "Humans Of Coding کے بانی عادل کی ہاتھ سے بنائی تصویر",
   "Minimal line-art character looking at a floating app screen surrounded by idea, code, app and launch doodles.": "سادہ لکیروں والا کردار ہوا میں معلق ایپ اسکرین کو دیکھ رہا ہے، ارد گرد آئیڈیا، کوڈ، ایپ اور لانچ کی خاکہ نگاری۔",
   "Launch": "لانچ",
   "idea": "آئیڈیا",
@@ -40,7 +40,7 @@ window.HOC_I18N["ur"] = {
   "WHAT WE DO": "ہم کیا کرتے ہیں",
   "You bring the idea.": "آئیڈیا آپ لائیے۔",
   "We handle the tech.": "ٹیکنالوجی ہم سنبھالتے ہیں۔",
-  "From planning and design to development and launch, HumansOfCoding helps turn ideas into working digital products.": "منصوبہ بندی اور ڈیزائن سے لے کر ڈویلپمنٹ اور لانچ تک، HumansOfCoding آئیڈیاز کو واقعی کام کرنے والی ڈیجیٹل پروڈکٹس میں بدلتا ہے۔",
+  "From planning and design to development and launch, Humans Of Coding helps turn ideas into working digital products.": "منصوبہ بندی اور ڈیزائن سے لے کر ڈویلپمنٹ اور لانچ تک، Humans Of Coding آئیڈیاز کو واقعی کام کرنے والی ڈیجیٹل پروڈکٹس میں بدلتا ہے۔",
   "Mobile Apps": "موبائل ایپس",
   "iOS and Android applications built around your business.": "آپ کے کاروبار کے مطابق بنائی گئی iOS اور Android ایپلیکیشنز۔",
   "Websites": "ویب سائٹس",
@@ -102,8 +102,8 @@ window.HOC_I18N["ur"] = {
   "Get it in front of real users and start growing.": "اسے حقیقی صارفین تک پہنچائیے اور بڑھنا شروع کیجیے۔",
   "founder": "بانی",
   "Hi, I'm Adil.": "سلام، میں عادل ہوں۔",
-  "I started HumansOfCoding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "میں نے HumansOfCoding اس لیے شروع کیا تاکہ کاروباری افراد اور ادارے اپنے آئیڈیاز کو حقیقی ٹیکنالوجی میں بدل سکیں — غیر ضروری پیچیدگی اور بھاری ابتدائی خرچ کے بغیر۔",
-  "HumansOfCoding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "HumansOfCoding میرا وہی معیار چھوٹے آئیڈیاز پر لگانا ہے — اُن بانیوں اور مقامی کاروباروں کے لیے جن کی رسائی عام طور پر ایسی انجینئرنگ تک نہیں ہوتی۔ AI مجھے تیزی دیتا ہے؛ یہ طے نہیں کرتا کہ آپ کی پروڈکٹ کیا ہونی چاہیے۔ وہ حصہ دو انسانوں کی گفتگو ہی رہتا ہے۔",
+  "I started Humans Of Coding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "میں نے Humans Of Coding اس لیے شروع کیا تاکہ کاروباری افراد اور ادارے اپنے آئیڈیاز کو حقیقی ٹیکنالوجی میں بدل سکیں — غیر ضروری پیچیدگی اور بھاری ابتدائی خرچ کے بغیر۔",
+  "Humans Of Coding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Humans Of Coding میرا وہی معیار چھوٹے آئیڈیاز پر لگانا ہے — اُن بانیوں اور مقامی کاروباروں کے لیے جن کی رسائی عام طور پر ایسی انجینئرنگ تک نہیں ہوتی۔ AI مجھے تیزی دیتا ہے؛ یہ طے نہیں کرتا کہ آپ کی پروڈکٹ کیا ہونی چاہیے۔ وہ حصہ دو انسانوں کی گفتگو ہی رہتا ہے۔",
   "building & leading": "بنانا اور رہنمائی",
   "cloud, data & AI": "کلاؤڈ، ڈیٹا اور AI",
   "human-reviewed code": "انسان کا جانچا ہوا کوڈ",
@@ -111,7 +111,7 @@ window.HOC_I18N["ur"] = {
   "Book a free call": "مفت کال بک کریں",
   "WHAT WE BUILD": "ہم کیا بناتے ہیں",
   "The kind of ideas we bring to life.": "جس طرح کے آئیڈیاز ہم حقیقت بناتے ہیں۔",
-  "Straight up: HumansOfCoding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "صاف بات: HumansOfCoding نیا ہے، اس لیے یہ نمونہ کام ہیں — وہ پروڈکٹس جو ہم بنانے کے لیے تیار ہیں — کسی کلائنٹ کا کام نہیں۔ آپ کا پروجیکٹ اس دیوار پر پہلا ہوگا۔",
+  "Straight up: Humans Of Coding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "صاف بات: Humans Of Coding نیا ہے، اس لیے یہ نمونہ کام ہیں — وہ پروڈکٹس جو ہم بنانے کے لیے تیار ہیں — کسی کلائنٹ کا کام نہیں۔ آپ کا پروجیکٹ اس دیوار پر پہلا ہوگا۔",
   "Example build": "نمونہ کام",
   "Mobile App": "موبائل ایپ",
   "Restaurant Ordering App": "ریستوران آرڈر ایپ",
@@ -154,9 +154,9 @@ window.HOC_I18N["ur"] = {
   "Email": "ای میل",
   "Write to us": "ہمیں لکھیں",
   "Apps • Websites • Software": "ایپس • ویب سائٹس • سافٹ ویئر",
-  "© 2026 HumansOfCoding. All rights reserved.": "© 2026 HumansOfCoding۔ جملہ حقوق محفوظ ہیں۔",
+  "© 2026 Humans Of Coding. All rights reserved.": "© 2026 Humans Of Coding۔ جملہ حقوق محفوظ ہیں۔",
   "Built by humans, in code.": "انسانوں نے، کوڈ میں بنایا۔",
-  "HumansOfCoding home": "HumansOfCoding ہوم",
+  "Humans Of Coding home": "Humans Of Coding ہوم",
   "Primary": "مرکزی نیویگیشن",
   "Switch colour theme": "رنگ کی تھیم بدلیں",
   "Open menu": "مینو کھولیں",

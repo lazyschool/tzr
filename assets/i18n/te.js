@@ -1,4 +1,4 @@
-/* HumansOfCoding — te translations. Loaded on demand.
+/* Humans Of Coding — te translations. Loaded on demand.
    Translated by AI; English is the authentic version. Keys are the exact
    English text on the page. See README section 2b. */
 window.HOC_I18N = window.HOC_I18N || {};
@@ -20,7 +20,7 @@ window.HOC_I18N["te"] = {
   "Apps, websites & software built for your business — from idea to launch.": "మీ వ్యాపారం కోసం యాప్‌లు, వెబ్‌సైట్‌లు మరియు సాఫ్ట్‌వేర్ — ఆలోచన నుండి ప్రారంభం వరకు.",
   "See What We Build": "మేము ఏమి నిర్మిస్తామో చూడండి",
   "Free 20-min idea call · No obligation": "ఉచిత 20 నిమిషాల ఆలోచన కాల్ · ఎటువంటి బాధ్యత లేదు",
-  "Hand-drawn illustration of Adil, founder of HumansOfCoding": "HumansOfCoding వ్యవస్థాపకుడు ఆదిల్ యొక్క చేతితో గీసిన చిత్రం",
+  "Hand-drawn illustration of Adil, founder of Humans Of Coding": "Humans Of Coding వ్యవస్థాపకుడు ఆదిల్ యొక్క చేతితో గీసిన చిత్రం",
   "Minimal line-art character looking at a floating app screen surrounded by idea, code, app and launch doodles.": "ఆలోచన, కోడ్, యాప్ మరియు ప్రారంభం బొమ్మలతో చుట్టుముట్టబడిన తేలియాడే యాప్ స్క్రీన్‌ను చూస్తున్న సరళమైన రేఖా చిత్ర పాత్ర.",
   "Launch": "ప్రారంభించండి",
   "idea": "ఆలోచన",
@@ -40,7 +40,7 @@ window.HOC_I18N["te"] = {
   "WHAT WE DO": "మేము ఏమి చేస్తాము",
   "You bring the idea.": "ఆలోచన మీది.",
   "We handle the tech.": "సాంకేతికత మాది.",
-  "From planning and design to development and launch, HumansOfCoding helps turn ideas into working digital products.": "ప్రణాళిక మరియు డిజైన్ నుండి అభివృద్ధి మరియు ప్రారంభం వరకు, ఆలోచనలను పనిచేసే డిజిటల్ ఉత్పత్తులుగా మార్చడంలో HumansOfCoding సహాయపడుతుంది.",
+  "From planning and design to development and launch, Humans Of Coding helps turn ideas into working digital products.": "ప్రణాళిక మరియు డిజైన్ నుండి అభివృద్ధి మరియు ప్రారంభం వరకు, ఆలోచనలను పనిచేసే డిజిటల్ ఉత్పత్తులుగా మార్చడంలో Humans Of Coding సహాయపడుతుంది.",
   "Mobile Apps": "మొబైల్ యాప్‌లు",
   "iOS and Android applications built around your business.": "మీ వ్యాపారం చుట్టూ నిర్మించిన iOS మరియు Android అప్లికేషన్‌లు.",
   "Websites": "వెబ్‌సైట్‌లు",
@@ -102,8 +102,8 @@ window.HOC_I18N["te"] = {
   "Get it in front of real users and start growing.": "దానిని నిజమైన వినియోగదారుల ముందు ఉంచి ఎదగడం ప్రారంభించండి.",
   "founder": "వ్యవస్థాపకుడు",
   "Hi, I'm Adil.": "హాయ్, నేను ఆదిల్.",
-  "I started HumansOfCoding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "అనవసరమైన సంక్లిష్టత లేదా భారీ ముందస్తు ఖర్చులు లేకుండా వ్యవస్థాపకులు మరియు వ్యాపారాలు తమ ఆలోచనలను నిజమైన సాంకేతికతగా మార్చడంలో సహాయపడటానికి నేను HumansOfCoding ప్రారంభించాను.",
-  "HumansOfCoding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "HumansOfCoding అంటే అదే ప్రమాణాన్ని చిన్న ఆలోచనల వైపు మళ్లిస్తున్న నేను — సాధారణంగా ఇలాంటి ఇంజనీరింగ్‌కు దగ్గరకు రాలేని వ్యవస్థాపకులు మరియు స్థానిక వ్యాపారాల కోసం. AI నన్ను వేగంగా కదలడానికి సహాయపడుతుంది; మీ ఉత్పత్తి ఏమి కావాలో అది నిర్ణయించదు. ఆ భాగం ఇద్దరు వ్యక్తుల మధ్య సంభాషణగానే ఉంటుంది.",
+  "I started Humans Of Coding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "అనవసరమైన సంక్లిష్టత లేదా భారీ ముందస్తు ఖర్చులు లేకుండా వ్యవస్థాపకులు మరియు వ్యాపారాలు తమ ఆలోచనలను నిజమైన సాంకేతికతగా మార్చడంలో సహాయపడటానికి నేను Humans Of Coding ప్రారంభించాను.",
+  "Humans Of Coding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Humans Of Coding అంటే అదే ప్రమాణాన్ని చిన్న ఆలోచనల వైపు మళ్లిస్తున్న నేను — సాధారణంగా ఇలాంటి ఇంజనీరింగ్‌కు దగ్గరకు రాలేని వ్యవస్థాపకులు మరియు స్థానిక వ్యాపారాల కోసం. AI నన్ను వేగంగా కదలడానికి సహాయపడుతుంది; మీ ఉత్పత్తి ఏమి కావాలో అది నిర్ణయించదు. ఆ భాగం ఇద్దరు వ్యక్తుల మధ్య సంభాషణగానే ఉంటుంది.",
   "building & leading": "నిర్మాణం & నాయకత్వం",
   "cloud, data & AI": "క్లౌడ్, డేటా & AI",
   "human-reviewed code": "మనిషి సమీక్షించిన కోడ్",
@@ -111,7 +111,7 @@ window.HOC_I18N["te"] = {
   "Book a free call": "ఉచిత కాల్ బుక్ చేయండి",
   "WHAT WE BUILD": "మేము ఏమి నిర్మిస్తాము",
   "The kind of ideas we bring to life.": "మేము జీవం పోసే ఆలోచనల రకం.",
-  "Straight up: HumansOfCoding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "నిజాయితీగా: HumansOfCoding కొత్తది, కాబట్టి ఇవి ఉదాహరణ నిర్మాణాలు — మేము విడుదల చేయడానికి సిద్ధంగా ఉన్న ఉత్పత్తులు — క్లయింట్ పని కాదు. ఈ గోడపై మీది మొదటిది అవుతుంది.",
+  "Straight up: Humans Of Coding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "నిజాయితీగా: Humans Of Coding కొత్తది, కాబట్టి ఇవి ఉదాహరణ నిర్మాణాలు — మేము విడుదల చేయడానికి సిద్ధంగా ఉన్న ఉత్పత్తులు — క్లయింట్ పని కాదు. ఈ గోడపై మీది మొదటిది అవుతుంది.",
   "Example build": "ఉదాహరణ నిర్మాణం",
   "Mobile App": "మొబైల్ యాప్",
   "Restaurant Ordering App": "రెస్టారెంట్ ఆర్డరింగ్ యాప్",
@@ -154,9 +154,9 @@ window.HOC_I18N["te"] = {
   "Email": "ఇమెయిల్",
   "Write to us": "మాకు రాయండి",
   "Apps • Websites • Software": "యాప్‌లు • వెబ్‌సైట్‌లు • సాఫ్ట్‌వేర్",
-  "© 2026 HumansOfCoding. All rights reserved.": "© 2026 HumansOfCoding. అన్ని హక్కులు రిజర్వ్ చేయబడ్డాయి.",
+  "© 2026 Humans Of Coding. All rights reserved.": "© 2026 Humans Of Coding. అన్ని హక్కులు రిజర్వ్ చేయబడ్డాయి.",
   "Built by humans, in code.": "మనుషులు నిర్మించారు, కోడ్‌లో.",
-  "HumansOfCoding home": "HumansOfCoding హోమ్",
+  "Humans Of Coding home": "Humans Of Coding హోమ్",
   "Primary": "ప్రధానం",
   "Switch colour theme": "రంగు థీమ్ మార్చండి",
   "Open menu": "మెనూ తెరవండి",

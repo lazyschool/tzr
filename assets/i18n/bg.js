@@ -1,4 +1,4 @@
-/* HumansOfCoding — bg translations. Loaded on demand.
+/* Humans Of Coding — bg translations. Loaded on demand.
    Translated by AI; English is the authentic version. Each key is the
    exact English text on the page. See README section 2b. */
 window.HOC_I18N = window.HOC_I18N || {};
@@ -20,7 +20,7 @@ window.HOC_I18N["bg"] = {
   "Apps, websites & software built for your business — from idea to launch.": "Приложения, уебсайтове и софтуер за вашия бизнес — от идеята до пускането.",
   "See What We Build": "Вижте какво правим",
   "Free 20-min idea call · No obligation": "Безплатен 20-минутен разговор · Без ангажимент",
-  "Hand-drawn illustration of Adil, founder of HumansOfCoding": "Ръчно нарисувана илюстрация на Адил, основателя на HumansOfCoding",
+  "Hand-drawn illustration of Adil, founder of Humans Of Coding": "Ръчно нарисувана илюстрация на Адил, основателя на Humans Of Coding",
   "Minimal line-art character looking at a floating app screen surrounded by idea, code, app and launch doodles.": "Минималистичен линеен герой гледа реещ се екран на приложение, заобиколен от рисунки на идея, код, приложение и пускане.",
   "Launch": "Пускане",
   "idea": "идея",
@@ -40,7 +40,7 @@ window.HOC_I18N["bg"] = {
   "WHAT WE DO": "КАКВО ПРАВИМ",
   "You bring the idea.": "Вие носите идеята.",
   "We handle the tech.": "Ние поемаме технологията.",
-  "From planning and design to development and launch, HumansOfCoding helps turn ideas into working digital products.": "От планиране и дизайн до разработка и пускане, HumansOfCoding превръща идеите в работещи дигитални продукти.",
+  "From planning and design to development and launch, Humans Of Coding helps turn ideas into working digital products.": "От планиране и дизайн до разработка и пускане, Humans Of Coding превръща идеите в работещи дигитални продукти.",
   "Mobile Apps": "Мобилни приложения",
   "iOS and Android applications built around your business.": "iOS и Android приложения, изградени около вашия бизнес.",
   "Websites": "Уебсайтове",
@@ -102,8 +102,8 @@ window.HOC_I18N["bg"] = {
   "Get it in front of real users and start growing.": "Покажете го на истински потребители и започнете да растете.",
   "founder": "основател",
   "Hi, I'm Adil.": "Здравейте, аз съм Адил.",
-  "I started HumansOfCoding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "Създадох HumansOfCoding, за да помагам на предприемачи и фирми да превръщат идеите си в истинска технология — без излишна сложност и без огромни първоначални разходи.",
-  "HumansOfCoding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "HumansOfCoding е начинът, по който насочвам същия стандарт към по-малки идеи — към основатели и местни бизнеси, които обикновено нямат достъп до такава инженерна работа. ИИ ми помага да работя бързо, но не решава какъв да бъде вашият продукт. Това си остава разговор между двама души.",
+  "I started Humans Of Coding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "Създадох Humans Of Coding, за да помагам на предприемачи и фирми да превръщат идеите си в истинска технология — без излишна сложност и без огромни първоначални разходи.",
+  "Humans Of Coding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Humans Of Coding е начинът, по който насочвам същия стандарт към по-малки идеи — към основатели и местни бизнеси, които обикновено нямат достъп до такава инженерна работа. ИИ ми помага да работя бързо, но не решава какъв да бъде вашият продукт. Това си остава разговор между двама души.",
   "building & leading": "създаване и ръководене",
   "cloud, data & AI": "облак, данни и ИИ",
   "human-reviewed code": "код, проверен от човек",
@@ -111,7 +111,7 @@ window.HOC_I18N["bg"] = {
   "Book a free call": "Запази безплатен разговор",
   "WHAT WE BUILD": "КАКВО СЪЗДАВАМЕ",
   "The kind of ideas we bring to life.": "Идеите, които оживяваме.",
-  "Straight up: HumansOfCoding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "Честно казано: HumansOfCoding е ново студио, така че това са примерни проекти — продуктите, които сме готови да направим — а не работа за клиенти. Вашият проект ще бъде първият на тази стена.",
+  "Straight up: Humans Of Coding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "Честно казано: Humans Of Coding е ново студио, така че това са примерни проекти — продуктите, които сме готови да направим — а не работа за клиенти. Вашият проект ще бъде първият на тази стена.",
   "Example build": "Примерен проект",
   "Mobile App": "Мобилно приложение",
   "Restaurant Ordering App": "Приложение за поръчки в ресторант",
@@ -154,9 +154,9 @@ window.HOC_I18N["bg"] = {
   "Email": "Имейл",
   "Write to us": "Пишете ни",
   "Apps • Websites • Software": "Приложения • Уебсайтове • Софтуер",
-  "© 2026 HumansOfCoding. All rights reserved.": "© 2026 HumansOfCoding. Всички права запазени.",
+  "© 2026 Humans Of Coding. All rights reserved.": "© 2026 Humans Of Coding. Всички права запазени.",
   "Built by humans, in code.": "Създадено от хора, в код.",
-  "HumansOfCoding home": "Начало на HumansOfCoding",
+  "Humans Of Coding home": "Начало на Humans Of Coding",
   "Primary": "Основна навигация",
   "Switch colour theme": "Смяна на цветовата тема",
   "Open menu": "Отваряне на менюто",

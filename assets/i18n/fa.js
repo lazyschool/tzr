@@ -1,4 +1,4 @@
-/* HumansOfCoding — fa translations. Loaded on demand.
+/* Humans Of Coding — fa translations. Loaded on demand.
    Translated by AI; English is the authentic version. Keys are the exact
    English text on the page. See README section 2b. */
 window.HOC_I18N = window.HOC_I18N || {};
@@ -20,7 +20,7 @@ window.HOC_I18N["fa"] = {
   "Apps, websites & software built for your business — from idea to launch.": "اپلیکیشن، وب‌سایت و نرم‌افزار برای کسب‌وکار شما — از ایده تا انتشار.",
   "See What We Build": "ببینید چه می‌سازیم",
   "Free 20-min idea call · No obligation": "گفت‌وگوی رایگان ۲۰ دقیقه‌ای · بدون هیچ تعهدی",
-  "Hand-drawn illustration of Adil, founder of HumansOfCoding": "تصویر دست‌کشیده‌ای از عادل، بنیان‌گذار HumansOfCoding",
+  "Hand-drawn illustration of Adil, founder of Humans Of Coding": "تصویر دست‌کشیده‌ای از عادل، بنیان‌گذار Humans Of Coding",
   "Minimal line-art character looking at a floating app screen surrounded by idea, code, app and launch doodles.": "شخصیتی با خطوط ساده که به صفحه‌ی شناور یک اپلیکیشن نگاه می‌کند، گرداگردش طرح‌های ایده، کد، اپ و انتشار.",
   "Launch": "انتشار",
   "idea": "ایده",
@@ -40,7 +40,7 @@ window.HOC_I18N["fa"] = {
   "WHAT WE DO": "چه می‌کنیم",
   "You bring the idea.": "ایده را شما بیاورید.",
   "We handle the tech.": "فناوری با ما.",
-  "From planning and design to development and launch, HumansOfCoding helps turn ideas into working digital products.": "از برنامه‌ریزی و طراحی تا توسعه و انتشار، HumansOfCoding ایده‌ها را به محصول دیجیتالی تبدیل می‌کند که واقعاً کار می‌کند.",
+  "From planning and design to development and launch, Humans Of Coding helps turn ideas into working digital products.": "از برنامه‌ریزی و طراحی تا توسعه و انتشار، Humans Of Coding ایده‌ها را به محصول دیجیتالی تبدیل می‌کند که واقعاً کار می‌کند.",
   "Mobile Apps": "اپلیکیشن موبایل",
   "iOS and Android applications built around your business.": "اپلیکیشن‌های iOS و اندروید، ساخته‌شده بر پایه‌ی کسب‌وکار شما.",
   "Websites": "وب‌سایت",
@@ -102,8 +102,8 @@ window.HOC_I18N["fa"] = {
   "Get it in front of real users and start growing.": "آن را پیش روی کاربران واقعی بگذارید و رشد را آغاز کنید.",
   "founder": "بنیان‌گذار",
   "Hi, I'm Adil.": "سلام، من عادل هستم.",
-  "I started HumansOfCoding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "HumansOfCoding را راه انداختم تا به کارآفرینان و کسب‌وکارها کمک کنم ایده‌هایشان را به فناوری واقعی تبدیل کنند — بدون پیچیدگی بی‌مورد و بدون هزینه‌های اولیه‌ی سنگین.",
-  "HumansOfCoding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "HumansOfCoding یعنی همان استاندارد را روی ایده‌های کوچک‌تر بگذارم — برای بنیان‌گذاران و کسب‌وکارهای محلی که معمولاً دستشان به چنین مهندسی‌ای نمی‌رسد. هوش مصنوعی کمکم می‌کند سریع پیش بروم؛ اما تعیین نمی‌کند محصول شما چه باید باشد. آن بخش همچنان گفت‌وگویی میان دو انسان است.",
+  "I started Humans Of Coding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "Humans Of Coding را راه انداختم تا به کارآفرینان و کسب‌وکارها کمک کنم ایده‌هایشان را به فناوری واقعی تبدیل کنند — بدون پیچیدگی بی‌مورد و بدون هزینه‌های اولیه‌ی سنگین.",
+  "Humans Of Coding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Humans Of Coding یعنی همان استاندارد را روی ایده‌های کوچک‌تر بگذارم — برای بنیان‌گذاران و کسب‌وکارهای محلی که معمولاً دستشان به چنین مهندسی‌ای نمی‌رسد. هوش مصنوعی کمکم می‌کند سریع پیش بروم؛ اما تعیین نمی‌کند محصول شما چه باید باشد. آن بخش همچنان گفت‌وگویی میان دو انسان است.",
   "building & leading": "ساخت و راهبری",
   "cloud, data & AI": "ابر، داده و هوش مصنوعی",
   "human-reviewed code": "کدِ بازبینی‌شده به‌دست انسان",
@@ -111,7 +111,7 @@ window.HOC_I18N["fa"] = {
   "Book a free call": "رزرو تماس رایگان",
   "WHAT WE BUILD": "چه می‌سازیم",
   "The kind of ideas we bring to life.": "نوع ایده‌هایی که به واقعیت تبدیل می‌کنیم.",
-  "Straight up: HumansOfCoding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "رک بگویم: HumansOfCoding تازه است، پس این‌ها نمونه‌کارند — محصولاتی که آماده‌ی ساختشان هستیم — نه پروژه‌ی مشتری. پروژه‌ی شما اولین کار روی این دیوار خواهد بود.",
+  "Straight up: Humans Of Coding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "رک بگویم: Humans Of Coding تازه است، پس این‌ها نمونه‌کارند — محصولاتی که آماده‌ی ساختشان هستیم — نه پروژه‌ی مشتری. پروژه‌ی شما اولین کار روی این دیوار خواهد بود.",
   "Example build": "نمونه‌کار",
   "Mobile App": "اپلیکیشن موبایل",
   "Restaurant Ordering App": "اپلیکیشن سفارش رستوران",
@@ -154,9 +154,9 @@ window.HOC_I18N["fa"] = {
   "Email": "ایمیل",
   "Write to us": "برای ما بنویسید",
   "Apps • Websites • Software": "اپلیکیشن • وب‌سایت • نرم‌افزار",
-  "© 2026 HumansOfCoding. All rights reserved.": "© ۲۰۲۶ HumansOfCoding. تمامی حقوق محفوظ است.",
+  "© 2026 Humans Of Coding. All rights reserved.": "© ۲۰۲۶ Humans Of Coding. تمامی حقوق محفوظ است.",
   "Built by humans, in code.": "ساخته‌ی انسان‌ها، با کد.",
-  "HumansOfCoding home": "صفحه‌ی اصلی HumansOfCoding",
+  "Humans Of Coding home": "صفحه‌ی اصلی Humans Of Coding",
   "Primary": "ناوبری اصلی",
   "Switch colour theme": "تغییر پوسته‌ی رنگی",
   "Open menu": "باز کردن منو",

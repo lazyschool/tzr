@@ -1,4 +1,4 @@
-/* HumansOfCoding — ms translations. Loaded on demand.
+/* Humans Of Coding — ms translations. Loaded on demand.
    Translated by AI; English is the authentic version. Each key is the
    exact English text on the page. See README section 2b. */
 window.HOC_I18N = window.HOC_I18N || {};
@@ -20,7 +20,7 @@ window.HOC_I18N["ms"] = {
   "Apps, websites & software built for your business — from idea to launch.": "Aplikasi, laman web dan perisian untuk perniagaan anda — daripada idea hingga pelancaran.",
   "See What We Build": "Lihat Apa Yang Kami Bina",
   "Free 20-min idea call · No obligation": "Panggilan idea 20 minit percuma · Tiada ikatan",
-  "Hand-drawn illustration of Adil, founder of HumansOfCoding": "Ilustrasi lukisan tangan Adil, pengasas HumansOfCoding",
+  "Hand-drawn illustration of Adil, founder of Humans Of Coding": "Ilustrasi lukisan tangan Adil, pengasas Humans Of Coding",
   "Minimal line-art character looking at a floating app screen surrounded by idea, code, app and launch doodles.": "Watak garisan minimalis memandang skrin aplikasi yang terapung, dikelilingi lakaran idea, kod, aplikasi dan pelancaran.",
   "Launch": "Lancar",
   "idea": "idea",
@@ -40,7 +40,7 @@ window.HOC_I18N["ms"] = {
   "WHAT WE DO": "APA YANG KAMI BUAT",
   "You bring the idea.": "Anda bawa ideanya.",
   "We handle the tech.": "Kami uruskan teknologinya.",
-  "From planning and design to development and launch, HumansOfCoding helps turn ideas into working digital products.": "Daripada perancangan dan reka bentuk hinggalah pembangunan dan pelancaran, HumansOfCoding menukar idea menjadi produk digital yang benar-benar berfungsi.",
+  "From planning and design to development and launch, Humans Of Coding helps turn ideas into working digital products.": "Daripada perancangan dan reka bentuk hinggalah pembangunan dan pelancaran, Humans Of Coding menukar idea menjadi produk digital yang benar-benar berfungsi.",
   "Mobile Apps": "Aplikasi Mudah Alih",
   "iOS and Android applications built around your business.": "Aplikasi iOS dan Android yang dibina mengikut perniagaan anda.",
   "Websites": "Laman Web",
@@ -102,8 +102,8 @@ window.HOC_I18N["ms"] = {
   "Get it in front of real users and start growing.": "Bawakan kepada pengguna sebenar dan mula berkembang.",
   "founder": "pengasas",
   "Hi, I'm Adil.": "Hai, saya Adil.",
-  "I started HumansOfCoding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "Saya memulakan HumansOfCoding untuk membantu usahawan dan perniagaan menukar idea mereka menjadi teknologi sebenar — tanpa kerumitan yang tidak perlu dan tanpa kos permulaan yang besar.",
-  "HumansOfCoding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "HumansOfCoding ialah cara saya membawa piawaian yang sama kepada idea yang lebih kecil — untuk pengasas dan perniagaan tempatan yang biasanya tidak berpeluang mendapat kejuruteraan seperti ini. AI membantu saya bergerak pantas; ia tidak menentukan produk anda patut jadi apa. Bahagian itu kekal sebagai perbualan antara dua manusia.",
+  "I started Humans Of Coding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "Saya memulakan Humans Of Coding untuk membantu usahawan dan perniagaan menukar idea mereka menjadi teknologi sebenar — tanpa kerumitan yang tidak perlu dan tanpa kos permulaan yang besar.",
+  "Humans Of Coding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Humans Of Coding ialah cara saya membawa piawaian yang sama kepada idea yang lebih kecil — untuk pengasas dan perniagaan tempatan yang biasanya tidak berpeluang mendapat kejuruteraan seperti ini. AI membantu saya bergerak pantas; ia tidak menentukan produk anda patut jadi apa. Bahagian itu kekal sebagai perbualan antara dua manusia.",
   "building & leading": "membina & memimpin",
   "cloud, data & AI": "awan, data & AI",
   "human-reviewed code": "kod disemak manusia",
@@ -111,7 +111,7 @@ window.HOC_I18N["ms"] = {
   "Book a free call": "Tempah panggilan percuma",
   "WHAT WE BUILD": "APA YANG KAMI BINA",
   "The kind of ideas we bring to life.": "Jenis idea yang kami hidupkan.",
-  "Straight up: HumansOfCoding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "Terus terang: HumansOfCoding masih baharu, jadi ini ialah contoh binaan — produk yang kami bersedia hantar — bukan kerja pelanggan. Projek anda akan menjadi yang pertama di dinding ini.",
+  "Straight up: Humans Of Coding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "Terus terang: Humans Of Coding masih baharu, jadi ini ialah contoh binaan — produk yang kami bersedia hantar — bukan kerja pelanggan. Projek anda akan menjadi yang pertama di dinding ini.",
   "Example build": "Contoh binaan",
   "Mobile App": "Aplikasi Mudah Alih",
   "Restaurant Ordering App": "Aplikasi Pesanan Restoran",
@@ -154,9 +154,9 @@ window.HOC_I18N["ms"] = {
   "Email": "E-mel",
   "Write to us": "Tulis kepada kami",
   "Apps • Websites • Software": "Aplikasi • Laman Web • Perisian",
-  "© 2026 HumansOfCoding. All rights reserved.": "© 2026 HumansOfCoding. Hak cipta terpelihara.",
+  "© 2026 Humans Of Coding. All rights reserved.": "© 2026 Humans Of Coding. Hak cipta terpelihara.",
   "Built by humans, in code.": "Dibina oleh manusia, dalam kod.",
-  "HumansOfCoding home": "Laman utama HumansOfCoding",
+  "Humans Of Coding home": "Laman utama Humans Of Coding",
   "Primary": "Navigasi utama",
   "Switch colour theme": "Tukar tema warna",
   "Open menu": "Buka menu",

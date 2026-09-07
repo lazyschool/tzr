@@ -1,5 +1,5 @@
 /* =====================================================================
-   HumansOfCoding — script.js
+   Humans Of Coding — script.js
    Vanilla JS only. No dependencies. Works from file:// or GitHub Pages.
    ===================================================================== */
 
@@ -19,7 +19,7 @@ const CONFIG = {
   // "Book a Free Call" opens the visitor's email app with this message already
   // written, addressed to the `email` above. Edit the wording freely - every
   // line break is kept. Keep it short: long forms scare people off.
-  callSubject: "Free call request - HumansOfCoding",
+  callSubject: "Free call request - Humans Of Coding",
   callBody: [
     "Hi Adil,",
     "",

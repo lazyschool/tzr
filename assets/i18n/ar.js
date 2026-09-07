@@ -1,4 +1,4 @@
-/* HumansOfCoding — ar translations. Loaded on demand.
+/* Humans Of Coding — ar translations. Loaded on demand.
    Translated by AI; English is the authentic version. Each key is the
    exact English text on the page. See README section 2b. */
 window.HOC_I18N = window.HOC_I18N || {};
@@ -20,7 +20,7 @@ window.HOC_I18N["ar"] = {
   "Apps, websites & software built for your business — from idea to launch.": "تطبيقات ومواقع وبرمجيات لعملك — من الفكرة حتى الإطلاق.",
   "See What We Build": "شاهد ما نبنيه",
   "Free 20-min idea call · No obligation": "مكالمة مجانية لمدة ٢٠ دقيقة · دون أي التزام",
-  "Hand-drawn illustration of Adil, founder of HumansOfCoding": "رسم يدوي لعادل، مؤسس HumansOfCoding",
+  "Hand-drawn illustration of Adil, founder of Humans Of Coding": "رسم يدوي لعادل، مؤسس Humans Of Coding",
   "Minimal line-art character looking at a floating app screen surrounded by idea, code, app and launch doodles.": "شخصية بخطوط بسيطة تنظر إلى شاشة تطبيق تطفو في الهواء، تحيط بها رسومات عن الفكرة والشيفرة والتطبيق والإطلاق.",
   "Launch": "إطلاق",
   "idea": "فكرة",
@@ -40,7 +40,7 @@ window.HOC_I18N["ar"] = {
   "WHAT WE DO": "ما الذي نقوم به",
   "You bring the idea.": "أنت تأتي بالفكرة.",
   "We handle the tech.": "ونحن نتولى التقنية.",
-  "From planning and design to development and launch, HumansOfCoding helps turn ideas into working digital products.": "من التخطيط والتصميم إلى التطوير والإطلاق، تحوّل HumansOfCoding الأفكار إلى منتجات رقمية تعمل فعلًا.",
+  "From planning and design to development and launch, Humans Of Coding helps turn ideas into working digital products.": "من التخطيط والتصميم إلى التطوير والإطلاق، تحوّل Humans Of Coding الأفكار إلى منتجات رقمية تعمل فعلًا.",
   "Mobile Apps": "تطبيقات الجوال",
   "iOS and Android applications built around your business.": "تطبيقات iOS وAndroid مبنية حول طبيعة عملك.",
   "Websites": "مواقع الويب",
@@ -102,8 +102,8 @@ window.HOC_I18N["ar"] = {
   "Get it in front of real users and start growing.": "اعرضه على مستخدمين حقيقيين وابدأ في النمو.",
   "founder": "المؤسس",
   "Hi, I'm Adil.": "مرحبًا، أنا عادل.",
-  "I started HumansOfCoding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "أسست HumansOfCoding لمساعدة رواد الأعمال والشركات على تحويل أفكارهم إلى تقنية حقيقية — دون تعقيد لا لزوم له ودون تكاليف أولية ضخمة.",
-  "HumansOfCoding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "HumansOfCoding هي طريقتي في توجيه المعيار نفسه إلى أفكار أصغر — إلى المؤسسين والأعمال المحلية التي لا تصل عادة إلى هذا المستوى من الهندسة. الذكاء الاصطناعي يساعدني على العمل بسرعة، لكنه لا يقرر ما ينبغي أن يكون عليه منتجك. هذا الجزء يبقى حوارًا بين شخصين.",
+  "I started Humans Of Coding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "أسست Humans Of Coding لمساعدة رواد الأعمال والشركات على تحويل أفكارهم إلى تقنية حقيقية — دون تعقيد لا لزوم له ودون تكاليف أولية ضخمة.",
+  "Humans Of Coding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Humans Of Coding هي طريقتي في توجيه المعيار نفسه إلى أفكار أصغر — إلى المؤسسين والأعمال المحلية التي لا تصل عادة إلى هذا المستوى من الهندسة. الذكاء الاصطناعي يساعدني على العمل بسرعة، لكنه لا يقرر ما ينبغي أن يكون عليه منتجك. هذا الجزء يبقى حوارًا بين شخصين.",
   "building & leading": "البناء والقيادة",
   "cloud, data & AI": "السحابة والبيانات والذكاء الاصطناعي",
   "human-reviewed code": "شيفرة راجعها إنسان",
@@ -111,7 +111,7 @@ window.HOC_I18N["ar"] = {
   "Book a free call": "احجز مكالمة مجانية",
   "WHAT WE BUILD": "ما الذي نبنيه",
   "The kind of ideas we bring to life.": "نوع الأفكار التي نحولها إلى واقع.",
-  "Straight up: HumansOfCoding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "بصراحة: HumansOfCoding حديثة العهد، لذا هذه أعمال توضيحية — منتجات نحن جاهزون لتنفيذها — وليست أعمالًا لعملاء. مشروعك سيكون الأول على هذا الجدار.",
+  "Straight up: Humans Of Coding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "بصراحة: Humans Of Coding حديثة العهد، لذا هذه أعمال توضيحية — منتجات نحن جاهزون لتنفيذها — وليست أعمالًا لعملاء. مشروعك سيكون الأول على هذا الجدار.",
   "Example build": "عمل توضيحي",
   "Mobile App": "تطبيق جوال",
   "Restaurant Ordering App": "تطبيق طلبات للمطاعم",
@@ -154,9 +154,9 @@ window.HOC_I18N["ar"] = {
   "Email": "البريد الإلكتروني",
   "Write to us": "راسلنا",
   "Apps • Websites • Software": "تطبيقات • مواقع • برمجيات",
-  "© 2026 HumansOfCoding. All rights reserved.": "© 2026 HumansOfCoding. جميع الحقوق محفوظة.",
+  "© 2026 Humans Of Coding. All rights reserved.": "© 2026 Humans Of Coding. جميع الحقوق محفوظة.",
   "Built by humans, in code.": "صنعه بشر، بالشيفرة.",
-  "HumansOfCoding home": "الصفحة الرئيسية لـ HumansOfCoding",
+  "Humans Of Coding home": "الصفحة الرئيسية لـ Humans Of Coding",
   "Primary": "التنقل الرئيسي",
   "Switch colour theme": "تغيير سمة الألوان",
   "Open menu": "افتح القائمة",

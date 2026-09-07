@@ -1,4 +1,4 @@
-/* HumansOfCoding — vi translations. Loaded on demand.
+/* Humans Of Coding — vi translations. Loaded on demand.
    Translated by AI; English is the authentic version. Each key is the
    exact English text on the page. See README section 2b. */
 window.HOC_I18N = window.HOC_I18N || {};
@@ -20,7 +20,7 @@ window.HOC_I18N["vi"] = {
   "Apps, websites & software built for your business — from idea to launch.": "Ứng dụng, website và phần mềm cho doanh nghiệp của bạn — từ ý tưởng đến khi ra mắt.",
   "See What We Build": "Xem chúng tôi làm gì",
   "Free 20-min idea call · No obligation": "Cuộc gọi tư vấn 20 phút miễn phí · Không ràng buộc",
-  "Hand-drawn illustration of Adil, founder of HumansOfCoding": "Hình vẽ tay của Adil, người sáng lập HumansOfCoding",
+  "Hand-drawn illustration of Adil, founder of Humans Of Coding": "Hình vẽ tay của Adil, người sáng lập Humans Of Coding",
   "Minimal line-art character looking at a floating app screen surrounded by idea, code, app and launch doodles.": "Nhân vật nét vẽ tối giản đang nhìn màn hình ứng dụng lơ lửng, xung quanh là các hình vẽ ý tưởng, mã nguồn, ứng dụng và ra mắt.",
   "Launch": "Ra mắt",
   "idea": "ý tưởng",
@@ -40,7 +40,7 @@ window.HOC_I18N["vi"] = {
   "WHAT WE DO": "CHÚNG TÔI LÀM GÌ",
   "You bring the idea.": "Bạn mang đến ý tưởng.",
   "We handle the tech.": "Chúng tôi lo phần công nghệ.",
-  "From planning and design to development and launch, HumansOfCoding helps turn ideas into working digital products.": "Từ lập kế hoạch và thiết kế đến phát triển và ra mắt, HumansOfCoding biến ý tưởng thành sản phẩm số hoạt động thực sự.",
+  "From planning and design to development and launch, Humans Of Coding helps turn ideas into working digital products.": "Từ lập kế hoạch và thiết kế đến phát triển và ra mắt, Humans Of Coding biến ý tưởng thành sản phẩm số hoạt động thực sự.",
   "Mobile Apps": "Ứng dụng di động",
   "iOS and Android applications built around your business.": "Ứng dụng iOS và Android được xây dựng quanh doanh nghiệp của bạn.",
   "Websites": "Website",
@@ -102,8 +102,8 @@ window.HOC_I18N["vi"] = {
   "Get it in front of real users and start growing.": "Đưa sản phẩm đến người dùng thật và bắt đầu tăng trưởng.",
   "founder": "người sáng lập",
   "Hi, I'm Adil.": "Xin chào, tôi là Adil.",
-  "I started HumansOfCoding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "Tôi lập ra HumansOfCoding để giúp các doanh nhân và doanh nghiệp biến ý tưởng thành công nghệ thực sự — không rườm rà và không cần chi phí ban đầu quá lớn.",
-  "HumansOfCoding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "HumansOfCoding là cách tôi mang đúng tiêu chuẩn đó đến với những ý tưởng nhỏ hơn — cho những người sáng lập và cửa hàng địa phương thường không tiếp cận được kiểu kỹ thuật này. AI giúp tôi làm nhanh hơn; nó không quyết định sản phẩm của bạn phải là gì. Phần đó vẫn là cuộc trò chuyện giữa hai con người.",
+  "I started Humans Of Coding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "Tôi lập ra Humans Of Coding để giúp các doanh nhân và doanh nghiệp biến ý tưởng thành công nghệ thực sự — không rườm rà và không cần chi phí ban đầu quá lớn.",
+  "Humans Of Coding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Humans Of Coding là cách tôi mang đúng tiêu chuẩn đó đến với những ý tưởng nhỏ hơn — cho những người sáng lập và cửa hàng địa phương thường không tiếp cận được kiểu kỹ thuật này. AI giúp tôi làm nhanh hơn; nó không quyết định sản phẩm của bạn phải là gì. Phần đó vẫn là cuộc trò chuyện giữa hai con người.",
   "building & leading": "xây dựng & dẫn dắt",
   "cloud, data & AI": "cloud, dữ liệu & AI",
   "human-reviewed code": "mã do con người kiểm tra",
@@ -111,7 +111,7 @@ window.HOC_I18N["vi"] = {
   "Book a free call": "Đặt lịch gọi miễn phí",
   "WHAT WE BUILD": "CHÚNG TÔI XÂY DỰNG GÌ",
   "The kind of ideas we bring to life.": "Những ý tưởng chúng tôi biến thành hiện thực.",
-  "Straight up: HumansOfCoding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "Nói thẳng: HumansOfCoding còn mới, nên đây là các dự án mẫu — những sản phẩm chúng tôi sẵn sàng làm — chứ không phải dự án của khách hàng. Dự án của bạn sẽ là dự án đầu tiên trên bức tường này.",
+  "Straight up: Humans Of Coding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "Nói thẳng: Humans Of Coding còn mới, nên đây là các dự án mẫu — những sản phẩm chúng tôi sẵn sàng làm — chứ không phải dự án của khách hàng. Dự án của bạn sẽ là dự án đầu tiên trên bức tường này.",
   "Example build": "Dự án mẫu",
   "Mobile App": "Ứng dụng di động",
   "Restaurant Ordering App": "Ứng dụng đặt món cho nhà hàng",
@@ -154,9 +154,9 @@ window.HOC_I18N["vi"] = {
   "Email": "Email",
   "Write to us": "Viết cho chúng tôi",
   "Apps • Websites • Software": "Ứng dụng • Website • Phần mềm",
-  "© 2026 HumansOfCoding. All rights reserved.": "© 2026 HumansOfCoding. Bảo lưu mọi quyền.",
+  "© 2026 Humans Of Coding. All rights reserved.": "© 2026 Humans Of Coding. Bảo lưu mọi quyền.",
   "Built by humans, in code.": "Do con người viết, bằng mã nguồn.",
-  "HumansOfCoding home": "Trang chủ HumansOfCoding",
+  "Humans Of Coding home": "Trang chủ Humans Of Coding",
   "Primary": "Điều hướng chính",
   "Switch colour theme": "Đổi giao diện màu",
   "Open menu": "Mở menu",

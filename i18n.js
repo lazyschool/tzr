@@ -1,5 +1,5 @@
 /* =====================================================================
-   HumansOfCoding — i18n.js (core)
+   Humans Of Coding — i18n.js (core)
    ---------------------------------------------------------------------
    English is the AUTHENTIC version of this site. Every other language is
    translated by AI, and a notice under the header says so — including an
