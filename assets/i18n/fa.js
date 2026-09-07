@@ -195,5 +195,6 @@ window.HOC_I18N["fa"] = {
   "Straight answers, no jargon.": "پاسخ‌های صریح، بدون اصطلاحات فنی.",
   "What software actually costs, what an MVP really is, and how AI fits into the work — written for the person paying for it.": "هزینهٔ واقعی نرم‌افزار، معنی واقعی MVP، و جایگاه هوش مصنوعی در کار — نوشته‌شده برای کسی که هزینه‌اش را می‌پردازد.",
   "Read all articles": "خواندن همهٔ مقاله‌ها",
-  "See how we'd build these": "ببینید چگونه می‌سازیم"
+  "See how we'd build these": "ببینید چگونه می‌سازیم",
+  "All case studies": "همهٔ مطالعات موردی"
 };

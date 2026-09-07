@@ -195,5 +195,6 @@ window.HOC_I18N["uk"] = {
   "Straight answers, no jargon.": "Прямі відповіді, без жаргону.",
   "What software actually costs, what an MVP really is, and how AI fits into the work — written for the person paying for it.": "Скільки насправді коштує софт, що таке MVP насправді і де в роботі місце ШІ — написано для того, хто за це платить.",
   "Read all articles": "Читати всі статті",
-  "See how we'd build these": "Подивіться, як ми їх побудуємо"
+  "See how we'd build these": "Подивіться, як ми їх побудуємо",
+  "All case studies": "Усі кейси"
 };

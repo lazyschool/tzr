@@ -195,5 +195,6 @@ window.HOC_I18N["ja"] = {
   "Straight answers, no jargon.": "専門用語なしの、率直な答え。",
   "What software actually costs, what an MVP really is, and how AI fits into the work — written for the person paying for it.": "ソフトウェアの本当の費用、MVPとは実際に何か、そしてAIが仕事のどこに収まるのか——お金を払う人のために書いています。",
   "Read all articles": "すべての記事を読む",
-  "See how we'd build these": "どう作るかを見る"
+  "See how we'd build these": "どう作るかを見る",
+  "All case studies": "すべての事例"
 };

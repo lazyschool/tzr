@@ -195,5 +195,6 @@ window.HOC_I18N["gu"] = {
   "Straight answers, no jargon.": "સીધા જવાબો, કોઈ ભારે શબ્દો નહીં.",
   "What software actually costs, what an MVP really is, and how AI fits into the work — written for the person paying for it.": "સોફ્ટવેરનો ખરો ખર્ચ કેટલો, MVP ખરેખર શું છે, અને AI કામમાં ક્યાં બંધબેસે છે — જે ચૂકવે છે તેમના માટે લખાયેલું.",
   "Read all articles": "બધા લેખ વાંચો",
-  "See how we'd build these": "જુઓ અમે આ કેવી રીતે બનાવીશું"
+  "See how we'd build these": "જુઓ અમે આ કેવી રીતે બનાવીશું",
+  "All case studies": "બધા કેસ સ્ટડી"
 };

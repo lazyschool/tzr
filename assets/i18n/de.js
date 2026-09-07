@@ -195,5 +195,12 @@ window.HOC_I18N["de"] = {
   "Straight answers, no jargon.": "Klare Antworten, kein Fachjargon.",
   "What software actually costs, what an MVP really is, and how AI fits into the work — written for the person paying for it.": "Was Software wirklich kostet, was ein MVP tatsächlich ist und welche Rolle KI dabei spielt — geschrieben für die Person, die dafür bezahlt.",
   "Read all articles": "Alle Artikel lesen",
-  "See how we'd build these": "So würden wir sie bauen"
+  "See how we'd build these": "So würden wir sie bauen",
+  "All case studies": "Alle Fallstudien",
+  "SaaS Subscription Starter": "SaaS-Abo-Grundgerüst",
+  "Business Website That Converts": "Firmen-Website, die konvertiert",
+  "Inventory & Billing for Retail": "Warenwirtschaft & Kasse für den Handel",
+  "Clinic Appointments & Records": "Praxistermine & Patientenakten",
+  "Gym Membership App": "Fitness-Mitglieder-App",
+  "Field Service Job App": "App für den Außendienst"
 };

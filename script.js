@@ -393,6 +393,77 @@ const CONFIG = {
     });
   }
 
+
+  /* ---------------------------------------------------------------
+     4b. Nav dropdowns
+     Hover opens them on a pointer device; click and keyboard work
+     everywhere, which is what a touch screen and a screen reader get.
+  --------------------------------------------------------------- */
+  const drops = $$(".nd").map(function (root) {
+    return { root: root, btn: $(".nd__btn", root), panel: $(".nd__panel", root) };
+  }).filter(function (d) { return d.btn && d.panel; });
+
+  if (drops.length) {
+    let hoverable = false;
+    try {
+      hoverable = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    } catch (e) { /* older browser: click only, which still works */ }
+
+    function openDrop(d, open) {
+      d.panel.hidden = !open;
+      d.btn.setAttribute("aria-expanded", String(open));
+    }
+
+    function closeAll(except) {
+      drops.forEach(function (d) { if (d !== except) openDrop(d, false); });
+    }
+
+    drops.forEach(function (d) {
+      d.btn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        const open = d.panel.hidden;
+        closeAll(d);
+        openDrop(d, open);
+      });
+
+      // arrow-down from the button moves into the panel
+      d.btn.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowDown") {
+          e.preventDefault();
+          closeAll(d);
+          openDrop(d, true);
+          const first = $("a", d.panel);
+          if (first) first.focus();
+        }
+      });
+
+      if (hoverable) {
+        d.root.addEventListener("mouseenter", function () { closeAll(d); openDrop(d, true); });
+        d.root.addEventListener("mouseleave", function () { openDrop(d, false); });
+      }
+
+      // tabbing out of the last link should close the panel behind you
+      d.root.addEventListener("focusout", function (e) {
+        if (!d.root.contains(e.relatedTarget)) openDrop(d, false);
+      });
+
+      $$("a", d.panel).forEach(function (a) {
+        a.addEventListener("click", function () { openDrop(d, false); });
+      });
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest || !e.target.closest(".nd")) closeAll(null);
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key !== "Escape") return;
+      drops.forEach(function (d) {
+        if (!d.panel.hidden) { openDrop(d, false); d.btn.focus(); }
+      });
+    });
+  }
+
   /* ---------------------------------------------------------------
      5. Reveal on scroll
   --------------------------------------------------------------- */

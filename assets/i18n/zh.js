@@ -194,5 +194,6 @@ window.HOC_I18N["zh"] = {
   "Straight answers, no jargon.": "直白的答案，没有行话。",
   "What software actually costs, what an MVP really is, and how AI fits into the work — written for the person paying for it.": "软件真实的成本是多少、MVP 究竟是什么、AI 在这项工作中处于什么位置——写给掏钱的人看。",
   "Read all articles": "阅读全部文章",
-  "See how we'd build these": "看看我们会怎么做"
+  "See how we'd build these": "看看我们会怎么做",
+  "All case studies": "全部案例"
 };

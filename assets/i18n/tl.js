@@ -195,5 +195,6 @@ window.HOC_I18N["tl"] = {
   "Straight answers, no jargon.": "Tuwirang sagot, walang malalalim na salita.",
   "What software actually costs, what an MVP really is, and how AI fits into the work — written for the person paying for it.": "Magkano talaga ang software, ano ba talaga ang MVP, at saan pumapasok ang AI sa trabaho — isinulat para sa taong nagbabayad nito.",
   "Read all articles": "Basahin ang lahat ng artikulo",
-  "See how we'd build these": "Tingnan kung paano namin gagawin ito"
+  "See how we'd build these": "Tingnan kung paano namin gagawin ito",
+  "All case studies": "Lahat ng case study"
 };

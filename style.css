@@ -2714,3 +2714,185 @@ h1, h2, h3 {
   .post-card__mock .mock,
   .post-card:hover .post-card__mock .mock { transition: none; transform: none; }
 }
+
+/* ---------------- 16. NAV DROPDOWNS ----------------
+   Three of the four primary items open a panel. On a phone the same content
+   lives in the burger menu as <details> groups, which need no JavaScript. */
+
+.nd { position: relative; display: flex; }
+
+.nd__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: inherit;
+  color: var(--fg-2);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.nd__btn:hover,
+.nd__btn[aria-expanded="true"],
+.nd__btn.is-active { color: var(--fg); }
+
+.nd__caret {
+  width: 13px;
+  height: 13px;
+  transition: transform .22s var(--ease);
+}
+.nd__btn[aria-expanded="true"] .nd__caret { transform: rotate(180deg); }
+
+.nd__panel {
+  position: absolute;
+  top: calc(100% + 14px);
+  inset-inline-start: 50%;
+  z-index: 120;
+  translate: -50% 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 26px;
+  min-width: 232px;
+  padding: 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 16px;
+  background: var(--card);
+  box-shadow: var(--shadow-lg);
+}
+/* twelve studies under seven headings is too tall for one column */
+.nd__panel--wide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 26px;
+  min-width: 540px;
+}
+.nd__panel--wide .nd__all { grid-column: 1 / -1; }
+
+/* an author `display` beats the hidden attribute's UA rule, so say it again */
+.nd__panel[hidden] { display: none; }
+
+/* Without JavaScript nothing can open a panel, so drop the panels open and
+   inline instead. The bootstrap adds .js before first paint, so this only
+   ever applies when scripting is genuinely off. */
+:root:not(.js) .nd { position: static; }
+:root:not(.js) .nd__btn { display: none; }
+:root:not(.js) .nd__panel,
+:root:not(.js) .nd__panel[hidden] {
+  position: static;
+  display: flex;
+  translate: none;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+:root:not(.js) .nd__panel .nd__head,
+:root:not(.js) .nd__all { display: none; }
+
+/* a hover bridge, so the pointer can cross the gap without the panel closing */
+.nd__panel::before {
+  content: "";
+  position: absolute;
+  inset: -16px 0 auto 0;
+  height: 16px;
+}
+
+/* min-width:0 lets a grid column actually constrain its contents; the
+   top-level nav sets nowrap, which a long translated title must not inherit
+   or it spills into the next column */
+.nd__col { display: grid; align-content: start; min-width: 0; }
+.nd__panel a { white-space: normal; }
+
+.nd__panel a {
+  display: block;
+  padding: 7px 10px;
+  border-radius: 9px;
+  font-size: .9rem;
+  line-height: 1.35;
+  color: var(--fg-2);
+  text-decoration: none;
+}
+.nd__panel a:hover,
+.nd__panel a:focus-visible { background: var(--bg-2); color: var(--fg); }
+
+.nd__head {
+  margin: 10px 0 3px;
+  padding-inline: 10px;
+  font-size: .66rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--fg-2);
+  opacity: .7;
+}
+.nd__col > .nd__head:first-child { margin-top: 0; }
+
+.nd__all {
+  flex-basis: 100%;
+  margin-top: 8px;
+  padding-top: 12px !important;
+  border-top: 1.5px solid var(--line);
+  font-weight: 650;
+  color: var(--accent) !important;
+  border-radius: 0 !important;
+}
+.nd__all:hover { background: none !important; text-decoration: underline; }
+
+/* nothing above the fold should be able to push the panel off screen */
+@media (max-width: 1259px) {
+  .nd__panel { inset-inline-start: 0; translate: 0 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nd__caret { transition: none; }
+}
+
+/* --- the same content inside the burger menu --- */
+.mgroup { border-bottom: 1.5px solid var(--line); }
+.mgroup > summary {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--fg);
+  cursor: pointer;
+  list-style: none;
+}
+.mgroup > summary::-webkit-details-marker { display: none; }
+.mgroup > summary::after {
+  content: "+";
+  margin-inline-start: auto;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--accent);
+}
+.mgroup[open] > summary::after { content: "\2013"; }
+.mgroup > summary span {
+  font-family: var(--font-body);
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.mgroup__body { padding: 2px 0 14px; }
+.mgroup__body a {
+  display: block;
+  padding: 9px 0 9px 34px;
+  font-size: .98rem;
+  color: var(--fg-2);
+  text-decoration: none;
+}
+.mgroup__body a:hover { color: var(--accent); }
+.mgroup__body .nd__head { padding-inline: 34px 0; margin-top: 12px; }
+.mgroup__body .nd__all {
+  margin-top: 10px;
+  padding-top: 12px !important;
+  padding-inline-start: 34px;
+  border-top: 1.5px solid var(--line);
+}

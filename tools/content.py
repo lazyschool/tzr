@@ -619,7 +619,7 @@ CASE_STUDIES = [
         ],
         "category": "Custom Software",
         "thumb": "b",
-        "title": "Inventory & Billing for Retail",
+        "title": "Inventory &amp; Billing for Retail",
         "summary": "Stock that matches the shelf, GST-ready bills in seconds, and "
                    "an alert before a fast seller runs out.",
         "situation": [
@@ -691,7 +691,7 @@ CASE_STUDIES = [
         ],
         "category": "Web App",
         "thumb": "b",
-        "title": "Clinic Appointments & Records",
+        "title": "Clinic Appointments &amp; Records",
         "summary": "Appointments, patient history and prescriptions in one place, "
                    "with reminders that cut the empty slots.",
         "situation": [

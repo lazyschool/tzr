@@ -195,5 +195,6 @@ window.HOC_I18N["nb"] = {
   "Straight answers, no jargon.": "Rett fram svar, uten stammespråk.",
   "What software actually costs, what an MVP really is, and how AI fits into the work — written for the person paying for it.": "Hva programvare faktisk koster, hva et MVP egentlig er, og hvor KI hører hjemme i arbeidet — skrevet for den som betaler.",
   "Read all articles": "Les alle artiklene",
-  "See how we'd build these": "Se hvordan vi ville bygd dem"
+  "See how we'd build these": "Se hvordan vi ville bygd dem",
+  "All case studies": "Alle casestudier"
 };

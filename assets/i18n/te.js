@@ -195,5 +195,6 @@ window.HOC_I18N["te"] = {
   "Straight answers, no jargon.": "సూటి సమాధానాలు, కఠిన పదాలు లేవు.",
   "What software actually costs, what an MVP really is, and how AI fits into the work — written for the person paying for it.": "సాఫ్ట్‌వేర్ నిజమైన ఖర్చు ఎంత, MVP అంటే నిజంగా ఏమిటి, AI పనిలో ఎక్కడ సరిపోతుంది — డబ్బు చెల్లించే వ్యక్తి కోసం రాసినది.",
   "Read all articles": "అన్ని వ్యాసాలు చదవండి",
-  "See how we'd build these": "వీటిని ఎలా నిర్మిస్తామో చూడండి"
+  "See how we'd build these": "వీటిని ఎలా నిర్మిస్తామో చూడండి",
+  "All case studies": "అన్ని కేస్ స్టడీలు"
 };

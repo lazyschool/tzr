@@ -195,5 +195,6 @@ window.HOC_I18N["pl"] = {
   "Straight answers, no jargon.": "Konkretne odpowiedzi, bez żargonu.",
   "What software actually costs, what an MVP really is, and how AI fits into the work — written for the person paying for it.": "Ile naprawdę kosztuje oprogramowanie, czym faktycznie jest MVP i gdzie w tej pracy mieści się AI — napisane dla osoby, która za to płaci.",
   "Read all articles": "Przeczytaj wszystkie artykuły",
-  "See how we'd build these": "Zobacz, jak byśmy je zbudowali"
+  "See how we'd build these": "Zobacz, jak byśmy je zbudowali",
+  "All case studies": "Wszystkie studia"
 };

@@ -195,5 +195,6 @@ window.HOC_I18N["vi"] = {
   "Straight answers, no jargon.": "Câu trả lời thẳng thắn, không thuật ngữ.",
   "What software actually costs, what an MVP really is, and how AI fits into the work — written for the person paying for it.": "Phần mềm thực sự tốn bao nhiêu, MVP thật ra là gì, và AI nằm ở đâu trong công việc — viết cho người trả tiền.",
   "Read all articles": "Đọc tất cả bài viết",
-  "See how we'd build these": "Xem chúng tôi sẽ xây dựng thế nào"
+  "See how we'd build these": "Xem chúng tôi sẽ xây dựng thế nào",
+  "All case studies": "Tất cả nghiên cứu"
 };

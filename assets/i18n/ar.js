@@ -195,5 +195,6 @@ window.HOC_I18N["ar"] = {
   "Straight answers, no jargon.": "إجابات صريحة، بلا مصطلحات.",
   "What software actually costs, what an MVP really is, and how AI fits into the work — written for the person paying for it.": "كم تكلّف البرمجيات فعلاً، وما هو المنتج الأولي حقاً، وكيف يندرج الذكاء الاصطناعي في العمل — مكتوب لمن يدفع ثمنه.",
   "Read all articles": "اقرأ كل المقالات",
-  "See how we'd build these": "شاهد كيف سنبنيها"
+  "See how we'd build these": "شاهد كيف سنبنيها",
+  "All case studies": "كل دراسات الحالة"
 };

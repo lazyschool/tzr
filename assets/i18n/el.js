@@ -195,5 +195,12 @@ window.HOC_I18N["el"] = {
   "Straight answers, no jargon.": "Ξεκάθαρες απαντήσεις, χωρίς ορολογία.",
   "What software actually costs, what an MVP really is, and how AI fits into the work — written for the person paying for it.": "Πόσο κοστίζει πραγματικά το λογισμικό, τι είναι στ' αλήθεια ένα MVP και πώς εντάσσεται η ΤΝ στη δουλειά — γραμμένο για αυτόν που πληρώνει.",
   "Read all articles": "Διαβάστε όλα τα άρθρα",
-  "See how we'd build these": "Δείτε πώς θα τα φτιάχναμε"
+  "See how we'd build these": "Δείτε πώς θα τα φτιάχναμε",
+  "All case studies": "Όλες οι μελέτες περίπτωσης",
+  "SaaS Subscription Starter": "Βάση συνδρομών SaaS",
+  "Business Website That Converts": "Εταιρικός ιστότοπος που αποδίδει",
+  "Inventory & Billing for Retail": "Απόθεμα & τιμολόγηση για λιανική",
+  "Clinic Appointments & Records": "Ραντεβού & αρχεία κλινικής",
+  "Gym Membership App": "Εφαρμογή συνδρομών γυμναστηρίου",
+  "Field Service Job App": "Εφαρμογή εργασιών πεδίου"
 };

@@ -195,5 +195,6 @@ window.HOC_I18N["ru"] = {
   "Straight answers, no jargon.": "Прямые ответы, без жаргона.",
   "What software actually costs, what an MVP really is, and how AI fits into the work — written for the person paying for it.": "Сколько на самом деле стоит софт, что такое MVP на самом деле и где в работе место ИИ — написано для того, кто за это платит.",
   "Read all articles": "Читать все статьи",
-  "See how we'd build these": "Посмотрите, как мы их построим"
+  "See how we'd build these": "Посмотрите, как мы их построим",
+  "All case studies": "Все кейсы"
 };
