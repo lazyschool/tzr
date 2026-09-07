@@ -235,6 +235,30 @@ FIELD_JOB = '''<div class="mock mock--phone">
   </div>
 </div>'''
 
+SOCIAL_HOME = '''<div class="mock">
+  <div class="mock__bar mock__bar--url">
+    <i></i><i></i><i></i>
+    <span class="mk-url"><b class="mk-lock"></b><i class="mk-line" style="width:64px"></i></span>
+  </div>
+  <div class="mock__body">
+    <div class="mk-brandrow">
+      <i class="mk-avatar mk-avatar--big"></i>
+      <i class="mk-line mk-line--title" style="width:52%"></i>
+      <i class="mk-line mk-line--fade" style="width:70%"></i>
+    </div>
+    <div class="mk-links">
+      <span class="mk-linkbtn is-primary"></span>
+      <span class="mk-linkbtn"></span>
+      <span class="mk-linkbtn"></span>
+      <span class="mk-linkbtn"></span>
+    </div>
+    <div class="mk-mailrow">
+      <b class="mk-at">@</b>
+      <i class="mk-line" style="width:58%"></i>
+    </div>
+  </div>
+</div>'''
+
 MOCKS = {
     "restaurant-ordering-app": PHONE_ORDER,
     "coaching-management-platform": DASH_COACHING,
@@ -248,6 +272,7 @@ MOCKS = {
     "clinic-appointments-and-records": CLINIC_DAY,
     "gym-membership-app": GYM_PASS,
     "field-service-job-app": FIELD_JOB,
+    "first-website-for-a-social-first-business": SOCIAL_HOME,
 }
 
 
