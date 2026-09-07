@@ -16,6 +16,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from content import CASE_STUDIES, ARTICLES  # noqa: E402
 from mocks import mock_for  # noqa: E402
+import nav  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://humansofcoding.com"
@@ -147,8 +148,6 @@ def head(title, description, canonical, jsonld):
 
 def chrome_open(active):
     """Header, translation notice and mobile menu. `active` marks the nav item."""
-    def cls(name):
-        return ' class="is-active"' if name == active else ''
     return u'''<body>
 <a class="skip-link" href="#main">Skip to content</a>
 <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
@@ -160,13 +159,7 @@ def chrome_open(active):
       <span class="brand__text">HumansOfCoding</span>
     </a>
 
-    <nav class="nav__links" aria-label="Primary">
-      <a href="../index.html#services">Services</a>
-      <a href="../index.html#industries">Industries</a>
-      <a href="../case-studies/index.html"{cs}>Case Studies</a>
-      <a href="../articles/index.html"{ar}>Articles</a>
-      <a href="../index.html#about">About</a>
-    </nav>
+{primary}
 
     <div class="nav__actions">
       <div class="lang">
@@ -225,16 +218,7 @@ def chrome_open(active):
   </div>
 </div>
 
-<div class="menu" id="mobileMenu" hidden>
-  <nav class="menu__inner" aria-label="Mobile">
-    <a href="../index.html#services"><span>01</span> Services</a>
-    <a href="../index.html#human"><span>02</span> Human + AI</a>
-    <a href="../index.html#industries"><span>03</span> Industries</a>
-    <a href="../index.html#mvp"><span>04</span> MVP · ₹20,000</a>
-    <a href="../case-studies/index.html"><span>05</span> Case Studies</a>
-    <a href="../articles/index.html"><span>06</span> Articles</a>
-    <a href="../index.html#about"><span>07</span> About Adil</a>
-    <a href="../index.html#contact"><span>08</span> Contact</a>
+{mobilemenu}
     <div class="menu__cta">
       <a class="btn btn--primary btn--block" data-link="call" href="{mailto}">Book a Free Call</a>
       <a class="btn btn--ghost btn--block" data-link="instagram" href="{ig}">DM @humansofcoding</a>
@@ -244,7 +228,8 @@ def chrome_open(active):
 
 <main id="main">
 '''.format(brand=BRAND_SVG, mailto=MAILTO, ig=INSTAGRAM,
-           cs=cls("case-studies"), ar=cls("articles"))
+           primary=nav.primary("../", active),
+           mobilemenu=nav.mobile("../"))
 
 
 CHROME_CLOSE = u'''</main>
@@ -813,6 +798,24 @@ def build_sitemap():
     write("robots.txt", "User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n" % SITE)
 
 
+def build_nav():
+    """Rewrite index.html's nav from nav.py, so the home page and the generated
+    pages can never drift apart."""
+    path = os.path.join(ROOT, "index.html")
+    html = io.open(path, encoding="utf-8").read()
+
+    start = html.index('    <nav class="nav__links" aria-label="Primary">')
+    end = html.index("</nav>", start) + len("</nav>")
+    html = html[:start] + nav.primary("") + html[end:]
+
+    start = html.index('<div class="menu" id="mobileMenu" hidden>')
+    end = html.index('    <div class="menu__cta">', start)
+    html = html[:start] + nav.mobile("") + "\n" + html[end:]
+
+    io.open(path, "w", encoding="utf-8", newline="").write(html)
+    print("  index.html nav rebuilt")
+
+
 def build_hreflang():
     """Keep index.html's alternate-language links to the languages on offer."""
     global TAG
@@ -841,6 +844,7 @@ def main():
 
     build_sitemap()
     build_hreflang()
+    build_nav()
     print("\n%d pages generated. Now run: python tools/csp.py" %
           (2 + len(CASE_STUDIES) + len(ARTICLES)))
 

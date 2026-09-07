@@ -92,10 +92,59 @@
     </a>
 
     <nav class="nav__links" aria-label="Primary">
-      <a href="../index.html#services">Services</a>
-      <a href="../index.html#industries">Industries</a>
-      <a href="../case-studies/index.html" class="is-active">Case Studies</a>
-      <a href="../articles/index.html">Articles</a>
+      <div class="nd">
+        <button class="nd__btn" type="button" aria-expanded="false" aria-controls="ndServices">Services<svg class="nd__caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="nd__panel" id="ndServices" hidden>
+          <div class="nd__col">
+          <a href="../index.html#services">Services</a>
+          <a href="../index.html#human">Human + AI</a>
+          <a href="../index.html#industries">Industries</a>
+          <a href="../index.html#process">Process</a>
+          </div>
+        </div>
+      </div>
+      <div class="nd">
+        <button class="nd__btn is-active" type="button" aria-expanded="false" aria-controls="ndWork">Case Studies<svg class="nd__caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="nd__panel nd__panel--wide" id="ndWork" hidden>
+          <div class="nd__col">
+            <p class="nd__head">Mobile App</p>
+            <a href="../case-studies/restaurant-ordering-app.html">Restaurant Ordering App</a>
+            <a href="../case-studies/delivery-tracking-app.html">Delivery Tracking App</a>
+            <a href="../case-studies/gym-membership-app.html">Gym Membership App</a>
+            <a href="../case-studies/field-service-job-app.html">Field Service Job App</a>
+            <p class="nd__head">Web App</p>
+            <a href="../case-studies/coaching-management-platform.html">Coaching Management Platform</a>
+            <a href="../case-studies/business-automation-dashboard.html">Business Automation Dashboard</a>
+            <a href="../case-studies/clinic-appointments-and-records.html">Clinic Appointments &amp; Records</a>
+            <p class="nd__head">Website + CRM</p>
+            <a href="../case-studies/real-estate-listing-portal.html">Real Estate Listing Portal</a>
+          </div>
+          <div class="nd__col">
+            <p class="nd__head">MVP</p>
+            <a href="../case-studies/booking-and-scheduling-mvp.html">Booking &amp; Scheduling MVP</a>
+            <p class="nd__head">SaaS Product</p>
+            <a href="../case-studies/saas-subscription-starter.html">SaaS Subscription Starter</a>
+            <p class="nd__head">Website</p>
+            <a href="../case-studies/business-website-that-converts.html">Business Website That Converts</a>
+            <p class="nd__head">Custom Software</p>
+            <a href="../case-studies/inventory-and-billing-for-retail.html">Inventory &amp; Billing for Retail</a>
+          </div>
+          <a class="nd__all" href="../case-studies/index.html">All case studies <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </div>
+      <div class="nd">
+        <button class="nd__btn" type="button" aria-expanded="false" aria-controls="ndReads">Articles<svg class="nd__caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="nd__panel" id="ndReads" hidden>
+          <div class="nd__col">
+          <a href="../articles/what-an-mvp-actually-is.html">What an MVP actually is, and what it isn't</a>
+          <a href="../articles/what-twenty-thousand-buys.html">What ₹20,000 buys you — and what it doesn't</a>
+          <a href="../articles/how-i-use-ai-without-shipping-garbage.html">How I use AI to build faster without shipping garbage</a>
+          <a href="../articles/app-or-website-first.html">Should you build an app or a website first?</a>
+          <a href="../articles/questions-to-ask-before-hiring-a-developer.html">Seven questions to ask before hiring any developer</a>
+          </div>
+          <a class="nd__all" href="../articles/index.html">Read all articles <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </div>
       <a href="../index.html#about">About</a>
     </nav>
 
@@ -158,14 +207,53 @@
 
 <div class="menu" id="mobileMenu" hidden>
   <nav class="menu__inner" aria-label="Mobile">
-    <a href="../index.html#services"><span>01</span> Services</a>
-    <a href="../index.html#human"><span>02</span> Human + AI</a>
-    <a href="../index.html#industries"><span>03</span> Industries</a>
-    <a href="../index.html#mvp"><span>04</span> MVP · ₹20,000</a>
-    <a href="../case-studies/index.html"><span>05</span> Case Studies</a>
-    <a href="../articles/index.html"><span>06</span> Articles</a>
-    <a href="../index.html#about"><span>07</span> About Adil</a>
-    <a href="../index.html#contact"><span>08</span> Contact</a>
+    <details class="mgroup">
+      <summary><span>01</span> Services</summary>
+      <div class="mgroup__body">
+      <a href="../index.html#services">Services</a>
+      <a href="../index.html#human">Human + AI</a>
+      <a href="../index.html#industries">Industries</a>
+      <a href="../index.html#process">Process</a>
+      </div>
+    </details>
+    <details class="mgroup">
+      <summary><span>02</span> Case Studies</summary>
+      <div class="mgroup__body">
+      <p class="nd__head">Mobile App</p>
+      <a href="../case-studies/restaurant-ordering-app.html">Restaurant Ordering App</a>
+      <a href="../case-studies/delivery-tracking-app.html">Delivery Tracking App</a>
+      <a href="../case-studies/gym-membership-app.html">Gym Membership App</a>
+      <a href="../case-studies/field-service-job-app.html">Field Service Job App</a>
+      <p class="nd__head">Web App</p>
+      <a href="../case-studies/coaching-management-platform.html">Coaching Management Platform</a>
+      <a href="../case-studies/business-automation-dashboard.html">Business Automation Dashboard</a>
+      <a href="../case-studies/clinic-appointments-and-records.html">Clinic Appointments &amp; Records</a>
+      <p class="nd__head">Website + CRM</p>
+      <a href="../case-studies/real-estate-listing-portal.html">Real Estate Listing Portal</a>
+      <p class="nd__head">MVP</p>
+      <a href="../case-studies/booking-and-scheduling-mvp.html">Booking &amp; Scheduling MVP</a>
+      <p class="nd__head">SaaS Product</p>
+      <a href="../case-studies/saas-subscription-starter.html">SaaS Subscription Starter</a>
+      <p class="nd__head">Website</p>
+      <a href="../case-studies/business-website-that-converts.html">Business Website That Converts</a>
+      <p class="nd__head">Custom Software</p>
+      <a href="../case-studies/inventory-and-billing-for-retail.html">Inventory &amp; Billing for Retail</a>
+        <a class="nd__all" href="../case-studies/index.html">All case studies <span aria-hidden="true">&#8594;</span></a>
+      </div>
+    </details>
+    <details class="mgroup">
+      <summary><span>03</span> Articles</summary>
+      <div class="mgroup__body">
+      <a href="../articles/what-an-mvp-actually-is.html">What an MVP actually is, and what it isn't</a>
+      <a href="../articles/what-twenty-thousand-buys.html">What ₹20,000 buys you — and what it doesn't</a>
+      <a href="../articles/how-i-use-ai-without-shipping-garbage.html">How I use AI to build faster without shipping garbage</a>
+      <a href="../articles/app-or-website-first.html">Should you build an app or a website first?</a>
+      <a href="../articles/questions-to-ask-before-hiring-a-developer.html">Seven questions to ask before hiring any developer</a>
+        <a class="nd__all" href="../articles/index.html">Read all articles <span aria-hidden="true">&#8594;</span></a>
+      </div>
+    </details>
+    <a href="../index.html#about"><span>04</span> About Adil</a>
+    <a href="../index.html#contact"><span>05</span> Contact</a>
     <div class="menu__cta">
       <a class="btn btn--primary btn--block" data-link="call" href="mailto:adil@humansofcoding.com?subject=Free%20call%20request%20-%20HumansOfCoding">Book a Free Call</a>
       <a class="btn btn--ghost btn--block" data-link="instagram" href="https://instagram.com/humansofcoding">DM @humansofcoding</a>
@@ -436,7 +524,7 @@
       </a>
       <a class="card post-card reveal" data-reveal style="--d:.16s" href="inventory-and-billing-for-retail.html">
         <span class="proj__cat">Custom Software</span>
-        <h3>Inventory & Billing for Retail</h3>
+        <h3>Inventory &amp; Billing for Retail</h3>
         <p>Stock that matches the shelf, GST-ready bills in seconds, and an alert before a fast seller runs out.</p>
         <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
