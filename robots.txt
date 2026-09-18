@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://humansofcoding.com/sitemap.xml
+Sitemap: https://tavzuran.com/sitemap.xml
