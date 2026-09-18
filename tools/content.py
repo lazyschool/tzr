@@ -1386,6 +1386,236 @@ CASE_STUDIES = [
                 "shopfront. This site is one of these, which is the most honest "
                 "recommendation I can give it.",
     },
+    {
+        "slug": "vibe-coded-app-made-production-ready",
+        "questions": [
+            "Which tool generated it, and do you still have the original prompts or project?",
+            "Is anyone paying to use it right now, and can it go down for an hour?",
+            "Where are the keys — in the repository, in the front-end bundle, or in a real secret store?",
+            "Has anyone other than you ever had access to the database?",
+            "What is the one feature that must keep working while the rest is repaired?",
+        ],
+        "hard": ("Deciding what to keep", [
+            "The instinct on opening a generated codebase is to rewrite it. That is almost "
+            "always the wrong call. The code works — people are using it — and a rewrite "
+            "trades a running product for three months of silence and a new set of bugs.",
+            "The real work is triage. Roughly, three piles: things that are dangerous and "
+            "must change this week, things that are merely ugly and can wait forever, and "
+            "things that look wrong but are actually fine. Most generated code is in the "
+            "third pile. A page with repeated markup offends an engineer and costs the "
+            "business nothing. An admin endpoint with no authentication check costs the "
+            "business everything, and looks identical in a screenshot.",
+            "So the order is fixed and it is not negotiable: first stop the bleeding — keys "
+            "out of the browser bundle, access rules on the database, a backup that has been "
+            "restored at least once. Then make change safe — a way to run it locally, a way "
+            "to deploy that is not someone's laptop, tests around the two or three flows "
+            "that carry money. Only then does anyone get to have an opinion about file "
+            "structure.",
+            "The failure I design against is the rescue that becomes a rewrite. It starts "
+            "honestly — this function is unclear, I will tidy it — and four weeks later the "
+            "business has paid for a codebase that does exactly what the old one did. Every "
+            "change in the first fortnight has to be something you could explain to the "
+            "owner in one sentence, in terms of risk removed.",
+        ]),
+        "success": [
+            "No credential is reachable from the browser, verified by reading the shipped bundle.",
+            "Every database table refuses a request that is not allowed to make it, tested with a second account.",
+            "A backup has been restored into a scratch environment at least once — an untested backup is not a backup.",
+            "A change can go from laptop to live without anyone copying files by hand.",
+        ],
+        "glance": [
+            ("Type", "Audit + repair"),
+            ("Build time", "About 3 weeks"),
+            ("Starts with", "A fixed-price audit"),
+            ("You keep", "Your codebase"),
+        ],
+        "pains": [
+            "API keys are sitting in the front-end bundle",
+            "Anyone who signs up can read everyone else's data",
+            "Nobody can run it locally, so every change is tested in production",
+            "It slows to a crawl once real data arrives",
+        ],
+        "category": "Code Rescue",
+        "thumb": "b",
+        "title": "Vibe-Coded App, Made Production-Ready",
+        "summary": "You built it with AI over a weekend and it works. This is what it takes before it can safely carry a business.",
+        "situation": [
+            "Someone built a working product with an AI tool — Cursor, Lovable, Bolt, v0, "
+            "Replit, or a long conversation with a chatbot. That is a genuine achievement, "
+            "and the thing usually does what it was asked to do. The demo is real.",
+            "Then it meets reality. A second user signs up and can see the first one's "
+            "records. The database slows down at a few thousand rows because nothing is "
+            "indexed. A key that should live on a server is sitting in the JavaScript "
+            "every visitor downloads. There is no way to run the project locally, so every "
+            "fix is made in production and hoped over.",
+            "None of that is an argument against building with AI — it is how this studio "
+            "works too. The difference is that generated code has never been read by "
+            "someone who will be called when it breaks. That reading is the job.",
+        ],
+        "scope": [
+            ("A written audit, first",
+             "Before touching anything: what is exposed, what breaks under load, what "
+             "cannot be recovered. Delivered as a plain-language document with each item "
+             "priced and ranked by risk. You can hand it to another developer and never "
+             "speak to me again — it is yours either way."),
+            ("Secrets and access",
+             "Keys moved out of anything a browser downloads and rotated, because a key "
+             "that has been public is burned. Then the access rules: every table and every "
+             "endpoint checked against a second account that should not be allowed in."),
+            ("A way to change things safely",
+             "The project runs on a fresh machine from a single command. Deploys happen "
+             "from a repository rather than a laptop. Automated tests around the two or "
+             "three flows that touch money or personal data — not full coverage, which "
+             "nobody maintains."),
+            ("The database, made honest",
+             "Indexes where the slow queries are. Constraints so the rules live in the "
+             "database instead of in hope. Migrations, so the schema has a history. "
+             "Backups, and one restore actually performed to prove they work."),
+            ("A handover you can act on",
+             "What was changed and why, what is still owed, and what it would cost. If you "
+             "want to keep building with AI afterwards, guidance on where that goes well "
+             "and where it reliably does not."),
+        ],
+        "excluded": [
+            "A redesign. Fixing how it looks is a different job from making it safe, and mixing the two hides whether either worked.",
+            "A framework migration, unless the current one is the actual cause of a problem on the list.",
+            "New features, until the audit items that carry real risk are closed.",
+        ],
+        "stack": [
+            ("Whatever you already have",
+             "The rescue is done in the stack the generator chose. Next.js and Supabase, "
+             "or React and Firebase, or a single Express file — all fine. Replacing it is a "
+             "decision for later and usually never."),
+            ("Secrets", "Moved to environment variables on the host, with the old values rotated and revoked."),
+            ("Access control",
+             "Row-level security where the database supports it, middleware where it does "
+             "not, and a test that proves a second account is refused."),
+            ("Tests", "A small suite around sign-up, payment and anything that writes to another person's data."),
+            ("Deployment", "Repository-triggered builds, a staging environment, and the ability to roll back."),
+        ],
+        "timeline": [
+            ("Week 1", "Read everything and write the audit. Close whatever is actively dangerous while it is still being written."),
+            ("Week 2", "Access rules, secrets rotated, database constraints and indexes, backups proven by a restore."),
+            ("Week 3", "Local setup, deploys, the small test suite, and the handover document."),
+        ],
+        "note": "This one is quoted from the audit, not before it. The audit is fixed-price "
+                "and is useful on its own; the repair is quoted once there is a list. What moves "
+                "the number is how much of the data is already public, whether payments are "
+                "involved, and whether anyone is relying on the thing while the work happens.",
+    },
+    {
+        "slug": "getting-an-app-through-both-stores",
+        "questions": [
+            "Do you already have an Apple Developer account and a Play Console account, and whose name are they in?",
+            "Does the app collect anything about a person — even an email address?",
+            "Is there a login, and does it offer sign-in with Google, Facebook or Apple?",
+            "Do you sell anything inside the app, and is it a physical thing or a digital one?",
+            "Has it been rejected before, and do you still have the message they sent?",
+        ],
+        "hard": ("The rejection loop is the whole cost", [
+            "A store rejection is not expensive because of the fix. It is expensive because "
+            "of the wait. You submit, wait a day or three, get a paragraph that names a "
+            "guideline number and little else, guess at what it meant, resubmit, and wait "
+            "again. Three rounds of that is a fortnight gone, and the launch date you gave "
+            "people has passed.",
+            "So the work is front-loaded. The submission is built to survive the reviews "
+            "that actually get failed, and there are only a handful of those. Apple 5.1.1 "
+            "for collecting data you did not justify, or for having no way to delete an "
+            "account. Apple 4.2 when the app is a website in a wrapper with nothing "
+            "native about it. Apple 4.8 when you offer Google or Facebook login and not "
+            "Apple's. 3.1.1 when you sell something digital outside their payment system. "
+            "On Google's side: the data safety form contradicting what the app actually "
+            "sends, a target API level below the current floor, and — for newer personal "
+            "accounts — the closed testing requirement that needs real testers running the "
+            "app for a fortnight before you may apply for production.",
+            "The other half is the part nobody warns you about: the signing keys. Lose the "
+            "Android upload key and you cannot ship an update to your own app under the "
+            "same listing. Let an agency hold the Apple account and your app is legally "
+            "theirs. Both are recoverable only with difficulty, or not at all. So accounts "
+            "get created in the business's name, and keys get backed up somewhere the "
+            "business controls, before a single binary is uploaded.",
+        ]),
+        "success": [
+            "Live on both stores, with the accounts in your name and the keys in your possession.",
+            "The listing answers the questions a buyer has before installing, not after.",
+            "The data safety form and the privacy policy say the same thing the app actually does.",
+            "You can ship an update yourself, and know what to do when a review fails.",
+        ],
+        "glance": [
+            ("Type", "Publishing + consulting"),
+            ("Build time", "About 2 weeks"),
+            ("Platforms", "App Store, Google Play"),
+            ("You own", "Accounts and keys"),
+        ],
+        "pains": [
+            "The app is finished and has been rejected twice with no clear reason",
+            "Nobody is sure which account or key the last developer used",
+            "The privacy policy and the data safety form disagree with each other",
+            "Screenshots, ratings and descriptions were left to the last day",
+        ],
+        "category": "App Launch",
+        "thumb": "a",
+        "title": "Getting an App Through Both Stores",
+        "summary": "The fortnight between the app being finished and people being able to install it — rejections, signing keys, store listings and the paperwork.",
+        "situation": [
+            "The build is done. It works on the phone in your hand. And that turns out to "
+            "be somewhere around three quarters of the journey, because both stores sit "
+            "between the finished app and anyone installing it, and each has a review "
+            "process with opinions of its own.",
+            "This is where a lot of first apps stall for weeks. Not on code — on an Apple "
+            "rejection quoting a guideline number, a Google data safety form nobody knows "
+            "how to answer truthfully, a certificate that expired, or a keystore that "
+            "belonged to a developer who has moved on.",
+            "It is also where an expensive mistake gets made quietly: the developer "
+            "publishes under their own account because it is faster. The app is then not "
+            "yours in any way that matters, and moving it later is a negotiation.",
+        ],
+        "scope": [
+            ("Accounts in your name, from the start",
+             "Apple Developer and Google Play Console registered to your business, with "
+             "you as the owner and me added as a member. If they already exist in someone "
+             "else's name, the transfer happens before anything else does."),
+            ("A pre-submission review",
+             "The app checked against the guidelines that actually cause rejections — "
+             "account deletion, permission prompts that explain themselves, sign-in with "
+             "Apple where required, payment rules for whatever you sell, and whether there "
+             "is enough here for Apple to consider it an app at all."),
+            ("Keys and certificates, held by you",
+             "Android upload and signing keys generated and backed up somewhere you "
+             "control. Apple certificates and provisioning set up so they can be renewed "
+             "without me. Written down, because in two years nobody remembers."),
+            ("The store listing",
+             "Screenshots at the sizes each store demands, a description written for "
+             "someone deciding whether to install, the content and age ratings answered "
+             "honestly, and a data safety declaration that matches what the app sends."),
+            ("Submission, and the replies",
+             "The upload, the review notes, the demo account reviewers need, and — when a "
+             "rejection arrives — the reply. Most are answered rather than rebuilt, and "
+             "knowing which is which is the job."),
+        ],
+        "excluded": [
+            "Building the app. This is the publishing half; if the app also needs work, that is scoped separately.",
+            "Paid user acquisition and store-listing experiments. Get it live first, then find out what people search for.",
+            "Promises about review timing. Neither store publishes one, and anyone who guarantees a date is guessing.",
+        ],
+        "stack": [
+            ("Apple", "Developer Program membership, App Store Connect, TestFlight for the build reviewers and you both test."),
+            ("Google", "Play Console, Play App Signing, and closed testing where the account's age requires it."),
+            ("Builds", "Signed release builds produced from a repository rather than a laptop, so the next one is reproducible."),
+            ("Paperwork", "Privacy policy hosted at a stable URL, data safety and nutrition labels filled from what the app actually sends."),
+            ("Handover", "A short document: where every account and key lives, and how to ship the next version."),
+        ],
+        "timeline": [
+            ("Week 1", "Accounts, keys, the pre-submission review, and fixing whatever that review finds."),
+            ("Week 2", "Listing, screenshots, ratings, privacy paperwork, and submission to both stores."),
+            ("Then", "Answering reviewers. Apple usually replies within a day or two; Google's closed-testing window, where it applies, is a fortnight and cannot be shortened."),
+        ],
+        "note": "Store fees are separate and paid by you directly: Apple charges 99 USD a "
+                "year, Google a one-off 25 USD. Those go on your own cards, which is the point "
+                "— the accounts stay yours. What moves the price here is whether the app already "
+                "meets the guidelines or needs changes to pass, and whether there is an existing "
+                "listing to rescue rather than a new one to create.",
+    },
 ]
 
 
