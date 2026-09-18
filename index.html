@@ -115,7 +115,7 @@
   The hrefs written below are safe fallbacks used if JavaScript is off.
   Content you will likely edit by hand:
     - Portfolio projects  ->  search this file for "PORTFOLIO DATA"
-    - Testimonials        ->  search this file for "TESTIMONIAL PLACEHOLDERS"
+    - Family reviews      ->  search this file for "FAMILY REVIEWS"
   =====================================================================
 -->
 
@@ -127,10 +127,7 @@
   <div class="container nav__inner">
     <a class="brand" href="#top" aria-label="Tavzuran home">
       <span class="brand__mark" aria-hidden="true">
-        <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 3.5c10.2 0 18.5 8.3 18.5 18.5S32.2 40.5 22 40.5 3.5 32.2 3.5 22 11.8 3.5 22 3.5Z"/>
-          <path d="M14 16h16M22 16v13"/>
-        </svg>
+        <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 15h18M22 15v15"/></svg>
       </span>
       <span class="brand__text">Tavzuran</span>
     </a>
@@ -342,7 +339,7 @@
 <span id="top"></span>
 
 <!-- ============================== HERO ============================== -->
-<section class="hero">
+<section class="hero" id="hero">
   <div class="hero__bg" aria-hidden="true">
     <span class="grid-fade"></span>
     <span class="blob blob--1"></span>
@@ -383,13 +380,35 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 5h12M6 9.5h12M6 5c5 0 8 1.6 8 4.6S11 14 6 14l8 8"/></svg>
           MVPs starting at ₹20,000*
         </span>
-        <span class="hero__note">Free 20-min idea call · No obligation</span>
+        <span class="hero__note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.2 2.4 2.4 4.8-5"/></svg>
+          Free 20-min idea call · No obligation
+        </span>
       </div>
     </div>
 
-    <!-- Hand-drawn Adil character + floating doodles -->
+    <!-- Layered product screens + the hand-drawn founder -->
     <div class="hero__art reveal" data-reveal style="--d:.3s">
-      <div class="art-stage">
+      <div class="art-stage" id="artStage">
+        <div class="stage__dash" aria-hidden="true">
+          <div class="mock">
+            <div class="mock__bar"><i></i><i></i><i></i></div>
+            <div class="mock__body">
+              <div class="mk-tiles mk-tiles--3">
+                <div class="mk-tile"><b></b><i class="mk-line" style="width:64%"></i></div>
+                <div class="mk-tile"><b></b><i class="mk-line" style="width:52%"></i></div>
+                <div class="mk-tile"><b></b><i class="mk-line" style="width:72%"></i></div>
+              </div>
+              <div class="mk-chart">
+                <span style="--h:38%"></span><span style="--h:62%"></span><span style="--h:47%"></span>
+                <span style="--h:80%"></span><span style="--h:58%"></span><span style="--h:92%"></span>
+                <span style="--h:70%"></span>
+              </div>
+              <div class="mk-alert"><i class="mk-dot"></i><i class="mk-line" style="width:62%"></i></div>
+            </div>
+          </div>
+        </div>
+
         <svg class="char char--adil" viewBox="0 0 400 344" role="img" aria-labelledby="charTitle charDesc">
           <title id="charTitle">Hand-drawn illustration of Adil, founder of Tavzuran</title>
           <desc id="charDesc">Minimal line-art character looking at a floating app screen surrounded by idea, code, app and launch doodles.</desc>
@@ -402,7 +421,7 @@
             <path class="draw" d="M131 172v28M169 172v28"/>
             <!-- left arm resting -->
             <path class="draw" d="M92 240c-14 12-21 26-22 42"/>
-            <!-- right arm raised towards the floating app card -->
+            <!-- right arm raised towards the floating screen -->
             <g class="arm">
               <path class="draw" d="M206 238c26-4 44-22 50-48"/>
               <path class="draw" d="M256 190c7-5 8-14 3-19M264 194c8-4 12-14 8-21"/>
@@ -422,25 +441,45 @@
           </g>
         </svg>
 
-        <!-- floating UI card the character is looking at -->
-        <div class="ui-card" aria-hidden="true">
-          <div class="ui-card__bar"><i></i><i></i><i></i></div>
-          <div class="ui-card__body">
-            <div class="ui-row ui-row--title"></div>
-            <div class="ui-row"></div>
-            <div class="ui-row ui-row--short"></div>
-            <div class="ui-chart">
-              <span style="--h:38%"></span><span style="--h:62%"></span><span style="--h:48%"></span><span style="--h:86%"></span><span style="--h:70%"></span>
+        <div class="stage__phone" aria-hidden="true">
+          <div class="mock mock--phone">
+            <div class="mock__notch"></div>
+            <div class="mock__body">
+              <div class="mk-head"><i class="mk-line mk-line--title" style="width:58%"></i></div>
+              <div class="mk-steps">
+                <span class="mk-step is-done"></span><span class="mk-rail is-done"></span>
+                <span class="mk-step is-done"></span><span class="mk-rail is-done"></span>
+                <span class="mk-step is-now"></span><span class="mk-rail"></span>
+                <span class="mk-step"></span>
+              </div>
+              <div class="mk-list">
+                <div class="mk-item"><i class="mk-sq"></i><i class="mk-line" style="width:52%"></i><b class="mk-num"></b></div>
+                <div class="mk-item"><i class="mk-sq"></i><i class="mk-line" style="width:64%"></i><b class="mk-num"></b></div>
+                <div class="mk-item"><i class="mk-sq"></i><i class="mk-line" style="width:44%"></i><b class="mk-num"></b></div>
+              </div>
+              <div class="mk-total"><i class="mk-line" style="width:34%"></i><b class="mk-num mk-num--wide"></b></div>
+              <div class="mk-btn"></div>
             </div>
-            <div class="ui-btn">Launch</div>
           </div>
         </div>
 
-        <!-- doodles -->
-        <span class="doodle doodle--idea" aria-hidden="true">💡<em>idea</em></span>
-        <span class="doodle doodle--code" aria-hidden="true">&lt;/&gt;<em>code</em></span>
-        <span class="doodle doodle--app" aria-hidden="true">📱<em>app</em></span>
-        <span class="doodle doodle--rocket" aria-hidden="true">🚀<em>launch</em></span>
+        <!-- floating labels -->
+        <span class="tag tag--idea" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 18h5M10.5 21h3M12 3a6 6 0 0 0-4 10.5c.6.6 1 1.4 1 2.3V17h6v-1.2c0-.9.4-1.7 1-2.3A6 6 0 0 0 12 3Z"/></svg>
+          <em>idea</em>
+        </span>
+        <span class="tag tag--code" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg>
+          <em>code</em>
+        </span>
+        <span class="tag tag--app" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18h2"/></svg>
+          <em>app</em>
+        </span>
+        <span class="tag tag--launch" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 2 4.5 6 4 10l-4 4-4-4c-.5-4 1-8 4-10Z"/><circle cx="12" cy="9.5" r="1.6"/><path d="M8.5 15.5 6 18l.5 2.5M15.5 15.5 18 18l-.5 2.5"/></svg>
+          <em>launch</em>
+        </span>
 
         <svg class="spark" viewBox="0 0 120 120" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
           <path d="M60 10v18M60 92v18M10 60h18M92 60h18M24 24l13 13M83 83l13 13M96 24 83 37M37 83l-13 13"/>
@@ -451,8 +490,12 @@
 
   <div class="marquee" aria-hidden="true">
     <div class="marquee__track">
-      <span>Mobile Apps ✦ Websites ✦ MVPs ✦ SaaS Products ✦ Custom Software ✦ Business Automation ✦ Built by a human ✦&nbsp;</span>
-      <span>Mobile Apps ✦ Websites ✦ MVPs ✦ SaaS Products ✦ Custom Software ✦ Business Automation ✦ Built by a human ✦&nbsp;</span>
+      <span class="marquee__set">
+        <span>Mobile Apps</span><span>Websites</span><span>MVPs</span><span>SaaS Products</span><span>Custom Software</span><span>Business Automation</span><span>Built by a human</span>
+      </span>
+      <span class="marquee__set">
+        <span>Mobile Apps</span><span>Websites</span><span>MVPs</span><span>SaaS Products</span><span>Custom Software</span><span>Business Automation</span><span>Built by a human</span>
+      </span>
     </div>
   </div>
 </section>
@@ -460,48 +503,48 @@
 <!-- ============================ PROBLEM ============================ -->
 <section class="section section--problem" id="problem">
   <div class="container">
-    <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>THE REAL PROBLEM</p>
-      <h2 class="sec-title reveal" data-reveal style="--d:.05s">You have the idea.<br />But who's going to build it?</h2>
-      <p class="sec-sub reveal" data-reveal style="--d:.1s">You shouldn't have to become a developer just to turn your business idea into reality.</p>
+    <div class="problem__copy">
+      <div class="sec-head">
+        <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>THE REAL PROBLEM</p>
+        <h2 class="sec-title reveal" data-reveal style="--d:.05s">You have the idea.<br />But who's going to build it?</h2>
+        <p class="sec-sub reveal" data-reveal style="--d:.1s">You shouldn't have to become a developer just to turn your business idea into reality.</p>
+      </div>
+
+      <ol class="problem__list">
+        <li class="prob reveal" data-reveal style="--d:.06s"><span class="prob__n" aria-hidden="true">01</span><h3>Don't know where to start</h3><span class="prob__x" aria-hidden="true">✕</span></li>
+        <li class="prob reveal" data-reveal style="--d:.12s"><span class="prob__n" aria-hidden="true">02</span><h3>Can't find reliable developers</h3><span class="prob__x" aria-hidden="true">✕</span></li>
+        <li class="prob reveal" data-reveal style="--d:.18s"><span class="prob__n" aria-hidden="true">03</span><h3>Don't know what features to build</h3><span class="prob__x" aria-hidden="true">✕</span></li>
+        <li class="prob reveal" data-reveal style="--d:.24s"><span class="prob__n" aria-hidden="true">04</span><h3>Worried about development costs</h3><span class="prob__x" aria-hidden="true">✕</span></li>
+      </ol>
     </div>
 
-    <div class="problem__layout">
-      <ul class="problem__list">
-        <li class="prob reveal" data-reveal style="--d:.06s"><span class="prob__x" aria-hidden="true">✕</span><h3>Don't know where to start</h3></li>
-        <li class="prob reveal" data-reveal style="--d:.12s"><span class="prob__x" aria-hidden="true">✕</span><h3>Can't find reliable developers</h3></li>
-        <li class="prob reveal" data-reveal style="--d:.18s"><span class="prob__x" aria-hidden="true">✕</span><h3>Don't know what features to build</h3></li>
-        <li class="prob reveal" data-reveal style="--d:.24s"><span class="prob__x" aria-hidden="true">✕</span><h3>Worried about development costs</h3></li>
-      </ul>
-
-      <div class="problem__art reveal" data-reveal style="--d:.15s">
-        <svg class="char char--stressed" viewBox="0 0 300 344" role="img" aria-label="Hand-drawn character feeling overwhelmed by unanswered questions">
-          <g fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M58 344C58 270 90 198 150 198s92 72 92 146"/>
-            <path d="M124 200c10 14 17 19 26 19s17-6 26-20"/>
-            <path d="M131 172v28M169 172v28"/>
-            <!-- both arms thrown up in a shrug -->
-            <path d="M94 240c-18 4-30-6-34-24M206 240c18 4 30-6 34-24"/>
-            <path d="M60 216c-6-4-8-12-5-18M69 212c-4-7-4-16 1-21M240 216c6-4 8-12 5-18M231 212c4-7 4-16-1-21"/>
-            <g class="head head--wobble">
-              <path d="M150 40c34 0 62 30 62 70s-28 70-62 70-62-30-62-70 28-70 62-70Z"/>
-              <path d="M92 96c6-34 28-56 58-56s52 20 58 54c-11-11-25-16-38-14-10 2-16 7-28 7-14 0-23-10-36-4-6 3-11 8-14 13Z"/>
-              <rect x="104" y="100" width="36" height="28" rx="10"/>
-              <rect x="160" y="100" width="36" height="28" rx="10"/>
-              <path d="M140 112c6-4 14-4 20 0"/>
-              <path d="M115 108l10 10M125 108l-10 10M171 108l10 10M181 108l-10 10"/>
-              <path d="M132 154c9-8 27-8 36 0"/>
-              <path d="M104 84c8-8 17-9 25-4M196 84c-8-8-17-9-25-4"/>
-            </g>
+    <div class="problem__art reveal" data-reveal style="--d:.15s">
+      <svg class="char char--stressed" viewBox="0 0 300 344" role="img" aria-label="Hand-drawn character feeling overwhelmed by unanswered questions">
+        <g fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M58 344C58 270 90 198 150 198s92 72 92 146"/>
+          <path d="M124 200c10 14 17 19 26 19s17-6 26-20"/>
+          <path d="M131 172v28M169 172v28"/>
+          <!-- both arms thrown up in a shrug -->
+          <path d="M94 240c-18 4-30-6-34-24M206 240c18 4 30-6 34-24"/>
+          <path d="M60 216c-6-4-8-12-5-18M69 212c-4-7-4-16 1-21M240 216c6-4 8-12 5-18M231 212c4-7 4-16-1-21"/>
+          <g class="head head--wobble">
+            <path d="M150 40c34 0 62 30 62 70s-28 70-62 70-62-30-62-70 28-70 62-70Z"/>
+            <path d="M92 96c6-34 28-56 58-56s52 20 58 54c-11-11-25-16-38-14-10 2-16 7-28 7-14 0-23-10-36-4-6 3-11 8-14 13Z"/>
+            <rect x="104" y="100" width="36" height="28" rx="10"/>
+            <rect x="160" y="100" width="36" height="28" rx="10"/>
+            <path d="M140 112c6-4 14-4 20 0"/>
+            <path d="M115 108l10 10M125 108l-10 10M171 108l10 10M181 108l-10 10"/>
+            <path d="M132 154c9-8 27-8 36 0"/>
+            <path d="M104 84c8-8 17-9 25-4M196 84c-8-8-17-9-25-4"/>
           </g>
-          <g class="q-marks" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round">
-            <path class="q q1" d="M32 60c0-9 7-15 15-15s15 6 15 14c0 10-13 12-15 21M47 96v3"/>
-            <path class="q q2" d="M238 44c0-9 7-15 15-15s15 6 15 14c0 10-13 12-15 21M253 80v3"/>
-            <path class="q q3" d="M262 138c0-7 6-12 12-12s12 5 12 11c0 8-10 9-12 17M274 170v3"/>
-            <path class="q q4" d="M14 148c0-7 6-12 12-12s12 5 12 11c0 8-10 9-12 17M26 180v3"/>
-          </g>
-        </svg>
-      </div>
+        </g>
+        <g class="q-marks" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round">
+          <path class="q q1" d="M32 60c0-9 7-15 15-15s15 6 15 14c0 10-13 12-15 21M47 96v3"/>
+          <path class="q q2" d="M238 44c0-9 7-15 15-15s15 6 15 14c0 10-13 12-15 21M253 80v3"/>
+          <path class="q q3" d="M262 138c0-7 6-12 12-12s12 5 12 11c0 8-10 9-12 17M274 170v3"/>
+          <path class="q q4" d="M14 148c0-7 6-12 12-12s12 5 12 11c0 8-10 9-12 17M26 180v3"/>
+        </g>
+      </svg>
     </div>
 
     <p class="handoff reveal" data-reveal>
@@ -607,11 +650,11 @@
 
     <div class="human__foot reveal" data-reveal>
       <p class="human__stamp" aria-label="A human plus AI equals your product, shipped">
-        <span aria-hidden="true">🧑‍💻</span>
+        <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4.5 21c1-4.5 4-7 7.5-7s6.5 2.5 7.5 7"/></svg></span>
         <i aria-hidden="true">+</i>
-        <span aria-hidden="true">🤖</span>
+        <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg></span>
         <i aria-hidden="true">=</i>
-        <span aria-hidden="true">🚀</span>
+        <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 2 4.5 6 4 10l-4 4-4-4c-.5-4 1-8 4-10Z"/><circle cx="12" cy="9.5" r="1.6"/><path d="M8.5 15.5 6 18l.5 2.5M15.5 15.5 18 18l-.5 2.5"/></svg></span>
       </p>
       <p class="human__note">
         <span class="hl">Human judgement. Machine speed.
@@ -625,7 +668,7 @@
 </section>
 
 <!-- =========================== INDUSTRIES =========================== -->
-<section class="section section--alt" id="industries">
+<section class="section" id="industries">
   <div class="container">
     <div class="sec-head sec-head--center">
       <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>WHO WE BUILD FOR</p>
@@ -634,32 +677,32 @@
 
     <div class="cards cards--3">
       <article class="card card--ind reveal" data-reveal style="--d:.04s">
-        <span class="ind__emoji" aria-hidden="true">🍔</span>
+        <span class="ind__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a2 2 0 0 0 4 0V3M8 3v18"/><path d="M18 3c-2.5 1.5-3.5 4.5-3.5 8v1H18v9"/></svg></span>
         <h3>Restaurants</h3>
         <p>Ordering apps, websites, loyalty systems and restaurant management solutions.</p>
       </article>
       <article class="card card--ind reveal" data-reveal style="--d:.09s">
-        <span class="ind__emoji" aria-hidden="true">🎓</span>
+        <span class="ind__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m2.5 9 9.5-4.5L21.5 9 12 13.5 2.5 9Z"/><path d="M6.5 11v4.5c0 1.5 2.5 3 5.5 3s5.5-1.5 5.5-3V11M21.5 9v5"/></svg></span>
         <h3>Coaching Institutes</h3>
         <p>Student apps, online tests, classes, payments and dashboards.</p>
       </article>
       <article class="card card--ind reveal" data-reveal style="--d:.14s">
-        <span class="ind__emoji" aria-hidden="true">🏠</span>
+        <span class="ind__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m3.5 11 8.5-7 8.5 7"/><path d="M6 9.5V20h12V9.5"/><path d="M10 20v-5h4v5"/></svg></span>
         <h3>Real Estate</h3>
         <p>Property websites, lead management and custom CRM systems.</p>
       </article>
       <article class="card card--ind reveal" data-reveal style="--d:.19s">
-        <span class="ind__emoji" aria-hidden="true">🚚</span>
+        <span class="ind__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="12" height="10" rx="1.5"/><path d="M14.5 9.5h3.5l3.5 3.5V16h-7"/><circle cx="7" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></svg></span>
         <h3>Logistics</h3>
         <p>Delivery tracking, dashboards and business automation.</p>
       </article>
       <article class="card card--ind reveal" data-reveal style="--d:.24s">
-        <span class="ind__emoji" aria-hidden="true">🚀</span>
+        <span class="ind__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 2 4.5 6 4 10l-4 4-4-4c-.5-4 1-8 4-10Z"/><circle cx="12" cy="9.5" r="1.6"/><path d="M8.5 15.5 6 18l.5 2.5M15.5 15.5 18 18l-.5 2.5"/></svg></span>
         <h3>Startups</h3>
         <p>MVPs, SaaS products and scalable web/mobile applications.</p>
       </article>
       <article class="card card--ind reveal" data-reveal style="--d:.29s">
-        <span class="ind__emoji" aria-hidden="true">🏪</span>
+        <span class="ind__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 9.5 5 4h14l1.5 5.5"/><path d="M3.5 9.5c0 1.5 1.2 2.5 2.7 2.5s2.6-1 2.6-2.5c0 1.5 1.2 2.5 2.7 2.5s2.7-1 2.7-2.5c0 1.5 1.2 2.5 2.7 2.5s2.6-1 2.6-2.5"/><path d="M5 12v8h14v-8M10 20v-5h4v5"/></svg></span>
         <h3>Local Businesses</h3>
         <p>Custom websites, booking systems and business automation.</p>
       </article>
@@ -670,41 +713,41 @@
 </section>
 
 <!-- ============================== MVP ============================== -->
-<section class="section section--mvp" id="mvp">
+<section class="section section--alt section--mvp" id="mvp">
   <div class="container">
     <div class="mvp__panel reveal" data-reveal>
-      <span class="mvp__tape" aria-hidden="true">START SMALL</span>
+      <div class="mvp__copy">
+        <div class="sec-head">
+          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>MVP DEVELOPMENT</p>
+          <h2 class="sec-title">Don't build everything.<br />Build what matters first.</h2>
+          <p class="sec-sub">You don't need to spend lakhs before knowing whether your idea works. Start with an MVP.</p>
+        </div>
 
-      <div class="sec-head sec-head--center">
-        <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>MVP DEVELOPMENT</p>
-        <h2 class="sec-title">Don't build everything.<br />Build what matters first.</h2>
-        <p class="sec-sub">You don't need to spend lakhs before knowing whether your idea works. Start with an MVP.</p>
+        <ol class="flow" aria-label="MVP process: idea, MVP, users, feedback, scale">
+          <li class="flow__step"><span class="flow__dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 18h5M10.5 21h3M12 3a6 6 0 0 0-4 10.5c.6.6 1 1.4 1 2.3V17h6v-1.2c0-.9.4-1.7 1-2.3A6 6 0 0 0 12 3Z"/></svg></span><strong>IDEA</strong></li>
+          <li class="flow__arrow" aria-hidden="true">→</li>
+          <li class="flow__step"><span class="flow__dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3h5M10 3v5.5L5.5 17a2 2 0 0 0 1.8 3h9.4a2 2 0 0 0 1.8-3L14 8.5V3"/><path d="M8 14h8"/></svg></span><strong>MVP</strong></li>
+          <li class="flow__arrow" aria-hidden="true">→</li>
+          <li class="flow__step"><span class="flow__dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8.5" r="3.5"/><path d="M2.5 20c.8-3.6 3.3-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><path d="M16 5a3.5 3.5 0 0 1 0 7M18.5 14.5c1.8.8 2.8 2.3 3 5.5"/></svg></span><strong>USERS</strong></li>
+          <li class="flow__arrow" aria-hidden="true">→</li>
+          <li class="flow__step"><span class="flow__dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-5 4v-4A2.5 2.5 0 0 1 4 13.5v-8Z"/></svg></span><strong>FEEDBACK</strong></li>
+          <li class="flow__arrow" aria-hidden="true">→</li>
+          <li class="flow__step"><span class="flow__dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m3.5 17 5.5-6 4 4 7.5-8"/><path d="M15.5 7h5v5"/></svg></span><strong>SCALE</strong></li>
+        </ol>
+
+        <div class="mvp__actions">
+          <a class="btn btn--primary btn--lg" data-link="call" href="mailto:adil@tavzuran.com?subject=Free%20call%20request%20-%20Tavzuran">Discuss Your MVP</a>
+          <a class="btn btn--ghost btn--lg" data-link="instagram" href="https://instagram.com/tavzuran">DM us on Instagram</a>
+        </div>
       </div>
 
-      <ol class="flow" aria-label="MVP process: idea, MVP, users, feedback, scale">
-        <li class="flow__step"><span class="flow__dot" aria-hidden="true">💡</span><strong>IDEA</strong></li>
-        <li class="flow__arrow" aria-hidden="true">→</li>
-        <li class="flow__step"><span class="flow__dot" aria-hidden="true">🧪</span><strong>MVP</strong></li>
-        <li class="flow__arrow" aria-hidden="true">→</li>
-        <li class="flow__step"><span class="flow__dot" aria-hidden="true">👥</span><strong>USERS</strong></li>
-        <li class="flow__arrow" aria-hidden="true">→</li>
-        <li class="flow__step"><span class="flow__dot" aria-hidden="true">💬</span><strong>FEEDBACK</strong></li>
-        <li class="flow__arrow" aria-hidden="true">→</li>
-        <li class="flow__step"><span class="flow__dot" aria-hidden="true">📈</span><strong>SCALE</strong></li>
-      </ol>
-
-      <div class="price">
+      <aside class="price">
         <span class="price__label">Starting at</span>
         <p class="price__value">
           <span class="price__cur">₹</span><span id="priceCount" data-count="20000">20,000</span><a class="price__star" href="#mvp-terms" aria-label="See what the price excludes">*</a>
         </p>
         <span class="price__hand">no lakhs upfront</span>
-      </div>
-
-      <div class="mvp__actions">
-        <a class="btn btn--primary btn--lg" data-link="call" href="mailto:adil@tavzuran.com?subject=Free%20call%20request%20-%20Tavzuran">Discuss Your MVP</a>
-        <a class="btn btn--ghost btn--lg" data-link="instagram" href="https://instagram.com/tavzuran">DM us on Instagram</a>
-      </div>
+      </aside>
 
       <p class="disclaimer" id="mvp-terms">
         <span aria-hidden="true">*</span> Final pricing depends on features and project scope. Third-party costs — cloud hosting, domains, external libraries, APIs, app-store fees and any other paid service — are billed separately and are not included.
@@ -714,7 +757,7 @@
 </section>
 
 <!-- ============================ PROCESS ============================ -->
-<section class="section section--alt" id="process">
+<section class="section" id="process">
   <div class="container">
     <div class="sec-head sec-head--center">
       <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>HOW IT WORKS</p>
@@ -730,21 +773,21 @@
           <p>Book a free call and tell us what you want to build.</p>
         </div>
       </li>
-      <li class="tl reveal" data-reveal>
+      <li class="tl reveal" data-reveal style="--d:.08s">
         <span class="tl__num">02</span>
         <div class="tl__body">
           <h3>Plan</h3>
           <p>We define the features, scope and best technical approach.</p>
         </div>
       </li>
-      <li class="tl reveal" data-reveal>
+      <li class="tl reveal" data-reveal style="--d:.16s">
         <span class="tl__num">03</span>
         <div class="tl__body">
           <h3>Build</h3>
           <p>We design and develop your product.</p>
         </div>
       </li>
-      <li class="tl reveal" data-reveal>
+      <li class="tl reveal" data-reveal style="--d:.24s">
         <span class="tl__num">04</span>
         <div class="tl__body">
           <h3>Launch</h3>
@@ -756,7 +799,7 @@
 </section>
 
 <!-- ============================= ABOUT ============================= -->
-<section class="section section--about" id="about">
+<section class="section section--alt section--about" id="about">
   <div class="container about__inner">
     <div class="about__art reveal" data-reveal>
       <div class="about__frame">
@@ -840,109 +883,381 @@
 
     <!--
       ========================= PORTFOLIO DATA =========================
-      These are EXAMPLE builds, not client projects — swap each one for a
-      real project as soon as you ship it (and drop the "Example build"
-      chip + the honest note in the section heading above when you do).
-      Each project is one <article class="card proj"> block:
-        1. span.proj__flag  -> the "Example build" chip (DELETE once the
-                               project is real client work)
-        2. span.proj__cat   -> category chip
-        3. h3               -> project name
-        4. p                -> one-line description
-        5. (optional) swap the inline svg thumbnail for a real image:
-           <img class="proj__img" src="assets/your-project.jpg"
-                alt="Screens from the ... app" loading="lazy"
-                decoding="async" width="800" height="600">
+      GENERATED by tools/build.py from CASE_STUDIES in tools/content.py.
+      Hand edits here are overwritten on the next build.
+
+      Every card is one case study: the link, the category chip, the title,
+      the one-line summary and the stylised screen all come from the same
+      entry, so a card can never point at the wrong page or show a stale
+      category. To change a card, edit tools/content.py and re-run:
+
+          python tools/build.py && python tools/csp.py
+
+      These are EXAMPLE builds, not client projects. When one becomes real
+      client work, drop the "Example build" chip by removing it below in
+      portfolio_cards(), and update the honest note in the section heading
+      above (which is still hand-written).
       ==================================================================
     -->
     <div class="cards cards--3 work__grid">
-      <article class="card proj reveal" data-reveal style="--d:.04s">
-        <div class="proj__thumb proj__thumb--a" aria-hidden="true">
-          <svg viewBox="0 0 200 150" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="72" y="16" width="56" height="118" rx="10"/><path d="M92 26h16"/>
-            <rect x="82" y="40" width="36" height="20" rx="5"/>
-            <path d="M82 70h36M82 80h24M82 90h30"/>
-            <rect x="82" y="104" width="36" height="14" rx="7"/>
-          </svg>
+      <a class="card proj reveal" data-reveal style="--d:.04s" href="case-studies/restaurant-ordering-app.html">
+        <div class="proj__thumb" aria-hidden="true"><div class="mockbare" aria-hidden="true">
+<div class="mock mock--phone">
+  <div class="mock__notch"></div>
+  <div class="mock__body">
+    <div class="mk-head"><i class="mk-line mk-line--title" style="width:58%"></i></div>
+    <div class="mk-steps">
+      <span class="mk-step is-done"></span><span class="mk-rail is-done"></span>
+      <span class="mk-step is-done"></span><span class="mk-rail is-done"></span>
+      <span class="mk-step is-now"></span><span class="mk-rail"></span>
+      <span class="mk-step"></span>
+    </div>
+    <p class="mk-cap">Out for delivery</p>
+    <div class="mk-list">
+      <div class="mk-item"><i class="mk-sq"></i><i class="mk-line" style="width:52%"></i><b class="mk-num"></b></div>
+      <div class="mk-item"><i class="mk-sq"></i><i class="mk-line" style="width:64%"></i><b class="mk-num"></b></div>
+      <div class="mk-item"><i class="mk-sq"></i><i class="mk-line" style="width:44%"></i><b class="mk-num"></b></div>
+    </div>
+    <div class="mk-total"><i class="mk-line" style="width:34%"></i><b class="mk-num mk-num--wide"></b></div>
+    <div class="mk-btn"></div>
+  </div>
+</div>
+</div></div>
+        <div class="proj__body">
+          <span class="chips"><span class="proj__flag">Example build</span><span class="proj__cat">Mobile App</span></span>
+          <h3>Restaurant Ordering App</h3>
+          <p>Menu, cart, live order tracking and a simple kitchen dashboard for a multi-outlet restaurant.</p>
+          <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
         </div>
-        <span class="proj__flag">Example build</span>
-        <span class="proj__cat">Mobile App</span>
-        <h3>Restaurant Ordering App</h3>
-        <p>Menu, cart, live order tracking and a simple kitchen dashboard for a multi-outlet restaurant.</p>
-      </article>
-
-      <article class="card proj reveal" data-reveal style="--d:.1s">
-        <div class="proj__thumb proj__thumb--b" aria-hidden="true">
-          <svg viewBox="0 0 200 150" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="26" y="24" width="148" height="102" rx="8"/><path d="M26 44h148"/>
-            <path d="M40 60h40M40 72h56M40 84h32"/>
-            <rect x="112" y="60" width="48" height="34" rx="6"/>
-            <rect x="40" y="98" width="40" height="12" rx="6"/>
-          </svg>
+      </a>
+      <a class="card proj reveal" data-reveal style="--d:.10s" href="case-studies/coaching-management-platform.html">
+        <div class="proj__thumb" aria-hidden="true"><div class="mockbare" aria-hidden="true">
+<div class="mock">
+  <div class="mock__bar"><i></i><i></i><i></i></div>
+  <div class="mock__split">
+    <div class="mk-side">
+      <i class="mk-side__row is-on"></i><i class="mk-side__row"></i>
+      <i class="mk-side__row"></i><i class="mk-side__row"></i>
+    </div>
+    <div class="mock__body">
+      <div class="mk-tiles mk-tiles--3">
+        <div class="mk-tile"><b></b><i class="mk-line" style="width:70%"></i></div>
+        <div class="mk-tile"><b></b><i class="mk-line" style="width:56%"></i></div>
+        <div class="mk-tile"><b></b><i class="mk-line" style="width:64%"></i></div>
+      </div>
+      <div class="mk-table">
+        <div class="mk-tr mk-tr--head"><i style="width:38%"></i><i style="width:22%"></i><i style="width:18%"></i></div>
+        <div class="mk-tr"><i style="width:44%"></i><i style="width:20%"></i><span class="mk-tag mk-tag--ok"></span></div>
+        <div class="mk-tr"><i style="width:36%"></i><i style="width:26%"></i><span class="mk-tag mk-tag--ok"></span></div>
+        <div class="mk-tr"><i style="width:50%"></i><i style="width:18%"></i><span class="mk-tag mk-tag--warn"></span></div>
+        <div class="mk-tr"><i style="width:40%"></i><i style="width:24%"></i><span class="mk-tag mk-tag--ok"></span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div></div>
+        <div class="proj__body">
+          <span class="chips"><span class="proj__flag">Example build</span><span class="proj__cat">Web App</span></span>
+          <h3>Coaching Management Platform</h3>
+          <p>Batches, attendance, online tests and fee payments in one dashboard for students and staff.</p>
+          <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
         </div>
-        <span class="proj__flag">Example build</span>
-        <span class="proj__cat">Web App</span>
-        <h3>Coaching Management Platform</h3>
-        <p>Batches, attendance, online tests and fee payments in one dashboard for students and staff.</p>
-      </article>
-
-      <article class="card proj reveal" data-reveal style="--d:.16s">
-        <div class="proj__thumb proj__thumb--c" aria-hidden="true">
-          <svg viewBox="0 0 200 150" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="26" y="26" width="148" height="98" rx="8"/>
-            <path d="M62 26v98"/><path d="M38 46h14M38 60h14M38 74h14"/>
-            <path d="M78 100l22-26 16 14 26-34"/>
-            <path d="M78 112h84"/>
-          </svg>
+      </a>
+      <a class="card proj reveal" data-reveal style="--d:.16s" href="case-studies/business-automation-dashboard.html">
+        <div class="proj__thumb" aria-hidden="true"><div class="mockbare" aria-hidden="true">
+<div class="mock">
+  <div class="mock__bar"><i></i><i></i><i></i></div>
+  <div class="mock__body">
+    <div class="mk-tiles mk-tiles--3">
+      <div class="mk-tile"><b></b><i class="mk-line" style="width:64%"></i></div>
+      <div class="mk-tile"><b></b><i class="mk-line" style="width:52%"></i></div>
+      <div class="mk-tile"><b></b><i class="mk-line" style="width:72%"></i></div>
+    </div>
+    <div class="mk-chart">
+      <span style="--h:38%"></span><span style="--h:62%"></span><span style="--h:47%"></span>
+      <span style="--h:80%"></span><span style="--h:58%"></span><span style="--h:92%"></span>
+      <span style="--h:70%"></span>
+    </div>
+    <div class="mk-alert"><i class="mk-dot"></i><i class="mk-line" style="width:62%"></i></div>
+  </div>
+</div>
+</div></div>
+        <div class="proj__body">
+          <span class="chips"><span class="proj__flag">Example build</span><span class="proj__cat">Web App</span></span>
+          <h3>Business Automation Dashboard</h3>
+          <p>Replaces daily spreadsheet work with automated reports, alerts and role-based access.</p>
+          <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
         </div>
-        <span class="proj__flag">Example build</span>
-        <span class="proj__cat">SaaS</span>
-        <h3>Business Automation Dashboard</h3>
-        <p>Replaces daily spreadsheet work with automated reports, alerts and role-based access.</p>
-      </article>
-
-      <article class="card proj reveal" data-reveal style="--d:.04s">
-        <div class="proj__thumb proj__thumb--b" aria-hidden="true">
-          <svg viewBox="0 0 200 150" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M34 78 100 34l66 44"/><path d="M50 70v50h100V70"/>
-            <rect x="86" y="90" width="28" height="30" rx="4"/>
-            <path d="M60 84h14M126 84h14"/>
-          </svg>
+      </a>
+      <a class="card proj reveal" data-reveal style="--d:.04s" href="case-studies/real-estate-listing-portal.html">
+        <div class="proj__thumb" aria-hidden="true"><div class="mockbare" aria-hidden="true">
+<div class="mock">
+  <div class="mock__bar"><i></i><i></i><i></i></div>
+  <div class="mock__body">
+    <div class="mk-search"><i class="mk-line" style="width:46%"></i><span class="mk-btn mk-btn--sm"></span></div>
+    <div class="mk-tiles mk-tiles--3">
+      <div class="mk-prop"><span class="mk-photo"></span><i class="mk-line" style="width:80%"></i><i class="mk-line mk-line--fade" style="width:56%"></i></div>
+      <div class="mk-prop"><span class="mk-photo"></span><i class="mk-line" style="width:68%"></i><i class="mk-line mk-line--fade" style="width:62%"></i></div>
+      <div class="mk-prop"><span class="mk-photo"></span><i class="mk-line" style="width:74%"></i><i class="mk-line mk-line--fade" style="width:48%"></i></div>
+    </div>
+    <div class="mk-table">
+      <div class="mk-tr"><i style="width:40%"></i><span class="mk-tag mk-tag--ok"></span></div>
+      <div class="mk-tr"><i style="width:52%"></i><span class="mk-tag mk-tag--warn"></span></div>
+    </div>
+  </div>
+</div>
+</div></div>
+        <div class="proj__body">
+          <span class="chips"><span class="proj__flag">Example build</span><span class="proj__cat">Website + CRM</span></span>
+          <h3>Real Estate Listing Portal</h3>
+          <p>Property search, enquiry capture and a lead pipeline a sales team will actually use.</p>
+          <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
         </div>
-        <span class="proj__flag">Example build</span>
-        <span class="proj__cat">Website + CRM</span>
-        <h3>Real Estate Listing Portal</h3>
-        <p>Property search, enquiry capture and a lead pipeline a sales team will actually use.</p>
-      </article>
-
-      <article class="card proj reveal" data-reveal style="--d:.1s">
-        <div class="proj__thumb proj__thumb--a" aria-hidden="true">
-          <svg viewBox="0 0 200 150" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M28 104h30M142 104h30"/><rect x="58" y="76" width="60" height="30" rx="5"/>
-            <path d="M118 84h18l12 14v8h-30z"/>
-            <circle cx="76" cy="112" r="9"/><circle cx="140" cy="112" r="9"/>
-            <path d="M64 58c8-10 22-12 32-6"/>
-          </svg>
+      </a>
+      <a class="card proj reveal" data-reveal style="--d:.10s" href="case-studies/delivery-tracking-app.html">
+        <div class="proj__thumb" aria-hidden="true"><div class="mockbare" aria-hidden="true">
+<div class="mock mock--phone">
+  <div class="mock__notch"></div>
+  <div class="mock__body">
+    <div class="mk-map">
+      <svg viewBox="0 0 200 150" fill="none" stroke="currentColor" stroke-width="2.4"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path class="mk-route" d="M22 126c26-4 30-38 56-44s34-26 60-30 30-14 40-16"/>
+        <path d="M12 40h48M12 62h26M150 118h38M126 136h62" class="mk-grid-line"/>
+      </svg>
+      <span class="mk-pin mk-pin--a"></span>
+      <span class="mk-pin mk-pin--b"></span>
+    </div>
+    <div class="mk-driver">
+      <i class="mk-avatar"></i>
+      <span><i class="mk-line" style="width:70%"></i><i class="mk-line mk-line--fade" style="width:46%"></i></span>
+    </div>
+    <div class="mk-total"><i class="mk-line" style="width:40%"></i><b class="mk-num mk-num--wide"></b></div>
+  </div>
+</div>
+</div></div>
+        <div class="proj__body">
+          <span class="chips"><span class="proj__flag">Example build</span><span class="proj__cat">Mobile App</span></span>
+          <h3>Delivery Tracking App</h3>
+          <p>Driver app with live location, proof-of-delivery photos and an owner-side status board.</p>
+          <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
         </div>
-        <span class="proj__flag">Example build</span>
-        <span class="proj__cat">Mobile App</span>
-        <h3>Delivery Tracking App</h3>
-        <p>Driver app with live location, proof-of-delivery photos and an owner-side status board.</p>
-      </article>
-
-      <article class="card proj reveal" data-reveal style="--d:.16s">
-        <div class="proj__thumb proj__thumb--c" aria-hidden="true">
-          <svg viewBox="0 0 200 150" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="34" y="30" width="132" height="90" rx="8"/>
-            <path d="M34 52h132"/><circle cx="70" cy="86" r="18"/>
-            <path d="M70 68v18l12 8"/><path d="M104 74h50M104 88h50M104 102h30"/>
-          </svg>
+      </a>
+      <a class="card proj reveal" data-reveal style="--d:.16s" href="case-studies/booking-and-scheduling-mvp.html">
+        <div class="proj__thumb" aria-hidden="true"><div class="mockbare" aria-hidden="true">
+<div class="mock">
+  <div class="mock__bar"><i></i><i></i><i></i></div>
+  <div class="mock__body">
+    <div class="mk-head"><i class="mk-line mk-line--title" style="width:42%"></i></div>
+    <div class="mk-week">
+      <i></i><i></i><i></i><i></i><i></i>
+    </div>
+    <div class="mk-slots">
+      <span class="is-taken"></span><span></span><span class="is-taken"></span><span></span><span></span>
+      <span></span><span class="is-taken"></span><span></span><span class="is-taken"></span><span></span>
+      <span class="is-taken"></span><span></span><span></span><span></span><span class="is-taken"></span>
+      <span></span><span></span><span class="is-taken"></span><span></span><span></span>
+    </div>
+    <div class="mk-btn"></div>
+  </div>
+</div>
+</div></div>
+        <div class="proj__body">
+          <span class="chips"><span class="proj__flag">Example build</span><span class="proj__cat">MVP</span></span>
+          <h3>Booking &amp; Scheduling MVP</h3>
+          <p>Ships in weeks, not months: online booking, reminders and payments for a local service business.</p>
+          <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
         </div>
-        <span class="proj__flag">Example build</span>
-        <span class="proj__cat">MVP</span>
-        <h3>Booking &amp; Scheduling MVP</h3>
-        <p>Ships in weeks, not months: online booking, reminders and payments for a local service business.</p>
-      </article>
+      </a>
+      <a class="card proj reveal" data-reveal style="--d:.04s" href="case-studies/saas-subscription-starter.html">
+        <div class="proj__thumb" aria-hidden="true"><div class="mockbare" aria-hidden="true">
+<div class="mock">
+  <div class="mock__bar"><i></i><i></i><i></i></div>
+  <div class="mock__body">
+    <div class="mk-ws"><i class="mk-avatar mk-avatar--sm"></i><i class="mk-line" style="width:44%"></i><span class="mk-chip"></span></div>
+    <div class="mk-tiles mk-tiles--3 mk-plans">
+      <div class="mk-tile"><i class="mk-line mk-line--fade" style="width:52%"></i><b></b><i class="mk-line" style="width:78%"></i><i class="mk-line mk-line--fade" style="width:60%"></i></div>
+      <div class="mk-tile is-picked"><i class="mk-line mk-line--fade" style="width:46%"></i><b></b><i class="mk-line" style="width:82%"></i><i class="mk-line mk-line--fade" style="width:64%"></i></div>
+      <div class="mk-tile"><i class="mk-line mk-line--fade" style="width:50%"></i><b></b><i class="mk-line" style="width:72%"></i><i class="mk-line mk-line--fade" style="width:56%"></i></div>
+    </div>
+    <div class="mk-btn"></div>
+  </div>
+</div>
+</div></div>
+        <div class="proj__body">
+          <span class="chips"><span class="proj__flag">Example build</span><span class="proj__cat">SaaS Product</span></span>
+          <h3>SaaS Subscription Starter</h3>
+          <p>Sign-up, workspaces, plans and recurring billing — the unglamorous half of a SaaS product, built once and properly.</p>
+          <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+      <a class="card proj reveal" data-reveal style="--d:.10s" href="case-studies/business-website-that-converts.html">
+        <div class="proj__thumb" aria-hidden="true"><div class="mockbare" aria-hidden="true">
+<div class="mock">
+  <div class="mock__bar"><i></i><i></i><i></i></div>
+  <div class="mock__body">
+    <div class="mk-navrow"><i class="mk-dotmark"></i><i></i><i></i><i></i><span class="mk-chip"></span></div>
+    <div class="mk-heroblock">
+      <i class="mk-line mk-line--title" style="width:74%"></i>
+      <i class="mk-line mk-line--fade" style="width:88%"></i>
+      <i class="mk-line mk-line--fade" style="width:62%"></i>
+      <div class="mk-ctarow"><span class="mk-btn mk-btn--sm"></span><span class="mk-btn mk-btn--ghost"></span></div>
+    </div>
+    <div class="mk-tiles mk-tiles--3">
+      <div class="mk-tile"><b></b><i class="mk-line" style="width:70%"></i></div>
+      <div class="mk-tile"><b></b><i class="mk-line" style="width:58%"></i></div>
+      <div class="mk-tile"><b></b><i class="mk-line" style="width:66%"></i></div>
+    </div>
+  </div>
+</div>
+</div></div>
+        <div class="proj__body">
+          <span class="chips"><span class="proj__flag">Example build</span><span class="proj__cat">Website</span></span>
+          <h3>Business Website That Converts</h3>
+          <p>A fast, mobile-first site that turns visitors into enquiries — and that you can edit yourself.</p>
+          <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+      <a class="card proj reveal" data-reveal style="--d:.16s" href="case-studies/inventory-and-billing-for-retail.html">
+        <div class="proj__thumb" aria-hidden="true"><div class="mockbare" aria-hidden="true">
+<div class="mock">
+  <div class="mock__bar"><i></i><i></i><i></i></div>
+  <div class="mock__body">
+    <div class="mk-search"><i class="mk-line" style="width:38%"></i><span class="mk-btn mk-btn--sm"></span></div>
+    <div class="mk-table">
+      <div class="mk-tr mk-tr--head"><i style="width:42%"></i><i style="width:18%"></i><i style="width:16%"></i></div>
+      <div class="mk-tr"><i style="width:48%"></i><i style="width:14%"></i><span class="mk-tag"></span></div>
+      <div class="mk-tr"><i style="width:38%"></i><i style="width:20%"></i><span class="mk-tag mk-tag--warn"></span></div>
+      <div class="mk-tr"><i style="width:54%"></i><i style="width:12%"></i><span class="mk-tag"></span></div>
+      <div class="mk-tr"><i style="width:44%"></i><i style="width:18%"></i><span class="mk-tag mk-tag--warn"></span></div>
+    </div>
+    <div class="mk-total"><i class="mk-line" style="width:30%"></i><b class="mk-num mk-num--wide"></b></div>
+  </div>
+</div>
+</div></div>
+        <div class="proj__body">
+          <span class="chips"><span class="proj__flag">Example build</span><span class="proj__cat">Custom Software</span></span>
+          <h3>Inventory &amp; Billing for Retail</h3>
+          <p>Stock that matches the shelf, GST-ready bills in seconds, and an alert before a fast seller runs out.</p>
+          <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+      <a class="card proj reveal" data-reveal style="--d:.04s" href="case-studies/clinic-appointments-and-records.html">
+        <div class="proj__thumb" aria-hidden="true"><div class="mockbare" aria-hidden="true">
+<div class="mock">
+  <div class="mock__bar"><i></i><i></i><i></i></div>
+  <div class="mock__split">
+    <div class="mk-side">
+      <i class="mk-side__row is-on"></i><i class="mk-side__row"></i><i class="mk-side__row"></i>
+    </div>
+    <div class="mock__body">
+      <div class="mk-head"><i class="mk-line mk-line--title" style="width:46%"></i></div>
+      <div class="mk-agenda">
+        <div class="mk-appt"><i class="mk-time"></i><i class="mk-line" style="width:56%"></i><span class="mk-tag"></span></div>
+        <div class="mk-appt"><i class="mk-time"></i><i class="mk-line" style="width:44%"></i><span class="mk-tag"></span></div>
+        <div class="mk-appt is-now"><i class="mk-time"></i><i class="mk-line" style="width:62%"></i><span class="mk-tag"></span></div>
+        <div class="mk-appt"><i class="mk-time"></i><i class="mk-line" style="width:50%"></i><span class="mk-tag mk-tag--warn"></span></div>
+        <div class="mk-appt"><i class="mk-time"></i><i class="mk-line" style="width:40%"></i><span class="mk-tag"></span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div></div>
+        <div class="proj__body">
+          <span class="chips"><span class="proj__flag">Example build</span><span class="proj__cat">Web App</span></span>
+          <h3>Clinic Appointments &amp; Records</h3>
+          <p>Appointments, patient history and prescriptions in one place, with reminders that cut the empty slots.</p>
+          <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+      <a class="card proj reveal" data-reveal style="--d:.10s" href="case-studies/gym-membership-app.html">
+        <div class="proj__thumb" aria-hidden="true"><div class="mockbare" aria-hidden="true">
+<div class="mock mock--phone">
+  <div class="mock__notch"></div>
+  <div class="mock__body">
+    <div class="mk-pass">
+      <i class="mk-line mk-line--onaccent" style="width:56%"></i>
+      <i class="mk-line mk-line--onaccent mk-line--fade" style="width:38%"></i>
+      <div class="mk-qr">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+    <div class="mk-list">
+      <div class="mk-item"><i class="mk-sq"></i><i class="mk-line" style="width:58%"></i><b class="mk-num"></b></div>
+      <div class="mk-item"><i class="mk-sq"></i><i class="mk-line" style="width:46%"></i><b class="mk-num"></b></div>
+    </div>
+    <div class="mk-btn"></div>
+  </div>
+</div>
+</div></div>
+        <div class="proj__body">
+          <span class="chips"><span class="proj__flag">Example build</span><span class="proj__cat">Mobile App</span></span>
+          <h3>Gym Membership App</h3>
+          <p>Digital membership, quick check-in, class booking and renewal reminders that actually go out.</p>
+          <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+      <a class="card proj reveal" data-reveal style="--d:.16s" href="case-studies/field-service-job-app.html">
+        <div class="proj__thumb" aria-hidden="true"><div class="mockbare" aria-hidden="true">
+<div class="mock mock--phone">
+  <div class="mock__notch"></div>
+  <div class="mock__body">
+    <div class="mk-head"><i class="mk-line mk-line--title" style="width:64%"></i></div>
+    <p class="mk-cap">Job 3 of 6</p>
+    <div class="mk-check">
+      <div class="mk-crow is-done"><span class="mk-box"></span><i class="mk-line" style="width:62%"></i></div>
+      <div class="mk-crow is-done"><span class="mk-box"></span><i class="mk-line" style="width:74%"></i></div>
+      <div class="mk-crow"><span class="mk-box"></span><i class="mk-line" style="width:54%"></i></div>
+      <div class="mk-crow"><span class="mk-box"></span><i class="mk-line" style="width:68%"></i></div>
+    </div>
+    <div class="mk-photos"><span></span><span></span><span class="mk-photo-add"></span></div>
+    <div class="mk-btn"></div>
+  </div>
+</div>
+</div></div>
+        <div class="proj__body">
+          <span class="chips"><span class="proj__flag">Example build</span><span class="proj__cat">Mobile App</span></span>
+          <h3>Field Service Job App</h3>
+          <p>Dispatch, on-site checklists, photo proof and an invoice raised before the technician leaves.</p>
+          <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+      <a class="card proj reveal" data-reveal style="--d:.04s" href="case-studies/first-website-for-a-social-first-business.html">
+        <div class="proj__thumb" aria-hidden="true"><div class="mockbare" aria-hidden="true">
+<div class="mock">
+  <div class="mock__bar mock__bar--url">
+    <i></i><i></i><i></i>
+    <span class="mk-url"><b class="mk-lock"></b><i class="mk-line" style="width:64px"></i></span>
+  </div>
+  <div class="mock__body">
+    <div class="mk-brandrow">
+      <i class="mk-avatar mk-avatar--big"></i>
+      <i class="mk-line mk-line--title" style="width:52%"></i>
+      <i class="mk-line mk-line--fade" style="width:70%"></i>
+    </div>
+    <div class="mk-links">
+      <span class="mk-linkbtn is-primary"></span>
+      <span class="mk-linkbtn"></span>
+      <span class="mk-linkbtn"></span>
+      <span class="mk-linkbtn"></span>
+    </div>
+    <div class="mk-mailrow">
+      <b class="mk-at">@</b>
+      <i class="mk-line" style="width:58%"></i>
+    </div>
+  </div>
+</div>
+</div></div>
+        <div class="proj__body">
+          <span class="chips"><span class="proj__flag">Example build</span><span class="proj__cat">New Business</span></span>
+          <h3>First Website for a Social-First Business</h3>
+          <p>You built an audience on Instagram and TikTok. This is the address, the inbox and the page that are actually yours.</p>
+          <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
     </div>
     <!-- ======================= END PORTFOLIO DATA ======================= -->
 
@@ -1026,7 +1341,7 @@
     </div>
 
     <div class="cards post-grid">
-      <a class="card post-card reveal" data-reveal style="--d:.4s" href="articles/what-an-mvp-actually-is.html">
+      <a class="card post-card reveal" data-reveal style="--d:.04s" href="articles/what-an-mvp-actually-is.html">
         <span class="proj__cat">Building</span>
         <h3>What an MVP actually is, and what it isn't</h3>
         <p>Most people asking for an MVP describe a full product with a smaller budget. That is not the same thing, and the difference decides whether the money teaches you anything.</p>
@@ -1059,12 +1374,6 @@
 
 <!-- =========================== FINAL CTA =========================== -->
 <section class="cta" id="cta">
-  <div class="cta__bg" aria-hidden="true">
-    <span class="blob blob--3"></span>
-    <svg class="cta__doodle cta__doodle--1" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M50 12v18M20 30l13 13M80 30 67 43M50 46c10 0 18 8 18 18s-8 20-18 20-18-8-18-20 8-18 18-18Z"/></svg>
-    <svg class="cta__doodle cta__doodle--2" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M50 8c14 12 20 28 18 46l-18 18-18-18C30 36 36 20 50 8Z"/><circle cx="50" cy="38" r="8"/><path d="M34 74c-6 8-6 14-4 18 6 0 10-4 12-10M66 74c6 8 6 14 4 18-6 0-10-4-12-10"/></svg>
-  </div>
-
   <div class="container cta__inner">
     <h2 class="cta__title reveal" data-reveal>Your idea shouldn't stay an idea.</h2>
     <p class="cta__sub reveal" data-reveal style="--d:.08s">Let's turn it into something real. <span aria-hidden="true">🚀</span></p>
@@ -1077,7 +1386,7 @@
 </section>
 
 <!-- ============================ CONTACT ============================ -->
-<section class="section section--contact" id="contact">
+<section class="section section--alt section--contact" id="contact">
   <div class="container">
     <div class="sec-head sec-head--center">
       <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>GET IN TOUCH</p>
@@ -1089,8 +1398,10 @@
         <span class="contact__icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><path d="M17.4 6.6h.01"/></svg>
         </span>
-        <h3>Instagram</h3>
-        <p class="contact__value">@tavzuran</p>
+        <span>
+          <h3>Instagram</h3>
+          <p class="contact__value">@tavzuran</p>
+        </span>
         <span class="contact__go">Send a DM <span aria-hidden="true">→</span></span>
       </a>
 
@@ -1098,8 +1409,10 @@
         <span class="contact__icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
         </span>
-        <h3>Email</h3>
-        <p class="contact__value" data-text="email">adil@tavzuran.com</p>
+        <span>
+          <h3>Email</h3>
+          <p class="contact__value" data-text="email">adil@tavzuran.com</p>
+        </span>
         <span class="contact__go">Write to us <span aria-hidden="true">→</span></span>
       </a>
     </div>
@@ -1115,10 +1428,7 @@
     <div class="footer__brand">
       <a class="brand" href="#top" aria-label="Tavzuran home">
         <span class="brand__mark" aria-hidden="true">
-          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 3.5c10.2 0 18.5 8.3 18.5 18.5S32.2 40.5 22 40.5 3.5 32.2 3.5 22 11.8 3.5 22 3.5Z"/>
-            <path d="M14 16h16M22 16v13"/>
-          </svg>
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 15h18M22 15v15"/></svg>
         </span>
         <span class="brand__text">Tavzuran</span>
       </a>
