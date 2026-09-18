@@ -259,6 +259,54 @@ SOCIAL_HOME = '''<div class="mock">
   </div>
 </div>'''
 
+AUDIT_REPORT = '''<div class="mock">
+  <div class="mock__bar"><i></i><i></i><i></i></div>
+  <div class="mock__split">
+    <div class="mk-side">
+      <i class="mk-side__row is-on"></i><i class="mk-side__row"></i>
+      <i class="mk-side__row"></i><i class="mk-side__row"></i>
+    </div>
+    <div class="mock__body">
+      <div class="mk-head"><i class="mk-line mk-line--title" style="width:46%"></i></div>
+      <p class="mk-cap">Audit findings</p>
+      <div class="mk-table">
+        <div class="mk-tr mk-tr--head"><i style="width:44%"></i><i style="width:20%"></i><i style="width:14%"></i></div>
+        <div class="mk-tr"><i style="width:52%"></i><span class="mk-tag"></span></div>
+        <div class="mk-tr"><i style="width:40%"></i><span class="mk-tag"></span></div>
+        <div class="mk-tr"><i style="width:58%"></i><span class="mk-tag mk-tag--warn"></span></div>
+        <div class="mk-tr"><i style="width:36%"></i><span class="mk-tag mk-tag--warn"></span></div>
+      </div>
+      <div class="mk-alert"><i class="mk-dot"></i><i class="mk-line" style="width:58%"></i></div>
+    </div>
+  </div>
+</div>'''
+
+STORE_REVIEW = '''<div class="mock">
+  <div class="mock__bar"><i></i><i></i><i></i></div>
+  <div class="mock__body">
+    <div class="mk-head"><i class="mk-line mk-line--title" style="width:40%"></i></div>
+    <div class="mk-steps">
+      <span class="mk-step is-done"></span><span class="mk-rail is-done"></span>
+      <span class="mk-step is-done"></span><span class="mk-rail is-done"></span>
+      <span class="mk-step is-now"></span><span class="mk-rail"></span>
+      <span class="mk-step"></span>
+    </div>
+    <p class="mk-cap">In review</p>
+    <div class="mk-tiles mk-tiles--3">
+      <div class="mk-tile"><b></b><i class="mk-line" style="width:64%"></i></div>
+      <div class="mk-tile"><b></b><i class="mk-line" style="width:52%"></i></div>
+    </div>
+    <div class="mk-check">
+      <div class="mk-crow is-done"><i class="mk-box"></i><i class="mk-line" style="width:62%"></i></div>
+      <div class="mk-crow is-done"><i class="mk-box"></i><i class="mk-line" style="width:50%"></i></div>
+      <div class="mk-crow"><i class="mk-box"></i><i class="mk-line" style="width:56%"></i></div>
+    </div>
+    <div class="mk-photos">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</div>'''
+
 MOCKS = {
     "restaurant-ordering-app": PHONE_ORDER,
     "coaching-management-platform": DASH_COACHING,
@@ -273,6 +321,8 @@ MOCKS = {
     "gym-membership-app": GYM_PASS,
     "field-service-job-app": FIELD_JOB,
     "first-website-for-a-social-first-business": SOCIAL_HOME,
+    "vibe-coded-app-made-production-ready": AUDIT_REPORT,
+    "getting-an-app-through-both-stores": STORE_REVIEW,
 }
 
 
