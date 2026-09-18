@@ -602,7 +602,7 @@ const CONFIG = {
   onScroll();
 
   /* ---------------------------------------------------------------
-     8. Price count-up (₹50,000)
+     8. Price count-up (₹20,000)
   --------------------------------------------------------------- */
   const priceEl = $("#priceCount");
   if (priceEl && !reduceMotion && "IntersectionObserver" in window) {
@@ -626,5 +626,51 @@ const CONFIG = {
     }, { threshold: 0.4 });
 
     priceIO.observe(priceEl);
+  }
+
+  /* ---------------------------------------------------------------
+     9. Pointer-aware surfaces
+        Cards carry a soft light that follows the pointer (--mx/--my feed
+        the radial gradient in style.css) and the hero stage tilts a few
+        degrees towards it. Both are skipped on touch screens, where there
+        is no pointer to follow, and under prefers-reduced-motion.
+  --------------------------------------------------------------- */
+  let finePointer = false;
+  try {
+    finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  } catch (e) { /* older browser: no spotlight, nothing lost */ }
+
+  if (finePointer && !reduceMotion) {
+    let spotFrame = null;
+    document.addEventListener("pointermove", function (e) {
+      const card = e.target.closest && e.target.closest(".card");
+      if (!card) return;
+      if (spotFrame) cancelAnimationFrame(spotFrame);
+      spotFrame = requestAnimationFrame(function () {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty("--mx", (e.clientX - r.left).toFixed(0) + "px");
+        card.style.setProperty("--my", (e.clientY - r.top).toFixed(0) + "px");
+      });
+    }, { passive: true });
+
+    const stage = $("#artStage");
+    if (stage) {
+      const hero = stage.closest(".hero") || stage;
+      let tiltFrame = null;
+      hero.addEventListener("pointermove", function (e) {
+        if (tiltFrame) cancelAnimationFrame(tiltFrame);
+        tiltFrame = requestAnimationFrame(function () {
+          const r = stage.getBoundingClientRect();
+          const dx = (e.clientX - (r.left + r.width / 2)) / r.width;
+          const dy = (e.clientY - (r.top + r.height / 2)) / r.height;
+          stage.style.transform =
+            "perspective(1200px) rotateX(" + (-dy * 4).toFixed(2) + "deg) rotateY(" + (dx * 5).toFixed(2) + "deg)";
+        });
+      }, { passive: true });
+      hero.addEventListener("pointerleave", function () {
+        if (tiltFrame) cancelAnimationFrame(tiltFrame);
+        stage.style.transform = "";
+      });
+    }
   }
 })();
