@@ -37,8 +37,8 @@ THUMBS = {
 }
 
 BRAND_SVG = (
-    '<svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="3.2" '
-    'stroke-linecap="round" stroke-linejoin="round"><path d="M13 15h18M22 15v15"/></svg>'
+    '<img src="../assets/logo-mark.png" alt="" width="43" height="30" '
+    'decoding="async" />'
 )
 
 MAILTO = ("mailto:adil@tavzuran.com"
@@ -123,8 +123,8 @@ def head(title, description, canonical, jsonld):
 <meta name="twitter:description" content="{description}" />
 <meta name="twitter:image" content="{site}/assets/og-image.svg" />
 
-<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
-<link rel="apple-touch-icon" href="../assets/favicon.svg" />
+<link rel="icon" href="../assets/icon.png" type="image/png" sizes="192x192" />
+<link rel="apple-touch-icon" href="../assets/icon.png" />
 
 <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="../assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />

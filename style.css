@@ -515,6 +515,9 @@ h1, h2, h3 {
 .btn--xl { min-height: 60px; padding: 18px 34px; font-size: 1.06rem; }
 .btn--block { width: 100%; }
 
+/* An inline link is underlined, not merely tinted: at several of the five
+   palettes the accent sits at the same brightness as body text, so colour
+   alone does not say "this is a link". */
 .link-arrow {
   display: inline-flex;
   align-items: center;
@@ -522,10 +525,14 @@ h1, h2, h3 {
   padding-block: 8px;
   font-weight: 600;
   color: var(--accent);
-  transition: gap .25s var(--ease);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+  text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+  transition: gap .25s var(--ease), text-decoration-color .25s var(--ease);
 }
 .link-arrow span[aria-hidden] { transition: transform .25s var(--ease-out); }
-.link-arrow:hover { gap: 10px; }
+.link-arrow:hover { gap: 10px; text-decoration-color: currentColor; }
 
 .card {
   position: relative;
@@ -643,19 +650,16 @@ h1, h2, h3 {
 }
 
 .brand { display: inline-flex; align-items: center; gap: 10px; padding-block: 5px; font-weight: 600; }
+/* The mark is the real logo artwork, so it keeps its own colours rather than
+   the palette's — no tinted plate behind it. */
 .brand__mark {
-  width: 34px; height: 34px;
-  display: grid;
-  place-items: center;
+  display: flex;
   flex: none;
-  border-radius: 10px;
-  background: linear-gradient(140deg, var(--accent-light), var(--accent));
-  color: var(--accent-fg);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .25), 0 6px 16px -8px rgba(var(--accent-glow), .7);
+  height: 30px;
   transition: transform .5s var(--ease-out);
 }
-.brand:hover .brand__mark { transform: rotate(-8deg) scale(1.05); }
-.brand__mark svg { width: 100%; height: 100%; }
+.brand:hover .brand__mark { transform: scale(1.05); }
+.brand__mark img { height: 100%; width: auto; display: block; }
 .brand__text {
   font-family: var(--font-display);
   font-weight: 800;
@@ -1642,7 +1646,15 @@ h1, h2, h3 {
     var(--bg-2);
   overflow: hidden;
 }
-.proj__thumb .mockbare { width: 100%; }
+/* Each stylised screen is taller than this preview window, and each one is
+   cut at a different point (22px on one card, 77px on another), which made an
+   otherwise pixel-aligned row look ragged. Fade the screen out instead of
+   cutting it, so every card ends the same way. */
+.proj__thumb .mockbare {
+  width: 100%;
+  -webkit-mask-image: linear-gradient(180deg, #000 58%, rgba(0, 0, 0, .35) 84%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 58%, rgba(0, 0, 0, .35) 84%, transparent 100%);
+}
 .proj__thumb .mock {
   width: 100%;
   max-width: 100%;
@@ -1663,7 +1675,35 @@ h1, h2, h3 {
 .proj__body .chips { margin-bottom: 4px; }
 .proj h3 { font-size: 1.16rem; margin: 0; }
 .proj p { margin: 0; flex: 1; }
-.proj .link-arrow { margin-top: 6px; font-size: .92rem; }
+/* Inside a card whose whole surface is the link, the call to action is a
+   pill. Shape and border carry it, so it reads as an action in every palette
+   and for a reader who cannot separate the two hues. */
+.proj .link-arrow,
+.post-card .link-arrow {
+  align-self: flex-start;
+  gap: 8px;
+  padding: 9px 16px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--fg);
+  font-size: .9rem;
+  text-decoration: none;
+  background: var(--card);
+  transition: background-color .3s var(--ease), color .3s var(--ease),
+              border-color .3s var(--ease), gap .25s var(--ease);
+}
+.proj .link-arrow { margin-top: 6px; }
+.proj:hover .link-arrow,
+.post-card:hover .link-arrow,
+.proj:focus-visible .link-arrow,
+.post-card:focus-visible .link-arrow {
+  background: var(--accent);
+  border-color: transparent;
+  color: var(--accent-fg);
+  gap: 12px;
+}
+.proj:hover .link-arrow span[aria-hidden],
+.post-card:hover .link-arrow span[aria-hidden] { transform: translateX(2px); }
 
 .work__foot {
   display: flex;
