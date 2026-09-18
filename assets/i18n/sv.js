@@ -1,8 +1,8 @@
-/* Humans Of Coding — sv translations. Loaded on demand.
+/* Tavzuran — sv translations. Loaded on demand.
    Translated by AI; English is the authentic version. Each key is the
    exact English text on the page. See README section 2b. */
-window.HOC_I18N = window.HOC_I18N || {};
-window.HOC_I18N["sv"] = {
+window.TAVZ_I18N = window.TAVZ_I18N || {};
+window.TAVZ_I18N["sv"] = {
   "Skip to content": "Hoppa till innehåll",
   "Services": "Tjänster",
   "Human + AI": "Människa + AI",
@@ -13,14 +13,14 @@ window.HOC_I18N["sv"] = {
   "Book a Free Call": "Boka ett kostnadsfritt samtal",
   "About Adil": "Om Adil",
   "Contact": "Kontakt",
-  "DM @humansofcoding": "Skicka DM till @humansofcoding",
+  "DM @tavzuran": "Skicka DM till @tavzuran",
   "Have an idea?": "Har du en idé?",
   "We'll": "Vi",
   "build it.": "bygger den.",
   "Apps, websites & software built for your business — from idea to launch.": "Appar, webbplatser och mjukvara för din verksamhet — från idé till lansering.",
   "See What We Build": "Se vad vi bygger",
   "Free 20-min idea call · No obligation": "Kostnadsfritt 20-minuterssamtal · Utan förpliktelser",
-  "Hand-drawn illustration of Adil, founder of Humans Of Coding": "Handritad illustration av Adil, grundare av Humans Of Coding",
+  "Hand-drawn illustration of Adil, founder of Tavzuran": "Handritad illustration av Adil, grundare av Tavzuran",
   "Minimal line-art character looking at a floating app screen surrounded by idea, code, app and launch doodles.": "Minimalistisk streckfigur som tittar på en svävande appskärm, omgiven av klotter om idé, kod, app och lansering.",
   "Launch": "Lansera",
   "idea": "idé",
@@ -40,7 +40,7 @@ window.HOC_I18N["sv"] = {
   "WHAT WE DO": "VAD VI GÖR",
   "You bring the idea.": "Du kommer med idén.",
   "We handle the tech.": "Vi sköter tekniken.",
-  "From planning and design to development and launch, Humans Of Coding helps turn ideas into working digital products.": "Från planering och design till utveckling och lansering gör Humans Of Coding idéer till digitala produkter som faktiskt fungerar.",
+  "From planning and design to development and launch, Tavzuran helps turn ideas into working digital products.": "Från planering och design till utveckling och lansering gör Tavzuran idéer till digitala produkter som faktiskt fungerar.",
   "Mobile Apps": "Mobilappar",
   "iOS and Android applications built around your business.": "iOS- och Android-appar byggda kring din verksamhet.",
   "Websites": "Webbplatser",
@@ -102,8 +102,8 @@ window.HOC_I18N["sv"] = {
   "Get it in front of real users and start growing.": "Släpp den till riktiga användare och börja växa.",
   "founder": "grundare",
   "Hi, I'm Adil.": "Hej, jag heter Adil.",
-  "I started Humans Of Coding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "Jag startade Humans Of Coding för att hjälpa entreprenörer och företag att göra sina idéer till riktig teknik — utan onödig komplexitet och utan stora kostnader från början.",
-  "Humans Of Coding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Humans Of Coding är mitt sätt att rikta samma nivå mot mindre idéer — mot grundare och lokala företag som normalt inte kommer i närheten av den här sortens ingenjörsarbete. AI hjälper mig att gå snabbt; den avgör inte vad din produkt ska vara. Den delen förblir ett samtal mellan två människor.",
+  "I started Tavzuran to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "Jag startade Tavzuran för att hjälpa entreprenörer och företag att göra sina idéer till riktig teknik — utan onödig komplexitet och utan stora kostnader från början.",
+  "Tavzuran is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Tavzuran är mitt sätt att rikta samma nivå mot mindre idéer — mot grundare och lokala företag som normalt inte kommer i närheten av den här sortens ingenjörsarbete. AI hjälper mig att gå snabbt; den avgör inte vad din produkt ska vara. Den delen förblir ett samtal mellan två människor.",
   "building & leading": "bygga och leda",
   "cloud, data & AI": "moln, data och AI",
   "human-reviewed code": "kod granskad av människor",
@@ -111,7 +111,7 @@ window.HOC_I18N["sv"] = {
   "Book a free call": "Boka ett kostnadsfritt samtal",
   "WHAT WE BUILD": "VAD VI BYGGER",
   "The kind of ideas we bring to life.": "Den sortens idéer vi förverkligar.",
-  "Straight up: Humans Of Coding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "Rakt på sak: Humans Of Coding är nytt, så det här är exempelprojekt — produkterna vi är redo att leverera — inte kunduppdrag. Ditt skulle bli det första på den här väggen.",
+  "Straight up: Tavzuran is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "Rakt på sak: Tavzuran är nytt, så det här är exempelprojekt — produkterna vi är redo att leverera — inte kunduppdrag. Ditt skulle bli det första på den här väggen.",
   "Example build": "Exempelprojekt",
   "Mobile App": "Mobilapp",
   "Restaurant Ordering App": "Beställningsapp för restaurang",
@@ -154,9 +154,9 @@ window.HOC_I18N["sv"] = {
   "Email": "E-post",
   "Write to us": "Skriv till oss",
   "Apps • Websites • Software": "Appar • Webbplatser • Mjukvara",
-  "© 2026 Humans Of Coding. All rights reserved.": "© 2026 Humans Of Coding. Med ensamrätt.",
+  "© 2026 Tavzuran. All rights reserved.": "© 2026 Tavzuran. Med ensamrätt.",
   "Built by humans, in code.": "Byggt av människor, i kod.",
-  "Humans Of Coding home": "Humans Of Coding startsida",
+  "Tavzuran home": "Tavzuran startsida",
   "Primary": "Huvudnavigering",
   "Switch colour theme": "Byt färgtema",
   "Open menu": "Öppna menyn",

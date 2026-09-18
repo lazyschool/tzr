@@ -1,8 +1,8 @@
-/* Humans Of Coding — ko translations. Loaded on demand.
+/* Tavzuran — ko translations. Loaded on demand.
    Translated by AI; English is the authentic version. Each key is the
    exact English text on the page. See README section 2b. */
-window.HOC_I18N = window.HOC_I18N || {};
-window.HOC_I18N["ko"] = {
+window.TAVZ_I18N = window.TAVZ_I18N || {};
+window.TAVZ_I18N["ko"] = {
   "Skip to content": "본문으로 건너뛰기",
   "Services": "서비스",
   "Human + AI": "사람 + AI",
@@ -13,14 +13,14 @@ window.HOC_I18N["ko"] = {
   "Book a Free Call": "무료 상담 예약",
   "About Adil": "Adil 소개",
   "Contact": "연락처",
-  "DM @humansofcoding": "@humansofcoding 에 DM",
+  "DM @tavzuran": "@tavzuran 에 DM",
   "Have an idea?": "아이디어가 있으신가요?",
   "We'll": "저희가",
   "build it.": "만들어 드립니다.",
   "Apps, websites & software built for your business — from idea to launch.": "비즈니스를 위한 앱, 웹사이트, 소프트웨어 — 아이디어부터 출시까지.",
   "See What We Build": "무엇을 만드는지 보기",
   "Free 20-min idea call · No obligation": "20분 무료 상담 · 부담 없이",
-  "Hand-drawn illustration of Adil, founder of Humans Of Coding": "Humans Of Coding 창업자 Adil의 손그림 일러스트",
+  "Hand-drawn illustration of Adil, founder of Tavzuran": "Tavzuran 창업자 Adil의 손그림 일러스트",
   "Minimal line-art character looking at a floating app screen surrounded by idea, code, app and launch doodles.": "아이디어, 코드, 앱, 출시 낙서에 둘러싸여 떠 있는 앱 화면을 바라보는 미니멀 선화 캐릭터.",
   "Launch": "출시",
   "idea": "아이디어",
@@ -40,7 +40,7 @@ window.HOC_I18N["ko"] = {
   "WHAT WE DO": "하는 일",
   "You bring the idea.": "아이디어는 여러분이.",
   "We handle the tech.": "기술은 저희가.",
-  "From planning and design to development and launch, Humans Of Coding helps turn ideas into working digital products.": "기획과 디자인부터 개발과 출시까지, Humans Of Coding은 아이디어를 실제로 작동하는 디지털 제품으로 만듭니다.",
+  "From planning and design to development and launch, Tavzuran helps turn ideas into working digital products.": "기획과 디자인부터 개발과 출시까지, Tavzuran은 아이디어를 실제로 작동하는 디지털 제품으로 만듭니다.",
   "Mobile Apps": "모바일 앱",
   "iOS and Android applications built around your business.": "비즈니스에 맞춘 iOS·Android 애플리케이션.",
   "Websites": "웹사이트",
@@ -102,8 +102,8 @@ window.HOC_I18N["ko"] = {
   "Get it in front of real users and start growing.": "실제 사용자에게 선보이고 성장을 시작하세요.",
   "founder": "창업자",
   "Hi, I'm Adil.": "안녕하세요, Adil입니다.",
-  "I started Humans Of Coding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "저는 창업가와 기업이 아이디어를 실제 기술로 바꿀 수 있도록 — 불필요한 복잡함이나 큰 초기 비용 없이 — Humans Of Coding을 시작했습니다.",
-  "Humans Of Coding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Humans Of Coding은 같은 기준을 더 작은 아이디어에 적용하는 일입니다 — 보통은 이런 엔지니어링에 접근하기 어려운 창업가와 동네 사업장을 위해서요. AI는 제가 빠르게 움직이도록 돕지만, 제품이 무엇이 되어야 하는지는 결정하지 않습니다. 그 부분은 사람과 사람의 대화로 남습니다.",
+  "I started Tavzuran to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "저는 창업가와 기업이 아이디어를 실제 기술로 바꿀 수 있도록 — 불필요한 복잡함이나 큰 초기 비용 없이 — Tavzuran을 시작했습니다.",
+  "Tavzuran is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Tavzuran은 같은 기준을 더 작은 아이디어에 적용하는 일입니다 — 보통은 이런 엔지니어링에 접근하기 어려운 창업가와 동네 사업장을 위해서요. AI는 제가 빠르게 움직이도록 돕지만, 제품이 무엇이 되어야 하는지는 결정하지 않습니다. 그 부분은 사람과 사람의 대화로 남습니다.",
   "building & leading": "개발과 리딩",
   "cloud, data & AI": "클라우드, 데이터, AI",
   "human-reviewed code": "사람이 검토한 코드",
@@ -111,7 +111,7 @@ window.HOC_I18N["ko"] = {
   "Book a free call": "무료 상담 예약",
   "WHAT WE BUILD": "만드는 것",
   "The kind of ideas we bring to life.": "저희가 현실로 만드는 아이디어들.",
-  "Straight up: Humans Of Coding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "솔직히 말씀드리면 Humans Of Coding은 새로 시작한 스튜디오라 여기 있는 것은 실제 고객 작업이 아니라 저희가 만들 수 있는 제품의 예시입니다. 여러분의 프로젝트가 이 벽의 첫 번째가 됩니다.",
+  "Straight up: Tavzuran is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "솔직히 말씀드리면 Tavzuran은 새로 시작한 스튜디오라 여기 있는 것은 실제 고객 작업이 아니라 저희가 만들 수 있는 제품의 예시입니다. 여러분의 프로젝트가 이 벽의 첫 번째가 됩니다.",
   "Example build": "예시 작업",
   "Mobile App": "모바일 앱",
   "Restaurant Ordering App": "음식점 주문 앱",
@@ -154,9 +154,9 @@ window.HOC_I18N["ko"] = {
   "Email": "이메일",
   "Write to us": "메일 보내기",
   "Apps • Websites • Software": "앱 • 웹사이트 • 소프트웨어",
-  "© 2026 Humans Of Coding. All rights reserved.": "© 2026 Humans Of Coding. All rights reserved.",
+  "© 2026 Tavzuran. All rights reserved.": "© 2026 Tavzuran. All rights reserved.",
   "Built by humans, in code.": "사람이 코드로 만들었습니다.",
-  "Humans Of Coding home": "Humans Of Coding 홈",
+  "Tavzuran home": "Tavzuran 홈",
   "Primary": "주요 메뉴",
   "Switch colour theme": "색상 테마 전환",
   "Open menu": "메뉴 열기",

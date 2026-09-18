@@ -1,10 +1,10 @@
-# Humans Of Coding — Website
+# Tavzuran — Website
 
-Static marketing site for **Humans Of Coding** — apps, websites, MVPs and custom software.
+Static marketing site for **Tavzuran** — apps, websites, MVPs and custom software.
 Plain HTML, CSS and vanilla JavaScript. No build step, no framework, no server, no paid services.
 
 ```
-humansofcoding/
+tavzuran/
 ├── index.html        all page content
 ├── style.css         all styling (mobile-first)
 ├── script.js         all behaviour + YOUR BUSINESS INFO at the top
@@ -54,10 +54,10 @@ already filled in, so there is nothing you must change before publishing:
 
 ```js
 const CONFIG = {
-  instagram: "humansofcoding",
-  email:     "adil@humansofcoding.com",
-  emailSubject: "Project enquiry from humansofcoding.com",
-  callSubject: "Free call request - Humans Of Coding",
+  instagram: "tavzuran",
+  email:     "adil@tavzuran.com",
+  emailSubject: "Project enquiry from tavzuran.com",
+  callSubject: "Free call request - Tavzuran",
   callBody: [ ...the pre-written email, one line per array entry... ],
   bookingUrl: ""                          // ← optional Cal.com / Calendly link
 };
@@ -69,7 +69,7 @@ There are two contact channels: Instagram and email. WhatsApp was removed.
 ### How "Book a Free Call" works
 
 All ten of those buttons open the visitor's email app with a message already written to
-`adil@humansofcoding.com`, asking for their name, what they want to build, rough budget, a good time
+`adil@tavzuran.com`, asking for their name, what they want to build, rough budget, a good time
 to call, and whether they want it on phone, WhatsApp, Zoom or Google Meet. Edit `callBody` to change
 the wording — each array entry is one line.
 
@@ -108,7 +108,7 @@ When you land real client reviews, replace each `<blockquote>`, `.t__name` and `
 The six project cards each carry an **Example build** chip, and the section says outright that these
 are example builds rather than client work. As soon as you ship something real, replace that card's
 content and delete its `<span class="proj__flag">Example build</span>` chip. Once every card is real,
-drop the "Straight up: Humans Of Coding is new…" line from the section heading too.
+drop the "Straight up: Tavzuran is new…" line from the section heading too.
 
 ---
 
@@ -130,7 +130,7 @@ Whenever a translation is active, a notice under the header says — in that lan
 was translated by AI, apologises for any mistakes, and points to English as the authentic version.
 It carries two buttons: **view in English**, and an **Okay** button that dismisses it.
 
-Dismissal is remembered *per language* (`hoc-note-ok` in `localStorage`), so a reader who accepts the
+Dismissal is remembered *per language* (`tavz-note-ok` in `localStorage`), so a reader who accepts the
 Japanese notice never sees it again in Japanese, but still gets the disclosure once if they switch to
 another translation. Each language's wording lives in the `disclaimer` map in `i18n.js` as
 `text` / `link` / `ok`.
@@ -158,7 +158,7 @@ Open `assets/i18n/<code>.js` (e.g. `assets/i18n/de.js`). Each is a plain map of
 `"English text": "translation"`:
 
 ```js
-window.HOC_I18N["de"] = {
+window.TAVZ_I18N["de"] = {
   "Have an idea?": "Sie haben eine Idee?",
   ...
 };
@@ -188,8 +188,10 @@ node ~/.claude/skills/static-site-ship/scripts/page-audit.js "http://localhost:8
 
 ### Option A — Push from the command line
 
-This repo is already wired up: remote `origin` points at
-`git@github.com:lazyschool/humansofcoding.git` and the code lives on the `master` branch.
+This repo is already wired up: the code lives at
+`git@github.com:lazyschool/tzr.git` on the `master` branch.
+(The older `lazyschool/humansofcoding` repo still holds the pre-rename history and is
+what serves humansofcoding.com until the domain move is finished.)
 
 1. Push:
 
@@ -204,7 +206,7 @@ git push
    - Branch: **master**, folder: **/ (root)** → **Save**
 
 3. Wait ~1 minute. The site goes live at:
-   **https://humansofcoding.com/**
+   **https://tavzuran.com/**
 
 `index.html` must stay in the repository root — Pages serves it as the home page.
 `.nojekyll` is already included so GitHub serves every file untouched.
@@ -219,7 +221,7 @@ On github.com → **Add file → Upload files** → drag `index.html`, `style.cs
 ### Site URL
 
 The meta tags, `robots.txt` and `sitemap.xml` already point at
-`https://humansofcoding.com/`. If you move the site to a different repo or a custom
+`https://tavzuran.com/`. If you move the site to a different repo or a custom
 domain, update it in these places:
 
 | File | What to change |
@@ -335,4 +337,4 @@ still load and the page looks correct. For an exact preview, run the local serve
 
 ---
 
-© 2026 Humans Of Coding.
+© 2026 Tavzuran.

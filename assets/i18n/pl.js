@@ -1,8 +1,8 @@
-/* Humans Of Coding — pl translations. Loaded on demand.
+/* Tavzuran — pl translations. Loaded on demand.
    Translated by AI; English is the authentic version. Keys are the exact
    English text on the page. See README section 2b. */
-window.HOC_I18N = window.HOC_I18N || {};
-window.HOC_I18N["pl"] = {
+window.TAVZ_I18N = window.TAVZ_I18N || {};
+window.TAVZ_I18N["pl"] = {
   "Skip to content": "Przejdź do treści",
   "Services": "Usługi",
   "Human + AI": "Człowiek + AI",
@@ -13,14 +13,14 @@ window.HOC_I18N["pl"] = {
   "Book a Free Call": "Umów bezpłatną rozmowę",
   "About Adil": "O Adilu",
   "Contact": "Kontakt",
-  "DM @humansofcoding": "Napisz DM @humansofcoding",
+  "DM @tavzuran": "Napisz DM @tavzuran",
   "Have an idea?": "Masz pomysł?",
   "We'll": "My go",
   "build it.": "zbudujemy.",
   "Apps, websites & software built for your business — from idea to launch.": "Aplikacje, strony i oprogramowanie dla Twojej firmy — od pomysłu do startu.",
   "See What We Build": "Zobacz, co tworzymy",
   "Free 20-min idea call · No obligation": "Bezpłatna 20-minutowa rozmowa o pomyśle · Bez zobowiązań",
-  "Hand-drawn illustration of Adil, founder of Humans Of Coding": "Ręcznie rysowana ilustracja Adila, założyciela Humans Of Coding",
+  "Hand-drawn illustration of Adil, founder of Tavzuran": "Ręcznie rysowana ilustracja Adila, założyciela Tavzuran",
   "Minimal line-art character looking at a floating app screen surrounded by idea, code, app and launch doodles.": "Minimalistyczna postać z kreski patrząca na unoszący się ekran aplikacji otoczony rysunkami pomysłu, kodu, aplikacji i startu.",
   "Launch": "Start",
   "idea": "pomysł",
@@ -40,7 +40,7 @@ window.HOC_I18N["pl"] = {
   "WHAT WE DO": "CO ROBIMY",
   "You bring the idea.": "Ty masz pomysł.",
   "We handle the tech.": "My zajmujemy się technologią.",
-  "From planning and design to development and launch, Humans Of Coding helps turn ideas into working digital products.": "Od planowania i projektowania po programowanie i start — Humans Of Coding pomaga zamienić pomysły w działające produkty cyfrowe.",
+  "From planning and design to development and launch, Tavzuran helps turn ideas into working digital products.": "Od planowania i projektowania po programowanie i start — Tavzuran pomaga zamienić pomysły w działające produkty cyfrowe.",
   "Mobile Apps": "Aplikacje mobilne",
   "iOS and Android applications built around your business.": "Aplikacje na iOS i Androida zbudowane wokół Twojej firmy.",
   "Websites": "Strony internetowe",
@@ -102,8 +102,8 @@ window.HOC_I18N["pl"] = {
   "Get it in front of real users and start growing.": "Pokaż go prawdziwym użytkownikom i zacznij rosnąć.",
   "founder": "założyciel",
   "Hi, I'm Adil.": "Cześć, jestem Adil.",
-  "I started Humans Of Coding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "Założyłem Humans Of Coding, żeby pomagać przedsiębiorcom i firmom zamieniać pomysły w prawdziwą technologię — bez zbędnej złożoności i ogromnych kosztów na starcie.",
-  "Humans Of Coding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Humans Of Coding to ja, kierujący ten sam standard na mniejsze pomysły — na założycieli i lokalne firmy, które zwykle nie mają dostępu do takiej inżynierii. AI pomaga mi działać szybko; nie decyduje, czym ma być Twój produkt. To pozostaje rozmową między dwiema osobami.",
+  "I started Tavzuran to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "Założyłem Tavzuran, żeby pomagać przedsiębiorcom i firmom zamieniać pomysły w prawdziwą technologię — bez zbędnej złożoności i ogromnych kosztów na starcie.",
+  "Tavzuran is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Tavzuran to ja, kierujący ten sam standard na mniejsze pomysły — na założycieli i lokalne firmy, które zwykle nie mają dostępu do takiej inżynierii. AI pomaga mi działać szybko; nie decyduje, czym ma być Twój produkt. To pozostaje rozmową między dwiema osobami.",
   "building & leading": "budowanie i prowadzenie",
   "cloud, data & AI": "chmura, dane i AI",
   "human-reviewed code": "kod sprawdzony przez człowieka",
@@ -111,7 +111,7 @@ window.HOC_I18N["pl"] = {
   "Book a free call": "Umów bezpłatną rozmowę",
   "WHAT WE BUILD": "CO TWORZYMY",
   "The kind of ideas we bring to life.": "Pomysły, które ożywiamy.",
-  "Straight up: Humans Of Coding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "Szczerze: Humans Of Coding jest nowe, więc to przykładowe realizacje — produkty, które jesteśmy gotowi wydać — a nie prace dla klientów. Twoja byłaby pierwsza na tej ścianie.",
+  "Straight up: Tavzuran is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "Szczerze: Tavzuran jest nowe, więc to przykładowe realizacje — produkty, które jesteśmy gotowi wydać — a nie prace dla klientów. Twoja byłaby pierwsza na tej ścianie.",
   "Example build": "Przykładowa realizacja",
   "Mobile App": "Aplikacja mobilna",
   "Restaurant Ordering App": "Aplikacja do zamówień w restauracji",
@@ -154,9 +154,9 @@ window.HOC_I18N["pl"] = {
   "Email": "E-mail",
   "Write to us": "Napisz do nas",
   "Apps • Websites • Software": "Aplikacje • Strony • Oprogramowanie",
-  "© 2026 Humans Of Coding. All rights reserved.": "© 2026 Humans Of Coding. Wszelkie prawa zastrzeżone.",
+  "© 2026 Tavzuran. All rights reserved.": "© 2026 Tavzuran. Wszelkie prawa zastrzeżone.",
   "Built by humans, in code.": "Tworzone przez ludzi, w kodzie.",
-  "Humans Of Coding home": "Strona główna Humans Of Coding",
+  "Tavzuran home": "Strona główna Tavzuran",
   "Primary": "Główne",
   "Switch colour theme": "Zmień motyw kolorystyczny",
   "Open menu": "Otwórz menu",

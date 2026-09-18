@@ -9,7 +9,7 @@
   <!-- label -->
   <g transform="translate(84 108)">
     <circle cx="7" cy="-6" r="7" fill="#1b7fe0"/>
-    <text x="26" y="0" font-size="22" font-weight="600" letter-spacing="4" fill="#55667c">HUMANSOFCODING</text>
+    <text x="26" y="0" font-size="22" font-weight="600" letter-spacing="4" fill="#55667c">TAVZURAN</text>
   </g>
 
   <!-- headline -->
@@ -58,5 +58,5 @@
   <text x="770" y="130" font-size="42">&#128161;</text>
   <text x="1120" y="392" font-size="42">&#128640;</text>
 
-  <text x="84" y="586" font-size="24" fill="#55667c">instagram.com/humansofcoding</text>
+  <text x="84" y="586" font-size="24" fill="#55667c">instagram.com/tavzuran</text>
 </svg>

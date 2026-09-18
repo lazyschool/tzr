@@ -19,7 +19,7 @@ from mocks import mock_for  # noqa: E402
 import nav  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SITE = "https://humansofcoding.com"
+SITE = "https://tavzuran.com"
 
 # The line drawings reused from the home page's project cards.
 THUMBS = {
@@ -40,13 +40,12 @@ BRAND_SVG = (
     '<svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.6" '
     'stroke-linecap="round" stroke-linejoin="round">'
     '<path d="M22 3.5c10.2 0 18.5 8.3 18.5 18.5S32.2 40.5 22 40.5 3.5 32.2 3.5 22 11.8 3.5 22 3.5Z"/>'
-    '<path d="M15 18.5v9M15 22.6h6.5M21.5 18.2v9.2"/>'
-    '<path d="M27 27.5c3.4 0 5.6-2.1 5.6-5.3S30.4 17 27 17"/></svg>'
+    '<path d="M14 16h16M22 16v13"/></svg>'
 )
 
-MAILTO = ("mailto:adil@humansofcoding.com"
-          "?subject=Free%20call%20request%20-%20Humans%20Of%20Coding")
-INSTAGRAM = "https://instagram.com/humansofcoding"
+MAILTO = ("mailto:adil@tavzuran.com"
+          "?subject=Free%20call%20request%20-%20Tavzuran")
+INSTAGRAM = "https://instagram.com/tavzuran"
 
 # Both inline scripts are byte-identical to the ones in index.html, so the
 # CSP hashes computed for that page cover these pages too.
@@ -67,8 +66,8 @@ BOOT_SCRIPT = '''<script>
 (function () {
   var d = document.documentElement, t = null, p = null;
   try {
-    t = localStorage.getItem("hoc-theme");
-    p = localStorage.getItem("hoc-palette");
+    t = localStorage.getItem("tavz-theme");
+    p = localStorage.getItem("tavz-palette");
   } catch (e) {}
   // never trust stored values verbatim
   if (t !== "dark" && t !== "light") t = null;
@@ -112,11 +111,11 @@ def head(title, description, canonical, jsonld):
 
 <title>{title}</title>
 <meta name="description" content="{description}" />
-<meta name="author" content="Adil — Humans Of Coding" />
+<meta name="author" content="Adil — Tavzuran" />
 <link rel="canonical" href="{canonical}" />
 
 <meta property="og:type" content="article" />
-<meta property="og:site_name" content="Humans Of Coding" />
+<meta property="og:site_name" content="Tavzuran" />
 <meta property="og:title" content="{title}" />
 <meta property="og:description" content="{description}" />
 <meta property="og:url" content="{canonical}" />
@@ -154,9 +153,9 @@ def chrome_open(active):
 
 <header class="nav" id="nav">
   <div class="container nav__inner">
-    <a class="brand" href="../index.html" aria-label="Humans Of Coding home">
+    <a class="brand" href="../index.html" aria-label="Tavzuran home">
       <span class="brand__mark" aria-hidden="true">{brand}</span>
-      <span class="brand__text">Humans Of Coding</span>
+      <span class="brand__text">Tavzuran</span>
     </a>
 
 {primary}
@@ -221,7 +220,7 @@ def chrome_open(active):
 {mobilemenu}
     <div class="menu__cta">
       <a class="btn btn--primary btn--block" data-link="call" href="{mailto}">Book a Free Call</a>
-      <a class="btn btn--ghost btn--block" data-link="instagram" href="{ig}">DM @humansofcoding</a>
+      <a class="btn btn--ghost btn--block" data-link="instagram" href="{ig}">DM @tavzuran</a>
     </div>
   </nav>
 </div>
@@ -237,9 +236,9 @@ CHROME_CLOSE = u'''</main>
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__brand">
-      <a class="brand" href="../index.html" aria-label="Humans Of Coding home">
+      <a class="brand" href="../index.html" aria-label="Tavzuran home">
         <span class="brand__mark" aria-hidden="true">{brand}</span>
-        <span class="brand__text">Humans Of Coding</span>
+        <span class="brand__text">Tavzuran</span>
       </a>
       <p class="footer__tag">Apps • Websites • Software</p>
     </div>
@@ -256,12 +255,12 @@ CHROME_CLOSE = u'''</main>
     <div class="footer__social">
       <a class="footer__ig" data-link="instagram" href="{ig}">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><path d="M17.4 6.6h.01"/></svg>
-        @humansofcoding
+        @tavzuran
       </a>
     </div>
   </div>
   <div class="container footer__bottom">
-    <p>© 2026 Humans Of Coding. All rights reserved.</p>
+    <p>© 2026 Tavzuran. All rights reserved.</p>
     <p class="footer__made">Built by humans, in code. <span aria-hidden="true">✏️</span></p>
   </div>
 </footer>
@@ -289,7 +288,7 @@ def cta_block(title, sub):
     <p class="cta__sub">{sub}</p>
     <div class="cta__actions">
       <a class="btn btn--primary btn--lg" data-link="call" href="{mailto}">Book a FREE Call</a>
-      <a class="btn btn--outline btn--lg" data-link="instagram" href="{ig}">DM @humansofcoding</a>
+      <a class="btn btn--outline btn--lg" data-link="instagram" href="{ig}">DM @tavzuran</a>
     </div>
     <p class="cta__note">Free 20-min idea call · No obligation</p>
   </div>
@@ -374,13 +373,13 @@ def case_study_page(cs, others):
   "@type": "CreativeWork",
   "name": "{title}",
   "abstract": "{summary}",
-  "creator": {{ "@type": "Organization", "name": "Humans Of Coding" }},
+  "creator": {{ "@type": "Organization", "name": "Tavzuran" }},
   "url": "{site}/case-studies/{slug}.html",
   "isAccessibleForFree": true,
-  "disambiguatingDescription": "Example build. Humans Of Coding is a new studio; this describes a project the studio is set up to deliver, not completed client work."
+  "disambiguatingDescription": "Example build. Tavzuran is a new studio; this describes a project the studio is set up to deliver, not completed client work."
 }}'''.format(title=plain, summary=cs["summary"], site=SITE, slug=cs["slug"])
 
-    out = [head("%s — Case Study | Humans Of Coding" % cs["title"],
+    out = [head("%s — Case Study | Tavzuran" % cs["title"],
                 cs["summary"],
                 "%s/case-studies/%s.html" % (SITE, cs["slug"]),
                 jsonld),
@@ -411,7 +410,7 @@ def case_study_page(cs, others):
 '''.format(d=(i * 6) + 4, label=label, value=value))
     glance.append('    </dl>\n\n')
     glance.append(u'''    <p class="note note--flag reveal" data-reveal><strong>This is an example build.</strong>
-    Humans Of Coding is a new studio with no client work to show yet. This page describes
+    Tavzuran is a new studio with no client work to show yet. This page describes
     how the project would be scoped and built — the same thinking you would get on a real
     one. Nothing here is a past client, and no number on this page is a result.</p>
 ''')
@@ -562,12 +561,12 @@ def case_studies_index():
     jsonld = u'''{
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": "Case Studies — Humans Of Coding",
-  "description": "Example builds showing how Humans Of Coding scopes and ships apps, websites and custom software.",
+  "name": "Case Studies — Tavzuran",
+  "description": "Example builds showing how Tavzuran scopes and ships apps, websites and custom software.",
   "url": "%s/case-studies/"
 }''' % SITE
 
-    out = [head("Case Studies — Example Builds | Humans Of Coding",
+    out = [head("Case Studies — Example Builds | Tavzuran",
                 "How we scope and build apps, websites, dashboards and MVPs — "
                 "six example builds with the scope, the stack, the timeline and "
                 "what we would deliberately leave out of version one.",
@@ -586,7 +585,7 @@ def case_studies_index():
                          "and how long it runs.", crumbs))
 
     inner = [u'''    <p class="note note--flag reveal" data-reveal><strong>Straight up: these are example builds.</strong>
-    Humans Of Coding is new, so none of these are past clients and nothing here is a
+    Tavzuran is new, so none of these are past clients and nothing here is a
     results claim. They're the products the studio is set up to ship, written out in
     the same detail you'd get on a real project. Yours would be the first on this wall.</p>
 
@@ -655,13 +654,13 @@ def article_page(art, others):
   "description": "{summary}",
   "datePublished": "{date}",
   "author": {{ "@type": "Person", "name": "Adil" }},
-  "publisher": {{ "@type": "Organization", "name": "Humans Of Coding" }},
+  "publisher": {{ "@type": "Organization", "name": "Tavzuran" }},
   "mainEntityOfPage": "{site}/articles/{slug}.html",
   "inLanguage": "en"
 }}'''.format(title=art["title"], summary=art["summary"], date=art["date"],
              site=SITE, slug=art["slug"])
 
-    out = [head("%s | Humans Of Coding" % art["title"], art["summary"],
+    out = [head("%s | Tavzuran" % art["title"], art["summary"],
                 "%s/articles/%s.html" % (SITE, art["slug"]), jsonld),
            chrome_open("articles")]
 
@@ -722,12 +721,12 @@ def articles_index():
     jsonld = u'''{
   "@context": "https://schema.org",
   "@type": "Blog",
-  "name": "Articles — Humans Of Coding",
+  "name": "Articles — Tavzuran",
   "description": "Plain-English writing about building software: MVPs, pricing, apps versus websites, and how AI actually fits into the work.",
   "url": "%s/articles/"
 }''' % SITE
 
-    out = [head("Articles — Plain-English Writing on Building Software | Humans Of Coding",
+    out = [head("Articles — Plain-English Writing on Building Software | Tavzuran",
                 "MVPs, what software actually costs, apps versus websites, and how "
                 "AI fits into real engineering. Written by Adil, no jargon.",
                 "%s/articles/" % SITE, jsonld),
@@ -796,7 +795,7 @@ def offered_languages():
     as an alternate would claim a translation that does not exist.
     """
     src = io.open(os.path.join(ROOT, "i18n.js"), encoding="utf-8").read()
-    block = src[src.index("window.HOC_I18N.languages = ["):]
+    block = src[src.index("window.TAVZ_I18N.languages = ["):]
     block = block[:block.index("];")]
     codes = []
     for line in block.split("\n"):

@@ -1,5 +1,5 @@
 /* =====================================================================
-   Humans Of Coding — i18n.js (core)
+   Tavzuran — i18n.js (core)
    ---------------------------------------------------------------------
    English is the AUTHENTIC version of this site. Every other language is
    translated by AI, and a notice under the header says so — including an
@@ -11,11 +11,11 @@
 
    To edit wording, open assets/i18n/<code>.js — see README section 2b.
    ===================================================================== */
-window.HOC_I18N = window.HOC_I18N || {};
+window.TAVZ_I18N = window.TAVZ_I18N || {};
 
 /* Languages offered in the switcher, grouped by region and alphabetical inside
    each group. English is the source; `rtl: true` flips page direction. */
-window.HOC_I18N.languages = [
+window.TAVZ_I18N.languages = [
   { code: "en", label: "English", native: "English", region: "" },
   { code: "fr", label: "French", native: "Français", region: "" },
   { code: "de", label: "German", native: "Deutsch", region: "" },
@@ -57,7 +57,7 @@ window.HOC_I18N.languages = [
 ];
 
 /* Shown as a bar under the header while a translation is active. */
-window.HOC_I18N.disclaimer = {
+window.TAVZ_I18N.disclaimer = {
   ar: {
     text: "تُرجمت هذه الصفحة بواسطة الذكاء الاصطناعي وقد تحتوي على أخطاء — نعتذر عن أي خطأ. يُرجى الرجوع إلى النسخة الإنجليزية باعتبارها النسخة الموثوقة.",
     link: "عرض بالإنجليزية",
@@ -220,7 +220,7 @@ window.HOC_I18N.disclaimer = {
   },
 };
 
-window.HOC_I18N.selectorLabel = {
+window.TAVZ_I18N.selectorLabel = {
   en: "Language",
   ar: "اللغة",
   bg: "Език",
@@ -259,7 +259,7 @@ window.HOC_I18N.selectorLabel = {
 /* Where the on-demand dictionaries live. Resolved against this file's own URL
    rather than the page's, so pages in subfolders (case studies, articles) load
    the same dictionaries without needing their own configuration. */
-window.HOC_I18N.path = (function () {
+window.TAVZ_I18N.path = (function () {
   var self = document.currentScript;
   var base = self && self.src ? self.src.replace(/[^/]*$/, "") : "";
   return base + "assets/i18n/";

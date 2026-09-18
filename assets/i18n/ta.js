@@ -1,8 +1,8 @@
-/* Humans Of Coding — ta translations. Loaded on demand.
+/* Tavzuran — ta translations. Loaded on demand.
    Translated by AI; English is the authentic version. Each key is the
    exact English text on the page. See README section 2b. */
-window.HOC_I18N = window.HOC_I18N || {};
-window.HOC_I18N["ta"] = {
+window.TAVZ_I18N = window.TAVZ_I18N || {};
+window.TAVZ_I18N["ta"] = {
   "Skip to content": "உள்ளடக்கத்திற்குச் செல்க",
   "Services": "சேவைகள்",
   "Human + AI": "மனிதன் + AI",
@@ -13,14 +13,14 @@ window.HOC_I18N["ta"] = {
   "Book a Free Call": "இலவச அழைப்பை பதிவு செய்யுங்கள்",
   "About Adil": "ஆதில் பற்றி",
   "Contact": "தொடர்பு",
-  "DM @humansofcoding": "@humansofcoding க்கு DM",
+  "DM @tavzuran": "@tavzuran க்கு DM",
   "Have an idea?": "ஒரு யோசனை இருக்கிறதா?",
   "We'll": "நாங்கள்",
   "build it.": "அதை உருவாக்குகிறோம்.",
   "Apps, websites & software built for your business — from idea to launch.": "உங்கள் வணிகத்திற்கான ஆப்கள், இணையதளங்கள், மென்பொருள் — யோசனையிலிருந்து வெளியீடு வரை.",
   "See What We Build": "நாங்கள் உருவாக்குவதைப் பாருங்கள்",
   "Free 20-min idea call · No obligation": "இலவச 20 நிமிட உரையாடல் · எந்தக் கட்டாயமும் இல்லை",
-  "Hand-drawn illustration of Adil, founder of Humans Of Coding": "Humans Of Coding நிறுவனர் ஆதிலின் கையால் வரையப்பட்ட ஓவியம்",
+  "Hand-drawn illustration of Adil, founder of Tavzuran": "Tavzuran நிறுவனர் ஆதிலின் கையால் வரையப்பட்ட ஓவியம்",
   "Minimal line-art character looking at a floating app screen surrounded by idea, code, app and launch doodles.": "யோசனை, குறியீடு, ஆப், வெளியீடு ஆகிய கிறுக்கல்களால் சூழப்பட்ட, மிதக்கும் ஆப் திரையைப் பார்க்கும் எளிய கோட்டு உருவம்.",
   "Launch": "வெளியிடு",
   "idea": "யோசனை",
@@ -40,7 +40,7 @@ window.HOC_I18N["ta"] = {
   "WHAT WE DO": "நாங்கள் என்ன செய்கிறோம்",
   "You bring the idea.": "யோசனையை நீங்கள் கொண்டு வாருங்கள்.",
   "We handle the tech.": "தொழில்நுட்பத்தை நாங்கள் பார்த்துக்கொள்கிறோம்.",
-  "From planning and design to development and launch, Humans Of Coding helps turn ideas into working digital products.": "திட்டமிடல், வடிவமைப்பு முதல் உருவாக்கம், வெளியீடு வரை — Humans Of Coding யோசனைகளை உண்மையில் வேலை செய்யும் டிஜிட்டல் தயாரிப்புகளாக மாற்றுகிறது.",
+  "From planning and design to development and launch, Tavzuran helps turn ideas into working digital products.": "திட்டமிடல், வடிவமைப்பு முதல் உருவாக்கம், வெளியீடு வரை — Tavzuran யோசனைகளை உண்மையில் வேலை செய்யும் டிஜிட்டல் தயாரிப்புகளாக மாற்றுகிறது.",
   "Mobile Apps": "மொபைல் ஆப்கள்",
   "iOS and Android applications built around your business.": "உங்கள் வணிகத்தை மையமாகக் கொண்டு உருவாக்கப்பட்ட iOS மற்றும் Android ஆப்கள்.",
   "Websites": "இணையதளங்கள்",
@@ -102,8 +102,8 @@ window.HOC_I18N["ta"] = {
   "Get it in front of real users and start growing.": "உண்மையான பயனர்களிடம் கொண்டு சென்று வளரத் தொடங்குங்கள்.",
   "founder": "நிறுவனர்",
   "Hi, I'm Adil.": "வணக்கம், நான் ஆதில்.",
-  "I started Humans Of Coding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "தொழில்முனைவோரும் நிறுவனங்களும் தங்கள் யோசனைகளை உண்மையான தொழில்நுட்பமாக மாற்ற உதவவே Humans Of Coding ஐத் தொடங்கினேன் — தேவையற்ற சிக்கலோ, பெரிய முன்பணச் செலவோ இல்லாமல்.",
-  "Humans Of Coding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Humans Of Coding என்பது அதே தரத்தை சிறிய யோசனைகளுக்குக் கொண்டு செல்வதுதான் — வழக்கமாக இத்தகைய பொறியியலை அணுக முடியாத நிறுவனர்களுக்கும் உள்ளூர் வணிகங்களுக்கும். AI என்னை வேகமாகச் செயல்பட வைக்கிறது; உங்கள் தயாரிப்பு என்னவாக இருக்க வேண்டும் என்பதை அது முடிவு செய்வதில்லை. அது இரு மனிதர்களுக்கிடையேயான உரையாடலாகவே இருக்கும்.",
+  "I started Tavzuran to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "தொழில்முனைவோரும் நிறுவனங்களும் தங்கள் யோசனைகளை உண்மையான தொழில்நுட்பமாக மாற்ற உதவவே Tavzuran ஐத் தொடங்கினேன் — தேவையற்ற சிக்கலோ, பெரிய முன்பணச் செலவோ இல்லாமல்.",
+  "Tavzuran is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Tavzuran என்பது அதே தரத்தை சிறிய யோசனைகளுக்குக் கொண்டு செல்வதுதான் — வழக்கமாக இத்தகைய பொறியியலை அணுக முடியாத நிறுவனர்களுக்கும் உள்ளூர் வணிகங்களுக்கும். AI என்னை வேகமாகச் செயல்பட வைக்கிறது; உங்கள் தயாரிப்பு என்னவாக இருக்க வேண்டும் என்பதை அது முடிவு செய்வதில்லை. அது இரு மனிதர்களுக்கிடையேயான உரையாடலாகவே இருக்கும்.",
   "building & leading": "உருவாக்கம் & வழிநடத்தல்",
   "cloud, data & AI": "கிளவுட், தரவு & AI",
   "human-reviewed code": "மனிதர் சரிபார்த்த குறியீடு",
@@ -111,7 +111,7 @@ window.HOC_I18N["ta"] = {
   "Book a free call": "இலவச அழைப்பைப் பதிவு செய்யுங்கள்",
   "WHAT WE BUILD": "நாங்கள் என்ன உருவாக்குகிறோம்",
   "The kind of ideas we bring to life.": "நாங்கள் நனவாக்கும் யோசனைகள்.",
-  "Straight up: Humans Of Coding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "நேரடியாகச் சொன்னால்: Humans Of Coding புதியது, எனவே இவை உதாரண திட்டங்கள் — நாங்கள் வழங்கத் தயாராக இருக்கும் தயாரிப்புகள் — வாடிக்கையாளர் பணி அல்ல. உங்களுடையதே இந்தச் சுவரில் முதலாவதாக இருக்கும்.",
+  "Straight up: Tavzuran is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "நேரடியாகச் சொன்னால்: Tavzuran புதியது, எனவே இவை உதாரண திட்டங்கள் — நாங்கள் வழங்கத் தயாராக இருக்கும் தயாரிப்புகள் — வாடிக்கையாளர் பணி அல்ல. உங்களுடையதே இந்தச் சுவரில் முதலாவதாக இருக்கும்.",
   "Example build": "உதாரண திட்டம்",
   "Mobile App": "மொபைல் ஆப்",
   "Restaurant Ordering App": "உணவக ஆர்டர் ஆப்",
@@ -154,9 +154,9 @@ window.HOC_I18N["ta"] = {
   "Email": "மின்னஞ்சல்",
   "Write to us": "எங்களுக்கு எழுதுங்கள்",
   "Apps • Websites • Software": "ஆப்கள் • இணையதளங்கள் • மென்பொருள்",
-  "© 2026 Humans Of Coding. All rights reserved.": "© 2026 Humans Of Coding. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
+  "© 2026 Tavzuran. All rights reserved.": "© 2026 Tavzuran. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
   "Built by humans, in code.": "மனிதர்களால், குறியீட்டில் உருவாக்கப்பட்டது.",
-  "Humans Of Coding home": "Humans Of Coding முகப்பு",
+  "Tavzuran home": "Tavzuran முகப்பு",
   "Primary": "முதன்மை வழிசெலுத்தல்",
   "Switch colour theme": "நிற தீமை மாற்றவும்",
   "Open menu": "மெனுவைத் திறக்கவும்",

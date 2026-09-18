@@ -1,5 +1,5 @@
 /* =====================================================================
-   Humans Of Coding — script.js
+   Tavzuran — script.js
    Vanilla JS only. No dependencies. Works from file:// or GitHub Pages.
    ===================================================================== */
 
@@ -10,16 +10,16 @@
    ===================================================================== */
 const CONFIG = {
   // Instagram handle (without the @)
-  instagram: "humansofcoding",
+  instagram: "tavzuran",
 
   // Your email address
-  email: "adil@humansofcoding.com",
-  emailSubject: "Project enquiry from humansofcoding.com",
+  email: "adil@tavzuran.com",
+  emailSubject: "Project enquiry from tavzuran.com",
 
   // "Book a Free Call" opens the visitor's email app with this message already
   // written, addressed to the `email` above. Edit the wording freely - every
   // line break is kept. Keep it short: long forms scare people off.
-  callSubject: "Free call request - Humans Of Coding",
+  callSubject: "Free call request - Tavzuran",
   callBody: [
     "Hi Adil,",
     "",
@@ -92,7 +92,7 @@ const CONFIG = {
         i18n.js. English is the source, so switching back to English
         just restores the original DOM text.
   --------------------------------------------------------------- */
-  const I18N = window.HOC_I18N || null;
+  const I18N = window.TAVZ_I18N || null;
   const SUPPORTED = I18N ? I18N.languages.map(function (l) { return l.code; }) : ["en"];
   const ATTRS = ["aria-label", "alt", "title"];
 
@@ -145,7 +145,7 @@ const CONFIG = {
 
   function dismissedNotes() {
     try {
-      return (localStorage.getItem("hoc-note-ok") || "").split(",").filter(Boolean);
+      return (localStorage.getItem("tavz-note-ok") || "").split(",").filter(Boolean);
     } catch (e) { return []; }
   }
   function isNoteDismissed(code) {
@@ -154,7 +154,7 @@ const CONFIG = {
   function dismissNote(code) {
     const list = dismissedNotes();
     if (list.indexOf(code) === -1) list.push(code);
-    try { localStorage.setItem("hoc-note-ok", list.join(",")); } catch (e) { /* private mode */ }
+    try { localStorage.setItem("tavz-note-ok", list.join(",")); } catch (e) { /* private mode */ }
   }
 
   function applyLang(code) {
@@ -205,7 +205,7 @@ const CONFIG = {
       sel.setAttribute("aria-label", I18N.selectorLabel[code] || "Language");
     }
 
-    try { localStorage.setItem("hoc-lang", code); } catch (e) { /* private mode */ }
+    try { localStorage.setItem("tavz-lang", code); } catch (e) { /* private mode */ }
 
     // keep the URL shareable without reloading
     try {
@@ -270,7 +270,7 @@ const CONFIG = {
     let start = "en";
     try {
       const q = new URLSearchParams(window.location.search).get("lang");
-      const saved = localStorage.getItem("hoc-lang");
+      const saved = localStorage.getItem("tavz-lang");
       if (q && SUPPORTED.indexOf(q) !== -1) start = q;
       else if (saved && SUPPORTED.indexOf(saved) !== -1) start = saved;
     } catch (e) { /* noop */ }
@@ -298,11 +298,11 @@ const CONFIG = {
   // "system" is simply the absence of a stored choice, so it keeps following
   // the OS setting rather than freezing whatever it was on the day they picked.
   function storedMode() {
-    const t = read("hoc-theme");
+    const t = read("tavz-theme");
     return t === "dark" || t === "light" ? t : "system";
   }
   function storedPalette() {
-    const p = read("hoc-palette");
+    const p = read("tavz-palette");
     return PALETTES.indexOf(p) === -1 ? "blue" : p;
   }
 
@@ -349,14 +349,14 @@ const CONFIG = {
     $$(".appear__mode", appearPanel).forEach(function (b) {
       b.addEventListener("click", function () {
         const mode = b.getAttribute("data-mode");
-        store("hoc-theme", mode === "system" ? null : mode);
+        store("tavz-theme", mode === "system" ? null : mode);
         applyMode(mode);
       });
     });
     $$(".appear__sw", appearPanel).forEach(function (b) {
       b.addEventListener("click", function () {
         const name = b.getAttribute("data-palette");
-        store("hoc-palette", name);
+        store("tavz-palette", name);
         applyPalette(name);
       });
     });

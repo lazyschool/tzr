@@ -1,8 +1,8 @@
-/* Humans Of Coding — tr translations. Loaded on demand.
+/* Tavzuran — tr translations. Loaded on demand.
    Translated by AI; English is the authentic version. Keys are the exact
    English text on the page. See README section 2b. */
-window.HOC_I18N = window.HOC_I18N || {};
-window.HOC_I18N["tr"] = {
+window.TAVZ_I18N = window.TAVZ_I18N || {};
+window.TAVZ_I18N["tr"] = {
   "Skip to content": "İçeriğe geç",
   "Services": "Hizmetler",
   "Human + AI": "İnsan + Yapay Zekâ",
@@ -13,14 +13,14 @@ window.HOC_I18N["tr"] = {
   "Book a Free Call": "Ücretsiz görüşme ayarla",
   "About Adil": "Adil hakkında",
   "Contact": "İletişim",
-  "DM @humansofcoding": "@humansofcoding hesabına yaz",
+  "DM @tavzuran": "@tavzuran hesabına yaz",
   "Have an idea?": "Bir fikriniz mi var?",
   "We'll": "Onu biz",
   "build it.": "hayata geçirelim.",
   "Apps, websites & software built for your business — from idea to launch.": "İşletmeniz için uygulamalar, web siteleri ve yazılım — fikirden yayına kadar.",
   "See What We Build": "Neler yaptığımıza bakın",
   "Free 20-min idea call · No obligation": "20 dakikalık ücretsiz görüşme · Hiçbir yükümlülük yok",
-  "Hand-drawn illustration of Adil, founder of Humans Of Coding": "Humans Of Coding'in kurucusu Adil'in elle çizilmiş illüstrasyonu",
+  "Hand-drawn illustration of Adil, founder of Tavzuran": "Tavzuran'in kurucusu Adil'in elle çizilmiş illüstrasyonu",
   "Minimal line-art character looking at a floating app screen surrounded by idea, code, app and launch doodles.": "Havada duran bir uygulama ekranına bakan sade çizgisel karakter; etrafında fikir, kod, uygulama ve yayın karalamaları.",
   "Launch": "Yayınla",
   "idea": "fikir",
@@ -40,7 +40,7 @@ window.HOC_I18N["tr"] = {
   "WHAT WE DO": "NE YAPIYORUZ",
   "You bring the idea.": "Fikri siz getirin.",
   "We handle the tech.": "Teknolojiyi biz üstlenelim.",
-  "From planning and design to development and launch, Humans Of Coding helps turn ideas into working digital products.": "Planlama ve tasarımdan geliştirme ve yayına kadar Humans Of Coding, fikirleri gerçekten çalışan dijital ürünlere dönüştürür.",
+  "From planning and design to development and launch, Tavzuran helps turn ideas into working digital products.": "Planlama ve tasarımdan geliştirme ve yayına kadar Tavzuran, fikirleri gerçekten çalışan dijital ürünlere dönüştürür.",
   "Mobile Apps": "Mobil Uygulamalar",
   "iOS and Android applications built around your business.": "İşinizin etrafında kurgulanmış iOS ve Android uygulamaları.",
   "Websites": "Web Siteleri",
@@ -102,8 +102,8 @@ window.HOC_I18N["tr"] = {
   "Get it in front of real users and start growing.": "Gerçek kullanıcıların önüne çıkarın ve büyümeye başlayın.",
   "founder": "kurucu",
   "Hi, I'm Adil.": "Merhaba, ben Adil.",
-  "I started Humans Of Coding to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "Humans Of Coding'i, girişimcilerin ve şirketlerin fikirlerini gerçek teknolojiye dönüştürmesine yardımcı olmak için kurdum — gereksiz karmaşa ve yüksek başlangıç maliyeti olmadan.",
-  "Humans Of Coding is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Humans Of Coding, aynı standardı daha küçük fikirlere yöneltme biçimim — normalde bu tür mühendisliğe erişemeyen kurucular ve yerel işletmeler için. Yapay zekâ hızlı ilerlememi sağlıyor; ürününüzün ne olması gerektiğine o karar vermiyor. Orası iki insan arasındaki sohbet olarak kalıyor.",
+  "I started Tavzuran to help entrepreneurs and businesses turn their ideas into real technology — without unnecessary complexity or massive upfront costs.": "Tavzuran'i, girişimcilerin ve şirketlerin fikirlerini gerçek teknolojiye dönüştürmesine yardımcı olmak için kurdum — gereksiz karmaşa ve yüksek başlangıç maliyeti olmadan.",
+  "Tavzuran is me pointing that same standard at smaller ideas — founders and local businesses who normally can't get near this kind of engineering. AI helps me move fast; it doesn't decide what your product should be. That part stays a conversation between two people.": "Tavzuran, aynı standardı daha küçük fikirlere yöneltme biçimim — normalde bu tür mühendisliğe erişemeyen kurucular ve yerel işletmeler için. Yapay zekâ hızlı ilerlememi sağlıyor; ürününüzün ne olması gerektiğine o karar vermiyor. Orası iki insan arasındaki sohbet olarak kalıyor.",
   "building & leading": "geliştirme ve ekip yönetimi",
   "cloud, data & AI": "bulut, veri ve yapay zekâ",
   "human-reviewed code": "insan tarafından incelenmiş kod",
@@ -111,7 +111,7 @@ window.HOC_I18N["tr"] = {
   "Book a free call": "Ücretsiz görüşme ayarla",
   "WHAT WE BUILD": "NE YAPIYORUZ",
   "The kind of ideas we bring to life.": "Hayata geçirdiğimiz türden fikirler.",
-  "Straight up: Humans Of Coding is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "Açık konuşalım: Humans Of Coding yeni, dolayısıyla bunlar örnek çalışmalar — teslim etmeye hazır olduğumuz ürünler — müşteri işleri değil. Bu duvardaki ilk iş sizinki olur.",
+  "Straight up: Tavzuran is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.": "Açık konuşalım: Tavzuran yeni, dolayısıyla bunlar örnek çalışmalar — teslim etmeye hazır olduğumuz ürünler — müşteri işleri değil. Bu duvardaki ilk iş sizinki olur.",
   "Example build": "Örnek çalışma",
   "Mobile App": "Mobil uygulama",
   "Restaurant Ordering App": "Restoran sipariş uygulaması",
@@ -154,9 +154,9 @@ window.HOC_I18N["tr"] = {
   "Email": "E-posta",
   "Write to us": "Bize yazın",
   "Apps • Websites • Software": "Uygulamalar • Web siteleri • Yazılım",
-  "© 2026 Humans Of Coding. All rights reserved.": "© 2026 Humans Of Coding. Tüm hakları saklıdır.",
+  "© 2026 Tavzuran. All rights reserved.": "© 2026 Tavzuran. Tüm hakları saklıdır.",
   "Built by humans, in code.": "İnsanlar yaptı, kodla.",
-  "Humans Of Coding home": "Humans Of Coding ana sayfa",
+  "Tavzuran home": "Tavzuran ana sayfa",
   "Primary": "Ana gezinme",
   "Switch colour theme": "Renk temasını değiştir",
   "Open menu": "Menüyü aç",
