@@ -1330,7 +1330,7 @@ h1, h2, h3 {
 .ind__icon svg { width: 24px; height: 24px; }
 .card--ind:hover .ind__icon { background: var(--accent); color: var(--accent-fg); transform: translateY(-3px); }
 
-/* MVP */
+/* the priced offer */
 .section--mvp { padding-block: clamp(56px, 8vw, 104px); }
 .mvp__panel {
   position: relative;

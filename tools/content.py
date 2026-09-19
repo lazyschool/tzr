@@ -543,7 +543,7 @@ CASE_STUDIES = [
                 "deliberately.",
     },
     {
-        "slug": "booking-and-scheduling-mvp",
+        "slug": "booking-and-scheduling-first-version",
         "questions": [
             "What services do you offer, and how long does each actually take?",
             "How many staff, and can any of them do any service?",
@@ -572,7 +572,7 @@ CASE_STUDIES = [
             "The front desk can serve a walk-in without losing a phone booking.",
         ],
         "glance": [
-            ("Type", "Booking MVP"),
+            ("Type", "Booking site"),
             ("Build time", "About 4 weeks"),
             ("Platforms", "One shareable link, any browser"),
             ("Starts at", "₹20,000*"),
@@ -583,16 +583,16 @@ CASE_STUDIES = [
             "No-shows are absorbed silently",
             "The desk cannot book and serve at the same time",
         ],
-        "category": "MVP",
+        "category": "First Version",
         "thumb": "c",
-        "title": "Booking &amp; Scheduling MVP",
+        "title": "Booking &amp; Scheduling, Version One",
         "summary": "Ships in weeks, not months: online booking, reminders and "
                    "payments for a local service business.",
         "situation": [
             "A salon, clinic or studio books appointments over WhatsApp and by "
             "phone. Double bookings happen. No-shows are absorbed silently. The "
             "front desk cannot take a booking and serve a walk-in at the same time.",
-            "This is the clearest example of what an MVP is for. The whole thing is "
+            "This is the clearest example of what a first version is for. The whole thing is "
             "small enough to be genuinely useful in a few weeks, and every week it "
             "runs teaches the owner something they would otherwise have guessed at.",
         ],
@@ -1616,6 +1616,131 @@ CASE_STUDIES = [
                 "meets the guidelines or needs changes to pass, and whether there is an existing "
                 "listing to rescue rather than a new one to create.",
     },
+    {
+        "slug": "product-showcase-site-for-a-small-business",
+        "questions": [
+            "How many products, and how often do they change?",
+            "Who would update it — you, or someone in the shop?",
+            "Do prices go on the page, or is it enquire-for-price?",
+            "What does a serious buyer ask you for that you cannot currently send?",
+            "Do you have photographs you own, or only what is on the phone?",
+        ],
+        "hard": ("Keeping it current without a login to forget", [
+            "A static site is fast, costs nearly nothing to run and has no login screen "
+            "for anyone to attack. The catch is the obvious one: if updating it means "
+            "messaging a developer, it stops being updated. Within a year the prices are "
+            "wrong, a discontinued item is still listed, and the owner has quietly gone "
+            "back to sending photographs on WhatsApp.",
+            "So the products do not live in the page. They live in one spreadsheet — a "
+            "column per field, a row per product — and the site is rebuilt from it. The "
+            "owner edits the spreadsheet, which they already know how to do, and the "
+            "catalogue updates. No admin panel, no password to reset, nothing to patch on "
+            "a Tuesday because a plugin had a vulnerability.",
+            "That choice has a real cost and it should be said plainly: there is a short "
+            "delay between the edit and the change appearing, and a typo in the "
+            "spreadsheet can look odd on the page until it is corrected. In exchange you "
+            "get a site with no database to breach, no login to compromise, and a hosting "
+            "bill of nothing. For a catalogue that changes weekly rather than hourly, that "
+            "is the right trade. For live stock counts it is the wrong one, and then this "
+            "is not the build you want.",
+            "The second hard part is photography, and it is usually the thing that decides "
+            "whether the site works. Twenty products shot against a bedsheet will undo "
+            "every other decision on this list. The build assumes one consistent "
+            "background, even light and the same crop on every item — which is a morning's "
+            "work with a phone and a window, not a studio, but it has to actually happen.",
+        ]),
+        "success": [
+            "You can answer \"do you have a website?\" with a link instead of a handle.",
+            "A buyer can be sent one product, not a feed to scroll.",
+            "The business appears in a search for what it sells plus the city.",
+            "Prices and products are still right six months later, because updating them is a spreadsheet edit.",
+        ],
+        "glance": [
+            ("Type", "Static catalogue site"),
+            ("Build time", "About 3 weeks"),
+            ("Running cost", "Domain + mailbox only"),
+            ("Starts at", "₹20,000*"),
+        ],
+        "pains": [
+            "The catalogue only exists as Instagram posts and WhatsApp photos",
+            "A serious buyer asks for a website and there is nothing to send",
+            "Nobody finds the business by searching for what it sells",
+            "The price list is a PDF from last year, on someone's phone",
+        ],
+        "category": "Website",
+        "thumb": "b",
+        "title": "A Product Showcase You Can Send Anyone",
+        "summary": "Your catalogue lives on Instagram, and you cannot send that to a corporate buyer or a bank. This is the address that is actually yours.",
+        "situation": [
+            "A small manufacturer, wholesaler or boutique sells real products and sells "
+            "them well. The catalogue is an Instagram grid, a WhatsApp Business listing "
+            "and a PDF price list that was current last year. For walk-in and regular "
+            "customers this works completely.",
+            "It stops working the moment someone serious asks. A corporate buyer wants a "
+            "link for their procurement file. A distributor wants to see the range before "
+            "a meeting. A bank or an investor wants to look the business up. You can send "
+            "an Instagram handle to a friend; sending it to a purchase officer reads as a "
+            "business that has not got around to existing properly yet.",
+            "There is also the quieter loss. Nobody searching for what you make finds you, "
+            "because a social profile does not answer a search the way a page about the "
+            "product does. The business is invisible to everyone who is not already "
+            "following it.",
+        ],
+        "scope": [
+            ("A page per product",
+             "Each item gets its own address — photograph, specification, sizes or "
+             "variants, and price or enquire-for-price. One product can be sent on its own, "
+             "which is the thing a catalogue in a feed cannot do."),
+            ("A range that can be browsed",
+             "Products grouped the way you actually describe them, with filtering if there "
+             "are enough of them to need it. A visitor should reach anything in the "
+             "catalogue in two taps."),
+            ("The credibility page",
+             "Who the business is, where it physically is, how long it has traded, "
+             "registration and GST details, and a real photograph of the premises or the "
+             "workshop. This is the page a buyer checks before replying, and leaving it "
+             "vague costs more than a weak product page."),
+            ("Enquiries that arrive somewhere",
+             "An enquiry button on every product that opens WhatsApp or email with the "
+             "product already named, so the message says which item it is about. Sent to "
+             "an address at your own domain, not a personal Gmail."),
+            ("Findable",
+             "A page title and description per product, a sitemap, structured data so the "
+             "product shows properly in search results, and image files small enough to "
+             "load on a weak connection."),
+        ],
+        "excluded": [
+            "A shopping cart and online payment. If you need to take money on the site, that is a different build and it is not static.",
+            "Live stock counts. A static site cannot honestly claim a number that changes during the day.",
+            "Customer accounts and order history, which need a database and a login — the two things this build deliberately does without.",
+        ],
+        "stack": [
+            ("The site",
+             "Plain HTML and CSS, generated from the product spreadsheet. No framework, "
+             "because nothing here needs one and every dependency is a thing to update later."),
+            ("Content",
+             "One spreadsheet of products, exported and built into the site. The owner "
+             "edits a familiar tool rather than learning an admin panel."),
+            ("Hosting",
+             "A static host on a free tier with HTTPS. The site is files; there is no "
+             "server to keep patched and nothing to go down under load."),
+            ("Images",
+             "Resized and compressed at build time into modern formats, with the "
+             "dimensions declared so the page does not jump while it loads."),
+            ("Email", "A mailbox at your own domain, so enquiries arrive somewhere that matches the site."),
+        ],
+        "timeline": [
+            ("Week 1", "Product list and photography agreed. The spreadsheet structure is decided here, because everything else is generated from it."),
+            ("Week 2", "The catalogue, product pages and the credibility page built from real content, not placeholder text."),
+            ("Week 3", "Search details, enquiry routing, the domain and mailbox, and a walkthrough of updating the spreadsheet yourself."),
+        ],
+        "note": "This is the least expensive build on this list and the one with the "
+                "lowest running cost — a domain and a mailbox, a few hundred rupees a month "
+                "between them. What moves the price is the number of products, whether the "
+                "photography exists already, and whether you want filtering or a plain list. "
+                "If what you actually need is a cart and payments, say so early: that is a "
+                "different build and pricing it as this one would be dishonest.",
+    },
 ]
 
 
@@ -2151,26 +2276,26 @@ ARTICLES = [
         ],
     },
     {
-        "slug": "what-an-mvp-actually-is",
-        "title": "What an MVP actually is, and what it isn't",
+        "slug": "what-a-first-version-actually-is",
+        "title": "What a first version actually is, and what it isn't",
         "date": "2026-08-12",
         "date_label": "12 August 2026",
         "read": "6 min read",
         "tag": "Building",
-        "summary": "Most people asking for an MVP describe a full product with a "
+        "summary": "Most people asking to \"start small\" describe a full product with a "
                    "smaller budget. That is not the same thing, and the difference "
                    "decides whether the money teaches you anything.",
         "body": [
             ("p", "Almost every first conversation I have includes the words "
-                  "\"let's start with an MVP\". Then the feature list arrives and "
+                  "\"let's just start small\". Then the feature list arrives and "
                   "it is a complete product with the polish removed. Those are "
                   "different things, and confusing them is the single most "
                   "expensive mistake I see."),
-            ("h2", "An MVP is an experiment, not a discount"),
-            ("p", "A minimum viable product exists to answer a question you cannot "
+            ("h2", "A first version is an experiment, not a discount"),
+            ("p", "A first version exists to answer a question you cannot "
                   "answer by thinking harder. Will people book through a link "
                   "instead of calling? Will drivers actually use the app? Will "
-                  "anyone pay for this? The MVP is the cheapest honest way to find "
+                  "anyone pay for this? A first version is the cheapest honest way to find "
                   "out."),
             ("p", "That reframes the whole scoping conversation. The question stops "
                   "being \"what can we afford to build?\" and becomes \"what is the "
@@ -2201,7 +2326,7 @@ ARTICLES = [
                 "export is enough for months.",
             ]),
             ("h2", "The part people skip"),
-            ("p", "An MVP is only worth building if you have decided, in advance, "
+            ("p", "A first version is only worth building if you have decided, in advance, "
                   "what you will do with the answer. Before I start, I ask what "
                   "number would count as working and what would count as failed. If "
                   "there is no answer, we are not building an experiment — we are "
@@ -2220,18 +2345,18 @@ ARTICLES = [
             ("p", "If it works, you build the next thing knowing something. If it "
                   "does not, you found out for the price of a month rather than the "
                   "price of a year."),
-            ("h2", 'How long an MVP should take'),
-            ("p", 'If the answer is more than about eight weeks, it is not an MVP any more, whatever anyone is calling it. That is not a rule about budgets; it is about what the timescale does to the exercise.'),
+            ("h2", 'How long a first version should take'),
+            ("p", 'If the answer is more than about eight weeks, it is not a first version any more, whatever anyone is calling it. That is not a rule about budgets; it is about what the timescale does to the exercise.'),
             ("p", 'Past a couple of months, three things go wrong. The market you were testing has moved. The team has become attached to the thing and will interpret ambiguous results generously. And the cost has grown large enough that admitting it did not work has become expensive in a way that has nothing to do with money.'),
             ("p", 'Four to eight weeks keeps all three honest. It is short enough that you can afford to be wrong and long enough to build something a real person will actually use.'),
             ("h2", 'What happens after — the part nobody plans'),
-            ("p", 'Most MVP conversations stop at launch, which is roughly like planning a wedding and not a marriage. Three things follow and all three should be agreed before the build starts.'),
+            ("p", 'Most first-version conversations stop at launch, which is roughly like planning a wedding and not a marriage. Three things follow and all three should be agreed before the build starts.'),
             ("ol", [
                 '<strong>Who watches it?</strong> Someone has to look at what users actually do, daily, for the first fortnight. If nobody owns that, you have bought a product and not an experiment.',
-                '<strong>What is the decision date?</strong> A day, in the calendar, when you look at the numbers and decide continue, change or stop. Without one, MVPs drift into being the product by default.',
+                '<strong>What is the decision date?</strong> A day, in the calendar, when you look at the numbers and decide continue, change or stop. Without one, first versions drift into being the product by default.',
                 '<strong>Who fixes it?</strong> Real users find real bugs in week one. If there is no arrangement for that, the experiment dies of neglect and you will wrongly conclude the idea failed.',
             ]),
-            ("h2", 'The MVP that should not be built'),
+            ("h2", 'The first version that should not be built'),
             ("p", 'Sometimes the honest advice is not to build software at all, and a developer who never says this is a supplier rather than an adviser.'),
             ("p", 'If the question is whether people want the service, you can often answer it with a landing page and a phone number for a fraction of the cost. If the process is not yet settled, software will freeze a bad version of it in place. If nobody has ever done the job manually, you do not yet know what to automate — do it by hand for a month, badly, and build the thing you learn you needed.'),
             ("p", 'I have talked people out of builds on this basis. It costs me the project and it saves them a year, which is a trade I am comfortable with, because the ones who come back are the ones worth working for.'),
@@ -2257,14 +2382,14 @@ ARTICLES = [
                    "Here is what sits inside that number, what sits outside it, "
                    "and the running costs nobody mentions until the invoice lands.",
         "body": [
-            ("p", "MVPs here start at ₹20,000. Starting prices are close to "
+            ("p", "Websites and apps here start at ₹20,000. Starting prices are close to "
                   "meaningless unless someone tells you what changes them, so this "
                   "is that explanation."),
             ("h2", "What that number is"),
             ("p", "It is the floor for a genuinely small, genuinely useful first "
                   "version: one clear job, a handful of screens, a database, a "
                   "deployment, and a person who read every line before it went "
-                  "live. The booking MVP is the honest shape of it."),
+                  "live. The booking build is the honest shape of it."),
             ("h2", "What pushes it up"),
             ("ul", [
                 "<strong>Payments.</strong> Money means reconciliation, refunds, "
@@ -2297,7 +2422,7 @@ ARTICLES = [
                 "volume.",
                 "Any paid API or library the project needs.",
             ]),
-            ("p", "For a small MVP these usually land somewhere between a few "
+            ("p", "For a small build these usually land somewhere between a few "
                   "hundred and a few thousand rupees a month. I will give you an "
                   "estimate before we start, and I would rather over-estimate it."),
             ("h2", "The question worth asking"),
@@ -2308,7 +2433,7 @@ ARTICLES = [
             ("quote", "If a quote arrives without questions attached to it, it is "
                       "a guess wearing a suit."),
             ("h2", 'A worked example'),
-            ("p", 'Take the booking MVP from the case studies — a real shape rather than an abstraction. Roughly where the effort goes:'),
+            ("p", 'Take the booking build from the case studies — a real shape rather than an abstraction. Roughly where the effort goes:'),
             ("ul", [
                 '<strong>Week one: the rules.</strong> Services, durations, staff, opening hours, and what counts as an available slot. No code. This is the week that prevents the expensive mistakes.',
                 '<strong>Weeks two and three: the build.</strong> Public booking page, the calendar, the front-desk view, and the database constraint that makes a double booking impossible.',
@@ -2420,7 +2545,7 @@ ARTICLES = [
             ("p", 'So the review has to be systematic rather than instinctive. Where did this value come from. What happens if this fails halfway. Who is allowed to call this. That is a checklist rather than a feeling, and running it is the actual job now.'),
             ("h2", 'What you are paying for'),
             ("p", 'It is worth being direct about this, since it bears on the price. You are not paying me to type. You are paying for the decisions about what should exist, the judgement about which parts are dangerous, and the fact that someone read all of it and will answer for it.'),
-            ("p", 'The typing being cheap is why an MVP can start at ₹20,000 rather than at several lakh. The reading being expensive is why it is not free, and why I would be suspicious of anyone quoting as though it were.'),
+            ("p", 'The typing being cheap is why a first version can start at ₹20,000 rather than at several lakh. The reading being expensive is why it is not free, and why I would be suspicious of anyone quoting as though it were.'),
         ],
     },
     {
