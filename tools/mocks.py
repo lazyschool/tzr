@@ -307,13 +307,35 @@ STORE_REVIEW = '''<div class="mock">
   </div>
 </div>'''
 
+CATALOGUE_GRID = '''<div class="mock">
+  <div class="mock__bar mock__bar--url"><i></i><i></i><i></i>
+    <span class="mk-url"><i class="mk-lock"></i><i class="mk-line" style="width:56%"></i></span>
+  </div>
+  <div class="mock__body">
+    <div class="mk-navrow">
+      <i class="mk-dotmark"></i><i></i><i></i><i></i><span class="mk-chip"></span>
+    </div>
+    <div class="mk-tiles mk-tiles--3">
+      <div class="mk-prop"><span class="mk-photo"></span><i class="mk-line" style="width:78%"></i><i class="mk-line mk-line--fade" style="width:50%"></i></div>
+      <div class="mk-prop"><span class="mk-photo"></span><i class="mk-line" style="width:66%"></i><i class="mk-line mk-line--fade" style="width:58%"></i></div>
+      <div class="mk-prop"><span class="mk-photo"></span><i class="mk-line" style="width:72%"></i><i class="mk-line mk-line--fade" style="width:46%"></i></div>
+    </div>
+    <div class="mk-tiles mk-tiles--3">
+      <div class="mk-prop"><span class="mk-photo"></span><i class="mk-line" style="width:70%"></i><i class="mk-line mk-line--fade" style="width:54%"></i></div>
+      <div class="mk-prop"><span class="mk-photo"></span><i class="mk-line" style="width:60%"></i><i class="mk-line mk-line--fade" style="width:62%"></i></div>
+      <div class="mk-prop"><span class="mk-photo"></span><i class="mk-line" style="width:76%"></i><i class="mk-line mk-line--fade" style="width:44%"></i></div>
+    </div>
+    <div class="mk-mailrow"><span class="mk-at">@</span><i class="mk-line" style="width:52%"></i><span class="mk-btn mk-btn--sm"></span></div>
+  </div>
+</div>'''
+
 MOCKS = {
     "restaurant-ordering-app": PHONE_ORDER,
     "coaching-management-platform": DASH_COACHING,
     "business-automation-dashboard": DASH_AUTOMATION,
     "real-estate-listing-portal": PORTAL_ESTATE,
     "delivery-tracking-app": PHONE_DELIVERY,
-    "booking-and-scheduling-mvp": CAL_BOOKING,
+    "booking-and-scheduling-first-version": CAL_BOOKING,
     "saas-subscription-starter": SAAS_PLANS,
     "business-website-that-converts": SITE_LANDING,
     "inventory-and-billing-for-retail": RETAIL_STOCK,
@@ -323,6 +345,7 @@ MOCKS = {
     "first-website-for-a-social-first-business": SOCIAL_HOME,
     "vibe-coded-app-made-production-ready": AUDIT_REPORT,
     "getting-an-app-through-both-stores": STORE_REVIEW,
+    "product-showcase-site-for-a-small-business": CATALOGUE_GRID,
 }
 
 

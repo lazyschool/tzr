@@ -243,7 +243,7 @@ CHROME_CLOSE = u'''</main>
 
     <nav class="footer__nav" aria-label="Footer">
       <a href="../index.html#services">Services</a>
-      <a href="../index.html#mvp">MVP ₹20,000</a>
+      <a href="../index.html#build">Website &amp; App ₹20,000</a>
       <a href="../case-studies/index.html">Case Studies</a>
       <a href="../articles/index.html">Articles</a>
       <a href="../index.html#about">About</a>
@@ -526,7 +526,7 @@ def case_study_page(cs, others):
     inner = [band_head("BEFORE YOU START", "Worth knowing.")]
     inner.append(u'''    <div class="knowgrid">
       <p class="note reveal" data-reveal>{note}</p>
-      <p class="note note--price reveal" data-reveal style="--d:.08s">MVPs start at
+      <p class="note note--price reveal" data-reveal style="--d:.08s">Websites and apps start at
       <strong>₹20,000*</strong>. Final pricing depends on features and project scope.
       Third-party costs — cloud hosting, domains, external libraries, APIs, app-store
       fees and any other paid service — are billed separately and are not included.</p>
@@ -565,7 +565,7 @@ def case_studies_index():
 }''' % SITE
 
     out = [head("Case Studies — Example Builds | Tavzuran",
-                "How we scope and build apps, websites, dashboards and MVPs — "
+                "How we scope and build apps, websites, dashboards and first versions — "
                 "six example builds with the scope, the stack, the timeline and "
                 "what we would deliberately leave out of version one.",
                 "%s/case-studies/" % SITE, jsonld),
@@ -720,12 +720,12 @@ def articles_index():
   "@context": "https://schema.org",
   "@type": "Blog",
   "name": "Articles — Tavzuran",
-  "description": "Plain-English writing about building software: MVPs, pricing, apps versus websites, and how AI actually fits into the work.",
+  "description": "Plain-English writing about building software: first versions, pricing, apps versus websites, and how AI actually fits into the work.",
   "url": "%s/articles/"
 }''' % SITE
 
     out = [head("Articles — Plain-English Writing on Building Software | Tavzuran",
-                "MVPs, what software actually costs, apps versus websites, and how "
+                "First versions, what software actually costs, apps versus websites, and how "
                 "AI fits into real engineering. Written by Adil, no jargon.",
                 "%s/articles/" % SITE, jsonld),
            chrome_open("articles")]
