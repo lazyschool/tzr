@@ -78,7 +78,7 @@ BOOT_SCRIPT = '''<script>
 BEACON = ('<!-- Cloudflare Web Analytics. Privacy-friendly and cookie-free: the numbers go\n'
           '     to the Cloudflare dashboard, not onto this page. The token is public. -->\n'
           '<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" '
-          'data-cf-beacon=\'{"token": "16ba7bce6bf54d6fa4327ecd5912dfb1"}\'></script>')
+          'data-cf-beacon=\'{"token": "eeb96636c3c5427fbb1f63b306a78fee"}\'></script>')
 
 CSP = ('<meta http-equiv="Content-Security-Policy" content="default-src \'self\'; '
        'base-uri \'self\'; object-src \'none\'; form-action \'none\'; '
