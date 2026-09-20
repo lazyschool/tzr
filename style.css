@@ -650,16 +650,17 @@ h1, h2, h3 {
 }
 
 .brand { display: inline-flex; align-items: center; gap: 10px; padding-block: 5px; font-weight: 600; }
-/* The mark is the real logo artwork, so it keeps its own colours rather than
-   the palette's — no tinted plate behind it. */
+/* The mark is inline SVG so it can take the palette accent — inline is the
+   only way, since an SVG behind an <img> cannot inherit currentColor. */
 .brand__mark {
   display: flex;
   flex: none;
   height: 30px;
-  transition: transform .5s var(--ease-out);
+  color: var(--accent);
+  transition: transform .5s var(--ease-out), color .3s var(--ease);
 }
 .brand:hover .brand__mark { transform: scale(1.05); }
-.brand__mark img { height: 100%; width: auto; display: block; }
+.brand__mark svg { height: 100%; width: auto; display: block; }
 .brand__text {
   font-family: var(--font-display);
   font-weight: 800;
@@ -1523,7 +1524,7 @@ h1, h2, h3 {
   position: relative;
   width: min(100%, 360px);
   margin-inline: auto;
-  padding: clamp(22px, 4vw, 36px);
+  padding: 10px;
   background:
     radial-gradient(90% 80% at 80% 0%, rgba(var(--accent-glow), .16), transparent 60%),
     var(--card);
@@ -1533,12 +1534,12 @@ h1, h2, h3 {
   transition: transform .6s var(--ease-out), box-shadow .6s var(--ease-out);
 }
 .about__frame:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-.char--wave { color: var(--fg); }
-.char--wave .wave-arm { animation: wave 2.6s ease-in-out infinite; transform-origin: 206px 240px; }
-@keyframes wave {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(-16deg); }
-  60% { transform: rotate(10deg); }
+/* the founder photograph sits in the frame as a thin-matted print */
+.about__photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: calc(var(--radius-xl) - 10px);
 }
 .about__sticker {
   position: absolute;

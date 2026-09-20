@@ -295,15 +295,17 @@ const CONFIG = {
     try { return localStorage.getItem(key); } catch (e) { return null; }
   }
 
-  // "system" is simply the absence of a stored choice, so it keeps following
-  // the OS setting rather than freezing whatever it was on the day they picked.
+  // The default appearance is green on light, whatever the operating system
+  // says. "System" is still on offer and, once chosen, is stored as the absence
+  // of a value so it keeps following the OS rather than freezing.
   function storedMode() {
     const t = read("tavz-theme");
-    return t === "dark" || t === "light" ? t : "system";
+    if (t === "dark" || t === "light") return t;
+    return read("tavz-mode") === "system" ? "system" : "light";
   }
   function storedPalette() {
     const p = read("tavz-palette");
-    return PALETTES.indexOf(p) === -1 ? "blue" : p;
+    return PALETTES.indexOf(p) === -1 ? "green" : p;
   }
 
   function applyMode(mode) {
@@ -350,6 +352,7 @@ const CONFIG = {
       b.addEventListener("click", function () {
         const mode = b.getAttribute("data-mode");
         store("tavz-theme", mode === "system" ? null : mode);
+        store("tavz-mode", mode === "system" ? "system" : null);
         applyMode(mode);
       });
     });
