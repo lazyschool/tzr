@@ -410,6 +410,11 @@ def case_study_page(cs, others):
     how the project would be scoped and built — the same thinking you would get on a real
     one. Nothing here is a past client, and no number on this page is a result.</p>
 ''')
+    glance.append(u"""    <p class="note note--price reveal" data-reveal><strong>The price follows
+    the feature list.</strong> The number above buys everything scoped on this page. Take
+    features out and it comes down \u2014 the shortest route to a smaller number is a shorter
+    list, and deciding what to drop is what the free call is for.</p>
+""")
     out.append(band("".join(glance), alt=True, extra="section--glance"))
 
     # ---- the situation ----------------------------------------------------
