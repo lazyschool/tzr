@@ -51,9 +51,9 @@ CASE_STUDIES = [
         ],
         "glance": [
             ("Type", "Mobile app + web dashboards"),
-            ("Build time", "About 7 weeks"),
+            ("Build time", "12–16 weeks"),
             ("Platforms", "iOS, Android, tablet"),
-            ("Starts at", "₹20,000*"),
+            ("Starts at", "₹1,20,000*"),
         ],
         "pains": [
             "Every repeat order pays 25–30% commission to an aggregator",
@@ -114,9 +114,9 @@ CASE_STUDIES = [
         "timeline": [
             ("Week 1", "Menu structure, outlet model and the order state machine "
                        "agreed on a call. This is the part that is expensive to get wrong."),
-            ("Weeks 2–4", "Customer app and checkout."),
-            ("Weeks 5–6", "Kitchen dashboard, live tracking, owner view."),
-            ("Week 7", "One outlet runs it live for a week before the others switch on."),
+            ("Weeks 2–8", "Customer app and checkout."),
+            ("Weeks 9–13", "Kitchen dashboard, live tracking, owner view."),
+            ("Weeks 14–16", "One outlet runs it live for a week or two before the others switch on."),
         ],
         "note": "The app-store fees, the payment gateway's per-transaction cut and "
                 "the cloud hosting are billed to you directly by those providers. "
@@ -157,9 +157,9 @@ CASE_STUDIES = [
         ],
         "glance": [
             ("Type", "Web app, staff and parents"),
-            ("Build time", "About 8 weeks"),
+            ("Build time", "10–14 weeks"),
             ("Platforms", "Desktop and mobile browser"),
-            ("Starts at", "₹20,000*"),
+            ("Starts at", "₹1,00,000*"),
         ],
         "pains": [
             "Attendance on paper, fees in one person's spreadsheet",
@@ -218,9 +218,9 @@ CASE_STUDIES = [
         "timeline": [
             ("Week 1", "The data model: what a batch is, what happens when a student "
                        "switches one, how a part payment is recorded."),
-            ("Weeks 2–4", "Batches, enrolment, attendance and the staff dashboard."),
-            ("Weeks 5–6", "Fees, payment links and automated reminders."),
-            ("Weeks 7–8", "Tests, scoring and the parent view."),
+            ("Weeks 2–6", "Batches, enrolment, attendance and the staff dashboard."),
+            ("Weeks 7–10", "Fees, payment links and automated reminders."),
+            ("Weeks 11–14", "Tests, scoring and the parent view."),
         ],
         "note": "Every SMS and WhatsApp message costs a few paise, billed by the "
                 "messaging provider directly to you. At a few thousand messages a "
@@ -264,9 +264,9 @@ CASE_STUDIES = [
         ],
         "glance": [
             ("Type", "Scheduled jobs + dashboard"),
-            ("Build time", "About 6 weeks"),
+            ("Build time", "8–12 weeks"),
             ("Platforms", "Browser, alerts to email or chat"),
-            ("Starts at", "₹20,000*"),
+            ("Starts at", "₹80,000*"),
         ],
         "pains": [
             "Two hours a day spent exporting and pasting",
@@ -325,10 +325,10 @@ CASE_STUDIES = [
         "timeline": [
             ("Week 1", "Sit with whoever owns the spreadsheet and write down every "
                        "manual step. This week matters more than the rest."),
-            ("Weeks 2–3", "Data pulls and the transformation rules, checked against "
+            ("Weeks 2–6", "Data pulls and the transformation rules, checked against "
                           "the last three months of the existing file."),
-            ("Weeks 4–5", "Dashboard, roles and alerts."),
-            ("Week 6", "Both systems run in parallel and the numbers are compared "
+            ("Weeks 7–10", "Dashboard, roles and alerts."),
+            ("Weeks 11–12", "Both systems run in parallel and the numbers are compared "
                        "daily until they match."),
         ],
         "note": "Running both the old spreadsheet and the new system side by side "
@@ -368,9 +368,9 @@ CASE_STUDIES = [
         ],
         "glance": [
             ("Type", "Public website + CRM"),
-            ("Build time", "About 7 weeks"),
+            ("Build time", "9–13 weeks"),
             ("Platforms", "Browser, agents on mobile"),
-            ("Starts at", "₹20,000*"),
+            ("Starts at", "₹90,000*"),
         ],
         "pains": [
             "Paid leads sit unread in a shared mailbox",
@@ -429,9 +429,9 @@ CASE_STUDIES = [
         "timeline": [
             ("Week 1", "Listing structure and the pipeline stages, agreed with "
                        "whoever runs sales rather than whoever runs marketing."),
-            ("Weeks 2–4", "Public site, search and property pages."),
-            ("Weeks 5–6", "Lead capture, assignment and the pipeline."),
-            ("Week 7", "Reminders, reporting and the sales team's first week on it."),
+            ("Weeks 2–6", "Public site, search and property pages."),
+            ("Weeks 7–10", "Lead capture, assignment and the pipeline."),
+            ("Weeks 11–13", "Reminders, reporting and the sales team's first weeks on it."),
         ],
         "note": "A CRM only works if the team enters things into it. Half of this "
                 "project's success is deciding how few fields an agent has to fill "
@@ -473,9 +473,9 @@ CASE_STUDIES = [
         ],
         "glance": [
             ("Type", "Driver app + owner board"),
-            ("Build time", "About 8 weeks"),
+            ("Build time", "14–18 weeks"),
             ("Platforms", "Android and iOS, offline-capable"),
-            ("Starts at", "₹20,000*"),
+            ("Starts at", "₹1,40,000*"),
         ],
         "pains": [
             "Finding a consignment means phoning the driver",
@@ -533,9 +533,9 @@ CASE_STUDIES = [
         "timeline": [
             ("Week 1", "The consignment lifecycle and what a driver does at each "
                        "stop, watched in person if possible."),
-            ("Weeks 2–5", "Driver app, offline storage and sync. The long stretch."),
-            ("Weeks 6–7", "Owner board, map and delay alerts."),
-            ("Week 8", "Two drivers run it alongside paper for a week."),
+            ("Weeks 2–10", "Driver app, offline storage and sync. The long stretch."),
+            ("Weeks 11–15", "Owner board, map and delay alerts."),
+            ("Weeks 16–18", "Two drivers run it alongside paper for a week or two."),
         ],
         "note": "Offline-first roughly doubles the effort of a driver app compared "
                 "with an online-only one. It is also the difference between drivers "
@@ -573,9 +573,9 @@ CASE_STUDIES = [
         ],
         "glance": [
             ("Type", "Booking site"),
-            ("Build time", "About 4 weeks"),
+            ("Build time", "6–8 weeks"),
             ("Platforms", "One shareable link, any browser"),
-            ("Starts at", "₹20,000*"),
+            ("Starts at", "₹60,000*"),
         ],
         "pains": [
             "Bookings arrive by WhatsApp, phone and walk-in",
@@ -631,8 +631,8 @@ CASE_STUDIES = [
         "timeline": [
             ("Week 1", "Services, staff, hours and the rules for what counts as an "
                        "available slot."),
-            ("Weeks 2–3", "Booking page and the front-desk view."),
-            ("Week 4", "Reminders, deposits, and live with real customers."),
+            ("Weeks 2–5", "Booking page and the front-desk view."),
+            ("Weeks 6–8", "Reminders, deposits, and live with real customers."),
         ],
         "note": "This is the shape of build that starts at ₹20,000. What moves the "
                 "price is the number of staff-and-service rules, whether payments "
@@ -673,9 +673,9 @@ CASE_STUDIES = [
         ],
         "glance": [
             ("Type", "Multi-tenant SaaS"),
-            ("Build time", "About 9 weeks"),
+            ("Build time", "14–18 weeks"),
             ("Platforms", "Browser, any device"),
-            ("Starts at", "₹20,000*"),
+            ("Starts at", "₹1,40,000*"),
         ],
         "pains": [
             "Every customer needs their own separated data",
@@ -739,9 +739,9 @@ CASE_STUDIES = [
         "timeline": [
             ("Week 1", "The tenancy model: what a workspace owns, what happens "
                        "when someone is removed, what a downgrade takes away."),
-            ("Weeks 2–4", "Accounts, workspaces, invitations and roles."),
-            ("Weeks 5–7", "Plans, trials and billing, including every failure path."),
-            ("Weeks 8–9", "Your actual product feature, on top of the foundation."),
+            ("Weeks 2–7", "Accounts, workspaces, invitations and roles."),
+            ("Weeks 8–14", "Plans, trials and billing, including every failure path."),
+            ("Weeks 15–18", "Your actual product feature, on top of the foundation."),
         ],
         "note": "Payment providers charge per transaction and most take a cut of "
                 "each subscription. That is billed to you by them, not by us, and "
@@ -779,9 +779,9 @@ CASE_STUDIES = [
         ],
         "glance": [
             ("Type", "Marketing website"),
-            ("Build time", "About 3 weeks"),
+            ("Build time", "4–6 weeks"),
             ("Platforms", "Browser, mobile-first"),
-            ("Starts at", "₹20,000*"),
+            ("Starts at", "₹40,000*"),
         ],
         "pains": [
             "The current site takes eight seconds to load on mobile data",
@@ -837,8 +837,8 @@ CASE_STUDIES = [
         "timeline": [
             ("Week 1", "What the site has to say, and to whom. Copy first, "
                        "design after — the other order produces pretty nonsense."),
-            ("Week 2", "Design and build."),
-            ("Week 3", "Content, Google setup, and live."),
+            ("Weeks 2–4", "Design and build."),
+            ("Weeks 5–6", "Content, Google setup, and live."),
         ],
         "note": "A website only earns its keep if the enquiries reach someone. "
                 "Decide before launch who answers them and how fast — that "
@@ -878,9 +878,9 @@ CASE_STUDIES = [
         ],
         "glance": [
             ("Type", "Custom software"),
-            ("Build time", "About 7 weeks"),
+            ("Build time", "10–14 weeks"),
             ("Platforms", "Counter desktop, phone for stock"),
-            ("Starts at", "₹20,000*"),
+            ("Starts at", "₹1,00,000*"),
         ],
         "pains": [
             "Stock on paper never matches stock on the shelf",
@@ -938,9 +938,9 @@ CASE_STUDIES = [
         "timeline": [
             ("Week 1", "Watch a real day at the counter. What gets typed, what "
                        "gets skipped, where the queue builds."),
-            ("Weeks 2–4", "Products, stock and purchase entry."),
-            ("Weeks 5–6", "Billing, printing and GST formats."),
-            ("Week 7", "One shop runs it alongside the register for a week."),
+            ("Weeks 2–7", "Products, stock and purchase entry."),
+            ("Weeks 8–11", "Billing, printing and GST formats."),
+            ("Weeks 12–14", "One shop runs it alongside the register for a week or two."),
         ],
         "note": "Getting the opening stock right is the hardest day of this "
                 "project and it is your team's day, not mine. Budget a full "
@@ -981,9 +981,9 @@ CASE_STUDIES = [
         ],
         "glance": [
             ("Type", "Web app"),
-            ("Build time", "About 7 weeks"),
+            ("Build time", "10–14 weeks"),
             ("Platforms", "Desktop at the desk, phone for patients"),
-            ("Starts at", "₹20,000*"),
+            ("Starts at", "₹1,00,000*"),
         ],
         "pains": [
             "Appointments in a diary that only the front desk can see",
@@ -1039,9 +1039,9 @@ CASE_STUDIES = [
         "timeline": [
             ("Week 1", "The visit flow, and a decision about where patient data "
                        "lives and who may see it."),
-            ("Weeks 2–4", "Appointments, the schedule and the front-desk view."),
-            ("Weeks 5–6", "Records, prescriptions and uploads."),
-            ("Week 7", "Reminders, access logs, backup restore test, live."),
+            ("Weeks 2–7", "Appointments, the schedule and the front-desk view."),
+            ("Weeks 8–11", "Records, prescriptions and uploads."),
+            ("Weeks 12–14", "Reminders, access logs, backup restore test, live."),
         ],
         "note": "Patient records carry legal obligations in most places, "
                 "including India. I build the access control, encryption and "
@@ -1083,9 +1083,9 @@ CASE_STUDIES = [
         ],
         "glance": [
             ("Type", "Mobile app + desk web"),
-            ("Build time", "About 6 weeks"),
+            ("Build time", "9–12 weeks"),
             ("Platforms", "iOS, Android, desk browser"),
-            ("Starts at", "₹20,000*"),
+            ("Starts at", "₹90,000*"),
         ],
         "pains": [
             "Memberships expire quietly and nobody follows up",
@@ -1141,9 +1141,9 @@ CASE_STUDIES = [
         "timeline": [
             ("Week 1", "Plans, freezes, transfers and the awkward cases the "
                        "spreadsheet handles informally today."),
-            ("Weeks 2–4", "Member app, membership and check-in."),
-            ("Week 5", "Classes, capacity and waitlist."),
-            ("Week 6", "Reminders, payments, owner view, live."),
+            ("Weeks 2–7", "Member app, membership and check-in."),
+            ("Weeks 8–10", "Classes, capacity and waitlist."),
+            ("Weeks 11–12", "Reminders, payments, owner view, live."),
         ],
         "note": "App-store publishing adds about a week the first time and needs "
                 "developer accounts in your name, not mine — Apple charges "
@@ -1182,9 +1182,9 @@ CASE_STUDIES = [
         ],
         "glance": [
             ("Type", "Mobile app + dispatch web"),
-            ("Build time", "About 8 weeks"),
+            ("Build time", "14–18 weeks"),
             ("Platforms", "Android and iOS, offline-capable"),
-            ("Starts at", "₹20,000*"),
+            ("Starts at", "₹1,40,000*"),
         ],
         "pains": [
             "Jobs are assigned by phone call and forgotten",
@@ -1241,9 +1241,9 @@ CASE_STUDIES = [
         "timeline": [
             ("Week 1", "Ride along with a technician for a day. This changes the "
                        "design more than any meeting will."),
-            ("Weeks 2–5", "Technician app, offline storage and sync."),
-            ("Weeks 6–7", "Dispatch board and assignment."),
-            ("Week 8", "Invoicing, then two technicians run it live for a week."),
+            ("Weeks 2–10", "Technician app, offline storage and sync."),
+            ("Weeks 11–15", "Dispatch board and assignment."),
+            ("Weeks 16–18", "Invoicing, then two technicians run it live for a week or two."),
         ],
         "note": "Offline sync is the expensive part and the reason the app gets "
                 "used. If the budget forces a choice, cut features rather than "
@@ -1254,7 +1254,7 @@ CASE_STUDIES = [
         "slug": "first-website-for-a-social-first-business",
         "glance": [
             ("Type", "Static site + your own email"),
-            ("Build time", "About 2 weeks"),
+            ("Build time", "2–3 weeks"),
             ("Platforms", "Browser, mobile-first"),
             ("Starts at", "₹20,000*"),
         ],
@@ -1337,11 +1337,11 @@ CASE_STUDIES = [
              "needs no database for this"),
         ],
         "timeline": [
-            ("Days 1–3", "What the page says, and to whom. Domain chosen and "
+            ("Days 1–5", "What the page says, and to whom. Domain chosen and "
                          "registered in your name. Email set up and tested."),
-            ("Days 4–9", "Build, content, photos sized properly, and the links "
+            ("Days 6–14", "Build, content, photos sized properly, and the links "
                          "page."),
-            ("Days 10–14", "Live, bio links switched over, and a walk-through so "
+            ("Days 15–21", "Live, bio links switched over, and a walk-through so "
                            "you can edit it and read your own email."),
         ],
         "questions": [
@@ -1425,7 +1425,7 @@ CASE_STUDIES = [
         ],
         "glance": [
             ("Type", "Audit + repair"),
-            ("Build time", "About 3 weeks"),
+            ("Build time", "4–7 weeks"),
             ("Starts with", "A fixed-price audit"),
             ("You keep", "Your codebase"),
         ],
@@ -1495,8 +1495,8 @@ CASE_STUDIES = [
         ],
         "timeline": [
             ("Week 1", "Read everything and write the audit. Close whatever is actively dangerous while it is still being written."),
-            ("Week 2", "Access rules, secrets rotated, database constraints and indexes, backups proven by a restore."),
-            ("Week 3", "Local setup, deploys, the small test suite, and the handover document."),
+            ("Weeks 2–4", "Access rules, secrets rotated, database constraints and indexes, backups proven by a restore."),
+            ("Weeks 5–7", "Local setup, deploys, the small test suite, and the handover document."),
         ],
         "note": "This one is quoted from the audit, not before it. The audit is fixed-price "
                 "and is useful on its own; the repair is quoted once there is a list. What moves "
@@ -1543,7 +1543,7 @@ CASE_STUDIES = [
         ],
         "glance": [
             ("Type", "Publishing + consulting"),
-            ("Build time", "About 2 weeks"),
+            ("Build time", "3–5 weeks"),
             ("Platforms", "App Store, Google Play"),
             ("You own", "Accounts and keys"),
         ],
@@ -1556,7 +1556,7 @@ CASE_STUDIES = [
         "category": "App Launch",
         "thumb": "a",
         "title": "Getting an App Through Both Stores",
-        "summary": "The fortnight between the app being finished and people being able to install it — rejections, signing keys, store listings and the paperwork.",
+        "summary": "The two or three weeks between the app being finished and people being able to install it — rejections, signing keys, store listings and the paperwork.",
         "situation": [
             "The build is done. It works on the phone in your hand. And that turns out to "
             "be somewhere around three quarters of the journey, because both stores sit "
@@ -1607,7 +1607,7 @@ CASE_STUDIES = [
         ],
         "timeline": [
             ("Week 1", "Accounts, keys, the pre-submission review, and fixing whatever that review finds."),
-            ("Week 2", "Listing, screenshots, ratings, privacy paperwork, and submission to both stores."),
+            ("Weeks 2–3", "Listing, screenshots, ratings, privacy paperwork, and submission to both stores."),
             ("Then", "Answering reviewers. Apple usually replies within a day or two; Google's closed-testing window, where it applies, is a fortnight and cannot be shortened."),
         ],
         "note": "Store fees are separate and paid by you directly: Apple charges 99 USD a "
@@ -1657,9 +1657,9 @@ CASE_STUDIES = [
         ],
         "glance": [
             ("Type", "Static catalogue site"),
-            ("Build time", "About 3 weeks"),
+            ("Build time", "4–6 weeks"),
             ("Running cost", "Domain + mailbox only"),
-            ("Starts at", "₹20,000*"),
+            ("Starts at", "₹40,000*"),
         ],
         "pains": [
             "The catalogue only exists as Instagram posts and WhatsApp photos",
@@ -1731,8 +1731,8 @@ CASE_STUDIES = [
         ],
         "timeline": [
             ("Week 1", "Product list and photography agreed. The spreadsheet structure is decided here, because everything else is generated from it."),
-            ("Week 2", "The catalogue, product pages and the credibility page built from real content, not placeholder text."),
-            ("Week 3", "Search details, enquiry routing, the domain and mailbox, and a walkthrough of updating the spreadsheet yourself."),
+            ("Weeks 2–4", "The catalogue, product pages and the credibility page built from real content, not placeholder text."),
+            ("Weeks 5–6", "Search details, enquiry routing, the domain and mailbox, and a walkthrough of updating the spreadsheet yourself."),
         ],
         "note": "This is the least expensive build on this list and the one with the "
                 "lowest running cost — a domain and a mailbox, a few hundred rupees a month "
@@ -2335,20 +2335,20 @@ ARTICLES = [
             ("quote", "The point of shipping early is not to save money. It is to "
                       "stop spending money on the wrong thing sooner."),
             ("h2", "What this looks like in practice"),
-            ("p", "The booking system in our examples runs about four weeks. It has "
+            ("p", "The booking system in our examples runs six to eight weeks. It has "
                   "a calendar, a public booking link, reminders and optional "
                   "deposits. It does not have inventory, payroll, a loyalty scheme "
                   "or a customer app. Not because those are bad ideas — because "
-                  "after four weeks the owner knows whether customers will book "
+                  "by the end of it the owner knows whether customers will book "
                   "online at all, and every one of those features would be designed "
                   "better with that answer in hand."),
             ("p", "If it works, you build the next thing knowing something. If it "
                   "does not, you found out for the price of a month rather than the "
                   "price of a year."),
             ("h2", 'How long a first version should take'),
-            ("p", 'If the answer is more than about eight weeks, it is not a first version any more, whatever anyone is calling it. That is not a rule about budgets; it is about what the timescale does to the exercise.'),
-            ("p", 'Past a couple of months, three things go wrong. The market you were testing has moved. The team has become attached to the thing and will interpret ambiguous results generously. And the cost has grown large enough that admitting it did not work has become expensive in a way that has nothing to do with money.'),
-            ("p", 'Four to eight weeks keeps all three honest. It is short enough that you can afford to be wrong and long enough to build something a real person will actually use.'),
+            ("p", 'There is no universal number, and anyone who gives you one before hearing the feature list is quoting a habit rather than your project. A booking page and a multi-tenant subscription product are not the same exercise. Ask for the features and the timeline together: if the second does not follow from the first, one of them is fiction.'),
+            ("p", 'Most of the weeks collect in a few specific places. Anything that has to work offline and reconcile later. Anything that takes money. Anything that has to keep one customer walled off from another. Anything on two app stores rather than a browser. And anything that waits on somebody else — a store reviewer, a payment provider, photographs nobody has taken yet. Two features that read alike on a list can differ by a month once you ask which of those they touch.'),
+            ("p", 'When nobody can say which features the months are for, the familiar things go wrong. The market you were testing has moved. The team has become attached to the thing and will interpret ambiguous results generously. And the cost has grown large enough that admitting it did not work has become expensive in a way that has nothing to do with money. What protects you is not a deadline; it is a feature list short enough that every item earns its place, and a timeline you can read back feature by feature and see where the weeks went.'),
             ("h2", 'What happens after — the part nobody plans'),
             ("p", 'Most first-version conversations stop at launch, which is roughly like planning a wedding and not a marriage. Three things follow and all three should be agreed before the build starts.'),
             ("ol", [
@@ -2365,7 +2365,7 @@ ARTICLES = [
                 'Can you write down, in one sentence, what this will tell you?',
                 'Do you know what result would make you stop?',
                 'Is there a real person who will use it in week one, by name?',
-                'Is it under eight weeks?',
+                'Does the timeline follow from the features, item by item?',
                 'Have you removed everything that would not change the answer?',
             ]),
             ("p", 'Five yeses and it is worth building. A no on the first two means the conversation is not finished, and building anyway is how budgets disappear into things nobody can evaluate.'),
@@ -2389,7 +2389,7 @@ ARTICLES = [
             ("p", "It is the floor for a genuinely small, genuinely useful first "
                   "version: one clear job, a handful of screens, a database, a "
                   "deployment, and a person who read every line before it went "
-                  "live. The booking build is the honest shape of it."),
+                  "live. The first-website build in the case studies is the honest shape of it, and every case study quotes its own starting price against its own timeline."),
             ("h2", "What pushes it up"),
             ("ul", [
                 "<strong>Payments.</strong> Money means reconciliation, refunds, "
@@ -2408,6 +2408,32 @@ ARTICLES = [
                 "messier than anyone remembers. This is frequently the most "
                 "underestimated line in a project.",
             ]),
+            ("h2", "What brings it down"),
+            ("p", "The same list read backwards. A starting price is quoted against a "
+                  "scope, so the scope is the lever you actually hold, and it is worth "
+                  "pulling before you negotiate on anything else."),
+            ("ul", [
+                "<strong>Fewer user types.</strong> Every role is a set of rules about "
+                "who sees what, and each one has to be tested against all the others.",
+                "<strong>Take payments out of version one.</strong> Collect on delivery, "
+                "or by a payment link you send by hand, and find out whether people want "
+                "the thing before paying for the machinery that charges them.",
+                "<strong>A browser instead of two app stores.</strong> A web app that "
+                "works well on a phone costs a fraction of the same idea shipped to Apple "
+                "and Google, and it never waits on a reviewer.",
+                "<strong>Drop offline support.</strong> If your users are rarely without "
+                "signal, this one decision can halve a mobile build.",
+                "<strong>Start with the data you have.</strong> Keeping the old system "
+                "read-only and starting clean avoids the migration, which is the line "
+                "most often underestimated.",
+                "<strong>Fewer screens.</strong> The report that would be nice to have, "
+                "the second dashboard, the settings page nobody has asked for — each "
+                "one is real money.",
+            ]),
+            ("p", "None of that is about building something worse. It is about finding "
+                  "out whether the idea works before paying for the version that assumes "
+                  "it does. I would rather quote a smaller project you actually want than "
+                  "a larger one you talked yourself into."),
             ("h2", "What is never included"),
             ("p", "Third-party costs are billed to you, by those third parties, at "
                   "whatever they charge. I do not mark them up, and I do not "
@@ -2433,13 +2459,13 @@ ARTICLES = [
             ("quote", "If a quote arrives without questions attached to it, it is "
                       "a guess wearing a suit."),
             ("h2", 'A worked example'),
-            ("p", 'Take the booking build from the case studies — a real shape rather than an abstraction. Roughly where the effort goes:'),
+            ("p", 'Take the first-website build from the case studies — a real shape rather than an abstraction. Roughly where the effort goes:'),
             ("ul", [
-                '<strong>Week one: the rules.</strong> Services, durations, staff, opening hours, and what counts as an available slot. No code. This is the week that prevents the expensive mistakes.',
-                '<strong>Weeks two and three: the build.</strong> Public booking page, the calendar, the front-desk view, and the database constraint that makes a double booking impossible.',
-                '<strong>Week four: live.</strong> Reminders, deposits if wanted, real customers, and the fixes that only real customers surface.',
+                '<strong>Days one to five: the decisions.</strong> What the page says and who it is for, the domain registered in your name, and the accounts put in your hands. No code yet. This is the part that prevents the expensive mistakes.',
+                '<strong>Days six to fourteen: the build.</strong> The page itself, the words, photographs sized so they load on mobile data, your links in one place, and email at your own domain.',
+                '<strong>Days fifteen to twenty-one: live.</strong> Bio links switched over, Google set up, and a walk-through so you can edit it without calling anyone.',
             ]),
-            ("p", 'That is the shape that starts at ₹20,000. Add three more staff with different service lists, an existing customer database to import, and deposits on some services but not others, and it is a different number — not because anyone is being greedy, but because each of those adds rules that have to be modelled and tested.'),
+            ("p", 'That is the shape that starts at ₹20,000. Ask instead for a page per product, enquiries routed per item, or a bookable calendar behind it, and it is a different number — not because anyone is being greedy, but because each of those adds rules that have to be modelled and tested.'),
             ("h2", 'Fixed price or by the hour?'),
             ("p", 'I quote fixed prices for well-defined work, and I am straightforward about why that is not generosity. A fixed price transfers risk to me, so it includes a margin for the risk. If the work is genuinely well-understood, that margin is small and you get certainty cheaply.'),
             ("p", 'Where a fixed price goes wrong is when the scope is not actually known. Then one of two things happens: the price carries a large buffer you pay for whether or not it is needed, or it does not, and the project quietly turns into a negotiation about what was implied. Neither is good for either side.'),
