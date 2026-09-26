@@ -26,7 +26,7 @@ INLINE = re.compile(
     r'<script(?![^>]*\ssrc=)[^>]*>(.*?)</script>', re.S | re.I)
 COMMENT = re.compile(r'<!--.*?-->', re.S)
 POLICY = re.compile(
-    r"(script-src 'self' https://static\.cloudflareinsights\.com)([^;]*);")
+    r"(script-src 'self')([^;]*);")
 
 
 def hashes_for(html):

@@ -61,36 +61,24 @@ HTTPS_SCRIPT = '''<script>
 
 BOOT_SCRIPT = '''<script>
 (function () {
-  var d = document.documentElement, t = null, p = null;
-  try {
-    t = localStorage.getItem("tavz-theme");
-    p = localStorage.getItem("tavz-palette");
-  } catch (e) {}
-  // never trust stored values verbatim
-  if (t !== "dark" && t !== "light") t = null;
-  if (["blue", "green", "slate", "ocean", "rainbow"].indexOf(p) === -1) p = "green";
-  d.classList.add("js");
-  d.setAttribute("data-theme", t || "light");
-  d.setAttribute("data-palette", p);
+  /* Nothing is stored, so there is no saved theme to read before first paint.
+     The defaults live on <html> in the markup; this only records that
+     JavaScript is available, which the CSS uses to enable progressive bits. */
+  document.documentElement.classList.add("js");
 })();
 </script>'''
 
-BEACON = ('<!-- Cloudflare Web Analytics. Privacy-friendly and cookie-free: the numbers go\n'
-          '     to the Cloudflare dashboard, not onto this page. The token is public. -->\n'
-          '<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" '
-          'data-cf-beacon=\'{"token": "eeb96636c3c5427fbb1f63b306a78fee"}\'></script>')
-
 CSP = ('<meta http-equiv="Content-Security-Policy" content="default-src \'self\'; '
        'base-uri \'self\'; object-src \'none\'; form-action \'none\'; '
-       'script-src \'self\' https://static.cloudflareinsights.com {hashes}; '
+       'script-src \'self\' {hashes}; '
        'style-src \'self\' \'unsafe-inline\'; font-src \'self\'; img-src \'self\' data:; '
-       'connect-src \'self\' https://cloudflareinsights.com; upgrade-insecure-requests" />')
+       'connect-src \'none\'; upgrade-insecure-requests" />')
 
 
 def head(title, description, canonical, jsonld):
     """The <head> for a page one directory below the site root."""
     return u'''<!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light" data-palette="green">
 <head>
 <meta charset="utf-8" />
 
@@ -204,6 +192,29 @@ def chrome_open(active):
 </header>
 
 <!-- Machine-translation notice (only shown when a translation is active) -->
+<div class="cdlg" id="mailNotice" hidden>
+  <div class="cdlg__veil" data-cdlg-close></div>
+  <div class="cdlg__box" role="dialog" aria-modal="true" aria-labelledby="mailNoticeTitle" aria-describedby="mailNoticeBody">
+    <h2 class="cdlg__title" id="mailNoticeTitle">Before you write</h2>
+    <div class="cdlg__body" id="mailNoticeBody">
+      <p>This opens your own email app. Nothing is sent from this website, and this website collects nothing about you.</p>
+      <ul>
+        <li>I receive what you choose to send &mdash; usually your name, your email address and what you want to build.</li>
+        <li>I keep it to reply and to quote the work. Enquiries that do not become projects are deleted after two years.</li>
+        <li>It is never sold, shared or added to a mailing list.</li>
+        <li>Ask me at any time what I hold, and I will send it or delete it.</li>
+      </ul>
+      <p class="cdlg__age"><strong>You must be 18 or over.</strong> I do not take on projects from minors, so please do not send an email if you are under 18.</p>
+      <p class="cdlg__fine">My email provider handles the message in transit, as it would any email.</p>
+    </div>
+    <div class="cdlg__actions">
+      <a class="btn btn--primary cdlg__go" id="mailNoticeGo" href="#">Continue to email</a>
+      <button type="button" class="btn btn--ghost cdlg__cancel" data-cdlg-close>Cancel</button>
+    </div>
+    <a class="cdlg__more" id="mailNoticeMore" href="../privacy/index.html">Read the full privacy policy</a>
+  </div>
+</div>
+
 <div class="tnote" id="transNote" hidden>
   <div class="container tnote__inner">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 21 20H3l9-16.5Z"/><path d="M12 10v4M12 17h.01"/></svg>
@@ -272,10 +283,9 @@ CHROME_CLOSE = u'''</main>
 <script src="../i18n.js" defer></script>
 <script src="../script.js" defer></script>
 
-{beacon}
 </body>
 </html>
-'''.format(brand=BRAND_SVG, mailto=MAILTO, ig=INSTAGRAM, beacon=BEACON)
+'''.format(brand=BRAND_SVG, mailto=MAILTO, ig=INSTAGRAM)
 
 
 def cta_block(title, sub):

@@ -3548,3 +3548,42 @@ h1, h2, h3 {
 /* the case-study situation list reuses .prob; there is no index number there */
 .split__list { border-top: 1px solid var(--line); }
 .split__list .prob { padding-inline: 4px; }
+
+/* ---------------------------------------------------------------------------
+   16. Pre-email notice
+   Shown before an email link opens, so the disclosure arrives at the moment
+   something is actually about to be handed over. Motion is switched off under
+   prefers-reduced-motion like everything else.
+--------------------------------------------------------------------------- */
+.cdlg { position: fixed; inset: 0; z-index: 120; display: grid; place-items: center;
+  padding: clamp(16px, 4vw, 32px); }
+.cdlg[hidden] { display: none; }
+.cdlg__veil { position: absolute; inset: 0; background: rgba(9, 18, 14, .58);
+  backdrop-filter: blur(3px); animation: cdlgFade .18s ease both; }
+.cdlg__box { position: relative; width: min(560px, 100%); max-height: 88vh; overflow: auto;
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);
+  padding: clamp(22px, 4vw, 34px); animation: cdlgRise .22s cubic-bezier(.2, .7, .3, 1) both; }
+.cdlg__title { margin: 0 0 12px; font-family: var(--font-display); font-weight: 800;
+  font-size: clamp(1.3rem, 3.4vw, 1.6rem); letter-spacing: -.02em; color: var(--fg); }
+.cdlg__body p { margin: 0 0 14px; color: var(--fg-2); line-height: 1.6; }
+.cdlg__body ul { margin: 0 0 14px; padding-inline-start: 1.15em; list-style: disc;
+  color: var(--fg-2); }
+.cdlg__body li { margin-bottom: 8px; line-height: 1.55; }
+.cdlg__body li::marker { color: var(--accent); }
+.cdlg__fine { font-size: .92rem; }
+.cdlg__age { margin: 0 0 14px; padding: 12px 14px; border-radius: 12px;
+  background: var(--accent-soft); color: var(--fg); line-height: 1.55; font-size: .96rem; }
+.cdlg__age strong { color: var(--fg); font-weight: 750; }
+.cdlg__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+.cdlg__actions .btn { flex: 1 1 auto; justify-content: center; text-align: center; }
+.cdlg__more { display: inline-block; margin-top: 16px; color: var(--accent);
+  font-weight: 600; font-size: .95rem; }
+
+@keyframes cdlgFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes cdlgRise { from { opacity: 0; transform: translateY(14px) scale(.985); }
+                      to   { opacity: 1; transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .cdlg__veil, .cdlg__box { animation: none; }
+}
