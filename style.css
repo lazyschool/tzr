@@ -2471,11 +2471,24 @@ h1, h2, h3 {
   letter-spacing: -.015em;
 }
 .prose > h2:first-child { margin-top: 0; }
+.prose h3 {
+  margin: clamp(22px, 3.2vw, 32px) 0 9px;
+  font-family: var(--font-display);
+  font-weight: 750;
+  font-size: clamp(1.06rem, 2.1vw, 1.22rem);
+  line-height: 1.25;
+  letter-spacing: -.01em;
+  color: var(--fg);
+}
 .prose p { margin: 0 0 17px; color: var(--fg-2); }
 .prose strong { color: var(--fg); font-weight: 650; }
 
 .prose ul,
 .prose ol { margin: 0 0 20px; padding-inline-start: 1.15em; color: var(--fg-2); }
+/* the global reset strips markers; prose lists want them back, which is why
+   ::marker is styled just below */
+.prose ul { list-style: disc; }
+.prose ol { list-style: decimal; }
 .prose li { margin-bottom: 10px; }
 .prose li::marker { color: var(--accent); font-weight: 700; }
 

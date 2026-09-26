@@ -14,7 +14,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from content import CASE_STUDIES, ARTICLES, ARTICLE_TAGS  # noqa: E402
+from content import CASE_STUDIES, ARTICLES, PRIVACY, ARTICLE_TAGS  # noqa: E402
 from mocks import mock_for  # noqa: E402
 import nav  # noqa: E402
 
@@ -246,6 +246,7 @@ CHROME_CLOSE = u'''</main>
       <a href="../articles/index.html">Articles</a>
       <a href="../index.html#about">About</a>
       <a href="../index.html#contact">Contact</a>
+      <a href="../privacy/index.html">Privacy</a>
     </nav>
 
     <div class="footer__social">
@@ -635,6 +636,8 @@ def render_blocks(blocks):
     for kind, value in blocks:
         if kind == "h2":
             out.append(u"    <h2>%s</h2>\n" % value)
+        elif kind == "h3":
+            out.append(u"    <h3>%s</h3>\n" % value)
         elif kind == "p":
             out.append(u"    <p>%s</p>\n" % value)
         elif kind == "quote":
@@ -714,6 +717,40 @@ def article_page(art, others):
 
     out.append(cta_block("Got an idea you've been sitting on?",
                          "Book a free call. Worst case, you walk away with free advice on what to build first."))
+    out.append(CHROME_CLOSE)
+    return "".join(out)
+
+
+def privacy_page():
+    """A legal page still has to render, theme and work with JS off like the rest."""
+    jsonld = u'''{{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Privacy Policy",
+  "description": "{summary}",
+  "url": "{site}/privacy/index.html",
+  "dateModified": "{updated}",
+  "publisher": {{ "@type": "Organization", "name": "Tavzuran" }},
+  "inLanguage": "en"
+}}'''.format(summary=PRIVACY["summary"], site=SITE, updated=PRIVACY["updated"])
+
+    out = [head("Privacy Policy | Tavzuran", PRIVACY["summary"],
+                "%s/privacy/index.html" % SITE, jsonld),
+           chrome_open("")]
+
+    meta = (u'    <p class="phero__meta reveal" data-reveal style="--d:.14s">\n'
+            u'      <span>Last updated</span>\n'
+            u'      <span aria-hidden="true">&middot;</span>\n'
+            u'      <time datetime="{d}">{label}</time>\n'
+            u'    </p>\n').format(d=PRIVACY["updated"], label=PRIVACY["updated_label"])
+    out.append(page_hero("LEGAL", "Privacy Policy", PRIVACY["summary"], "", meta=meta))
+
+    out.append(u'<section class="section section--read">\n  <div class="container prose">\n')
+    out.append(render_blocks(PRIVACY["body"]))
+    out.append(u'  </div>\n</section>\n\n')
+
+    out.append(cta_block("Still want to talk?",
+                         "Email me. Nothing on this page makes that harder."))
     out.append(CHROME_CLOSE)
     return "".join(out)
 
@@ -840,6 +877,12 @@ def build_sitemap():
                 '    <changefreq>monthly</changefreq>',
                 '    <priority>0.8</priority>',
                 '  </url>']
+    out += ['  <url>',
+            '    <loc>%s/privacy/index.html</loc>' % SITE,
+            '    <changefreq>yearly</changefreq>',
+            '    <priority>0.3</priority>',
+            '  </url>']
+
     for cs in CASE_STUDIES:
         out += ['  <url>',
                 '    <loc>%s/case-studies/%s.html</loc>' % (SITE, cs["slug"]),
@@ -954,6 +997,8 @@ def main():
     for i, art in enumerate(ARTICLES):
         others = ARTICLES[i + 1:] + ARTICLES[:i]
         write("articles/%s.html" % art["slug"], article_page(art, others[:3]))
+
+    write("privacy/index.html", privacy_page())
 
     build_sitemap()
     build_hreflang()
