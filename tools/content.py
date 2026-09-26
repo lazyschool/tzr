@@ -1659,7 +1659,7 @@ CASE_STUDIES = [
             ("Type", "Static catalogue site"),
             ("Build time", "4–6 weeks"),
             ("Running cost", "Domain + mailbox only"),
-            ("Starts at", "₹40,000*"),
+            ("Starts at", "₹20,000*"),
         ],
         "pains": [
             "The catalogue only exists as Instagram posts and WhatsApp photos",
@@ -2765,3 +2765,117 @@ def _words(article):
 
 for _a in ARTICLES:
     _a["read"] = "%d min read" % max(3, round(_words(_a) / 200.0))
+
+# ---------------------------------------------------------------------------
+# PRIVACY POLICY
+#
+# Written against what the site does, not against a template. If the site
+# gains a form, a cookie or a second third-party request, this has to change
+# in the same commit.
+# ---------------------------------------------------------------------------
+PRIVACY = {
+    "updated": "2026-09-26",
+    "updated_label": "26 September 2026",
+    "summary": ("What this website collects, what happens when you email, and who "
+                "else is involved. It is short because the site does very little."),
+    "body": [
+        ("p", "This policy covers <strong>tavzuran.com</strong> and the email and "
+              "Instagram conversations that start from it. Tavzuran is a one-person "
+              "software studio run by Adil, based in Lucknow, India."),
+
+        ("h2", "The short version"),
+        ("ul", [
+            "The website sets <strong>no cookies</strong> and has <strong>no forms</strong>. "
+            "Nothing you type is sent anywhere, because there is nothing to type into.",
+            "One outbound request is made, to Cloudflare Web Analytics, so I can see how "
+            "many people visit. It sets no cookies and does not follow you between sites.",
+            "Your theme, palette and language choices are stored in your own browser and "
+            "never leave it.",
+            "If you email or message me, I keep that conversation so I can reply to it. "
+            "I do not add you to a mailing list and I do not sell or share anything.",
+        ]),
+
+        ("h2", "What the website itself collects"),
+        ("p", "Nothing that identifies you, directly. There is no contact form, no "
+              "newsletter signup, no login, no chat widget and no advertising or "
+              "social tracking pixel. Fonts are served from this site rather than from "
+              "Google Fonts, so loading a page does not tell anyone else that you did."),
+        ("p", "Two things are worth naming precisely."),
+        ("h3", "Analytics"),
+        ("p", "The site loads <strong>Cloudflare Web Analytics</strong>. It is "
+              "cookieless: it does not store anything on your device, does not "
+              "fingerprint your browser, and cannot follow you to other websites. To "
+              "count a visit at all it necessarily processes your IP address, which "
+              "under GDPR counts as personal data. Cloudflare does not retain it as part "
+              "of the analytics record. I use it to know whether anyone is reading, and "
+              "for nothing else. The lawful basis is legitimate interest: understanding "
+              "whether a small marketing site is working, with the least intrusive tool "
+              "I could find."),
+        ("h3", "Your browser preferences"),
+        ("p", "Choosing a theme, a colour, or a language saves that choice in your "
+              "browser&rsquo;s local storage, under keys beginning <code>tavz-</code>. "
+              "This is not a cookie, it is never transmitted, and I cannot read it. "
+              "Clearing your browser data removes it. Because these are set by your own "
+              "click and exist only to remember what you asked for, no consent banner is "
+              "required for them &mdash; and I would rather not put one in your way."),
+
+        ("h2", "What happens when you contact me"),
+        ("p", "Every button on this site opens your own email client or Instagram. "
+              "Nothing is submitted through the website. When you do write, I receive "
+              "whatever you send &mdash; typically your name, your email address or "
+              "Instagram handle, and what you want to build."),
+        ("ul", [
+            "<strong>Why I keep it.</strong> To reply, to quote the work, and to carry "
+            "out the project if we go ahead.",
+            "<strong>How long.</strong> Enquiries that do not become projects are kept "
+            "for up to two years, in case you come back. Project correspondence is kept "
+            "for as long as the work and any tax record require, then deleted.",
+            "<strong>Who else sees it.</strong> My email is hosted by a mail provider, "
+            "and Instagram messages sit on Meta&rsquo;s servers under their own policy. "
+            "Nobody else. I do not use your project as a case study, or name you "
+            "anywhere, without asking you first.",
+        ]),
+        ("p", "If we work together, I may end up handling data belonging to "
+              "<em>your</em> users while building or fixing your software. In that "
+              "arrangement you are the data controller and I am acting on your "
+              "instructions; it is covered by our agreement for the project, not by "
+              "this page."),
+
+        ("h2", "What I never do"),
+        ("ul", [
+            "Sell, rent or trade your details.",
+            "Add you to a mailing list because you once enquired.",
+            "Run advertising, retargeting or social tracking pixels.",
+            "Use dark patterns to extract a contact detail you did not mean to give.",
+        ]),
+
+        ("h2", "Your rights"),
+        ("p", "Wherever you are, you can ask me what I hold about you, ask for it to be "
+              "corrected, or ask me to delete it. Email "
+              "<a href=\"mailto:adil@tavzuran.com\">adil@tavzuran.com</a> and I will "
+              "answer within 30 days. There is no form and no fee."),
+        ("p", "If you are in the <strong>UK or the EU</strong>, the UK GDPR and GDPR give "
+              "you rights of access, rectification, erasure, restriction, portability and "
+              "objection, and a right to complain to your national data protection "
+              "authority. If you are in <strong>India</strong>, the Digital Personal Data "
+              "Protection Act 2023 gives you rights of access, correction, erasure and "
+              "grievance redressal; I am the Data Fiduciary and the contact above is the "
+              "point for any grievance."),
+        ("p", "Because this site has no accounts, I usually hold nothing about you at all "
+              "unless you have written to me."),
+
+        ("h2", "Children"),
+        ("p", "This is a site about commissioning software. It is not directed at "
+              "children and I do not knowingly collect anything from anyone under 18."),
+
+        ("h2", "Changes"),
+        ("p", "If the site gains a form, a cookie, or a second third-party service, this "
+              "page changes before that ships, and the date below changes with it. This "
+              "is the first version."),
+
+        ("h2", "Contact"),
+        ("p", "Adil &middot; Tavzuran &middot; Lucknow, Uttar Pradesh, India<br />"
+              "<a href=\"mailto:adil@tavzuran.com\">adil@tavzuran.com</a> &middot; "
+              "<a href=\"https://instagram.com/tavzuran\" rel=\"noopener\">@tavzuran</a>"),
+    ],
+}

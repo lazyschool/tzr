@@ -22,6 +22,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://tavzuran.com/privacy/index.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://tavzuran.com/case-studies/restaurant-ordering-app.html</loc>
     <priority>0.7</priority>
   </url>

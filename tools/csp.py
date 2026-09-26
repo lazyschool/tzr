@@ -43,7 +43,8 @@ def hashes_for(html):
 def main():
     pages = ([os.path.join(ROOT, 'index.html')]
              + sorted(glob.glob(os.path.join(ROOT, 'case-studies', '*.html')))
-             + sorted(glob.glob(os.path.join(ROOT, 'articles', '*.html'))))
+             + sorted(glob.glob(os.path.join(ROOT, 'articles', '*.html')))
+             + sorted(glob.glob(os.path.join(ROOT, 'privacy', '*.html'))))
 
     for page in pages:
         with io.open(page, encoding='utf-8') as fh:

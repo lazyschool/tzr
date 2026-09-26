@@ -260,4 +260,5 @@ window.TAVZ_I18N["el"] = {
   "· 7 min read": "· 7 λεπτά ανάγνωσης",
   "Language": "Γλώσσα",
   "Adil, founder of Tavzuran": "Ο Adil, ιδρυτής της Tavzuran",
+  "Privacy": "Απόρρητο",
 };

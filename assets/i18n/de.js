@@ -260,4 +260,5 @@ window.TAVZ_I18N["de"] = {
   "· 7 min read": "· 7 Min. Lesezeit",
   "Language": "Sprache",
   "Adil, founder of Tavzuran": "Adil, Gründer von Tavzuran",
+  "Privacy": "Datenschutz",
 };
