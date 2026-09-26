@@ -143,18 +143,15 @@ const CONFIG = {
     document.head.appendChild(el);
   }
 
-  function dismissedNotes() {
-    try {
-      return (localStorage.getItem("tavz-note-ok") || "").split(",").filter(Boolean);
-    } catch (e) { return []; }
-  }
+  // Nothing is written to the visitor's device, so a dismissal lasts as long as
+  // the page does. The notice discloses that a machine translated this view;
+  // disclosing it on every view is the honest end of that trade.
+  const dismissed = [];
   function isNoteDismissed(code) {
-    return dismissedNotes().indexOf(code) !== -1;
+    return dismissed.indexOf(code) !== -1;
   }
   function dismissNote(code) {
-    const list = dismissedNotes();
-    if (list.indexOf(code) === -1) list.push(code);
-    try { localStorage.setItem("tavz-note-ok", list.join(",")); } catch (e) { /* private mode */ }
+    if (dismissed.indexOf(code) === -1) dismissed.push(code);
   }
 
   function applyLang(code) {
@@ -205,7 +202,14 @@ const CONFIG = {
       sel.setAttribute("aria-label", I18N.selectorLabel[code] || "Language");
     }
 
-    try { localStorage.setItem("tavz-lang", code); } catch (e) { /* private mode */ }
+    // keep the choice in the address bar instead of on the device, so a reload
+    // or a shared link lands on the same language
+    try {
+      const url = new URL(window.location.href);
+      if (code === "en") url.searchParams.delete("lang");
+      else url.searchParams.set("lang", code);
+      window.history.replaceState(null, "", url.toString());
+    } catch (e) { /* older browser: the choice simply lasts this page */ }
 
     // keep the URL shareable without reloading
     try {
@@ -265,14 +269,12 @@ const CONFIG = {
       });
     }
 
-    // ?lang= wins, then a saved choice. English stays the default: it is the
-    // authentic version, so we never guess from browser language.
+    // ?lang= is the only source. English stays the default: it is the authentic
+    // version, so we never guess from browser language and never store a choice.
     let start = "en";
     try {
       const q = new URLSearchParams(window.location.search).get("lang");
-      const saved = localStorage.getItem("tavz-lang");
       if (q && SUPPORTED.indexOf(q) !== -1) start = q;
-      else if (saved && SUPPORTED.indexOf(saved) !== -1) start = saved;
     } catch (e) { /* noop */ }
     if (start !== "en") applyLang(start);
     else if (sel) sel.value = "en";
@@ -285,28 +287,13 @@ const CONFIG = {
   const PALETTES = ["blue", "green", "slate", "ocean", "rainbow"];
   const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
-  function store(key, value) {
-    try {
-      if (value === null) localStorage.removeItem(key);
-      else localStorage.setItem(key, value);
-    } catch (e) { /* private mode */ }
-  }
-  function read(key) {
-    try { return localStorage.getItem(key); } catch (e) { return null; }
-  }
-
-  // The default appearance is green on light, whatever the operating system
-  // says. "System" is still on offer and, once chosen, is stored as the absence
-  // of a value so it keeps following the OS rather than freezing.
-  function storedMode() {
-    const t = read("tavz-theme");
-    if (t === "dark" || t === "light") return t;
-    return read("tavz-mode") === "system" ? "system" : "light";
-  }
-  function storedPalette() {
-    const p = read("tavz-palette");
-    return PALETTES.indexOf(p) === -1 ? "green" : p;
-  }
+  // Preferences last as long as the page and are never written anywhere. The
+  // defaults are green on light, set on <html> in the markup so the first paint
+  // is already correct; "System" still follows the OS while it is selected.
+  let currentMode = "light";
+  let currentPalette = "green";
+  function storedMode() { return currentMode; }
+  function storedPalette() { return currentPalette; }
 
   function applyMode(mode) {
     const resolved = mode === "system"
@@ -351,15 +338,14 @@ const CONFIG = {
     $$(".appear__mode", appearPanel).forEach(function (b) {
       b.addEventListener("click", function () {
         const mode = b.getAttribute("data-mode");
-        store("tavz-theme", mode === "system" ? null : mode);
-        store("tavz-mode", mode === "system" ? "system" : null);
+        currentMode = mode;
         applyMode(mode);
       });
     });
     $$(".appear__sw", appearPanel).forEach(function (b) {
       b.addEventListener("click", function () {
         const name = b.getAttribute("data-palette");
-        store("tavz-palette", name);
+        currentPalette = name;
         applyPalette(name);
       });
     });
@@ -676,4 +662,73 @@ const CONFIG = {
       });
     }
   }
+
+  /* ---------------------------------------------------------------
+     10. Pre-email notice
+     Every route to my inbox passes through here first. The anchors stay
+     real mailto links, so with JavaScript off they simply work; this only
+     adds a step when it can, and never records that it was shown.
+  --------------------------------------------------------------- */
+  (function () {
+    const dlg = document.getElementById("mailNotice");
+    if (!dlg) return;
+    const go = document.getElementById("mailNoticeGo");
+    const box = dlg.querySelector(".cdlg__box");
+    let opener = null;
+
+    function focusables() {
+      return Array.prototype.filter.call(
+        dlg.querySelectorAll('a[href], button:not([disabled])'),
+        function (el) { return el.offsetParent !== null; });
+    }
+
+    function close() {
+      dlg.hidden = true;
+      document.documentElement.style.overflow = "";
+      if (opener && opener.focus) opener.focus();
+      opener = null;
+    }
+
+    function open(href, from) {
+      opener = from;
+      go.href = href;
+      dlg.hidden = false;
+      document.documentElement.style.overflow = "hidden";
+      const first = focusables()[0];
+      if (first) first.focus();
+    }
+
+    // intercept only the links that open a mail client; a booking URL or an
+    // Instagram profile hands nothing over and needs no warning
+    document.addEventListener("click", function (e) {
+      const a = e.target.closest ? e.target.closest("a[href^='mailto:']") : null;
+      if (!a) return;
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+      e.preventDefault();
+      open(a.getAttribute("href"), a);
+    });
+
+    dlg.addEventListener("click", function (e) {
+      if (e.target.closest("[data-cdlg-close]")) { e.preventDefault(); close(); }
+    });
+
+    go.addEventListener("click", function () {
+      // let the navigation happen, then put the page back as it was
+      window.setTimeout(close, 0);
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (dlg.hidden) return;
+      if (e.key === "Escape") { e.preventDefault(); close(); return; }
+      if (e.key !== "Tab") return;
+      const items = focusables();
+      if (!items.length) return;
+      const first = items[0], last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    });
+
+    if (box) box.addEventListener("click", function (e) { e.stopPropagation(); });
+  })();
+
 })();

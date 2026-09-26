@@ -2774,10 +2774,10 @@ for _a in ARTICLES:
 # in the same commit.
 # ---------------------------------------------------------------------------
 PRIVACY = {
-    "updated": "2026-09-26",
-    "updated_label": "26 September 2026",
+    "updated": "2026-09-27",
+    "updated_label": "27 September 2026",
     "summary": ("What this website collects, what happens when you email, and who "
-                "else is involved. It is short because the site does very little."),
+                "else is involved. It is short because the site does almost nothing."),
     "body": [
         ("p", "This policy covers <strong>tavzuran.com</strong> and the email and "
               "Instagram conversations that start from it. Tavzuran is a one-person "
@@ -2785,55 +2785,59 @@ PRIVACY = {
 
         ("h2", "The short version"),
         ("ul", [
-            "The website sets <strong>no cookies</strong> and has <strong>no forms</strong>. "
-            "Nothing you type is sent anywhere, because there is nothing to type into.",
-            "One outbound request is made, to Cloudflare Web Analytics, so I can see how "
-            "many people visit. It sets no cookies and does not follow you between sites.",
-            "Your theme, palette and language choices are stored in your own browser and "
-            "never leave it.",
+            "The website collects <strong>nothing</strong>. No forms, no cookies, no "
+            "analytics, no tracking of any kind.",
+            "It makes <strong>no requests to anyone else</strong>. Fonts, styles, "
+            "scripts and images all come from this domain, so loading a page tells no "
+            "third party that you did.",
+            "Nothing is stored on your device &mdash; no cookies, no local storage, "
+            "nothing. Your theme and language choices last only while the page is open.",
             "If you email or message me, I keep that conversation so I can reply to it. "
             "I do not add you to a mailing list and I do not sell or share anything.",
         ]),
 
         ("h2", "What the website itself collects"),
-        ("p", "Nothing that identifies you, directly. There is no contact form, no "
-              "newsletter signup, no login, no chat widget and no advertising or "
-              "social tracking pixel. Fonts are served from this site rather than from "
-              "Google Fonts, so loading a page does not tell anyone else that you did."),
-        ("p", "Two things are worth naming precisely."),
-        ("h3", "Analytics"),
-        ("p", "The site loads <strong>Cloudflare Web Analytics</strong>. It is "
-              "cookieless: it does not store anything on your device, does not "
-              "fingerprint your browser, and cannot follow you to other websites. To "
-              "count a visit at all it necessarily processes your IP address, which "
-              "under GDPR counts as personal data. Cloudflare does not retain it as part "
-              "of the analytics record. I use it to know whether anyone is reading, and "
-              "for nothing else. The lawful basis is legitimate interest: understanding "
-              "whether a small marketing site is working, with the least intrusive tool "
-              "I could find."),
-        ("h3", "Your browser preferences"),
-        ("p", "Choosing a theme, a colour, or a language saves that choice in your "
-              "browser&rsquo;s local storage, under keys beginning <code>tavz-</code>. "
-              "This is not a cookie, it is never transmitted, and I cannot read it. "
-              "Clearing your browser data removes it. Because these are set by your own "
-              "click and exist only to remember what you asked for, no consent banner is "
-              "required for them &mdash; and I would rather not put one in your way."),
+        ("p", "Nothing at all. There is no contact form, no newsletter signup, no "
+              "login, no chat widget, no advertising or social tracking pixel, and no "
+              "analytics &mdash; not even the privacy-preserving kind. I do not know "
+              "how many people visit this site, which pages they read, or where they "
+              "came from, and I have decided that is an acceptable price."),
+        ("p", "Because there are no third-party requests, no other company learns that "
+              "you visited. Fonts are served from this domain rather than from Google "
+              "Fonts for exactly that reason."),
+
+        ("h3", "Nothing is stored on your device"),
+        ("p", "The site sets no cookies and writes nothing to local storage. Choosing a "
+              "theme, a colour or a language changes the page in front of you and is "
+              "forgotten the moment you leave it. A language choice is added to the web "
+              "address instead, so reloading or sharing the link keeps it &mdash; that "
+              "is in the URL you can see, not hidden on your device."),
+        ("p", "One consequence worth knowing: the notice explaining that a page was "
+              "machine-translated appears every time you switch language, because there "
+              "is nowhere to record that you have already dismissed it."),
+        ("p", "There is no consent banner on this site. Consent banners exist because "
+              "of cookies and tracking. There are none here, so there is nothing to "
+              "ask you to agree to."),
 
         ("h2", "What happens when you contact me"),
         ("p", "Every button on this site opens your own email client or Instagram. "
-              "Nothing is submitted through the website. When you do write, I receive "
-              "whatever you send &mdash; typically your name, your email address or "
-              "Instagram handle, and what you want to build."),
+              "Nothing is submitted through the website. Before an email link opens, a "
+              "short notice explains what I do with what you send; you can read it and "
+              "back out, and because nothing is stored, it appears each time rather "
+              "than once."),
+        ("p", "When you do write, I receive whatever you choose to send &mdash; "
+              "typically your name, your email address or Instagram handle, and what "
+              "you want to build."),
         ("ul", [
             "<strong>Why I keep it.</strong> To reply, to quote the work, and to carry "
             "out the project if we go ahead.",
             "<strong>How long.</strong> Enquiries that do not become projects are kept "
             "for up to two years, in case you come back. Project correspondence is kept "
             "for as long as the work and any tax record require, then deleted.",
-            "<strong>Who else sees it.</strong> My email is hosted by a mail provider, "
-            "and Instagram messages sit on Meta&rsquo;s servers under their own policy. "
-            "Nobody else. I do not use your project as a case study, or name you "
-            "anywhere, without asking you first.",
+            "<strong>Who else sees it.</strong> My email provider handles the message, "
+            "as it would any email, and Instagram messages sit on Meta&rsquo;s servers "
+            "under their own policy. Nobody else. I do not use your project as a case "
+            "study, or name you anywhere, without asking you first.",
         ]),
         ("p", "If we work together, I may end up handling data belonging to "
               "<em>your</em> users while building or fixing your software. In that "
@@ -2861,17 +2865,29 @@ PRIVACY = {
               "Protection Act 2023 gives you rights of access, correction, erasure and "
               "grievance redressal; I am the Data Fiduciary and the contact above is the "
               "point for any grievance."),
-        ("p", "Because this site has no accounts, I usually hold nothing about you at all "
-              "unless you have written to me."),
+        ("p", "In practice, unless you have written to me, I hold nothing about you "
+              "whatsoever &mdash; there is no record of your visit to request."),
 
-        ("h2", "Children"),
-        ("p", "This is a site about commissioning software. It is not directed at "
-              "children and I do not knowingly collect anything from anyone under 18."),
+        ("h2", "Age &mdash; you must be 18 or over"),
+        ("p", "<strong>I do not take on projects from minors.</strong> If you are "
+              "under 18, please do not email me. The notice that appears before any "
+              "email link opens says the same thing, so that it is read before "
+              "anything is sent rather than after."),
+        ("p", "This is partly a matter of contracts &mdash; a minor cannot enter into "
+              "one for commissioned work &mdash; and partly a matter of data. India&rsquo;s "
+              "Digital Personal Data Protection Act treats anyone under 18 as a child "
+              "and requires verifiable parental consent before their data may be "
+              "processed, and the UK GDPR and GDPR set their own thresholds. Declining "
+              "the work entirely is a cleaner answer than collecting a child&rsquo;s "
+              "details in order to ask for permission to hold them."),
+        ("p", "This site is not directed at children, and I do not knowingly keep "
+              "anything from anyone under 18. If you believe a minor has written to me, "
+              "tell me at the address below and I will delete it."),
 
         ("h2", "Changes"),
-        ("p", "If the site gains a form, a cookie, or a second third-party service, this "
-              "page changes before that ships, and the date below changes with it. This "
-              "is the first version."),
+        ("p", "If the site ever gains a form, a cookie, an analytics tool or a request "
+              "to any third party, this page changes before that ships, and the date "
+              "below changes with it."),
 
         ("h2", "Contact"),
         ("p", "Adil &middot; Tavzuran &middot; Lucknow, Uttar Pradesh, India<br />"
