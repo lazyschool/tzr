@@ -2781,7 +2781,7 @@ PRIVACY = {
     "body": [
         ("p", "This policy covers <strong>tavzuran.com</strong> and the email and "
               "Instagram conversations that start from it. Tavzuran is a one-person "
-              "software studio run by Adil, based in Lucknow, India."),
+              "software studio run by Adil, based in Kanpur, India."),
 
         ("h2", "The short version"),
         ("ul", [
@@ -2890,7 +2890,7 @@ PRIVACY = {
               "below changes with it."),
 
         ("h2", "Contact"),
-        ("p", "Adil &middot; Tavzuran &middot; Lucknow, Uttar Pradesh, India<br />"
+        ("p", "Adil &middot; Tavzuran &middot; Kanpur, Uttar Pradesh, India<br />"
               "<a href=\"mailto:adil@tavzuran.com\">adil@tavzuran.com</a> &middot; "
               "<a href=\"https://instagram.com/tavzuran\" rel=\"noopener\">@tavzuran</a>"),
     ],
