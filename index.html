@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'" />
 <title>Tavzuran &mdash; back shortly</title>
-<meta name="description" content="Tavzuran is being rebuilt. Apps, websites and custom software. Email adil@tavzuran.com in the meantime." />
+<meta name="description" content="Tavzuran is being rebuilt. Apps, websites and custom software. Back shortly." />
 <link rel="canonical" href="https://tavzuran.com/" />
 <meta property="og:title" content="Tavzuran &mdash; back shortly" />
-<meta property="og:description" content="We are rebuilding. Email adil@tavzuran.com in the meantime." />
+<meta property="og:description" content="We are rebuilding. Back shortly." />
 <meta property="og:url" content="https://tavzuran.com/" />
 <meta property="og:type" content="website" />
 <style>
@@ -37,22 +37,11 @@
        letter-spacing: -.03em; font-weight: 800; }
   .tag { margin: 0 0 30px; color: var(--fg2); font-size: .82rem;
          letter-spacing: .22em; text-transform: uppercase; font-weight: 600; }
-  .card { background: var(--card); border: 1px solid var(--line);
-          border-radius: 18px; padding: clamp(22px, 5vw, 32px); text-align: left; }
-  .card p { margin: 0 0 14px; color: var(--fg2); }
-  .card p:last-of-type { margin-bottom: 0; }
-  .card strong { color: var(--fg); font-weight: 650; }
-  .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
-  .links a {
-    flex: 1 1 auto; text-align: center; padding: 12px 18px; border-radius: 999px;
-    text-decoration: none; font-weight: 650; font-size: .96rem;
-    border: 1px solid var(--line); color: var(--fg); background: transparent;
-  }
-  .links a.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-  @media (prefers-color-scheme: dark) { .links a.primary { color: #06120c; } }
-  .links a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-  /* .card p out-specifies a bare .fine, so qualify it or the top margin is lost */
-  .card p.fine { margin: 26px 0 0; font-size: .84rem; color: var(--fg2); }
+  .lead { margin: 0 auto; max-width: 42ch; color: var(--fg2); font-size: 1.04rem; }
+  .lead strong { color: var(--fg); font-weight: 650; }
+  .rule { width: 46px; height: 3px; border-radius: 3px; background: var(--accent);
+          margin: 30px auto; opacity: .85; }
+  .fine { margin: 0 auto; max-width: 44ch; font-size: .84rem; color: var(--fg2); }
 </style>
 </head>
 <body>
@@ -61,22 +50,13 @@
   <h1>We&rsquo;re rebuilding.</h1>
   <p class="tag">Back shortly</p>
 
-  <div class="card">
-    <p><strong>Tavzuran builds apps, websites and custom software.</strong> The site is
-      being rebuilt, so there is not much to look at for a little while.</p>
-    <p>The work carries on in the meantime &mdash; if you have something you want built,
-      write to me and we can talk it through properly.</p>
+  <p class="lead"><strong>Tavzuran builds apps, websites and custom software.</strong>
+    The site is being rebuilt and will be back before long.</p>
 
-    <div class="links">
-      <a class="primary" href="mailto:adil@tavzuran.com?subject=Project%20enquiry%20-%20Tavzuran">Email me</a>
-      <a href="https://instagram.com/tavzuran" rel="noopener noreferrer">@tavzuran</a>
-    </div>
+  <div class="rule" aria-hidden="true"></div>
 
-    <p class="fine">This page collects nothing &mdash; no cookies, no analytics, no
-      third-party requests. If you email, I keep that message only to reply to it, and
-      never pass it on. Please do not write if you are under 18; I do not take on
-      projects from minors.</p>
-  </div>
+  <p class="fine">This page collects nothing &mdash; no cookies, no analytics, no
+    third-party requests.</p>
 </main>
 </body>
 </html>
