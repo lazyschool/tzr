@@ -405,6 +405,9 @@
              the existing translations cover them. Decorative: aria-hidden. -->
         <div class="hero__art reveal" data-reveal style="--d:.3s" aria-hidden="true">
           <svg class="drawing" viewBox="0 0 430 560" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <!-- a slight hand tremor on the line-work; the labels stay crisp -->
+            <defs><filter id="tremor" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".012" numOctaves="1" seed="7"/><feDisplacementMap in="SourceGraphic" scale="7" xChannelSelector="R" yChannelSelector="G"/></filter></defs>
+            <g filter="url(#tremor)">
             <rect class="trace" pathLength="1" x="150" y="62" width="190" height="390" rx="22"/>
             <rect class="soft" x="160" y="72" width="170" height="370" rx="14" stroke-width="1" opacity=".55"/>
             <path d="M222 84h46" stroke-width="3"/>
@@ -422,6 +425,7 @@
             <!-- call-outs -->
             <g stroke-width="1"><path d="M178 124 96 88H58"/><path d="M276 168 370 124"/><path d="M189 251 100 292H58"/><path d="M245 401 110 432H58"/></g>
             <g><circle class="paper-f" cx="44" cy="88" r="13"/><circle class="paper-f" cx="384" cy="118" r="13"/><circle class="paper-f" cx="44" cy="292" r="13"/><circle class="paper-f" cx="44" cy="432" r="13"/></g>
+            </g>
             <g stroke="none" text-anchor="middle"><text class="num" x="44" y="92">1</text><text class="num" x="384" y="122">2</text><text class="num" x="44" y="296">3</text><text class="num" x="44" y="436">4</text></g>
             <g stroke="none"><text class="lbl" x="30" y="64">IDEA</text><text class="lbl" x="350" y="96">BUILD</text><text class="lbl" x="30" y="324">USERS</text><text class="lbl" x="30" y="464">SCALE</text></g>
           </svg>
