@@ -135,6 +135,16 @@
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --hand: "Caveat", "Segoe Print", "Bradley Hand", cursive;
 
+
+  /* Hand-drawn lines: a 310px wobbly stroke, inked twice, tiled along an
+     edge. Used as a mask, so the line takes whatever colour sits behind it
+     and follows the theme. Data URIs only; nothing is fetched. */
+  --sk-h: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='310' height='9' viewBox='0 0 310 9'%3E%3Cpath d='M0 4.5C22 2.6 41 6.6 70 4.9S118 1.9 150 4.1 196 7.4 228 5.2 281 2.4 310 4.5' fill='none' stroke='black' stroke-width='1.7' stroke-linecap='round'/%3E%3Cpath d='M0 5.6C35 7.2 66 3.4 104 5.9S171 7.6 205 4.6 268 3.3 310 5.6' fill='none' stroke='black' stroke-width='.9' stroke-opacity='.6'/%3E%3C/svg%3E");
+  --sk-v: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='310' viewBox='0 0 9 310'%3E%3Cpath d='M4.5 0C2.6 22 6.6 41 4.9 70S1.9 118 4.1 150 7.4 196 5.2 228 2.4 281 4.5 310' fill='none' stroke='black' stroke-width='1.7' stroke-linecap='round'/%3E%3Cpath d='M5.6 0C7.2 35 3.4 66 5.9 104S7.6 171 4.6 205 3.3 268 5.6 310' fill='none' stroke='black' stroke-width='.9' stroke-opacity='.6'/%3E%3C/svg%3E");
+  --sk-top: var(--sk-h) left top / 310px 9px repeat-x;
+  --sk-bottom: var(--sk-h) left bottom / 310px 9px repeat-x;
+  --sk-left: var(--sk-v) left top / 9px 310px repeat-y;
+  --sk-right: var(--sk-v) right top / 9px 310px repeat-y;
   --nav-h: 64px;
   --maxw: 1320px;
   --pad: 16px;
@@ -452,6 +462,97 @@ a.link-arrow:hover span[aria-hidden], a:hover .link-arrow span[aria-hidden] { tr
 }
 .cards__foot, .ind__foot { margin-top: 26px; color: var(--ink-2); }
 .cards__foot .link-arrow, .ind__foot .link-arrow { margin-inline-start: .5em; }
+
+/* ------------------------ 5b. HAND-DRAWN LINES ------------------------ */
+/* Every frame and rule is redrawn by hand: the real border keeps its width
+   so nothing moves, turns transparent, and a pseudo-element draws a wobbly
+   double-inked line in its place. Lines overshoot the corners by a few
+   pixels, as a quick pen stroke does. Text is never distorted. */
+
+/* full frames */
+.btn, .icon-btn, .burger, .lang, .chip, .tl__num, .appear__mode, .appear__sw,
+.hero__sheet, .mvp__panel, .price, .proj, .post-card.post-card--sheet, .mockwrap, .note,
+.footer__inner, .nd__panel, .appear__panel, .cdlg__box, .mobile-bar__ig, .tnote__link, .tnote__ok {
+  position: relative;
+  border-color: transparent !important;
+}
+.btn::after, .icon-btn::after, .burger::after, .lang::after, .chip::after, .tl__num::after,
+.appear__mode::after, .appear__sw::after,
+.hero__sheet::after, .mvp__panel::after, .price::after, .proj::after, .post-card.post-card--sheet::after,
+.mockwrap::after, .note::after, .footer__inner::after, .nd__panel::after, .appear__panel::after,
+.cdlg__box::after, .mobile-bar__ig::after, .tnote__link::after, .tnote__ok::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  pointer-events: none;
+  background: var(--sk-c, var(--ink));
+  -webkit-mask: var(--sk-top), var(--sk-bottom), var(--sk-left), var(--sk-right);
+  mask: var(--sk-top), var(--sk-bottom), var(--sk-left), var(--sk-right);
+}
+/* the dashed callout keeps its marker colour */
+.note--flag::after { --sk-c: var(--accent); }
+/* a pressed swatch or mode button: the frame is inked in the theme colour */
+.appear__mode[aria-pressed="true"]::after, .appear__sw[aria-pressed="true"]::after { --sk-c: var(--accent); inset: -5px; }
+.appear__sw[aria-pressed="true"] { box-shadow: none; }
+
+/* the fine inner frame of the hero sheet */
+.hero__sheet::before { border: 0; inset: 3px; background: var(--rule); -webkit-mask: var(--sk-top), var(--sk-bottom), var(--sk-left), var(--sk-right); mask: var(--sk-top), var(--sk-bottom), var(--sk-left), var(--sk-right); }
+
+/* ruled tables: the container draws its top and start edge, each cell its
+   end and bottom edge */
+.cards:not(.quotes):not(.work__grid):not(.post-grid):not(.contact__grid), .glance, .stack, .about__stats {
+  position: relative;
+  border-color: transparent !important;
+}
+.cards:not(.quotes):not(.work__grid):not(.post-grid):not(.contact__grid)::after, .glance::after, .stack::after, .about__stats::after {
+  content: ""; position: absolute; inset: -4.5px; pointer-events: none; background: var(--ink);
+  -webkit-mask: var(--sk-top), var(--sk-left); mask: var(--sk-top), var(--sk-left);
+}
+.cards:not(.quotes):not(.work__grid):not(.post-grid):not(.contact__grid) > .card, .glance__item, .stack__row, .about__stats li {
+  position: relative;
+  border-color: transparent !important;
+}
+.cards:not(.quotes):not(.work__grid):not(.post-grid):not(.contact__grid) > .card::after, .glance__item::after, .stack__row::after, .about__stats li::after {
+  content: ""; position: absolute; inset: -4.5px; pointer-events: none; background: var(--ink);
+  -webkit-mask: var(--sk-bottom), var(--sk-right); mask: var(--sk-bottom), var(--sk-right);
+}
+[dir="rtl"] :is(.cards, .glance, .stack, .about__stats)::after { -webkit-mask: var(--sk-top), var(--sk-right); mask: var(--sk-top), var(--sk-right); }
+[dir="rtl"] :is(.cards > .card, .glance__item, .stack__row, .about__stats li)::after { -webkit-mask: var(--sk-bottom), var(--sk-left); mask: var(--sk-bottom), var(--sk-left); }
+
+/* single rules along the top of a block */
+.section, .cta, .footer, .marquee, .tblock, .problem__list, .split__list, .qlist, .winlist,
+.post-grid:not(.post-grid--sheets), .flow { border-top-color: transparent !important; }
+.section::before, .cta::before, .footer::before, .marquee::before, .tblock::before, .problem__list::before,
+.split__list::before, .qlist::before, .winlist::before, .post-grid:not(.post-grid--sheets)::before, .flow::before {
+  content: ""; position: absolute; inset: -4.5px 0 auto 0; height: 9px; pointer-events: none;
+  background: var(--sk-c, var(--ink));
+  -webkit-mask: var(--sk-h) left center / 310px 9px repeat-x; mask: var(--sk-h) left center / 310px 9px repeat-x;
+}
+.footer, .marquee, .tblock, .problem__list, .split__list, .qlist, .winlist, .post-grid:not(.post-grid--sheets), .flow { position: relative; }
+.flow::before { --sk-c: var(--rule); }
+
+/* single rules along the bottom: the header and every list row */
+.nav, .prob, .t, .contact-card, .post-card:not(.post-card--sheet), .qlist li, .winlist li, .flow { border-bottom-color: transparent !important; }
+.nav::after, .prob::after, .t::after, .contact-card::after, .post-card:not(.post-card--sheet)::after,
+.qlist li::after, .winlist li::after, .flow::after {
+  content: ""; position: absolute; inset: auto 0 -4.5px 0; height: 9px; pointer-events: none;
+  background: var(--sk-c, var(--rule));
+  -webkit-mask: var(--sk-h) left center / 310px 9px repeat-x; mask: var(--sk-h) left center / 310px 9px repeat-x;
+}
+.prob, .t, .contact-card, .post-card:not(.post-card--sheet), .qlist li, .winlist li { position: relative; }
+.nav::after, .contact-card::after { --sk-c: var(--ink); }
+
+/* the sheet-number boxes on each section heading */
+.sec-head .eyebrow::before { border-color: transparent; background: var(--paper); box-shadow: none;
+  -webkit-mask: none; }
+.sec-head .eyebrow { position: relative; }
+.sec-head .eyebrow::after {
+  content: ""; position: absolute; left: -5px; top: -5px; width: 44px; height: 40px; pointer-events: none;
+  background: var(--ink);
+  -webkit-mask: var(--sk-top), var(--sk-bottom), var(--sk-left), var(--sk-right); mask: var(--sk-top), var(--sk-bottom), var(--sk-left), var(--sk-right);
+}
+[dir="rtl"] .sec-head .eyebrow::after { left: auto; right: -4px; }
+
 
 /* reveal-on-scroll — only hidden when JS is available to reveal it again */
 .js .reveal {
