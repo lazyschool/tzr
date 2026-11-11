@@ -78,7 +78,7 @@ CSP = ('<meta http-equiv="Content-Security-Policy" content="default-src \'self\'
 def head(title, description, canonical, jsonld):
     """The <head> for a page one directory below the site root."""
     return u'''<!doctype html>
-<html lang="en" data-theme="light" data-palette="orange">
+<html lang="en" data-theme="light" data-palette="green">
 <head>
 <meta charset="utf-8" />
 
@@ -178,11 +178,11 @@ def chrome_open(active):
           </div>
 
           <div class="appear__row appear__row--swatches" role="group" aria-label="Colour">
-            <button type="button" class="appear__sw" data-palette="orange" aria-label="Orange"><i></i></button>
-            <button type="button" class="appear__sw" data-palette="blue" aria-label="Blue"><i></i></button>
             <button type="button" class="appear__sw" data-palette="green" aria-label="Green"><i></i></button>
-            <button type="button" class="appear__sw" data-palette="violet" aria-label="Violet"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="blue" aria-label="Blue"><i></i></button>
             <button type="button" class="appear__sw" data-palette="slate" aria-label="Slate"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="ocean" aria-label="Ocean"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="violet" aria-label="Violet"><i></i></button>
           </div>
         </div>
       </div>
