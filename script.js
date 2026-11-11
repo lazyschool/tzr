@@ -284,14 +284,14 @@ const CONFIG = {
      3. Theme (light / dark) with memory
   --------------------------------------------------------------- */
   const root = document.documentElement;
-  const PALETTES = ["violet", "blue", "green", "slate", "ocean"];
+  const PALETTES = ["orange", "blue", "green", "violet", "slate"];
   const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
   // Preferences last as long as the page and are never written anywhere. The
-  // defaults are violet ink on light paper, set on <html> in the markup so the first paint
+  // defaults are orange marker on drafting film, set on <html> in the markup so the first paint
   // is already correct; "System" still follows the OS while it is selected.
   let currentMode = "light";
-  let currentPalette = "violet";
+  let currentPalette = "orange";
   function storedMode() { return currentMode; }
   function storedPalette() { return currentPalette; }
 

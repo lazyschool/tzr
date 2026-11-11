@@ -78,7 +78,7 @@ CSP = ('<meta http-equiv="Content-Security-Policy" content="default-src \'self\'
 def head(title, description, canonical, jsonld):
     """The <head> for a page one directory below the site root."""
     return u'''<!doctype html>
-<html lang="en" data-theme="light" data-palette="violet">
+<html lang="en" data-theme="light" data-palette="orange">
 <head>
 <meta charset="utf-8" />
 
@@ -91,7 +91,7 @@ def head(title, description, canonical, jsonld):
 {https}
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
-<meta name="theme-color" content="#f6f1e6" />
+<meta name="theme-color" content="#eef1ec" />
 
 <title>{title}</title>
 <meta name="description" content="{description}" />
@@ -115,7 +115,7 @@ def head(title, description, canonical, jsonld):
 <link rel="icon" href="../assets/icon.png" type="image/png" sizes="192x192" />
 <link rel="apple-touch-icon" href="../assets/icon.png" />
 
-<link rel="preload" href="../assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/ibm-plex-mono-600-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="../assets/fonts/ibm-plex-mono-500-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="../style.css" />
 
@@ -178,11 +178,11 @@ def chrome_open(active):
           </div>
 
           <div class="appear__row appear__row--swatches" role="group" aria-label="Colour">
-            <button type="button" class="appear__sw" data-palette="violet" aria-label="Violet"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="orange" aria-label="Orange"><i></i></button>
             <button type="button" class="appear__sw" data-palette="blue" aria-label="Blue"><i></i></button>
             <button type="button" class="appear__sw" data-palette="green" aria-label="Green"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="violet" aria-label="Violet"><i></i></button>
             <button type="button" class="appear__sw" data-palette="slate" aria-label="Slate"><i></i></button>
-            <button type="button" class="appear__sw" data-palette="ocean" aria-label="Ocean"><i></i></button>
           </div>
         </div>
       </div>
@@ -293,7 +293,7 @@ CHROME_CLOSE = u'''</main>
 
 
 def cta_block(title, sub):
-    return u'''<section class="cta">
+    return u'''<section class="cta bp">
   <div class="container cta__inner">
     <h2 class="cta__title">{title}</h2>
     <p class="cta__sub">{sub}</p>
@@ -325,7 +325,7 @@ def breadcrumb(section, section_url, current):
 def page_hero(eyebrow, title, lead, crumbs, chips="", meta="", actions="", aside=""):
     """The banner band every sub-page opens with.
 
-    It carries the same ruled-paper ground as the home page hero, so a
+    It carries the same drafting-grid ground as the home page hero, so a
     sub-page reads as part of the same site rather than a bolted-on blog.
     """
     split = " phero--split" if aside else ""

@@ -179,6 +179,7 @@ window.TAVZ_I18N["el"] = {
   "Ocean": "Ωκεανός",
   "Rainbow": "Ουράνιο τόξο",
   "Violet": "Βιολετί",
+  "Orange": "Πορτοκαλί",
   "Colour": "Χρώμα",
   "Free Call": "Δωρεάν κλήση",
   "Case Studies": "Μελέτες περίπτωσης",

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light" data-palette="violet">
+<html lang="en" data-theme="light" data-palette="orange">
 <head>
 <meta charset="utf-8" />
 
@@ -26,7 +26,7 @@
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
-<meta name="theme-color" content="#f6f1e6" />
+<meta name="theme-color" content="#eef1ec" />
 
 <title>Tavzuran — We Build Your App, Website &amp; Software</title>
 <meta name="description" content="Have an idea? Tavzuran builds apps, websites and custom software for startups and businesses — designed, reviewed and shipped by a human engineer, with AI as a power tool. Websites and apps from ₹20,000." />
@@ -61,13 +61,13 @@
 <link rel="icon" href="assets/icon.png" type="image/png" sizes="192x192" />
 <link rel="apple-touch-icon" href="assets/icon.png" />
 
-<link rel="preload" href="assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/ibm-plex-mono-600-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="assets/fonts/ibm-plex-mono-500-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="style.css" />
 
 <!-- Tiny bootstrap: marks that JS is on (so scroll animations are only hidden
      when they can actually be revealed) and applies the appearance before the
-     first paint, so there is no flash. The default is violet ink on light paper; the OS
+     first paint, so there is no flash. The default is orange marker on drafting film; the OS
      setting is followed only once a visitor picks System. -->
 <script>
 (function () {
@@ -238,11 +238,11 @@
           </div>
 
           <div class="appear__row appear__row--swatches" role="group" aria-label="Colour">
-            <button type="button" class="appear__sw" data-palette="violet" aria-label="Violet"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="orange" aria-label="Orange"><i></i></button>
             <button type="button" class="appear__sw" data-palette="blue" aria-label="Blue"><i></i></button>
             <button type="button" class="appear__sw" data-palette="green" aria-label="Green"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="violet" aria-label="Violet"><i></i></button>
             <button type="button" class="appear__sw" data-palette="slate" aria-label="Slate"><i></i></button>
-            <button type="button" class="appear__sw" data-palette="ocean" aria-label="Ocean"><i></i></button>
           </div>
         </div>
       </div>
@@ -369,52 +369,73 @@
 <span id="top"></span>
 
 <!-- ============================== HERO ============================== -->
-<section class="hero" id="hero">
-  <div class="container hero__inner">
-    <div class="hero__copy">
-      <p class="eyebrow reveal" data-reveal>TAVZURAN</p>
+<section class="hero bp" id="hero">
+  <div class="container">
+    <div class="hero__sheet">
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow reveal" data-reveal>TAVZURAN</p>
 
-      <h1 class="hero__title reveal" data-reveal style="--d:.06s">
-        <span class="line">Have an idea?</span>
-        <span class="line">We'll <span class="hl">build it.</span></span>
-      </h1>
+          <h1 class="hero__title reveal" data-reveal style="--d:.06s">
+            <span class="line">Have an idea?</span>
+            <span class="line"><span class="ol">We'll</span> build it.</span>
+          </h1>
 
-      <p class="hero__sub reveal" data-reveal style="--d:.14s">
-        Apps, websites &amp; software built for your business — from idea to launch.
-      </p>
+          <p class="hero__dim reveal" data-reveal style="--d:.12s"><i aria-hidden="true"></i>From idea to launch.<i aria-hidden="true"></i></p>
 
-      <div class="hero__actions reveal" data-reveal style="--d:.2s">
-        <a class="btn btn--primary btn--lg" data-link="call" href="mailto:adil@tavzuran.com?subject=Free%20call%20request%20-%20Tavzuran">
-          Book a Free Call
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
-        </a>
-        <a class="btn btn--ghost btn--lg" href="#services">See What We Build</a>
+          <p class="hero__sub reveal" data-reveal style="--d:.16s">
+            Apps, websites &amp; software built for your business — from idea to launch.
+          </p>
+
+          <div class="hero__actions reveal" data-reveal style="--d:.2s">
+            <a class="btn btn--primary btn--lg" data-link="call" href="mailto:adil@tavzuran.com?subject=Free%20call%20request%20-%20Tavzuran">
+              Book a Free Call
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--ghost btn--lg" href="#services">See What We Build</a>
+          </div>
+
+          <p class="hero__badges reveal" data-reveal style="--d:.26s">
+            <span class="price-badge">Websites &amp; apps from ₹20,000*</span>
+          </p>
+        </div>
+
+        <!-- The product, as a dimensioned line drawing. The call-out labels reuse
+             the IDEA / BUILD / USERS / SCALE wording from the price section, so
+             the existing translations cover them. Decorative: aria-hidden. -->
+        <div class="hero__art reveal" data-reveal style="--d:.3s" aria-hidden="true">
+          <svg class="drawing" viewBox="0 0 430 560" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <rect class="trace" pathLength="1" x="150" y="62" width="190" height="390" rx="22"/>
+            <rect class="soft" x="160" y="72" width="170" height="370" rx="14" stroke-width="1" opacity=".55"/>
+            <path d="M222 84h46" stroke-width="3"/>
+            <path d="M178 124h92" stroke-width="6"/>
+            <circle class="ink-f" cx="184" cy="168" r="6" stroke="none"/><path d="M190 168h34"/><circle class="ink-f" cx="230" cy="168" r="6" stroke="none"/><path d="M236 168h34"/>
+            <circle class="acc paper-f" cx="276" cy="168" r="7" stroke-width="2.5"/><path d="M283 168h22" stroke-dasharray="3 3"/><circle class="paper-f" cx="311" cy="168" r="6"/>
+            <g opacity=".85"><rect x="178" y="202" width="22" height="22"/><path d="M212 213h70M296 213h16"/>
+            <rect x="178" y="240" width="22" height="22"/><path d="M212 251h88M296 251h16"/>
+            <rect x="178" y="278" width="22" height="22"/><path d="M212 289h56M296 289h16"/></g>
+            <path d="M178 328h134" stroke-dasharray="2 4"/>
+            <path d="M178 354h48M270 354h42" stroke-width="3"/>
+            <rect class="acc-f" x="178" y="384" width="134" height="34" stroke="none"/>
+            <!-- dimensions -->
+            <g class="acc" stroke-width="1"><path d="M150 480h190M150 472v16M340 472v16"/><path d="M366 62v390M358 62h16M358 452h16"/></g>
+            <!-- call-outs -->
+            <g stroke-width="1"><path d="M178 124 96 88H58"/><path d="M276 168 370 124"/><path d="M189 251 100 292H58"/><path d="M245 401 110 432H58"/></g>
+            <g><circle class="paper-f" cx="44" cy="88" r="13"/><circle class="paper-f" cx="384" cy="118" r="13"/><circle class="paper-f" cx="44" cy="292" r="13"/><circle class="paper-f" cx="44" cy="432" r="13"/></g>
+            <g stroke="none" text-anchor="middle"><text class="num" x="44" y="92">1</text><text class="num" x="384" y="122">2</text><text class="num" x="44" y="296">3</text><text class="num" x="44" y="436">4</text></g>
+            <g stroke="none"><text class="lbl" x="30" y="64">IDEA</text><text class="lbl" x="350" y="96">BUILD</text><text class="lbl" x="30" y="324">USERS</text><text class="lbl" x="30" y="464">SCALE</text></g>
+          </svg>
+          <p class="hero__hand">That's where we come in.</p>
+        </div>
       </div>
 
-      <p class="hero__badges reveal" data-reveal style="--d:.26s">
-        <span class="price-badge">Websites &amp; apps from ₹20,000*</span>
-      </p>
-    </div>
-
-    <!-- The offer, written out as a quote. Every line reuses wording that is
-         already on this page, so the existing translations cover it. -->
-    <div class="hero__art reveal" data-reveal style="--d:.3s">
-      <div class="sheet quote">
-        <p class="quote__head"><span class="quote__brand">Tavzuran</span><span class="quote__label">WHAT WE DO</span></p>
-        <ol class="quote__rows">
-          <li><span>Mobile Apps</span><b aria-hidden="true">✓</b></li>
-          <li><span>Websites</span><b aria-hidden="true">✓</b></li>
-          <li><span>Custom Software</span><b aria-hidden="true">✓</b></li>
-          <li><span>Vibe Code Cleanup</span><b aria-hidden="true">✓</b></li>
-          <li><span>App Store Publishing</span><b aria-hidden="true">✓</b></li>
-        </ol>
-        <p class="quote__total">
-          <span class="quote__k">Starting at</span>
-          <span class="quote__v">₹20,000<a class="price__star" href="#price-terms" aria-label="See what the price excludes">*</a></span>
-        </p>
-        <p class="quote__sign">— Adil</p>
-        <p class="stamp">Free 20-min idea call · No obligation</p>
-      </div>
+      <dl class="tblock reveal" data-reveal style="--d:.34s">
+        <div><dt>WHAT WE DO</dt><dd>Apps • Websites • Software</dd></div>
+        <div><dt>Built by a human</dt><dd>— Adil</dd></div>
+        <div><dt>#</dt><dd>01 / 11</dd></div>
+        <div><dt>&#916;</dt><dd>01</dd></div>
+        <div class="tblock__price"><dt>Starting at</dt><dd>₹20,000<a class="price__star" href="#price-terms" aria-label="See what the price excludes">*</a></dd></div>
+      </dl>
     </div>
   </div>
 
@@ -535,7 +556,7 @@
 </section>
 
 <!-- ============================ HUMAN + AI ============================ -->
-<section class="section section--human" id="human">
+<section class="section section--human bp" id="human">
   <div class="container">
     <div class="sec-head">
       <p class="eyebrow reveal" data-reveal>THE HUMAN PART</p>
@@ -1342,7 +1363,7 @@
 </section>
 
 <!-- =========================== FINAL CTA =========================== -->
-<section class="cta" id="cta">
+<section class="cta bp" id="cta">
   <div class="container cta__inner">
     <h2 class="cta__title reveal" data-reveal>Your idea shouldn't stay an idea.</h2>
     <p class="cta__sub reveal" data-reveal style="--d:.08s">Let's turn it into something real. <span aria-hidden="true">🚀</span></p>
