@@ -58,7 +58,7 @@ window.TAVZ_I18N["ja"] = {
   "THE HUMAN PART": "人間が担う部分",
   "Built by a human.": "作るのは人間です。",
   "Just faster, with AI.": "AIで、ただ速く。",
-  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it. That's literally the name.": "このスタジオでAIは強力な道具です — スタジオそのものではありません。すべてのプロダクトは、責任を持つ一人の人間が考え、確認し、公開しています。名前のとおりです。",
+  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it.": "このスタジオでAIは強力な道具です — スタジオそのものではありません。すべてのプロダクトは、責任を持つ一人の人間が考え、確認し、公開しています。",
   "A human understands your idea": "アイデアを理解するのは人間",
   "We start with a conversation, not a prompt. What to build first, what to leave out and what it should honestly cost are decisions a person makes with you.": "プロンプトではなく、会話から始めます。何を最初に作るか、何を削るか、実際いくらかかるべきか — それは人間があなたと一緒に決めることです。",
   "AI does the boring parts": "退屈な作業はAIが",

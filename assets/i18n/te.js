@@ -58,7 +58,7 @@ window.TAVZ_I18N["te"] = {
   "THE HUMAN PART": "మానవ భాగం",
   "Built by a human.": "మనిషి నిర్మించినది.",
   "Just faster, with AI.": "కేవలం వేగంగా, AI తో.",
-  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it. That's literally the name.": "ఈ స్టూడియోలో AI ఒక శక్తివంతమైన సాధనం — అది స్టూడియో కాదు. ప్రతి ఉత్పత్తిని ఆలోచించి, సమీక్షించి, దానికి బాధ్యత వహించే వ్యక్తి విడుదల చేస్తారు. అక్షరాలా అదే మా పేరు.",
+  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it.": "ఈ స్టూడియోలో AI ఒక శక్తివంతమైన సాధనం — అది స్టూడియో కాదు. ప్రతి ఉత్పత్తిని ఆలోచించి, సమీక్షించి, దానికి బాధ్యత వహించే వ్యక్తి విడుదల చేస్తారు.",
   "A human understands your idea": "ఒక మనిషి మీ ఆలోచనను అర్థం చేసుకుంటాడు",
   "We start with a conversation, not a prompt. What to build first, what to leave out and what it should honestly cost are decisions a person makes with you.": "మేము ప్రాంప్ట్‌తో కాదు, సంభాషణతో మొదలుపెడతాము. మొదట ఏమి నిర్మించాలి, ఏమి వదిలేయాలి మరియు నిజాయితీగా దాని ఖర్చు ఎంత ఉండాలి — ఇవి ఒక వ్యక్తి మీతో కలిసి తీసుకునే నిర్ణయాలు.",
   "AI does the boring parts": "AI విసుగు పుట్టించే పనులు చేస్తుంది",

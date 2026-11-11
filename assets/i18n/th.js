@@ -58,7 +58,7 @@ window.TAVZ_I18N["th"] = {
   "THE HUMAN PART": "ส่วนที่เป็นมนุษย์",
   "Built by a human.": "สร้างโดยมนุษย์",
   "Just faster, with AI.": "แค่เร็วขึ้นด้วย AI",
-  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it. That's literally the name.": "ในสตูดิโอนี้ AI เป็นเครื่องมือที่ทรงพลัง — ไม่ใช่ตัวสตูดิโอ ทุกผลิตภัณฑ์ผ่านการคิด ตรวจสอบ และส่งมอบโดยคนที่รับผิดชอบมันจริง ๆ ตรงตามชื่อเลย",
+  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it.": "ในสตูดิโอนี้ AI เป็นเครื่องมือที่ทรงพลัง — ไม่ใช่ตัวสตูดิโอ ทุกผลิตภัณฑ์ผ่านการคิด ตรวจสอบ และส่งมอบโดยคนที่รับผิดชอบมันจริง ๆ",
   "A human understands your idea": "มนุษย์เข้าใจไอเดียของคุณ",
   "We start with a conversation, not a prompt. What to build first, what to leave out and what it should honestly cost are decisions a person makes with you.": "เราเริ่มจากการพูดคุย ไม่ใช่พรอมป์ต จะสร้างอะไรก่อน ตัดอะไรออก และควรมีค่าใช้จ่ายเท่าไรจริง ๆ ล้วนเป็นการตัดสินใจที่คนหนึ่งคนทำร่วมกับคุณ",
   "AI does the boring parts": "AI ทำงานส่วนที่น่าเบื่อ",

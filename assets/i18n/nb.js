@@ -58,7 +58,7 @@ window.TAVZ_I18N["nb"] = {
   "THE HUMAN PART": "DEN MENNESKELIGE DELEN",
   "Built by a human.": "Laget av et menneske.",
   "Just faster, with AI.": "Bare raskere, med KI.",
-  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it. That's literally the name.": "I dette studioet er KI et kraftig verktøy — ikke selve studioet. Hvert produkt er gjennomtenkt, gjennomgått og levert av et menneske som står ansvarlig for det. Det er bokstavelig talt det navnet betyr.",
+  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it.": "I dette studioet er KI et kraftig verktøy — ikke selve studioet. Hvert produkt er gjennomtenkt, gjennomgått og levert av et menneske som står ansvarlig for det.",
   "A human understands your idea": "Et menneske forstår idéen din",
   "We start with a conversation, not a prompt. What to build first, what to leave out and what it should honestly cost are decisions a person makes with you.": "Vi starter med en samtale, ikke en prompt. Hva som skal bygges først, hva som skal utelates og hva det ærlig talt bør koste, er beslutninger et menneske tar sammen med deg.",
   "AI does the boring parts": "KI tar de kjedelige delene",

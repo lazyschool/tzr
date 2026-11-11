@@ -58,7 +58,7 @@ window.TAVZ_I18N["pa"] = {
   "THE HUMAN PART": "ਮਨੁੱਖੀ ਹਿੱਸਾ",
   "Built by a human.": "ਮਨੁੱਖ ਦੁਆਰਾ ਬਣਾਇਆ।",
   "Just faster, with AI.": "ਬਸ ਤੇਜ਼, AI ਨਾਲ।",
-  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it. That's literally the name.": "ਇਸ ਸਟੂਡੀਓ ਵਿੱਚ AI ਇੱਕ ਤਾਕਤਵਰ ਸੰਦ ਹੈ — ਇਹ ਸਟੂਡੀਓ ਨਹੀਂ ਹੈ। ਹਰ ਉਤਪਾਦ ਨੂੰ ਉਹ ਵਿਅਕਤੀ ਸੋਚਦਾ, ਪਰਖਦਾ ਅਤੇ ਜਾਰੀ ਕਰਦਾ ਹੈ ਜੋ ਇਸਦਾ ਜਵਾਬਦੇਹ ਹੈ। ਸ਼ਾਬਦਿਕ ਤੌਰ 'ਤੇ ਇਹੀ ਸਾਡਾ ਨਾਮ ਹੈ।",
+  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it.": "ਇਸ ਸਟੂਡੀਓ ਵਿੱਚ AI ਇੱਕ ਤਾਕਤਵਰ ਸੰਦ ਹੈ — ਇਹ ਸਟੂਡੀਓ ਨਹੀਂ ਹੈ। ਹਰ ਉਤਪਾਦ ਨੂੰ ਉਹ ਵਿਅਕਤੀ ਸੋਚਦਾ, ਪਰਖਦਾ ਅਤੇ ਜਾਰੀ ਕਰਦਾ ਹੈ ਜੋ ਇਸਦਾ ਜਵਾਬਦੇਹ ਹੈ।",
   "A human understands your idea": "ਇੱਕ ਮਨੁੱਖ ਤੁਹਾਡਾ ਵਿਚਾਰ ਸਮਝਦਾ ਹੈ",
   "We start with a conversation, not a prompt. What to build first, what to leave out and what it should honestly cost are decisions a person makes with you.": "ਅਸੀਂ ਪ੍ਰੌਂਪਟ ਨਾਲ ਨਹੀਂ, ਗੱਲਬਾਤ ਨਾਲ ਸ਼ੁਰੂ ਕਰਦੇ ਹਾਂ। ਪਹਿਲਾਂ ਕੀ ਬਣਾਉਣਾ ਹੈ, ਕੀ ਛੱਡਣਾ ਹੈ ਅਤੇ ਇਸਦੀ ਇਮਾਨਦਾਰ ਕੀਮਤ ਕੀ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ — ਇਹ ਫੈਸਲੇ ਇੱਕ ਵਿਅਕਤੀ ਤੁਹਾਡੇ ਨਾਲ ਮਿਲ ਕੇ ਕਰਦਾ ਹੈ।",
   "AI does the boring parts": "AI ਬੋਰਿੰਗ ਹਿੱਸੇ ਕਰਦਾ ਹੈ",

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light" data-palette="green">
+<html lang="en" data-theme="light" data-palette="violet">
 <head>
 <meta charset="utf-8" />
 
@@ -23,7 +23,7 @@
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
-<meta name="theme-color" content="#f6fbf8" />
+<meta name="theme-color" content="#f6f1e6" />
 
 <title>Case Studies — Example Builds | Tavzuran</title>
 <meta name="description" content="How we scope and build apps, websites, dashboards and first versions — six example builds with the scope, the stack, the timeline and what we would deliberately leave out of version one." />
@@ -35,21 +35,24 @@
 <meta property="og:title" content="Case Studies — Example Builds | Tavzuran" />
 <meta property="og:description" content="How we scope and build apps, websites, dashboards and first versions — six example builds with the scope, the stack, the timeline and what we would deliberately leave out of version one." />
 <meta property="og:url" content="https://tavzuran.com/case-studies/" />
-<meta property="og:image" content="https://tavzuran.com/assets/og-image.svg" />
+<meta property="og:image" content="https://tavzuran.com/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Case Studies — Example Builds | Tavzuran" />
 <meta name="twitter:description" content="How we scope and build apps, websites, dashboards and first versions — six example builds with the scope, the stack, the timeline and what we would deliberately leave out of version one." />
-<meta name="twitter:image" content="https://tavzuran.com/assets/og-image.svg" />
+<meta name="twitter:image" content="https://tavzuran.com/assets/og-image.png" />
 
 <link rel="icon" href="../assets/icon.png" type="image/png" sizes="192x192" />
 <link rel="apple-touch-icon" href="../assets/icon.png" />
 
-<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="../assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/ibm-plex-mono-500-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="../style.css" />
 
-<!-- Tiny bootstrap: marks that JS is on and applies the saved theme before the
-     first paint, so dark-mode users never see a flash of light. -->
+<!-- Tiny bootstrap: records that JavaScript is available, which the CSS uses
+     to enable the progressive bits. Nothing is stored or read. -->
 <script>
 (function () {
   /* Nothing is stored, so there is no saved theme to read before first paint.
@@ -190,11 +193,11 @@
           </div>
 
           <div class="appear__row appear__row--swatches" role="group" aria-label="Colour">
-            <button type="button" class="appear__sw" data-palette="blue" aria-label="Blue"><i style="background:#0f6ccc"></i></button>
-            <button type="button" class="appear__sw" data-palette="green" aria-label="Green"><i style="background:#12784a"></i></button>
-            <button type="button" class="appear__sw" data-palette="slate" aria-label="Slate"><i style="background:#445468"></i></button>
-            <button type="button" class="appear__sw" data-palette="ocean" aria-label="Ocean"><i style="background:linear-gradient(135deg,#0b6a92,#38bdf8)"></i></button>
-            <button type="button" class="appear__sw" data-palette="rainbow" aria-label="Rainbow"><i style="background:linear-gradient(100deg,#2563eb,#7028c8 34%,#c026d3 66%,#db2777)"></i></button>
+            <button type="button" class="appear__sw" data-palette="violet" aria-label="Violet"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="blue" aria-label="Blue"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="green" aria-label="Green"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="slate" aria-label="Slate"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="ocean" aria-label="Ocean"><i></i></button>
           </div>
         </div>
       </div>
@@ -206,7 +209,7 @@
   </div>
 </header>
 
-<!-- Machine-translation notice (only shown when a translation is active) -->
+<!-- Pre-email notice (shown before any email link opens) -->
 <div class="cdlg" id="mailNotice" hidden>
   <div class="cdlg__veil" data-cdlg-close></div>
   <div class="cdlg__box" role="dialog" aria-modal="true" aria-labelledby="mailNoticeTitle" aria-describedby="mailNoticeBody">
@@ -230,6 +233,7 @@
   </div>
 </div>
 
+<!-- Machine-translation notice (only shown when a translation is active) -->
 <div class="tnote" id="transNote" hidden>
   <div class="container tnote__inner">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 21 20H3l9-16.5Z"/><path d="M12 10v4M12 17h.01"/></svg>
@@ -317,11 +321,6 @@
 
 <main id="main">
 <section class="phero">
-  <div class="phero__bg" aria-hidden="true">
-    <span class="grid-fade"></span>
-    <span class="blob blob--1"></span>
-    <span class="blob blob--2"></span>
-  </div>
   <div class="container phero__inner">
     <nav class="crumb" aria-label="Breadcrumb">
       <a href="../index.html">Home</a>
@@ -331,7 +330,7 @@
 
     <div class="phero__grid">
       <div>
-        <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>WHAT WE BUILD</p>
+        <p class="eyebrow reveal" data-reveal>WHAT WE BUILD</p>
 
         <h1 class="phero__title reveal" data-reveal style="--d:.05s">Case studies</h1>
         <p class="phero__lead reveal" data-reveal style="--d:.1s">Six builds, taken apart. What the business problem is, what version one contains, what gets cut, how it's put together and how long it runs.</p>
@@ -349,8 +348,8 @@
     results claim. They're the products the studio is set up to ship, written out in
     the same detail you'd get on a real project. Yours would be the first on this wall.</p>
 
-    <div class="cards post-grid">
-      <a class="card post-card reveal" data-reveal style="--d:.4s" href="restaurant-ordering-app.html">
+    <div class="cards post-grid post-grid--sheets">
+      <a class="card post-card post-card--sheet reveal" data-reveal style="--d:.04s" href="restaurant-ordering-app.html">
         <div class="post-card__mock"><div class="mockbare" aria-hidden="true">
 <div class="mock mock--phone">
   <div class="mock__notch"></div>
@@ -378,7 +377,7 @@
         <p>Menu, cart, live order tracking and a simple kitchen dashboard for a multi-outlet restaurant.</p>
         <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card reveal" data-reveal style="--d:.10s" href="coaching-management-platform.html">
+      <a class="card post-card post-card--sheet reveal" data-reveal style="--d:.10s" href="coaching-management-platform.html">
         <div class="post-card__mock"><div class="mockbare" aria-hidden="true">
 <div class="mock">
   <div class="mock__bar"><i></i><i></i><i></i></div>
@@ -409,7 +408,7 @@
         <p>Batches, attendance, online tests and fee payments in one dashboard for students and staff.</p>
         <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card reveal" data-reveal style="--d:.16s" href="business-automation-dashboard.html">
+      <a class="card post-card post-card--sheet reveal" data-reveal style="--d:.16s" href="business-automation-dashboard.html">
         <div class="post-card__mock"><div class="mockbare" aria-hidden="true">
 <div class="mock">
   <div class="mock__bar"><i></i><i></i><i></i></div>
@@ -433,7 +432,7 @@
         <p>Replaces daily spreadsheet work with automated reports, alerts and role-based access.</p>
         <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card reveal" data-reveal style="--d:.22s" href="real-estate-listing-portal.html">
+      <a class="card post-card post-card--sheet reveal" data-reveal style="--d:.22s" href="real-estate-listing-portal.html">
         <div class="post-card__mock"><div class="mockbare" aria-hidden="true">
 <div class="mock">
   <div class="mock__bar"><i></i><i></i><i></i></div>
@@ -456,7 +455,7 @@
         <p>Property search, enquiry capture and a lead pipeline a sales team will actually use.</p>
         <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card reveal" data-reveal style="--d:.28s" href="delivery-tracking-app.html">
+      <a class="card post-card post-card--sheet reveal" data-reveal style="--d:.28s" href="delivery-tracking-app.html">
         <div class="post-card__mock"><div class="mockbare" aria-hidden="true">
 <div class="mock mock--phone">
   <div class="mock__notch"></div>
@@ -483,7 +482,7 @@
         <p>Driver app with live location, proof-of-delivery photos and an owner-side status board.</p>
         <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card reveal" data-reveal style="--d:.34s" href="booking-and-scheduling-first-version.html">
+      <a class="card post-card post-card--sheet reveal" data-reveal style="--d:.34s" href="booking-and-scheduling-first-version.html">
         <div class="post-card__mock"><div class="mockbare" aria-hidden="true">
 <div class="mock">
   <div class="mock__bar"><i></i><i></i><i></i></div>
@@ -507,7 +506,7 @@
         <p>Ships in weeks, not months: online booking, reminders and payments for a local service business.</p>
         <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card reveal" data-reveal style="--d:.40s" href="saas-subscription-starter.html">
+      <a class="card post-card post-card--sheet reveal" data-reveal style="--d:.40s" href="saas-subscription-starter.html">
         <div class="post-card__mock"><div class="mockbare" aria-hidden="true">
 <div class="mock">
   <div class="mock__bar"><i></i><i></i><i></i></div>
@@ -527,7 +526,7 @@
         <p>Sign-up, workspaces, plans and recurring billing — the unglamorous half of a SaaS product, built once and properly.</p>
         <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card reveal" data-reveal style="--d:.46s" href="business-website-that-converts.html">
+      <a class="card post-card post-card--sheet reveal" data-reveal style="--d:.46s" href="business-website-that-converts.html">
         <div class="post-card__mock"><div class="mockbare" aria-hidden="true">
 <div class="mock">
   <div class="mock__bar"><i></i><i></i><i></i></div>
@@ -552,7 +551,7 @@
         <p>A fast, mobile-first site that turns visitors into enquiries — and that you can edit yourself.</p>
         <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card reveal" data-reveal style="--d:.52s" href="inventory-and-billing-for-retail.html">
+      <a class="card post-card post-card--sheet reveal" data-reveal style="--d:.52s" href="inventory-and-billing-for-retail.html">
         <div class="post-card__mock"><div class="mockbare" aria-hidden="true">
 <div class="mock">
   <div class="mock__bar"><i></i><i></i><i></i></div>
@@ -574,7 +573,7 @@
         <p>Stock that matches the shelf, GST-ready bills in seconds, and an alert before a fast seller runs out.</p>
         <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card reveal" data-reveal style="--d:.58s" href="clinic-appointments-and-records.html">
+      <a class="card post-card post-card--sheet reveal" data-reveal style="--d:.58s" href="clinic-appointments-and-records.html">
         <div class="post-card__mock"><div class="mockbare" aria-hidden="true">
 <div class="mock">
   <div class="mock__bar"><i></i><i></i><i></i></div>
@@ -600,7 +599,7 @@
         <p>Appointments, patient history and prescriptions in one place, with reminders that cut the empty slots.</p>
         <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card reveal" data-reveal style="--d:.64s" href="gym-membership-app.html">
+      <a class="card post-card post-card--sheet reveal" data-reveal style="--d:.64s" href="gym-membership-app.html">
         <div class="post-card__mock"><div class="mockbare" aria-hidden="true">
 <div class="mock mock--phone">
   <div class="mock__notch"></div>
@@ -628,7 +627,7 @@
         <p>Digital membership, quick check-in, class booking and renewal reminders that actually go out.</p>
         <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card reveal" data-reveal style="--d:.70s" href="field-service-job-app.html">
+      <a class="card post-card post-card--sheet reveal" data-reveal style="--d:.70s" href="field-service-job-app.html">
         <div class="post-card__mock"><div class="mockbare" aria-hidden="true">
 <div class="mock mock--phone">
   <div class="mock__notch"></div>
@@ -651,7 +650,7 @@
         <p>Dispatch, on-site checklists, photo proof and an invoice raised before the technician leaves.</p>
         <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card reveal" data-reveal style="--d:.76s" href="first-website-for-a-social-first-business.html">
+      <a class="card post-card post-card--sheet reveal" data-reveal style="--d:.76s" href="first-website-for-a-social-first-business.html">
         <div class="post-card__mock"><div class="mockbare" aria-hidden="true">
 <div class="mock">
   <div class="mock__bar mock__bar--url">
@@ -682,7 +681,7 @@
         <p>You built an audience on Instagram and TikTok. This is the address, the inbox and the page that are actually yours.</p>
         <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card reveal" data-reveal style="--d:.82s" href="vibe-coded-app-made-production-ready.html">
+      <a class="card post-card post-card--sheet reveal" data-reveal style="--d:.82s" href="vibe-coded-app-made-production-ready.html">
         <div class="post-card__mock"><div class="mockbare" aria-hidden="true">
 <div class="mock">
   <div class="mock__bar"><i></i><i></i><i></i></div>
@@ -711,7 +710,7 @@
         <p>You built it with AI over a weekend and it works. This is what it takes before it can safely carry a business.</p>
         <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card reveal" data-reveal style="--d:.88s" href="getting-an-app-through-both-stores.html">
+      <a class="card post-card post-card--sheet reveal" data-reveal style="--d:.88s" href="getting-an-app-through-both-stores.html">
         <div class="post-card__mock"><div class="mockbare" aria-hidden="true">
 <div class="mock">
   <div class="mock__bar"><i></i><i></i><i></i></div>
@@ -744,7 +743,7 @@
         <p>The two or three weeks between the app being finished and people being able to install it — rejections, signing keys, store listings and the paperwork.</p>
         <span class="link-arrow">Read the case study <span aria-hidden="true">→</span></span>
       </a>
-      <a class="card post-card reveal" data-reveal style="--d:.94s" href="product-showcase-site-for-a-small-business.html">
+      <a class="card post-card post-card--sheet reveal" data-reveal style="--d:.94s" href="product-showcase-site-for-a-small-business.html">
         <div class="post-card__mock"><div class="mockbare" aria-hidden="true">
 <div class="mock">
   <div class="mock__bar mock__bar--url"><i></i><i></i><i></i>
@@ -780,7 +779,7 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>HOW IT WORKS</p>
+      <p class="eyebrow reveal" data-reveal>HOW IT WORKS</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">Every one of these starts the same way.</h2>
     </div>
 

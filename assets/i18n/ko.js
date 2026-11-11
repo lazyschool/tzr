@@ -58,7 +58,7 @@ window.TAVZ_I18N["ko"] = {
   "THE HUMAN PART": "사람이 하는 부분",
   "Built by a human.": "사람이 만듭니다.",
   "Just faster, with AI.": "AI로 더 빠르게.",
-  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it. That's literally the name.": "이 스튜디오에서 AI는 강력한 도구일 뿐, 스튜디오 자체가 아닙니다. 모든 제품은 그 결과에 책임지는 사람이 고민하고, 검토하고, 출시합니다. 이름 그대로입니다.",
+  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it.": "이 스튜디오에서 AI는 강력한 도구일 뿐, 스튜디오 자체가 아닙니다. 모든 제품은 그 결과에 책임지는 사람이 고민하고, 검토하고, 출시합니다.",
   "A human understands your idea": "사람이 아이디어를 이해합니다",
   "We start with a conversation, not a prompt. What to build first, what to leave out and what it should honestly cost are decisions a person makes with you.": "프롬프트가 아니라 대화로 시작합니다. 무엇을 먼저 만들지, 무엇을 뺄지, 실제로 얼마가 들어야 하는지는 사람이 함께 정합니다.",
   "AI does the boring parts": "지루한 일은 AI가 합니다",
