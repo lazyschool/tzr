@@ -117,6 +117,11 @@
   --bp-grid-major: rgba(214, 245, 228, .14);
   --bp-rule: rgba(214, 245, 228, .42);
   --bp-edge: #6fae8f;
+  /* the theme colour at a readable strength: the logo and the swatch.
+     --hue sits on film (3:1 or better), --hue-d on blueprint. */
+  --hue: #1f8a5c;
+  --hue-d: #5fd39a;
+  --logo: var(--hue);
 
   /* The marker colour stays orange in every theme. --a-l is for film and
      --a-d for blueprint; each clears 4.5:1 against every ground it sits on. */
@@ -165,6 +170,7 @@
   --edge: var(--bp-edge);
   --accent: var(--a-d);
   --accent-fg: var(--bp);
+  --logo: var(--hue-d);
 }
 /* colour is inherited as a computed value, so it has to be re-declared
    wherever the palette flips */
@@ -175,21 +181,25 @@
   --bp: #0f2c5c; --bp-2: #0b2350; --bp-sheet: #143670;
   --bp-ink: #f3f7ff; --bp-ink-2: #b4c6e8; --bp-edge: #6f8fc4;
   --bp-grid: rgba(219, 232, 255, .07); --bp-grid-major: rgba(219, 232, 255, .14); --bp-rule: rgba(219, 232, 255, .42);
+  --hue: #2f63d6; --hue-d: #8fb4ff;
 }
 :root[data-palette="slate"] {
   --bp: #1e2935; --bp-2: #18212b; --bp-sheet: #263342;
   --bp-ink: #f3f6fa; --bp-ink-2: #bcc7d4; --bp-edge: #7b8ea6;
   --bp-grid: rgba(220, 230, 242, .07); --bp-grid-major: rgba(220, 230, 242, .14); --bp-rule: rgba(220, 230, 242, .42);
+  --hue: #5b6b80; --hue-d: #b6c4d6;
 }
 :root[data-palette="ocean"] {
   --bp: #08313f; --bp-2: #062834; --bp-sheet: #0c3b4b;
   --bp-ink: #effaff; --bp-ink-2: #addbe9; --bp-edge: #5fa6bd;
   --bp-grid: rgba(210, 240, 250, .07); --bp-grid-major: rgba(210, 240, 250, .14); --bp-rule: rgba(210, 240, 250, .42);
+  --hue: #0e7f9c; --hue-d: #5cc8e0;
 }
 :root[data-palette="violet"] {
   --bp: #2a1f5e; --bp-2: #22184d; --bp-sheet: #33266f;
   --bp-ink: #f6f3ff; --bp-ink-2: #c9bff0; --bp-edge: #8f7fd0;
   --bp-grid: rgba(232, 226, 255, .07); --bp-grid-major: rgba(232, 226, 255, .14); --bp-rule: rgba(232, 226, 255, .42);
+  --hue: #6e4fd8; --hue-d: #bba8ff;
 }
 
 /* ------------------------------- 3. BASE ------------------------------ */
@@ -466,8 +476,8 @@ a.link-arrow:hover span[aria-hidden], a:hover .link-arrow span[aria-hidden] { tr
 .nav__inner { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 
 .brand { display: inline-flex; align-items: center; gap: 10px; padding-block: 5px; }
-/* The mark is inline SVG so it can take the marker colour. */
-.brand__mark { display: flex; flex: none; height: 26px; color: var(--accent); transition: transform .5s var(--ease-out); }
+/* The mark is inline SVG so it can take the theme colour. */
+.brand__mark { display: flex; flex: none; height: 26px; color: var(--logo); transition: transform .5s var(--ease-out); }
 .brand:hover .brand__mark { transform: rotate(-6deg); }
 .brand__mark svg { height: 100%; width: auto; }
 .brand__text { font: 600 1.15rem/1 var(--mono); letter-spacing: .02em; text-transform: uppercase; white-space: nowrap; }
@@ -603,13 +613,18 @@ a.link-arrow:hover span[aria-hidden], a:hover .link-arrow span[aria-hidden] { tr
 .appear__sw { padding: 9px; }
 .appear__sw i { display: block; width: 100%; height: 100%; }
 .appear__sw[aria-pressed="true"] { border-color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink); }
-/* each swatch shows its blueprint ground, the colour the theme changes */
-.appear__sw[data-palette="green"] i { background: #0c3427; }
-.appear__sw[data-palette="blue"] i { background: #0f2c5c; }
-.appear__sw[data-palette="slate"] i { background: #1e2935; }
-.appear__sw[data-palette="ocean"] i { background: #08313f; }
-.appear__sw[data-palette="violet"] i { background: #2a1f5e; }
-.appear__sw i { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .25); }
+/* each swatch shows its theme colour at a strength the eye can tell apart */
+.appear__sw[data-palette="green"] i { background: #1f8a5c; }
+.appear__sw[data-palette="blue"] i { background: #2f63d6; }
+.appear__sw[data-palette="slate"] i { background: #5b6b80; }
+.appear__sw[data-palette="ocean"] i { background: #0e7f9c; }
+.appear__sw[data-palette="violet"] i { background: #6e4fd8; }
+[data-theme="dark"] .appear__sw[data-palette="green"] i { background: #5fd39a; }
+[data-theme="dark"] .appear__sw[data-palette="blue"] i { background: #8fb4ff; }
+[data-theme="dark"] .appear__sw[data-palette="slate"] i { background: #b6c4d6; }
+[data-theme="dark"] .appear__sw[data-palette="ocean"] i { background: #5cc8e0; }
+[data-theme="dark"] .appear__sw[data-palette="violet"] i { background: #bba8ff; }
+.appear__sw i { border-radius: 50%; }
 
 /* language switcher */
 .lang {
