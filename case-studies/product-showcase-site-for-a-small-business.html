@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light" data-palette="green">
+<html lang="en" data-theme="light" data-palette="violet">
 <head>
 <meta charset="utf-8" />
 
@@ -23,7 +23,7 @@
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
-<meta name="theme-color" content="#f6fbf8" />
+<meta name="theme-color" content="#f6f1e6" />
 
 <title>A Product Showcase You Can Send Anyone — Case Study | Tavzuran</title>
 <meta name="description" content="Your catalogue lives on Instagram, and you cannot send that to a corporate buyer or a bank. This is the address that is actually yours." />
@@ -35,21 +35,24 @@
 <meta property="og:title" content="A Product Showcase You Can Send Anyone — Case Study | Tavzuran" />
 <meta property="og:description" content="Your catalogue lives on Instagram, and you cannot send that to a corporate buyer or a bank. This is the address that is actually yours." />
 <meta property="og:url" content="https://tavzuran.com/case-studies/product-showcase-site-for-a-small-business.html" />
-<meta property="og:image" content="https://tavzuran.com/assets/og-image.svg" />
+<meta property="og:image" content="https://tavzuran.com/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="A Product Showcase You Can Send Anyone — Case Study | Tavzuran" />
 <meta name="twitter:description" content="Your catalogue lives on Instagram, and you cannot send that to a corporate buyer or a bank. This is the address that is actually yours." />
-<meta name="twitter:image" content="https://tavzuran.com/assets/og-image.svg" />
+<meta name="twitter:image" content="https://tavzuran.com/assets/og-image.png" />
 
 <link rel="icon" href="../assets/icon.png" type="image/png" sizes="192x192" />
 <link rel="apple-touch-icon" href="../assets/icon.png" />
 
-<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="../assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/ibm-plex-mono-500-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="../style.css" />
 
-<!-- Tiny bootstrap: marks that JS is on and applies the saved theme before the
-     first paint, so dark-mode users never see a flash of light. -->
+<!-- Tiny bootstrap: records that JavaScript is available, which the CSS uses
+     to enable the progressive bits. Nothing is stored or read. -->
 <script>
 (function () {
   /* Nothing is stored, so there is no saved theme to read before first paint.
@@ -193,11 +196,11 @@
           </div>
 
           <div class="appear__row appear__row--swatches" role="group" aria-label="Colour">
-            <button type="button" class="appear__sw" data-palette="blue" aria-label="Blue"><i style="background:#0f6ccc"></i></button>
-            <button type="button" class="appear__sw" data-palette="green" aria-label="Green"><i style="background:#12784a"></i></button>
-            <button type="button" class="appear__sw" data-palette="slate" aria-label="Slate"><i style="background:#445468"></i></button>
-            <button type="button" class="appear__sw" data-palette="ocean" aria-label="Ocean"><i style="background:linear-gradient(135deg,#0b6a92,#38bdf8)"></i></button>
-            <button type="button" class="appear__sw" data-palette="rainbow" aria-label="Rainbow"><i style="background:linear-gradient(100deg,#2563eb,#7028c8 34%,#c026d3 66%,#db2777)"></i></button>
+            <button type="button" class="appear__sw" data-palette="violet" aria-label="Violet"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="blue" aria-label="Blue"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="green" aria-label="Green"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="slate" aria-label="Slate"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="ocean" aria-label="Ocean"><i></i></button>
           </div>
         </div>
       </div>
@@ -209,7 +212,7 @@
   </div>
 </header>
 
-<!-- Machine-translation notice (only shown when a translation is active) -->
+<!-- Pre-email notice (shown before any email link opens) -->
 <div class="cdlg" id="mailNotice" hidden>
   <div class="cdlg__veil" data-cdlg-close></div>
   <div class="cdlg__box" role="dialog" aria-modal="true" aria-labelledby="mailNoticeTitle" aria-describedby="mailNoticeBody">
@@ -233,6 +236,7 @@
   </div>
 </div>
 
+<!-- Machine-translation notice (only shown when a translation is active) -->
 <div class="tnote" id="transNote" hidden>
   <div class="container tnote__inner">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 21 20H3l9-16.5Z"/><path d="M12 10v4M12 17h.01"/></svg>
@@ -320,11 +324,6 @@
 
 <main id="main">
 <section class="phero phero--split">
-  <div class="phero__bg" aria-hidden="true">
-    <span class="grid-fade"></span>
-    <span class="blob blob--1"></span>
-    <span class="blob blob--2"></span>
-  </div>
   <div class="container phero__inner">
   <nav class="crumb" aria-label="Breadcrumb">
     <a href="../index.html">Home</a>
@@ -336,7 +335,7 @@
 
     <div class="phero__grid">
       <div>
-        <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>CASE STUDY</p>
+        <p class="eyebrow reveal" data-reveal>CASE STUDY</p>
     <span class="chips reveal" data-reveal><span class="proj__flag">Example build</span><span class="proj__cat">Website</span></span>
 
         <h1 class="phero__title reveal" data-reveal style="--d:.05s">A Product Showcase You Can Send Anyone</h1>
@@ -378,7 +377,7 @@
 <section class="section section--alt section--glance">
   <div class="container">
     <dl class="glance">
-      <div class="glance__item reveal" data-reveal style="--d:.4s">
+      <div class="glance__item reveal" data-reveal style="--d:.04s">
         <dt>Type</dt>
         <dd>Static catalogue site</dd>
       </div>
@@ -410,19 +409,19 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>THE SITUATION</p>
+      <p class="eyebrow reveal" data-reveal>THE SITUATION</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">What's actually broken.</h2>
     </div>
 
     <div class="split">
       <div class="split__text">
-        <p class="reveal" data-reveal style="--d:.4s">A small manufacturer, wholesaler or boutique sells real products and sells them well. The catalogue is an Instagram grid, a WhatsApp Business listing and a PDF price list that was current last year. For walk-in and regular customers this works completely.</p>
+        <p class="reveal" data-reveal style="--d:.04s">A small manufacturer, wholesaler or boutique sells real products and sells them well. The catalogue is an Instagram grid, a WhatsApp Business listing and a PDF price list that was current last year. For walk-in and regular customers this works completely.</p>
         <p class="reveal" data-reveal style="--d:.10s">It stops working the moment someone serious asks. A corporate buyer wants a link for their procurement file. A distributor wants to see the range before a meeting. A bank or an investor wants to look the business up. You can send an Instagram handle to a friend; sending it to a purchase officer reads as a business that has not got around to existing properly yet.</p>
         <p class="reveal" data-reveal style="--d:.16s">There is also the quieter loss. Nobody searching for what you make finds you, because a social profile does not answer a search the way a page about the product does. The business is invisible to everyone who is not already following it.</p>
       </div>
 
       <ul class="split__list">
-        <li class="prob reveal" data-reveal style="--d:.6s"><span class="prob__x" aria-hidden="true">✕</span><h3>The catalogue only exists as Instagram posts and WhatsApp photos</h3></li>
+        <li class="prob reveal" data-reveal style="--d:.06s"><span class="prob__x" aria-hidden="true">✕</span><h3>The catalogue only exists as Instagram posts and WhatsApp photos</h3></li>
         <li class="prob reveal" data-reveal style="--d:.12s"><span class="prob__x" aria-hidden="true">✕</span><h3>A serious buyer asks for a website and there is nothing to send</h3></li>
         <li class="prob reveal" data-reveal style="--d:.18s"><span class="prob__x" aria-hidden="true">✕</span><h3>Nobody finds the business by searching for what it sells</h3></li>
         <li class="prob reveal" data-reveal style="--d:.24s"><span class="prob__x" aria-hidden="true">✕</span><h3>The price list is a PDF from last year, on someone's phone</h3></li>
@@ -434,41 +433,31 @@
 <section class="section section--alt">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>VERSION ONE</p>
+      <p class="eyebrow reveal" data-reveal>VERSION ONE</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd build first.</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">Every item here earns its place by being something a real user would miss on day one.</p>
     </div>
 
     <div class="cards cards--3">
-      <article class="card card--service reveal" data-reveal style="--d:.4s">
-        <span class="card__num" aria-hidden="true">01</span>
+      <article class="card card--service reveal" data-reveal style="--d:.04s">
         <h3>A page per product</h3>
         <p>Each item gets its own address — photograph, specification, sizes or variants, and price or enquire-for-price. One product can be sent on its own, which is the thing a catalogue in a feed cannot do.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
       <article class="card card--service reveal" data-reveal style="--d:.10s">
-        <span class="card__num" aria-hidden="true">02</span>
         <h3>A range that can be browsed</h3>
         <p>Products grouped the way you actually describe them, with filtering if there are enough of them to need it. A visitor should reach anything in the catalogue in two taps.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
       <article class="card card--service reveal" data-reveal style="--d:.16s">
-        <span class="card__num" aria-hidden="true">03</span>
         <h3>The credibility page</h3>
         <p>Who the business is, where it physically is, how long it has traded, registration and GST details, and a real photograph of the premises or the workshop. This is the page a buyer checks before replying, and leaving it vague costs more than a weak product page.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
       <article class="card card--service reveal" data-reveal style="--d:.22s">
-        <span class="card__num" aria-hidden="true">04</span>
         <h3>Enquiries that arrive somewhere</h3>
         <p>An enquiry button on every product that opens WhatsApp or email with the product already named, so the message says which item it is about. Sent to an address at your own domain, not a personal Gmail.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
       <article class="card card--service reveal" data-reveal style="--d:.28s">
-        <span class="card__num" aria-hidden="true">05</span>
         <h3>Findable</h3>
         <p>A page title and description per product, a sitemap, structured data so the product shows properly in search results, and image files small enough to load on a weak connection.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
     </div>
   </div>
@@ -477,15 +466,15 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>DELIBERATELY NOT IN V1</p>
+      <p class="eyebrow reveal" data-reveal>DELIBERATELY NOT IN V1</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd leave out.</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">Not because these are bad ideas. Because each one is designed better once the first version has told you something.</p>
     </div>
 
     <ul class="cutlist">
-      <li class="reveal" data-reveal style="--d:.4s"><span class="cutlist__x" aria-hidden="true">✕</span><span>A shopping cart and online payment. If you need to take money on the site, that is a different build and it is not static.</span></li>
-      <li class="reveal" data-reveal style="--d:.10s"><span class="cutlist__x" aria-hidden="true">✕</span><span>Live stock counts. A static site cannot honestly claim a number that changes during the day.</span></li>
-      <li class="reveal" data-reveal style="--d:.16s"><span class="cutlist__x" aria-hidden="true">✕</span><span>Customer accounts and order history, which need a database and a login — the two things this build deliberately does without.</span></li>
+      <li class="reveal" data-reveal style="--d:.04s"><span>A shopping cart and online payment. If you need to take money on the site, that is a different build and it is not static.</span></li>
+      <li class="reveal" data-reveal style="--d:.10s"><span>Live stock counts. A static site cannot honestly claim a number that changes during the day.</span></li>
+      <li class="reveal" data-reveal style="--d:.16s"><span>Customer accounts and order history, which need a database and a login — the two things this build deliberately does without.</span></li>
     </ul>
   </div>
 </section>
@@ -493,16 +482,16 @@
 <section class="section section--alt">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>UNDER THE HOOD</p>
+      <p class="eyebrow reveal" data-reveal>UNDER THE HOOD</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">How it's put together.</h2>
     </div>
 
     <dl class="stack">
-      <div class="stack__row reveal" data-reveal style="--d:.4s">
+      <div class="stack__row reveal" data-reveal style="--d:.04s">
         <dt>The site</dt>
         <dd>Plain HTML and CSS, generated from the product spreadsheet. No framework, because nothing here needs one and every dependency is a thing to update later.</dd>
       </div>
-      <div class="stack__row reveal" data-reveal style="--d:.9s">
+      <div class="stack__row reveal" data-reveal style="--d:.09s">
         <dt>Content</dt>
         <dd>One spreadsheet of products, exported and built into the site. The owner edits a familiar tool rather than learning an admin panel.</dd>
       </div>
@@ -525,13 +514,13 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>HOW IT RUNS</p>
+      <p class="eyebrow reveal" data-reveal>HOW IT RUNS</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">Week by week.</h2>
     </div>
 
     <ol class="timeline">
       <span class="tl__line" aria-hidden="true"><i></i></span>
-      <li class="tl reveal" data-reveal style="--d:.4s">
+      <li class="tl reveal" data-reveal style="--d:.04s">
         <span class="tl__num">01</span>
         <div class="tl__body">
           <h3>Week 1</h3>
@@ -559,13 +548,13 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>THE HARD PART</p>
+      <p class="eyebrow reveal" data-reveal>THE HARD PART</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">Keeping it current without a login to forget</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">Every build has one problem that decides whether the rest of it matters. This is that problem, written out.</p>
     </div>
 
     <div class="deep">
-      <p class="reveal" data-reveal style="--d:.4s">A static site is fast, costs nearly nothing to run and has no login screen for anyone to attack. The catch is the obvious one: if updating it means messaging a developer, it stops being updated. Within a year the prices are wrong, a discontinued item is still listed, and the owner has quietly gone back to sending photographs on WhatsApp.</p>
+      <p class="reveal" data-reveal style="--d:.04s">A static site is fast, costs nearly nothing to run and has no login screen for anyone to attack. The catch is the obvious one: if updating it means messaging a developer, it stops being updated. Within a year the prices are wrong, a discontinued item is still listed, and the owner has quietly gone back to sending photographs on WhatsApp.</p>
       <p class="reveal" data-reveal style="--d:.10s">So the products do not live in the page. They live in one spreadsheet — a column per field, a row per product — and the site is rebuilt from it. The owner edits the spreadsheet, which they already know how to do, and the catalogue updates. No admin panel, no password to reset, nothing to patch on a Tuesday because a plugin had a vulnerability.</p>
       <p class="reveal" data-reveal style="--d:.16s">That choice has a real cost and it should be said plainly: there is a short delay between the edit and the change appearing, and a typo in the spreadsheet can look odd on the page until it is corrected. In exchange you get a site with no database to breach, no login to compromise, and a hosting bill of nothing. For a catalogue that changes weekly rather than hourly, that is the right trade. For live stock counts it is the wrong one, and then this is not the build you want.</p>
       <p class="reveal" data-reveal style="--d:.22s">The second hard part is photography, and it is usually the thing that decides whether the site works. Twenty products shot against a bedsheet will undo every other decision on this list. The build assumes one consistent background, even light and the same crop on every item — which is a morning's work with a phone and a window, not a studio, but it has to actually happen.</p>
@@ -576,14 +565,14 @@
 <section class="section section--alt">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>BEFORE A PRICE EXISTS</p>
+      <p class="eyebrow reveal" data-reveal>BEFORE A PRICE EXISTS</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd ask you first.</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">A quote given without these answers is a guess. These are the questions that actually move the number.</p>
     </div>
 
     <ol class="qlist">
-      <li class="reveal" data-reveal style="--d:.4s"><span class="qlist__n">01</span><span>How many products, and how often do they change?</span></li>
-      <li class="reveal" data-reveal style="--d:.9s"><span class="qlist__n">02</span><span>Who would update it — you, or someone in the shop?</span></li>
+      <li class="reveal" data-reveal style="--d:.04s"><span class="qlist__n">01</span><span>How many products, and how often do they change?</span></li>
+      <li class="reveal" data-reveal style="--d:.09s"><span class="qlist__n">02</span><span>Who would update it — you, or someone in the shop?</span></li>
       <li class="reveal" data-reveal style="--d:.14s"><span class="qlist__n">03</span><span>Do prices go on the page, or is it enquire-for-price?</span></li>
       <li class="reveal" data-reveal style="--d:.19s"><span class="qlist__n">04</span><span>What does a serious buyer ask you for that you cannot currently send?</span></li>
       <li class="reveal" data-reveal style="--d:.24s"><span class="qlist__n">05</span><span>Do you have photographs you own, or only what is on the phone?</span></li>
@@ -594,13 +583,13 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>AFTERWARDS</p>
+      <p class="eyebrow reveal" data-reveal>AFTERWARDS</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">How we'd know it worked.</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">Agreed before the build starts, so there is something to judge it against other than whether it looks nice.</p>
     </div>
 
     <ul class="winlist">
-      <li class="reveal" data-reveal style="--d:.4s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>You can answer "do you have a website?" with a link instead of a handle.</span></li>
+      <li class="reveal" data-reveal style="--d:.04s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>You can answer "do you have a website?" with a link instead of a handle.</span></li>
       <li class="reveal" data-reveal style="--d:.10s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>A buyer can be sent one product, not a feed to scroll.</span></li>
       <li class="reveal" data-reveal style="--d:.16s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>The business appears in a search for what it sells plus the city.</span></li>
       <li class="reveal" data-reveal style="--d:.22s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>Prices and products are still right six months later, because updating them is a spreadsheet edit.</span></li>
@@ -611,7 +600,7 @@
 <section class="section section--alt">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>BEFORE YOU START</p>
+      <p class="eyebrow reveal" data-reveal>BEFORE YOU START</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">Worth knowing.</h2>
     </div>
 
@@ -628,12 +617,12 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>KEEP LOOKING</p>
+      <p class="eyebrow reveal" data-reveal>KEEP LOOKING</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">Other example builds.</h2>
     </div>
 
     <div class="cards post-grid">
-      <a class="card post-card reveal" data-reveal style="--d:.4s" href="restaurant-ordering-app.html">
+      <a class="card post-card reveal" data-reveal style="--d:.04s" href="restaurant-ordering-app.html">
         <span class="proj__cat">Mobile App</span>
         <h3>Restaurant Ordering App</h3>
         <p>Menu, cart, live order tracking and a simple kitchen dashboard for a multi-outlet restaurant.</p>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light" data-palette="green">
+<html lang="en" data-theme="light" data-palette="violet">
 <head>
 <meta charset="utf-8" />
 
@@ -23,7 +23,7 @@
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
-<meta name="theme-color" content="#f6fbf8" />
+<meta name="theme-color" content="#f6f1e6" />
 
 <title>Booking &amp; Scheduling, Version One — Case Study | Tavzuran</title>
 <meta name="description" content="Ships in weeks, not months: online booking, reminders and payments for a local service business." />
@@ -35,21 +35,24 @@
 <meta property="og:title" content="Booking &amp; Scheduling, Version One — Case Study | Tavzuran" />
 <meta property="og:description" content="Ships in weeks, not months: online booking, reminders and payments for a local service business." />
 <meta property="og:url" content="https://tavzuran.com/case-studies/booking-and-scheduling-first-version.html" />
-<meta property="og:image" content="https://tavzuran.com/assets/og-image.svg" />
+<meta property="og:image" content="https://tavzuran.com/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Booking &amp; Scheduling, Version One — Case Study | Tavzuran" />
 <meta name="twitter:description" content="Ships in weeks, not months: online booking, reminders and payments for a local service business." />
-<meta name="twitter:image" content="https://tavzuran.com/assets/og-image.svg" />
+<meta name="twitter:image" content="https://tavzuran.com/assets/og-image.png" />
 
 <link rel="icon" href="../assets/icon.png" type="image/png" sizes="192x192" />
 <link rel="apple-touch-icon" href="../assets/icon.png" />
 
-<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="../assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/ibm-plex-mono-500-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="../style.css" />
 
-<!-- Tiny bootstrap: marks that JS is on and applies the saved theme before the
-     first paint, so dark-mode users never see a flash of light. -->
+<!-- Tiny bootstrap: records that JavaScript is available, which the CSS uses
+     to enable the progressive bits. Nothing is stored or read. -->
 <script>
 (function () {
   /* Nothing is stored, so there is no saved theme to read before first paint.
@@ -193,11 +196,11 @@
           </div>
 
           <div class="appear__row appear__row--swatches" role="group" aria-label="Colour">
-            <button type="button" class="appear__sw" data-palette="blue" aria-label="Blue"><i style="background:#0f6ccc"></i></button>
-            <button type="button" class="appear__sw" data-palette="green" aria-label="Green"><i style="background:#12784a"></i></button>
-            <button type="button" class="appear__sw" data-palette="slate" aria-label="Slate"><i style="background:#445468"></i></button>
-            <button type="button" class="appear__sw" data-palette="ocean" aria-label="Ocean"><i style="background:linear-gradient(135deg,#0b6a92,#38bdf8)"></i></button>
-            <button type="button" class="appear__sw" data-palette="rainbow" aria-label="Rainbow"><i style="background:linear-gradient(100deg,#2563eb,#7028c8 34%,#c026d3 66%,#db2777)"></i></button>
+            <button type="button" class="appear__sw" data-palette="violet" aria-label="Violet"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="blue" aria-label="Blue"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="green" aria-label="Green"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="slate" aria-label="Slate"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="ocean" aria-label="Ocean"><i></i></button>
           </div>
         </div>
       </div>
@@ -209,7 +212,7 @@
   </div>
 </header>
 
-<!-- Machine-translation notice (only shown when a translation is active) -->
+<!-- Pre-email notice (shown before any email link opens) -->
 <div class="cdlg" id="mailNotice" hidden>
   <div class="cdlg__veil" data-cdlg-close></div>
   <div class="cdlg__box" role="dialog" aria-modal="true" aria-labelledby="mailNoticeTitle" aria-describedby="mailNoticeBody">
@@ -233,6 +236,7 @@
   </div>
 </div>
 
+<!-- Machine-translation notice (only shown when a translation is active) -->
 <div class="tnote" id="transNote" hidden>
   <div class="container tnote__inner">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 21 20H3l9-16.5Z"/><path d="M12 10v4M12 17h.01"/></svg>
@@ -320,11 +324,6 @@
 
 <main id="main">
 <section class="phero phero--split">
-  <div class="phero__bg" aria-hidden="true">
-    <span class="grid-fade"></span>
-    <span class="blob blob--1"></span>
-    <span class="blob blob--2"></span>
-  </div>
   <div class="container phero__inner">
   <nav class="crumb" aria-label="Breadcrumb">
     <a href="../index.html">Home</a>
@@ -336,7 +335,7 @@
 
     <div class="phero__grid">
       <div>
-        <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>CASE STUDY</p>
+        <p class="eyebrow reveal" data-reveal>CASE STUDY</p>
     <span class="chips reveal" data-reveal><span class="proj__flag">Example build</span><span class="proj__cat">First Version</span></span>
 
         <h1 class="phero__title reveal" data-reveal style="--d:.05s">Booking &amp; Scheduling, Version One</h1>
@@ -373,7 +372,7 @@
 <section class="section section--alt section--glance">
   <div class="container">
     <dl class="glance">
-      <div class="glance__item reveal" data-reveal style="--d:.4s">
+      <div class="glance__item reveal" data-reveal style="--d:.04s">
         <dt>Type</dt>
         <dd>Booking site</dd>
       </div>
@@ -405,18 +404,18 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>THE SITUATION</p>
+      <p class="eyebrow reveal" data-reveal>THE SITUATION</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">What's actually broken.</h2>
     </div>
 
     <div class="split">
       <div class="split__text">
-        <p class="reveal" data-reveal style="--d:.4s">A salon, clinic or studio books appointments over WhatsApp and by phone. Double bookings happen. No-shows are absorbed silently. The front desk cannot take a booking and serve a walk-in at the same time.</p>
+        <p class="reveal" data-reveal style="--d:.04s">A salon, clinic or studio books appointments over WhatsApp and by phone. Double bookings happen. No-shows are absorbed silently. The front desk cannot take a booking and serve a walk-in at the same time.</p>
         <p class="reveal" data-reveal style="--d:.10s">This is the clearest example of what a first version is for. The whole thing is small enough to be genuinely useful in a few weeks, and every week it runs teaches the owner something they would otherwise have guessed at.</p>
       </div>
 
       <ul class="split__list">
-        <li class="prob reveal" data-reveal style="--d:.6s"><span class="prob__x" aria-hidden="true">✕</span><h3>Bookings arrive by WhatsApp, phone and walk-in</h3></li>
+        <li class="prob reveal" data-reveal style="--d:.06s"><span class="prob__x" aria-hidden="true">✕</span><h3>Bookings arrive by WhatsApp, phone and walk-in</h3></li>
         <li class="prob reveal" data-reveal style="--d:.12s"><span class="prob__x" aria-hidden="true">✕</span><h3>Double bookings happen and cost goodwill</h3></li>
         <li class="prob reveal" data-reveal style="--d:.18s"><span class="prob__x" aria-hidden="true">✕</span><h3>No-shows are absorbed silently</h3></li>
         <li class="prob reveal" data-reveal style="--d:.24s"><span class="prob__x" aria-hidden="true">✕</span><h3>The desk cannot book and serve at the same time</h3></li>
@@ -428,41 +427,31 @@
 <section class="section section--alt">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>VERSION ONE</p>
+      <p class="eyebrow reveal" data-reveal>VERSION ONE</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd build first.</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">Every item here earns its place by being something a real user would miss on day one.</p>
     </div>
 
     <div class="cards cards--3">
-      <article class="card card--service reveal" data-reveal style="--d:.4s">
-        <span class="card__num" aria-hidden="true">01</span>
+      <article class="card card--service reveal" data-reveal style="--d:.04s">
         <h3>A bookable calendar</h3>
         <p>Services, durations, staff members and working hours. A slot exists only if the staff member and the service both fit in it.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
       <article class="card card--service reveal" data-reveal style="--d:.10s">
-        <span class="card__num" aria-hidden="true">02</span>
         <h3>Public booking page</h3>
         <p>One link, shareable on Instagram and WhatsApp. No app to install and no account to create.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
       <article class="card card--service reveal" data-reveal style="--d:.16s">
-        <span class="card__num" aria-hidden="true">03</span>
         <h3>Reminders</h3>
         <p>A message 24 hours and 2 hours before. This alone typically moves the no-show rate more than anything else in the build.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
       <article class="card card--service reveal" data-reveal style="--d:.22s">
-        <span class="card__num" aria-hidden="true">04</span>
         <h3>Deposits</h3>
         <p>Optional prepayment for slots that get abandoned. Turned on per service, not globally.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
       <article class="card card--service reveal" data-reveal style="--d:.28s">
-        <span class="card__num" aria-hidden="true">05</span>
         <h3>Front-desk view</h3>
         <p>Today at a glance, plus the ability to block time and add a walk-in in two taps.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
     </div>
   </div>
@@ -471,15 +460,15 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>DELIBERATELY NOT IN V1</p>
+      <p class="eyebrow reveal" data-reveal>DELIBERATELY NOT IN V1</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd leave out.</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">Not because these are bad ideas. Because each one is designed better once the first version has told you something.</p>
     </div>
 
     <ul class="cutlist">
-      <li class="reveal" data-reveal style="--d:.4s"><span class="cutlist__x" aria-hidden="true">✕</span><span>Inventory and product sales.</span></li>
-      <li class="reveal" data-reveal style="--d:.10s"><span class="cutlist__x" aria-hidden="true">✕</span><span>Staff payroll and commission calculation.</span></li>
-      <li class="reveal" data-reveal style="--d:.16s"><span class="cutlist__x" aria-hidden="true">✕</span><span>A customer mobile app. A booking link works better than an app someone installs once and deletes.</span></li>
+      <li class="reveal" data-reveal style="--d:.04s"><span>Inventory and product sales.</span></li>
+      <li class="reveal" data-reveal style="--d:.10s"><span>Staff payroll and commission calculation.</span></li>
+      <li class="reveal" data-reveal style="--d:.16s"><span>A customer mobile app. A booking link works better than an app someone installs once and deletes.</span></li>
     </ul>
   </div>
 </section>
@@ -487,16 +476,16 @@
 <section class="section section--alt">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>UNDER THE HOOD</p>
+      <p class="eyebrow reveal" data-reveal>UNDER THE HOOD</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">How it's put together.</h2>
     </div>
 
     <dl class="stack">
-      <div class="stack__row reveal" data-reveal style="--d:.4s">
+      <div class="stack__row reveal" data-reveal style="--d:.04s">
         <dt>Everything</dt>
         <dd>One Next.js app — the booking page needs to be public and fast, and the admin side is small enough to live in the same codebase</dd>
       </div>
-      <div class="stack__row reveal" data-reveal style="--d:.9s">
+      <div class="stack__row reveal" data-reveal style="--d:.09s">
         <dt>Database</dt>
         <dd>Postgres, with the availability rules enforced in the database so two people cannot take the same slot</dd>
       </div>
@@ -515,13 +504,13 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>HOW IT RUNS</p>
+      <p class="eyebrow reveal" data-reveal>HOW IT RUNS</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">Week by week.</h2>
     </div>
 
     <ol class="timeline">
       <span class="tl__line" aria-hidden="true"><i></i></span>
-      <li class="tl reveal" data-reveal style="--d:.4s">
+      <li class="tl reveal" data-reveal style="--d:.04s">
         <span class="tl__num">01</span>
         <div class="tl__body">
           <h3>Week 1</h3>
@@ -549,13 +538,13 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>THE HARD PART</p>
+      <p class="eyebrow reveal" data-reveal>THE HARD PART</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">Two people, one slot</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">Every build has one problem that decides whether the rest of it matters. This is that problem, written out.</p>
     </div>
 
     <div class="deep">
-      <p class="reveal" data-reveal style="--d:.4s">This is the smallest build on the list and it still has one genuinely hard problem: two customers opening the booking page at the same moment and choosing the same eleven o'clock with the same stylist.</p>
+      <p class="reveal" data-reveal style="--d:.04s">This is the smallest build on the list and it still has one genuinely hard problem: two customers opening the booking page at the same moment and choosing the same eleven o'clock with the same stylist.</p>
       <p class="reveal" data-reveal style="--d:.10s">The naive version checks whether the slot is free and then writes the booking. Between those two steps the other customer does the same thing, both checks pass, and you have a double booking that the software created — worse than the paper diary it replaced.</p>
       <p class="reveal" data-reveal style="--d:.16s">The fix is to make the database refuse it, with a constraint that cannot allow two bookings to overlap for the same staff member, rather than relying on application code to check first. That is a small amount of work done early and an unpleasant amount of work done late, which is why it belongs in week one.</p>
     </div>
@@ -565,14 +554,14 @@
 <section class="section section--alt">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>BEFORE A PRICE EXISTS</p>
+      <p class="eyebrow reveal" data-reveal>BEFORE A PRICE EXISTS</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd ask you first.</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">A quote given without these answers is a guess. These are the questions that actually move the number.</p>
     </div>
 
     <ol class="qlist">
-      <li class="reveal" data-reveal style="--d:.4s"><span class="qlist__n">01</span><span>What services do you offer, and how long does each actually take?</span></li>
-      <li class="reveal" data-reveal style="--d:.9s"><span class="qlist__n">02</span><span>How many staff, and can any of them do any service?</span></li>
+      <li class="reveal" data-reveal style="--d:.04s"><span class="qlist__n">01</span><span>What services do you offer, and how long does each actually take?</span></li>
+      <li class="reveal" data-reveal style="--d:.09s"><span class="qlist__n">02</span><span>How many staff, and can any of them do any service?</span></li>
       <li class="reveal" data-reveal style="--d:.14s"><span class="qlist__n">03</span><span>What share of customers are walk-ins versus booked?</span></li>
       <li class="reveal" data-reveal style="--d:.19s"><span class="qlist__n">04</span><span>Do you want deposits, and on which services?</span></li>
       <li class="reveal" data-reveal style="--d:.24s"><span class="qlist__n">05</span><span>Is there an existing customer list, and in what shape?</span></li>
@@ -583,13 +572,13 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>AFTERWARDS</p>
+      <p class="eyebrow reveal" data-reveal>AFTERWARDS</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">How we'd know it worked.</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">Agreed before the build starts, so there is something to judge it against other than whether it looks nice.</p>
     </div>
 
     <ul class="winlist">
-      <li class="reveal" data-reveal style="--d:.4s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>Around a third of bookings arrive through the link within a month.</span></li>
+      <li class="reveal" data-reveal style="--d:.04s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>Around a third of bookings arrive through the link within a month.</span></li>
       <li class="reveal" data-reveal style="--d:.10s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>Zero double bookings, because the database will not permit one.</span></li>
       <li class="reveal" data-reveal style="--d:.16s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>No-shows fall measurably once reminders are running.</span></li>
       <li class="reveal" data-reveal style="--d:.22s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>The front desk can serve a walk-in without losing a phone booking.</span></li>
@@ -600,7 +589,7 @@
 <section class="section section--alt">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>BEFORE YOU START</p>
+      <p class="eyebrow reveal" data-reveal>BEFORE YOU START</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">Worth knowing.</h2>
     </div>
 
@@ -617,12 +606,12 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>KEEP LOOKING</p>
+      <p class="eyebrow reveal" data-reveal>KEEP LOOKING</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">Other example builds.</h2>
     </div>
 
     <div class="cards post-grid">
-      <a class="card post-card reveal" data-reveal style="--d:.4s" href="saas-subscription-starter.html">
+      <a class="card post-card reveal" data-reveal style="--d:.04s" href="saas-subscription-starter.html">
         <span class="proj__cat">SaaS Product</span>
         <h3>SaaS Subscription Starter</h3>
         <p>Sign-up, workspaces, plans and recurring billing — the unglamorous half of a SaaS product, built once and properly.</p>
