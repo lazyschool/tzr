@@ -58,7 +58,7 @@ window.TAVZ_I18N["ar"] = {
   "THE HUMAN PART": "الجانب الإنساني",
   "Built by a human.": "من صنع إنسان.",
   "Just faster, with AI.": "لكن أسرع، بمساعدة الذكاء الاصطناعي.",
-  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it. That's literally the name.": "الذكاء الاصطناعي في هذا الاستوديو أداة قوية — لكنه ليس الاستوديو. كل منتج يفكر فيه ويراجعه ويطلقه إنسان يتحمل مسؤوليته. هذا حرفيًا ما يعنيه الاسم.",
+  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it.": "الذكاء الاصطناعي في هذا الاستوديو أداة قوية — لكنه ليس الاستوديو. كل منتج يفكر فيه ويراجعه ويطلقه إنسان يتحمل مسؤوليته.",
   "A human understands your idea": "إنسان يفهم فكرتك",
   "We start with a conversation, not a prompt. What to build first, what to leave out and what it should honestly cost are decisions a person makes with you.": "نبدأ بحوار، لا بأمر نصي. ما الذي يُبنى أولًا، وما الذي يُترك، وكم ينبغي أن يكلف بصدق — كلها قرارات يتخذها إنسان معك.",
   "AI does the boring parts": "الذكاء الاصطناعي يتولى الأجزاء المملة",

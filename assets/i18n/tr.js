@@ -58,7 +58,7 @@ window.TAVZ_I18N["tr"] = {
   "THE HUMAN PART": "İNSAN TARAFI",
   "Built by a human.": "Bir insan yaptı.",
   "Just faster, with AI.": "Sadece yapay zekâyla, daha hızlı.",
-  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it. That's literally the name.": "Bu stüdyoda yapay zekâ güçlü bir araçtır — stüdyonun kendisi değil. Her ürünü, sorumluluğunu üstlenen bir insan düşünür, gözden geçirir ve teslim eder. İsim zaten bunu söylüyor.",
+  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it.": "Bu stüdyoda yapay zekâ güçlü bir araçtır — stüdyonun kendisi değil. Her ürünü, sorumluluğunu üstlenen bir insan düşünür, gözden geçirir ve teslim eder.",
   "A human understands your idea": "Fikrinizi bir insan anlar",
   "We start with a conversation, not a prompt. What to build first, what to leave out and what it should honestly cost are decisions a person makes with you.": "Bir istemle değil, bir sohbetle başlıyoruz. Önce neyin yapılacağı, neyin çıkarılacağı ve dürüstçe ne kadar tutması gerektiği, bir insanın sizinle birlikte verdiği kararlardır.",
   "AI does the boring parts": "Sıkıcı kısımları yapay zekâ yapar",

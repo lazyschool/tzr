@@ -284,14 +284,14 @@ const CONFIG = {
      3. Theme (light / dark) with memory
   --------------------------------------------------------------- */
   const root = document.documentElement;
-  const PALETTES = ["blue", "green", "slate", "ocean", "rainbow"];
+  const PALETTES = ["violet", "blue", "green", "slate", "ocean"];
   const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
   // Preferences last as long as the page and are never written anywhere. The
-  // defaults are green on light, set on <html> in the markup so the first paint
+  // defaults are violet ink on light paper, set on <html> in the markup so the first paint
   // is already correct; "System" still follows the OS while it is selected.
   let currentMode = "light";
-  let currentPalette = "green";
+  let currentPalette = "violet";
   function storedMode() { return currentMode; }
   function storedPalette() { return currentPalette; }
 
@@ -519,19 +519,7 @@ const CONFIG = {
   }
 
   /* ---------------------------------------------------------------
-     6. Hand-drawn SVG line "draw in" effect
-  --------------------------------------------------------------- */
-  if (!reduceMotion) {
-    $$(".char .draw").forEach(function (path, i) {
-      let len = 500;
-      try { if (path.getTotalLength) len = Math.ceil(path.getTotalLength()) || 500; } catch (e) { /* noop */ }
-      path.style.setProperty("--len", len);
-      path.style.animationDelay = (i * 0.07).toFixed(2) + "s";
-    });
-  }
-
-  /* ---------------------------------------------------------------
-     7. Scroll-driven UI: progress bar, sticky nav, active link,
+     6. Scroll-driven UI: progress bar, sticky nav, active link,
         timeline fill, sticky mobile CTA
   --------------------------------------------------------------- */
   const nav = $("#nav");
@@ -591,7 +579,7 @@ const CONFIG = {
   onScroll();
 
   /* ---------------------------------------------------------------
-     8. Price count-up (₹20,000)
+     7. Price count-up (₹20,000)
   --------------------------------------------------------------- */
   const priceEl = $("#priceCount");
   if (priceEl && !reduceMotion && "IntersectionObserver" in window) {
@@ -618,53 +606,7 @@ const CONFIG = {
   }
 
   /* ---------------------------------------------------------------
-     9. Pointer-aware surfaces
-        Cards carry a soft light that follows the pointer (--mx/--my feed
-        the radial gradient in style.css) and the hero stage tilts a few
-        degrees towards it. Both are skipped on touch screens, where there
-        is no pointer to follow, and under prefers-reduced-motion.
-  --------------------------------------------------------------- */
-  let finePointer = false;
-  try {
-    finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-  } catch (e) { /* older browser: no spotlight, nothing lost */ }
-
-  if (finePointer && !reduceMotion) {
-    let spotFrame = null;
-    document.addEventListener("pointermove", function (e) {
-      const card = e.target.closest && e.target.closest(".card");
-      if (!card) return;
-      if (spotFrame) cancelAnimationFrame(spotFrame);
-      spotFrame = requestAnimationFrame(function () {
-        const r = card.getBoundingClientRect();
-        card.style.setProperty("--mx", (e.clientX - r.left).toFixed(0) + "px");
-        card.style.setProperty("--my", (e.clientY - r.top).toFixed(0) + "px");
-      });
-    }, { passive: true });
-
-    const stage = $("#artStage");
-    if (stage) {
-      const hero = stage.closest(".hero") || stage;
-      let tiltFrame = null;
-      hero.addEventListener("pointermove", function (e) {
-        if (tiltFrame) cancelAnimationFrame(tiltFrame);
-        tiltFrame = requestAnimationFrame(function () {
-          const r = stage.getBoundingClientRect();
-          const dx = (e.clientX - (r.left + r.width / 2)) / r.width;
-          const dy = (e.clientY - (r.top + r.height / 2)) / r.height;
-          stage.style.transform =
-            "perspective(1200px) rotateX(" + (-dy * 4).toFixed(2) + "deg) rotateY(" + (dx * 5).toFixed(2) + "deg)";
-        });
-      }, { passive: true });
-      hero.addEventListener("pointerleave", function () {
-        if (tiltFrame) cancelAnimationFrame(tiltFrame);
-        stage.style.transform = "";
-      });
-    }
-  }
-
-  /* ---------------------------------------------------------------
-     10. Pre-email notice
+     8. Pre-email notice
      Every route to my inbox passes through here first. The anchors stay
      real mailto links, so with JavaScript off they simply work; this only
      adds a step when it can, and never records that it was shown.

@@ -58,7 +58,7 @@ window.TAVZ_I18N["kk"] = {
   "THE HUMAN PART": "АДАМИ БӨЛІК",
   "Built by a human.": "Адам жасаған.",
   "Just faster, with AI.": "Тек ЖИ-мен жылдамырақ.",
-  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it. That's literally the name.": "Бұл студияда ЖИ — қуатты құрал, студияның өзі емес. Әр өнімді оған жауап беретін адам ойластырады, тексереді және шығарады. Атауы да дәл осыны білдіреді.",
+  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it.": "Бұл студияда ЖИ — қуатты құрал, студияның өзі емес. Әр өнімді оған жауап беретін адам ойластырады, тексереді және шығарады.",
   "A human understands your idea": "Идеяңызды адам түсінеді",
   "We start with a conversation, not a prompt. What to build first, what to leave out and what it should honestly cost are decisions a person makes with you.": "Біз промпттан емес, әңгімеден бастаймыз. Алдымен нені жасау, неден бас тарту және шын мәнінде қанша тұруы керек — бұл шешімдерді адам сізбен бірге қабылдайды.",
   "AI does the boring parts": "Жалықтыратын жұмысты ЖИ істейді",

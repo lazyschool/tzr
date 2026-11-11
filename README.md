@@ -12,11 +12,13 @@ tavzuran/
 ├── .well-known/
 │   └── security.txt  how to report a problem with the site
 ├── assets/
-│   ├── fonts/        self-hosted webfonts (no third-party requests)
-│   ├── favicon.svg   browser tab icon
-│   ├── og-image.svg  social share preview
+│   ├── fonts/        self-hosted webfonts (no third-party requests) + licences
+│   ├── icon.png      browser tab icon
+│   ├── og-image.png  social share preview (1200×630)
 │   ├── i18n/         20 dictionaries — loaded only when chosen
 │   └── README.md     how to add project images
+├── tools/            build.py regenerates the case studies, articles and nav
+├── LICENSES.md       every third-party asset, its licence and where it came from
 ├── .nojekyll         tells GitHub Pages to serve files as-is
 ├── robots.txt
 └── sitemap.xml
@@ -243,10 +245,11 @@ Point your domain's DNS at GitHub Pages, then **Settings → Pages → Custom do
 
 - **Mobile-first** and checked with no horizontal scroll at 375 / 390 / 430 px, tablet and desktop
 - **Sticky bottom CTA bar** on phones (Instagram traffic lands on a visible "Book a Free Call")
-- **Five colour palettes × light/dark/system** — blue (default), green, slate, ocean and rainbow,
-  chosen from the palette button in the header, remembered per visitor, no flash on load
-- **Animations** — scroll reveals, floating doodles, drawn hand-made line art, animated timeline,
-  price count-up; every one of them is switched off under `prefers-reduced-motion: reduce`
+- **Five inks × light/dark/system** — violet (default), blue, green, slate and ocean, chosen from
+  the palette button in the header. Nothing is stored, so the choice lasts for the visit.
+- **Animations** — scroll reveals, the double rule drawing under the headline, the stamp landing,
+  the timeline filling and the price count-up; all switched off under
+  `prefers-reduced-motion: reduce`
 - **Works without JavaScript** — all content renders, all links still work
 - **SEO** — title, meta description, Open Graph, Twitter card, canonical, JSON-LD business schema,
   semantic HTML, one `<h1>`, ordered heading levels
@@ -255,7 +258,26 @@ Point your domain's DNS at GitHub Pages, then **Settings → Pages → Custom do
 - **21 languages** — English is authentic, the other 20 are AI-translated, each with a visible
   notice in that language, `hreflang` tags, and right-to-left support for Arabic
 - **Performance** — no libraries, no framework, one small CSS file, one small JS file, all
-  illustrations are inline SVG (no image downloads). Only external request: Google Fonts.
+  illustrations are inline SVG (no image downloads). No external requests at all.
+
+### Design system: "The Honest Quote"
+
+The site is typeset as an itemised estimate. The pieces, all in `style.css`:
+
+| Piece | What it is |
+|---|---|
+| Ruled paper | A feint line every `--lh` in the hero and sub-page banners |
+| Margin line | The red double rule down the left of `<main>`; section marks (§ 01, § 02…) sit in the gutter beside it and are numbered by a CSS counter, so adding a section renumbers the rest |
+| Ledgers | Any `.cards` block is a ruled table: one heavy rule on top, one feint rule per entry, entries numbered by CSS counter |
+| Sheets | `.sheet`, `.mvp__panel`, `.proj` — paper torn off a pad, with a perforated top edge |
+| Double rule | The accountant's mark for a final figure: under "build it." and under every price |
+| Stamp | `.stamp`, `.proj__flag`, `.t__flag` — one rubber stamp per screen, no more |
+| Hand | Caveat, for the signature and one margin note per section |
+
+Type: **Newsreader** for headlines and text, **IBM Plex Mono** for labels, figures and buttons,
+**Caveat** for the signature. Licences are recorded in `LICENSES.md`.
+
+Decorative labels use numerals and symbols only, so nothing new needs translating.
 
 ### Colour themes
 
@@ -264,21 +286,28 @@ Two independent axes on `<html>`:
 | Attribute | Values |
 |---|---|
 | `data-theme` | `light` \| `dark` |
-| `data-palette` | `blue` \| `green` \| `slate` \| `ocean` \| `rainbow` |
+| `data-palette` | `violet` \| `blue` \| `green` \| `slate` \| `ocean` |
 
-Both are set before first paint by the inline bootstrap in `index.html`, so there is no flash. The
-palette button in the header opens a small panel: three mode buttons (light / dark / **system**) and
-five swatches. `system` is stored as *no* saved value, so it keeps following the OS setting instead
-of freezing whatever it was the day it was picked.
+The defaults (`light`, `violet`) are written on `<html>` in the markup, so the first paint is already
+correct. The palette button in the header opens a small panel: three mode buttons (light / dark /
+**system**) and five ink swatches.
 
-**To add a palette:** add a `:root[data-palette="name"]` block plus a
-`:root[data-theme="dark"][data-palette="name"]` block in section `1b` of `style.css`, add the code to
-`PALETTES` in `script.js`, and add a swatch button in `index.html`.
+Paper, ink and rules are fixed. A palette changes one thing: the **ink colour** used for stamps, the
+signature, section marks, links and ticks. Each ink is two values in section 2 of `style.css` —
+`--a-l` for light grounds and `--a-d` for dark ones:
 
-⚠️ **`--accent` carries button fills and link text, so it must stay dark enough for white text**
-(≥ 4.5:1). Use `--accent-light` for anything decorative. All five palettes are verified at AA in both
-modes; rainbow keeps a single readable violet for text and puts the colour in `--rainbow`, a gradient
-whose every stop also clears 4.5:1 with white.
+```css
+:root[data-palette="blue"] { --a-l: #1f4fc4; --a-d: #8fb0ff; }
+```
+
+**To add an ink:** add a line like the one above, add its two swatch colours beside the others in
+section 6 (`.appear__sw[data-palette=…]`), add the name to `PALETTES` in `script.js`, and add a
+swatch button in `index.html` and in `chrome_open()` in `tools/build.py`.
+
+⚠️ **An ink carries text, so both values must reach 4.5:1** — `--a-l` against `--paper-2`
+(`#efe8d8`) and `--a-d` against the dark `--sheet` (`#1a2130`). The five shipped inks measure between
+5.1:1 and 11.2:1. The red margin line and the feint blue rules are decoration only and are never used
+for text.
 
 ### Security
 
@@ -305,7 +334,7 @@ pre-paint theme), but regenerate them properly:
 python -c "import hashlib,base64,re,sys; h=open('index.html',encoding='utf-8').read(); print([('sha256-'+base64.b64encode(hashlib.sha256(b.encode()).digest()).decode()) for b in re.findall(r'<script(?![^>]*src=)[^>]*>(.*?)</script>', h, re.S)])"
 ```
 
-Then paste the three values into the `script-src` list in the CSP meta tag.
+Or simply run `python tools/csp.py`, which rewrites the hashes on every page.
 
 What CSP **cannot** do here: GitHub Pages can't send real HTTP headers, so `frame-ancestors`
 (clickjacking protection) and HSTS are unavailable. Neither matters much for a brochure site.
@@ -327,7 +356,7 @@ still load and the page looks correct. For an exact preview, run the local serve
 
 | I want to… | Where |
 |-----------|-------|
-| Change the accent colour | `style.css` → `:root { --accent: #0f6ccc; }` plus `--accent-hover`, `--accent-soft`, `--accent-light`, `--accent-glow`. `--accent` carries button and link text so keep it dark enough to read on white; `--accent-light` is decoration only (sketch strokes, doodles, sparks). |
+| Change the default ink colour | `style.css` → `:root { --a-l: #4a3aa8; --a-d: #b3a8ff; }` (light-ground and dark-ground values). Both carry text, so keep each at 4.5:1 or better against its background. |
 | Change the MVP price | `index.html` → search `20,000` (appears in the hero badge, MVP section, mobile menu, footer, meta description) |
 | Add / remove a service or industry card | `index.html` → `#services` / `#industries` — copy an `<article class="card ...">` block |
 | Edit the About text | `index.html` → `#about` (the credibility strip is `.about__stats`) |

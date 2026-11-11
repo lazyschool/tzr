@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light" data-palette="green">
+<html lang="en" data-theme="light" data-palette="violet">
 <head>
 <meta charset="utf-8" />
 
@@ -23,7 +23,7 @@
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
-<meta name="theme-color" content="#f6fbf8" />
+<meta name="theme-color" content="#f6f1e6" />
 
 <title>Getting an App Through Both Stores — Case Study | Tavzuran</title>
 <meta name="description" content="The two or three weeks between the app being finished and people being able to install it — rejections, signing keys, store listings and the paperwork." />
@@ -35,21 +35,24 @@
 <meta property="og:title" content="Getting an App Through Both Stores — Case Study | Tavzuran" />
 <meta property="og:description" content="The two or three weeks between the app being finished and people being able to install it — rejections, signing keys, store listings and the paperwork." />
 <meta property="og:url" content="https://tavzuran.com/case-studies/getting-an-app-through-both-stores.html" />
-<meta property="og:image" content="https://tavzuran.com/assets/og-image.svg" />
+<meta property="og:image" content="https://tavzuran.com/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Getting an App Through Both Stores — Case Study | Tavzuran" />
 <meta name="twitter:description" content="The two or three weeks between the app being finished and people being able to install it — rejections, signing keys, store listings and the paperwork." />
-<meta name="twitter:image" content="https://tavzuran.com/assets/og-image.svg" />
+<meta name="twitter:image" content="https://tavzuran.com/assets/og-image.png" />
 
 <link rel="icon" href="../assets/icon.png" type="image/png" sizes="192x192" />
 <link rel="apple-touch-icon" href="../assets/icon.png" />
 
-<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="../assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/ibm-plex-mono-500-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="../style.css" />
 
-<!-- Tiny bootstrap: marks that JS is on and applies the saved theme before the
-     first paint, so dark-mode users never see a flash of light. -->
+<!-- Tiny bootstrap: records that JavaScript is available, which the CSS uses
+     to enable the progressive bits. Nothing is stored or read. -->
 <script>
 (function () {
   /* Nothing is stored, so there is no saved theme to read before first paint.
@@ -193,11 +196,11 @@
           </div>
 
           <div class="appear__row appear__row--swatches" role="group" aria-label="Colour">
-            <button type="button" class="appear__sw" data-palette="blue" aria-label="Blue"><i style="background:#0f6ccc"></i></button>
-            <button type="button" class="appear__sw" data-palette="green" aria-label="Green"><i style="background:#12784a"></i></button>
-            <button type="button" class="appear__sw" data-palette="slate" aria-label="Slate"><i style="background:#445468"></i></button>
-            <button type="button" class="appear__sw" data-palette="ocean" aria-label="Ocean"><i style="background:linear-gradient(135deg,#0b6a92,#38bdf8)"></i></button>
-            <button type="button" class="appear__sw" data-palette="rainbow" aria-label="Rainbow"><i style="background:linear-gradient(100deg,#2563eb,#7028c8 34%,#c026d3 66%,#db2777)"></i></button>
+            <button type="button" class="appear__sw" data-palette="violet" aria-label="Violet"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="blue" aria-label="Blue"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="green" aria-label="Green"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="slate" aria-label="Slate"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="ocean" aria-label="Ocean"><i></i></button>
           </div>
         </div>
       </div>
@@ -209,7 +212,7 @@
   </div>
 </header>
 
-<!-- Machine-translation notice (only shown when a translation is active) -->
+<!-- Pre-email notice (shown before any email link opens) -->
 <div class="cdlg" id="mailNotice" hidden>
   <div class="cdlg__veil" data-cdlg-close></div>
   <div class="cdlg__box" role="dialog" aria-modal="true" aria-labelledby="mailNoticeTitle" aria-describedby="mailNoticeBody">
@@ -233,6 +236,7 @@
   </div>
 </div>
 
+<!-- Machine-translation notice (only shown when a translation is active) -->
 <div class="tnote" id="transNote" hidden>
   <div class="container tnote__inner">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 21 20H3l9-16.5Z"/><path d="M12 10v4M12 17h.01"/></svg>
@@ -320,11 +324,6 @@
 
 <main id="main">
 <section class="phero phero--split">
-  <div class="phero__bg" aria-hidden="true">
-    <span class="grid-fade"></span>
-    <span class="blob blob--1"></span>
-    <span class="blob blob--2"></span>
-  </div>
   <div class="container phero__inner">
   <nav class="crumb" aria-label="Breadcrumb">
     <a href="../index.html">Home</a>
@@ -336,7 +335,7 @@
 
     <div class="phero__grid">
       <div>
-        <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>CASE STUDY</p>
+        <p class="eyebrow reveal" data-reveal>CASE STUDY</p>
     <span class="chips reveal" data-reveal><span class="proj__flag">Example build</span><span class="proj__cat">App Launch</span></span>
 
         <h1 class="phero__title reveal" data-reveal style="--d:.05s">Getting an App Through Both Stores</h1>
@@ -382,7 +381,7 @@
 <section class="section section--alt section--glance">
   <div class="container">
     <dl class="glance">
-      <div class="glance__item reveal" data-reveal style="--d:.4s">
+      <div class="glance__item reveal" data-reveal style="--d:.04s">
         <dt>Type</dt>
         <dd>Publishing + consulting</dd>
       </div>
@@ -414,19 +413,19 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>THE SITUATION</p>
+      <p class="eyebrow reveal" data-reveal>THE SITUATION</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">What's actually broken.</h2>
     </div>
 
     <div class="split">
       <div class="split__text">
-        <p class="reveal" data-reveal style="--d:.4s">The build is done. It works on the phone in your hand. And that turns out to be somewhere around three quarters of the journey, because both stores sit between the finished app and anyone installing it, and each has a review process with opinions of its own.</p>
+        <p class="reveal" data-reveal style="--d:.04s">The build is done. It works on the phone in your hand. And that turns out to be somewhere around three quarters of the journey, because both stores sit between the finished app and anyone installing it, and each has a review process with opinions of its own.</p>
         <p class="reveal" data-reveal style="--d:.10s">This is where a lot of first apps stall for weeks. Not on code — on an Apple rejection quoting a guideline number, a Google data safety form nobody knows how to answer truthfully, a certificate that expired, or a keystore that belonged to a developer who has moved on.</p>
         <p class="reveal" data-reveal style="--d:.16s">It is also where an expensive mistake gets made quietly: the developer publishes under their own account because it is faster. The app is then not yours in any way that matters, and moving it later is a negotiation.</p>
       </div>
 
       <ul class="split__list">
-        <li class="prob reveal" data-reveal style="--d:.6s"><span class="prob__x" aria-hidden="true">✕</span><h3>The app is finished and has been rejected twice with no clear reason</h3></li>
+        <li class="prob reveal" data-reveal style="--d:.06s"><span class="prob__x" aria-hidden="true">✕</span><h3>The app is finished and has been rejected twice with no clear reason</h3></li>
         <li class="prob reveal" data-reveal style="--d:.12s"><span class="prob__x" aria-hidden="true">✕</span><h3>Nobody is sure which account or key the last developer used</h3></li>
         <li class="prob reveal" data-reveal style="--d:.18s"><span class="prob__x" aria-hidden="true">✕</span><h3>The privacy policy and the data safety form disagree with each other</h3></li>
         <li class="prob reveal" data-reveal style="--d:.24s"><span class="prob__x" aria-hidden="true">✕</span><h3>Screenshots, ratings and descriptions were left to the last day</h3></li>
@@ -438,41 +437,31 @@
 <section class="section section--alt">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>VERSION ONE</p>
+      <p class="eyebrow reveal" data-reveal>VERSION ONE</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd build first.</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">Every item here earns its place by being something a real user would miss on day one.</p>
     </div>
 
     <div class="cards cards--3">
-      <article class="card card--service reveal" data-reveal style="--d:.4s">
-        <span class="card__num" aria-hidden="true">01</span>
+      <article class="card card--service reveal" data-reveal style="--d:.04s">
         <h3>Accounts in your name, from the start</h3>
         <p>Apple Developer and Google Play Console registered to your business, with you as the owner and me added as a member. If they already exist in someone else's name, the transfer happens before anything else does.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
       <article class="card card--service reveal" data-reveal style="--d:.10s">
-        <span class="card__num" aria-hidden="true">02</span>
         <h3>A pre-submission review</h3>
         <p>The app checked against the guidelines that actually cause rejections — account deletion, permission prompts that explain themselves, sign-in with Apple where required, payment rules for whatever you sell, and whether there is enough here for Apple to consider it an app at all.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
       <article class="card card--service reveal" data-reveal style="--d:.16s">
-        <span class="card__num" aria-hidden="true">03</span>
         <h3>Keys and certificates, held by you</h3>
         <p>Android upload and signing keys generated and backed up somewhere you control. Apple certificates and provisioning set up so they can be renewed without me. Written down, because in two years nobody remembers.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
       <article class="card card--service reveal" data-reveal style="--d:.22s">
-        <span class="card__num" aria-hidden="true">04</span>
         <h3>The store listing</h3>
         <p>Screenshots at the sizes each store demands, a description written for someone deciding whether to install, the content and age ratings answered honestly, and a data safety declaration that matches what the app sends.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
       <article class="card card--service reveal" data-reveal style="--d:.28s">
-        <span class="card__num" aria-hidden="true">05</span>
         <h3>Submission, and the replies</h3>
         <p>The upload, the review notes, the demo account reviewers need, and — when a rejection arrives — the reply. Most are answered rather than rebuilt, and knowing which is which is the job.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
     </div>
   </div>
@@ -481,15 +470,15 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>DELIBERATELY NOT IN V1</p>
+      <p class="eyebrow reveal" data-reveal>DELIBERATELY NOT IN V1</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd leave out.</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">Not because these are bad ideas. Because each one is designed better once the first version has told you something.</p>
     </div>
 
     <ul class="cutlist">
-      <li class="reveal" data-reveal style="--d:.4s"><span class="cutlist__x" aria-hidden="true">✕</span><span>Building the app. This is the publishing half; if the app also needs work, that is scoped separately.</span></li>
-      <li class="reveal" data-reveal style="--d:.10s"><span class="cutlist__x" aria-hidden="true">✕</span><span>Paid user acquisition and store-listing experiments. Get it live first, then find out what people search for.</span></li>
-      <li class="reveal" data-reveal style="--d:.16s"><span class="cutlist__x" aria-hidden="true">✕</span><span>Promises about review timing. Neither store publishes one, and anyone who guarantees a date is guessing.</span></li>
+      <li class="reveal" data-reveal style="--d:.04s"><span>Building the app. This is the publishing half; if the app also needs work, that is scoped separately.</span></li>
+      <li class="reveal" data-reveal style="--d:.10s"><span>Paid user acquisition and store-listing experiments. Get it live first, then find out what people search for.</span></li>
+      <li class="reveal" data-reveal style="--d:.16s"><span>Promises about review timing. Neither store publishes one, and anyone who guarantees a date is guessing.</span></li>
     </ul>
   </div>
 </section>
@@ -497,16 +486,16 @@
 <section class="section section--alt">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>UNDER THE HOOD</p>
+      <p class="eyebrow reveal" data-reveal>UNDER THE HOOD</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">How it's put together.</h2>
     </div>
 
     <dl class="stack">
-      <div class="stack__row reveal" data-reveal style="--d:.4s">
+      <div class="stack__row reveal" data-reveal style="--d:.04s">
         <dt>Apple</dt>
         <dd>Developer Program membership, App Store Connect, TestFlight for the build reviewers and you both test.</dd>
       </div>
-      <div class="stack__row reveal" data-reveal style="--d:.9s">
+      <div class="stack__row reveal" data-reveal style="--d:.09s">
         <dt>Google</dt>
         <dd>Play Console, Play App Signing, and closed testing where the account's age requires it.</dd>
       </div>
@@ -529,13 +518,13 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>HOW IT RUNS</p>
+      <p class="eyebrow reveal" data-reveal>HOW IT RUNS</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">Week by week.</h2>
     </div>
 
     <ol class="timeline">
       <span class="tl__line" aria-hidden="true"><i></i></span>
-      <li class="tl reveal" data-reveal style="--d:.4s">
+      <li class="tl reveal" data-reveal style="--d:.04s">
         <span class="tl__num">01</span>
         <div class="tl__body">
           <h3>Week 1</h3>
@@ -563,13 +552,13 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>THE HARD PART</p>
+      <p class="eyebrow reveal" data-reveal>THE HARD PART</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">The rejection loop is the whole cost</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">Every build has one problem that decides whether the rest of it matters. This is that problem, written out.</p>
     </div>
 
     <div class="deep">
-      <p class="reveal" data-reveal style="--d:.4s">A store rejection is not expensive because of the fix. It is expensive because of the wait. You submit, wait a day or three, get a paragraph that names a guideline number and little else, guess at what it meant, resubmit, and wait again. Three rounds of that is a fortnight gone, and the launch date you gave people has passed.</p>
+      <p class="reveal" data-reveal style="--d:.04s">A store rejection is not expensive because of the fix. It is expensive because of the wait. You submit, wait a day or three, get a paragraph that names a guideline number and little else, guess at what it meant, resubmit, and wait again. Three rounds of that is a fortnight gone, and the launch date you gave people has passed.</p>
       <p class="reveal" data-reveal style="--d:.10s">So the work is front-loaded. The submission is built to survive the reviews that actually get failed, and there are only a handful of those. Apple 5.1.1 for collecting data you did not justify, or for having no way to delete an account. Apple 4.2 when the app is a website in a wrapper with nothing native about it. Apple 4.8 when you offer Google or Facebook login and not Apple's. 3.1.1 when you sell something digital outside their payment system. On Google's side: the data safety form contradicting what the app actually sends, a target API level below the current floor, and — for newer personal accounts — the closed testing requirement that needs real testers running the app for a fortnight before you may apply for production.</p>
       <p class="reveal" data-reveal style="--d:.16s">The other half is the part nobody warns you about: the signing keys. Lose the Android upload key and you cannot ship an update to your own app under the same listing. Let an agency hold the Apple account and your app is legally theirs. Both are recoverable only with difficulty, or not at all. So accounts get created in the business's name, and keys get backed up somewhere the business controls, before a single binary is uploaded.</p>
     </div>
@@ -579,14 +568,14 @@
 <section class="section section--alt">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>BEFORE A PRICE EXISTS</p>
+      <p class="eyebrow reveal" data-reveal>BEFORE A PRICE EXISTS</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd ask you first.</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">A quote given without these answers is a guess. These are the questions that actually move the number.</p>
     </div>
 
     <ol class="qlist">
-      <li class="reveal" data-reveal style="--d:.4s"><span class="qlist__n">01</span><span>Do you already have an Apple Developer account and a Play Console account, and whose name are they in?</span></li>
-      <li class="reveal" data-reveal style="--d:.9s"><span class="qlist__n">02</span><span>Does the app collect anything about a person — even an email address?</span></li>
+      <li class="reveal" data-reveal style="--d:.04s"><span class="qlist__n">01</span><span>Do you already have an Apple Developer account and a Play Console account, and whose name are they in?</span></li>
+      <li class="reveal" data-reveal style="--d:.09s"><span class="qlist__n">02</span><span>Does the app collect anything about a person — even an email address?</span></li>
       <li class="reveal" data-reveal style="--d:.14s"><span class="qlist__n">03</span><span>Is there a login, and does it offer sign-in with Google, Facebook or Apple?</span></li>
       <li class="reveal" data-reveal style="--d:.19s"><span class="qlist__n">04</span><span>Do you sell anything inside the app, and is it a physical thing or a digital one?</span></li>
       <li class="reveal" data-reveal style="--d:.24s"><span class="qlist__n">05</span><span>Has it been rejected before, and do you still have the message they sent?</span></li>
@@ -597,13 +586,13 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>AFTERWARDS</p>
+      <p class="eyebrow reveal" data-reveal>AFTERWARDS</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">How we'd know it worked.</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">Agreed before the build starts, so there is something to judge it against other than whether it looks nice.</p>
     </div>
 
     <ul class="winlist">
-      <li class="reveal" data-reveal style="--d:.4s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>Live on both stores, with the accounts in your name and the keys in your possession.</span></li>
+      <li class="reveal" data-reveal style="--d:.04s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>Live on both stores, with the accounts in your name and the keys in your possession.</span></li>
       <li class="reveal" data-reveal style="--d:.10s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>The listing answers the questions a buyer has before installing, not after.</span></li>
       <li class="reveal" data-reveal style="--d:.16s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>The data safety form and the privacy policy say the same thing the app actually does.</span></li>
       <li class="reveal" data-reveal style="--d:.22s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>You can ship an update yourself, and know what to do when a review fails.</span></li>
@@ -614,7 +603,7 @@
 <section class="section section--alt">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>BEFORE YOU START</p>
+      <p class="eyebrow reveal" data-reveal>BEFORE YOU START</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">Worth knowing.</h2>
     </div>
 
@@ -631,12 +620,12 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>KEEP LOOKING</p>
+      <p class="eyebrow reveal" data-reveal>KEEP LOOKING</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">Other example builds.</h2>
     </div>
 
     <div class="cards post-grid">
-      <a class="card post-card reveal" data-reveal style="--d:.4s" href="product-showcase-site-for-a-small-business.html">
+      <a class="card post-card reveal" data-reveal style="--d:.04s" href="product-showcase-site-for-a-small-business.html">
         <span class="proj__cat">Website</span>
         <h3>A Product Showcase You Can Send Anyone</h3>
         <p>Your catalogue lives on Instagram, and you cannot send that to a corporate buyer or a bank. This is the address that is actually yours.</p>

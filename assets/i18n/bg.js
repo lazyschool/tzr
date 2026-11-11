@@ -58,7 +58,7 @@ window.TAVZ_I18N["bg"] = {
   "THE HUMAN PART": "ЧОВЕШКАТА ЧАСТ",
   "Built by a human.": "Създадено от човек.",
   "Just faster, with AI.": "Просто по-бързо, с ИИ.",
-  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it. That's literally the name.": "В това студио ИИ е мощен инструмент — но не е студиото. Всеки продукт е обмислен, прегледан и пуснат от човек, който отговаря за него. Точно това означава и името.",
+  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it.": "В това студио ИИ е мощен инструмент — но не е студиото. Всеки продукт е обмислен, прегледан и пуснат от човек, който отговаря за него.",
   "A human understands your idea": "Човек разбира вашата идея",
   "We start with a conversation, not a prompt. What to build first, what to leave out and what it should honestly cost are decisions a person makes with you.": "Започваме с разговор, а не с промпт. Какво да се направи първо, какво да отпадне и колко честно трябва да струва — това са решения, които човек взема заедно с вас.",
   "AI does the boring parts": "ИИ върши скучните части",

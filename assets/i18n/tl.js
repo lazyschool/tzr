@@ -58,7 +58,7 @@ window.TAVZ_I18N["tl"] = {
   "THE HUMAN PART": "ANG BAHAGING PANTAO",
   "Built by a human.": "Gawa ng tao.",
   "Just faster, with AI.": "Mas mabilis nga lang, sa tulong ng AI.",
-  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it. That's literally the name.": "Ang AI ay isang makapangyarihang kasangkapan sa studio na ito — hindi ito ang studio mismo. Bawat produkto ay pinag-isipan, sinuri at inilunsad ng taong may pananagutan dito. Iyan mismo ang ibig sabihin ng pangalan namin.",
+  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it.": "Ang AI ay isang makapangyarihang kasangkapan sa studio na ito — hindi ito ang studio mismo. Bawat produkto ay pinag-isipan, sinuri at inilunsad ng taong may pananagutan dito.",
   "A human understands your idea": "May taong umiintindi sa ideya mo",
   "We start with a conversation, not a prompt. What to build first, what to leave out and what it should honestly cost are decisions a person makes with you.": "Nagsisimula kami sa usapan, hindi sa prompt. Kung ano ang unang gagawin, ano ang iiwan, at kung magkano talaga ito dapat magkahalaga — mga desisyong ginagawa ng tao kasama mo.",
   "AI does the boring parts": "Ang AI ang gumagawa ng nakakabagot na bahagi",

@@ -58,7 +58,7 @@ window.TAVZ_I18N["id"] = {
   "THE HUMAN PART": "BAGIAN MANUSIANYA",
   "Built by a human.": "Dibuat oleh manusia.",
   "Just faster, with AI.": "Hanya lebih cepat, dengan AI.",
-  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it. That's literally the name.": "Di studio ini AI adalah alat yang ampuh — bukan studionya. Setiap produk dipikirkan, ditinjau, dan dirilis oleh orang yang bertanggung jawab atasnya. Persis seperti namanya.",
+  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it.": "Di studio ini AI adalah alat yang ampuh — bukan studionya. Setiap produk dipikirkan, ditinjau, dan dirilis oleh orang yang bertanggung jawab atasnya.",
   "A human understands your idea": "Manusia memahami ide Anda",
   "We start with a conversation, not a prompt. What to build first, what to leave out and what it should honestly cost are decisions a person makes with you.": "Kami mulai dengan percakapan, bukan prompt. Apa yang dibangun lebih dulu, apa yang ditinggalkan, dan berapa biayanya secara jujur adalah keputusan yang diambil seorang manusia bersama Anda.",
   "AI does the boring parts": "AI mengerjakan bagian yang membosankan",

@@ -58,7 +58,7 @@ window.TAVZ_I18N["es"] = {
   "THE HUMAN PART": "LA PARTE HUMANA",
   "Built by a human.": "Hecho por una persona.",
   "Just faster, with AI.": "Solo que más rápido, con IA.",
-  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it. That's literally the name.": "En este estudio la IA es una herramienta — no es el estudio. Cada producto lo piensa, lo revisa y lo publica una persona que responde por él. Eso dice literalmente el nombre.",
+  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it.": "En este estudio la IA es una herramienta — no es el estudio. Cada producto lo piensa, lo revisa y lo publica una persona que responde por él.",
   "A human understands your idea": "Una persona entiende tu idea",
   "We start with a conversation, not a prompt. What to build first, what to leave out and what it should honestly cost are decisions a person makes with you.": "Empezamos con una conversación, no con un prompt. Qué construir primero, qué dejar fuera y cuánto debería costar de verdad son decisiones que toma una persona contigo.",
   "AI does the boring parts": "La IA hace lo aburrido",

@@ -58,7 +58,7 @@ window.TAVZ_I18N["fa"] = {
   "THE HUMAN PART": "بخش انسانی",
   "Built by a human.": "ساخته‌ی دست انسان.",
   "Just faster, with AI.": "فقط سریع‌تر، با هوش مصنوعی.",
-  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it. That's literally the name.": "در این استودیو هوش مصنوعی ابزاری قدرتمند است — نه خودِ استودیو. هر محصول را انسانی می‌اندیشد، بازبینی می‌کند و تحویل می‌دهد که پاسخ‌گوی آن هم هست. معنای نام هم دقیقاً همین است.",
+  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it.": "در این استودیو هوش مصنوعی ابزاری قدرتمند است — نه خودِ استودیو. هر محصول را انسانی می‌اندیشد، بازبینی می‌کند و تحویل می‌دهد که پاسخ‌گوی آن هم هست.",
   "A human understands your idea": "ایده‌ی شما را یک انسان می‌فهمد",
   "We start with a conversation, not a prompt. What to build first, what to leave out and what it should honestly cost are decisions a person makes with you.": "ما با گفت‌وگو شروع می‌کنیم، نه با یک پرامپت. اینکه اول چه ساخته شود، چه چیزی کنار گذاشته شود و صادقانه چقدر باید هزینه داشته باشد، تصمیم‌هایی است که یک انسان همراه شما می‌گیرد.",
   "AI does the boring parts": "کارهای خسته‌کننده با هوش مصنوعی",

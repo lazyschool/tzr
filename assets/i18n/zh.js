@@ -57,7 +57,7 @@ window.TAVZ_I18N["zh"] = {
   "THE HUMAN PART": "属于人的部分",
   "Built by a human.": "由人打造。",
   "Just faster, with AI.": "只是借助 AI，更快而已。",
-  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it. That's literally the name.": "在这个工作室里，AI 是一件强大的工具，而不是工作室本身。每个产品都由一个为它负责的人思考、审查并交付。名字说的就是这个意思。",
+  "AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it.": "在这个工作室里，AI 是一件强大的工具，而不是工作室本身。每个产品都由一个为它负责的人思考、审查并交付。",
   "A human understands your idea": "理解你想法的是人",
   "We start with a conversation, not a prompt. What to build first, what to leave out and what it should honestly cost are decisions a person makes with you.": "我们从一次对话开始，而不是一句提示词。先做什么、舍弃什么、诚实地说应该花多少钱，这些决定是一个人和你一起做出的。",
   "AI does the boring parts": "无聊的部分交给 AI",
