@@ -284,14 +284,14 @@ const CONFIG = {
      3. Theme (light / dark) with memory
   --------------------------------------------------------------- */
   const root = document.documentElement;
-  const PALETTES = ["orange", "blue", "green", "violet", "slate"];
+  const PALETTES = ["green", "blue", "slate", "ocean", "violet"];
   const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
   // Preferences last as long as the page and are never written anywhere. The
-  // defaults are orange marker on drafting film, set on <html> in the markup so the first paint
+  // defaults are drafting film with green blueprint, set on <html> in the markup so the first paint
   // is already correct; "System" still follows the OS while it is selected.
   let currentMode = "light";
-  let currentPalette = "orange";
+  let currentPalette = "green";
   function storedMode() { return currentMode; }
   function storedPalette() { return currentPalette; }
 

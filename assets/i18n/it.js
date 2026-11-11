@@ -179,7 +179,6 @@ window.TAVZ_I18N["it"] = {
   "Ocean": "Oceano",
   "Rainbow": "Arcobaleno",
   "Violet": "Viola",
-  "Orange": "Arancione",
   "Colour": "Colore",
   "Free Call": "Chiamata gratis",
   "Case Studies": "Casi studio",

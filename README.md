@@ -245,7 +245,7 @@ Point your domain's DNS at GitHub Pages, then **Settings → Pages → Custom do
 
 - **Mobile-first** and checked with no horizontal scroll at 375 / 390 / 430 px, tablet and desktop
 - **Sticky bottom CTA bar** on phones (Instagram traffic lands on a visible "Book a Free Call")
-- **Five marker colours × light/dark/system** — orange (default), blue, green, violet and slate,
+- **Five blueprint colours × light/dark/system** — green (default), blue, slate, ocean and violet,
   chosen from the palette button in the header. Nothing is stored, so the choice lasts for the visit.
 - **Animations** — scroll reveals, the hero drawing tracing itself in, the timeline filling and the
   price count-up; all switched off under
@@ -268,7 +268,7 @@ literally, revision one. The pieces, all in `style.css`:
 | Piece | What it is |
 |---|---|
 | Drafting film | Light mode: a pale green-grey sheet with a fine 22px grid and a heavier line every five cells |
-| Blueprint | The hero, the Human + AI band and the final call to action are always blueprint; dark mode turns the whole site blueprint. One class, `.bp`, swaps the palette, so every component inside redraws itself |
+| Blueprint | The hero, the Human + AI band and the final call to action are always blueprint (green by default; the swatches change it); dark mode turns the whole site blueprint. One class, `.bp`, swaps the palette, so every component inside redraws itself |
 | Sheet numbers | Each section heading opens with a boxed number (01, 02…) from a CSS counter, so adding a section renumbers the rest |
 | Crop marks | The four corner marks on every section |
 | Title blocks | Any `.cards` block is a ruled table with a frame and a rule between every cell; the hero, the case-study "at a glance" strip and the footer are title blocks |
@@ -290,24 +290,31 @@ Two independent axes on `<html>`:
 | Attribute | Values |
 |---|---|
 | `data-theme` | `light` (drafting film) \| `dark` (blueprint) |
-| `data-palette` | `orange` \| `blue` \| `green` \| `violet` \| `slate` |
+| `data-palette` | `green` \| `blue` \| `slate` \| `ocean` \| `violet` |
 
-The defaults (`light`, `orange`) are written on `<html>` in the markup, so the first paint is already
-correct. A palette changes one thing: the **marker colour** used for sheet labels, call-outs, flags,
-the button shadow and the price. Each marker is two values in section 2 of `style.css` — `--a-l` for
-film and `--a-d` for blueprint:
+The defaults (`light`, `green`) are written on `<html>` in the markup, so the first paint is already
+correct. A palette changes the **blueprint ground**: the hero, the Human + AI band and the final call
+to action in light mode, and the whole site in dark mode. The orange marker colour (labels, call-outs,
+flags, the button shadow, the price) stays the same in every palette.
+
+Each ground is a block of `--bp-*` values in section 2 of `style.css`. Green is the default and lives
+in `:root`; the others override it:
 
 ```css
-:root[data-palette="blue"] { --a-l: #1c46c9; --a-d: #8fb4ff; }
+:root[data-palette="blue"] {
+  --bp: #0f2c5c; --bp-2: #0b2350; --bp-sheet: #143670;
+  --bp-ink: #f3f7ff; --bp-ink-2: #b4c6e8; --bp-edge: #6f8fc4;
+  --bp-grid: rgba(219, 232, 255, .07); --bp-grid-major: rgba(219, 232, 255, .14); --bp-rule: rgba(219, 232, 255, .42);
+}
 ```
 
-**To add a marker:** add a line like the one above, add its two swatch colours beside the others in
+**To add a palette:** add a block like the one above, add its swatch colour beside the others in
 section 6 (`.appear__sw[data-palette=…]`), add the name to `PALETTES` in `script.js`, and add a
 swatch button in `index.html` and in `chrome_open()` in `tools/build.py`.
 
-⚠️ **A marker carries text, so both values must reach 4.5:1** — `--a-l` against the darker film
-(`#e3e8e0`) and `--a-d` against the lightest blueprint (`#143670`). The five shipped markers measure
-between 4.6:1 and 7.8:1.
+⚠️ **Check contrast on every ground.** `--bp-ink-2` and the orange marker (`#ff8a52`) both carry
+text and must reach 4.5:1 against `--bp`, `--bp-2` and `--bp-sheet`; `--bp-edge` outlines controls
+and must reach 3:1. The five shipped grounds measure at least 5.0:1 for the marker.
 
 ### Security
 
@@ -356,7 +363,7 @@ still load and the page looks correct. For an exact preview, run the local serve
 
 | I want to… | Where |
 |-----------|-------|
-| Change the default marker colour | `style.css` → `:root { --a-l: #a83f12; --a-d: #ff8a52; }` (film and blueprint values). Both carry text, so keep each at 4.5:1 or better against its background. |
+| Change the marker colour | `style.css` → `:root { --a-l: #a83f12; --a-d: #ff8a52; }` (film and blueprint values). Both carry text, so keep each at 4.5:1 or better against its background. |
 | Change the MVP price | `index.html` → search `20,000` (appears in the hero badge, MVP section, mobile menu, footer, meta description) |
 | Add / remove a service or industry card | `index.html` → `#services` / `#industries` — copy an `<article class="card ...">` block |
 | Edit the About text | `index.html` → `#about` (the credibility strip is `.about__stats`) |
