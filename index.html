@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light" data-palette="green">
+<html lang="en" data-theme="light" data-palette="violet">
 <head>
 <meta charset="utf-8" />
 
@@ -26,7 +26,7 @@
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
-<meta name="theme-color" content="#f6fbf8" />
+<meta name="theme-color" content="#f6f1e6" />
 
 <title>Tavzuran — We Build Your App, Website &amp; Software</title>
 <meta name="description" content="Have an idea? Tavzuran builds apps, websites and custom software for startups and businesses — designed, reviewed and shipped by a human engineer, with AI as a power tool. Websites and apps from ₹20,000." />
@@ -45,7 +45,10 @@
 <meta property="og:title" content="Tavzuran — We Build Your App, Website &amp; Software" />
 <meta property="og:description" content="Have an idea? We'll build it. Apps, websites and custom software — built by a human engineer, accelerated by AI. Websites and apps from ₹20,000." />
 <meta property="og:url" content="https://tavzuran.com/" />
-<meta property="og:image" content="https://tavzuran.com/assets/og-image.svg" />
+<meta property="og:image" content="https://tavzuran.com/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="Tavzuran — Have an idea? We'll build it." />
 <meta property="og:locale" content="en_IN" />
 
@@ -53,18 +56,18 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Tavzuran — We Build Your App, Website &amp; Software" />
 <meta name="twitter:description" content="Have an idea? We'll build it. Apps, websites and custom software — built by a human, accelerated by AI. Websites and apps from ₹20,000." />
-<meta name="twitter:image" content="https://tavzuran.com/assets/og-image.svg" />
+<meta name="twitter:image" content="https://tavzuran.com/assets/og-image.png" />
 
 <link rel="icon" href="assets/icon.png" type="image/png" sizes="192x192" />
 <link rel="apple-touch-icon" href="assets/icon.png" />
 
-<link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/ibm-plex-mono-500-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="style.css" />
 
 <!-- Tiny bootstrap: marks that JS is on (so scroll animations are only hidden
      when they can actually be revealed) and applies the appearance before the
-     first paint, so there is no flash. The default is green on light; the OS
+     first paint, so there is no flash. The default is violet ink on light paper; the OS
      setting is followed only once a visitor picks System. -->
 <script>
 (function () {
@@ -235,11 +238,11 @@
           </div>
 
           <div class="appear__row appear__row--swatches" role="group" aria-label="Colour">
-            <button type="button" class="appear__sw" data-palette="blue" aria-label="Blue"><i style="background:#0f6ccc"></i></button>
-            <button type="button" class="appear__sw" data-palette="green" aria-label="Green"><i style="background:#12784a"></i></button>
-            <button type="button" class="appear__sw" data-palette="slate" aria-label="Slate"><i style="background:#445468"></i></button>
-            <button type="button" class="appear__sw" data-palette="ocean" aria-label="Ocean"><i style="background:linear-gradient(135deg,#0b6a92,#38bdf8)"></i></button>
-            <button type="button" class="appear__sw" data-palette="rainbow" aria-label="Rainbow"><i style="background:linear-gradient(100deg,#2563eb,#7028c8 34%,#c026d3 66%,#db2777)"></i></button>
+            <button type="button" class="appear__sw" data-palette="violet" aria-label="Violet"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="blue" aria-label="Blue"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="green" aria-label="Green"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="slate" aria-label="Slate"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="ocean" aria-label="Ocean"><i></i></button>
           </div>
         </div>
       </div>
@@ -251,7 +254,7 @@
   </div>
 </header>
 
-<!-- Machine-translation notice (only shown when a translation is active) -->
+<!-- Pre-email notice (shown before any email link opens) -->
 <div class="cdlg" id="mailNotice" hidden>
   <div class="cdlg__veil" data-cdlg-close></div>
   <div class="cdlg__box" role="dialog" aria-modal="true" aria-labelledby="mailNoticeTitle" aria-describedby="mailNoticeBody">
@@ -275,6 +278,7 @@
   </div>
 </div>
 
+<!-- Machine-translation notice (only shown when a translation is active) -->
 <div class="tnote" id="transNote" hidden>
   <div class="container tnote__inner">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 21 20H3l9-16.5Z"/><path d="M12 10v4M12 17h.01"/></svg>
@@ -366,27 +370,13 @@
 
 <!-- ============================== HERO ============================== -->
 <section class="hero" id="hero">
-  <div class="hero__bg" aria-hidden="true">
-    <span class="grid-fade"></span>
-    <span class="blob blob--1"></span>
-    <span class="blob blob--2"></span>
-  </div>
-
   <div class="container hero__inner">
     <div class="hero__copy">
-      <p class="eyebrow reveal" data-reveal>
-        <span class="eyebrow__dot" aria-hidden="true"></span>TAVZURAN
-      </p>
+      <p class="eyebrow reveal" data-reveal>TAVZURAN</p>
 
       <h1 class="hero__title reveal" data-reveal style="--d:.06s">
         <span class="line">Have an idea?</span>
-        <span class="line">We'll
-          <span class="hl">build it.
-            <svg class="hl__stroke" viewBox="0 0 260 26" preserveAspectRatio="none" aria-hidden="true">
-              <path d="M3 18C48 8 120 5 186 8c26 1 52 4 71 9" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
-            </svg>
-          </span>
-        </span>
+        <span class="line">We'll <span class="hl">build it.</span></span>
       </h1>
 
       <p class="hero__sub reveal" data-reveal style="--d:.14s">
@@ -401,115 +391,29 @@
         <a class="btn btn--ghost btn--lg" href="#services">See What We Build</a>
       </div>
 
-      <div class="hero__badges reveal" data-reveal style="--d:.26s">
-        <span class="price-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 5h12M6 9.5h12M6 5c5 0 8 1.6 8 4.6S11 14 6 14l8 8"/></svg>
-          Websites &amp; apps from ₹20,000*
-        </span>
-        <span class="hero__note">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.2 2.4 2.4 4.8-5"/></svg>
-          Free 20-min idea call · No obligation
-        </span>
-      </div>
+      <p class="hero__badges reveal" data-reveal style="--d:.26s">
+        <span class="price-badge">Websites &amp; apps from ₹20,000*</span>
+      </p>
     </div>
 
-    <!-- Layered product screens + the hand-drawn founder -->
+    <!-- The offer, written out as a quote. Every line reuses wording that is
+         already on this page, so the existing translations cover it. -->
     <div class="hero__art reveal" data-reveal style="--d:.3s">
-      <div class="art-stage" id="artStage">
-        <div class="stage__dash" aria-hidden="true">
-          <div class="mock">
-            <div class="mock__bar"><i></i><i></i><i></i></div>
-            <div class="mock__body">
-              <div class="mk-tiles mk-tiles--3">
-                <div class="mk-tile"><b></b><i class="mk-line" style="width:64%"></i></div>
-                <div class="mk-tile"><b></b><i class="mk-line" style="width:52%"></i></div>
-                <div class="mk-tile"><b></b><i class="mk-line" style="width:72%"></i></div>
-              </div>
-              <div class="mk-chart">
-                <span style="--h:38%"></span><span style="--h:62%"></span><span style="--h:47%"></span>
-                <span style="--h:80%"></span><span style="--h:58%"></span><span style="--h:92%"></span>
-                <span style="--h:70%"></span>
-              </div>
-              <div class="mk-alert"><i class="mk-dot"></i><i class="mk-line" style="width:62%"></i></div>
-            </div>
-          </div>
-        </div>
-
-        <svg class="char char--adil" viewBox="0 0 400 344" role="img" aria-labelledby="charTitle charDesc">
-          <title id="charTitle">Hand-drawn illustration of Adil, founder of Tavzuran</title>
-          <desc id="charDesc">Minimal line-art character looking at a floating app screen surrounded by idea, code, app and launch doodles.</desc>
-          <g class="ink" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
-            <!-- torso + shoulders -->
-            <path class="draw" d="M58 344C58 270 90 198 150 198s92 72 92 146"/>
-            <!-- collar -->
-            <path class="draw" d="M124 200c10 14 17 19 26 19s17-6 26-20"/>
-            <!-- neck -->
-            <path class="draw" d="M131 172v28M169 172v28"/>
-            <!-- left arm resting -->
-            <path class="draw" d="M92 240c-14 12-21 26-22 42"/>
-            <!-- right arm raised towards the floating screen -->
-            <g class="arm">
-              <path class="draw" d="M206 238c26-4 44-22 50-48"/>
-              <path class="draw" d="M256 190c7-5 8-14 3-19M264 194c8-4 12-14 8-21"/>
-            </g>
-            <g class="head">
-              <path class="draw" d="M150 40c34 0 62 30 62 70s-28 70-62 70-62-30-62-70 28-70 62-70Z"/>
-              <path class="draw" d="M92 96c6-34 28-56 58-56s52 20 58 54c-11-11-25-16-38-14-10 2-16 7-28 7-14 0-23-10-36-4-6 3-11 8-14 13Z"/>
-              <path class="draw" d="M89 108c-9-3-14 4-12 12 2 8 9 12 15 10"/>
-              <rect class="draw" x="104" y="100" width="36" height="28" rx="10"/>
-              <rect class="draw" x="160" y="100" width="36" height="28" rx="10"/>
-              <path class="draw" d="M140 112c6-4 14-4 20 0"/>
-              <path class="eye" d="M119 114h7"/>
-              <path class="eye" d="M175 114h7"/>
-              <path class="draw" d="M132 148c9 9 27 9 36 0"/>
-              <path class="draw" d="M106 88c9-5 18-5 25 0M169 88c9-5 18-5 25 0"/>
-            </g>
-          </g>
-        </svg>
-
-        <div class="stage__phone" aria-hidden="true">
-          <div class="mock mock--phone">
-            <div class="mock__notch"></div>
-            <div class="mock__body">
-              <div class="mk-head"><i class="mk-line mk-line--title" style="width:58%"></i></div>
-              <div class="mk-steps">
-                <span class="mk-step is-done"></span><span class="mk-rail is-done"></span>
-                <span class="mk-step is-done"></span><span class="mk-rail is-done"></span>
-                <span class="mk-step is-now"></span><span class="mk-rail"></span>
-                <span class="mk-step"></span>
-              </div>
-              <div class="mk-list">
-                <div class="mk-item"><i class="mk-sq"></i><i class="mk-line" style="width:52%"></i><b class="mk-num"></b></div>
-                <div class="mk-item"><i class="mk-sq"></i><i class="mk-line" style="width:64%"></i><b class="mk-num"></b></div>
-                <div class="mk-item"><i class="mk-sq"></i><i class="mk-line" style="width:44%"></i><b class="mk-num"></b></div>
-              </div>
-              <div class="mk-total"><i class="mk-line" style="width:34%"></i><b class="mk-num mk-num--wide"></b></div>
-              <div class="mk-btn"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- floating labels -->
-        <span class="tag tag--idea" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 18h5M10.5 21h3M12 3a6 6 0 0 0-4 10.5c.6.6 1 1.4 1 2.3V17h6v-1.2c0-.9.4-1.7 1-2.3A6 6 0 0 0 12 3Z"/></svg>
-          <em>idea</em>
-        </span>
-        <span class="tag tag--code" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg>
-          <em>code</em>
-        </span>
-        <span class="tag tag--app" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18h2"/></svg>
-          <em>app</em>
-        </span>
-        <span class="tag tag--launch" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 2 4.5 6 4 10l-4 4-4-4c-.5-4 1-8 4-10Z"/><circle cx="12" cy="9.5" r="1.6"/><path d="M8.5 15.5 6 18l.5 2.5M15.5 15.5 18 18l-.5 2.5"/></svg>
-          <em>launch</em>
-        </span>
-
-        <svg class="spark" viewBox="0 0 120 120" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
-          <path d="M60 10v18M60 92v18M10 60h18M92 60h18M24 24l13 13M83 83l13 13M96 24 83 37M37 83l-13 13"/>
-        </svg>
+      <div class="sheet quote">
+        <p class="quote__head"><span class="quote__brand">Tavzuran</span><span class="quote__label">WHAT WE DO</span></p>
+        <ol class="quote__rows">
+          <li><span>Mobile Apps</span><b aria-hidden="true">✓</b></li>
+          <li><span>Websites</span><b aria-hidden="true">✓</b></li>
+          <li><span>Custom Software</span><b aria-hidden="true">✓</b></li>
+          <li><span>Vibe Code Cleanup</span><b aria-hidden="true">✓</b></li>
+          <li><span>App Store Publishing</span><b aria-hidden="true">✓</b></li>
+        </ol>
+        <p class="quote__total">
+          <span class="quote__k">Starting at</span>
+          <span class="quote__v">₹20,000<a class="price__star" href="#price-terms" aria-label="See what the price excludes">*</a></span>
+        </p>
+        <p class="quote__sign">— Adil</p>
+        <p class="stamp">Free 20-min idea call · No obligation</p>
       </div>
     </div>
   </div>
@@ -531,7 +435,7 @@
   <div class="container">
     <div class="problem__copy">
       <div class="sec-head">
-        <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>THE REAL PROBLEM</p>
+        <p class="eyebrow reveal" data-reveal>THE REAL PROBLEM</p>
         <h2 class="sec-title reveal" data-reveal style="--d:.05s">You have the idea.<br />But who's going to build it?</h2>
         <p class="sec-sub reveal" data-reveal style="--d:.1s">You shouldn't have to become a developer just to turn your business idea into reality.</p>
       </div>
@@ -585,65 +489,41 @@
 <!-- ============================ SOLUTION ============================ -->
 <section class="section section--alt" id="services">
   <div class="container">
-    <div class="sec-head sec-head--center">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>WHAT WE DO</p>
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal>WHAT WE DO</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">You bring the idea.<br />We handle the tech.</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">From planning and design to development and launch, Tavzuran helps turn ideas into working digital products.</p>
     </div>
 
     <div class="cards cards--3">
       <article class="card card--service reveal" data-reveal style="--d:.05s">
-        <span class="card__icon" aria-hidden="true">
-          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="11" y="4" width="18" height="32" rx="4"/><path d="M17 8.5h6M18 31.5h4"/><path d="M15 14h10M15 19h7"/></svg>
-        </span>
         <h3>Mobile Apps</h3>
         <p>iOS and Android applications built around your business.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
 
       <article class="card card--service reveal" data-reveal style="--d:.12s">
-        <span class="card__icon" aria-hidden="true">
-          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="32" height="24" rx="4"/><path d="M4 14h32M9 10.6h.02M13 10.6h.02"/><path d="M14 36h12"/><path d="M11 20h8M11 25h14"/></svg>
-        </span>
         <h3>Websites</h3>
         <p>Fast, modern websites designed to convert visitors into customers.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
 
       <article class="card card--service reveal" data-reveal style="--d:.19s">
-        <span class="card__icon" aria-hidden="true">
-          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4c6 0 10.5 4.4 10.5 10.2 0 4.6-2.6 6.6-3.9 9.2-.7 1.4-.9 2.6-.9 4h-11.4c0-1.4-.2-2.6-.9-4-1.3-2.6-3.9-4.6-3.9-9.2C9.5 8.4 14 4 20 4Z"/><path d="M15.6 31.2h8.8M17 35.4h6"/><path d="M20 12v8"/></svg>
-        </span>
         <h3>Websites &amp; Apps</h3>
         <p>Build the essential version of your idea, launch it, get feedback and improve.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
 
       <article class="card card--service reveal" data-reveal style="--d:.05s">
-        <span class="card__icon" aria-hidden="true">
-          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 13l-7 7 7 7M26 13l7 7-7 7M22.5 9l-5 22"/></svg>
-        </span>
         <h3>Custom Software</h3>
         <p>Software designed around your unique business workflow.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
 
       <article class="card card--service reveal" data-reveal style="--d:.12s">
-        <span class="card__icon" aria-hidden="true">
-          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="27" height="23" rx="4"/><path d="M3 16h27M8 12.6h.02"/><path d="M12 22l-3 2.6 3 2.6M20 22l3 2.6-3 2.6"/><path d="M34 5v7M37.5 8.5h-7"/></svg>
-        </span>
         <h3>Vibe Code Cleanup</h3>
         <p>AI-generated code audited, secured and made safe to build a business on.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
 
       <article class="card card--service reveal" data-reveal style="--d:.19s">
-        <span class="card__icon" aria-hidden="true">
-          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 14.5 20 8l14 6.5v12L20 33 6 26.5Z"/><path d="M6 14.5 20 21l14-6.5M20 21v12"/><path d="M20 3.5v6M17 6.5l3-3 3 3"/></svg>
-        </span>
         <h3>App Store Publishing</h3>
         <p>Your Android and iOS app through review and live, with the accounts in your name.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
     </div>
 
@@ -657,36 +537,27 @@
 <!-- ============================ HUMAN + AI ============================ -->
 <section class="section section--human" id="human">
   <div class="container">
-    <div class="sec-head sec-head--center">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>THE HUMAN PART</p>
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal>THE HUMAN PART</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">Built by a human.<br />Just faster, with AI.</h2>
-      <p class="sec-sub reveal" data-reveal style="--d:.1s">AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it. That's literally the name.</p>
+      <p class="sec-sub reveal" data-reveal style="--d:.1s">AI is a power tool in this studio — it isn't the studio. Every product is thought through, reviewed and shipped by a person who answers for it.</p>
     </div>
 
     <div class="cards cards--3">
       <article class="card human-card reveal" data-reveal style="--d:.05s">
         <span class="human__step" aria-hidden="true">01</span>
-        <span class="card__icon" aria-hidden="true">
-          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="13" r="7"/><path d="M7 35c2-8 6.5-12 13-12s11 4 13 12"/></svg>
-        </span>
         <h3>A human understands your idea</h3>
         <p>We start with a conversation, not a prompt. What to build first, what to leave out and what it should honestly cost are decisions a person makes with you.</p>
       </article>
 
       <article class="card human-card reveal" data-reveal style="--d:.12s">
         <span class="human__step" aria-hidden="true">02</span>
-        <span class="card__icon" aria-hidden="true">
-          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="12" width="24" height="19" rx="6"/><path d="M20 6v6M16.5 21h.02M23.5 21h.02M16 26.5c2.6 1.8 6 1.8 8.6 0M4 19v6M36 19v6"/></svg>
-        </span>
         <h3>AI does the boring parts</h3>
         <p>Boilerplate, scaffolding, test data, repetitive refactors — the machine does the typing. More of your budget goes into the parts your users actually feel.</p>
       </article>
 
       <article class="card human-card reveal" data-reveal style="--d:.19s">
         <span class="human__step" aria-hidden="true">03</span>
-        <span class="card__icon" aria-hidden="true">
-          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4l13 6v9c0 8-5.4 14-13 17-7.6-3-13-9-13-17v-9l13-6Z"/><path d="M14.5 20.5l4 4 7-8"/></svg>
-        </span>
         <h3>A human ships it — and answers for it</h3>
         <p>Every line is read, tested and understood before it goes live. When something needs fixing, you message a person who knows your product. Not a chatbot.</p>
       </article>
@@ -701,11 +572,7 @@
         <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 2 4.5 6 4 10l-4 4-4-4c-.5-4 1-8 4-10Z"/><circle cx="12" cy="9.5" r="1.6"/><path d="M8.5 15.5 6 18l.5 2.5M15.5 15.5 18 18l-.5 2.5"/></svg></span>
       </p>
       <p class="human__note">
-        <span class="hl">Human judgement. Machine speed.
-          <svg class="hl__stroke" viewBox="0 0 260 26" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M3 18C48 8 120 5 186 8c26 1 52 4 71 9" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
-          </svg>
-        </span>
+        <span class="hl">Human judgement. Machine speed.</span>
       </p>
     </div>
   </div>
@@ -714,39 +581,33 @@
 <!-- =========================== INDUSTRIES =========================== -->
 <section class="section" id="industries">
   <div class="container">
-    <div class="sec-head sec-head--center">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>WHO WE BUILD FOR</p>
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal>WHO WE BUILD FOR</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">Built for real businesses.</h2>
     </div>
 
     <div class="cards cards--3">
       <article class="card card--ind reveal" data-reveal style="--d:.04s">
-        <span class="ind__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a2 2 0 0 0 4 0V3M8 3v18"/><path d="M18 3c-2.5 1.5-3.5 4.5-3.5 8v1H18v9"/></svg></span>
         <h3>Restaurants</h3>
         <p>Ordering apps, websites, loyalty systems and restaurant management solutions.</p>
       </article>
       <article class="card card--ind reveal" data-reveal style="--d:.09s">
-        <span class="ind__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m2.5 9 9.5-4.5L21.5 9 12 13.5 2.5 9Z"/><path d="M6.5 11v4.5c0 1.5 2.5 3 5.5 3s5.5-1.5 5.5-3V11M21.5 9v5"/></svg></span>
         <h3>Coaching Institutes</h3>
         <p>Student apps, online tests, classes, payments and dashboards.</p>
       </article>
       <article class="card card--ind reveal" data-reveal style="--d:.14s">
-        <span class="ind__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m3.5 11 8.5-7 8.5 7"/><path d="M6 9.5V20h12V9.5"/><path d="M10 20v-5h4v5"/></svg></span>
         <h3>Real Estate</h3>
         <p>Property websites, lead management and custom CRM systems.</p>
       </article>
       <article class="card card--ind reveal" data-reveal style="--d:.19s">
-        <span class="ind__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="12" height="10" rx="1.5"/><path d="M14.5 9.5h3.5l3.5 3.5V16h-7"/><circle cx="7" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></svg></span>
         <h3>Logistics</h3>
         <p>Delivery tracking, dashboards and business automation.</p>
       </article>
       <article class="card card--ind reveal" data-reveal style="--d:.24s">
-        <span class="ind__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 2 4.5 6 4 10l-4 4-4-4c-.5-4 1-8 4-10Z"/><circle cx="12" cy="9.5" r="1.6"/><path d="M8.5 15.5 6 18l.5 2.5M15.5 15.5 18 18l-.5 2.5"/></svg></span>
         <h3>Startups</h3>
         <p>First versions, SaaS products and scalable web and mobile applications.</p>
       </article>
       <article class="card card--ind reveal" data-reveal style="--d:.29s">
-        <span class="ind__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 9.5 5 4h14l1.5 5.5"/><path d="M3.5 9.5c0 1.5 1.2 2.5 2.7 2.5s2.6-1 2.6-2.5c0 1.5 1.2 2.5 2.7 2.5s2.7-1 2.7-2.5c0 1.5 1.2 2.5 2.7 2.5s2.6-1 2.6-2.5"/><path d="M5 12v8h14v-8M10 20v-5h4v5"/></svg></span>
         <h3>Local Businesses</h3>
         <p>Custom websites, booking systems and business automation.</p>
       </article>
@@ -762,21 +623,21 @@
     <div class="mvp__panel reveal" data-reveal>
       <div class="mvp__copy">
         <div class="sec-head">
-          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>WEBSITE &amp; APP</p>
+          <p class="eyebrow">WEBSITE &amp; APP</p>
           <h2 class="sec-title">Don't build everything.<br />Build what matters first.</h2>
           <p class="sec-sub">You don't need to spend lakhs before knowing whether your idea works. Start with a first version.</p>
         </div>
 
         <ol class="flow" aria-label="How it goes: idea, build, users, feedback, scale">
-          <li class="flow__step"><span class="flow__dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 18h5M10.5 21h3M12 3a6 6 0 0 0-4 10.5c.6.6 1 1.4 1 2.3V17h6v-1.2c0-.9.4-1.7 1-2.3A6 6 0 0 0 12 3Z"/></svg></span><strong>IDEA</strong></li>
+          <li class="flow__step"><strong>IDEA</strong></li>
           <li class="flow__arrow" aria-hidden="true">→</li>
-          <li class="flow__step"><span class="flow__dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3h5M10 3v5.5L5.5 17a2 2 0 0 0 1.8 3h9.4a2 2 0 0 0 1.8-3L14 8.5V3"/><path d="M8 14h8"/></svg></span><strong>BUILD</strong></li>
+          <li class="flow__step"><strong>BUILD</strong></li>
           <li class="flow__arrow" aria-hidden="true">→</li>
-          <li class="flow__step"><span class="flow__dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8.5" r="3.5"/><path d="M2.5 20c.8-3.6 3.3-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><path d="M16 5a3.5 3.5 0 0 1 0 7M18.5 14.5c1.8.8 2.8 2.3 3 5.5"/></svg></span><strong>USERS</strong></li>
+          <li class="flow__step"><strong>USERS</strong></li>
           <li class="flow__arrow" aria-hidden="true">→</li>
-          <li class="flow__step"><span class="flow__dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-5 4v-4A2.5 2.5 0 0 1 4 13.5v-8Z"/></svg></span><strong>FEEDBACK</strong></li>
+          <li class="flow__step"><strong>FEEDBACK</strong></li>
           <li class="flow__arrow" aria-hidden="true">→</li>
-          <li class="flow__step"><span class="flow__dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m3.5 17 5.5-6 4 4 7.5-8"/><path d="M15.5 7h5v5"/></svg></span><strong>SCALE</strong></li>
+          <li class="flow__step"><strong>SCALE</strong></li>
         </ol>
 
         <div class="mvp__actions">
@@ -803,8 +664,8 @@
 <!-- ============================ PROCESS ============================ -->
 <section class="section" id="process">
   <div class="container">
-    <div class="sec-head sec-head--center">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>HOW IT WORKS</p>
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal>HOW IT WORKS</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">From idea to launch.</h2>
     </div>
 
@@ -898,8 +759,8 @@
 <!-- =========================== PORTFOLIO =========================== -->
 <section class="section" id="work">
   <div class="container">
-    <div class="sec-head sec-head--center">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>WHAT WE BUILD</p>
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal>WHAT WE BUILD</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">The kind of ideas we bring to life.</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">Straight up: Tavzuran is new, so these are example builds — the products we're set up to ship — not client work. Yours would be the first on this wall.</p>
     </div>
@@ -1392,8 +1253,8 @@
 <!-- ========================== TESTIMONIALS ========================== -->
 <section class="section section--alt" id="testimonials">
   <div class="container">
-    <div class="sec-head sec-head--center">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>REVIEWS (SORT OF)</p>
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal>REVIEWS (SORT OF)</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">No clients yet.<br />So I asked my family.</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">I'd rather show you honest reviews from people who actually know me than invented ones from clients I don't have. Real client reviews go here the moment I earn them.</p>
     </div>
@@ -1406,15 +1267,11 @@
       update the section heading above.
       ====================================================================
     -->
-    <div class="cards cards--3">
+    <div class="cards quotes">
       <figure class="card t reveal" data-reveal style="--d:.04s">
         <span class="t__flag">Family</span>
-        <span class="t__quote" aria-hidden="true">&ldquo;</span>
         <blockquote>The best person in the world. He taught me how to use WhatsApp.</blockquote>
         <figcaption>
-          <span class="t__avatar" aria-hidden="true">
-            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="20" cy="15" r="7"/><path d="M8 34c2-7 6-10 12-10s10 3 12 10"/></svg>
-          </span>
           <span class="t__name">Adil's mother</span>
           <span class="t__role">Chief Believer · 5 stars, obviously</span>
         </figcaption>
@@ -1422,12 +1279,8 @@
 
       <figure class="card t reveal" data-reveal style="--d:.1s">
         <span class="t__flag">Family</span>
-        <span class="t__quote" aria-hidden="true">&ldquo;</span>
         <blockquote>He can do better.</blockquote>
         <figcaption>
-          <span class="t__avatar" aria-hidden="true">
-            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="20" cy="15" r="7"/><path d="M8 34c2-7 6-10 12-10s10 3 12 10"/></svg>
-          </span>
           <span class="t__name">Adil's father</span>
           <span class="t__role">Head of High Standards</span>
         </figcaption>
@@ -1435,12 +1288,8 @@
 
       <figure class="card t reveal" data-reveal style="--d:.16s">
         <span class="t__flag">Family</span>
-        <span class="t__quote" aria-hidden="true">&ldquo;</span>
         <blockquote>He is not as cool as he presents himself, but I support him. What other option do I have?</blockquote>
         <figcaption>
-          <span class="t__avatar" aria-hidden="true">
-            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="20" cy="15" r="7"/><path d="M8 34c2-7 6-10 12-10s10 3 12 10"/></svg>
-          </span>
           <span class="t__name">Adil's brother</span>
           <span class="t__role">Reluctant Supporter</span>
         </figcaption>
@@ -1453,8 +1302,8 @@
 <!-- ============================ ARTICLES ============================ -->
 <section class="section" id="articles">
   <div class="container">
-    <div class="sec-head sec-head--center reveal" data-reveal>
-      <span class="eyebrow"><i class="eyebrow__dot"></i>WRITING</span>
+    <div class="sec-head reveal" data-reveal>
+      <span class="eyebrow">WRITING</span>
       <h2 class="sec-title">Straight answers, no jargon.</h2>
       <p class="sec-sub">What software actually costs, what a first version really is, and how
       AI fits into the work — written for the person paying for it.</p>
@@ -1508,31 +1357,25 @@
 <!-- ============================ CONTACT ============================ -->
 <section class="section section--alt section--contact" id="contact">
   <div class="container">
-    <div class="sec-head sec-head--center">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>GET IN TOUCH</p>
+    <div class="sec-head">
+      <p class="eyebrow reveal" data-reveal>GET IN TOUCH</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">Two ways to reach us.</h2>
     </div>
 
     <div class="cards cards--2 contact__grid">
       <a class="card contact-card reveal" data-reveal style="--d:.04s" data-link="instagram" href="https://instagram.com/tavzuran">
-        <span class="contact__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><path d="M17.4 6.6h.01"/></svg>
-        </span>
-        <span>
+        <div>
           <h3>Instagram</h3>
           <p class="contact__value">@tavzuran</p>
-        </span>
+        </div>
         <span class="contact__go">Send a DM <span aria-hidden="true">→</span></span>
       </a>
 
       <a class="card contact-card reveal" data-reveal style="--d:.1s" data-link="email" href="mailto:adil@tavzuran.com">
-        <span class="contact__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
-        </span>
-        <span>
+        <div>
           <h3>Email</h3>
           <p class="contact__value" data-text="email">adil@tavzuran.com</p>
-        </span>
+        </div>
         <span class="contact__go">Write to us <span aria-hidden="true">→</span></span>
       </a>
     </div>

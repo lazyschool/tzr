@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light" data-palette="green">
+<html lang="en" data-theme="light" data-palette="violet">
 <head>
 <meta charset="utf-8" />
 
@@ -23,7 +23,7 @@
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
-<meta name="theme-color" content="#f6fbf8" />
+<meta name="theme-color" content="#f6f1e6" />
 
 <title>First Website for a Social-First Business — Case Study | Tavzuran</title>
 <meta name="description" content="You built an audience on Instagram and TikTok. This is the address, the inbox and the page that are actually yours." />
@@ -35,21 +35,24 @@
 <meta property="og:title" content="First Website for a Social-First Business — Case Study | Tavzuran" />
 <meta property="og:description" content="You built an audience on Instagram and TikTok. This is the address, the inbox and the page that are actually yours." />
 <meta property="og:url" content="https://tavzuran.com/case-studies/first-website-for-a-social-first-business.html" />
-<meta property="og:image" content="https://tavzuran.com/assets/og-image.svg" />
+<meta property="og:image" content="https://tavzuran.com/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="First Website for a Social-First Business — Case Study | Tavzuran" />
 <meta name="twitter:description" content="You built an audience on Instagram and TikTok. This is the address, the inbox and the page that are actually yours." />
-<meta name="twitter:image" content="https://tavzuran.com/assets/og-image.svg" />
+<meta name="twitter:image" content="https://tavzuran.com/assets/og-image.png" />
 
 <link rel="icon" href="../assets/icon.png" type="image/png" sizes="192x192" />
 <link rel="apple-touch-icon" href="../assets/icon.png" />
 
-<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="../assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/ibm-plex-mono-500-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="../style.css" />
 
-<!-- Tiny bootstrap: marks that JS is on and applies the saved theme before the
-     first paint, so dark-mode users never see a flash of light. -->
+<!-- Tiny bootstrap: records that JavaScript is available, which the CSS uses
+     to enable the progressive bits. Nothing is stored or read. -->
 <script>
 (function () {
   /* Nothing is stored, so there is no saved theme to read before first paint.
@@ -193,11 +196,11 @@
           </div>
 
           <div class="appear__row appear__row--swatches" role="group" aria-label="Colour">
-            <button type="button" class="appear__sw" data-palette="blue" aria-label="Blue"><i style="background:#0f6ccc"></i></button>
-            <button type="button" class="appear__sw" data-palette="green" aria-label="Green"><i style="background:#12784a"></i></button>
-            <button type="button" class="appear__sw" data-palette="slate" aria-label="Slate"><i style="background:#445468"></i></button>
-            <button type="button" class="appear__sw" data-palette="ocean" aria-label="Ocean"><i style="background:linear-gradient(135deg,#0b6a92,#38bdf8)"></i></button>
-            <button type="button" class="appear__sw" data-palette="rainbow" aria-label="Rainbow"><i style="background:linear-gradient(100deg,#2563eb,#7028c8 34%,#c026d3 66%,#db2777)"></i></button>
+            <button type="button" class="appear__sw" data-palette="violet" aria-label="Violet"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="blue" aria-label="Blue"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="green" aria-label="Green"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="slate" aria-label="Slate"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="ocean" aria-label="Ocean"><i></i></button>
           </div>
         </div>
       </div>
@@ -209,7 +212,7 @@
   </div>
 </header>
 
-<!-- Machine-translation notice (only shown when a translation is active) -->
+<!-- Pre-email notice (shown before any email link opens) -->
 <div class="cdlg" id="mailNotice" hidden>
   <div class="cdlg__veil" data-cdlg-close></div>
   <div class="cdlg__box" role="dialog" aria-modal="true" aria-labelledby="mailNoticeTitle" aria-describedby="mailNoticeBody">
@@ -233,6 +236,7 @@
   </div>
 </div>
 
+<!-- Machine-translation notice (only shown when a translation is active) -->
 <div class="tnote" id="transNote" hidden>
   <div class="container tnote__inner">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 21 20H3l9-16.5Z"/><path d="M12 10v4M12 17h.01"/></svg>
@@ -320,11 +324,6 @@
 
 <main id="main">
 <section class="phero phero--split">
-  <div class="phero__bg" aria-hidden="true">
-    <span class="grid-fade"></span>
-    <span class="blob blob--1"></span>
-    <span class="blob blob--2"></span>
-  </div>
   <div class="container phero__inner">
   <nav class="crumb" aria-label="Breadcrumb">
     <a href="../index.html">Home</a>
@@ -336,7 +335,7 @@
 
     <div class="phero__grid">
       <div>
-        <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>CASE STUDY</p>
+        <p class="eyebrow reveal" data-reveal>CASE STUDY</p>
     <span class="chips reveal" data-reveal><span class="proj__flag">Example build</span><span class="proj__cat">New Business</span></span>
 
         <h1 class="phero__title reveal" data-reveal style="--d:.05s">First Website for a Social-First Business</h1>
@@ -380,7 +379,7 @@
 <section class="section section--alt section--glance">
   <div class="container">
     <dl class="glance">
-      <div class="glance__item reveal" data-reveal style="--d:.4s">
+      <div class="glance__item reveal" data-reveal style="--d:.04s">
         <dt>Type</dt>
         <dd>Static site + your own email</dd>
       </div>
@@ -412,20 +411,20 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>THE SITUATION</p>
+      <p class="eyebrow reveal" data-reveal>THE SITUATION</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">What's actually broken.</h2>
     </div>
 
     <div class="split">
       <div class="split__text">
-        <p class="reveal" data-reveal style="--d:.4s">A new business is doing well on social. The reels land, the DMs come in, orders get taken in chat. It works, and for the first year or so there is no obvious reason to do anything else.</p>
+        <p class="reveal" data-reveal style="--d:.04s">A new business is doing well on social. The reels land, the DMs come in, orders get taken in chat. It works, and for the first year or so there is no obvious reason to do anything else.</p>
         <p class="reveal" data-reveal style="--d:.10s">The problem is not that social media is bad at this. It is that everything you have built is held by companies that owe you nothing. Reach is adjusted without warning. Accounts get locked by an automated system with no one to appeal to. A platform can change its terms, its algorithm or its mind, and the audience you spent two years earning is not portable — you cannot export a follower list and take it somewhere else.</p>
         <p class="reveal" data-reveal style="--d:.16s">There is a second, quieter cost. A handle and a Gmail address read as a hobby. The moment you approach a supplier, quote for a corporate order, apply to a marketplace or open a payment gateway, someone asks for a website and a business email, and “DM us on Instagram” stops being an answer. That question arrives at exactly the point the business is trying to grow.</p>
         <p class="reveal" data-reveal style="--d:.22s">The fix is small, cheap and permanent: an address you own, an inbox at that address, and one page that says what you do. Social keeps doing what it is good at — reach — and stops being the only thing holding the business up.</p>
       </div>
 
       <ul class="split__list">
-        <li class="prob reveal" data-reveal style="--d:.6s"><span class="prob__x" aria-hidden="true">✕</span><h3>Everything you have built sits inside someone else's app</h3></li>
+        <li class="prob reveal" data-reveal style="--d:.06s"><span class="prob__x" aria-hidden="true">✕</span><h3>Everything you have built sits inside someone else's app</h3></li>
         <li class="prob reveal" data-reveal style="--d:.12s"><span class="prob__x" aria-hidden="true">✕</span><h3>One locked account and the whole shopfront disappears</h3></li>
         <li class="prob reveal" data-reveal style="--d:.18s"><span class="prob__x" aria-hidden="true">✕</span><h3>Customers can follow a handle but cannot be sent an address</h3></li>
         <li class="prob reveal" data-reveal style="--d:.24s"><span class="prob__x" aria-hidden="true">✕</span><h3>Orders and enquiries are buried in the same inbox as spam</h3></li>
@@ -437,41 +436,31 @@
 <section class="section section--alt">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>VERSION ONE</p>
+      <p class="eyebrow reveal" data-reveal>VERSION ONE</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd build first.</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">Every item here earns its place by being something a real user would miss on day one.</p>
     </div>
 
     <div class="cards cards--3">
-      <article class="card card--service reveal" data-reveal style="--d:.4s">
-        <span class="card__num" aria-hidden="true">01</span>
+      <article class="card card--service reveal" data-reveal style="--d:.04s">
         <h3>A domain that is yours</h3>
         <p>Registered in your name, in an account you control, with the login in your hands from day one. Not mine, not an agency's. This is the part people most often get wrong and it is the hardest to undo.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
       <article class="card card--service reveal" data-reveal style="--d:.10s">
-        <span class="card__num" aria-hidden="true">02</span>
         <h3>One page that loads instantly</h3>
         <p>What you make, who it is for, what it costs, and how to reach you. Static HTML — no page builder, no database, nothing to be slow. It opens before a visitor on mobile data has decided to leave.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
       <article class="card card--service reveal" data-reveal style="--d:.16s">
-        <span class="card__num" aria-hidden="true">03</span>
         <h3>Email at your own domain</h3>
         <p>hello@yourbusiness.com rather than a Gmail address with numbers in it, set up so your messages actually arrive rather than landing in spam. This is the change customers notice first.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
       <article class="card card--service reveal" data-reveal style="--d:.22s">
-        <span class="card__num" aria-hidden="true">04</span>
         <h3>Your links, on your own address</h3>
         <p>Everything a link-in-bio service does — Instagram, TikTok, WhatsApp, catalogue, menu, order form — on a page you own, so the URL in your bio never has to change again.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
       <article class="card card--service reveal" data-reveal style="--d:.28s">
-        <span class="card__num" aria-hidden="true">05</span>
         <h3>Enquiries that reach a person</h3>
         <p>A short form, a WhatsApp button and a phone number, with messages arriving in the business inbox instead of being lost among DMs.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
     </div>
   </div>
@@ -480,16 +469,16 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>DELIBERATELY NOT IN V1</p>
+      <p class="eyebrow reveal" data-reveal>DELIBERATELY NOT IN V1</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd leave out.</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">Not because these are bad ideas. Because each one is designed better once the first version has told you something.</p>
     </div>
 
     <ul class="cutlist">
-      <li class="reveal" data-reveal style="--d:.4s"><span class="cutlist__x" aria-hidden="true">✕</span><span>An online store. If you are taking orders over chat and it is working, a checkout is a later project — build it when the volume makes chat painful, not before.</span></li>
-      <li class="reveal" data-reveal style="--d:.10s"><span class="cutlist__x" aria-hidden="true">✕</span><span>A blog or a news section. An empty page dated eighteen months ago does more harm than no page at all.</span></li>
-      <li class="reveal" data-reveal style="--d:.16s"><span class="cutlist__x" aria-hidden="true">✕</span><span>A content management system. For one page, editing the page directly is faster than learning an admin panel you will open twice a year.</span></li>
-      <li class="reveal" data-reveal style="--d:.22s"><span class="cutlist__x" aria-hidden="true">✕</span><span>A logo and full brand identity. Worth paying a designer for separately — I will build around whatever you have.</span></li>
+      <li class="reveal" data-reveal style="--d:.04s"><span>An online store. If you are taking orders over chat and it is working, a checkout is a later project — build it when the volume makes chat painful, not before.</span></li>
+      <li class="reveal" data-reveal style="--d:.10s"><span>A blog or a news section. An empty page dated eighteen months ago does more harm than no page at all.</span></li>
+      <li class="reveal" data-reveal style="--d:.16s"><span>A content management system. For one page, editing the page directly is faster than learning an admin panel you will open twice a year.</span></li>
+      <li class="reveal" data-reveal style="--d:.22s"><span>A logo and full brand identity. Worth paying a designer for separately — I will build around whatever you have.</span></li>
     </ul>
   </div>
 </section>
@@ -497,16 +486,16 @@
 <section class="section section--alt">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>UNDER THE HOOD</p>
+      <p class="eyebrow reveal" data-reveal>UNDER THE HOOD</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">How it's put together.</h2>
     </div>
 
     <dl class="stack">
-      <div class="stack__row reveal" data-reveal style="--d:.4s">
+      <div class="stack__row reveal" data-reveal style="--d:.04s">
         <dt>The site</dt>
         <dd>Plain HTML and CSS. Nothing to update, nothing to be hacked, and it will still work in five years without being touched</dd>
       </div>
-      <div class="stack__row reveal" data-reveal style="--d:.9s">
+      <div class="stack__row reveal" data-reveal style="--d:.09s">
         <dt>Hosting</dt>
         <dd>A CDN on a free tier. At this size the hosting genuinely costs nothing, and it is fast everywhere without you configuring anything</dd>
       </div>
@@ -529,13 +518,13 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>HOW IT RUNS</p>
+      <p class="eyebrow reveal" data-reveal>HOW IT RUNS</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">Week by week.</h2>
     </div>
 
     <ol class="timeline">
       <span class="tl__line" aria-hidden="true"><i></i></span>
-      <li class="tl reveal" data-reveal style="--d:.4s">
+      <li class="tl reveal" data-reveal style="--d:.04s">
         <span class="tl__num">01</span>
         <div class="tl__body">
           <h3>Days 1–5</h3>
@@ -563,13 +552,13 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>THE HARD PART</p>
+      <p class="eyebrow reveal" data-reveal>THE HARD PART</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">Owning the address without owning a server</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">Every build has one problem that decides whether the rest of it matters. This is that problem, written out.</p>
     </div>
 
     <div class="deep">
-      <p class="reveal" data-reveal style="--d:.4s">The build here is a couple of days of work. What actually takes the care is making sure that in three years, with or without me, the business still controls its own name.</p>
+      <p class="reveal" data-reveal style="--d:.04s">The build here is a couple of days of work. What actually takes the care is making sure that in three years, with or without me, the business still controls its own name.</p>
       <p class="reveal" data-reveal style="--d:.10s">That comes down to two things being in your name and not somebody else's: the registrar account where the domain lives, and the DNS records that point that domain at the site and the mail. I have seen businesses locked out of their own address because a developer registered it on their own account and then became unreachable — and the recovery process for that is slow, sometimes impossible, and always at the worst moment. So you create the registrar account, you hold the login, and I am given access rather than ownership.</p>
       <p class="reveal" data-reveal style="--d:.16s">The other half is email deliverability, which is where most cheap setups quietly fail. Sending from your own domain without SPF, DKIM and DMARC configured correctly means a meaningful share of your mail goes to spam — and you will not know, because nobody replies to tell you they never got it. Those three records take an hour to set up properly and are the difference between an email address that looks professional and one that works.</p>
     </div>
@@ -579,14 +568,14 @@
 <section class="section section--alt">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>BEFORE A PRICE EXISTS</p>
+      <p class="eyebrow reveal" data-reveal>BEFORE A PRICE EXISTS</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd ask you first.</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">A quote given without these answers is a guess. These are the questions that actually move the number.</p>
     </div>
 
     <ol class="qlist">
-      <li class="reveal" data-reveal style="--d:.4s"><span class="qlist__n">01</span><span>What do you actually sell, and who buys it most often?</span></li>
-      <li class="reveal" data-reveal style="--d:.9s"><span class="qlist__n">02</span><span>Which platform brings you the most enquiries today?</span></li>
+      <li class="reveal" data-reveal style="--d:.04s"><span class="qlist__n">01</span><span>What do you actually sell, and who buys it most often?</span></li>
+      <li class="reveal" data-reveal style="--d:.09s"><span class="qlist__n">02</span><span>Which platform brings you the most enquiries today?</span></li>
       <li class="reveal" data-reveal style="--d:.14s"><span class="qlist__n">03</span><span>Has anyone ever asked you for a website or a business email, and in what context?</span></li>
       <li class="reveal" data-reveal style="--d:.19s"><span class="qlist__n">04</span><span>Do you already own a domain, and is the account in your name?</span></li>
       <li class="reveal" data-reveal style="--d:.24s"><span class="qlist__n">05</span><span>Who will read the business inbox, and how often?</span></li>
@@ -597,13 +586,13 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>AFTERWARDS</p>
+      <p class="eyebrow reveal" data-reveal>AFTERWARDS</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">How we'd know it worked.</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">Agreed before the build starts, so there is something to judge it against other than whether it looks nice.</p>
     </div>
 
     <ul class="winlist">
-      <li class="reveal" data-reveal style="--d:.4s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>The domain and the email account are in your name, and you have logged into both yourself.</span></li>
+      <li class="reveal" data-reveal style="--d:.04s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>The domain and the email account are in your name, and you have logged into both yourself.</span></li>
       <li class="reveal" data-reveal style="--d:.10s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>A test email from your address reaches a Gmail inbox rather than its spam folder.</span></li>
       <li class="reveal" data-reveal style="--d:.16s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>Your bio link points at your own domain, and never needs changing again.</span></li>
       <li class="reveal" data-reveal style="--d:.22s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>At least one enquiry arrives through the site rather than through a DM.</span></li>
@@ -614,7 +603,7 @@
 <section class="section section--alt">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>BEFORE YOU START</p>
+      <p class="eyebrow reveal" data-reveal>BEFORE YOU START</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">Worth knowing.</h2>
     </div>
 
@@ -631,12 +620,12 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>KEEP LOOKING</p>
+      <p class="eyebrow reveal" data-reveal>KEEP LOOKING</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">Other example builds.</h2>
     </div>
 
     <div class="cards post-grid">
-      <a class="card post-card reveal" data-reveal style="--d:.4s" href="vibe-coded-app-made-production-ready.html">
+      <a class="card post-card reveal" data-reveal style="--d:.04s" href="vibe-coded-app-made-production-ready.html">
         <span class="proj__cat">Code Rescue</span>
         <h3>Vibe-Coded App, Made Production-Ready</h3>
         <p>You built it with AI over a weekend and it works. This is what it takes before it can safely carry a business.</p>

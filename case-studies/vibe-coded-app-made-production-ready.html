@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light" data-palette="green">
+<html lang="en" data-theme="light" data-palette="violet">
 <head>
 <meta charset="utf-8" />
 
@@ -23,7 +23,7 @@
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
-<meta name="theme-color" content="#f6fbf8" />
+<meta name="theme-color" content="#f6f1e6" />
 
 <title>Vibe-Coded App, Made Production-Ready — Case Study | Tavzuran</title>
 <meta name="description" content="You built it with AI over a weekend and it works. This is what it takes before it can safely carry a business." />
@@ -35,21 +35,24 @@
 <meta property="og:title" content="Vibe-Coded App, Made Production-Ready — Case Study | Tavzuran" />
 <meta property="og:description" content="You built it with AI over a weekend and it works. This is what it takes before it can safely carry a business." />
 <meta property="og:url" content="https://tavzuran.com/case-studies/vibe-coded-app-made-production-ready.html" />
-<meta property="og:image" content="https://tavzuran.com/assets/og-image.svg" />
+<meta property="og:image" content="https://tavzuran.com/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Vibe-Coded App, Made Production-Ready — Case Study | Tavzuran" />
 <meta name="twitter:description" content="You built it with AI over a weekend and it works. This is what it takes before it can safely carry a business." />
-<meta name="twitter:image" content="https://tavzuran.com/assets/og-image.svg" />
+<meta name="twitter:image" content="https://tavzuran.com/assets/og-image.png" />
 
 <link rel="icon" href="../assets/icon.png" type="image/png" sizes="192x192" />
 <link rel="apple-touch-icon" href="../assets/icon.png" />
 
-<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="../assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/ibm-plex-mono-500-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="../style.css" />
 
-<!-- Tiny bootstrap: marks that JS is on and applies the saved theme before the
-     first paint, so dark-mode users never see a flash of light. -->
+<!-- Tiny bootstrap: records that JavaScript is available, which the CSS uses
+     to enable the progressive bits. Nothing is stored or read. -->
 <script>
 (function () {
   /* Nothing is stored, so there is no saved theme to read before first paint.
@@ -193,11 +196,11 @@
           </div>
 
           <div class="appear__row appear__row--swatches" role="group" aria-label="Colour">
-            <button type="button" class="appear__sw" data-palette="blue" aria-label="Blue"><i style="background:#0f6ccc"></i></button>
-            <button type="button" class="appear__sw" data-palette="green" aria-label="Green"><i style="background:#12784a"></i></button>
-            <button type="button" class="appear__sw" data-palette="slate" aria-label="Slate"><i style="background:#445468"></i></button>
-            <button type="button" class="appear__sw" data-palette="ocean" aria-label="Ocean"><i style="background:linear-gradient(135deg,#0b6a92,#38bdf8)"></i></button>
-            <button type="button" class="appear__sw" data-palette="rainbow" aria-label="Rainbow"><i style="background:linear-gradient(100deg,#2563eb,#7028c8 34%,#c026d3 66%,#db2777)"></i></button>
+            <button type="button" class="appear__sw" data-palette="violet" aria-label="Violet"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="blue" aria-label="Blue"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="green" aria-label="Green"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="slate" aria-label="Slate"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="ocean" aria-label="Ocean"><i></i></button>
           </div>
         </div>
       </div>
@@ -209,7 +212,7 @@
   </div>
 </header>
 
-<!-- Machine-translation notice (only shown when a translation is active) -->
+<!-- Pre-email notice (shown before any email link opens) -->
 <div class="cdlg" id="mailNotice" hidden>
   <div class="cdlg__veil" data-cdlg-close></div>
   <div class="cdlg__box" role="dialog" aria-modal="true" aria-labelledby="mailNoticeTitle" aria-describedby="mailNoticeBody">
@@ -233,6 +236,7 @@
   </div>
 </div>
 
+<!-- Machine-translation notice (only shown when a translation is active) -->
 <div class="tnote" id="transNote" hidden>
   <div class="container tnote__inner">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 21 20H3l9-16.5Z"/><path d="M12 10v4M12 17h.01"/></svg>
@@ -320,11 +324,6 @@
 
 <main id="main">
 <section class="phero phero--split">
-  <div class="phero__bg" aria-hidden="true">
-    <span class="grid-fade"></span>
-    <span class="blob blob--1"></span>
-    <span class="blob blob--2"></span>
-  </div>
   <div class="container phero__inner">
   <nav class="crumb" aria-label="Breadcrumb">
     <a href="../index.html">Home</a>
@@ -336,7 +335,7 @@
 
     <div class="phero__grid">
       <div>
-        <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>CASE STUDY</p>
+        <p class="eyebrow reveal" data-reveal>CASE STUDY</p>
     <span class="chips reveal" data-reveal><span class="proj__flag">Example build</span><span class="proj__cat">Code Rescue</span></span>
 
         <h1 class="phero__title reveal" data-reveal style="--d:.05s">Vibe-Coded App, Made Production-Ready</h1>
@@ -378,7 +377,7 @@
 <section class="section section--alt section--glance">
   <div class="container">
     <dl class="glance">
-      <div class="glance__item reveal" data-reveal style="--d:.4s">
+      <div class="glance__item reveal" data-reveal style="--d:.04s">
         <dt>Type</dt>
         <dd>Audit + repair</dd>
       </div>
@@ -410,19 +409,19 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>THE SITUATION</p>
+      <p class="eyebrow reveal" data-reveal>THE SITUATION</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">What's actually broken.</h2>
     </div>
 
     <div class="split">
       <div class="split__text">
-        <p class="reveal" data-reveal style="--d:.4s">Someone built a working product with an AI tool — Cursor, Lovable, Bolt, v0, Replit, or a long conversation with a chatbot. That is a genuine achievement, and the thing usually does what it was asked to do. The demo is real.</p>
+        <p class="reveal" data-reveal style="--d:.04s">Someone built a working product with an AI tool — Cursor, Lovable, Bolt, v0, Replit, or a long conversation with a chatbot. That is a genuine achievement, and the thing usually does what it was asked to do. The demo is real.</p>
         <p class="reveal" data-reveal style="--d:.10s">Then it meets reality. A second user signs up and can see the first one's records. The database slows down at a few thousand rows because nothing is indexed. A key that should live on a server is sitting in the JavaScript every visitor downloads. There is no way to run the project locally, so every fix is made in production and hoped over.</p>
         <p class="reveal" data-reveal style="--d:.16s">None of that is an argument against building with AI — it is how this studio works too. The difference is that generated code has never been read by someone who will be called when it breaks. That reading is the job.</p>
       </div>
 
       <ul class="split__list">
-        <li class="prob reveal" data-reveal style="--d:.6s"><span class="prob__x" aria-hidden="true">✕</span><h3>API keys are sitting in the front-end bundle</h3></li>
+        <li class="prob reveal" data-reveal style="--d:.06s"><span class="prob__x" aria-hidden="true">✕</span><h3>API keys are sitting in the front-end bundle</h3></li>
         <li class="prob reveal" data-reveal style="--d:.12s"><span class="prob__x" aria-hidden="true">✕</span><h3>Anyone who signs up can read everyone else's data</h3></li>
         <li class="prob reveal" data-reveal style="--d:.18s"><span class="prob__x" aria-hidden="true">✕</span><h3>Nobody can run it locally, so every change is tested in production</h3></li>
         <li class="prob reveal" data-reveal style="--d:.24s"><span class="prob__x" aria-hidden="true">✕</span><h3>It slows to a crawl once real data arrives</h3></li>
@@ -434,41 +433,31 @@
 <section class="section section--alt">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>VERSION ONE</p>
+      <p class="eyebrow reveal" data-reveal>VERSION ONE</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd build first.</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">Every item here earns its place by being something a real user would miss on day one.</p>
     </div>
 
     <div class="cards cards--3">
-      <article class="card card--service reveal" data-reveal style="--d:.4s">
-        <span class="card__num" aria-hidden="true">01</span>
+      <article class="card card--service reveal" data-reveal style="--d:.04s">
         <h3>A written audit, first</h3>
         <p>Before touching anything: what is exposed, what breaks under load, what cannot be recovered. Delivered as a plain-language document with each item priced and ranked by risk. You can hand it to another developer and never speak to me again — it is yours either way.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
       <article class="card card--service reveal" data-reveal style="--d:.10s">
-        <span class="card__num" aria-hidden="true">02</span>
         <h3>Secrets and access</h3>
         <p>Keys moved out of anything a browser downloads and rotated, because a key that has been public is burned. Then the access rules: every table and every endpoint checked against a second account that should not be allowed in.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
       <article class="card card--service reveal" data-reveal style="--d:.16s">
-        <span class="card__num" aria-hidden="true">03</span>
         <h3>A way to change things safely</h3>
         <p>The project runs on a fresh machine from a single command. Deploys happen from a repository rather than a laptop. Automated tests around the two or three flows that touch money or personal data — not full coverage, which nobody maintains.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
       <article class="card card--service reveal" data-reveal style="--d:.22s">
-        <span class="card__num" aria-hidden="true">04</span>
         <h3>The database, made honest</h3>
         <p>Indexes where the slow queries are. Constraints so the rules live in the database instead of in hope. Migrations, so the schema has a history. Backups, and one restore actually performed to prove they work.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
       <article class="card card--service reveal" data-reveal style="--d:.28s">
-        <span class="card__num" aria-hidden="true">05</span>
         <h3>A handover you can act on</h3>
         <p>What was changed and why, what is still owed, and what it would cost. If you want to keep building with AI afterwards, guidance on where that goes well and where it reliably does not.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
     </div>
   </div>
@@ -477,15 +466,15 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>DELIBERATELY NOT IN V1</p>
+      <p class="eyebrow reveal" data-reveal>DELIBERATELY NOT IN V1</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd leave out.</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">Not because these are bad ideas. Because each one is designed better once the first version has told you something.</p>
     </div>
 
     <ul class="cutlist">
-      <li class="reveal" data-reveal style="--d:.4s"><span class="cutlist__x" aria-hidden="true">✕</span><span>A redesign. Fixing how it looks is a different job from making it safe, and mixing the two hides whether either worked.</span></li>
-      <li class="reveal" data-reveal style="--d:.10s"><span class="cutlist__x" aria-hidden="true">✕</span><span>A framework migration, unless the current one is the actual cause of a problem on the list.</span></li>
-      <li class="reveal" data-reveal style="--d:.16s"><span class="cutlist__x" aria-hidden="true">✕</span><span>New features, until the audit items that carry real risk are closed.</span></li>
+      <li class="reveal" data-reveal style="--d:.04s"><span>A redesign. Fixing how it looks is a different job from making it safe, and mixing the two hides whether either worked.</span></li>
+      <li class="reveal" data-reveal style="--d:.10s"><span>A framework migration, unless the current one is the actual cause of a problem on the list.</span></li>
+      <li class="reveal" data-reveal style="--d:.16s"><span>New features, until the audit items that carry real risk are closed.</span></li>
     </ul>
   </div>
 </section>
@@ -493,16 +482,16 @@
 <section class="section section--alt">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>UNDER THE HOOD</p>
+      <p class="eyebrow reveal" data-reveal>UNDER THE HOOD</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">How it's put together.</h2>
     </div>
 
     <dl class="stack">
-      <div class="stack__row reveal" data-reveal style="--d:.4s">
+      <div class="stack__row reveal" data-reveal style="--d:.04s">
         <dt>Whatever you already have</dt>
         <dd>The rescue is done in the stack the generator chose. Next.js and Supabase, or React and Firebase, or a single Express file — all fine. Replacing it is a decision for later and usually never.</dd>
       </div>
-      <div class="stack__row reveal" data-reveal style="--d:.9s">
+      <div class="stack__row reveal" data-reveal style="--d:.09s">
         <dt>Secrets</dt>
         <dd>Moved to environment variables on the host, with the old values rotated and revoked.</dd>
       </div>
@@ -525,13 +514,13 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>HOW IT RUNS</p>
+      <p class="eyebrow reveal" data-reveal>HOW IT RUNS</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">Week by week.</h2>
     </div>
 
     <ol class="timeline">
       <span class="tl__line" aria-hidden="true"><i></i></span>
-      <li class="tl reveal" data-reveal style="--d:.4s">
+      <li class="tl reveal" data-reveal style="--d:.04s">
         <span class="tl__num">01</span>
         <div class="tl__body">
           <h3>Week 1</h3>
@@ -559,13 +548,13 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>THE HARD PART</p>
+      <p class="eyebrow reveal" data-reveal>THE HARD PART</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">Deciding what to keep</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">Every build has one problem that decides whether the rest of it matters. This is that problem, written out.</p>
     </div>
 
     <div class="deep">
-      <p class="reveal" data-reveal style="--d:.4s">The instinct on opening a generated codebase is to rewrite it. That is almost always the wrong call. The code works — people are using it — and a rewrite trades a running product for three months of silence and a new set of bugs.</p>
+      <p class="reveal" data-reveal style="--d:.04s">The instinct on opening a generated codebase is to rewrite it. That is almost always the wrong call. The code works — people are using it — and a rewrite trades a running product for three months of silence and a new set of bugs.</p>
       <p class="reveal" data-reveal style="--d:.10s">The real work is triage. Roughly, three piles: things that are dangerous and must change this week, things that are merely ugly and can wait forever, and things that look wrong but are actually fine. Most generated code is in the third pile. A page with repeated markup offends an engineer and costs the business nothing. An admin endpoint with no authentication check costs the business everything, and looks identical in a screenshot.</p>
       <p class="reveal" data-reveal style="--d:.16s">So the order is fixed and it is not negotiable: first stop the bleeding — keys out of the browser bundle, access rules on the database, a backup that has been restored at least once. Then make change safe — a way to run it locally, a way to deploy that is not someone's laptop, tests around the two or three flows that carry money. Only then does anyone get to have an opinion about file structure.</p>
       <p class="reveal" data-reveal style="--d:.22s">The failure I design against is the rescue that becomes a rewrite. It starts honestly — this function is unclear, I will tidy it — and four weeks later the business has paid for a codebase that does exactly what the old one did. Every change in the first fortnight has to be something you could explain to the owner in one sentence, in terms of risk removed.</p>
@@ -576,14 +565,14 @@
 <section class="section section--alt">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>BEFORE A PRICE EXISTS</p>
+      <p class="eyebrow reveal" data-reveal>BEFORE A PRICE EXISTS</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd ask you first.</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">A quote given without these answers is a guess. These are the questions that actually move the number.</p>
     </div>
 
     <ol class="qlist">
-      <li class="reveal" data-reveal style="--d:.4s"><span class="qlist__n">01</span><span>Which tool generated it, and do you still have the original prompts or project?</span></li>
-      <li class="reveal" data-reveal style="--d:.9s"><span class="qlist__n">02</span><span>Is anyone paying to use it right now, and can it go down for an hour?</span></li>
+      <li class="reveal" data-reveal style="--d:.04s"><span class="qlist__n">01</span><span>Which tool generated it, and do you still have the original prompts or project?</span></li>
+      <li class="reveal" data-reveal style="--d:.09s"><span class="qlist__n">02</span><span>Is anyone paying to use it right now, and can it go down for an hour?</span></li>
       <li class="reveal" data-reveal style="--d:.14s"><span class="qlist__n">03</span><span>Where are the keys — in the repository, in the front-end bundle, or in a real secret store?</span></li>
       <li class="reveal" data-reveal style="--d:.19s"><span class="qlist__n">04</span><span>Has anyone other than you ever had access to the database?</span></li>
       <li class="reveal" data-reveal style="--d:.24s"><span class="qlist__n">05</span><span>What is the one feature that must keep working while the rest is repaired?</span></li>
@@ -594,13 +583,13 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>AFTERWARDS</p>
+      <p class="eyebrow reveal" data-reveal>AFTERWARDS</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">How we'd know it worked.</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">Agreed before the build starts, so there is something to judge it against other than whether it looks nice.</p>
     </div>
 
     <ul class="winlist">
-      <li class="reveal" data-reveal style="--d:.4s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>No credential is reachable from the browser, verified by reading the shipped bundle.</span></li>
+      <li class="reveal" data-reveal style="--d:.04s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>No credential is reachable from the browser, verified by reading the shipped bundle.</span></li>
       <li class="reveal" data-reveal style="--d:.10s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>Every database table refuses a request that is not allowed to make it, tested with a second account.</span></li>
       <li class="reveal" data-reveal style="--d:.16s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>A backup has been restored into a scratch environment at least once — an untested backup is not a backup.</span></li>
       <li class="reveal" data-reveal style="--d:.22s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>A change can go from laptop to live without anyone copying files by hand.</span></li>
@@ -611,7 +600,7 @@
 <section class="section section--alt">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>BEFORE YOU START</p>
+      <p class="eyebrow reveal" data-reveal>BEFORE YOU START</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">Worth knowing.</h2>
     </div>
 
@@ -628,12 +617,12 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>KEEP LOOKING</p>
+      <p class="eyebrow reveal" data-reveal>KEEP LOOKING</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">Other example builds.</h2>
     </div>
 
     <div class="cards post-grid">
-      <a class="card post-card reveal" data-reveal style="--d:.4s" href="getting-an-app-through-both-stores.html">
+      <a class="card post-card reveal" data-reveal style="--d:.04s" href="getting-an-app-through-both-stores.html">
         <span class="proj__cat">App Launch</span>
         <h3>Getting an App Through Both Stores</h3>
         <p>The two or three weeks between the app being finished and people being able to install it — rejections, signing keys, store listings and the paperwork.</p>

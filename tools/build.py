@@ -78,7 +78,7 @@ CSP = ('<meta http-equiv="Content-Security-Policy" content="default-src \'self\'
 def head(title, description, canonical, jsonld):
     """The <head> for a page one directory below the site root."""
     return u'''<!doctype html>
-<html lang="en" data-theme="light" data-palette="green">
+<html lang="en" data-theme="light" data-palette="violet">
 <head>
 <meta charset="utf-8" />
 
@@ -91,7 +91,7 @@ def head(title, description, canonical, jsonld):
 {https}
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
-<meta name="theme-color" content="#f6fbf8" />
+<meta name="theme-color" content="#f6f1e6" />
 
 <title>{title}</title>
 <meta name="description" content="{description}" />
@@ -103,21 +103,24 @@ def head(title, description, canonical, jsonld):
 <meta property="og:title" content="{title}" />
 <meta property="og:description" content="{description}" />
 <meta property="og:url" content="{canonical}" />
-<meta property="og:image" content="{site}/assets/og-image.svg" />
+<meta property="og:image" content="{site}/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="{title}" />
 <meta name="twitter:description" content="{description}" />
-<meta name="twitter:image" content="{site}/assets/og-image.svg" />
+<meta name="twitter:image" content="{site}/assets/og-image.png" />
 
 <link rel="icon" href="../assets/icon.png" type="image/png" sizes="192x192" />
 <link rel="apple-touch-icon" href="../assets/icon.png" />
 
-<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="../assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/ibm-plex-mono-500-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="../style.css" />
 
-<!-- Tiny bootstrap: marks that JS is on and applies the saved theme before the
-     first paint, so dark-mode users never see a flash of light. -->
+<!-- Tiny bootstrap: records that JavaScript is available, which the CSS uses
+     to enable the progressive bits. Nothing is stored or read. -->
 {boot}
 
 <script type="application/ld+json">
@@ -175,11 +178,11 @@ def chrome_open(active):
           </div>
 
           <div class="appear__row appear__row--swatches" role="group" aria-label="Colour">
-            <button type="button" class="appear__sw" data-palette="blue" aria-label="Blue"><i style="background:#0f6ccc"></i></button>
-            <button type="button" class="appear__sw" data-palette="green" aria-label="Green"><i style="background:#12784a"></i></button>
-            <button type="button" class="appear__sw" data-palette="slate" aria-label="Slate"><i style="background:#445468"></i></button>
-            <button type="button" class="appear__sw" data-palette="ocean" aria-label="Ocean"><i style="background:linear-gradient(135deg,#0b6a92,#38bdf8)"></i></button>
-            <button type="button" class="appear__sw" data-palette="rainbow" aria-label="Rainbow"><i style="background:linear-gradient(100deg,#2563eb,#7028c8 34%,#c026d3 66%,#db2777)"></i></button>
+            <button type="button" class="appear__sw" data-palette="violet" aria-label="Violet"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="blue" aria-label="Blue"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="green" aria-label="Green"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="slate" aria-label="Slate"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="ocean" aria-label="Ocean"><i></i></button>
           </div>
         </div>
       </div>
@@ -191,7 +194,7 @@ def chrome_open(active):
   </div>
 </header>
 
-<!-- Machine-translation notice (only shown when a translation is active) -->
+<!-- Pre-email notice (shown before any email link opens) -->
 <div class="cdlg" id="mailNotice" hidden>
   <div class="cdlg__veil" data-cdlg-close></div>
   <div class="cdlg__box" role="dialog" aria-modal="true" aria-labelledby="mailNoticeTitle" aria-describedby="mailNoticeBody">
@@ -215,6 +218,7 @@ def chrome_open(active):
   </div>
 </div>
 
+<!-- Machine-translation notice (only shown when a translation is active) -->
 <div class="tnote" id="transNote" hidden>
   <div class="container tnote__inner">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 21 20H3l9-16.5Z"/><path d="M12 10v4M12 17h.01"/></svg>
@@ -321,21 +325,16 @@ def breadcrumb(section, section_url, current):
 def page_hero(eyebrow, title, lead, crumbs, chips="", meta="", actions="", aside=""):
     """The banner band every sub-page opens with.
 
-    It carries the same grid-and-blob backdrop as the home page hero, so a
+    It carries the same ruled-paper ground as the home page hero, so a
     sub-page reads as part of the same site rather than a bolted-on blog.
     """
     split = " phero--split" if aside else ""
     return u'''<section class="phero{split}">
-  <div class="phero__bg" aria-hidden="true">
-    <span class="grid-fade"></span>
-    <span class="blob blob--1"></span>
-    <span class="blob blob--2"></span>
-  </div>
   <div class="container phero__inner">
 {crumbs}
     <div class="phero__grid">
       <div>
-        <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>{eyebrow}</p>
+        <p class="eyebrow reveal" data-reveal>{eyebrow}</p>
 {chips}
         <h1 class="phero__title reveal" data-reveal style="--d:.05s">{title}</h1>
         <p class="phero__lead reveal" data-reveal style="--d:.1s">{lead}</p>
@@ -361,7 +360,7 @@ def band(inner, alt=False, extra="", ident=""):
 
 def band_head(eyebrow, title, sub=""):
     out = u'''    <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>{eyebrow}</p>
+      <p class="eyebrow reveal" data-reveal>{eyebrow}</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">{title}</h2>
 '''.format(eyebrow=eyebrow, title=title)
     if sub:
@@ -410,7 +409,7 @@ def case_study_page(cs, others):
     # ---- at a glance ------------------------------------------------------
     glance = ['    <dl class="glance">\n']
     for i, (label, value) in enumerate(cs["glance"]):
-        glance.append(u'''      <div class="glance__item reveal" data-reveal style="--d:.{d}s">
+        glance.append(u'''      <div class="glance__item reveal" data-reveal style="--d:.{d:02d}s">
         <dt>{label}</dt>
         <dd>{value}</dd>
       </div>
@@ -432,13 +431,13 @@ def case_study_page(cs, others):
     inner = [band_head("THE SITUATION", "What's actually broken.")]
     inner.append('    <div class="split">\n      <div class="split__text">\n')
     for i, para in enumerate(cs["situation"]):
-        inner.append('        <p class="reveal" data-reveal style="--d:.%ds">%s</p>\n'
+        inner.append('        <p class="reveal" data-reveal style="--d:.%02ds">%s</p>\n'
                      % ((i * 6) + 4, para))
     # not .problem__list: the home page pins that class into grid column 1,
     # which would drop this list underneath the text instead of beside it
     inner.append('      </div>\n\n      <ul class="split__list">\n')
     for i, pain in enumerate(cs["pains"]):
-        inner.append('        <li class="prob reveal" data-reveal style="--d:.%ds">'
+        inner.append('        <li class="prob reveal" data-reveal style="--d:.%02ds">'
                      '<span class="prob__x" aria-hidden="true">✕</span>'
                      '<h3>%s</h3></li>\n' % ((i * 6) + 6, pain))
     inner.append('      </ul>\n    </div>\n')
@@ -450,11 +449,9 @@ def case_study_page(cs, others):
                        "would miss on day one.")]
     inner.append('    <div class="cards cards--3">\n')
     for i, (name, body) in enumerate(cs["scope"]):
-        inner.append(u'''      <article class="card card--service reveal" data-reveal style="--d:.{d}s">
-        <span class="card__num" aria-hidden="true">{n:02d}</span>
+        inner.append(u'''      <article class="card card--service reveal" data-reveal style="--d:.{d:02d}s">
         <h3>{name}</h3>
         <p>{body}</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
 '''.format(d=(i * 6) + 4, n=i + 1, name=name, body=body))
     inner.append('    </div>\n')
@@ -466,8 +463,7 @@ def case_study_page(cs, others):
                        "better once the first version has told you something.")]
     inner.append('    <ul class="cutlist">\n')
     for i, item in enumerate(cs["excluded"]):
-        inner.append('      <li class="reveal" data-reveal style="--d:.%ds">'
-                     '<span class="cutlist__x" aria-hidden="true">✕</span>'
+        inner.append('      <li class="reveal" data-reveal style="--d:.%02ds">'
                      '<span>%s</span></li>\n' % ((i * 6) + 4, item))
     inner.append('    </ul>\n')
     out.append(band("".join(inner)))
@@ -476,7 +472,7 @@ def case_study_page(cs, others):
     inner = [band_head("UNDER THE HOOD", "How it's put together.")]
     inner.append('    <dl class="stack">\n')
     for i, (name, body) in enumerate(cs["stack"]):
-        inner.append(u'''      <div class="stack__row reveal" data-reveal style="--d:.{d}s">
+        inner.append(u'''      <div class="stack__row reveal" data-reveal style="--d:.{d:02d}s">
         <dt>{name}</dt>
         <dd>{body}</dd>
       </div>
@@ -489,7 +485,7 @@ def case_study_page(cs, others):
     inner.append('    <ol class="timeline">\n'
                  '      <span class="tl__line" aria-hidden="true"><i></i></span>\n')
     for i, (when, what) in enumerate(cs["timeline"]):
-        inner.append(u'''      <li class="tl reveal" data-reveal style="--d:.{d}s">
+        inner.append(u'''      <li class="tl reveal" data-reveal style="--d:.{d:02d}s">
         <span class="tl__num">{n:02d}</span>
         <div class="tl__body">
           <h3>{when}</h3>
@@ -507,7 +503,7 @@ def case_study_page(cs, others):
                        "of it matters. This is that problem, written out.")]
     inner.append('    <div class="deep">\n')
     for i, para in enumerate(hard_paras):
-        inner.append('      <p class="reveal" data-reveal style="--d:.%ds">%s</p>\n'
+        inner.append('      <p class="reveal" data-reveal style="--d:.%02ds">%s</p>\n'
                      % ((i * 6) + 4, para))
     inner.append('    </div>\n')
     out.append(band("".join(inner)))
@@ -518,7 +514,7 @@ def case_study_page(cs, others):
                        "the questions that actually move the number.")]
     inner.append('    <ol class="qlist">\n')
     for i, q in enumerate(cs["questions"]):
-        inner.append('      <li class="reveal" data-reveal style="--d:.%ds">'
+        inner.append('      <li class="reveal" data-reveal style="--d:.%02ds">'
                      '<span class="qlist__n">%02d</span><span>%s</span></li>\n'
                      % ((i * 5) + 4, i + 1, q))
     inner.append('    </ol>\n')
@@ -530,7 +526,7 @@ def case_study_page(cs, others):
                        "judge it against other than whether it looks nice.")]
     inner.append('    <ul class="winlist">\n')
     for i, w in enumerate(cs["success"]):
-        inner.append('      <li class="reveal" data-reveal style="--d:.%ds">'
+        inner.append('      <li class="reveal" data-reveal style="--d:.%02ds">'
                      '<span class="winlist__tick" aria-hidden="true">&#10003;</span>'
                      '<span>%s</span></li>\n' % ((i * 6) + 4, w))
     inner.append('    </ul>\n')
@@ -552,7 +548,7 @@ def case_study_page(cs, others):
     inner = [band_head("KEEP LOOKING", "Other example builds.")]
     inner.append('    <div class="cards post-grid">\n')
     for i, other in enumerate(others):
-        inner.append(u'''      <a class="card post-card reveal" data-reveal style="--d:.{d}s" href="{slug}.html">
+        inner.append(u'''      <a class="card post-card reveal" data-reveal style="--d:.{d:02d}s" href="{slug}.html">
         <span class="proj__cat">{cat}</span>
         <h3>{title}</h3>
         <p>{summary}</p>
@@ -601,10 +597,10 @@ def case_studies_index():
     results claim. They're the products the studio is set up to ship, written out in
     the same detail you'd get on a real project. Yours would be the first on this wall.</p>
 
-    <div class="cards post-grid">
+    <div class="cards post-grid post-grid--sheets">
 ''']
     for i, cs in enumerate(CASE_STUDIES):
-        inner.append(u'''      <a class="card post-card reveal" data-reveal style="--d:.{d}s" href="{slug}.html">
+        inner.append(u'''      <a class="card post-card post-card--sheet reveal" data-reveal style="--d:.{d:02d}s" href="{slug}.html">
         <div class="post-card__mock">{mock}</div>
         <span class="chips"><span class="proj__flag">Example build</span><span class="proj__cat">{cat}</span></span>
         <h2>{title}</h2>
@@ -712,7 +708,7 @@ def article_page(art, others):
     inner = [band_head("KEEP READING", "More articles.")]
     inner.append('    <div class="cards post-grid">\n')
     for i, other in enumerate(others):
-        inner.append(u'''      <a class="card post-card reveal" data-reveal style="--d:.{d}s" href="{slug}.html">
+        inner.append(u'''      <a class="card post-card reveal" data-reveal style="--d:.{d:02d}s" href="{slug}.html">
         <span class="proj__cat">{tag}</span>
         <h3>{title}</h3>
         <p>{summary}</p>
@@ -807,7 +803,7 @@ def articles_index():
              '\n    </div>\n\n',
              '    <div class="cards post-grid" id="artGrid">\n']
     for i, art in enumerate(ARTICLES):
-        inner.append(u'''      <a class="card post-card reveal" data-reveal style="--d:.{d}s" href="{slug}.html" data-tag="{tag}">
+        inner.append(u'''      <a class="card post-card reveal" data-reveal style="--d:.{d:02d}s" href="{slug}.html" data-tag="{tag}">
         <span class="proj__cat">{tag}</span>
         <h2>{title}</h2>
         <p>{summary}</p>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light" data-palette="green">
+<html lang="en" data-theme="light" data-palette="violet">
 <head>
 <meta charset="utf-8" />
 
@@ -23,7 +23,7 @@
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
-<meta name="theme-color" content="#f6fbf8" />
+<meta name="theme-color" content="#f6f1e6" />
 
 <title>Field Service Job App — Case Study | Tavzuran</title>
 <meta name="description" content="Dispatch, on-site checklists, photo proof and an invoice raised before the technician leaves." />
@@ -35,21 +35,24 @@
 <meta property="og:title" content="Field Service Job App — Case Study | Tavzuran" />
 <meta property="og:description" content="Dispatch, on-site checklists, photo proof and an invoice raised before the technician leaves." />
 <meta property="og:url" content="https://tavzuran.com/case-studies/field-service-job-app.html" />
-<meta property="og:image" content="https://tavzuran.com/assets/og-image.svg" />
+<meta property="og:image" content="https://tavzuran.com/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Field Service Job App — Case Study | Tavzuran" />
 <meta name="twitter:description" content="Dispatch, on-site checklists, photo proof and an invoice raised before the technician leaves." />
-<meta name="twitter:image" content="https://tavzuran.com/assets/og-image.svg" />
+<meta name="twitter:image" content="https://tavzuran.com/assets/og-image.png" />
 
 <link rel="icon" href="../assets/icon.png" type="image/png" sizes="192x192" />
 <link rel="apple-touch-icon" href="../assets/icon.png" />
 
-<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="../assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/ibm-plex-mono-500-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="../style.css" />
 
-<!-- Tiny bootstrap: marks that JS is on and applies the saved theme before the
-     first paint, so dark-mode users never see a flash of light. -->
+<!-- Tiny bootstrap: records that JavaScript is available, which the CSS uses
+     to enable the progressive bits. Nothing is stored or read. -->
 <script>
 (function () {
   /* Nothing is stored, so there is no saved theme to read before first paint.
@@ -193,11 +196,11 @@
           </div>
 
           <div class="appear__row appear__row--swatches" role="group" aria-label="Colour">
-            <button type="button" class="appear__sw" data-palette="blue" aria-label="Blue"><i style="background:#0f6ccc"></i></button>
-            <button type="button" class="appear__sw" data-palette="green" aria-label="Green"><i style="background:#12784a"></i></button>
-            <button type="button" class="appear__sw" data-palette="slate" aria-label="Slate"><i style="background:#445468"></i></button>
-            <button type="button" class="appear__sw" data-palette="ocean" aria-label="Ocean"><i style="background:linear-gradient(135deg,#0b6a92,#38bdf8)"></i></button>
-            <button type="button" class="appear__sw" data-palette="rainbow" aria-label="Rainbow"><i style="background:linear-gradient(100deg,#2563eb,#7028c8 34%,#c026d3 66%,#db2777)"></i></button>
+            <button type="button" class="appear__sw" data-palette="violet" aria-label="Violet"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="blue" aria-label="Blue"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="green" aria-label="Green"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="slate" aria-label="Slate"><i></i></button>
+            <button type="button" class="appear__sw" data-palette="ocean" aria-label="Ocean"><i></i></button>
           </div>
         </div>
       </div>
@@ -209,7 +212,7 @@
   </div>
 </header>
 
-<!-- Machine-translation notice (only shown when a translation is active) -->
+<!-- Pre-email notice (shown before any email link opens) -->
 <div class="cdlg" id="mailNotice" hidden>
   <div class="cdlg__veil" data-cdlg-close></div>
   <div class="cdlg__box" role="dialog" aria-modal="true" aria-labelledby="mailNoticeTitle" aria-describedby="mailNoticeBody">
@@ -233,6 +236,7 @@
   </div>
 </div>
 
+<!-- Machine-translation notice (only shown when a translation is active) -->
 <div class="tnote" id="transNote" hidden>
   <div class="container tnote__inner">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 21 20H3l9-16.5Z"/><path d="M12 10v4M12 17h.01"/></svg>
@@ -320,11 +324,6 @@
 
 <main id="main">
 <section class="phero phero--split">
-  <div class="phero__bg" aria-hidden="true">
-    <span class="grid-fade"></span>
-    <span class="blob blob--1"></span>
-    <span class="blob blob--2"></span>
-  </div>
   <div class="container phero__inner">
   <nav class="crumb" aria-label="Breadcrumb">
     <a href="../index.html">Home</a>
@@ -336,7 +335,7 @@
 
     <div class="phero__grid">
       <div>
-        <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>CASE STUDY</p>
+        <p class="eyebrow reveal" data-reveal>CASE STUDY</p>
     <span class="chips reveal" data-reveal><span class="proj__flag">Example build</span><span class="proj__cat">Mobile App</span></span>
 
         <h1 class="phero__title reveal" data-reveal style="--d:.05s">Field Service Job App</h1>
@@ -372,7 +371,7 @@
 <section class="section section--alt section--glance">
   <div class="container">
     <dl class="glance">
-      <div class="glance__item reveal" data-reveal style="--d:.4s">
+      <div class="glance__item reveal" data-reveal style="--d:.04s">
         <dt>Type</dt>
         <dd>Mobile app + dispatch web</dd>
       </div>
@@ -404,18 +403,18 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>THE SITUATION</p>
+      <p class="eyebrow reveal" data-reveal>THE SITUATION</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">What's actually broken.</h2>
     </div>
 
     <div class="split">
       <div class="split__text">
-        <p class="reveal" data-reveal style="--d:.4s">A service business — appliance repair, AC servicing, pest control — runs a team of technicians. Jobs are assigned over the phone, completion is reported by WhatsApp, and invoicing happens later from memory. Payment slips by days for no reason other than paperwork.</p>
+        <p class="reveal" data-reveal style="--d:.04s">A service business — appliance repair, AC servicing, pest control — runs a team of technicians. Jobs are assigned over the phone, completion is reported by WhatsApp, and invoicing happens later from memory. Payment slips by days for no reason other than paperwork.</p>
         <p class="reveal" data-reveal style="--d:.10s">Like the delivery app, this lives or dies on working without signal. Technicians go into basements, lift shafts and buildings with no coverage, and the job still has to be recorded.</p>
       </div>
 
       <ul class="split__list">
-        <li class="prob reveal" data-reveal style="--d:.6s"><span class="prob__x" aria-hidden="true">✕</span><h3>Jobs are assigned by phone call and forgotten</h3></li>
+        <li class="prob reveal" data-reveal style="--d:.06s"><span class="prob__x" aria-hidden="true">✕</span><h3>Jobs are assigned by phone call and forgotten</h3></li>
         <li class="prob reveal" data-reveal style="--d:.12s"><span class="prob__x" aria-hidden="true">✕</span><h3>Proof of work is a photo in someone's personal WhatsApp</h3></li>
         <li class="prob reveal" data-reveal style="--d:.18s"><span class="prob__x" aria-hidden="true">✕</span><h3>Invoices go out days after the job is done</h3></li>
         <li class="prob reveal" data-reveal style="--d:.24s"><span class="prob__x" aria-hidden="true">✕</span><h3>Nobody knows which technician is free right now</h3></li>
@@ -427,41 +426,31 @@
 <section class="section section--alt">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>VERSION ONE</p>
+      <p class="eyebrow reveal" data-reveal>VERSION ONE</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd build first.</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">Every item here earns its place by being something a real user would miss on day one.</p>
     </div>
 
     <div class="cards cards--3">
-      <article class="card card--service reveal" data-reveal style="--d:.4s">
-        <span class="card__num" aria-hidden="true">01</span>
+      <article class="card card--service reveal" data-reveal style="--d:.04s">
         <h3>Dispatch board</h3>
         <p>Today's jobs, who is free, and assignment by drag rather than by phone call.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
       <article class="card card--service reveal" data-reveal style="--d:.10s">
-        <span class="card__num" aria-hidden="true">02</span>
         <h3>Technician app, offline-first</h3>
         <p>The day's jobs download in the morning. Everything recorded on site syncs when signal comes back.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
       <article class="card card--service reveal" data-reveal style="--d:.16s">
-        <span class="card__num" aria-hidden="true">03</span>
         <h3>On-site checklist</h3>
         <p>Per job type, so the work is consistent and the parts used are captured while the technician is still standing there.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
       <article class="card card--service reveal" data-reveal style="--d:.22s">
-        <span class="card__num" aria-hidden="true">04</span>
         <h3>Proof of work</h3>
         <p>Before and after photos, plus a customer signature, timestamped and attached to the job permanently.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
       <article class="card card--service reveal" data-reveal style="--d:.28s">
-        <span class="card__num" aria-hidden="true">05</span>
         <h3>Invoice on completion</h3>
         <p>Generated from the checklist and parts, sent by WhatsApp before the technician leaves the site.</p>
-        <span class="card__corner" aria-hidden="true"></span>
       </article>
     </div>
   </div>
@@ -470,15 +459,15 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>DELIBERATELY NOT IN V1</p>
+      <p class="eyebrow reveal" data-reveal>DELIBERATELY NOT IN V1</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd leave out.</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">Not because these are bad ideas. Because each one is designed better once the first version has told you something.</p>
     </div>
 
     <ul class="cutlist">
-      <li class="reveal" data-reveal style="--d:.4s"><span class="cutlist__x" aria-hidden="true">✕</span><span>Route optimisation across the whole team — buy it from a specialist API when the volume justifies it.</span></li>
-      <li class="reveal" data-reveal style="--d:.10s"><span class="cutlist__x" aria-hidden="true">✕</span><span>Parts inventory across a warehouse. Start with what is on the van.</span></li>
-      <li class="reveal" data-reveal style="--d:.16s"><span class="cutlist__x" aria-hidden="true">✕</span><span>Customer self-service booking, until the dispatch side is steady.</span></li>
+      <li class="reveal" data-reveal style="--d:.04s"><span>Route optimisation across the whole team — buy it from a specialist API when the volume justifies it.</span></li>
+      <li class="reveal" data-reveal style="--d:.10s"><span>Parts inventory across a warehouse. Start with what is on the van.</span></li>
+      <li class="reveal" data-reveal style="--d:.16s"><span>Customer self-service booking, until the dispatch side is steady.</span></li>
     </ul>
   </div>
 </section>
@@ -486,16 +475,16 @@
 <section class="section section--alt">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>UNDER THE HOOD</p>
+      <p class="eyebrow reveal" data-reveal>UNDER THE HOOD</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">How it's put together.</h2>
     </div>
 
     <dl class="stack">
-      <div class="stack__row reveal" data-reveal style="--d:.4s">
+      <div class="stack__row reveal" data-reveal style="--d:.04s">
         <dt>Technician app</dt>
         <dd>React Native with an on-device database and a sync queue — the bulk of the engineering</dd>
       </div>
-      <div class="stack__row reveal" data-reveal style="--d:.9s">
+      <div class="stack__row reveal" data-reveal style="--d:.09s">
         <dt>Dispatch board</dt>
         <dd>React, used on a desktop at the office</dd>
       </div>
@@ -518,13 +507,13 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>HOW IT RUNS</p>
+      <p class="eyebrow reveal" data-reveal>HOW IT RUNS</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">Week by week.</h2>
     </div>
 
     <ol class="timeline">
       <span class="tl__line" aria-hidden="true"><i></i></span>
-      <li class="tl reveal" data-reveal style="--d:.4s">
+      <li class="tl reveal" data-reveal style="--d:.04s">
         <span class="tl__num">01</span>
         <div class="tl__body">
           <h3>Week 1</h3>
@@ -559,13 +548,13 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>THE HARD PART</p>
+      <p class="eyebrow reveal" data-reveal>THE HARD PART</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">Offline sync with money attached</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">Every build has one problem that decides whether the rest of it matters. This is that problem, written out.</p>
     </div>
 
     <div class="deep">
-      <p class="reveal" data-reveal style="--d:.4s">This build has the delivery app's offline problem plus a complication that makes it materially harder: the outcome of the job produces an invoice. A duplicate delivery record is embarrassing. A duplicate invoice is a phone call from a customer who has been billed twice.</p>
+      <p class="reveal" data-reveal style="--d:.04s">This build has the delivery app's offline problem plus a complication that makes it materially harder: the outcome of the job produces an invoice. A duplicate delivery record is embarrassing. A duplicate invoice is a phone call from a customer who has been billed twice.</p>
       <p class="reveal" data-reveal style="--d:.10s">So the sync design has to be stricter. Every job completion carries an identifier created on the device, and the server treats a repeat as the same event rather than a new one. Invoice numbers are issued server-side, never on the device, because two technicians coming back online in the same minute must not be able to produce the same number.</p>
       <p class="reveal" data-reveal style="--d:.16s">There is a human constraint too. A technician finishing a job wants to leave, so anything between them and the van has to be worth its seconds. The checklist is the invoice — parts used and work done become line items automatically — because asking someone to enter the same information twice guarantees the second entry never happens.</p>
     </div>
@@ -575,14 +564,14 @@
 <section class="section section--alt">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>BEFORE A PRICE EXISTS</p>
+      <p class="eyebrow reveal" data-reveal>BEFORE A PRICE EXISTS</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">What we'd ask you first.</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">A quote given without these answers is a guess. These are the questions that actually move the number.</p>
     </div>
 
     <ol class="qlist">
-      <li class="reveal" data-reveal style="--d:.4s"><span class="qlist__n">01</span><span>How many technicians, and how many jobs does each do in a day?</span></li>
-      <li class="reveal" data-reveal style="--d:.9s"><span class="qlist__n">02</span><span>What job types are there, and does each have a standard procedure?</span></li>
+      <li class="reveal" data-reveal style="--d:.04s"><span class="qlist__n">01</span><span>How many technicians, and how many jobs does each do in a day?</span></li>
+      <li class="reveal" data-reveal style="--d:.09s"><span class="qlist__n">02</span><span>What job types are there, and does each have a standard procedure?</span></li>
       <li class="reveal" data-reveal style="--d:.14s"><span class="qlist__n">03</span><span>Do technicians carry parts on the van, and who tracks them?</span></li>
       <li class="reveal" data-reveal style="--d:.19s"><span class="qlist__n">04</span><span>How is an invoice raised today, and how long after the job?</span></li>
       <li class="reveal" data-reveal style="--d:.24s"><span class="qlist__n">05</span><span>Where does coverage fail — basements, lifts, industrial sites?</span></li>
@@ -593,13 +582,13 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>AFTERWARDS</p>
+      <p class="eyebrow reveal" data-reveal>AFTERWARDS</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">How we'd know it worked.</h2>
       <p class="sec-sub reveal" data-reveal style="--d:.1s">Agreed before the build starts, so there is something to judge it against other than whether it looks nice.</p>
     </div>
 
     <ul class="winlist">
-      <li class="reveal" data-reveal style="--d:.4s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>Jobs are recorded on the day they are done, not reconstructed later.</span></li>
+      <li class="reveal" data-reveal style="--d:.04s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>Jobs are recorded on the day they are done, not reconstructed later.</span></li>
       <li class="reveal" data-reveal style="--d:.10s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>The invoice leaves before the technician does.</span></li>
       <li class="reveal" data-reveal style="--d:.16s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>The gap between work done and payment received shrinks.</span></li>
       <li class="reveal" data-reveal style="--d:.22s"><span class="winlist__tick" aria-hidden="true">&#10003;</span><span>A disputed job is settled with photos and a timestamp.</span></li>
@@ -610,7 +599,7 @@
 <section class="section section--alt">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>BEFORE YOU START</p>
+      <p class="eyebrow reveal" data-reveal>BEFORE YOU START</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">Worth knowing.</h2>
     </div>
 
@@ -627,12 +616,12 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot" aria-hidden="true"></span>KEEP LOOKING</p>
+      <p class="eyebrow reveal" data-reveal>KEEP LOOKING</p>
       <h2 class="sec-title reveal" data-reveal style="--d:.05s">Other example builds.</h2>
     </div>
 
     <div class="cards post-grid">
-      <a class="card post-card reveal" data-reveal style="--d:.4s" href="first-website-for-a-social-first-business.html">
+      <a class="card post-card reveal" data-reveal style="--d:.04s" href="first-website-for-a-social-first-business.html">
         <span class="proj__cat">New Business</span>
         <h3>First Website for a Social-First Business</h3>
         <p>You built an audience on Instagram and TikTok. This is the address, the inbox and the page that are actually yours.</p>
