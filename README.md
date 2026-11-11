@@ -245,10 +245,10 @@ Point your domain's DNS at GitHub Pages, then **Settings → Pages → Custom do
 
 - **Mobile-first** and checked with no horizontal scroll at 375 / 390 / 430 px, tablet and desktop
 - **Sticky bottom CTA bar** on phones (Instagram traffic lands on a visible "Book a Free Call")
-- **Five inks × light/dark/system** — violet (default), blue, green, slate and ocean, chosen from
-  the palette button in the header. Nothing is stored, so the choice lasts for the visit.
-- **Animations** — scroll reveals, the double rule drawing under the headline, the stamp landing,
-  the timeline filling and the price count-up; all switched off under
+- **Five marker colours × light/dark/system** — orange (default), blue, green, violet and slate,
+  chosen from the palette button in the header. Nothing is stored, so the choice lasts for the visit.
+- **Animations** — scroll reveals, the hero drawing tracing itself in, the timeline filling and the
+  price count-up; all switched off under
   `prefers-reduced-motion: reduce`
 - **Works without JavaScript** — all content renders, all links still work
 - **SEO** — title, meta description, Open Graph, Twitter card, canonical, JSON-LD business schema,
@@ -260,24 +260,28 @@ Point your domain's DNS at GitHub Pages, then **Settings → Pages → Custom do
 - **Performance** — no libraries, no framework, one small CSS file, one small JS file, all
   illustrations are inline SVG (no image downloads). No external requests at all.
 
-### Design system: "The Honest Quote"
+### Design system: "Rev. 01"
 
-The site is typeset as an itemised estimate. The pieces, all in `style.css`:
+The site is drawn as an architect's working drawing. A first version is,
+literally, revision one. The pieces, all in `style.css`:
 
 | Piece | What it is |
 |---|---|
-| Ruled paper | A feint line every `--lh` in the hero and sub-page banners |
-| Margin line | The red double rule down the left of `<main>`; section marks (§ 01, § 02…) sit in the gutter beside it and are numbered by a CSS counter, so adding a section renumbers the rest |
-| Ledgers | Any `.cards` block is a ruled table: one heavy rule on top, one feint rule per entry, entries numbered by CSS counter |
-| Sheets | `.sheet`, `.mvp__panel`, `.proj` — paper torn off a pad, with a perforated top edge |
-| Double rule | The accountant's mark for a final figure: under "build it." and under every price |
-| Stamp | `.stamp`, `.proj__flag`, `.t__flag` — one rubber stamp per screen, no more |
-| Hand | Caveat, for the signature and one margin note per section |
+| Drafting film | Light mode: a pale green-grey sheet with a fine 22px grid and a heavier line every five cells |
+| Blueprint | The hero, the Human + AI band and the final call to action are always blueprint; dark mode turns the whole site blueprint. One class, `.bp`, swaps the palette, so every component inside redraws itself |
+| Sheet numbers | Each section heading opens with a boxed number (01, 02…) from a CSS counter, so adding a section renumbers the rest |
+| Crop marks | The four corner marks on every section |
+| Title blocks | Any `.cards` block is a ruled table with a frame and a rule between every cell; the hero, the case-study "at a glance" strip and the footer are title blocks |
+| Dimension lines | Under the headline, around the hero drawing and along the about photo |
+| Revision flags | `.proj__flag`, `.t__flag` — a tilted outline tag in marker colour |
+| Revision cloud | The "what we'd leave out" list on each case study, drawn as a dashed outline |
 
-Type: **Newsreader** for headlines and text, **IBM Plex Mono** for labels, figures and buttons,
-**Caveat** for the signature. Licences are recorded in `LICENSES.md`.
+Type: **IBM Plex Mono** for headlines, labels and buttons; the visitor's own **system sans-serif**
+for reading text (nothing downloaded); **Caveat** for one hand-written note. Licences are in
+`LICENSES.md`.
 
-Decorative labels use numerals and symbols only, so nothing new needs translating.
+Labels on the drawing reuse wording that is already on the page (IDEA, BUILD, USERS, SCALE,
+"Starting at"…), so the existing translations cover them; anything else is numerals and symbols.
 
 ### Colour themes
 
@@ -285,29 +289,25 @@ Two independent axes on `<html>`:
 
 | Attribute | Values |
 |---|---|
-| `data-theme` | `light` \| `dark` |
-| `data-palette` | `violet` \| `blue` \| `green` \| `slate` \| `ocean` |
+| `data-theme` | `light` (drafting film) \| `dark` (blueprint) |
+| `data-palette` | `orange` \| `blue` \| `green` \| `violet` \| `slate` |
 
-The defaults (`light`, `violet`) are written on `<html>` in the markup, so the first paint is already
-correct. The palette button in the header opens a small panel: three mode buttons (light / dark /
-**system**) and five ink swatches.
-
-Paper, ink and rules are fixed. A palette changes one thing: the **ink colour** used for stamps, the
-signature, section marks, links and ticks. Each ink is two values in section 2 of `style.css` —
-`--a-l` for light grounds and `--a-d` for dark ones:
+The defaults (`light`, `orange`) are written on `<html>` in the markup, so the first paint is already
+correct. A palette changes one thing: the **marker colour** used for sheet labels, call-outs, flags,
+the button shadow and the price. Each marker is two values in section 2 of `style.css` — `--a-l` for
+film and `--a-d` for blueprint:
 
 ```css
-:root[data-palette="blue"] { --a-l: #1f4fc4; --a-d: #8fb0ff; }
+:root[data-palette="blue"] { --a-l: #1c46c9; --a-d: #8fb4ff; }
 ```
 
-**To add an ink:** add a line like the one above, add its two swatch colours beside the others in
+**To add a marker:** add a line like the one above, add its two swatch colours beside the others in
 section 6 (`.appear__sw[data-palette=…]`), add the name to `PALETTES` in `script.js`, and add a
 swatch button in `index.html` and in `chrome_open()` in `tools/build.py`.
 
-⚠️ **An ink carries text, so both values must reach 4.5:1** — `--a-l` against `--paper-2`
-(`#efe8d8`) and `--a-d` against the dark `--sheet` (`#1a2130`). The five shipped inks measure between
-5.1:1 and 11.2:1. The red margin line and the feint blue rules are decoration only and are never used
-for text.
+⚠️ **A marker carries text, so both values must reach 4.5:1** — `--a-l` against the darker film
+(`#e3e8e0`) and `--a-d` against the lightest blueprint (`#143670`). The five shipped markers measure
+between 4.6:1 and 7.8:1.
 
 ### Security
 
@@ -356,7 +356,7 @@ still load and the page looks correct. For an exact preview, run the local serve
 
 | I want to… | Where |
 |-----------|-------|
-| Change the default ink colour | `style.css` → `:root { --a-l: #4a3aa8; --a-d: #b3a8ff; }` (light-ground and dark-ground values). Both carry text, so keep each at 4.5:1 or better against its background. |
+| Change the default marker colour | `style.css` → `:root { --a-l: #a83f12; --a-d: #ff8a52; }` (film and blueprint values). Both carry text, so keep each at 4.5:1 or better against its background. |
 | Change the MVP price | `index.html` → search `20,000` (appears in the hero badge, MVP section, mobile menu, footer, meta description) |
 | Add / remove a service or industry card | `index.html` → `#services` / `#industries` — copy an `<article class="card ...">` block |
 | Edit the About text | `index.html` → `#about` (the credibility strip is `.about__stats`) |

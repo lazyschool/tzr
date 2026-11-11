@@ -10,9 +10,8 @@ stored in this repository and served from tavzuran.com itself.
 
 | Family | Used for | Made by | Licence | Files |
 |---|---|---|---|---|
-| Newsreader | Headlines and body text | Production Type (Paris, France) | SIL Open Font License 1.1 | `assets/fonts/newsreader-*.woff2` |
-| IBM Plex Mono | Labels, figures, buttons | IBM Corp. (USA) — Mike Abbink with Bold Monday (Netherlands) | SIL Open Font License 1.1 | `assets/fonts/ibm-plex-mono-*.woff2` |
-| Caveat | The signature and hand-written margin notes | Impallari Type (Argentina) | SIL Open Font License 1.1 | `assets/fonts/caveat-*.woff2` |
+| IBM Plex Mono | Headlines, labels, figures, buttons | IBM Corp. (USA) — Mike Abbink with Bold Monday (Netherlands) | SIL Open Font License 1.1 | `assets/fonts/ibm-plex-mono-*.woff2` |
+| Caveat | The one hand-written note per section | Impallari Type (Argentina) | SIL Open Font License 1.1 | `assets/fonts/caveat-*.woff2` |
 
 The full licence text for each family, including its copyright line, is in
 `assets/fonts/licenses/`. The OFL permits commercial use, web embedding and
@@ -24,15 +23,18 @@ required on the pages.
 
 | What | Source | Operator | Retrieved |
 |---|---|---|---|
-| Newsreader and IBM Plex Mono `.woff2` files (Latin and Latin Extended subsets) | `fonts.gstatic.com`, located through the stylesheet at `fonts.googleapis.com` | Google LLC, USA | 11 November 2026 |
+| IBM Plex Mono `.woff2` files (Latin and Latin Extended subsets) | `fonts.gstatic.com`, located through the stylesheet at `fonts.googleapis.com` | Google LLC, USA | 11 November 2026 |
 | Caveat `.woff2` files | `fonts.gstatic.com` | Google LLC, USA | before this record began; carried over from the previous design |
-| Licence texts and designer metadata | `github.com/google/fonts` (`ofl/newsreader`, `ofl/ibmplexmono`, `ofl/caveat`) | GitHub, Inc. (Microsoft), USA | 11 November 2026 |
+| Licence texts and designer metadata | `github.com/google/fonts` (`ofl/ibmplexmono`, `ofl/caveat`) | GitHub, Inc. (Microsoft), USA | 11 November 2026 |
 
 The files are used exactly as served: they are not renamed internally, edited
 or re-subset. "Plex" is a Reserved Font Name of IBM Corp.
 
-Upstream projects: <https://github.com/productiontype/Newsreader>,
-<https://github.com/IBM/plex>, <https://github.com/googlefonts/caveat>.
+Upstream projects: <https://github.com/IBM/plex>, <https://github.com/googlefonts/caveat>.
+
+Reading text uses the visitor's own system font (`system-ui`: San Francisco on
+Apple devices, Segoe UI on Windows, Roboto on Android). Nothing is downloaded
+for it and no licence applies to the site.
 
 ## Everything else
 
