@@ -471,14 +471,14 @@ a.link-arrow:hover span[aria-hidden], a:hover .link-arrow span[aria-hidden] { tr
 
 /* full frames */
 .btn, .icon-btn, .burger, .lang, .chip, .tl__num, .appear__mode, .appear__sw,
-.hero__sheet, .mvp__panel, .price, .proj, .post-card.post-card--sheet, .mockwrap, .note,
+.hero__sheet, .mvp__panel, .price, .proj, .post-card.post-card--sheet, .mockwrap, .note, .client,
 .footer__inner, .nd__panel, .appear__panel, .cdlg__box, .mobile-bar__ig, .tnote__link, .tnote__ok {
   position: relative;
   border-color: transparent !important;
 }
 .btn::after, .icon-btn::after, .burger::after, .lang::after, .chip::after, .tl__num::after,
 .appear__mode::after, .appear__sw::after,
-.hero__sheet::after, .mvp__panel::after, .price::after, .proj::after, .post-card.post-card--sheet::after,
+.hero__sheet::after, .mvp__panel::after, .price::after, .proj::after, .post-card.post-card--sheet::after, .client::after,
 .mockwrap::after, .note::after, .footer__inner::after, .nd__panel::after, .appear__panel::after,
 .cdlg__box::after, .mobile-bar__ig::after, .tnote__link::after, .tnote__ok::after {
   content: "";
@@ -1057,6 +1057,45 @@ a.link-arrow:hover span[aria-hidden], a:hover .link-arrow span[aria-hidden] { tr
 @media (min-width: 1040px) { .work__grid, .post-grid--sheets { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .work__foot, .latest__foot { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 18px; margin-top: 40px; }
 .work__foot .hand-note { margin-inline-end: 8px; transform: rotate(-2.5deg); }
+
+/* delivered client work: a wide sheet ahead of the example builds, with a
+   solid tag so it can never be mistaken for an "Example build" */
+.client {
+  position: relative;
+  display: grid;
+  margin-bottom: 48px;
+  background: var(--sheet);
+  border: 1.5px solid var(--ink);
+  box-shadow: 8px 8px 0 var(--accent);
+}
+.client > * { min-width: 0; }
+.client__thumb {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(20px, 4vw, 40px);
+  background-color: var(--paper);
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: var(--cell) var(--cell);
+}
+.client__thumb .mockbare { width: 100%; max-width: 440px; }
+.client__thumb::after {
+  content: ""; position: absolute; inset: auto 0 -4.5px 0; height: 9px; pointer-events: none; background: var(--ink);
+  -webkit-mask: var(--sk-h) left center / 310px 9px repeat-x; mask: var(--sk-h) left center / 310px 9px repeat-x;
+}
+.client__body { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; padding: 26px 24px 30px; }
+.client__title { font-size: clamp(1.7rem, 1rem + 2.8vw, 2.9rem); line-height: .98; letter-spacing: -.055em; text-transform: uppercase; }
+.client__body p { color: var(--ink-2); max-width: 34em; }
+.client__body .btn { margin-top: 8px; }
+.proj__flag--done { background: var(--accent); color: var(--accent-fg); }
+@media (min-width: 900px) {
+  .client { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .client__body { justify-content: center; padding: clamp(32px, 4vw, 52px); }
+  .client__thumb::after { inset: 0 -4.5px 0 auto; width: 9px; height: auto;
+    -webkit-mask: var(--sk-v) center top / 9px 310px repeat-y; mask: var(--sk-v) center top / 9px 310px repeat-y; }
+  [dir="rtl"] .client__thumb::after { inset: 0 auto 0 -4.5px; }
+}
 
 /* reviews: annotations, each pinned to the drawing by a numbered leader */
 .quotes { border: 0; gap: 0 40px; }

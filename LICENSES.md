@@ -51,5 +51,8 @@ analytics script or embedded third-party content is used.
 
 ## Outbound links
 
-The pages link to `instagram.com/tavzuran` (Meta Platforms, USA). That is a
-plain link a visitor may choose to follow; nothing is loaded from it.
+The pages link to `instagram.com/tavzuran` (Meta Platforms, USA) and to
+`humansofenglish.com`, a client site Tavzuran built. These are plain links a
+visitor may choose to follow; nothing is loaded from either. The picture beside
+the client project is one of this site's own drawn screens, not a screenshot
+of the client's site.
