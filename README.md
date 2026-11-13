@@ -293,7 +293,7 @@ Two independent axes on `<html>`:
 
 | Attribute | Values |
 |---|---|
-| `data-theme` | `dark` (night, the default) \| `light` (daylight) |
+| `data-theme` | `light` (daylight, the default) \| `dark` (night) |
 | `data-palette` | `green` \| `blue` \| `slate` \| `ocean` \| `violet` |
 
 The defaults (`dark`, `green`) are written on `<html>` in the markup, so the first paint is already
