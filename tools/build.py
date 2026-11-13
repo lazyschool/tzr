@@ -115,7 +115,7 @@ CSP = ('<meta http-equiv="Content-Security-Policy" content="default-src \'self\'
 def head(title, description, canonical, jsonld):
     """The <head> for a page one directory below the site root."""
     return u'''<!doctype html>
-<html lang="en" data-theme="light" data-palette="green">
+<html lang="en" data-theme="dark" data-palette="green">
 <head>
 <meta charset="utf-8" />
 
@@ -128,7 +128,7 @@ def head(title, description, canonical, jsonld):
 {https}
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
-<meta name="theme-color" content="#eef1ec" />
+<meta name="theme-color" content="#040806" />
 
 <title>{title}</title>
 <meta name="description" content="{description}" />
@@ -152,7 +152,7 @@ def head(title, description, canonical, jsonld):
 <link rel="icon" href="../assets/icon.png" type="image/png" sizes="192x192" />
 <link rel="apple-touch-icon" href="../assets/icon.png" />
 
-<link rel="preload" href="../assets/fonts/ibm-plex-mono-600-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/ibm-plex-mono-400-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="../assets/fonts/ibm-plex-mono-500-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="../style.css" />
 
@@ -173,6 +173,7 @@ def chrome_open(active):
     """Header, translation notice and mobile menu. `active` marks the nav item."""
     return u'''<body>
 <a class="skip-link" href="#main">Skip to content</a>
+<canvas class="sky" id="sky" aria-hidden="true"></canvas>
 <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
 
 <header class="nav" id="nav">
@@ -330,7 +331,7 @@ CHROME_CLOSE = u'''</main>
 
 
 def cta_block(title, sub):
-    return u'''<section class="cta bp">
+    return u'''<section class="cta">
   <div class="container cta__inner">
     <h2 class="cta__title">{title}</h2>
     <p class="cta__sub">{sub}</p>
@@ -362,7 +363,7 @@ def breadcrumb(section, section_url, current):
 def page_hero(eyebrow, title, lead, crumbs, chips="", meta="", actions="", aside=""):
     """The banner band every sub-page opens with.
 
-    It carries the same drafting-grid ground as the home page hero, so a
+    It sits under the same sky as the home page hero, so a
     sub-page reads as part of the same site rather than a bolted-on blog.
     """
     split = " phero--split" if aside else ""
@@ -520,7 +521,7 @@ def case_study_page(cs, others):
     # ---- timeline ---------------------------------------------------------
     inner = [band_head("HOW IT RUNS", "Week by week.")]
     inner.append('    <ol class="timeline">\n'
-                 '      <span class="tl__line" aria-hidden="true"><i></i></span>\n')
+                 '')
     for i, (when, what) in enumerate(cs["timeline"]):
         inner.append(u'''      <li class="tl reveal" data-reveal style="--d:.{d:02d}s">
         <span class="tl__num">{n:02d}</span>
@@ -651,7 +652,6 @@ def case_studies_index():
 
     inner = [band_head("HOW IT WORKS", "Every one of these starts the same way.")]
     inner.append(u'''    <ol class="timeline">
-      <span class="tl__line" aria-hidden="true"><i></i></span>
       <li class="tl reveal" data-reveal><span class="tl__num">01</span>
         <div class="tl__body"><h3>Tell us your idea</h3>
         <p>Book a free call and tell us what you want to build.</p></div></li>
