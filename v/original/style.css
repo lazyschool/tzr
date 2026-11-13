@@ -3587,3 +3587,31 @@ h1, h2, h3 {
 @media (prefers-reduced-motion: reduce) {
   .cdlg__veil, .cdlg__box { animation: none; }
 }
+
+/* delivered client work: a wide card ahead of the example builds, with a
+   solid tag so it can never be mistaken for an "Example build" */
+.client {
+  display: grid;
+  margin-bottom: 40px;
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+}
+.client > * { min-width: 0; }
+.client__thumb {
+  display: flex; align-items: center; justify-content: center;
+  padding: clamp(20px, 4vw, 40px);
+  background: radial-gradient(120% 90% at 70% 0%, rgba(var(--accent-glow), .16), transparent 60%), var(--bg-2);
+}
+.client__thumb .mockbare { width: 100%; max-width: 440px; }
+.client__body { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; padding: 26px 24px 30px; }
+.client__title { font-size: clamp(1.6rem, 1rem + 2.4vw, 2.5rem); line-height: 1.05; letter-spacing: -.03em; }
+.client__body p { color: var(--fg-2); max-width: 34em; }
+.client__body .btn { margin-top: 8px; }
+.proj__flag--done { background: var(--accent); color: var(--accent-fg); }
+@media (min-width: 820px) {
+  .client { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); }
+  .client__body { padding: 40px 38px; justify-content: center; }
+}
