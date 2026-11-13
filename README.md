@@ -95,22 +95,20 @@ duplicate or delete blocks freely:
 
 To use a real screenshot instead of the drawn thumbnail, see `assets/README.md`.
 
-### c) Reviews → `index.html`
+### c) Delivered client work → `tools/build.py`
 
-Search for `FAMILY REVIEWS`. While the studio is new, the reviews section carries three real
-(and funny) quotes from Adil's mother, father and brother, under a heading that says plainly there
-are no clients yet. Nothing on the page claims a customer you don't have.
+Real, delivered projects live in `CLIENT_WORK` near the top of `tools/build.py`: name, live URL,
+category, a one-line summary and which drawn screen to show beside it. Each one appears as a wide
+"Delivered" panel ahead of the example builds, on the home page and on the case-studies index. Add an
+entry and run `python tools/build.py && python tools/csp.py`. If you change a summary, add the new
+wording to the four active dictionaries in `assets/i18n/`, or it shows in English.
 
-When you land real client reviews, replace each `<blockquote>`, `.t__name` and `.t__role`, swap the
-`Family` chip for something else (or delete it), and update the section heading from
-"No clients yet. So I asked my family."
+### d) Reviews → `index.html`
 
-### d) Portfolio wording → `index.html`
-
-The six project cards each carry an **Example build** chip, and the section says outright that these
-are example builds rather than client work. As soon as you ship something real, replace that card's
-content and delete its `<span class="proj__flag">Example build</span>` chip. Once every card is real,
-drop the "Straight up: Tavzuran is new…" line from the section heading too.
+Search for `FAMILY REVIEWS`. The section is headed "No client reviews yet. So I asked my family."
+and carries three real (and funny) quotes from Adil's mother, father and brother. When the first
+client review arrives, replace a `<blockquote>`, `.t__name` and `.t__role`, swap the `Family` chip,
+and update the heading.
 
 ---
 
