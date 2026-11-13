@@ -615,7 +615,6 @@ const CONFIG = {
     const dlg = document.getElementById("mailNotice");
     if (!dlg) return;
     const go = document.getElementById("mailNoticeGo");
-    const box = dlg.querySelector(".cdlg__box");
     let opener = null;
 
     function focusables() {
@@ -670,7 +669,6 @@ const CONFIG = {
       else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
     });
 
-    if (box) box.addEventListener("click", function (e) { e.stopPropagation(); });
   })();
 
 })();
