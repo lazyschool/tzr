@@ -5,7 +5,8 @@
   var VERSIONS = [
     { id: "", name: "First Light (space)" },
     { id: "blueprint", name: "Blueprint" },
-    { id: "honest-quote", name: "The Honest Quote" }
+    { id: "honest-quote", name: "The Honest Quote" },
+    { id: "original", name: "Original" }
   ];
   /* Work out where this version's root is from the script's own address, so
      it also works when a page is opened straight from disk. */
@@ -38,50 +39,31 @@
     return sel;
   }
 
-  function icon() {
-    var NS = "http://www.w3.org/2000/svg";
-    var svg = document.createElementNS(NS, "svg");
-    svg.setAttribute("class", "lang__globe");
-    svg.setAttribute("viewBox", "0 0 24 24");
-    svg.setAttribute("fill", "none");
-    svg.setAttribute("stroke", "currentColor");
-    svg.setAttribute("stroke-width", "2");
-    svg.setAttribute("stroke-linejoin", "round");
-    svg.setAttribute("aria-hidden", "true");
-    var path = document.createElementNS(NS, "path");
-    path.setAttribute("d", "m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5m-18 4 9 5 9-5");
-    svg.appendChild(path);
-    return svg;
+  function css(text) {
+    var el = document.createElement("style");
+    el.textContent = text;
+    document.head.appendChild(el);
   }
 
-  function caret() {
-    var NS = "http://www.w3.org/2000/svg";
-    var svg = document.createElementNS(NS, "svg");
-    svg.setAttribute("class", "lang__caret");
-    svg.setAttribute("viewBox", "0 0 24 24");
-    svg.setAttribute("fill", "none");
-    svg.setAttribute("stroke", "currentColor");
-    svg.setAttribute("stroke-width", "2.4");
-    svg.setAttribute("stroke-linecap", "round");
-    svg.setAttribute("stroke-linejoin", "round");
-    svg.setAttribute("aria-hidden", "true");
-    var path = document.createElementNS(NS, "path");
-    path.setAttribute("d", "m6 9 6 6 6-6");
-    svg.appendChild(path);
-    return svg;
-  }
-
-  var actions = document.querySelector(".nav__actions");
-  if (actions) {
-    /* In the navbar, wearing the language control's own styling. */
-    var wrap = document.createElement("div");
-    wrap.className = "lang";
+  var panel = document.getElementById("appearPanel");
+  if (panel) {
+    /* Inside the theme dialogue, as its own row. */
+    css(".vsw-row{display:grid!important;gap:6px;min-width:12rem}" +
+        ".vsw-row label{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;opacity:.75}" +
+        ".vsw-row select{width:100%;padding:9px 10px;font:inherit;font-size:.9rem;color:inherit;" +
+        "background:transparent;border:1px solid var(--line-2,currentColor);border-radius:10px;cursor:pointer}" +
+        ".vsw-row select:focus-visible{outline:2px solid var(--hue,currentColor);outline-offset:2px}" +
+        ".vsw-row option{color:#111;background:#fff}");
+    var row = document.createElement("div");
+    row.className = "appear__row vsw-row";
+    var label = document.createElement("label");
+    label.setAttribute("for", "vsw-select");
+    label.textContent = "Design";
     var sel = pick();
-    sel.className = "lang__select";
-    wrap.appendChild(icon());
-    wrap.appendChild(sel);
-    wrap.appendChild(caret());
-    actions.insertBefore(wrap, actions.firstChild);
+    sel.id = "vsw-select";
+    row.appendChild(label);
+    row.appendChild(sel);
+    panel.insertBefore(row, panel.firstChild);
     return;
   }
 
