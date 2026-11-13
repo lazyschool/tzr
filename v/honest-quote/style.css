@@ -1840,3 +1840,31 @@ a.link-arrow:hover span[aria-hidden], a:hover .link-arrow span[aria-hidden] { tr
   .section--human, .cta { --paper: #fff; --ink: #000; --ink-2: #333; --accent: #000; background: none; color: #000; }
   a[href^="http"]::after { content: " (" attr(href) ")"; font-size: .8em; }
 }
+
+/* delivered client work: a wide sheet ahead of the example builds, with a
+   solid tag so it can never be mistaken for an "Example build" */
+.client {
+  display: grid;
+  margin-bottom: 40px;
+  background: var(--sheet);
+  border: 1.5px solid var(--ink);
+  box-shadow: 7px 7px 0 var(--accent);
+}
+.client > * { min-width: 0; }
+.client__thumb {
+  display: flex; align-items: center; justify-content: center;
+  padding: clamp(20px, 4vw, 40px);
+  background: var(--paper-2);
+  border-bottom: 1.5px solid var(--ink);
+}
+.client__thumb .mockbare { width: 100%; max-width: 440px; }
+.client__body { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; padding: 26px 24px 30px; }
+.client__title { font-size: clamp(1.6rem, 1rem + 2.6vw, 2.6rem); line-height: 1; letter-spacing: -.04em; }
+.client__body p { color: var(--ink-2); max-width: 34em; }
+.client__body .btn { margin-top: 8px; }
+.proj__flag--done { background: var(--accent); color: var(--paper); }
+@media (min-width: 820px) {
+  .client { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); }
+  .client__thumb { border-bottom: 0; border-inline-end: 1.5px solid var(--ink); }
+  .client__body { padding: 40px 38px; justify-content: center; }
+}

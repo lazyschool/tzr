@@ -68,12 +68,10 @@
   }
 
   /* No navbar on this page: fall back to a small floating control. */
-  var css = document.createElement("style");
-  css.textContent =
+  css(
     ".vsw{position:fixed;left:12px;bottom:12px;z-index:2147483000;padding:6px 10px;border-radius:999px;" +
     "background:rgba(12,16,14,.88);color:#eef3f0;border:1px solid rgba(255,255,255,.28);font:500 12px/1 system-ui,sans-serif}" +
-    ".vsw select{font:inherit;color:inherit;background:#0c100e;border:1px solid rgba(255,255,255,.28);border-radius:6px;padding:4px 6px}";
-  document.head.appendChild(css);
+    ".vsw select{font:inherit;color:inherit;background:#0c100e;border:1px solid rgba(255,255,255,.28);border-radius:6px;padding:4px 6px}");
   var box = document.createElement("div");
   box.className = "vsw";
   box.appendChild(pick());
