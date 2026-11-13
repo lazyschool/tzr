@@ -243,7 +243,7 @@ Point your domain's DNS at GitHub Pages, then **Settings → Pages → Custom do
 
 - **Mobile-first** and checked with no horizontal scroll at 375 / 390 / 430 px, tablet and desktop
 - **Sticky bottom CTA bar** on phones (Instagram traffic lands on a visible "Book a Free Call")
-- **Five colours × dark/light/system** — green (default), blue, slate, ocean and violet, chosen
+- **Five colours × dark/light/system** — green, blue, slate (default), ocean and violet, chosen
   from the palette button in the header. Dark is the default. Nothing is stored, so the choice lasts for the visit.
 - **Animations** — the flight through the sky, pinned chapters, scroll reveals and the price
   count-up; all switched off under
@@ -296,7 +296,7 @@ Two independent axes on `<html>`:
 | `data-theme` | `dark` (night, the default) \| `light` (daylight) |
 | `data-palette` | `green` \| `blue` \| `slate` \| `ocean` \| `violet` |
 
-The defaults (`dark`, `green`) are written on `<html>` in the markup, so the first paint is already
+The defaults (`dark`, `slate`) are written on `<html>` in the markup, so the first paint is already
 correct. A palette sets the tint of the sky, the colour of the light (and so the logo, links and
 highlights) and the colour band. Each is one block in section 2 of `style.css`:
 
