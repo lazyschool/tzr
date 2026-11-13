@@ -115,7 +115,7 @@ CSP = ('<meta http-equiv="Content-Security-Policy" content="default-src \'self\'
 def head(title, description, canonical, jsonld):
     """The <head> for a page one directory below the site root."""
     return u'''<!doctype html>
-<html lang="en" data-theme="dark" data-palette="green">
+<html lang="en" data-theme="dark" data-palette="slate">
 <head>
 <meta charset="utf-8" />
 
@@ -128,7 +128,7 @@ def head(title, description, canonical, jsonld):
 {https}
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
-<meta name="theme-color" content="#040806" />
+<meta name="theme-color" content="#06080a" />
 
 <title>{title}</title>
 <meta name="description" content="{description}" />
