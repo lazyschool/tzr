@@ -10,8 +10,8 @@ stored in this repository and served from tavzuran.com itself.
 
 | Family | Used for | Made by | Licence | Files |
 |---|---|---|---|---|
-| IBM Plex Mono | Headlines, labels, figures, buttons | IBM Corp. (USA) — Mike Abbink with Bold Monday (Netherlands) | SIL Open Font License 1.1 | `assets/fonts/ibm-plex-mono-*.woff2` |
-| Caveat | The one hand-written note per section | Impallari Type (Argentina) | SIL Open Font License 1.1 | `assets/fonts/caveat-*.woff2` |
+| IBM Plex Mono | Captions and small labels | IBM Corp. (USA) — Mike Abbink with Bold Monday (Netherlands) | SIL Open Font License 1.1 | `assets/fonts/ibm-plex-mono-*.woff2` |
+| Caveat | The signature | Impallari Type (Argentina) | SIL Open Font License 1.1 | `assets/fonts/caveat-*.woff2` |
 
 The full licence text for each family, including its copyright line, is in
 `assets/fonts/licenses/`. The OFL permits commercial use, web embedding and
@@ -32,7 +32,7 @@ or re-subset. "Plex" is a Reserved Font Name of IBM Corp.
 
 Upstream projects: <https://github.com/IBM/plex>, <https://github.com/googlefonts/caveat>.
 
-Reading text uses the visitor's own system font (`system-ui`: San Francisco on
+Headlines and reading text use the visitor's own system font (`system-ui`: San Francisco on
 Apple devices, Segoe UI on Windows, Roboto on Android). Nothing is downloaded
 for it and no licence applies to the site.
 
@@ -43,7 +43,7 @@ for it and no licence applies to the site.
 | `assets/founder.jpg` | Photograph of Adil, supplied by him |
 | `assets/icon.png`, the inline "T" mark | Tavzuran's own logo |
 | `assets/og-image.png` | Made for this site from the fonts above and the logo |
-| Line drawings, icons and product mock-ups | Drawn in code for this site (inline SVG and CSS) |
+| The sky (stars, planets, the light, the product drawing), icons and product mock-ups | Drawn in code for this site (canvas, inline SVG and CSS) |
 | All copy, case studies and articles | Written for this site |
 
 No stock photography, icon library, CSS framework, JavaScript library,

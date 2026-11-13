@@ -1,6 +1,9 @@
 # Personal documents - never publish these
 *.pdf
 
+# Screen recordings used as design reference - large, never publish
+*.mov
+
 # OS / editor noise
 .DS_Store
 Thumbs.db

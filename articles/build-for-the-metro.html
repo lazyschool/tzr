@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light" data-palette="green">
+<html lang="en" data-theme="dark" data-palette="green">
 <head>
 <meta charset="utf-8" />
 
@@ -23,7 +23,7 @@
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
-<meta name="theme-color" content="#eef1ec" />
+<meta name="theme-color" content="#040806" />
 
 <title>Build for the metro: offline is a product decision | Tavzuran</title>
 <meta name="description" content="Most apps are built on office wifi and used on a train. Treating the network as optional is a decision about who gets to use your product." />
@@ -47,7 +47,7 @@
 <link rel="icon" href="../assets/icon.png" type="image/png" sizes="192x192" />
 <link rel="apple-touch-icon" href="../assets/icon.png" />
 
-<link rel="preload" href="../assets/fonts/ibm-plex-mono-600-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/ibm-plex-mono-400-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="../assets/fonts/ibm-plex-mono-500-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="../style.css" />
 
@@ -78,6 +78,7 @@
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
+<canvas class="sky" id="sky" aria-hidden="true"></canvas>
 <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
 
 <header class="nav" id="nav">
@@ -433,7 +434,7 @@
   </div>
 </section>
 
-<section class="cta bp">
+<section class="cta">
   <div class="container cta__inner">
     <h2 class="cta__title">Got an idea you've been sitting on?</h2>
     <p class="cta__sub">Book a free call. Worst case, you walk away with free advice on what to build first.</p>

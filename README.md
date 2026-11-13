@@ -243,10 +243,10 @@ Point your domain's DNS at GitHub Pages, then **Settings → Pages → Custom do
 
 - **Mobile-first** and checked with no horizontal scroll at 375 / 390 / 430 px, tablet and desktop
 - **Sticky bottom CTA bar** on phones (Instagram traffic lands on a visible "Book a Free Call")
-- **Five blueprint colours × light/dark/system** — green (default), blue, slate, ocean and violet,
-  chosen from the palette button in the header. Nothing is stored, so the choice lasts for the visit.
-- **Animations** — scroll reveals, the hero drawing tracing itself in, the timeline filling and the
-  price count-up; all switched off under
+- **Five colours × dark/light/system** — green (default), blue, slate, ocean and violet, chosen
+  from the palette button in the header. Dark is the default. Nothing is stored, so the choice lasts for the visit.
+- **Animations** — the flight through the sky, pinned chapters, scroll reveals and the price
+  count-up; all switched off under
   `prefers-reduced-motion: reduce`
 - **Works without JavaScript** — all content renders, all links still work
 - **SEO** — title, meta description, Open Graph, Twitter card, canonical, JSON-LD business schema,
@@ -258,28 +258,34 @@ Point your domain's DNS at GitHub Pages, then **Settings → Pages → Custom do
 - **Performance** — no libraries, no framework, one small CSS file, one small JS file, all
   illustrations are inline SVG (no image downloads). No external requests at all.
 
-### Design system: "Rev. 01"
+### Design system: "First Light"
 
-The site is drawn as an architect's working drawing. A first version is,
-literally, revision one. The pieces, all in `style.css`:
+The site is a voyage through space. One fixed `<canvas id="sky">` sits behind every page and is
+painted by section `6b` of `script.js`; scrolling flies the camera forward.
 
 | Piece | What it is |
 |---|---|
-| Drafting film | Light mode: a pale green-grey sheet with a fine 22px grid and a heavier line every five cells |
-| Blueprint | The hero, the Human + AI band and the final call to action are always blueprint (green by default; the swatches change it); dark mode turns the whole site blueprint. One class, `.bp`, swaps the palette, so every component inside redraws itself |
-| Sheet numbers | Each section heading opens with a boxed number (01, 02…) from a CSS counter, so adding a section renumbers the rest |
-| Crop marks | The four corner marks on every section |
-| Title blocks | Any `.cards` block is a ruled table with a frame and a rule between every cell; the hero, the case-study "at a glance" strip and the footer are title blocks |
-| Dimension lines | Under the headline, around the hero drawing and along the about photo |
-| Revision flags | `.proj__flag`, `.t__flag` — a tilted outline tag in marker colour |
-| Revision cloud | The "what we'd leave out" list on each case study, drawn as a dashed outline |
+| Stars | Each has a depth. Scrolling moves the camera through them, so they come towards you and stretch into streaks when you scroll fast |
+| The light | "The idea": a glowing point with pulse rings that waits in each chapter. Its position per chapter is the `LIGHT` table in section 6 of `script.js` |
+| Planets and dust | Drawn in depth along the route (`BODIES`, `CLOUDS`), so you pass them as you travel |
+| Twin star | In the Human + AI chapter the light splits into two lights circling each other |
+| The drawing | In the process chapter the light draws itself into a product screen, then launches: the stars streak |
+| Pinned chapters | Problem, Human + AI and Process hold still while their statements change one at a time (`data-pin` in `index.html`, section 14 of `style.css`) |
+| Fly-through | The first screen grows and blurs away as you leave it; chapter headings grow in from the distance |
+| Chapter rail | The column of dots on the right edge of the home page (desktop only) |
+| Colour band | The price chapter, in the palette's saturated colour |
 
-Type: **IBM Plex Mono** for headlines, labels and buttons; the visitor's own **system sans-serif**
-for reading text (nothing downloaded); **Caveat** for one hand-written note. Licences are in
-`LICENSES.md`.
+Everything is hand-written canvas and CSS: no animation library, nothing loaded from another origin.
 
-Labels on the drawing reuse wording that is already on the page (IDEA, BUILD, USERS, SCALE,
-"Starting at"…), so the existing translations cover them; anything else is numerals and symbols.
+**Fallbacks.** With `prefers-reduced-motion`, or in a window under 560px tall, nothing is pinned and
+nothing streaks, orbits or pulses: the sky is a still picture and the pinned chapters are ordinary
+lists. Without JavaScript the canvas stays empty, a CSS gradient stands in for the light, and all the
+content is still there.
+
+Type: the visitor's own **system sans-serif** for headlines and text (nothing downloaded), **IBM Plex
+Mono** for captions, **Caveat** for the signature. Licences are in `LICENSES.md`.
+
+New labels reuse wording that is already on the page, so the existing translations cover them.
 
 ### Colour themes
 
@@ -287,32 +293,29 @@ Two independent axes on `<html>`:
 
 | Attribute | Values |
 |---|---|
-| `data-theme` | `light` (drafting film) \| `dark` (blueprint) |
+| `data-theme` | `dark` (night, the default) \| `light` (daylight) |
 | `data-palette` | `green` \| `blue` \| `slate` \| `ocean` \| `violet` |
 
-The defaults (`light`, `green`) are written on `<html>` in the markup, so the first paint is already
-correct. A palette changes the **blueprint ground**: the hero, the Human + AI band and the final call
-to action in light mode, and the whole site in dark mode. The orange marker colour (labels, call-outs,
-flags, the button shadow, the price) stays the same in every palette.
-
-Each ground is a block of `--bp-*` values in section 2 of `style.css`. Green is the default and lives
-in `:root`; the others override it:
+The defaults (`dark`, `green`) are written on `<html>` in the markup, so the first paint is already
+correct. A palette sets the tint of the sky, the colour of the light (and so the logo, links and
+highlights) and the colour band. Each is one block in section 2 of `style.css`:
 
 ```css
 :root[data-palette="blue"] {
-  --bp: #0f2c5c; --bp-2: #0b2350; --bp-sheet: #143670;
-  --bp-ink: #f3f7ff; --bp-ink-2: #b4c6e8; --bp-edge: #6f8fc4;
-  --bp-grid: rgba(219, 232, 255, .07); --bp-grid-major: rgba(219, 232, 255, .14); --bp-rule: rgba(219, 232, 255, .42);
+  --bg: #03050b; --bg-2: #0a0f1e; --card: #0b1122;
+  --hue: #8fb0ff; --hue-l: #2450c8; --glow-rgb: 96, 140, 255; --band: #1838b0; --band-2: #102780;
 }
 ```
 
-**To add a palette:** add a block like the one above, add its swatch colour beside the others in
-section 6 (`.appear__sw[data-palette=…]`), add the name to `PALETTES` in `script.js`, and add a
-swatch button in `index.html` and in `chrome_open()` in `tools/build.py`.
+`--hue` is the light as a text colour on night, `--hue-l` its readable twin for daylight, and
+`--glow-rgb` the same light for the canvas.
 
-⚠️ **Check contrast on every ground.** `--bp-ink-2` and the orange marker (`#ff8a52`) both carry
-text and must reach 4.5:1 against `--bp`, `--bp-2` and `--bp-sheet`; `--bp-edge` outlines controls
-and must reach 3:1. The five shipped grounds measure at least 5.0:1 for the marker.
+**To add a palette:** add a block like the one above, add its two swatch colours in section 6
+(`.appear__sw[data-palette=…]`), add the name to `PALETTES` in `script.js`, and add a swatch button in
+`index.html` and in `chrome_open()` in `tools/build.py`.
+
+⚠️ **Check contrast.** `--hue` must reach 4.5:1 on `--card`, `--hue-l` 4.5:1 on `#f2f5f2`, and the
+band's light text 4.5:1 on `--band`. The five shipped palettes measure 4.7:1 or better.
 
 ### Security
 
@@ -361,7 +364,7 @@ still load and the page looks correct. For an exact preview, run the local serve
 
 | I want to… | Where |
 |-----------|-------|
-| Change the marker colour | `style.css` → `:root { --a-l: #a83f12; --a-d: #ff8a52; }` (film and blueprint values). Both carry text, so keep each at 4.5:1 or better against its background. |
+| Change the default colour of the light | `style.css` → `:root { --hue: #5fe0a6; --hue-l: #14734b; --glow-rgb: 84, 224, 160; }`. Keep `--hue` at 4.5:1 on `--card` and `--hue-l` at 4.5:1 on the daylight background. |
 | Change the MVP price | `index.html` → search `20,000` (appears in the hero badge, MVP section, mobile menu, footer, meta description) |
 | Add / remove a service or industry card | `index.html` → `#services` / `#industries` — copy an `<article class="card ...">` block |
 | Edit the About text | `index.html` → `#about` (the credibility strip is `.about__stats`) |
