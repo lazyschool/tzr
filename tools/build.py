@@ -324,6 +324,7 @@ CHROME_CLOSE = u'''</main>
 
 <script src="../i18n.js" defer></script>
 <script src="../script.js" defer></script>
+<script src="/switcher.js" defer></script>
 
 </body>
 </html>
