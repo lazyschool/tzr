@@ -1,0 +1,734 @@
+/* =====================================================================
+   Tavzuran — script.js
+   Vanilla JS only. No dependencies. Works from file:// or GitHub Pages.
+   ===================================================================== */
+
+/* =====================================================================
+   >>>>>>>>>>>>>>>>>  EDIT YOUR BUSINESS INFO HERE  <<<<<<<<<<<<<<<<<<<<
+   This is the ONLY place you need to change contact details.
+   Every button, link and label on the site reads from this object.
+   ===================================================================== */
+const CONFIG = {
+  // Instagram handle (without the @)
+  instagram: "tavzuran",
+
+  // Your email address
+  email: "adil@tavzuran.com",
+  emailSubject: "Project enquiry from tavzuran.com",
+
+  // "Book a Free Call" opens the visitor's email app with this message already
+  // written, addressed to the `email` above. Edit the wording freely - every
+  // line break is kept. Keep it short: long forms scare people off.
+  callSubject: "Free call request - Tavzuran",
+  callBody: [
+    "Hi Adil,",
+    "",
+    "I'd like to book a free call about something I want to build.",
+    "",
+    "Name:",
+    "Business / idea:",
+    "What I want to build:",
+    "Rough budget:",
+    "Best day and time to call:",
+    "Call me on (keep one): Phone / WhatsApp / Zoom / Google Meet",
+    "Number or email for the invite:",
+    "",
+    "Thanks!"
+  ].join("\r\n"),
+
+  // Optional: a scheduling link (Cal.com, Calendly, Topmate...).
+  // Leave "" to use the pre-written email above. If you ever set this, every
+  // "Book a Free Call" button switches to the scheduler instead.
+  bookingUrl: ""
+};
+/* =====================================================================
+   >>>>>>>>>>>>>>>>>>>>>  END OF EDITABLE SECTION  <<<<<<<<<<<<<<<<<<<<<
+   ===================================================================== */
+
+(function () {
+  "use strict";
+
+  const $ = (sel, root) => (root || document).querySelector(sel);
+  const $$ = (sel, root) => Array.prototype.slice.call((root || document).querySelectorAll(sel));
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------------------------------------------------------------
+     1. Contact links — fill every [data-link] and [data-text]
+  --------------------------------------------------------------- */
+  const PLACEHOLDER_MAIL = "your-email@example.com";
+  const hasEmail = CONFIG.email && CONFIG.email !== PLACEHOLDER_MAIL;
+
+  const links = {
+    instagram: "https://instagram.com/" + CONFIG.instagram,
+    email: "mailto:" + CONFIG.email + "?subject=" + encodeURIComponent(CONFIG.emailSubject || "")
+  };
+
+  // "Book a Free Call" opens a ready-to-send email, unless a scheduling link
+  // is configured, in which case that wins.
+  links.call = CONFIG.bookingUrl || (
+    "mailto:" + CONFIG.email +
+    "?subject=" + encodeURIComponent(CONFIG.callSubject || "") +
+    "&body=" + encodeURIComponent(CONFIG.callBody || "")
+  );
+
+  $$("[data-link]").forEach(function (el) {
+    const key = el.getAttribute("data-link");
+    if (!links[key]) return;
+    el.href = links[key];
+    if (/^https?:/.test(links[key])) {
+      el.target = "_blank";
+      el.rel = "noopener noreferrer";
+    }
+  });
+
+  $$("[data-text]").forEach(function (el) {
+    if (el.getAttribute("data-text") === "email") {
+      el.textContent = hasEmail ? CONFIG.email : PLACEHOLDER_MAIL;
+    }
+  });
+
+  /* ---------------------------------------------------------------
+     2. Language — swaps the page text against the dictionaries in
+        i18n.js. English is the source, so switching back to English
+        just restores the original DOM text.
+  --------------------------------------------------------------- */
+  const I18N = window.TAVZ_I18N || null;
+  const SUPPORTED = I18N ? I18N.languages.map(function (l) { return l.code; }) : ["en"];
+  const ATTRS = ["aria-label", "alt", "title"];
+
+  // Snapshot the English page once, so any language can be applied from it.
+  const textNodes = [];
+  const attrNodes = [];
+
+  function snapshot() {
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    let n;
+    while ((n = walker.nextNode())) {
+      const p = n.parentElement;
+      if (!p || p.closest("script,style,noscript")) continue;
+      const raw = n.nodeValue;
+      const key = raw.replace(/\s+/g, " ").trim();
+      if (!key || !/[A-Za-z]/.test(key)) continue;
+      const lead = raw.match(/^\s*/)[0];
+      const tail = raw.match(/\s*$/)[0];
+      textNodes.push({ node: n, key: key, lead: lead, tail: tail });
+    }
+    document.querySelectorAll("[aria-label],[alt],[title]").forEach(function (el) {
+      ATTRS.forEach(function (a) {
+        const v = el.getAttribute(a);
+        if (v && /[A-Za-z]/.test(v)) attrNodes.push({ el: el, attr: a, key: v.trim() });
+      });
+    });
+  }
+
+  // Dictionaries are separate files so an English visitor downloads none of
+  // them. Injecting a <script> works from file:// too, where fetch() would be
+  // blocked by the browser's local-file rules.
+  const loading = {};
+  const unavailable = {};
+  function loadDict(code, done) {
+    if (code === "en" || I18N[code] || unavailable[code]) return done();
+    if (loading[code]) return loading[code].push(done);
+    loading[code] = [done];
+    const el = document.createElement("script");
+    el.src = (I18N.path || "assets/i18n/") + code + ".js";
+    el.onload = el.onerror = function () {
+      // A dictionary that did not arrive is remembered as unavailable, so a
+      // failed fetch falls back to English once instead of retrying forever.
+      if (!I18N[code]) unavailable[code] = true;
+      const queue = loading[code] || [];
+      loading[code] = null;
+      queue.forEach(function (fn) { fn(); });
+    };
+    document.head.appendChild(el);
+  }
+
+  // Nothing is written to the visitor's device, so a dismissal lasts as long as
+  // the page does. The notice discloses that a machine translated this view;
+  // disclosing it on every view is the honest end of that trade.
+  const dismissed = [];
+  function isNoteDismissed(code) {
+    return dismissed.indexOf(code) !== -1;
+  }
+  function dismissNote(code) {
+    if (dismissed.indexOf(code) === -1) dismissed.push(code);
+  }
+
+  function applyLang(code) {
+    if (!I18N || SUPPORTED.indexOf(code) === -1) code = "en";
+    if (code !== "en" && !I18N[code]) {
+      if (unavailable[code]) {
+        code = "en";                       // dictionary missing: show the source
+      } else {
+        loadDict(code, function () { applyLang(code); });
+        return;
+      }
+    }
+    const dict = code === "en" ? null : I18N[code];
+
+    textNodes.forEach(function (t) {
+      const out = dict && dict[t.key] ? dict[t.key] : t.key;
+      t.node.nodeValue = t.lead + out + t.tail;
+    });
+    attrNodes.forEach(function (a) {
+      const out = dict && dict[a.key] ? dict[a.key] : a.key;
+      a.el.setAttribute(a.attr, out);
+    });
+
+    document.documentElement.lang = code;
+
+    // Arabic reads right-to-left; everything else is left-to-right.
+    const meta = I18N.languages.filter(function (l) { return l.code === code; })[0];
+    document.documentElement.dir = meta && meta.rtl ? "rtl" : "ltr";
+
+    // AI-translation notice. Dismissing it is remembered per language, so each
+    // translation still discloses itself once rather than nagging every visit.
+    const note = $("#transNote");
+    if (note) {
+      const d = I18N.disclaimer[code];
+      if (d && !isNoteDismissed(code)) {
+        $("#transNoteText").textContent = d.text;
+        $("#transNoteLink").textContent = d.link;
+        $("#transNoteOk").textContent = d.ok || "OK";
+        note.hidden = false;
+      } else {
+        note.hidden = true;
+      }
+    }
+
+    const sel = $("#langSelect");
+    if (sel) {
+      sel.value = code;
+      sel.setAttribute("aria-label", I18N.selectorLabel[code] || "Language");
+    }
+
+    // keep the choice in the address bar instead of on the device, so a reload
+    // or a shared link lands on the same language
+    try {
+      const url = new URL(window.location.href);
+      if (code === "en") url.searchParams.delete("lang");
+      else url.searchParams.set("lang", code);
+      window.history.replaceState(null, "", url.toString());
+    } catch (e) { /* older browser: the choice simply lasts this page */ }
+
+    // keep the URL shareable without reloading
+    try {
+      const url = new URL(window.location.href);
+      if (code === "en") url.searchParams.delete("lang");
+      else url.searchParams.set("lang", code);
+      history.replaceState(null, "", url.toString());
+    } catch (e) { /* file:// */ }
+  }
+
+  if (I18N) {
+    snapshot();
+
+    const sel = $("#langSelect");
+    if (sel) {
+      // The option shows the native name first, then the English name, so the
+      // ordering stays legible to someone who cannot read the script.
+      function option(l) {
+        const o = document.createElement("option");
+        o.value = l.code;
+        o.textContent = l.native === l.label ? l.label : l.native + " · " + l.label;
+        return o;
+      }
+
+      // Region headings only earn their place once there are regions to head.
+      // With a short list (or every entry left unregioned) a single "Other"
+      // group is worse than a plain list, so fall back to one.
+      const groups = {};
+      I18N.languages.forEach(function (l) {
+        if (!l.region) return;
+        (groups[l.region] = groups[l.region] || []).push(l);
+      });
+      const regions = Object.keys(groups).sort();
+
+      if (regions.length < 2) {
+        I18N.languages.forEach(function (l) { sel.appendChild(option(l)); });
+      } else {
+        regions.forEach(function (region) {
+          const g = document.createElement("optgroup");
+          g.label = region;
+          groups[region].forEach(function (l) { g.appendChild(option(l)); });
+          sel.appendChild(g);
+        });
+      }
+
+      sel.addEventListener("change", function () { applyLang(sel.value); });
+    }
+
+    const noteLink = $("#transNoteLink");
+    if (noteLink) noteLink.addEventListener("click", function () { applyLang("en"); });
+
+    const noteOk = $("#transNoteOk");
+    if (noteOk) {
+      noteOk.addEventListener("click", function () {
+        dismissNote(document.documentElement.lang);
+        $("#transNote").hidden = true;
+      });
+    }
+
+    // ?lang= is the only source. English stays the default: it is the authentic
+    // version, so we never guess from browser language and never store a choice.
+    let start = "en";
+    try {
+      const q = new URLSearchParams(window.location.search).get("lang");
+      if (q && SUPPORTED.indexOf(q) !== -1) start = q;
+    } catch (e) { /* noop */ }
+    if (start !== "en") applyLang(start);
+    else if (sel) sel.value = "en";
+  }
+
+  /* ---------------------------------------------------------------
+     3. Theme (light / dark) with memory
+  --------------------------------------------------------------- */
+  const root = document.documentElement;
+  const PALETTES = ["blue", "green", "slate", "ocean", "rainbow"];
+  const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+  // Preferences last as long as the page and are never written anywhere. The
+  // defaults are green on light, set on <html> in the markup so the first paint
+  // is already correct; "System" still follows the OS while it is selected.
+  let currentMode = "light";
+  let currentPalette = "green";
+  function storedMode() { return currentMode; }
+  function storedPalette() { return currentPalette; }
+
+  function applyMode(mode) {
+    const resolved = mode === "system"
+      ? (darkQuery.matches ? "dark" : "light")
+      : mode;
+    root.setAttribute("data-theme", resolved);
+    $$(".appear__mode").forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b.getAttribute("data-mode") === mode));
+    });
+  }
+  function applyPalette(name) {
+    root.setAttribute("data-palette", name);
+    $$(".appear__sw").forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b.getAttribute("data-palette") === name));
+    });
+  }
+
+  applyMode(storedMode());
+  applyPalette(storedPalette());
+
+  // keep following the OS while the visitor is on "system"
+  darkQuery.addEventListener("change", function () {
+    if (storedMode() === "system") applyMode("system");
+  });
+
+  const appearBtn = $("#appearBtn");
+  const appearPanel = $("#appearPanel");
+
+  function setAppear(open) {
+    if (!appearBtn || !appearPanel) return;
+    appearPanel.hidden = !open;
+    appearBtn.setAttribute("aria-expanded", String(open));
+  }
+
+  if (appearBtn && appearPanel) {
+    appearBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      setAppear(appearPanel.hidden);
+    });
+    appearPanel.addEventListener("click", function (e) { e.stopPropagation(); });
+
+    $$(".appear__mode", appearPanel).forEach(function (b) {
+      b.addEventListener("click", function () {
+        const mode = b.getAttribute("data-mode");
+        currentMode = mode;
+        applyMode(mode);
+      });
+    });
+    $$(".appear__sw", appearPanel).forEach(function (b) {
+      b.addEventListener("click", function () {
+        const name = b.getAttribute("data-palette");
+        currentPalette = name;
+        applyPalette(name);
+      });
+    });
+
+    document.addEventListener("click", function () { setAppear(false); });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !appearPanel.hidden) { setAppear(false); appearBtn.focus(); }
+    });
+  }
+
+  /* ---------------------------------------------------------------
+     4. Mobile menu
+  --------------------------------------------------------------- */
+  const burger = $("#burger");
+  const menu = $("#mobileMenu");
+
+  function setMenu(open) {
+    if (!burger || !menu) return;
+    menu.hidden = !open;
+    burger.classList.toggle("is-open", open);
+    burger.setAttribute("aria-expanded", String(open));
+    burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    document.body.style.overflow = open ? "hidden" : "";
+  }
+
+  if (burger && menu) {
+    burger.addEventListener("click", function () { setMenu(menu.hidden); });
+    $$("a", menu).forEach(function (a) { a.addEventListener("click", function () { setMenu(false); }); });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !menu.hidden) { setMenu(false); burger.focus(); }
+    });
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 980 && !menu.hidden) setMenu(false);
+    });
+  }
+
+
+  /* ---------------------------------------------------------------
+     4b. Nav dropdowns
+     Hover opens them on a pointer device; click and keyboard work
+     everywhere, which is what a touch screen and a screen reader get.
+  --------------------------------------------------------------- */
+  const drops = $$(".nd").map(function (root) {
+    return { root: root, btn: $(".nd__btn", root), panel: $(".nd__panel", root) };
+  }).filter(function (d) { return d.btn && d.panel; });
+
+  if (drops.length) {
+    let hoverable = false;
+    try {
+      hoverable = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    } catch (e) { /* older browser: click only, which still works */ }
+
+    function openDrop(d, open) {
+      d.panel.hidden = !open;
+      d.btn.setAttribute("aria-expanded", String(open));
+    }
+
+    function closeAll(except) {
+      drops.forEach(function (d) { if (d !== except) openDrop(d, false); });
+    }
+
+    drops.forEach(function (d) {
+      d.btn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        const open = d.panel.hidden;
+        closeAll(d);
+        openDrop(d, open);
+      });
+
+      // arrow-down from the button moves into the panel
+      d.btn.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowDown") {
+          e.preventDefault();
+          closeAll(d);
+          openDrop(d, true);
+          const first = $("a", d.panel);
+          if (first) first.focus();
+        }
+      });
+
+      if (hoverable) {
+        d.root.addEventListener("mouseenter", function () { closeAll(d); openDrop(d, true); });
+        d.root.addEventListener("mouseleave", function () { openDrop(d, false); });
+      }
+
+      // tabbing out of the last link should close the panel behind you
+      d.root.addEventListener("focusout", function (e) {
+        if (!d.root.contains(e.relatedTarget)) openDrop(d, false);
+      });
+
+      $$("a", d.panel).forEach(function (a) {
+        a.addEventListener("click", function () { openDrop(d, false); });
+      });
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest || !e.target.closest(".nd")) closeAll(null);
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key !== "Escape") return;
+      drops.forEach(function (d) {
+        if (!d.panel.hidden) { openDrop(d, false); d.btn.focus(); }
+      });
+    });
+  }
+
+
+  /* ---------------------------------------------------------------
+     4c. Article topic filter
+     Chips are generated in the page, so with scripting off they are
+     simply absent and every article stays listed.
+  --------------------------------------------------------------- */
+  const artFilter = $("#artFilter");
+  const artGrid = $("#artGrid");
+
+  if (artFilter && artGrid) {
+    const cards = $$(".post-card", artGrid);
+
+    artFilter.addEventListener("click", function (e) {
+      const chip = e.target.closest(".chip");
+      if (!chip) return;
+
+      const want = chip.getAttribute("data-filter");
+      $$(".chip", artFilter).forEach(function (c) {
+        const on = c === chip;
+        c.classList.toggle("is-on", on);
+        c.setAttribute("aria-pressed", String(on));
+      });
+
+      cards.forEach(function (card) {
+        card.hidden = want !== "all" && card.getAttribute("data-tag") !== want;
+      });
+
+      // the URL should survive a reload and a share
+      try {
+        const url = new URL(window.location.href);
+        if (want === "all") url.searchParams.delete("topic");
+        else url.searchParams.set("topic", want);
+        history.replaceState(null, "", url);
+      } catch (err) { /* noop */ }
+    });
+
+    // honour ?topic= on arrival
+    try {
+      const topic = new URLSearchParams(window.location.search).get("topic");
+      if (topic) {
+        const chip = $('.chip[data-filter="' + CSS.escape(topic) + '"]', artFilter);
+        if (chip) chip.click();
+      }
+    } catch (err) { /* noop */ }
+  }
+
+  /* ---------------------------------------------------------------
+     5. Reveal on scroll
+  --------------------------------------------------------------- */
+  const revealables = $$("[data-reveal]");
+
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    revealables.forEach(function (el) { el.classList.add("is-in"); });
+  } else {
+    const io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
+    revealables.forEach(function (el) { io.observe(el); });
+  }
+
+  /* ---------------------------------------------------------------
+     6. Hand-drawn SVG line "draw in" effect
+  --------------------------------------------------------------- */
+  if (!reduceMotion) {
+    $$(".char .draw").forEach(function (path, i) {
+      let len = 500;
+      try { if (path.getTotalLength) len = Math.ceil(path.getTotalLength()) || 500; } catch (e) { /* noop */ }
+      path.style.setProperty("--len", len);
+      path.style.animationDelay = (i * 0.07).toFixed(2) + "s";
+    });
+  }
+
+  /* ---------------------------------------------------------------
+     7. Scroll-driven UI: progress bar, sticky nav, active link,
+        timeline fill, sticky mobile CTA
+  --------------------------------------------------------------- */
+  const nav = $("#nav");
+  const progressBar = $("#progressBar");
+  const timeline = $("#timeline");
+  const mobileBar = $("#mobileBar");
+  // pair each nav link with its section, ordered the way they appear in the
+  // document (the nav order and the document order are not the same)
+  // only same-page anchors can be scroll-spied; links to other pages (Case
+  // Studies, Articles) are not selectors and must not be handed to querySelector
+  const navTargets = $$(".nav__links a")
+    .filter(function (a) { return (a.getAttribute("href") || "").charAt(0) === "#"; })
+    .map(function (a) { return { link: a, el: document.querySelector(a.getAttribute("href")) }; })
+    .filter(function (p) { return p.el; })
+    .sort(function (a, b) { return a.el.offsetTop - b.el.offsetTop; });
+
+  let ticking = false;
+
+  function onScroll() {
+    const y = window.pageYOffset || document.documentElement.scrollTop;
+    const docH = document.documentElement.scrollHeight - window.innerHeight;
+
+    if (progressBar) {
+      progressBar.style.transform = "scaleX(" + (docH > 0 ? Math.min(y / docH, 1) : 0) + ")";
+    }
+
+    if (nav) nav.classList.toggle("is-stuck", y > 8);
+
+    if (mobileBar) mobileBar.classList.toggle("is-visible", y > window.innerHeight * 0.55);
+
+    if (timeline) {
+      const r = timeline.getBoundingClientRect();
+      const start = window.innerHeight * 0.85;
+      const p = (start - r.top) / (r.height * 0.9);
+      timeline.style.setProperty("--p", Math.max(0, Math.min(1, p)).toFixed(3));
+    }
+
+    // active nav link
+    let activeIndex = -1;
+    navTargets.forEach(function (pair, i) {
+      if (pair.el.getBoundingClientRect().top <= window.innerHeight * 0.35) activeIndex = i;
+    });
+    navTargets.forEach(function (pair, i) { pair.link.classList.toggle("is-active", i === activeIndex); });
+
+    ticking = false;
+  }
+
+  function requestScroll() {
+    if (!ticking) {
+      ticking = true;
+      window.requestAnimationFrame(onScroll);
+    }
+  }
+
+  window.addEventListener("scroll", requestScroll, { passive: true });
+  window.addEventListener("resize", requestScroll);
+  onScroll();
+
+  /* ---------------------------------------------------------------
+     8. Price count-up (₹20,000)
+  --------------------------------------------------------------- */
+  const priceEl = $("#priceCount");
+  if (priceEl && !reduceMotion && "IntersectionObserver" in window) {
+    const target = parseInt(priceEl.getAttribute("data-count"), 10) || 0;
+    const fmt = function (n) { return n.toLocaleString("en-IN"); };
+
+    const priceIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        priceIO.disconnect();
+        const duration = 1100;
+        const startTime = performance.now();
+        (function step(now) {
+          const t = Math.min((now - startTime) / duration, 1);
+          const eased = 1 - Math.pow(1 - t, 3);
+          priceEl.textContent = fmt(Math.round(target * eased / 100) * 100);
+          if (t < 1) requestAnimationFrame(step);
+          else priceEl.textContent = fmt(target);
+        })(startTime);
+      });
+    }, { threshold: 0.4 });
+
+    priceIO.observe(priceEl);
+  }
+
+  /* ---------------------------------------------------------------
+     9. Pointer-aware surfaces
+        Cards carry a soft light that follows the pointer (--mx/--my feed
+        the radial gradient in style.css) and the hero stage tilts a few
+        degrees towards it. Both are skipped on touch screens, where there
+        is no pointer to follow, and under prefers-reduced-motion.
+  --------------------------------------------------------------- */
+  let finePointer = false;
+  try {
+    finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  } catch (e) { /* older browser: no spotlight, nothing lost */ }
+
+  if (finePointer && !reduceMotion) {
+    let spotFrame = null;
+    document.addEventListener("pointermove", function (e) {
+      const card = e.target.closest && e.target.closest(".card");
+      if (!card) return;
+      if (spotFrame) cancelAnimationFrame(spotFrame);
+      spotFrame = requestAnimationFrame(function () {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty("--mx", (e.clientX - r.left).toFixed(0) + "px");
+        card.style.setProperty("--my", (e.clientY - r.top).toFixed(0) + "px");
+      });
+    }, { passive: true });
+
+    const stage = $("#artStage");
+    if (stage) {
+      const hero = stage.closest(".hero") || stage;
+      let tiltFrame = null;
+      hero.addEventListener("pointermove", function (e) {
+        if (tiltFrame) cancelAnimationFrame(tiltFrame);
+        tiltFrame = requestAnimationFrame(function () {
+          const r = stage.getBoundingClientRect();
+          const dx = (e.clientX - (r.left + r.width / 2)) / r.width;
+          const dy = (e.clientY - (r.top + r.height / 2)) / r.height;
+          stage.style.transform =
+            "perspective(1200px) rotateX(" + (-dy * 4).toFixed(2) + "deg) rotateY(" + (dx * 5).toFixed(2) + "deg)";
+        });
+      }, { passive: true });
+      hero.addEventListener("pointerleave", function () {
+        if (tiltFrame) cancelAnimationFrame(tiltFrame);
+        stage.style.transform = "";
+      });
+    }
+  }
+
+  /* ---------------------------------------------------------------
+     10. Pre-email notice
+     Every route to my inbox passes through here first. The anchors stay
+     real mailto links, so with JavaScript off they simply work; this only
+     adds a step when it can, and never records that it was shown.
+  --------------------------------------------------------------- */
+  (function () {
+    const dlg = document.getElementById("mailNotice");
+    if (!dlg) return;
+    const go = document.getElementById("mailNoticeGo");
+    const box = dlg.querySelector(".cdlg__box");
+    let opener = null;
+
+    function focusables() {
+      return Array.prototype.filter.call(
+        dlg.querySelectorAll('a[href], button:not([disabled])'),
+        function (el) { return el.offsetParent !== null; });
+    }
+
+    function close() {
+      dlg.hidden = true;
+      document.documentElement.style.overflow = "";
+      if (opener && opener.focus) opener.focus();
+      opener = null;
+    }
+
+    function open(href, from) {
+      opener = from;
+      go.href = href;
+      dlg.hidden = false;
+      document.documentElement.style.overflow = "hidden";
+      const first = focusables()[0];
+      if (first) first.focus();
+    }
+
+    // intercept only the links that open a mail client; a booking URL or an
+    // Instagram profile hands nothing over and needs no warning
+    document.addEventListener("click", function (e) {
+      const a = e.target.closest ? e.target.closest("a[href^='mailto:']") : null;
+      if (!a) return;
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+      e.preventDefault();
+      open(a.getAttribute("href"), a);
+    });
+
+    dlg.addEventListener("click", function (e) {
+      if (e.target.closest("[data-cdlg-close]")) { e.preventDefault(); close(); }
+    });
+
+    go.addEventListener("click", function () {
+      // let the navigation happen, then put the page back as it was
+      window.setTimeout(close, 0);
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (dlg.hidden) return;
+      if (e.key === "Escape") { e.preventDefault(); close(); return; }
+      if (e.key !== "Tab") return;
+      const items = focusables();
+      if (!items.length) return;
+      const first = items[0], last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    });
+
+    if (box) box.addEventListener("click", function (e) { e.stopPropagation(); });
+  })();
+
+})();

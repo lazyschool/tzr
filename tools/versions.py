@@ -11,7 +11,7 @@ not touched.
 import io, os, re, shutil, subprocess, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-VERSIONS = [("blueprint", "redesign-rev-01"), ("honest-quote", "redesign-honest-quote")]
+VERSIONS = [("blueprint", "redesign-rev-01"), ("honest-quote", "redesign-honest-quote"), ("original", "pre-redesign")]
 KEEP_OUT = ("tools", "README.md", "LICENSES.md", "CNAME", "robots.txt", "sitemap.xml", ".gitignore", ".nojekyll")
 SCRIPT = re.compile(r'<script src="((?:\.\./)*)script\.js" defer></script>')
 
