@@ -288,9 +288,9 @@ const CONFIG = {
   const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
   // Preferences last as long as the page and are never written anywhere. The
-  // defaults are night with a green light, set on <html> in the markup so the first paint
+  // defaults are daylight with a green light, set on <html> in the markup so the first paint
   // is already correct; "System" still follows the OS while it is selected.
-  let currentMode = "dark";
+  let currentMode = "light";
   let currentPalette = "green";
   function storedMode() { return currentMode; }
   function storedPalette() { return currentPalette; }
