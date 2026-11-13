@@ -13,7 +13,7 @@ import io, os, re, shutil, subprocess, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 VERSIONS = [("blueprint", "redesign-rev-01"), ("honest-quote", "redesign-honest-quote")]
 KEEP_OUT = ("tools", "README.md", "LICENSES.md", "CNAME", "robots.txt", "sitemap.xml", ".gitignore", ".nojekyll")
-TAG = '<script src="/switcher.js" defer></script>\n'
+SCRIPT = re.compile(r'<script src="((?:\.\./)*)script\.js" defer></script>')
 
 def main():
     base = os.path.join(ROOT, "v")
@@ -27,14 +27,14 @@ def main():
             p = os.path.join(dest, n)
             if os.path.isdir(p): shutil.rmtree(p)
             elif os.path.exists(p): os.remove(p)
+        shutil.copy(os.path.join(ROOT, "switcher.js"), dest)
         count = 0
         for dp, _, files in os.walk(dest):
             for f in files:
                 if not f.endswith(".html"): continue
                 p = os.path.join(dp, f)
                 h = io.open(p, encoding="utf-8").read()
-                if "/switcher.js" not in h:
-                    h = h.replace("</body>", TAG + "</body>", 1)
+                h = SCRIPT.sub(lambda m: m.group(0) + '\n<script src="' + m.group(1) + 'switcher.js" defer></script>', h, 1)
                 h = h.replace("<head>", '<head>\n<meta name="robots" content="noindex" />', 1)
                 io.open(p, "w", encoding="utf-8", newline="\n").write(h)
                 count += 1

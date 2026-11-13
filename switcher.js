@@ -7,9 +7,20 @@
     { id: "blueprint", name: "Blueprint" },
     { id: "honest-quote", name: "The Honest Quote" }
   ];
-  var m = location.pathname.match(/^\/v\/([a-z-]+)(\/.*)?$/);
-  var current = m ? m[1] : "";
-  var rest = m ? (m[2] || "/") : location.pathname;
+  /* Work out where this version's root is from the script's own address, so
+     it also works when a page is opened straight from disk. */
+  var me = document.currentScript && document.currentScript.src;
+  var base = me ? me.slice(0, me.lastIndexOf("/") + 1) : location.href.slice(0, location.href.lastIndexOf("/") + 1);
+  var m = base.match(/^(.*\/)v\/([a-z-]+)\/$/);
+  var current = m ? m[2] : "";
+  var siteRoot = m ? m[1] : base;
+  var rest = location.href.slice(base.length).split("#")[0];
+
+  function go(id) {
+    var url = siteRoot + (id ? "v/" + id + "/" : "") + rest;
+    if (location.protocol === "file:" && (rest === "" || /\/$/.test(rest))) url += "index.html";
+    location.href = url + location.hash;
+  }
 
   function pick() {
     var sel = document.createElement("select");
@@ -22,7 +33,7 @@
       sel.appendChild(o);
     });
     sel.addEventListener("change", function () {
-      location.href = (sel.value ? "/v/" + sel.value : "") + rest + location.hash;
+      go(sel.value);
     });
     return sel;
   }
