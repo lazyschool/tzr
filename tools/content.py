@@ -270,7 +270,7 @@ CASE_STUDIES = [
         ],
         "pains": [
             "Two hours a day spent exporting and pasting",
-            "One person understands the master file",
+            "One person understands the main file",
             "Six people read yesterday's numbers, not today's",
             "Everyone sees everything, including margins",
         ],
@@ -281,7 +281,7 @@ CASE_STUDIES = [
                    "and role-based access.",
         "situation": [
             "Someone spends the first two hours of every working day exporting "
-            "files, pasting them into a master spreadsheet, fixing what did not "
+            "files, pasting them into a main spreadsheet, fixing what did not "
             "line up, and emailing the result to six people. That file has become "
             "load-bearing, and exactly one person understands it.",
             "This is the most common software problem in a growing business, and "
@@ -1267,7 +1267,7 @@ CASE_STUDIES = [
         "category": "New Business",
         "thumb": "c",
         "title": "First Website for a Social-First Business",
-        "summary": "You built an audience on Instagram and TikTok. This is the "
+        "summary": "You built an audience on Instagram and YouTube. This is the "
                    "address, the inbox and the page that are actually yours.",
         "situation": [
             "A new business is doing well on social. The reels land, the DMs come "
@@ -1305,7 +1305,7 @@ CASE_STUDIES = [
              "it, set up so your messages actually arrive rather than landing in "
              "spam. This is the change customers notice first."),
             ("Your links, on your own address",
-             "Everything a link-in-bio service does — Instagram, TikTok, "
+             "Everything a link-in-bio service does — Instagram, YouTube, "
              "WhatsApp, catalogue, menu, order form — on a page you own, so the "
              "URL in your bio never has to change again."),
             ("Enquiries that reach a person",
@@ -1867,7 +1867,7 @@ CASE_STUDIES = [
             "So the guard's screen is built for that moment: large buttons, the flat "
             "number first, a call to the resident if they do not respond, and entries "
             "saved on the phone and sent when the network returns. Regular visitors — "
-            "maids, drivers, a daily milk delivery — are pre-approved so they never "
+            "house help, drivers, a daily milk delivery — are pre-approved so they never "
             "wait at all.",
             "The second problem is people, not software. Committees change every year, "
             "residents do not want their phone numbers visible to three hundred "
