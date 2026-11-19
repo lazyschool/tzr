@@ -329,6 +329,80 @@ CATALOGUE_GRID = '''<div class="mock">
   </div>
 </div>'''
 
+STORE_D2C = '''<div class="mock">
+  <div class="mock__bar mock__bar--url"><i></i><i></i><i></i>
+    <span class="mk-url"><i class="mk-lock"></i><i class="mk-line" style="width:48%"></i></span>
+  </div>
+  <div class="mock__body">
+    <div class="mk-navrow"><i class="mk-dotmark"></i><i></i><i></i><i></i><span class="mk-chip"></span></div>
+    <div class="mk-tiles mk-tiles--3">
+      <div class="mk-prop"><span class="mk-photo"></span><i class="mk-line" style="width:74%"></i><b class="mk-num"></b></div>
+      <div class="mk-prop"><span class="mk-photo"></span><i class="mk-line" style="width:62%"></i><b class="mk-num"></b></div>
+      <div class="mk-prop"><span class="mk-photo"></span><i class="mk-line" style="width:70%"></i><b class="mk-num"></b></div>
+    </div>
+    <div class="mk-total"><i class="mk-line" style="width:30%"></i><b class="mk-num mk-num--wide"></b></div>
+    <div class="mk-ctarow"><span class="mk-btn mk-btn--sm"></span><span class="mk-btn mk-btn--ghost"></span></div>
+  </div>
+</div>'''
+
+SOCIETY_GATE = '''<div class="mock mock--phone">
+  <div class="mock__notch"></div>
+  <div class="mock__body">
+    <div class="mk-head"><i class="mk-line mk-line--title" style="width:52%"></i></div>
+    <div class="mk-driver">
+      <i class="mk-avatar"></i>
+      <span><i class="mk-line" style="width:66%"></i><i class="mk-line mk-line--fade" style="width:40%"></i></span>
+    </div>
+    <p class="mk-cap">Visitor at gate</p>
+    <div class="mk-ctarow"><span class="mk-btn mk-btn--sm"></span><span class="mk-btn mk-btn--ghost"></span></div>
+    <div class="mk-list">
+      <div class="mk-item"><i class="mk-sq"></i><i class="mk-line" style="width:50%"></i><span class="mk-tag mk-tag--ok"></span></div>
+      <div class="mk-item"><i class="mk-sq"></i><i class="mk-line" style="width:58%"></i><span class="mk-tag mk-tag--warn"></span></div>
+    </div>
+  </div>
+</div>'''
+
+DOC_ASSISTANT = '''<div class="mock">
+  <div class="mock__bar"><i></i><i></i><i></i></div>
+  <div class="mock__split">
+    <div class="mk-side">
+      <i class="mk-side__row is-on"></i><i class="mk-side__row"></i>
+      <i class="mk-side__row"></i><i class="mk-side__row"></i>
+    </div>
+    <div class="mock__body">
+      <div class="mk-search"><i class="mk-line" style="width:58%"></i><span class="mk-btn mk-btn--sm"></span></div>
+      <div class="mk-heroblock">
+        <i class="mk-line" style="width:92%"></i>
+        <i class="mk-line" style="width:84%"></i>
+        <i class="mk-line mk-line--fade" style="width:60%"></i>
+      </div>
+      <div class="mk-table">
+        <div class="mk-tr"><i style="width:46%"></i><span class="mk-tag mk-tag--ok"></span></div>
+        <div class="mk-tr"><i style="width:38%"></i><span class="mk-tag mk-tag--ok"></span></div>
+      </div>
+    </div>
+  </div>
+</div>'''
+
+PAYROLL_RUN = '''<div class="mock">
+  <div class="mock__bar"><i></i><i></i><i></i></div>
+  <div class="mock__body">
+    <div class="mk-tiles mk-tiles--3">
+      <div class="mk-tile"><b></b><i class="mk-line" style="width:58%"></i></div>
+      <div class="mk-tile"><b></b><i class="mk-line" style="width:66%"></i></div>
+      <div class="mk-tile"><b></b><i class="mk-line" style="width:50%"></i></div>
+    </div>
+    <div class="mk-table">
+      <div class="mk-tr mk-tr--head"><i style="width:34%"></i><i style="width:16%"></i><i style="width:16%"></i><i style="width:18%"></i></div>
+      <div class="mk-tr"><i style="width:40%"></i><i style="width:14%"></i><i style="width:14%"></i><span class="mk-tag mk-tag--ok"></span></div>
+      <div class="mk-tr"><i style="width:34%"></i><i style="width:16%"></i><i style="width:12%"></i><span class="mk-tag mk-tag--ok"></span></div>
+      <div class="mk-tr"><i style="width:44%"></i><i style="width:12%"></i><i style="width:16%"></i><span class="mk-tag mk-tag--warn"></span></div>
+      <div class="mk-tr"><i style="width:38%"></i><i style="width:14%"></i><i style="width:14%"></i><span class="mk-tag mk-tag--ok"></span></div>
+    </div>
+  </div>
+</div>'''
+
+
 MOCKS = {
     "restaurant-ordering-app": PHONE_ORDER,
     "coaching-management-platform": DASH_COACHING,
@@ -346,6 +420,10 @@ MOCKS = {
     "vibe-coded-app-made-production-ready": AUDIT_REPORT,
     "getting-an-app-through-both-stores": STORE_REVIEW,
     "product-showcase-site-for-a-small-business": CATALOGUE_GRID,
+    "online-store-for-a-d2c-brand": STORE_D2C,
+    "housing-society-app": SOCIETY_GATE,
+    "ai-assistant-for-your-own-documents": DOC_ASSISTANT,
+    "staff-attendance-and-payroll": PAYROLL_RUN,
 }
 
 
