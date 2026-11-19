@@ -82,7 +82,7 @@ CASE_STUDIES = [
              "sold out takes one tap and applies to that outlet only."),
             ("Cart and checkout",
              "Address, delivery or pickup, and a payment gateway. No account "
-             "required to order — a phone number and an OTP is the whole signup."),
+             "required to order — a phone number and an OTP is the whole sign-up."),
             ("Live order tracking",
              "Accepted → cooking → out for delivery → delivered, pushed to the "
              "customer's phone as it changes. This is the screen that decides "
@@ -270,7 +270,7 @@ CASE_STUDIES = [
         ],
         "pains": [
             "Two hours a day spent exporting and pasting",
-            "One person understands the master file",
+            "One person understands the main file",
             "Six people read yesterday's numbers, not today's",
             "Everyone sees everything, including margins",
         ],
@@ -281,7 +281,7 @@ CASE_STUDIES = [
                    "and role-based access.",
         "situation": [
             "Someone spends the first two hours of every working day exporting "
-            "files, pasting them into a master spreadsheet, fixing what did not "
+            "files, pasting them into a main spreadsheet, fixing what did not "
             "line up, and emailing the result to six people. That file has become "
             "load-bearing, and exactly one person understands it.",
             "This is the most common software problem in a growing business, and "
@@ -988,7 +988,7 @@ CASE_STUDIES = [
         "pains": [
             "Appointments in a diary that only the front desk can see",
             "Patient history in paper files that go missing",
-            "Waiting rooms full because everyone was told “morning”",
+            "Waiting rooms full because everyone was told \"morning\"",
             "No reminder, so a fifth of slots are no-shows",
         ],
         "category": "Web App",
@@ -1267,7 +1267,7 @@ CASE_STUDIES = [
         "category": "New Business",
         "thumb": "c",
         "title": "First Website for a Social-First Business",
-        "summary": "You built an audience on Instagram and TikTok. This is the "
+        "summary": "You built an audience on Instagram and YouTube. This is the "
                    "address, the inbox and the page that are actually yours.",
         "situation": [
             "A new business is doing well on social. The reels land, the DMs come "
@@ -1283,7 +1283,7 @@ CASE_STUDIES = [
             "There is a second, quieter cost. A handle and a Gmail address read as "
             "a hobby. The moment you approach a supplier, quote for a corporate "
             "order, apply to a marketplace or open a payment gateway, someone asks "
-            "for a website and a business email, and “DM us on Instagram” "
+            "for a website and a business email, and \"DM us on Instagram\" "
             "stops being an answer. That question arrives at exactly the point the "
             "business is trying to grow.",
             "The fix is small, cheap and permanent: an address you own, an inbox "
@@ -1305,7 +1305,7 @@ CASE_STUDIES = [
              "it, set up so your messages actually arrive rather than landing in "
              "spam. This is the change customers notice first."),
             ("Your links, on your own address",
-             "Everything a link-in-bio service does — Instagram, TikTok, "
+             "Everything a link-in-bio service does — Instagram, YouTube, "
              "WhatsApp, catalogue, menu, order form — on a page you own, so the "
              "URL in your bio never has to change again."),
             ("Enquiries that reach a person",
@@ -1741,6 +1741,433 @@ CASE_STUDIES = [
                 "If what you actually need is a cart and payments, say so early: that is a "
                 "different build and pricing it as this one would be dishonest.",
     },
+    {
+        "slug": "online-store-for-a-d2c-brand",
+        "questions": [
+            "How many products and variants (sizes, shades, packs) are there today?",
+            "What share of your orders are cash on delivery, and how many of those come back?",
+            "Do you also sell on a marketplace, and does stock need to stay in step with it?",
+            "Who packs and ships, and which courier or shipping aggregator do you use now?",
+            "Do you need GST invoices on every order, and is there an accountant who reads them?",
+        ],
+        "hard": ("Cash on delivery, and the parcels that come back", [
+            "A storefront is a solved problem. What decides whether an Indian D2C store "
+            "makes money is the parcel that goes out on cash on delivery and comes back "
+            "unopened: you pay shipping both ways, the stock is tied up for a fortnight, "
+            "and nothing was sold.",
+            "So the design work goes into the moment between order and dispatch. A COD "
+            "order is confirmed on WhatsApp or by OTP before it is packed. Pincodes the "
+            "courier cannot serve, or where returns run high, are caught at checkout "
+            "rather than at the warehouse. Paying online is made the easier option, not "
+            "the only one.",
+            "The other trap is stock. If the same jar is listed on the store, on a "
+            "marketplace and on the shelf, there has to be one number that all three "
+            "read from. Two lists kept in step by hand will be wrong on the busiest day "
+            "of the year.",
+        ]),
+        "success": [
+            "More than half of orders are paid online within three months of launch.",
+            "COD orders that come back fall below one in ten.",
+            "No order is ever sold against stock that is not on the shelf.",
+            "The owner can add a product, with photos and variants, without asking anyone.",
+        ],
+        "glance": [
+            ("Type", "Online store + order admin"),
+            ("Build time", "8–11 weeks"),
+            ("Platforms", "Web, on phones first"),
+            ("Starts at", "₹80,000*"),
+        ],
+        "pains": [
+            "Orders arrive as Instagram DMs and some are simply missed",
+            "Marketplace commission and fees take a large cut of every sale",
+            "COD parcels come back unopened and the shipping is paid twice",
+            "The stock count on the marketplace never matches the shelf",
+        ],
+        "category": "E-commerce",
+        "thumb": "b",
+        "title": "Online Store for a D2C Brand",
+        "summary": "A fast store of your own with UPI, cards and checked cash on "
+                   "delivery, for a brand that sells through Instagram today.",
+        "situation": [
+            "A small skincare brand sells mostly through Instagram: a post goes up, the "
+            "DMs arrive, and someone types each order into a spreadsheet and sends a UPI "
+            "ID. It also lists on a marketplace, which brings volume but keeps a large "
+            "share of each sale and owns the customer relationship.",
+            "The owner wants a store of their own that customers can buy from without a "
+            "conversation, that keeps the customer's details with the brand, and that "
+            "does not turn into a second full-time job to run.",
+        ],
+        "scope": [
+            ("A catalogue the owner runs",
+             "Products, variants, prices, photos and stock, edited from a phone. A "
+             "product can be hidden for a sale or a restock in one tap."),
+            ("Checkout that suits India",
+             "UPI, cards and netbanking through a standard gateway, plus cash on "
+             "delivery where the pincode allows it. Phone number and OTP instead of a "
+             "password; no account needed to buy."),
+            ("Checked cash on delivery",
+             "Every COD order is confirmed on WhatsApp or by OTP before it is packed, "
+             "and unconfirmed orders are not shipped. This one feature does more for "
+             "the margin than any design change."),
+            ("Orders, invoices and labels",
+             "A packing list, a GST invoice for every order and a shipping label from "
+             "the courier aggregator, with tracking sent to the customer automatically."),
+            ("One stock number",
+             "Stock is held in one place. If you also sell on a marketplace, the store "
+             "becomes the source and the marketplace is updated from it, where the "
+             "marketplace allows that."),
+        ],
+        "excluded": [
+            "A native app. A fast mobile site is what Instagram links open, and an app "
+            "is worth it only once there are enough repeat buyers to install it.",
+            "Subscriptions and auto-refill. Worth adding once you know which products "
+            "people reorder and how often.",
+            "A multi-seller marketplace. Selling other brands' products is a different "
+            "business with different software.",
+            "Loyalty points and referral schemes, until there is order history to "
+            "design them around.",
+        ],
+        "stack": [
+            ("Storefront", "Server-rendered pages, so product pages load fast on a "
+             "weak connection and can be found in search"),
+            ("Admin", "A responsive web app the owner uses from a phone"),
+            ("Backend", "Node with a Postgres database, which holds the one stock number"),
+            ("Payments", "A standard Indian gateway (Razorpay or equivalent) for UPI and cards"),
+            ("Shipping", "A courier aggregator's API (Shiprocket or equivalent) for "
+             "pincode checks, labels and tracking"),
+        ],
+        "timeline": [
+            ("Week 1", "Catalogue structure, variants, the COD rules and the courier "
+                       "agreed. The COD rules are the part worth arguing about."),
+            ("Weeks 2–6", "Storefront, product pages, cart and checkout with real products."),
+            ("Weeks 7–9", "Order admin, invoices, labels, COD confirmation and stock."),
+            ("Weeks 10–11", "Soft launch to existing Instagram customers before it is "
+                            "announced to everyone."),
+        ],
+        "note": "The payment gateway's per-transaction fee, the courier's shipping "
+                "charges, WhatsApp message costs and the hosting are billed to you "
+                "directly by those providers. They are not part of the build price, and "
+                "shipping is usually the largest of them.",
+    },
+    {
+        "slug": "housing-society-app",
+        "questions": [
+            "How many flats and towers, and how many gates with a guard on them?",
+            "How are maintenance dues collected and recorded today?",
+            "Who on the committee will run this, and when does the committee change?",
+            "Does every guard have a smartphone, and what is the network like at the gate?",
+            "Is there an accountant or auditor who needs the dues and expenses in a set format?",
+        ],
+        "hard": ("A gate that works on one bar of signal", [
+            "Most of the app is ordinary: dues, receipts, notices. The part that decides "
+            "whether the society keeps using it is the gate. A delivery rider is "
+            "standing there, the guard has a phone in one hand, and the resident has to "
+            "approve within seconds. If it takes longer, the guard waves the rider in "
+            "and the app has become a formality.",
+            "So the guard's screen is built for that moment: large buttons, the flat "
+            "number first, a call to the resident if they do not respond, and entries "
+            "saved on the phone and sent when the network returns. Regular visitors — "
+            "house help, drivers, a daily milk delivery — are pre-approved so they never "
+            "wait at all.",
+            "The second problem is people, not software. Committees change every year, "
+            "residents do not want their phone numbers visible to three hundred "
+            "neighbours, and the treasurer needs to see who owes what without everyone "
+            "else seeing it. Roles and handover are designed in from the first week.",
+        ]),
+        "success": [
+            "Four in five flats pay maintenance through the app within six months.",
+            "Half of visitor approvals come back in under thirty seconds.",
+            "Every complaint has an owner and a status, and residents can see both.",
+            "A new committee takes over the app in an afternoon, without the old one's passwords.",
+        ],
+        "glance": [
+            ("Type", "Resident and guard apps + committee dashboard"),
+            ("Build time", "12–15 weeks"),
+            ("Platforms", "iOS, Android, web"),
+            ("Starts at", "₹1,20,000*"),
+        ],
+        "pains": [
+            "Maintenance dues are chased one flat at a time on WhatsApp",
+            "Complaints are raised in the group chat and then forgotten",
+            "The visitor register at the gate is a notebook nobody can search",
+            "Important notices get buried under good-morning messages",
+        ],
+        "category": "Mobile App",
+        "thumb": "a",
+        "title": "Housing Society App",
+        "summary": "Dues with receipts, visitor approvals at the gate, complaints and "
+                   "notices, for a society of a few hundred flats run by volunteers.",
+        "situation": [
+            "A residential society of around three hundred flats is run by an elected "
+            "committee of volunteers. The treasurer tracks maintenance in a "
+            "spreadsheet, the guards keep a paper visitor register, and everything else "
+            "happens in one WhatsApp group that nobody reads properly any more.",
+            "The committee wants dues paid and receipted without chasing, a gate that "
+            "knows who is allowed in, and a place for complaints that does not depend "
+            "on someone remembering to follow up.",
+        ],
+        "scope": [
+            ("Dues and receipts",
+             "Each flat sees what it owes and pays by UPI. A receipt is issued "
+             "automatically and reminders go out on a schedule the committee sets, so "
+             "nobody has to send them by hand."),
+            ("Visitor approvals",
+             "The guard enters a visitor and the resident approves or declines on "
+             "their phone. Regular staff and expected guests are pre-approved, and "
+             "every entry is searchable later."),
+            ("Complaints with a status",
+             "A resident raises a complaint with a photo, the committee assigns it, and "
+             "the resident sees it move from open to resolved."),
+            ("Notices and polls",
+             "Announcements that stay pinned and are not lost in a chat, and simple "
+             "polls for committee decisions."),
+            ("Committee dashboard",
+             "Collections this month, who is behind, expenses entered, and a handover "
+             "screen for when the committee changes."),
+        ],
+        "excluded": [
+            "Full accounting and audit books. The app exports dues and expenses for the "
+            "society's accountant rather than replacing them.",
+            "Amenity booking for the clubhouse or courts. Worth adding once the core "
+            "app is in daily use.",
+            "CCTV, boom-barrier or intercom hardware integration, which depends on "
+            "equipment that varies from society to society.",
+            "A marketplace or classifieds between residents.",
+        ],
+        "stack": [
+            ("Resident and guard apps", "React Native, so iOS and Android ship from one "
+             "codebase; the guard app keeps working when the network drops"),
+            ("Committee dashboard", "A responsive web app, used from a laptop or a phone"),
+            ("Backend", "Node with a Postgres database"),
+            ("Notifications", "Push notifications for approvals, with a phone call as "
+             "the fallback when a resident does not answer"),
+            ("Payments", "A standard Indian gateway for UPI, with receipts generated on "
+             "every payment"),
+        ],
+        "timeline": [
+            ("Week 1", "Roles, privacy rules, the dues structure and the gate flow "
+                       "agreed with the committee, ideally standing at the gate."),
+            ("Weeks 2–7", "Resident app: dues, payments, receipts, complaints, notices."),
+            ("Weeks 8–12", "Guard app, visitor approvals, pre-approved staff and the "
+                           "committee dashboard."),
+            ("Weeks 13–15", "One tower uses it for two weeks before the whole society "
+                            "is moved over."),
+        ],
+        "note": "App-store fees, the payment gateway's per-transaction cut, SMS or "
+                "calling costs and the hosting are billed to the society directly by "
+                "those providers. They are not part of the build price.",
+    },
+    {
+        "slug": "ai-assistant-for-your-own-documents",
+        "questions": [
+            "Which documents should it answer from, roughly how many, and in what formats?",
+            "Who will use it — your team, your customers, or both?",
+            "Are there documents some people must never see answers from?",
+            "What are twenty questions people actually ask today?",
+            "Are there rules about where your data may be sent or stored?",
+        ],
+        "hard": ("Making it say \"I don\'t know\"", [
+            "Connecting a language model to a folder of PDFs takes an afternoon. Making "
+            "the answers trustworthy is the whole project. A model asked something its "
+            "documents do not cover will often answer anyway, fluently and wrongly, and "
+            "a wrong answer from an internal tool is worse than no tool at all.",
+            "So every answer has to show the passage it came from, with a link to the "
+            "document, and the assistant has to be willing to say it could not find an "
+            "answer. Before launch it is tested against a list of real questions with "
+            "known answers, and that list is run again whenever anything changes.",
+            "The quieter problem is permissions. If the HR folder is in the index, a "
+            "question about salaries must not be answered for someone who cannot open "
+            "that folder. Access rules are applied when searching, not bolted on "
+            "afterwards.",
+        ]),
+        "success": [
+            "Every answer cites the document and passage it came from.",
+            "At least nine in ten questions from the agreed test list are answered correctly.",
+            "No answer ever draws on a document the person asking cannot open.",
+            "New staff use it in their first week instead of asking a colleague.",
+        ],
+        "glance": [
+            ("Type", "Internal web app"),
+            ("Build time", "6–9 weeks"),
+            ("Platforms", "Web, desktop and phone"),
+            ("Starts at", "₹70,000*"),
+        ],
+        "pains": [
+            "The same questions are asked and answered every week",
+            "The answers exist, but in PDFs and old email threads",
+            "New hires take weeks to learn where anything is",
+            "Generic chatbots make things up with total confidence",
+        ],
+        "category": "AI Product",
+        "thumb": "b",
+        "title": "AI Assistant for Your Own Documents",
+        "summary": "Ask a question in plain language and get an answer from your own "
+                   "policies, manuals and product sheets, with the source shown every "
+                   "time.",
+        "situation": [
+            "A company of about forty people has years of knowledge spread across "
+            "policy documents, product sheets, standard procedures and long email "
+            "threads. The same handful of experienced staff answer the same questions "
+            "again and again, and new joiners take weeks to find their way around.",
+            "The owner has tried a general chatbot and stopped trusting it after it "
+            "invented a policy. What they want is narrower and more useful: answers "
+            "only from the company's own documents, with proof.",
+        ],
+        "scope": [
+            ("Your documents, kept current",
+             "PDFs, Word files and a shared drive folder are read and indexed. When a "
+             "document changes or is removed, the index follows, so old answers do not "
+             "linger."),
+            ("Answers with sources",
+             "A plain question gets a short answer with the passages it used and a link "
+             "to each document. If nothing relevant is found, it says so."),
+            ("Permissions that hold",
+             "People only get answers from documents they are allowed to open, using "
+             "the sign-in your team already has."),
+            ("A test list that keeps it honest",
+             "A set of real questions with known answers, run before launch and after "
+             "every change, so accuracy is measured rather than assumed."),
+            ("What it could not answer",
+             "An admin view of questions that went unanswered or were marked wrong. "
+             "That list usually shows which documents are missing."),
+        ],
+        "excluded": [
+            "A public chatbot on your website. That comes after the internal version "
+            "has proved accurate, because a wrong answer to a customer costs more.",
+            "Training or fine-tuning a model on your data. Searching your documents "
+            "and citing them is cheaper, easier to update and easier to check.",
+            "Actions that change things — raising tickets, editing records, sending "
+            "email. Answering questions well comes first.",
+            "Voice input and phone support.",
+        ],
+        "stack": [
+            ("Search", "Postgres with a vector extension, so documents, permissions and "
+             "search live in one database rather than three services"),
+            ("Language model", "A hosted model from a provider chosen with you, after "
+             "reading its data-handling terms together"),
+            ("Backend", "Python, which is where the document-processing tools are best"),
+            ("Interface", "A simple responsive web app; a chat box and the sources, nothing more"),
+            ("Sign-in", "Your existing Google Workspace or Microsoft accounts, so access "
+             "follows the permissions you already manage"),
+        ],
+        "timeline": [
+            ("Week 1", "Documents gathered, access rules mapped, and the test list of "
+                       "real questions written with your team."),
+            ("Weeks 2–4", "Indexing, search and answers with sources, measured against "
+                          "the test list from the first working version."),
+            ("Weeks 5–7", "Permissions, sign-in, the admin view and keeping the index current."),
+            ("Weeks 8–9", "A small group uses it daily; the test list is extended with "
+                          "what they actually ask."),
+        ],
+        "note": "The language-model provider charges per use, billed to you directly, "
+                "along with the hosting. For a team of this size that is usually modest, "
+                "and it is estimated from your real document volume before the build "
+                "starts, not after.",
+    },
+    {
+        "slug": "staff-attendance-and-payroll",
+        "questions": [
+            "How many staff, how many shifts, and does any shift cross midnight?",
+            "How is attendance taken today — a register, a punch machine, a supervisor?",
+            "How are overtime, half-days, late marks and advances calculated now?",
+            "Who checks PF, ESI and other deductions, and will they review the figures?",
+            "How are salaries paid — bank transfer, cash, or both?",
+        ],
+        "hard": ("The rules nobody ever wrote down", [
+            "Payroll software is easy to demonstrate and hard to get right, because the "
+            "real rules live in the accountant's head. A night shift that ends at 6am "
+            "belongs to which day? Is ten minutes late a late mark or a half-day? Does "
+            "overtime on a holiday pay double? None of it is written down until someone "
+            "builds software and has to ask.",
+            "So the first week is spent writing the rules down with the people who "
+            "apply them, and checking them against two or three past months of real "
+            "payroll. If the new system would have paid someone differently, the "
+            "difference is explained before anything goes live.",
+            "The second requirement is trust. When a worker disputes a payslip, the "
+            "answer has to be on the screen: the days, the hours, the overtime, the "
+            "advance. Every correction is recorded with who made it and why, because a "
+            "number that can be changed silently will eventually be doubted.",
+        ]),
+        "success": [
+            "Month-end payroll takes under an hour instead of several days.",
+            "Every figure on a payslip can be traced back to attendance entries.",
+            "No attendance or pay figure changes without a recorded reason.",
+            "Supervisors mark attendance before the shift ends, without reminders.",
+        ],
+        "glance": [
+            ("Type", "Web app + supervisor phone screen"),
+            ("Build time", "9–12 weeks"),
+            ("Platforms", "Web, Android phones"),
+            ("Starts at", "₹90,000*"),
+        ],
+        "pains": [
+            "Attendance lives in a paper register that gets disputed",
+            "Overtime and half-days are worked out by hand each month",
+            "Month-end payroll takes the accountant several days",
+            "Advances and deductions are tracked in a notebook",
+        ],
+        "category": "Custom Software",
+        "thumb": "c",
+        "title": "Staff Attendance &amp; Payroll",
+        "summary": "Shift attendance marked on a supervisor's phone, overtime and "
+                   "advances applied by rule, and payslips ready at month end for a "
+                   "small manufacturer.",
+        "situation": [
+            "A small manufacturer employs around sixty people across two shifts, some "
+            "on contract. Supervisors mark attendance in a register, the accountant "
+            "types it into a spreadsheet at month end, and working out overtime, "
+            "half-days and advances takes several days and still produces disputes.",
+            "The owner wants attendance captured once, on the floor, and a payroll run "
+            "that is quick, consistent and explainable to anyone who asks.",
+        ],
+        "scope": [
+            ("Attendance on the floor",
+             "Supervisors mark their shift from a phone, from a list of their own "
+             "people. It works without signal and syncs later, because factory floors "
+             "rarely have good reception."),
+            ("Shifts and rules",
+             "Shift timings, overtime rates, late marks, half-days and holidays set up "
+             "once, in plain terms, and applied the same way to everyone."),
+            ("Leave and advances",
+             "Leave balances, salary advances and recoveries tracked against each "
+             "person, instead of in a notebook."),
+            ("Monthly payroll run",
+             "Gross pay, deductions and net pay calculated from attendance, reviewed on "
+             "one screen, and payslips sent to each worker's phone as a link."),
+            ("Exports for your accountant",
+             "A bank transfer file and a summary of statutory deductions in the format "
+             "your accountant uses, for them to verify and file."),
+        ],
+        "excluded": [
+            "Filing statutory returns. The software prepares the figures; your "
+            "accountant checks and files them.",
+            "Biometric punch-machine integration. Possible later, once the rules are "
+            "proven, and it depends on the machine you have.",
+            "A full HR system — recruitment, appraisals, training records.",
+            "Several companies or branches with different rules, until one is running "
+            "well.",
+        ],
+        "stack": [
+            ("Supervisor screen", "A progressive web app on Android phones that keeps "
+             "working offline and syncs when it can"),
+            ("Office app", "A responsive web app for the owner and the accountant"),
+            ("Backend", "Node with a Postgres database; every change is kept in an audit log"),
+            ("Payslips", "PDF payslips generated on the server and shared by link"),
+            ("Exports", "Bank bulk-transfer files and spreadsheets for the accountant"),
+        ],
+        "timeline": [
+            ("Week 1", "Every pay rule written down with the accountant and checked "
+                       "against two or three past months of real payroll."),
+            ("Weeks 2–5", "Staff records, shifts, supervisor attendance screen working offline."),
+            ("Weeks 6–9", "Rules engine, leave, advances and the payroll run with payslips."),
+            ("Weeks 10–12", "One month run alongside the old method, and the differences "
+                            "explained, before switching over."),
+        ],
+        "note": "This software prepares payroll figures; it does not replace your "
+                "accountant's review of statutory deductions such as PF and ESI. "
+                "Hosting and SMS or WhatsApp costs for sending payslips are billed to "
+                "you directly by those providers.",
+    },
 ]
 
 
@@ -1825,7 +2252,7 @@ ARTICLES = [
             ("h2", 'Cost, honestly'),
             ("p", 'A managed vector database typically starts somewhere around $70 a month for a production-grade tier, before usage. Adding pgvector to a Postgres instance you are already paying for costs nothing extra.'),
             ("p", 'That difference is small if you are funded and enormous if you are a business testing whether an AI feature is worth having at all. It is also recurring, which is the kind of cost that quietly outlives the feature that justified it.'),
-            ("p", 'The other cost is operational and rarely counted. A second datastore means a second thing to back up, monitor, secure, upgrade and keep in sync with the first. When a document is deleted from Postgres, something has to remember to delete its vectors too. That “something” is code you now maintain.'),
+            ("p", 'The other cost is operational and rarely counted. A second datastore means a second thing to back up, monitor, secure, upgrade and keep in sync with the first. When a document is deleted from Postgres, something has to remember to delete its vectors too. That \"something\" is code you now maintain.'),
             ("h2", 'The bit that gets skipped: evaluation'),
             ("p", 'Almost nobody building a retrieval feature sets up a way to tell whether it is getting better. Then a change gets made — a different embedding model, a new chunk size — and the judgement of whether it helped is somebody trying three questions they happen to remember.'),
             ("p", 'You do not need anything elaborate. Twenty to fifty real questions with the passage that should be retrieved for each, and a script that reports how often the right passage appears in the top five results. An afternoon of work, and it converts every future change from an argument into a measurement.'),
@@ -1834,7 +2261,7 @@ ARTICLES = [
             ("ul", [
                 '<strong>Embedding</strong> — the list of numbers representing a piece of text. Produced by a model; the same model must be used for storing and for searching, or the numbers are not comparable.',
                 '<strong>Chunk</strong> — the unit of text you store. Choosing these well is the single biggest lever on quality.',
-                '<strong>RAG</strong> — retrieval-augmented generation. Find relevant passages, put them in the prompt, ask the model to answer using them. Most “AI on your documents” products are this.',
+                '<strong>RAG</strong> — retrieval-augmented generation. Find relevant passages, put them in the prompt, ask the model to answer using them. Most \"AI on your documents\" products are this.',
                 '<strong>Hybrid search</strong> — combining vector and keyword results. Almost always better than either alone, and frequently omitted.',
                 '<strong>Re-ranking</strong> — a second, slower model reorders the top twenty results. Often a bigger quality win than changing databases.',
             ]),
@@ -1919,7 +2346,7 @@ ARTICLES = [
             ("p", 'Reading every line sounds slow. In practice it is fast if you know what you are looking for, because the failure modes cluster.'),
             ("ol", [
                 '<strong>Follow the untrusted input.</strong> Anything from the browser is a claim, not a fact. Where does it get checked?',
-                '<strong>Check the authorisation, not the authentication.</strong> “Is this a real user” is usually right. “Is this user allowed this particular record” is where it goes wrong.',
+                '<strong>Check the authorisation, not the authentication.</strong> \"Is this a real user\" is usually right. \"Is this user allowed this particular record\" is where it goes wrong.',
                 '<strong>Look at the error paths.</strong> Happy paths are nearly always fine. What happens when the payment provider times out halfway?',
                 '<strong>Question anything clever.</strong> Unusual constructs are where a model has pattern-matched onto something from a different context.',
                 '<strong>Read the tests as claims.</strong> A test asserting the wrong behaviour is worse than no test, because it makes the wrong behaviour official.',
@@ -2003,10 +2430,10 @@ ARTICLES = [
             ("p", 'Optimising for the second scenario is the better bet, and it is the one people talk about less because it is embarrassing.'),
             ("h2", 'Things people believe Postgres cannot do'),
             ("ul", [
-                "<strong>“It can't handle unstructured data.”</strong> JSONB columns store arbitrary documents, can be indexed and queried, and sit beside your relational columns in the same row.",
-                "<strong>“It can't scale.”</strong> Read replicas, connection pooling and a correctly indexed schema carry applications far beyond where most businesses ever reach. Most “Postgres doesn't scale” stories are a missing index.",
-                '<strong>“You need a separate search engine.”</strong> Full-text search with ranking and stemming is built in and adequate up to a surprisingly large corpus.',
-                '<strong>“You need a message queue.”</strong> SELECT ... FOR UPDATE SKIP LOCKED gives a safe work queue. Not the right answer at enormous throughput; entirely right for sending emails and generating reports.',
+                "<strong>\"It can't handle unstructured data.\"</strong> JSONB columns store arbitrary documents, can be indexed and queried, and sit beside your relational columns in the same row.",
+                "<strong>\"It can't scale.\"</strong> Read replicas, connection pooling and a correctly indexed schema carry applications far beyond where most businesses ever reach. Most \"Postgres doesn't scale\" stories are a missing index.",
+                '<strong>\"You need a separate search engine.\"</strong> Full-text search with ranking and stemming is built in and adequate up to a surprisingly large corpus.',
+                '<strong>\"You need a message queue.\"</strong> SELECT ... FOR UPDATE SKIP LOCKED gives a safe work queue. Not the right answer at enormous throughput; entirely right for sending emails and generating reports.',
             ]),
             ("h2", 'How not to paint yourself into a corner'),
             ("p", 'Choosing well matters less than a handful of habits that keep the choice reversible.'),
@@ -2080,7 +2507,7 @@ ARTICLES = [
             ("p", "Ask instead: who arrives here, on what connection, and how long "
                   "do they stay? The answer picks the approach without any "
                   "ideology being involved."),
-            ("h2", 'What “fast” actually means to the person waiting'),
+            ("h2", 'What \"fast\" actually means to the person waiting'),
             ("p", 'Both camps claim speed, and both are telling the truth about different moments. It helps to name them.'),
             ("ul", [
                 '<strong>Time until something appears.</strong> Server rendering wins, usually decisively. The browser gets HTML and paints it.',
@@ -2184,7 +2611,7 @@ ARTICLES = [
             ]),
             ("h2", 'What it looks like to a user who has never seen one'),
             ("p", 'Worth being blunt about: many people will not know what a passkey is, and a sign-in screen offering an unfamiliar thing loses users. The wording matters more than the cryptography.'),
-            ("p", 'What works is describing the outcome rather than the mechanism — “use your fingerprint or face to sign in next time” rather than “register a passkey”. Offer it after a successful login, not instead of one, so nobody is blocked by a concept they did not ask about.'),
+            ("p", 'What works is describing the outcome rather than the mechanism — \"use your fingerprint or face to sign in next time\" rather than \"register a passkey\". Offer it after a successful login, not instead of one, so nobody is blocked by a concept they did not ask about.'),
             ("quote", 'Every authentication improvement is also a chance to lock out the people you were protecting. That is the tradeoff to design around.'),
             ("h2", 'Where they are genuinely worth the trouble'),
             ("p", 'If your users are businesses, if the account holds money or client data, or if you have already seen credential-stuffing attempts in your logs, passkeys move the needle and are worth the recovery work.'),
@@ -2251,9 +2678,9 @@ ARTICLES = [
                   "assume offline from the first week, and both say plainly that "
                   "if the budget forces a choice, cut features instead."),
             ("h2", 'What syncing actually involves'),
-            ("p", '“It works offline” sounds like one feature. It is four, and each has to be decided rather than discovered.'),
+            ("p", '\"It works offline\" sounds like one feature. It is four, and each has to be decided rather than discovered.'),
             ("ol", [
-                '<strong>A queue of intents.</strong> Not “the new state” but “what the user did” — mark job complete, add photo, change quantity. Actions replay cleanly; states overwrite each other.',
+                '<strong>A queue of intents.</strong> Not \"the new state\" but \"what the user did\" — mark job complete, add photo, change quantity. Actions replay cleanly; states overwrite each other.',
                 '<strong>An identifier per action, made on the device.</strong> So the server can recognise the same action arriving twice and ignore the second. Without this, every flaky connection creates duplicates.',
                 '<strong>A conflict rule per data type.</strong> Last write wins is fine for a note and wrong for a stock count. Decide per type, in advance.',
                 '<strong>Visible sync state.</strong> Saved on device, sending, sent, failed. A technician needs to know whether the office has seen their work; a silent spinner is not an answer.',
@@ -2561,7 +2988,7 @@ ARTICLES = [
             ("h2", 'The things I do not let it touch'),
             ("ul", [
                 '<strong>The data model.</strong> Get it wrong and every week afterwards is more expensive. It is worth a human afternoon and a whiteboard.',
-                '<strong>Authorisation.</strong> Not “is this a real user” but “is this user allowed this record”. The single most common place I see plausible, wrong code.',
+                '<strong>Authorisation.</strong> Not \"is this a real user\" but \"is this user allowed this record\". The single most common place I see plausible, wrong code.',
                 '<strong>Money.</strong> Payments, refunds, invoice numbering, anything with a currency in it. Slowly, by hand, then read again the next morning.',
                 '<strong>Anything with personal data.</strong> What is stored, for how long, who can see it, and what the access log records.',
                 '<strong>Deletion.</strong> Any code that removes something permanently gets written by a person and tested against a copy first.',
@@ -2646,10 +3073,10 @@ ARTICLES = [
             ("h2", 'The store part nobody warns you about'),
             ("p", "First submissions get rejected routinely, and usually for something unrelated to the app's quality: a missing privacy policy, a login screen with no way to try the app, a permission whose justification was not written clearly enough, or an account-deletion route that must exist inside the app."),
             ("p", 'Budget a week for the first submission and do not schedule a launch event on the assumption it appears on a particular day. This is the single most common cause of a missed launch date on mobile projects, and it is entirely predictable, which makes missing it avoidable.'),
-            ("h2", 'What “install to home screen” actually gets you'),
+            ("h2", 'What \"install to home screen\" actually gets you'),
             ("p", "A well-built website can be added to a phone's home screen, open full-screen without browser chrome, cache content so it opens offline, and — on Android reliably, on iOS with caveats — send push notifications."),
-            ("p", 'What it still cannot do well: run in the background, use Bluetooth or the sensors freely, or appear in an app store where people look for things. If none of those matter to you, this route gives most of what people mean by “an app” at the cost of a website, with no review queue between you and a fix.'),
-            ("quote", 'Ask what specifically you need that only an app can do. If the answer is “it feels more serious”, that is a design problem, not a platform one.'),
+            ("p", 'What it still cannot do well: run in the background, use Bluetooth or the sensors freely, or appear in an app store where people look for things. If none of those matter to you, this route gives most of what people mean by \"an app\" at the cost of a website, with no review queue between you and a fix.'),
+            ("quote", 'Ask what specifically you need that only an app can do. If the answer is \"it feels more serious\", that is a design problem, not a platform one.'),
             ("h2", 'The order I would actually recommend'),
             ("p", 'Website first, in almost every case. Get real people using it and watch where they struggle on a phone. Then, if what stands between you and growth is genuinely a native capability, build the app — with a year of usage data telling you exactly which three screens matter.'),
             ("p", 'The apps built that way are smaller, better and cheaper than the ones built first, because they are built from evidence instead of from guesses about what people would want.'),
@@ -2715,14 +3142,14 @@ ARTICLES = [
             ("h2", 'Three answers that should worry you'),
             ("p", 'Beyond the questions themselves, some replies are informative in ways the speaker does not intend.'),
             ("ul", [
-                "<strong>“That won't be a problem.”</strong> To any question about risk. Every project has problems; someone who has shipped things knows which ones are likely and will name them.",
+                "<strong>\"That won't be a problem.\"</strong> To any question about risk. Every project has problems; someone who has shipped things knows which ones are likely and will name them.",
                 '<strong>A quote with no questions attached.</strong> If a price arrives before anyone has asked how many users, what it integrates with, or what happens to your existing data, the number is decoration.',
-                "<strong>“You wouldn't understand the technical details.”</strong> Anything in this field can be explained to an intelligent person who does not do it for a living. Refusing to is either an inability to explain or an unwillingness to be checked.",
+                "<strong>\"You wouldn't understand the technical details.\"</strong> Anything in this field can be explained to an intelligent person who does not do it for a living. Refusing to is either an inability to explain or an unwillingness to be checked.",
             ]),
             ("h2", 'What to agree in writing before money moves'),
             ("p", 'Not a forty-page contract. A single page covering six things prevents almost every dispute I have seen or heard about.'),
             ("ol", [
-                '<strong>What is being built</strong>, as a list specific enough to tick off. “A booking system” is not a scope.',
+                '<strong>What is being built</strong>, as a list specific enough to tick off. \"A booking system\" is not a scope.',
                 '<strong>What is not included</strong>, explicitly. This line saves more arguments than any other.',
                 '<strong>Who owns the code and the accounts.</strong> You, in a repository you have access to from day one.',
                 '<strong>Payment schedule tied to visible progress</strong>, not to dates. You should be able to see something running before each payment.',
@@ -2797,7 +3224,7 @@ PRIVACY = {
         ]),
 
         ("h2", "What the website itself collects"),
-        ("p", "Nothing at all. There is no contact form, no newsletter signup, no "
+        ("p", "Nothing at all. There is no contact form, no newsletter sign-up, no "
               "login, no chat widget, no advertising or social tracking pixel, and no "
               "analytics &mdash; not even the privacy-preserving kind. I do not know "
               "how many people visit this site, which pages they read, or where they "
