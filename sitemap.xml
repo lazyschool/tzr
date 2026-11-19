@@ -5,10 +5,6 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://tavzuran.com/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://tavzuran.com/?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://tavzuran.com/?lang=el"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://tavzuran.com/?lang=fr"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://tavzuran.com/?lang=it"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tavzuran.com/"/>
   </url>
   <url>
