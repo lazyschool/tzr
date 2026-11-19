@@ -649,7 +649,8 @@ const CONFIG = {
     // Instagram profile hands nothing over and needs no warning
     document.addEventListener("click", function (e) {
       const a = e.target.closest ? e.target.closest("a[href^='mailto:']") : null;
-      if (!a) return;
+      // the dialog's own "Continue to email" link must go through untouched
+      if (!a || dlg.contains(a)) return;
       if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
       e.preventDefault();
       open(a.getAttribute("href"), a);
