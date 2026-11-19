@@ -256,6 +256,12 @@ const CONFIG = {
       }
 
       sel.addEventListener("change", function () { applyLang(sel.value); });
+      // With English as the only language there is nothing to choose, so the
+      // picker is hidden rather than offering a list of one.
+      if (I18N.languages.length < 2) {
+        const box = sel.closest(".lang");
+        if (box) box.style.display = "none";
+      }
     }
 
     const noteLink = $("#transNoteLink");

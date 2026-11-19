@@ -82,7 +82,7 @@ CASE_STUDIES = [
              "sold out takes one tap and applies to that outlet only."),
             ("Cart and checkout",
              "Address, delivery or pickup, and a payment gateway. No account "
-             "required to order — a phone number and an OTP is the whole signup."),
+             "required to order — a phone number and an OTP is the whole sign-up."),
             ("Live order tracking",
              "Accepted → cooking → out for delivery → delivered, pushed to the "
              "customer's phone as it changes. This is the screen that decides "
@@ -988,7 +988,7 @@ CASE_STUDIES = [
         "pains": [
             "Appointments in a diary that only the front desk can see",
             "Patient history in paper files that go missing",
-            "Waiting rooms full because everyone was told “morning”",
+            "Waiting rooms full because everyone was told \"morning\"",
             "No reminder, so a fifth of slots are no-shows",
         ],
         "category": "Web App",
@@ -1283,7 +1283,7 @@ CASE_STUDIES = [
             "There is a second, quieter cost. A handle and a Gmail address read as "
             "a hobby. The moment you approach a supplier, quote for a corporate "
             "order, apply to a marketplace or open a payment gateway, someone asks "
-            "for a website and a business email, and “DM us on Instagram” "
+            "for a website and a business email, and \"DM us on Instagram\" "
             "stops being an answer. That question arrives at exactly the point the "
             "business is trying to grow.",
             "The fix is small, cheap and permanent: an address you own, an inbox "
@@ -1966,7 +1966,7 @@ CASE_STUDIES = [
             "What are twenty questions people actually ask today?",
             "Are there rules about where your data may be sent or stored?",
         ],
-        "hard": ("Making it say “I don’t know”", [
+        "hard": ("Making it say \"I don\'t know\"", [
             "Connecting a language model to a folder of PDFs takes an afternoon. Making "
             "the answers trustworthy is the whole project. A model asked something its "
             "documents do not cover will often answer anyway, fluently and wrongly, and "
@@ -2252,7 +2252,7 @@ ARTICLES = [
             ("h2", 'Cost, honestly'),
             ("p", 'A managed vector database typically starts somewhere around $70 a month for a production-grade tier, before usage. Adding pgvector to a Postgres instance you are already paying for costs nothing extra.'),
             ("p", 'That difference is small if you are funded and enormous if you are a business testing whether an AI feature is worth having at all. It is also recurring, which is the kind of cost that quietly outlives the feature that justified it.'),
-            ("p", 'The other cost is operational and rarely counted. A second datastore means a second thing to back up, monitor, secure, upgrade and keep in sync with the first. When a document is deleted from Postgres, something has to remember to delete its vectors too. That “something” is code you now maintain.'),
+            ("p", 'The other cost is operational and rarely counted. A second datastore means a second thing to back up, monitor, secure, upgrade and keep in sync with the first. When a document is deleted from Postgres, something has to remember to delete its vectors too. That \"something\" is code you now maintain.'),
             ("h2", 'The bit that gets skipped: evaluation'),
             ("p", 'Almost nobody building a retrieval feature sets up a way to tell whether it is getting better. Then a change gets made — a different embedding model, a new chunk size — and the judgement of whether it helped is somebody trying three questions they happen to remember.'),
             ("p", 'You do not need anything elaborate. Twenty to fifty real questions with the passage that should be retrieved for each, and a script that reports how often the right passage appears in the top five results. An afternoon of work, and it converts every future change from an argument into a measurement.'),
@@ -2261,7 +2261,7 @@ ARTICLES = [
             ("ul", [
                 '<strong>Embedding</strong> — the list of numbers representing a piece of text. Produced by a model; the same model must be used for storing and for searching, or the numbers are not comparable.',
                 '<strong>Chunk</strong> — the unit of text you store. Choosing these well is the single biggest lever on quality.',
-                '<strong>RAG</strong> — retrieval-augmented generation. Find relevant passages, put them in the prompt, ask the model to answer using them. Most “AI on your documents” products are this.',
+                '<strong>RAG</strong> — retrieval-augmented generation. Find relevant passages, put them in the prompt, ask the model to answer using them. Most \"AI on your documents\" products are this.',
                 '<strong>Hybrid search</strong> — combining vector and keyword results. Almost always better than either alone, and frequently omitted.',
                 '<strong>Re-ranking</strong> — a second, slower model reorders the top twenty results. Often a bigger quality win than changing databases.',
             ]),
@@ -2346,7 +2346,7 @@ ARTICLES = [
             ("p", 'Reading every line sounds slow. In practice it is fast if you know what you are looking for, because the failure modes cluster.'),
             ("ol", [
                 '<strong>Follow the untrusted input.</strong> Anything from the browser is a claim, not a fact. Where does it get checked?',
-                '<strong>Check the authorisation, not the authentication.</strong> “Is this a real user” is usually right. “Is this user allowed this particular record” is where it goes wrong.',
+                '<strong>Check the authorisation, not the authentication.</strong> \"Is this a real user\" is usually right. \"Is this user allowed this particular record\" is where it goes wrong.',
                 '<strong>Look at the error paths.</strong> Happy paths are nearly always fine. What happens when the payment provider times out halfway?',
                 '<strong>Question anything clever.</strong> Unusual constructs are where a model has pattern-matched onto something from a different context.',
                 '<strong>Read the tests as claims.</strong> A test asserting the wrong behaviour is worse than no test, because it makes the wrong behaviour official.',
@@ -2430,10 +2430,10 @@ ARTICLES = [
             ("p", 'Optimising for the second scenario is the better bet, and it is the one people talk about less because it is embarrassing.'),
             ("h2", 'Things people believe Postgres cannot do'),
             ("ul", [
-                "<strong>“It can't handle unstructured data.”</strong> JSONB columns store arbitrary documents, can be indexed and queried, and sit beside your relational columns in the same row.",
-                "<strong>“It can't scale.”</strong> Read replicas, connection pooling and a correctly indexed schema carry applications far beyond where most businesses ever reach. Most “Postgres doesn't scale” stories are a missing index.",
-                '<strong>“You need a separate search engine.”</strong> Full-text search with ranking and stemming is built in and adequate up to a surprisingly large corpus.',
-                '<strong>“You need a message queue.”</strong> SELECT ... FOR UPDATE SKIP LOCKED gives a safe work queue. Not the right answer at enormous throughput; entirely right for sending emails and generating reports.',
+                "<strong>\"It can't handle unstructured data.\"</strong> JSONB columns store arbitrary documents, can be indexed and queried, and sit beside your relational columns in the same row.",
+                "<strong>\"It can't scale.\"</strong> Read replicas, connection pooling and a correctly indexed schema carry applications far beyond where most businesses ever reach. Most \"Postgres doesn't scale\" stories are a missing index.",
+                '<strong>\"You need a separate search engine.\"</strong> Full-text search with ranking and stemming is built in and adequate up to a surprisingly large corpus.',
+                '<strong>\"You need a message queue.\"</strong> SELECT ... FOR UPDATE SKIP LOCKED gives a safe work queue. Not the right answer at enormous throughput; entirely right for sending emails and generating reports.',
             ]),
             ("h2", 'How not to paint yourself into a corner'),
             ("p", 'Choosing well matters less than a handful of habits that keep the choice reversible.'),
@@ -2507,7 +2507,7 @@ ARTICLES = [
             ("p", "Ask instead: who arrives here, on what connection, and how long "
                   "do they stay? The answer picks the approach without any "
                   "ideology being involved."),
-            ("h2", 'What “fast” actually means to the person waiting'),
+            ("h2", 'What \"fast\" actually means to the person waiting'),
             ("p", 'Both camps claim speed, and both are telling the truth about different moments. It helps to name them.'),
             ("ul", [
                 '<strong>Time until something appears.</strong> Server rendering wins, usually decisively. The browser gets HTML and paints it.',
@@ -2611,7 +2611,7 @@ ARTICLES = [
             ]),
             ("h2", 'What it looks like to a user who has never seen one'),
             ("p", 'Worth being blunt about: many people will not know what a passkey is, and a sign-in screen offering an unfamiliar thing loses users. The wording matters more than the cryptography.'),
-            ("p", 'What works is describing the outcome rather than the mechanism — “use your fingerprint or face to sign in next time” rather than “register a passkey”. Offer it after a successful login, not instead of one, so nobody is blocked by a concept they did not ask about.'),
+            ("p", 'What works is describing the outcome rather than the mechanism — \"use your fingerprint or face to sign in next time\" rather than \"register a passkey\". Offer it after a successful login, not instead of one, so nobody is blocked by a concept they did not ask about.'),
             ("quote", 'Every authentication improvement is also a chance to lock out the people you were protecting. That is the tradeoff to design around.'),
             ("h2", 'Where they are genuinely worth the trouble'),
             ("p", 'If your users are businesses, if the account holds money or client data, or if you have already seen credential-stuffing attempts in your logs, passkeys move the needle and are worth the recovery work.'),
@@ -2678,9 +2678,9 @@ ARTICLES = [
                   "assume offline from the first week, and both say plainly that "
                   "if the budget forces a choice, cut features instead."),
             ("h2", 'What syncing actually involves'),
-            ("p", '“It works offline” sounds like one feature. It is four, and each has to be decided rather than discovered.'),
+            ("p", '\"It works offline\" sounds like one feature. It is four, and each has to be decided rather than discovered.'),
             ("ol", [
-                '<strong>A queue of intents.</strong> Not “the new state” but “what the user did” — mark job complete, add photo, change quantity. Actions replay cleanly; states overwrite each other.',
+                '<strong>A queue of intents.</strong> Not \"the new state\" but \"what the user did\" — mark job complete, add photo, change quantity. Actions replay cleanly; states overwrite each other.',
                 '<strong>An identifier per action, made on the device.</strong> So the server can recognise the same action arriving twice and ignore the second. Without this, every flaky connection creates duplicates.',
                 '<strong>A conflict rule per data type.</strong> Last write wins is fine for a note and wrong for a stock count. Decide per type, in advance.',
                 '<strong>Visible sync state.</strong> Saved on device, sending, sent, failed. A technician needs to know whether the office has seen their work; a silent spinner is not an answer.',
@@ -2988,7 +2988,7 @@ ARTICLES = [
             ("h2", 'The things I do not let it touch'),
             ("ul", [
                 '<strong>The data model.</strong> Get it wrong and every week afterwards is more expensive. It is worth a human afternoon and a whiteboard.',
-                '<strong>Authorisation.</strong> Not “is this a real user” but “is this user allowed this record”. The single most common place I see plausible, wrong code.',
+                '<strong>Authorisation.</strong> Not \"is this a real user\" but \"is this user allowed this record\". The single most common place I see plausible, wrong code.',
                 '<strong>Money.</strong> Payments, refunds, invoice numbering, anything with a currency in it. Slowly, by hand, then read again the next morning.',
                 '<strong>Anything with personal data.</strong> What is stored, for how long, who can see it, and what the access log records.',
                 '<strong>Deletion.</strong> Any code that removes something permanently gets written by a person and tested against a copy first.',
@@ -3073,10 +3073,10 @@ ARTICLES = [
             ("h2", 'The store part nobody warns you about'),
             ("p", "First submissions get rejected routinely, and usually for something unrelated to the app's quality: a missing privacy policy, a login screen with no way to try the app, a permission whose justification was not written clearly enough, or an account-deletion route that must exist inside the app."),
             ("p", 'Budget a week for the first submission and do not schedule a launch event on the assumption it appears on a particular day. This is the single most common cause of a missed launch date on mobile projects, and it is entirely predictable, which makes missing it avoidable.'),
-            ("h2", 'What “install to home screen” actually gets you'),
+            ("h2", 'What \"install to home screen\" actually gets you'),
             ("p", "A well-built website can be added to a phone's home screen, open full-screen without browser chrome, cache content so it opens offline, and — on Android reliably, on iOS with caveats — send push notifications."),
-            ("p", 'What it still cannot do well: run in the background, use Bluetooth or the sensors freely, or appear in an app store where people look for things. If none of those matter to you, this route gives most of what people mean by “an app” at the cost of a website, with no review queue between you and a fix.'),
-            ("quote", 'Ask what specifically you need that only an app can do. If the answer is “it feels more serious”, that is a design problem, not a platform one.'),
+            ("p", 'What it still cannot do well: run in the background, use Bluetooth or the sensors freely, or appear in an app store where people look for things. If none of those matter to you, this route gives most of what people mean by \"an app\" at the cost of a website, with no review queue between you and a fix.'),
+            ("quote", 'Ask what specifically you need that only an app can do. If the answer is \"it feels more serious\", that is a design problem, not a platform one.'),
             ("h2", 'The order I would actually recommend'),
             ("p", 'Website first, in almost every case. Get real people using it and watch where they struggle on a phone. Then, if what stands between you and growth is genuinely a native capability, build the app — with a year of usage data telling you exactly which three screens matter.'),
             ("p", 'The apps built that way are smaller, better and cheaper than the ones built first, because they are built from evidence instead of from guesses about what people would want.'),
@@ -3142,14 +3142,14 @@ ARTICLES = [
             ("h2", 'Three answers that should worry you'),
             ("p", 'Beyond the questions themselves, some replies are informative in ways the speaker does not intend.'),
             ("ul", [
-                "<strong>“That won't be a problem.”</strong> To any question about risk. Every project has problems; someone who has shipped things knows which ones are likely and will name them.",
+                "<strong>\"That won't be a problem.\"</strong> To any question about risk. Every project has problems; someone who has shipped things knows which ones are likely and will name them.",
                 '<strong>A quote with no questions attached.</strong> If a price arrives before anyone has asked how many users, what it integrates with, or what happens to your existing data, the number is decoration.',
-                "<strong>“You wouldn't understand the technical details.”</strong> Anything in this field can be explained to an intelligent person who does not do it for a living. Refusing to is either an inability to explain or an unwillingness to be checked.",
+                "<strong>\"You wouldn't understand the technical details.\"</strong> Anything in this field can be explained to an intelligent person who does not do it for a living. Refusing to is either an inability to explain or an unwillingness to be checked.",
             ]),
             ("h2", 'What to agree in writing before money moves'),
             ("p", 'Not a forty-page contract. A single page covering six things prevents almost every dispute I have seen or heard about.'),
             ("ol", [
-                '<strong>What is being built</strong>, as a list specific enough to tick off. “A booking system” is not a scope.',
+                '<strong>What is being built</strong>, as a list specific enough to tick off. \"A booking system\" is not a scope.',
                 '<strong>What is not included</strong>, explicitly. This line saves more arguments than any other.',
                 '<strong>Who owns the code and the accounts.</strong> You, in a repository you have access to from day one.',
                 '<strong>Payment schedule tied to visible progress</strong>, not to dates. You should be able to see something running before each payment.',
@@ -3224,7 +3224,7 @@ PRIVACY = {
         ]),
 
         ("h2", "What the website itself collects"),
-        ("p", "Nothing at all. There is no contact form, no newsletter signup, no "
+        ("p", "Nothing at all. There is no contact form, no newsletter sign-up, no "
               "login, no chat widget, no advertising or social tracking pixel, and no "
               "analytics &mdash; not even the privacy-preserving kind. I do not know "
               "how many people visit this site, which pages they read, or where they "
