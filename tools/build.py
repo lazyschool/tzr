@@ -10,6 +10,7 @@ share one header, one footer and one set of styles instead of drifting.
 After running this, run tools/csp.py to refresh the inline-script hashes.
 """
 import io
+import json
 import os
 import sys
 
@@ -112,8 +113,14 @@ CSP = ('<meta http-equiv="Content-Security-Policy" content="default-src \'self\'
        'connect-src \'none\'; upgrade-insecure-requests" />')
 
 
+def _j(text):
+    """Text made safe inside a JSON string literal."""
+    return json.dumps(text, ensure_ascii=False)[1:-1]
+
+
 def head(title, description, canonical, jsonld):
     """The <head> for a page one directory below the site root."""
+    description = description.replace('"', "&quot;")  # it sits inside attributes
     return u'''<!doctype html>
 <html lang="en" data-theme="light" data-palette="green">
 <head>
@@ -284,7 +291,7 @@ CHROME_CLOSE = u'''</main>
         <span class="brand__mark" aria-hidden="true">{brand}</span>
         <span class="brand__text">Tavzuran</span>
       </a>
-      <p class="footer__tag">Apps • Websites • Software</p>
+      <p class="footer__tag">Apps · Websites · Software</p>
     </div>
 
     <nav class="footer__nav" aria-label="Footer">
@@ -421,7 +428,7 @@ def case_study_page(cs, others):
   "url": "{site}/case-studies/{slug}.html",
   "isAccessibleForFree": true,
   "disambiguatingDescription": "Example build. Tavzuran is a new studio; this describes a project the studio is set up to deliver, not completed client work."
-}}'''.format(title=plain, summary=cs["summary"], site=SITE, slug=cs["slug"])
+}}'''.format(title=_j(plain), summary=_j(cs["summary"]), site=SITE, slug=cs["slug"])
 
     out = [head("%s — Case Study | Tavzuran" % cs["title"],
                 cs["summary"],
@@ -708,7 +715,7 @@ def article_page(art, others):
   "publisher": {{ "@type": "Organization", "name": "Tavzuran" }},
   "mainEntityOfPage": "{site}/articles/{slug}.html",
   "inLanguage": "en"
-}}'''.format(title=art["title"], summary=art["summary"], date=art["date"],
+}}'''.format(title=_j(art["title"]), summary=_j(art["summary"]), date=art["date"],
              site=SITE, slug=art["slug"])
 
     out = [head("%s | Tavzuran" % art["title"], art["summary"],
@@ -779,7 +786,7 @@ def privacy_page():
   "dateModified": "{updated}",
   "publisher": {{ "@type": "Organization", "name": "Tavzuran" }},
   "inLanguage": "en"
-}}'''.format(summary=PRIVACY["summary"], site=SITE, updated=PRIVACY["updated"])
+}}'''.format(summary=_j(PRIVACY["summary"]), site=SITE, updated=PRIVACY["updated"])
 
     out = [head("Privacy Policy | Tavzuran", PRIVACY["summary"],
                 "%s/privacy/index.html" % SITE, jsonld),
